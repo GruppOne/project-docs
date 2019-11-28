@@ -1,0 +1,22 @@
+\usepackage[italian]{babel}
+\usepackage[margin=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{soulutf8}
+\usepackage{contour}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\setuldepth{Flat}
+\contourlength{0.8pt}
+
+\newcommand{\uline}[1]{%
+  \ul{{\phantom{#1}}}%
+  \llap{\contour{white}{#1}}%
+}
+
+\hypersetup{
+    colorlinks=true, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=black,  %choose some color if you want links to stand out
+}
