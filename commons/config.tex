@@ -1,12 +1,19 @@
 \usepackage[italian]{babel}
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=2cm, footskip=5mm]{geometry}
 \usepackage{hyperref}
 \usepackage{soulutf8}
 \usepackage{contour}
 \usepackage{float}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{titling}
+\usepackage{lastpage}
+\usepackage{ifthen}
 
+% setup della sottolineatura
 \setuldepth{Flat}
 \contourlength{0.8pt}
 
@@ -15,8 +22,34 @@
   \llap{\contour{white}{#1}}%
 }
 
+% setup dei link
 \hypersetup{
     colorlinks=true, %set true if you want colored links
     linktoc=all,     %set to all if you want both sections and subsections linked
     linkcolor=black,  %choose some color if you want links to stand out
 }
+
+% shortcut per i placeholder
+\newcommand{\plchold}[1]{\textit{\{#1\}}}
+
+% setup di header e footer
+\pagestyle{fancy}
+
+\fancyhf{}
+\fancyhead[L]{\includegraphics[width=1cm]{\commons/img/logo.png}}
+\fancyhead[R]{\thetitle}
+\fancyfoot[R]{\thepage\ di \pageref{LastPage}}
+
+\fancypagestyle{nopage}{%
+\fancyfoot{}%
+}
+
+\setlength{\headheight}{1.2cm}
+
+% definizione del comando \uso
+\makeatletter
+\newcommand{\setUso}[1]{%
+\newcommand{\@uso}{#1}%
+}
+\newcommand{\uso}{\@uso}
+\makeatother
