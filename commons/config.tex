@@ -46,10 +46,40 @@
 
 \setlength{\headheight}{1.2cm}
 
-% definizione del comando \uso
+% definizione dei comandi \uso e \stato
 \makeatletter
 \newcommand{\setUso}[1]{%
 \newcommand{\@uso}{#1}%
 }
 \newcommand{\uso}{\@uso}
+
+\newcommand{\setStato}[1]{%
+\newcommand{\@stato}{#1}%
+}
+\newcommand{\stato}{\@stato}
+
+\newcommand{\setVersione}[1]{%
+\newcommand{\@versione}{#1}%
+}
+\newcommand{\versione}{\@versione}
+
+\newcommand{\setResponsabile}[1]{%
+\newcommand{\@responsabile}{#1}%
+}
+\newcommand{\responsabile}{\@responsabile}
+
+\newcommand{\setRedattori}[1]{%
+\newcommand{\@redattori}{#1}%
+}
+\newcommand{\redattori}{\@redattori}
+
+\newcommand{\setVerificatori}[1]{%
+\newcommand{\@verificatori}{#1}%
+}
+\newcommand{\verificatori}{\@verificatori}
+
+\newcommand{\setDescrizione}[1]{%
+\newcommand{\@descrizione}{#1}%
+}
+\newcommand{\descrizione}{\@descrizione}
 \makeatother
