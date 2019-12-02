@@ -1,0 +1,79 @@
+\documentclass{article}
+
+\newcommand{\commons}{../../commons}
+
+\input{\commons/config}
+
+\title{Verbale - 28/11/2019}
+\setVersione{\plchold{versione}}
+\setResponsabile{\plchold{responsabile}}
+\setRedattori{\plchold{redattori}}
+\setVerificatori{\plchold{verificatori}}
+\setStato{WIP}
+\setUso{Interno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 28/11/2019}
+\setModifiche{}
+
+\begin{document}
+	\input{\commons/template}
+	\pagenumbering{arabic}
+	\section{Ordini del giorno}
+	\label{sec:ordini_del_giorno}
+	\begin{itemize}
+		\item Ruoli
+		\item Configurazione repo
+		\begin{itemize}
+			\item Template documenti
+			\item Scansione date e milestone
+			\item Standard messaggi di commit
+			\item Versionamento
+		\end{itemize}
+		\item Studio di fattibilità
+	\end{itemize}
+	% section ordini_del_giorno (end)
+	\section{Ruoli}
+	\label{sec:ruoli}
+	In prima analisi, abbiamo scelto di dividere i ruoli come segue:
+	\begin{description}
+		\item[Responsabile] Alberto Cocco
+		\item[Amministratore] Luca Ercole
+		\item[Analista] Alberto Gobbo
+		\item[Analista] Riccardo Agatea
+		\item[Analista] Fabio Scettro
+		\item[Analista] Alessandro Rizzo
+		\item[Verificatore] Tobia Apolloni
+		\item[Verificatore] Riccardo Cestaro
+	\end{description}
+	% section ruoli (end)
+	\section{Configurazione repo}
+	\label{sec:configurazione_repo}
+	Abbiamo scelto di utilizzare repo separate per documentazione e prodotto, anche considerando che i capitolati verso cui siamo orientati prevedono lo sviluppo, ad esempio, di un server centrale e di un'app separata. La repo di documentazione è divisa nelle cartelle \verb|interni| e \verb|esterni|, per i rispettivi documenti, e ciascuna contiene una sottocartella per ogni singolo documento da produrre. Ciascuna cartella contiene il file principale del documento ed una sottocartella contenente i file relativi alle sue singole parti. Abbiamo rimandato la definizione della struttura delle repo di codice alla stesura delle Norme di Progetto.
+	\subsection{Template documenti}
+	\label{sub:template_documenti}
+	I documenti saranno scritti in LaTeX, usando una struttura a più file separati (come evidenziato dall'organizzazione della repo). Abbiamo deciso di utilizzare dei "file di configurazione" di alto livello e dei file template per uniformare la struttura dei documenti. Per la stesura del registro delle modifiche abbiamo deciso di utilizzare dei tool automatici, legati ai messaggi di commit (vedi sezione \ref{sub:standard_messaggi_di_commit}).
+	% subsection template_documenti (end)
+	\subsection{Scansione date e milestone}
+	\label{sub:scansione_date_e_milestone}
+	\begin{description}
+		\item[da definire] Incontro con ImolaInformatica
+		\item[da definire] Incontro con ImolaInformatica (+ $\varepsilon$)
+		\item[20/12/19] Ultimo incontro prima delle vacanze + primo cambio ruoli
+		\item[03/01/20] Incontro intermedio
+		\item[07/01/20] Completamento documenti per RR
+		\item[da definire] Incontro con ImolaInformatica
+	\end{description}
+	% subsection scansione_date_e_milestone (end)
+	\subsection{Standard messaggi di commit}
+	\label{sub:standard_messaggi_di_commit}
+	Abbiamo scelto di scrivere i messaggi di commit seguendo lo standard dato da \href{https://www.conventionalcommits.org/en/v1.0.0/}{conventional commits v1.0.0}; i commit relativi alla repo di documentazione avranno commit message in italiano per facilitare la generazione automatica del registro delle modifiche.
+	% subsection standard_messaggi_di_commit (end)
+	\subsection{Versionamento}
+	\label{sub:versionamento}
+	Abbiamo deciso di utilizzare il \href{https://semver.org/}{semantic versioning 2.0.0} per il versionamento, considerandone una versione modificata per il versionamento dei documenti. Per le specifiche, rimandiamo alle Norme di Progetto, ma l'idea sarà di incrementare MAJOR con le approvazioni, MINOR con le verifiche e PATCH con le modifiche.
+	% subsection versionamento (end)
+	% section configurazione_repo (end)
+	\section{Studio di fattibilità}
+	\label{sec:studio_di_fattibilità}
+	Abbiamo riunito le informazioni raccolte dai singoli componenti del gruppo sui singoli capitolati in un unico file, studio-di-fattibilita.tex
+	% section studio_di_fattibilità (end)
+\end{document}
