@@ -1,4 +1,4 @@
-name: Check files for BOMs and CRLF endings
+name: Best practices for source files
 
 on:
   pull_request:
