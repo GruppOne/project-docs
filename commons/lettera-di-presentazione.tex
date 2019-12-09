@@ -1,0 +1,79 @@
+\documentclass{article}
+
+\usepackage[italian]{babel}
+\usepackage[margin=2cm, footskip=5mm]{geometry}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{multicol}
+\usepackage{changepage}
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\fancyhead[R]{\includegraphics[width=2cm]{./img/logo-unipd.png}}
+\fancyhead[L]{\includegraphics[width=2cm]{./img/logo.png}}
+\fancyfoot[C]{\texttt{gruppone.swe@gmail.com}}
+
+\setlength{\headheight}{2.2cm}
+
+\begin{document}
+	\begin{center}
+		{\LARGE \textbf{GruppOne}}
+	\end{center}
+	\begin{multicols}{2}
+		Padova, 14 gennaio 2020
+		\columnbreak
+		\begin{itemize}
+			\setlength{\itemsep}{0mm}
+			\setlength{\parskip}{0mm}
+			\renewcommand{\labelitemi}{}
+			\item Prof. Vardanega Tullio
+			\item Prof. Cardin Riccardo
+			\item Dipartimento di Matematica "Tullio Levi-Civita"
+			\item Università degli Studi di Padova
+			\item Via Trieste, 63
+			\item 65121 Padova
+		\end{itemize}
+	\end{multicols}
+	Egregi professori,
+
+	\{...\}
+	\begin{itemize}
+		\item \{allegati\}
+	\end{itemize}
+
+	\{...\}
+
+	\{Componenti\}
+	\begin{table}[H]
+		\label{tab:componenti}
+		\centering
+		\rowcolors{2}{lightgray}{white!80!lightgray!100}
+		\begin{tabular}[c]{c c}
+			\rowcolor{darkgray!90!}\color{white}{\textbf{Nominativo}}&\color{white}{\textbf{Matricola}}\\
+			Agatea Riccardo&1170718\\
+			Apolloni Tobia&1007770\\
+			Cestaro Riccardo&1170624\\
+			Cocco Alberto&1167891\\
+			Ercole Luca&1172436\\
+			Gobbo Alberto&1170556\\
+			Rizzo Alessandro&1162429\\
+			Scettro Fabio&1143295\\
+		\end{tabular}
+	\end{table}
+	\{...\}
+
+	Distinti saluti,\\
+	\hspace{2cm}
+	\begin{adjustwidth}{2.5cm}{10.5cm}
+		\centering
+		\textit{Responsabile di Progetto}\\
+		Nome Cognome\\
+		\hspace{2cm}
+		\underline{\color{white}{Responsabile di Progetto}}
+	\end{adjustwidth}
+\end{document}
