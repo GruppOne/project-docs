@@ -1,0 +1,69 @@
+\documentclass[../studio-di-fattibilita.tex]{subfiles}
+
+
+\title{C2: Etherless}
+\author{Rizzo Alessandro 1162429, Apolloni Tobia}
+\date{\today}
+
+\begin{document}
+	\pagenumbering{arabic}
+	\subsection{Informazioni generali}
+	\label{sec:informazioni_generali}
+	\begin{description}
+		\item[Nome] Etherless
+		\item[Proponente] Red Babel
+		\item[Committente] prof. Tullio Vardanega, prof. Riccardo Cardin
+	\end{description}
+	% subsubsection informazioni_generali (end)
+	\subsection{Descrizione}
+	\label{sec:descrizione}
+	\textit{Stalker} Etherless si pone come servizio di calcolo distribuito per funzioni JavaScript, che permette allo sviluppatore di mettere a disposizione una funzione 
+a pagamento, e all'utente di usufruirne da remoto.
+E' inoltre in grado di automatizzare il processo di pagamento della prestazione
+e di far pagare all'utente soltanto l'effettivo utilizzo del servizio.
+	% subsubsection descrizione (end)
+	\subsection{Finalità del progetto}
+	\label{sec:finalità_del_progetto}
+	Il software da realizzare consisterà in un pacchetto di node.js, installabile tramite node package manager, utilizzabile tramite interfaccia da riga di comando.
+Il programma deve offrire le seguenti funzionalità:
+	\begin{itemize}
+		\item inizializzare Etherless sulla propria macchina;
+		\item configurare il proprio account Ethereum;
+		\item caricare le funzioni javascript da eseguire remotamente;
+		\item mostrare la lista delle funzioni a propria disposizione;
+		\item utilizzare le funzioni messe a disposizione nel network;
+		\item rimuovere le funzioni precendemente caricate.
+	\end{itemize}
+	Per il server, il requisito più forte è la sua scalabilità, con un accento sulla scelta fra scalabilità orizzontale e verticale, in base al numero di utenti attivi.
+	% subsubsection finalità_del_progetto (end)
+	\subsection{Tecnologie e Metodologie di sviluppo interessate}
+	\label{sec:tecnologie_interessate}
+    L'utilizzo di una funzione deve essere automaticamente tracciato e gestire il corrispondente pagamento in Ethereum.	
+	\begin{description}
+		\item[Blockchain] Ethereum
+		\item[Serverless Tecnology] per la gestione e l'esecuzione delle funzioni.
+		\item[Typescript 3.6] per le comunicazioni tra utente e network
+		\item[ESlint] per l'analisi statica del codice;
+		\item[Serverless Framework] per l'integrazione Serverless
+	\end{description}
+	% subsubsection tecnologie_interessate (end)
+	\subsection{Aspetti positivi}
+	\label{sec:aspetti_positivi}
+	\begin{itemize}
+		\item il contesto tecnologico proposto è di grande interesse: in particolare, la tecnologia serverless
+	\end{itemize}
+	% subsubsection aspetti_positivi (end)
+	\subsection{Criticità e fattori di rischio}
+	\label{sec:criticità_e_fattori_di_rischio}
+	\begin{itemize}
+		\item il capitolato è di difficile comprensione data la particolarità degli argomenti, rendendo difficile un'analisi a priori precisa 
+		\item l'ambito di formazione tecnologico, per quanto interessante, è limitato al contesto delle tecnologie di RedBabel
+		\item la particolarità dell'argomento trattato richiede molta formazione specifica da parte dei partecipanti
+	\end{itemize}
+	% subsubsection criticità_e_fattori_di_rischio (end)
+	\subsection{Conclusioni}
+	\label{sec:conclusioni}
+	Il progetto non ha incontrato l'entusiasmo dei partecipanti per via della specificità degli argomenti trattati, unita allo scarso interesse per le tecnologie trattate 
+questo ha portato il gruppo a orientarsi verso altre scelte.
+	% subsubsection conclusioni (end)
+\end{document}
