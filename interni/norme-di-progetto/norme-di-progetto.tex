@@ -1,11 +1,14 @@
 \documentclass{article}
+\usepackage{subfiles}
+\newcommand{\commons}{../../commons}
 
-\input{../../commons/config}
-\appendToGraphicspath{../../commons/img/}
+\input{\commons/config}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
 
 \title{Norme di progetto}
 
-% \setVersione{\plchold{versione}}
+\setVersione{\plchold{versione}}
 \setResponsabile{Alessandro Rizzo}
 \setRedattori{
   Alberto Cocco \\ &
@@ -17,11 +20,27 @@
 }
 \setStato{WIP}
 \setUso{Interno}
-% \setDescrizione{\plchold{descrizione}}
+\setDescrizione{\plchold{descrizione}}
 \setModifiche{}
 
 \begin{document}
 
-\input{../../commons/template}
+  \input{\commons/template}
+
+	\section{Introduzione}
+
+	\subfile{components/introduzione}
+
+	\section{Processi primari}
+
+	\subfile{components/primari}
+
+	\section{Processi di supporto}
+
+	\subfile{components/supporto}
+
+	\section{Processi organizzativi}
+
+	\subfile{components/organizzativi}
 
 \end{document}
