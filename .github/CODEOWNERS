@@ -1,0 +1,22 @@
+# configurazioni di varie feature di github
+.github/ @erclu
+
+# configurazione del workspace di visual studio code
+.vscode/ @erclu
+
+# template, configurazione e file comuni di documenti LaTex
+commons/ @RiccardoAgatea
+
+esterni/analisi-dei-requisiti @AlbertoGobbo
+
+esterni/glossario @RiccardoAgatea
+
+esterni/piano-di-progetto @fabioscettro
+
+esterni/piano-di-qualifica @erclu
+
+interni/norme-di-progetto @Alberto1598
+
+interni/studio-di-fattibilità @AlexRizzus
+
+lettera-di-presentazione @Alberto1598
