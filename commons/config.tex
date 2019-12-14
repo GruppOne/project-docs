@@ -28,9 +28,9 @@
 
 % setup dei link
 \hypersetup{
-    colorlinks=true, %set true if you want colored links
-    linktoc=all,     %set to all if you want both sections and subsections linked
-    linkcolor=black,  %choose some color if you want links to stand out
+  colorlinks=true, % set true if you want colored links
+  linktoc=all,     % set to all if you want both sections and subsections linked
+  linkcolor=black, % choose some color if you want links to stand out
 }
 
 % shortcut per i placeholder
@@ -48,7 +48,7 @@
 \fancyfoot[R]{\thepage\ di \pageref{LastPage}}
 
 \fancypagestyle{nopage}{%
-\fancyfoot{}%
+  \fancyfoot{}%
 }
 
 \setlength{\headheight}{1.2cm}
@@ -56,42 +56,44 @@
 % definizione dei comandi \uso e \stato
 \makeatletter
 \newcommand{\setUso}[1]{%
-\newcommand{\@uso}{#1}%
+  \newcommand{\@uso}{#1}%
 }
 \newcommand{\uso}{\@uso}
 
 \newcommand{\setStato}[1]{%
-\newcommand{\@stato}{#1}%
+  \newcommand{\@stato}{#1}%
 }
 \newcommand{\stato}{\@stato}
 
 \newcommand{\setVersione}[1]{%
-\newcommand{\@versione}{#1}%
+  \newcommand{\@versione}{#1}%
 }
 \newcommand{\versione}{\@versione}
 
 \newcommand{\setResponsabile}[1]{%
-\newcommand{\@responsabile}{#1}%
+  \newcommand{\@responsabile}{#1}%
 }
 \newcommand{\responsabile}{\@responsabile}
 
 \newcommand{\setRedattori}[1]{%
-\newcommand{\@redattori}{#1}%
+  \newcommand{\@redattori}{#1}%
 }
 \newcommand{\redattori}{\@redattori}
 
 \newcommand{\setVerificatori}[1]{%
-\newcommand{\@verificatori}{#1}%
+  \newcommand{\@verificatori}{#1}%
 }
 \newcommand{\verificatori}{\@verificatori}
 
 \newcommand{\setDescrizione}[1]{%
-\newcommand{\@descrizione}{#1}%
+  \newcommand{\@descrizione}{#1}%
 }
 \newcommand{\descrizione}{\@descrizione}
 
 \newcommand{\setModifiche}[1]{%
-\newcommand{\@modifiche}{#1}%
+  \newcommand{\@modifiche}{#1}%
 }
+
 \newcommand{\modifiche}{\@modifiche}
+
 \makeatother
