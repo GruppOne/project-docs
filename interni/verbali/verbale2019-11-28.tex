@@ -4,7 +4,7 @@
 
 \input{\commons/config}
 
-\title{Verbale - 28/11/2019}
+\title{Verbale - 28/11/2019} % chktex 8
 
 \setVersione{\plchold{versione}}
 \setResponsabile{\plchold{responsabile}}
@@ -56,12 +56,17 @@ In prima analisi, abbiamo scelto di dividere i ruoli come segue:
 \section{Configurazione repo}
 \label{sec:configurazione_repo}
 
-Abbiamo scelto di utilizzare repo separate per documentazione e prodotto, anche considerando che i capitolati verso cui siamo orientati prevedono lo sviluppo, ad esempio, di un server centrale e di un'app separata. La repo di documentazione è divisa nelle cartelle \verb|interni| e \verb|esterni|, per i rispettivi documenti, e ciascuna contiene una sottocartella per ogni singolo documento da produrre. Ciascuna cartella contiene il file principale del documento ed una sottocartella contenente i file relativi alle sue singole parti. Abbiamo rimandato la definizione della struttura delle repo di codice alla stesura delle Norme di Progetto.
+Abbiamo scelto di utilizzare repo separate per documentazione e prodotto, anche considerando che i capitolati verso cui siamo orientati prevedono lo sviluppo, ad esempio, di un server centrale e di un app separata.
+La repo di documentazione è divisa nelle cartelle \verb|interni| e \verb|esterni|, per i rispettivi documenti, e ciascuna contiene una sottocartella per ogni singolo documento da produrre.
+Ciascuna cartella contiene il file principale del documento ed una sottocartella contenente i file relativi alle sue singole parti.
+Abbiamo rimandato la definizione della struttura delle repo di codice alla stesura delle Norme di Progetto.
 
 \subsection{Template documenti}
 \label{sub:template_documenti}
 
-I documenti saranno scritti in LaTeX, usando una struttura a più file separati (come evidenziato dall'organizzazione della repo). Abbiamo deciso di utilizzare dei "file di configurazione" di alto livello e dei file template per uniformare la struttura dei documenti. Per la stesura del registro delle modifiche abbiamo deciso di utilizzare dei tool automatici, legati ai messaggi di commit (vedi sezione \ref{sub:standard_messaggi_di_commit}).
+I documenti saranno scritti in LaTeX, usando una struttura a più file separati (come evidenziato dall'organizzazione della repo).
+Abbiamo deciso di utilizzare dei \quotes{file di configurazione} di alto livello e dei file template per uniformare la struttura dei documenti.
+Per la stesura del registro delle modifiche abbiamo deciso di utilizzare dei tool automatici, legati ai messaggi di commit (vedi sezione~\ref{sub:standard_messaggi_di_commit}).
 
 % subsection template_documenti (end)
 \subsection{Scansione date e milestone}
@@ -69,7 +74,7 @@ I documenti saranno scritti in LaTeX, usando una struttura a più file separati 
 
 \begin{description}
   \item[da definire] Incontro con ImolaInformatica
-  \item[da definire] Incontro con ImolaInformatica (+ $\varepsilon$)
+  \item[da definire] Incontro con ImolaInformatica (+ \varepsilon)
   \item[20/12/19] Ultimo incontro prima delle vacanze + primo cambio ruoli
   \item[03/01/20] Incontro intermedio
   \item[07/01/20] Completamento documenti per RR
@@ -80,12 +85,14 @@ I documenti saranno scritti in LaTeX, usando una struttura a più file separati 
 \subsection{Standard messaggi di commit}
 \label{sub:standard_messaggi_di_commit}
 
-Abbiamo scelto di scrivere i messaggi di commit seguendo lo standard dato da \href{https://www.conventionalcommits.org/en/v1.0.0/}{conventional commits v1.0.0}; i commit relativi alla repo di documentazione avranno commit message in italiano per facilitare la generazione automatica del registro delle modifiche.
+Abbiamo scelto di scrivere i messaggi di commit seguendo lo standard dato da \href{https://www.conventionalcommits.org/en/v1.0.0/}{conventional commits v1.0.0};
+i commit relativi alla repo di documentazione avranno commit message in italiano per facilitare la generazione automatica del registro delle modifiche.
 
 % subsection standard_messaggi_di_commit (end)
 \subsection{Versionamento}
 \label{sub:versionamento}
-Abbiamo deciso di utilizzare il \href{https://semver.org/}{semantic versioning 2.0.0} per il versionamento, considerandone una versione modificata per il versionamento dei documenti. Per le specifiche, rimandiamo alle Norme di Progetto, ma l'idea sarà di incrementare MAJOR con le approvazioni, MINOR con le verifiche e PATCH con le modifiche.
+Abbiamo deciso di utilizzare il \href{https://semver.org/}{semantic versioning 2.0.0} per il versionamento, considerandone una versione modificata per il versionamento dei documenti.
+Per le specifiche, rimandiamo alle Norme di Progetto, ma l'idea sarà di incrementare MAJOR con le approvazioni, MINOR con le verifiche e PATCH con le modifiche.
 
 % subsection versionamento (end)
 % section configurazione_repo (end)
