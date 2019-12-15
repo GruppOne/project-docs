@@ -1,7 +1,7 @@
 name: Check files for BOMs and CRLF endings
 
 on:
-  push:
+  pull_request:
     branches:
       - master
 

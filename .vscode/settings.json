@@ -1,0 +1,54 @@
+{
+  "[latex]": {
+    "editor.formatOnSave": true,
+  },
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "latex-workshop.latex.tools": [
+    {
+      "name": "lualatex",
+      "command": "lualatex",
+      "args": [
+        "--synctex=1",
+        "--interaction=nonstopmode",
+        "--c-style-errors",
+        "--output-directory=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    // {
+    //   "name": "bibtex",
+    //   "command": "bibtex",
+    //   "args": [
+    //     "%DOCFILE%"
+    //   ],
+    //   "env": {}
+    // }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "lualatex",
+      "tools": [
+        "lualatex",
+        "lualatex"
+      ]
+    }
+  ],
+  "latex-workshop.chktex.args.active": [
+    "-wall",
+    "-n22",
+    "-n30",
+    "-e16",
+    "-n24",
+    "-q",
+  ],
+  "latex-workshop.chktex.enabled": true,
+  "latex-workshop.chktex.run": "onSave",
+  "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.latex.clean.subfolder.enabled": true,
+  "todo-tree.regex.regex": "((//|#|<!--|;|%|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+}
