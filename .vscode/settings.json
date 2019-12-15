@@ -7,6 +7,13 @@
   "editor.detectIndentation": false,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
+  "git.autofetch": true,
+  // questi due setting sono per chi utilizza direttamente vs code per scrivere i commit
+  "git.inputValidationSubjectLength": 72,
+  "git.inputValidationLength": 100,
+  "git-graph.dialog.rebase.launchInteractiveRebase": true,
+  "git-graph.dialog.rebase.ignoreDate": false,
+  "git-graph.fetchAndPrune": true,
   "latex-workshop.latex.tools": [
     {
       "name": "lualatex",
@@ -39,16 +46,23 @@
     }
   ],
   "latex-workshop.chktex.args.active": [
+    "-q",
     "-wall",
     "-n22",
-    "-n30",
     "-e16",
-    "-n24",
-    "-q",
   ],
   "latex-workshop.chktex.enabled": true,
   "latex-workshop.chktex.run": "onSave",
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.clean.subfolder.enabled": true,
   "todo-tree.regex.regex": "((//|#|<!--|;|%|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
+  "spellright.documentTypes": [
+    "latex",
+    "markdown",
+    "plaintext"
+  ],
+  "spellright.language": [
+    "en",
+    "it"
+  ],
 }
