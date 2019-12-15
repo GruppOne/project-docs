@@ -1,22 +1,27 @@
+# owner di default
+* @erclu
+
 # configurazioni di varie feature di github
-.github/ @erclu
+/.github/ @erclu
 
 # configurazione del workspace di visual studio code
-.vscode/ @erclu
+/.vscode/ @erclu
 
 # template, configurazione e file comuni di documenti LaTex
-commons/ @RiccardoAgatea
+/commons/ @RiccardoAgatea
 
-esterni/analisi-dei-requisiti @AlbertoGobbo
+/esterni/analisi-dei-requisiti/ @AlbertoGobbo
 
-esterni/glossario @RiccardoAgatea
+/esterni/glossario/ @RiccardoAgatea
 
-esterni/piano-di-progetto @fabioscettro
+/esterni/piano-di-progetto/ @fabioscettro
 
-esterni/piano-di-qualifica @erclu
+/esterni/piano-di-qualifica/ @erclu
 
-interni/norme-di-progetto @Alberto1598
+/interni/norme-di-progetto/ @Alberto1598
 
-interni/studio-di-fattibilità @AlexRizzus
+/interni/studio-di-fattibilita/ @AlexRizzus
 
-lettera-di-presentazione @Alberto1598
+/interni/verbali/ @RiccardoAgatea
+
+/lettera-di-presentazione/ @Alberto1598

@@ -12,10 +12,19 @@
         "--synctex=1",
         "--interaction=nonstopmode",
         "--c-style-errors",
-        "%DOCFILE%"
+        "--output-directory=%OUTDIR%",
+        "%DOC%"
       ],
       "env": {}
-    }
+    },
+    // {
+    //   "name": "bibtex",
+    //   "command": "bibtex",
+    //   "args": [
+    //     "%DOCFILE%"
+    //   ],
+    //   "env": {}
+    // }
   ],
   "latex-workshop.latex.recipes": [
     {
@@ -38,6 +47,5 @@
   "latex-workshop.chktex.run": "onSave",
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.clean.subfolder.enabled": true,
-  // "latex-workshop.latex.recipe.default": "first",
   "todo-tree.regex.regex": "((//|#|<!--|;|%|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
 }
