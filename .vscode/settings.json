@@ -7,11 +7,15 @@
   "editor.detectIndentation": false,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
-  "git.autofetch": true,
+  "git.autofetch": false,
+  "git.autorefresh": true,
+  "git.fetchOnPull": false,
+  "git.rebaseWhenSync": true,
+  "git.useForcePushWithLease": true,
   // questi due setting sono per chi utilizza direttamente vs code per scrivere i commit
   "git.inputValidationSubjectLength": 72,
   "git.inputValidationLength": 100,
-  "git-graph.dialog.rebase.launchInteractiveRebase": true,
+  "git-graph.dialog.rebase.launchInteractiveRebase": false,
   "git-graph.dialog.rebase.ignoreDate": false,
   "git-graph.fetchAndPrune": true,
   "latex-workshop.latex.tools": [
@@ -27,14 +31,6 @@
       ],
       "env": {}
     },
-    // {
-    //   "name": "bibtex",
-    //   "command": "bibtex",
-    //   "args": [
-    //     "%DOCFILE%"
-    //   ],
-    //   "env": {}
-    // }
   ],
   "latex-workshop.latex.recipes": [
     {
