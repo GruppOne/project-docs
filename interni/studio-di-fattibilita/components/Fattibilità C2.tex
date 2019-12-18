@@ -1,29 +1,24 @@
 \documentclass[../studio-di-fattibilita.tex]{subfiles}
 
 
-\title{C2: Etherless}
-\author{Rizzo Alessandro 1162429, Apolloni Tobia}
-\date{\today}
-
 \begin{document}
-	\pagenumbering{arabic}
 	\subsection{Informazioni generali}
-	\label{sec:informazioni_generali}
+	\label{subsec:informazioni_generali}
 	\begin{description}
 		\item[Nome] Etherless
 		\item[Proponente] Red Babel
 		\item[Committente] prof. Tullio Vardanega, prof. Riccardo Cardin
 	\end{description}
-	% subsubsection informazioni_generali (end)
+	% subsection informazioni_generali (end)
 	\subsection{Descrizione}
-	\label{sec:descrizione}
-	\textit{Stalker} Etherless si pone come servizio di calcolo distribuito per funzioni JavaScript, che permette allo sviluppatore di mettere a disposizione una funzione 
+	\label{subsec:descrizione}
+	\textit{Etherless} Etherless si pone come servizio di calcolo distribuito per funzioni JavaScript, che permette allo sviluppatore di mettere a disposizione una funzione 
 a pagamento, e all'utente di usufruirne da remoto.
 E' inoltre in grado di automatizzare il processo di pagamento della prestazione
 e di far pagare all'utente soltanto l'effettivo utilizzo del servizio.
-	% subsubsection descrizione (end)
+	% subsection descrizione (end)
 	\subsection{Finalità del progetto}
-	\label{sec:finalità_del_progetto}
+	\label{subsec:finalità_del_progetto}
 	Il software da realizzare consisterà in un pacchetto di node.js, installabile tramite node package manager, utilizzabile tramite interfaccia da riga di comando.
 Il programma deve offrire le seguenti funzionalità:
 	\begin{itemize}
@@ -35,9 +30,9 @@ Il programma deve offrire le seguenti funzionalità:
 		\item rimuovere le funzioni precendemente caricate.
 	\end{itemize}
 	Per il server, il requisito più forte è la sua scalabilità, con un accento sulla scelta fra scalabilità orizzontale e verticale, in base al numero di utenti attivi.
-	% subsubsection finalità_del_progetto (end)
+	% subsection finalità_del_progetto (end)
 	\subsection{Tecnologie e Metodologie di sviluppo interessate}
-	\label{sec:tecnologie_interessate}
+	\label{subsec:tecnologie_interessate}
     L'utilizzo di una funzione deve essere automaticamente tracciato e gestire il corrispondente pagamento in Ethereum.	
 	\begin{description}
 		\item[Blockchain] Ethereum
@@ -46,24 +41,24 @@ Il programma deve offrire le seguenti funzionalità:
 		\item[ESlint] per l'analisi statica del codice;
 		\item[Serverless Framework] per l'integrazione Serverless
 	\end{description}
-	% subsubsection tecnologie_interessate (end)
+	% subection tecnologie_interessate (end)
 	\subsection{Aspetti positivi}
-	\label{sec:aspetti_positivi}
+	\label{subsec:aspetti_positivi}
 	\begin{itemize}
 		\item il contesto tecnologico proposto è di grande interesse: in particolare, la tecnologia serverless
 	\end{itemize}
-	% subsubsection aspetti_positivi (end)
+	% subsection aspetti_positivi (end)
 	\subsection{Criticità e fattori di rischio}
-	\label{sec:criticità_e_fattori_di_rischio}
+	\label{subsec:criticità_e_fattori_di_rischio}
 	\begin{itemize}
 		\item il capitolato è di difficile comprensione data la particolarità degli argomenti, rendendo difficile un'analisi a priori precisa 
 		\item l'ambito di formazione tecnologico, per quanto interessante, è limitato al contesto delle tecnologie di RedBabel
 		\item la particolarità dell'argomento trattato richiede molta formazione specifica da parte dei partecipanti
 	\end{itemize}
-	% subsubsection criticità_e_fattori_di_rischio (end)
+	% subsection criticità_e_fattori_di_rischio (end)
 	\subsection{Conclusioni}
-	\label{sec:conclusioni}
+	\label{subsec:conclusioni}
 	Il progetto non ha incontrato l'entusiasmo dei partecipanti per via della specificità degli argomenti trattati, unita allo scarso interesse per le tecnologie trattate 
 questo ha portato il gruppo a orientarsi verso altre scelte.
-	% subsubsection conclusioni (end)
+	% subsection conclusioni (end)
 \end{document}
