@@ -1,14 +1,9 @@
 \documentclass[../studio-di-fattibilita.tex]{subfiles}
 
 
-\title{C1: Autonomous Highlights Platform}
-\author{Gobbo Alberto, 1170556}
-\date{\today}
-
 \begin{document}
-	\pagenumbering{arabic}
 	\subsection{Informazioni generali}
-	\label{sec:informazioni_generali}
+	\label{subsec:informazioni_generali}
 	\begin{description}
 		\item[Nome] Autonomous Highlights Platform
 		\item[Proponente] Zero12
@@ -16,11 +11,11 @@
 	\end{description}
 	% subsection informazioni_generali (end)
 	\subsection{Descrizione}
-	\label{sec:descrizione}
+	\label{subsec:Descrizione}
 	\textit{Autonomous Highlights Platform} si prefigge l'obiettivo di creare una piattaforma web che in input riceva video di eventi sportivi, e in output crei autonomamente un video della durata massima di 5 minuti.
 	% subsection descrizione (end)
 	\subsection{Finalità del progetto}
-	\label{sec:finalità_del_progetto}
+	\label{subsec:finalità_del_progetto}
 	Il proponente chiede che la piattaforma, al fine di soddisfare i requisiti, dovrà essere dotata di un modello di machine learning che sia in grado di estrapolare i momenti salienti di ogni singolo video. L'ordine del flusso di generazione dell'output sarà:
 	\begin{itemize}
 		\item caricamento del video
@@ -29,8 +24,8 @@
 		\item generazione del video di sintesi	
 	\end{itemize}
 	% subsection finalità_del_progetto (end)
-	\subsection{Tecnologie interessate}
-	\label{sec:tecnologie_interessate}
+	\subsection{Tecnologie e Metodologie di sviluppo interessate}
+	\label{subsec:tecnologie_interessate}
 	Il proponente consiglia l'utilizzo della tecnologia di \textbf{Amazon Web Services} e in particolare i servizi:
 	\begin{description}
 		\item[Elastic Container Service o Elastic Kubernetes Service] servizio di orchestrazione di contenitori altamente dimensionabile ad elevate prestazioni
@@ -47,7 +42,7 @@
 	Inoltre è richiesto che il caricamento dei video da elaborare avvenga tramite riga di comando, e che venga integrata una console web di analisi e controllo degli stati di elaborazione dei video.
 	% subsection tecnologie_interessate (end)
 	\subsection{Aspetti positivi}
-	\label{sec:aspetti_positivi}
+	\label{subsec:aspetti_positivi}
 	\begin{itemize}
 		\item L'utilizzo di un modello di machine learning, che permette di identificare ogni momento importante dell’evento sportivo
 		\item Il fornitore può scegliere liberamente lo sport: il proponente non vincola in alcun modo questa scelta
@@ -60,7 +55,7 @@
 	\end{itemize}
 	% subsection criticità_e_fattori_di_rischio (end)
 	\subsection{Conclusioni}
-	\label{sec:conclusioni}
+	\label{subsec:conclusioni}
 	Il progetto non ha suscitato molto interesse all'interno del gruppo, in quanto sarebbe maggiore il tempo da dedicare all'osservazione degli eventi sportivi ed a segnalare i momenti salienti, che alla realizzazione stessa del progetto. Infine lo sport non genera interesse per la maggior parte dei membri del gruppo, così abbiamo deciso di non considerare questa proposta.
 	% subsection conclusioni (end)
 \end{document}
