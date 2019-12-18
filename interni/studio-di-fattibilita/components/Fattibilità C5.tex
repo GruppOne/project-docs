@@ -1,25 +1,21 @@
 \documentclass[../studio-di-fattibilita.tex]{subfiles}
 
-\title{C5: Stalker}
-\author{GruppOne:\\\\Agatea Riccardo, 1170718\\Cestaro Riccardo, 1170624\\Gobbo Alberto, 1170556\\Apolloni Tobia\\Rizzo Alessandro\\Ercole Luca\\Cocco Alberto\\Scettro Fabio}
-\date{\today}
 
 \begin{document}
-	\pagenumbering{arabic}
 	\subsection{Informazioni generali}
-	\label{sec:informazioni_generali}
+	\label{subsec:informazioni_generali}
 	\begin{description}
 		\item[Nome] Stalker
 		\item[Proponente] Imola Informatica
 		\item[Committente] prof. Tullio Vardanega, prof. Riccardo Cardin
 	\end{description}
-	% section informazioni_generali (end)
+	% subsection informazioni_generali (end)
 	\subsection{Descrizione}
-	\label{sec:descrizione}
+	\label{subsec:descrizione}
 	\textit{Stalker} si prefigge lo sviluppo di un'applicazione che permetta di monitorare le persone presenti in un dato luogo; il proponente distingue due situazioni, secondo la necessità o meno di autenticare l'utente al momento di ingresso nell'area di interesse.
-	% section descrizione (end)
+	% subsection descrizione (end)
 	\subsection{Finalità del progetto}
-	\label{sec:finalità_del_progetto}
+	\label{subsec:finalità_del_progetto}
 	Il software da realizzare deve consistere di un'applicazione mobile (è lasciata al fornitore la scelta del sistema operativo, Android o iOS). Le funzionalità che l'applicazione deve fornire sono:
 	\begin{itemize}
 		\item Permette la presenza di figure denominate amministratori che sono in grado di:
@@ -42,9 +38,9 @@
 		\item La localizzazione deve garantire una precisione sufficiente a garantire la presenza delle persone negli edifici ma anche non consumare eccessivamente la batteria del dispositivo, ogni scelta deve essere motivata e correlata da test per garantire la qualità del servizio.
 		\item Tutte le componenti dell’applicazione devono essere accompagnate da test unitari e di integrazione con una copertura del codice maggiore o uguale al 80\%. 
 	\end{itemize}
-	% section finalità_del_progetto (end)
+	% subsection finalità_del_progetto (end)
 	\subsection{Tecnologie e Metodologie di sviluppo interessate}
-	\label{sec:tecnologie_interessate}
+	\label{subsec:tecnologie_interessate}
 	Il proponente non dà indicazioni specifiche. Per lo sviluppo del software, consiglia:
 	\begin{description}
 		\item[Java 8, Python, node.js] per lo sviluppo del server
@@ -63,25 +59,25 @@
 		\item[Scala] Per lo sviluppo del server e dell'app, per il suo ampio supporto alla programmazione concorrente e la sua interoperabilità con Java e la JVM.
 	\end{description}
 	Inoltre, sono richieste le tecniche dell'analisi statistica per la valutazione dell'errore relativo al rilevamento della posizione.
-	% section tecnologie_interessate (end)
+	% subsection tecnologie_interessate (end)
 	\subsection{Aspetti positivi}
-	\label{sec:aspetti_positivi}
+	\label{subsec:aspetti_positivi}
 	\begin{itemize}
 		\item La comprensibilità delle specifiche e la granularità dei dettagli del capitolato rendono molto chiari gli obiettivi del progetto.
 		\item Il progetto richiede lo sviluppo di un'app e del rispettivo server: questo è un modello ricorrente nel nostro futuro ambito di lavoro, e ci permette di incrementare le relative abilità e competenze.
 		\item Il proponente offre dei possibili strumenti di sviluppo, ma non vincola il loro utilizzo, lasciando libertà di scelta al fornitore. Allo stesso modo, non vincola la scelta del sistema operativo, Android o iOS.
 	\end{itemize}
-	% section aspetti_positivi (end)
+	% subsection aspetti_positivi (end)
 	\subsection{Criticità e fattori di rischio}
-	\label{sec:criticità_e_fattori_di_rischio}
+	\label{subsec:criticità_e_fattori_di_rischio}
 	\begin{itemize}
 		\item Individuare la combinazione ottimale dei diversi metodi di geolocalizzazione per ottenere una precisione sufficiente per la posizione senza utilizzare eccessivamente la tecnologia GPS.
 		\item L'analisi statistica richiesta per lo studio dell'errore sulla posizione comporta un carico di lavoro non inerente all'ambito informatico.
 		\item È necessario considerare la possibilità che si formi un collo di bottiglia nel caso in cui il numero di utenti aumenti improvvisamente.
 	\end{itemize}
-	% section criticità_e_fattori_di_rischio (end)
+	% subsection criticità_e_fattori_di_rischio (end)
 	\subsection{Conclusioni}
-	\label{sec:conclusioni}
+	\label{subsec:conclusioni}
 	Il progetto è stato subito accolto dai componenti del gruppo, le sfide tecnologiche sono interessanti e gli argomenti trattati sono indubbiamente di interesse. L'obiettivo chiaro ha permesso di ridurre i tempi di studio delle specifiche, concentrandosi maggiormente sugli aspetti più avanzati (come la scrittura della documentazione). Il gruppo ha avuto una buona impressione del proponente, apprezzando la disponibilità offerta e il grado di libertà lasciato nelle scelte tecnologiche. 
-	% section conclusioni (end)
+	% subsection conclusioni (end)
 \end{document}
