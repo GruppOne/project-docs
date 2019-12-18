@@ -41,12 +41,6 @@
       ]
     }
   ],
-  "latex-workshop.chktex.args.active": [
-    "-q",
-    "-wall",
-    "-n22",
-    "-e16",
-  ],
   "latex-workshop.chktex.enabled": true,
   "latex-workshop.chktex.run": "onSave",
   "latex-workshop.intellisense.package.enabled": true,
