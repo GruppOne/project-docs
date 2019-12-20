@@ -1,6 +1,5 @@
 \documentclass[../studio-di-fattibilita.tex]{subfiles}
 
-
 \begin{document}
 	\subsection{Informazioni generali}
 	\label{subsec:informazioni_generali}
@@ -10,51 +9,63 @@
 		\item[Committente] prof. Tullio Vardanega, prof. Riccardo Cardin
 	\end{description}
 	% subsection informazioni_generali (end)
+
 	\subsection{Descrizione}
 	\label{subsec:descrizione}
-	\textit{ThiReMa} si prefigge la creazione di un'applicatione in grado di ricevere misurazioni da sensori eterogenei,collocati in aree geografiche diverse, e di accumulare le suddette in modo efficiente ed efficace in un database centralizzato. Inoltre queste informazioni devono essere inoltrate in modo tempestivo nel momento in cui si devono gestire le azioni urgenti.
+	\textit{ThiReMa} si prefigge la creazione di un'applicazione in grado di ricevere misurazioni da sensori eterogenei collocati in aree geografiche diverse, e di accumulare le suddette in modo efficiente ed efficace in un database centralizzato. Inoltre queste informazioni devono essere inoltrate in modo tempestivo nel momento in cui si devono gestire le azioni urgenti.
 	% subsection descrizione (end)
+
 	\subsection{Finalità del progetto}
-	\label{subsec:finalità_del_progetto}
-	Il software da realizzare deve consistere di una web-application che permette di valutare la correlazione tra dati operativi(le misurazioni) e i fattori influenzanti. Tali dati devono essere utilizzati per un altro fine, ovvero effettuare delle previsioni sull'andamento dei dati tramite la definizione di uno o più algoritmi.
+	\label{subsec:finalita_del_progetto}
+	Il software da realizzare consiste di una web-application che permetta di valutare la correlazione tra dati operativi (le misurazioni) e fattori influenzanti.
+	Questa deve poi essere utilizzata per effettuare delle previsioni sull'andamento dei dati tramite la definizione di uno o più algoritmi.
 	Per ogni tipologia di informazioni rilevate, dovrà anche essere possibile assegnare il monitoraggio ad un particolare ente.
 	La web-application deve essere suddivisa in tre macro-sezioni:
 	\begin{itemize}
-		\item Censimento dei sensori e dei relativi dati
-		\item Modulo di analisi di correlazione
-		\item Modulo di monitoraggio per ente
+		\item censimento dei sensori e dei relativi dati;
+		\item modulo di analisi di correlazione;
+		\item modulo di monitoraggio per ente.
 	\end{itemize}
 	% subsection finalità_del_progetto (end)
+
+
 	\subsection{Tecnologie e Metodologie di sviluppo interessate}
 	\label{subsec:tecnologie_interessate}
 	I vincoli indicati dal proponente riguardo alle tecnologie da utilizzare sono:
 	\begin{description}
-		\item[Telegram] come servizio di dispatching, per inoltrare in modo tempestivo le informazioni utili in caso di emergenza
-		\item[Apache Kafka] come cluster che fa da tramite per l'interazione tra sensori e database
-		\item[Java] per realizzare i componenti custom \textit{Kafka} e lo sviluppo della business logic
+		\item[Telegram] come servizio di dispatching, per inoltrare in modo tempestivo le informazioni utili in caso di emergenza;
+		\item[Apache Kafka] come cluster che fa da tramite per l'interazione tra sensori e database;
+		\item[Java] per realizzare i componenti custom \textit{Kafka} e lo sviluppo della business logic.
 	\end{description}
 	Le implementazioni database suggerite sono \textbf{PostgreSQL}, \textbf{TimescaleDB} e \textbf{ClickHouse}.
 	Non è necessario che misurazioni e metadati risiedano nello stesso database.
 	Altre tecnologie consigliate sono:
 	\begin{description}
-		\item[Bootstrap] per lo styling del front-end
-		\item[Docker] per l'instanziazione di tutti i componenti
+		\item[Bootstrap] per lo styling del front-end;
+		\item[Docker] per l'instanziazione di tutti i componenti.
 	\end{description}
-	% subsection tecnologie_interessate(end)
+	% subsection tecnologie_interessate (end)
+
+
 	\subsection{Aspetti positivi}
 	\label{subsec:aspetti_positivi}
 	\begin{itemize}
-		\item Aquisire competenze in ambito Internet of Things(IoT) e Big Data
+		\item Aquisire competenze in ambito Internet of Things(IoT) e Big Data.
 	\end{itemize}
 	% subsection aspetti_positivi (end)
+
+
 	\subsection{Criticità e fattori di rischio}
-	\label{subsec:criticità_e_fattori_di_rischio}
+	\label{subsec:criticita_e_fattori_di_rischio}
 	\begin{itemize}
-		\item Complessità della mole di dati da gestire
+		\item Complessità della mole di dati da gestire.
 	\end{itemize}
 	% subsection criticità_e_fattori_di_rischio (end)
+
+
 	\subsection{Conclusioni}
 	\label{subsec:conclusioni}
 	Il progetto ha suscitato interesse all'interno del gruppo, ma data la forte concorrenza nell'aggiudicazione del capitolato abbiamo deciso di virare verso altre proposte.
 	% subsection conclusioni (end)
+	
 \end{document}

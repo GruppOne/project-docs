@@ -1,6 +1,5 @@
 \documentclass[../studio-di-fattibilita.tex]{subfiles}
 
-
 \begin{document}
 	\subsection{Informazioni generali}
 	\label{subsec:informazioni_generali}
@@ -10,52 +9,65 @@
 		\item[Committente] prof. Tullio Vardanega, prof. Riccardo Cardin
 	\end{description}
 	% subsection informazioni_generali (end)
+
+
 	\subsection{Descrizione}
 	\label{subsec:Descrizione}
-	\textit{Autonomous Highlights Platform} si prefigge l'obiettivo di creare una piattaforma web che in input riceva video di eventi sportivi, e in output crei autonomamente un video della durata massima di 5 minuti.
+	\textit{Autonomous Highlights Platform} si prefigge l'obiettivo di creare una piattaforma web che riceva in input video di eventi sportivi, e crei autonomamente in output un video della durata massima di 5 minuti.
 	% subsection descrizione (end)
+
+	
 	\subsection{Finalità del progetto}
-	\label{subsec:finalità_del_progetto}
-	Il proponente chiede che la piattaforma, al fine di soddisfare i requisiti, dovrà essere dotata di un modello di machine learning che sia in grado di estrapolare i momenti salienti di ogni singolo video. L'ordine del flusso di generazione dell'output sarà:
+	\label{subsec:finalita_del_progetto}
+	Il proponente chiede che la piattaforma, al fine di soddisfare i requisiti, sia dotata di un modello di machine learning in grado di estrapolare i momenti salienti di ogni singolo video. L'ordine del flusso di generazione dell'output sarà:
 	\begin{itemize}
-		\item caricamento del video
-		\item identificazione dei momenti salienti
-		\item estrazione delle corrispondenti parti di video
-		\item generazione del video di sintesi	
+		\item caricamento del video;
+		\item identificazione dei momenti salienti;
+		\item estrazione delle corrispondenti parti di video;
+		\item generazione del video di sintesi.
 	\end{itemize}
 	% subsection finalità_del_progetto (end)
+
+
 	\subsection{Tecnologie e Metodologie di sviluppo interessate}
 	\label{subsec:tecnologie_interessate}
 	Il proponente consiglia l'utilizzo della tecnologia di \textbf{Amazon Web Services} e in particolare i servizi:
 	\begin{description}
-		\item[Elastic Container Service o Elastic Kubernetes Service] servizio di orchestrazione di contenitori altamente dimensionabile ad elevate prestazioni
-		\item[DynamoDB] Database NoSQL
-		\item[AWS Transcode] per la conversione ed elaborazione di diversi formati video
-		\item[Sage Maker](\textit{obbligatorio il suo utilizzo}) per l'apprendimento automatico
-		\item[AWS Rekognition video] per l'analisi video basata sull'apprendimento approfondito
+		\item[Elastic Container Service o Elastic Kubernetes Service] servizio di orchestrazione di contenitori altamente dimensionabile ad elevate prestazioni;
+		\item[DynamoDB] Database NoSQL;
+		\item[AWS Transcode] per la conversione ed elaborazione di diversi formati video;
+		\item[Sage Maker] per l'apprendimento automatico (\textit{obbligatorio il suo utilizzo});
+		\item[AWS Rekognition video] per l'analisi video basata sull'apprendimento approfondito.
 	\end{description}
 	I linguaggi di programmazione raccomandati sono:
 	\begin{description}
-		\item[NodeJS] per lo sviluppo di API Restful JSON
-		\item[Python] per lo sviluppo delle componenti di Machine Learning
+		\item[NodeJS] per lo sviluppo di API Restful JSON;
+		\item[Python] per lo sviluppo delle componenti di Machine Learning.
 	\end{description}
 	Inoltre è richiesto che il caricamento dei video da elaborare avvenga tramite riga di comando, e che venga integrata una console web di analisi e controllo degli stati di elaborazione dei video.
 	% subsection tecnologie_interessate (end)
+
+	
 	\subsection{Aspetti positivi}
 	\label{subsec:aspetti_positivi}
 	\begin{itemize}
-		\item L'utilizzo di un modello di machine learning, che permette di identificare ogni momento importante dell’evento sportivo
-		\item Il fornitore può scegliere liberamente lo sport: il proponente non vincola in alcun modo questa scelta
+		\item L'utilizzo di un modello di machine learning, che permette di identificare ogni momento importante dell’evento sportivo;
+		\item il fornitore può scegliere liberamente lo sport: il proponente non vincola in alcun modo questa scelta.
 	\end{itemize}
 	% subsection aspetti_positivi (end)
+
+
 	\subsection{Criticità e fattori di rischio}
-	\label{sec:criticità_e_fattori_di_rischio}
+	\label{sec:criticita_e_fattori_di_rischio}
 	\begin{itemize}
-		\item Serve uno studio approfondito di uno specifico sport e osservare con attenzione tutti i momenti principali di un evento sportivo. Questo tipo di attività costa tempo.
+		\item È necessario lo studio approfondito di uno specifico sport e l'osservazione attenta a tutti i momenti principali di un evento sportivo. Questo tipo di attività è costosa in termini di tempo.
 	\end{itemize}
 	% subsection criticità_e_fattori_di_rischio (end)
+
+
 	\subsection{Conclusioni}
 	\label{subsec:conclusioni}
-	Il progetto non ha suscitato molto interesse all'interno del gruppo, in quanto sarebbe maggiore il tempo da dedicare all'osservazione degli eventi sportivi ed a segnalare i momenti salienti, che alla realizzazione stessa del progetto. Infine lo sport non genera interesse per la maggior parte dei membri del gruppo, così abbiamo deciso di non considerare questa proposta.
+	Il progetto non ha suscitato molto entusiasmo all'interno del gruppo, in quanto il tempo da dedicare all'osservazione degli eventi sportivi ed alla segnalazione dei momenti salienti sarebbe maggiore che quello richiesto alla realizzazione stessa del progetto. Inoltre lo sport non genera interesse per la maggior parte dei membri del gruppo, così si è deciso di non considerare questa proposta.
 	% subsection conclusioni (end)
+	
 \end{document}

@@ -10,74 +10,90 @@
 		\item[Committente] prof. Tullio Vardanega, prof. Riccardo Cardin
 	\end{description}
 	% subsection informazioni_generali (end)
+
+
 	\subsection{Descrizione}
 	\label{subsec:descrizione}
-	\textit{Stalker} si prefigge lo sviluppo di un'applicazione che permetta di monitorare le persone presenti in un dato luogo; il proponente distingue due situazioni, secondo la necessità o meno di autenticare l'utente al momento di ingresso nell'area di interesse.
+	\textit{Stalker} si prefigge lo sviluppo di un'applicazione che permetta di monitorare le persone presenti in un dato luogo; il proponente distingue due situazioni secondo la necessità o meno di autenticare l'utente al momento di ingresso nell'area di interesse.
 	% subsection descrizione (end)
+
+
 	\subsection{Finalità del progetto}
-	\label{subsec:finalità_del_progetto}
+	\label{subsec:finalita_del_progetto}
 	Il software da realizzare deve consistere di un'applicazione mobile (è lasciata al fornitore la scelta del sistema operativo, Android o iOS). Le funzionalità che l'applicazione deve fornire sono:
 	\begin{itemize}
-		\item Permette la presenza di figure denominate amministratori che sono in grado di:
+		\item Permettere la presenza di figure denominate amministratori che sono in grado di:
 		\begin{itemize}
-		    \item Creare, modificare o eliminare organizzazioni (dove con modificare intendiamo modificare i luoghi di interesse dell’organizzazione, aggiungerne di nuovi o eliminarne alcuni);
-		    \item Le organizzazioni per l’autenticazione devono sfruttare un server LDAP che viene configurato dagli amministratori;
-		    \item Inviare a tutti gli utenti della propria organizzazione la lista aggiornata dei luoghi;
-		    \item Monitorare in ogni momento i dipendenti presenti nei vari luoghi e i dati sui singoli dipendenti;
-		    \item Eventualmente ottenere report generali in forma tabellare su tutti i dati di interesse e designare altri amministratori per la propria organizzazione.
+		    \item creare, modificare o eliminare organizzazioni (dove con modificare intendiamo modificare i luoghi di interesse dell’organizzazione, aggiungerne di nuovi o eliminarne alcuni);
+		    \item le organizzazioni per l’autenticazione devono sfruttare un server LDAP che viene configurato dagli amministratori;
+		    \item inviare a tutti gli utenti della propria organizzazione la lista aggiornata dei luoghi;
+		    \item monitorare in ogni momento i dipendenti presenti nei vari luoghi e i dati sui singoli dipendenti;
+		    \item eventualmente ottenere report generali in forma tabellare su tutti i dati di interesse e designare altri amministratori per la propria organizzazione.
 		\end{itemize}
 		\item Gli utenti dipendenti invece devono poter:
 		\begin{itemize}
-		    \item Scaricare la lista completa delle organizzazioni e autenticarsi qualora fosse necessario;
-		    \item Poter utilizzare una modalità anonima che permetta, in caso l’autenticazione sia richiesta dall’organizzazione, di risultare presente in maniera anonima (indica solo la presenza e non la posizione esatta all’interno del luogo di interesse);
-		    \item Eventualmente avere accesso allo storico dei propri accessi e visualizzare in tempo reale la propria presenza in un luogo monitorato e il tempo di permanenza.
+		    \item scaricare la lista completa delle organizzazioni e autenticarsi qualora fosse necessario;
+		    \item utilizzare una modalità anonima che permetta, in caso l’autenticazione non sia richiesta dall’organizzazione, di risultare presente in maniera anonima (indicando solo la presenza e non la posizione esatta all’interno del luogo di interesse);
+		    \item avere accesso, eventualmente, allo storico dei propri accessi e visualizzare in tempo reale la propria presenza in un luogo monitorato e il tempo di permanenza.
 		\end{itemize}
-		\item Nel caso d’uso della Fiera di Verona invece gli utenti non hanno bisogno di autenticarsi tramite un server LDAP poiché in monitoraggio devi essere;
-		\item Per quanto riguarda il server web la richiesta principale è la scalablità in base al numero di utenti, correlati da test di carico nelle varie situazioni plausibili.
-		\item	Il server inoltre deve essere comprensivo di una UI che ne permetta la configurazione da parte degli amministratori delle organizzazioni.
-		\item La localizzazione deve garantire una precisione sufficiente a garantire la presenza delle persone negli edifici ma anche non consumare eccessivamente la batteria del dispositivo, ogni scelta deve essere motivata e correlata da test per garantire la qualità del servizio.
-		\item Tutte le componenti dell’applicazione devono essere accompagnate da test unitari e di integrazione con una copertura del codice maggiore o uguale al 80\%. 
+		\item Nel caso d’uso della Fiera di Verona, invece, gli utenti non hanno bisogno di autenticarsi tramite un server LDAP poiché il monitoraggio deve essere anonimo;
+		\item per quanto riguarda il server web, la richiesta principale è la scalablità in base al numero di utenti, correlati da test di carico nelle varie situazioni plausibili;
+		\item il server deve essere provvisto di una UI che ne permetta la configurazione da parte degli amministratori delle organizzazioni;
+		\item la localizzazione deve garantire una precisione sufficiente a stabilire la presenza delle persone negli edifici, ma è altrettanto importante non consumare eccessivamente la batteria del dispositivo, per questo ogni scelta deve essere motivata e correlata da test per garantire la qualità del servizio;
+		\item tutte le componenti dell’applicazione devono essere accompagnate da test unitari e di integrazione con una copertura del codice maggiore o uguale al 80\%. 
 	\end{itemize}
 	% subsection finalità_del_progetto (end)
+
+	
 	\subsection{Tecnologie e Metodologie di sviluppo interessate}
 	\label{subsec:tecnologie_interessate}
-	Il proponente non dà indicazioni specifiche. Per lo sviluppo del software, consiglia:
+	Il proponente non dà indicazioni specifiche.
+
+	Per lo sviluppo del software, consiglia:
 	\begin{description}
-		\item[Java 8, Python, node.js] per lo sviluppo del server
-		\item[IAAS Kubernetes, PAAS, Openshift, Rancher] per il rilascio delle componenti del server nonché per la gestione della scalabilità orizzontale
-		\item[Protocolli asincroni] per le comunicazioni fra l'app e il server
-		\item[Pattern Publisher/Subscriber] per le comunicazioni fra l'app e il server
-		\item[Server LDAP] per l'autenticazione alle organizzazioni 
+		\item[Java 8, Python, Node.js] per lo sviluppo del server;
+		\item[IAAS Kubernetes, PAAS, Openshift, Rancher] per il rilascio delle componenti del server nonché per la gestione della scalabilità orizzontale;
+		\item[Protocolli asincroni, Pattern Publisher/Subscriber] per le comunicazioni fra l'app e il server;
+		\item[Server LDAP] per l'autenticazione alle organizzazioni .
 	\end{description}
+
 	Per il rilevamento della posizione, consiglia:
 	\begin{description}
-		\item[Metodologie di posizionamento di base] per l'elaborazione della posizione da un punto di vista logico
-		\item[GPS, Internet] per l'effettiva elaborazione della posizione fisica
+		\item[Metodologie di posizionamento di base] per l'elaborazione della posizione da un punto di vista logico;
+		\item[GPS, Internet] per l'effettiva elaborazione della posizione fisica.
 	\end{description}
+
 	Abbiamo inoltre pensato ad alcune possibilità aggiuntive:
 	\begin{description}
 		\item[Scala] Per lo sviluppo del server e dell'app, per il suo ampio supporto alla programmazione concorrente e la sua interoperabilità con Java e la JVM.
 	\end{description}
 	Inoltre, sono richieste le tecniche dell'analisi statistica per la valutazione dell'errore relativo al rilevamento della posizione.
 	% subsection tecnologie_interessate (end)
+
+
 	\subsection{Aspetti positivi}
 	\label{subsec:aspetti_positivi}
 	\begin{itemize}
-		\item La comprensibilità delle specifiche e la granularità dei dettagli del capitolato rendono molto chiari gli obiettivi del progetto.
-		\item Il progetto richiede lo sviluppo di un'app e del rispettivo server: questo è un modello ricorrente nel nostro futuro ambito di lavoro, e ci permette di incrementare le relative abilità e competenze.
-		\item Il proponente offre dei possibili strumenti di sviluppo, ma non vincola il loro utilizzo, lasciando libertà di scelta al fornitore. Allo stesso modo, non vincola la scelta del sistema operativo, Android o iOS.
+		\item La comprensibilità delle specifiche e la granularità dei dettagli del capitolato rendono molto chiari gli obiettivi del progetto;
+		\item il progetto richiede lo sviluppo di un'app e del rispettivo server: questo è un modello ricorrente nel nostro futuro ambito di lavoro, e ci permette di incrementare le relative abilità e competenze;
+		\item il proponente offre dei possibili strumenti di sviluppo, ma non vincola il loro utilizzo, lasciando libertà di scelta al fornitore. Allo stesso modo, non vincola la scelta del sistema operativo, Android o iOS.
 	\end{itemize}
 	% subsection aspetti_positivi (end)
+
+
 	\subsection{Criticità e fattori di rischio}
-	\label{subsec:criticità_e_fattori_di_rischio}
+	\label{subsec:criticita_e_fattori_di_rischio}
 	\begin{itemize}
-		\item Individuare la combinazione ottimale dei diversi metodi di geolocalizzazione per ottenere una precisione sufficiente per la posizione senza utilizzare eccessivamente la tecnologia GPS.
-		\item L'analisi statistica richiesta per lo studio dell'errore sulla posizione comporta un carico di lavoro non inerente all'ambito informatico.
-		\item È necessario considerare la possibilità che si formi un collo di bottiglia nel caso in cui il numero di utenti aumenti improvvisamente.
+		\item Individuare la combinazione ottimale dei diversi metodi di geolocalizzazione per ottenere una precisione sufficiente per la posizione senza utilizzare eccessivamente la tecnologia GPS;
+		\item l'analisi statistica richiesta per lo studio dell'errore sulla posizione comporta un carico di lavoro non inerente all'ambito informatico;
+		\item è necessario considerare la possibilità che si formi un collo di bottiglia nel caso in cui il numero di utenti aumenti improvvisamente.
 	\end{itemize}
 	% subsection criticità_e_fattori_di_rischio (end)
+
+
 	\subsection{Conclusioni}
 	\label{subsec:conclusioni}
-	Il progetto è stato subito accolto dai componenti del gruppo, le sfide tecnologiche sono interessanti e gli argomenti trattati sono indubbiamente di interesse. L'obiettivo chiaro ha permesso di ridurre i tempi di studio delle specifiche, concentrandosi maggiormente sugli aspetti più avanzati (come la scrittura della documentazione). Il gruppo ha avuto una buona impressione del proponente, apprezzando la disponibilità offerta e il grado di libertà lasciato nelle scelte tecnologiche. 
+	Il progetto è stato subito accolto dai componenti del gruppo, le sfide tecnologiche sono stimolanti e gli argomenti trattati sono indubbiamente di interesse. L'obiettivo chiaro ha permesso di ridurre i tempi di studio delle specifiche, concentrandosi maggiormente sugli aspetti più avanzati (come la scrittura della documentazione). Il gruppo ha avuto una buona impressione dal proponente, apprezzandone la disponibilità offerta e il grado di libertà lasciato nelle scelte tecnologiche.
 	% subsection conclusioni (end)
+	
 \end{document}
