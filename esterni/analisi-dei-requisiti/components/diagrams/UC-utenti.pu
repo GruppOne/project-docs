@@ -1,4 +1,43 @@
 @startuml UC1
 !include ../../../../commons/style/use-cases.pu
 
+title UC1
+
+together {
+  actor :utente non registrato: as A1.1
+  actor :utente non autenticato: as A1.2
+}
+
+' actor :utente autenticato incognito: as A4
+' actor :utente autenticato noto: as A5
+
+rectangle {
+  together {
+    usecase (UC1.1) as "UC1.1\nregistrazione"
+    usecase (UC1.1.1) as "UC1.1.1\ninformazioni non valide"
+    usecase (UC1.1.2) as "UC1.1.2\nvisualizzazione EULA"
+  }
+
+  together {
+    usecase (UC1.2) as "UC1.2\nautenticazione"
+    usecase (UC1.2.1) as "UC1.2.1\ncredenziali errate"
+  }
+}
+
+' #TODO aggiungere condizione errore sugli extend
+
+:A1.1: -- (UC1.1)
+
+(UC1.1.1) ..|> (UC1.1) : <<extends>>
+(UC1.1) ..|> (UC1.1.2) : <<include>>
+
+:A1.2: -- (UC1.2)
+
+(UC1.1) ..|> (UC1.2) : <<include>>
+(UC1.2.1) ..|> (UC1.2) : <<extends>>
+
+' #TODO valutare se aggiungere collegamenti incrociati tra A e UC
+' :A1.2: -- (UC1.1)
+' :A1.1: -- (UC1.2)
+
 @enduml
