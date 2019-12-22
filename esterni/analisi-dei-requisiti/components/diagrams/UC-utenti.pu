@@ -4,8 +4,8 @@
 title UC1
 
 together {
-  actor :utente non registrato: as A1.1
-  actor :utente non autenticato: as A1.2
+  actor :utente non registrato: as A1
+  actor :utente non autenticato: as A2
 }
 
 ' actor :utente autenticato incognito: as A4
@@ -26,18 +26,64 @@ rectangle {
 
 ' #TODO aggiungere condizione errore sugli extend
 
-:A1.1: -- (UC1.1)
+:A1: -- (UC1.1)
 
 (UC1.1.1) ..|> (UC1.1) : <<extends>>
 (UC1.1) ..|> (UC1.1.2) : <<include>>
 
-:A1.2: -- (UC1.2)
+:A2: -- (UC1.2)
 
 (UC1.1) ..|> (UC1.2) : <<include>>
 (UC1.2.1) ..|> (UC1.2) : <<extends>>
 
 ' #TODO valutare se aggiungere collegamenti incrociati tra A e UC
-' :A1.2: -- (UC1.1)
-' :A1.1: -- (UC1.2)
+' :A2: -- (UC1.1)
+' :A1: -- (UC1.2)
+
+@enduml
+
+@startuml UC2
+!include ../../../../commons/style/use-cases.pu
+
+title UC2
+
+actor :utente autenticato: as A3
+
+actor :utente collegato: as A3.1
+actor :utente non collegato: as A3.2
+
+:A3.1: -up-|> :A3:
+:A3.2: -up-|> :A3:
+
+rectangle {
+  together {
+    together {
+      usecase (UC2.1) as "UC2.1\nvisualizzazione\nlista organizzazioni"
+      usecase (UC2.1.1) as "UC2.1.1\naggiornamento\nlista organizzazioni"
+    }
+
+    usecase (UC2.2) as "UC2.2\ncollegarsi ad un'organizzazione"
+    usecase (UC2.3) as "UC2.3\nscollegarsi da un'organizzazione"
+
+    usecase (UC2.4) as "UC2.4\nvisualizzazione storico accessi"
+  }
+
+  usecase (UC2.5) as "UC2.5\nvisualizzazione errore\nrete mancante"
+}
+
+(UC2.1.1) .up.|> (UC2.1) : <<include>>
+
+:A3: -- (UC2.1)
+' :A3: -- (UC2.1.1)
+:A3: -- (UC2.4)
+
+:A3.1: -- (UC2.2)
+:A3.2: -- (UC2.3)
+
+' :A3: -- (UC2.5)
+(UC2.5) .up.|> (UC2.1) : <<extends>>
+(UC2.5) .up.|> (UC2.2) : <<extends>>
+(UC2.5) .up.|> (UC2.3) : <<extends>>
+(UC2.5) .up.|> (UC2.4) : <<extends>>
 
 @enduml
