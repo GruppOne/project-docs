@@ -1,5 +1,5 @@
 @startuml stylesheet
-left to right direction
+top to bottom direction
 
 skinparam {
   linetype polyline
