@@ -1,19 +1,85 @@
 \documentclass[../norme-di-progetto.tex]{subfiles}
 \begin{document}
 \subsection{Descrizione}
+I processo di supporto operano a sostegno degli altri processi con lo scopo di garantire il successo e fornire qualità. Essi non esistono autonomamente ma hanno la necessità di appoggiarsi ad altri processi. ISO 11207-1995 ne distingue otto:
+\begin{itemize}
+	\item Documentazione
+	\item Gestione della configurazione
+	\item Accertamento della qualità
+	\item Verifica
+	\item Validazione
+	\item Revisioni congiunte
+	\item Verifiche interne
+	\item Risoluzione dei problemi
+\end{itemize} 
 \subsection{Documentazione}
 \subsubsection{Finalità}
+Grupp0ne istanza il processo di documentazione per illustrare in maniera chiara e coerente le attività di processo svolte e i prodotti da esse ottenuti.
 \subsubsection{Descrizione}
+La documentazione è essenziale durante ogni attività del ciclo di vita del software. Essa costituisce un importante mezzo di comunicazione sia internamente per il team che esternamente verso il committente. Si vogliono quindi definire delle norme che possano standardizzare il processo di documentazione e renderlo più accessibile a tutti i componenti del gruppo.
 \subsubsection{Implementazione}
 \paragraph{Ciclo di vita}
+Il ciclo di vita di rappresenta gli stadi in cui il documento si può trovare nel corso della sua esistenza. Ne distinguiamo cinque:
+\begin{itemize}
+	\item \textbf{Creazione del template del documento}: si crea il template del documento il quale conterrà solamente una pagina di frontespizio. Inizialmente sono configurate una serie di impostazioni di base per la formattazione delle pagine grazie all'utilizzo di alcuni package di latex
+	\item \textbf{Scrittura del documento}: si scrive il documento incrementalmente e lo si termina entro la scadenza della \glossario{\textit{milestone}} fissata
+	\item \textbf{Verifica del documento}: i \glossario{\textit{verificatori}} effettuano una revisione del documento segnalando eventuali errori o discordanze che verranno segnalate all'autore del documento che sarà incaricato di correggere
+	\item \textbf{Approvazione del documento}: il documento viene approvato dal \glossario{\textit{responsabile}} di progetto
+	\item \textbf{Archiviazione}: il documento viene archiviato in un repository pubblico su \glossario{\textit{github}} ed è pronto per la consegna
+\end{itemize}
 \subsubsection{Struttura}
 \paragraph{Frontespizio}
+Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: nella prima è presente l'intestazione contenente logo, nome del gruppo e nome del documento, mentre la seconda consiste di uno schema contenente alcune informazioni essenziali sul documento descritto. In esso compaiono, ordinatamente, dall'alto verso il basso:
+\begin{itemize}
+	\item \textbf{Intestazione}
+	\begin{itemize}
+		\item \textbf{Logo}: rappresenta il logo del team 
+		\item \textbf{Nome del gruppo}: rappresenta il nome del gruppo
+		\item \textbf{Nome del documento}: rappresenta nome del documento
+	\end{itemize}
+	\item \textbf{Schema}
+	\begin{itemize}
+		\item \textbf{Versione}: indica la versione attuale del documento (e.g. glossario v1.0.0)
+		\item \textbf{Approvazione}: indica chi ha approvato il documento
+		\item \textbf{Redazione}: indica la lista dei redattori del documento
+		\item \textbf{Verifica}: indica la lista dei verificatori del documento
+		\item \textbf{Stato}: indica lo stato attuale in cui si trova il documento
+		\item \textbf{Uso}: indica l'uso finale del documento (interno o esterno)
+		\item \textbf{Destinato a}: indica lo stato attuale del documento
+		\item \textbf{Descrizione}: indica una breve descrizione del documento 
+	\end{itemize}
+\end{itemize}
 \paragraph{Registro delle modifiche}
+Il registro delle modifiche è la seconda pagina di ogni documento. Ha lo scopo di presentare quali cambiamenti sono stati effettuati e da parte di quale componente del gruppo. Consiste di quattro colonne ed è così articolato:
+\begin{itemize}
+	\item \textbf{Versione} : indica la versione del documento in cui viene realizzata la modifica
+	\item \textbf{Data} : indica la data di modifica del documento con formato yyyy/mm/dd
+	\item \textbf{Nominativo} : indica nome e cognome del componente del team che ha effettuato la modifica
+	\item \textbf{Ruolo} : indica il ruolo del componente del team che ha realizzato la modifica
+	\item \textbf{Descrizione}: indica il tipo e il luogo in cui è avvenuta la modifica
+\end{itemize}
 \paragraph{Indice}
+L'indice inizia nella terza pagine del documento e presenta tutti gli argomenti trattati. Grupp0ne ha deciso di utilizzare la tipica suddivisione del testo offerta da latex che distingue cinque diversi blocchi testuali:
+\begin{itemize}
+	\item Sezioni
+	\item Sottosezioni
+	\item Capitoli
+	\item Paragrafi
+	\item Sottoparagrafi 
+\end{itemize}
+Ogni blocco testuale ha un numero identificativo univoco che dipende dal grado di annidamento del blocco definito da Latex ( e.g. : la sezione Introduzione è indicata con 1, la relativa sottosezione quattro è indicata con 1.4 e i capitoli contenuti in quella sottosezione sono indicati con 1.4.1 e 1.4.2).
+\newline Ogni riga dell'indice contiene il numero di pagina in cui il blocco di testo è riferito e cliccando sopra il nome del blocco è possibile raggiungerlo direttamente attraverso un link.
 \paragraph{Contenuto}
+Le pagine di contenuto sono suddivise in tre parti:
+\begin{itemize}
+	\item \textbf{Header}: contiene in alto a sinistra il logo del gruppo, mentre in alto a destra il nome del documento
+	\item \textbf{Contenuto}: contiene il testo del documento
+	\item \textbf{Footer}: contiene l'indicazione della pagina attuale rispetto il totale (e.g 1/6)
+\end{itemize}
 \paragraph{Norme per la redazione dei documenti}
-\subparagraph{Elenchi puntati}
 \subparagraph{Stile del testo}
+\subparagraph{Elenchi puntati}
+\subparagraph{Immagini}
 \subsubsection{Produzione}
 \paragraph{Suddivisione dei documenti}
 \subparagraph{Interni}
