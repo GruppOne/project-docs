@@ -17,27 +17,37 @@ I processo di supporto operano a sostegno degli altri processi con lo scopo di g
 \label{sub:documentazione}
 \subsubsection{Finalità}
 \label{subs:finalità}
-Grupp0ne istanza il processo di documentazione per illustrare in maniera chiara e coerente le attività di processo svolte e i prodotti da esse ottenuti.
+Grupp0ne istanzia il processo di documentazione per illustrare in maniera chiara e coerente le attività di processo svolte e i prodotti da esse ottenuti.
 \subsubsection{Descrizione}
 \label{subs:descrizione}
 La documentazione è essenziale durante ogni attività del ciclo di vita del software. Essa costituisce un importante mezzo di comunicazione sia internamente per il team che esternamente verso il committente. Si vogliono quindi definire delle norme che possano standardizzare il processo di documentazione e renderlo più accessibile a tutti i componenti del gruppo.
 \subsubsection{Implementazione}
 \label{subs:implementazione}
-\paragraph{Ciclo di vita}
+\paragraph{Configurazione} \mbox{}\\
+\label{par:configurazione}
+\\Ogni documento ha una sua configurazione di base. Tale configurazione è definita in un file \LaTeX  che contiene la struttura e la formattazione che ogni file deve avere. Si riporta un elenco di ciò che è presente nel file di configurazione:
+\begin{itemize}
+	\item Definizione e decorazione di header e footer.
+	\item Definizione dei margini laterali e dell'altezza del footer.
+	\item Setup della sottolineatura delle parole.
+	\item Configurazione dei link.
+	\item Dichiarazione di nuovi comandi.
+\end{itemize}
+\paragraph{Ciclo di vita}\mbox{}\\
 \label{par:ciclo di vita}
-Il ciclo di vita di rappresenta gli stadi in cui il documento si può trovare nel corso della sua esistenza. Ne distinguiamo cinque:
+\\Il ciclo di vita di rappresenta gli stadi in cui il documento si può trovare nel corso della sua esistenza. Ne distinguiamo cinque:
 \begin{itemize}
 	\item \textbf{Creazione del template del documento}: si crea il template del documento il quale conterrà solamente una pagina di frontespizio. Inizialmente sono configurate una serie di impostazioni di base per la formattazione delle pagine grazie all'utilizzo di alcuni package di latex.
 	\item \textbf{Scrittura del documento}: si scrive il documento incrementalmente e lo si termina entro la scadenza della \glossario{milestone} fissata.
-	\item \textbf{Verifica del documento}: i \glossario{verificatori} effettuano una revisione del documento segnalando eventuali errori o discordanze che verranno segnalate all'autore del documento che sarà incaricato di correggere.
+	\item \textbf{Verifica del documento}: i \glossario{verificatori} effettuano una revisione del documento segnalando eventuali errori o discordanze che verranno segnalate all'autore del documento che sarà incaricato di correggerli.
 	\item \textbf{Approvazione del documento}: il documento viene approvato dal \glossario{responsabile} di progetto.
 	\item \textbf{Archiviazione}: il documento viene archiviato in un repository pubblico su \glossario{github} ed è pronto per la consegna.
 \end{itemize}
 \subsubsection{Struttura}
 \label{subs:struttura}
-\paragraph{Frontespizio}
+\paragraph{Frontespizio}\mbox{}\\
 \label{par:frontespizio}
-Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: nella prima è presente l'intestazione contenente logo, nome del gruppo e nome del documento, mentre la seconda consiste di uno schema contenente alcune informazioni essenziali sul documento descritto. In esso compaiono, ordinatamente, dall'alto verso il basso:
+\\Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: nella prima è presente l'intestazione contenente logo, nome del gruppo e nome del documento, mentre la seconda consiste di uno schema contenente alcune informazioni essenziali sul documento descritto. In esso compaiono, ordinatamente, dall'alto verso il basso:
 \begin{itemize}
 	\item \textbf{Intestazione}
 	\begin{itemize}
@@ -57,9 +67,9 @@ Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: ne
 		\item \textbf{Descrizione}: indica una breve descrizione del documento. 
 	\end{itemize}
 \end{itemize}
-\paragraph{Registro delle modifiche}
+\paragraph{Registro delle modifiche}\mbox{}\\
 \label{par:registro delle modifiche}
-Il registro delle modifiche è la seconda pagina di ogni documento. Ha lo scopo di presentare quali cambiamenti sono stati effettuati e da parte di quale componente del gruppo. Consiste di quattro colonne ed è così articolato:
+\\Il registro delle modifiche è la seconda pagina di ogni documento. Ha lo scopo di presentare quali cambiamenti sono stati effettuati e da parte di quale componente del gruppo. Consiste di quattro colonne ed è così articolato:
 \begin{itemize}
 	\item \textbf{Versione} : indica la versione del documento in cui viene realizzata la modifica.
 	\item \textbf{Data} : indica la data di modifica del documento con formato yyyy/mm/dd.
@@ -67,9 +77,9 @@ Il registro delle modifiche è la seconda pagina di ogni documento. Ha lo scopo 
 	\item \textbf{Ruolo} : indica il ruolo del componente del team che ha realizzato la modifica.
 	\item \textbf{Descrizione}: indica il tipo e il luogo in cui è avvenuta la modifica.
 \end{itemize}
-\paragraph{Indice}
+\paragraph{Indice}\mbox{}\\
 \label{par:indice}
-L'indice inizia nella terza pagine del documento e presenta tutti gli argomenti trattati. Grupp0ne ha deciso di utilizzare la tipica suddivisione del testo offerta da latex che distingue cinque diversi blocchi testuali:
+\\L'indice inizia nella terza pagine del documento e presenta tutti gli argomenti trattati. Grupp0ne ha deciso di utilizzare la tipica suddivisione del testo offerta da latex che distingue cinque diversi blocchi testuali:
 \begin{itemize}
 	\item Sezioni
 	\item Sottosezioni
@@ -79,9 +89,9 @@ L'indice inizia nella terza pagine del documento e presenta tutti gli argomenti 
 \end{itemize}
 Ogni blocco testuale ha un numero identificativo univoco che dipende dal grado di annidamento del blocco definito da Latex ( e.g. : la sezione Introduzione è indicata con 1, la relativa sottosezione quattro è indicata con 1.4 e i capitoli contenuti in quella sottosezione sono indicati con 1.4.1 e 1.4.2).
 \newline Ogni riga dell'indice contiene il numero di pagina in cui il blocco di testo è riferito e cliccando sopra il nome del blocco è possibile raggiungerlo direttamente attraverso un link.
-\paragraph{Contenuto}
+\paragraph{Contenuto}\mbox{}\\
 \label{par:contenuto}
-Le pagine di contenuto sono suddivise in tre parti:
+\\Le pagine di contenuto sono suddivise in tre parti:
 \begin{itemize}
 	\item \textbf{Header}: contiene in alto a sinistra il logo del gruppo, mentre in alto a destra il nome del documento.
 	\item \textbf{Contenuto}: contiene il testo del documento.
@@ -89,9 +99,9 @@ Le pagine di contenuto sono suddivise in tre parti:
 \end{itemize}
 \paragraph{Norme per la redazione dei documenti}
 \label{par:norme per la redazione dei documenti}
-\subparagraph{Stile del testo}
+\subparagraph{Stile del testo}\mbox{}\\
 \label{subp:stile del testo}
-In questo paragrafo Grupp0ne definisce le norme che uniformano lo stile di scrittura dei documenti:
+\\In questo paragrafo Grupp0ne definisce le norme che uniformano lo stile di scrittura dei documenti:
 \begin{itemize}
 		\item \textbf{Verbi in forma attiva}: i verbi devono essere in forma attiva e al tempo presente indicativo o passato prossimo. È ammesso l'uso del futuro per esprimere azioni che devono ancora avvenire.
 		\item \textbf{Struttura del testo chiara}: la suddivisione del testo in sezioni, sottosezioni e paragrafi aiuta la coerenza e la coesione.
@@ -100,32 +110,98 @@ In questo paragrafo Grupp0ne definisce le norme che uniformano lo stile di scrit
 		\item \textbf{Brevi blocchi testuali}: si preferisce l'utilizzo di brevi paragrafi.
 		\item \textbf{Termini di glossario in maiuscolo}: il testo è scritto in minuscolo. I termini di glossario, invece, sono indicati in maiuscolo con una g a pedice nel nome. Questa regola vale per la prima occorrenza di ogni termine di glossario.
 \end{itemize}
-\subparagraph{Elenchi puntati}
+\subparagraph{Elenchi puntati}\mbox{}\\
 \label{subp:elenchi puntati}
-Gli elenchi puntati sono un mezzo ottimo per la scrittura di documentazione. Essi permettono di riordinare il testo e di elencare una serie di elementi correlati. Pertanto, in questo paragrafo, si stabiliscono le norme per il corretto uso degli elenchi puntati:
+\\Gli elenchi puntati sono un mezzo ottimo per la scrittura di documentazione. Essi permettono di riordinare il testo e di elencare una serie di elementi correlati. Pertanto, in questo paragrafo, si stabiliscono le norme per il corretto uso degli elenchi puntati:
 \begin{enumerate}
 	\item Per indicare gli elementi di un elenco puntato non innestato utilizzare il simbolo •. Gli elementi innestati vengono preceduti da -.
 	\item Ogni elemento di elenco puntato inizia con una lettera maiuscola.
 	\item Se un elenco puntato ha elementi composti da etichetta e descrizione, l'etichetta deve essere scritta in grassetto e la descrizione va inserita dopo i due punti.
 	\item Gli elenchi puntati semplici non hanno bisogno di punti fermi per terminare la frase.Gli elenchi puntati complessi in particolare quelli formati da etichetta e descrizione richiedono un punto al termine della descrizione.
 \end{enumerate}
-\subparagraph{Nomi dei file}
+\subparagraph{Nomi dei file}\mbox{}\\
 \label{nomi dei file}
-\subparagraph{Sigle e convenzioni}
+\\Per identificare i file memorizzati nel repository si seguono le seguenti convenzioni:
+\begin{itemize}
+	\item I nomi dei file devono essere in minuscolo.
+	\item Le parole contenute nei nomi di file composti devono essere separate da -.
+\end{itemize}
+Analisi dei requisiti sarà quindi salvato come analisi-dei-requisiti, mentre Norme di progetto come norme-di-progetto.
+\subparagraph{Sigle e convenzioni}\mbox{}\\
 \label{sigle e convenzioni}
-\subparagraph{Immagini}
+\\Si elencano una serie di sigle che possono essere utilizzate nei documenti. Si accompagna ad ognuna di esse il relativo significato:
+\begin{itemize}
+	\item\textbf sigle per identificare le revisioni
+	\begin{itemize}
+		\item \textbf{RR} : revisione dei requisiti
+		\item \textbf{RP} : revisione di progettazione
+		\item \textbf{RQ} : revisione di qualifica
+		\item \textbf{RA} : revisione di accettazione
+	\end{itemize}
+	\item\textbf sigle per identificare i documenti
+	\begin{itemize}
+		\item \textbf{AdR} : analisi dei requisiti
+		\item \textbf{NdP} : norme di progetto
+		\item \textbf{PdQ} : piano di qualifica
+		\item \textbf{PdP} : piano di progetto
+		\item \textbf{MU} : manuale utente
+		\item \textbf{MS} : manuale sviluppatore
+		\item \textbf{V} : verbali
+ 	\end{itemize}
+ \end{itemize}
+\subparagraph{Immagini}\mbox{}\\
+\label{subp:immagini}
+\\Le immagini si devono utilizzare per apportare un valore aggiunto a ciò che si sta descrivendo o per dare una rappresentazione grafica di ciò che si sta presentando. Immagini di bellezza non sono pertanto ammesse. Tutte le immagini devono essere inoltre centrate all'interno della pagina e munite di una breve didascalia così formata: \\\\\centerline{\textbf{Figura x : breve descrizione dell'immagine}} \\\\ dove x indica la numerazione delle immagini (e.g. figura 1, figura 2, figura 3).
+\subparagraph{Tabelle}\mbox{}\\
+\label{subp:tabelle}
+\\L'uso di tabelle è consigliato solo quando strettamente necessario. La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento in cui risulti molto difficile organizzare informazioni aventi una struttura complessa. È obbligatorio l'uso di colori che abbiano un elevato contrasto al fine di promuovere la leggibilità. Inoltre, non devono essere eccessivamente lunghe ( massimo 2 pagine), altrimenti risultano dispersive.
 \subsubsection{Produzione}
-\paragraph{Suddivisione dei documenti}
-\subparagraph{Interni}
-\subparagraph{Esterni}
-\subparagraph{Verbali}
+\paragraph{Suddivisione dei documenti}\mbox{}\\
+I documenti utilizzano la struttura a \glossario{subfiles} offerta da \LaTeX. La struttura di base del documento è definita nel file che porta il nome del documento. La cartella components, che è unica per ogni documento, contiene un file per la definizione di ogni sezione. In ogni sezione si definiscono poi le relative sottosezioni, paragrafi e sottoparagrafi.
+Ad esempio, il file norme di progetto ha la seguente struttura:
+\begin{itemize}
+	\item ..\textbackslash interni
+	\begin{itemize}
+	\item Norme di progetto
+		 \begin{itemize}
+		 	\item norme-di-progetto.tex
+		 	\item components
+		 	\begin{itemize}
+		 		\item primari.tex
+		 		\item supporto.tex
+		 		\item introduzione.tex
+		 		\item organizzativi.tex
+		 	\end{itemize}
+		 \end{itemize}
+	\item Studio di fattibilità
+	\end{itemize}
+\end{itemize}
+\subparagraph{Interni}\mbox{}\\
+\label{subp:interni}
+\\ I documenti interni sono destinati alla comunicazione tra i componenti di Grupp0ne. Appartengono a tale categoria :
+\begin{itemize}
+	\item Verbali interni
+	\item Studio di fattibilità
+	\item Norme di progetto
+\end{itemize}
+\subparagraph{Esterni}\mbox{}\\
+\label{subp:esterni}
+\\ I documenti esterni sono destinati al committente. Appartengono a tale categoria:
+\begin{itemize}
+	\item Analisi dei requisiti
+	\item Piano di progetto
+	\item Piano di qualifica
+\end{itemize}
+\subparagraph{Verbali}\mbox{}\\
+\label{subp:verbali}
+\\ I verbali costituiscono un riassunto 
 \subsubsection{Strumenti}
-\paragraph {Latex}
+\paragraph {Latex}\mbox{}\\
 \subsection{Gestione della configurazione}
 \subsubsection{Finalità}
 \subsubsection{Gestione versionamento}
-\paragraph{Repository}
-\paragraph{Struttura dei commit}
+\paragraph{Repository}\mbox{}\\
+\paragraph{Struttura dei commit}\mbox{}\\
 \subsubsection{Strumenti}
 \subsection{Accertamento della qualità}
 \subsubsection{Finalità}
@@ -135,18 +211,18 @@ Gli elenchi puntati sono un mezzo ottimo per la scrittura di documentazione. Ess
 \subsubsection{Finalità}
 \subsubsection{Descrizione}
 \subsubsection{Implementazione del processo}
-\paragraph{Analisi dei rischi}
+\paragraph{Analisi dei rischi}\mbox{}\\
 \subsubsection{Verifica}
-\paragraph{Analisi statica}
-\paragraph{Analisi dinamica}
-\subparagraph{Test di unità}
-\subparagraph{Test di integrazione}
-\subparagraph{Test di sistema}
-\subparagraph{Test di regressione}
-\subparagraph{Test di accettazione}
-\paragraph{Strumenti}
-\subparagraph{Controllo ortografico e della sintassi}
-\subparagraph{Code owners}
+\paragraph{Analisi statica}\mbox{}\\
+\paragraph{Analisi dinamica}\mbox{}\\
+\subparagraph{Test di unità}\mbox{}\\
+\subparagraph{Test di integrazione}\mbox{}\\
+\subparagraph{Test di sistema}\mbox{}\\
+\subparagraph{Test di regressione}\mbox{}\\
+\subparagraph{Test di accettazione}\mbox{}\\
+\paragraph{Strumenti}\mbox{}\\
+\subparagraph{Controllo ortografico e della sintassi}\mbox{}\\
+\subparagraph{Code owners}\mbox{}\\
 \subsection{Validazione}
 \subsubsection{Finalità}
 \subsubsection{Descrizione}
