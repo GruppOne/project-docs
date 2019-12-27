@@ -173,7 +173,17 @@ TabSize = 4
 # instance like to put -v2 here.
 #
 
-CmdLine { -wall -n22 -n30 -e16 -n24 -q -I1 }
+CmdLine
+{
+  -q
+  -wall
+  # do not warn about presence of comments
+  -n22
+  # do not warn about multiple spaces
+  -n30
+  # execute input statements
+  -I1
+}
 
 #####################################################################
 #
@@ -210,7 +220,7 @@ UserWarn
 # You may put case-insensitive patterns here.
 #
 ###
-    LaTeX
+
 ]
 
 

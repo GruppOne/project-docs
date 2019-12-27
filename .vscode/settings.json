@@ -42,10 +42,9 @@
     }
   ],
   "latex-workshop.chktex.enabled": true,
-  "latex-workshop.chktex.run": "onSave",
+  "latex-workshop.chktex.run": "onType",
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.clean.subfolder.enabled": true,
-  "todo-tree.regex.regex": "((//|#|<!--|;|%|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
   "spellright.documentTypes": [
     "latex",
     "markdown",
