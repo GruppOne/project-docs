@@ -1,0 +1,153 @@
+@startuml admin
+!include ../../../../commons/style/use-cases.pu
+
+title admin
+
+actor :Amministratore: as A1.1
+
+rectangle {
+  together {
+  usecase (UC1.1) as "UC1.1\nAutenticazione"
+  usecase (UC1.2) as "UC1.2\nVerifica credenziali"
+  usecase (UC1.3) as "UC1.3\nVisualizzazione credenziali errate"
+  note "Condition: credenziali errate" as N1
+  }
+
+  usecase (UC2) as "UC2\nApprovazione owner"
+
+  together {
+    usecase (UC3) as "UC3\nApprovazione creazione organizzazione"
+    usecase (UC4) as "UC4\nApprovazione modifica organizzazione"
+  }
+
+  together {
+    usecase (UC5) as "UC5\nApprovazione aggiunta luogo"
+    usecase (UC6) as "UC6\nApprovazione modifica luogo"
+    usecase (UC7) as "UC7\nApprovazione trasferimento di proprietà organizzazione"
+  }
+}
+
+UC1.1 ..> UC1.2 : <<include>>
+UC1.3 .. N1
+N1 ..> UC1.1 : <<extends>>
+
+A1.1 - UC1.1
+A1.1 -- UC2
+A1.1 -- UC3
+A1.1 -- UC4
+A1.1 -- UC5
+A1.1 -- UC6
+A1.1 -- UC7
+
+@enduml
+
+@startuml root
+!include ../../../../commons/style/use-cases.pu
+
+title root
+
+actor :Amministratore: as A1.1
+actor :Root: as A1.2
+
+rectangle {
+  usecase (UC8) as "UC8\nCreazione amministratore"
+
+  together {
+    usecase (UC9) as "UC9\nEliminazione organizzazione"
+    usecase (UC10) as "UC10\nModifica organizzazione"
+    usecase (UC11) as "UC11\nCreazione organizzazione"
+  }
+
+  together {
+    usecase (UC12) as "UC12\nEliminazione luogo"
+    usecase (UC13) as "UC13\nModifica luogo"
+  }
+  usecase (UC14) as "UC14\nEliminazione account"
+}
+
+A1.1 <|-- A1.2
+
+A1.2 -- UC8
+A1.2 -- UC9
+A1.2 -- UC10
+A1.2 -- UC11
+A1.2 -- UC12
+A1.2 -- UC13
+A1.2 -- UC14
+@enduml
+
+@startuml visualizzatore
+!include ../../../../commons/style/use-cases.pu
+
+title Visualizzatore
+
+actor :Visualizzatore: as A2.1
+
+rectangle {
+  usecase (UC17) as "UC17\nLogin"
+
+  together {
+    usecase (UC15) as "UC15\nQuery sull'organizzazione"
+    usecase (UC16) as "UC16\nQuery sul dipendente"
+  }
+}
+
+A2.1 -- UC15
+A2.1 -- UC16
+A2.1 -- UC17
+
+@enduml
+
+@startuml gestore
+!include ../../../../commons/style/use-cases.pu
+
+title gestore
+
+actor :Visualizzatore: as A2.1
+actor :Gestore: as A2.2
+
+rectangle {
+  together {
+    usecase (UC18) as "UC18\nRichiesta aggiunta luogo"
+    usecase (UC19) as "UC19\nRichiesta rimozione luogo"
+    usecase (UC20) as "UC20\nRichiesta modifica luogo"
+  }
+
+  usecase (UC21) as "UC21\nRichiesta modifica parametri organizzazione"
+}
+
+A2.1 <|-- A2.2
+
+A2.2 -- UC18
+A2.2 -- UC19
+A2.2 -- UC20
+A2.2 -- UC21
+@enduml
+
+@startuml owner
+!include ../../../../commons/style/use-cases.pu
+
+title owner
+
+actor :Gestore: as A2.2
+actor :Owner: as A2.3
+
+rectangle {
+    together {
+    usecase (UC22) as "UC22\nNomina visualizzatore"
+    usecase (UC23) as "UC23\nNomina gestore"
+    }
+
+    together {
+    usecase (UC24) as "UC24\nRichiesta creazione organizzazione"
+    usecase (UC25) as "UC25\nRichiesta cedimento proprietà di organizzazione"
+    }
+}
+
+A2.2 <|-- A2.3
+
+:A2.3: -- UC22
+:A2.3: -- (UC23)
+:A2.3: -- (UC24)
+:A2.3: -- (UC25)
+@enduml
