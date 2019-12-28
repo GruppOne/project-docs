@@ -7,8 +7,33 @@ Le attività coinvolte dai processi organizzativi sono:
 \begin{itemize}
 	\item Gestione dei processi
 	\item Gestione delle infrastrutture
+	\item Gestione dei rischi
 	\item Miglioramento del processo
 	\item Formazione del personale
+\end{itemize}
+\subsection{Gestione dei rischi}
+\label{sub:gestione dei rischi}
+\subsubsection{Classificazione dei rischi}
+\label{subs:classificazione dei rischi}
+La gestione dei rischi consiste nel prevedere i rischi che potrebbero influire negativamente su alcune attività del ciclo di vita del software danneggiando i risultati o la qualità del prodotto intermedio. Questo paragrafo ha lo scopo di presentare i potenziali rischi all'interno di un progetto, mentre l'attività di analisi dei rischi è descritta dettagliamente nel PdQ. Si parla di attività di analisi dei rischi dato che la gestione dei rischi potrebbe essere intesa come un vero e proprio processo in quanto racchiude molteplici attività. La gestione dei rischi si divide in diverse fasi:
+\begin{itemize}
+	\item \textbf{Identificazione dei rischi}: si identificano i rischi per il progetto e il prodotto.
+	\item \textbf{Analisi dei rischi}: si valutano le probabilità che si verifichino i rischi e si descrivono le conseguenze.
+	\item \textbf{Pianificazione dei rischi}: si presentano i piani per evitare i rischi e i rimedi per minimizzare gli effetti.
+	\item \textbf{Monitoraggio dei rischi}: si monitorano i rischi e si aggiornano incrementalmente i piani.
+\end{itemize}
+Analisi dei rischi e pianificazione dei rischi saranno trattare nel PdQ mentre in questo paragrafo ci si occuperà dell'attività di identificazione dei rischi.
+Una prima classificazione dei rischi distingue :
+\begin{itemize}
+	\item \textbf{Rischi per il progetto}: influiscono sui tempi di realizzazione del progetto. L'assenza di un componente del gruppo per un lungo periodo di tempo potrebbe condizionare la pianificazione di progetto e potrebbe allungare i tempi di consegna.
+	\item \textbf{Rischi per il prodotto}: influiscono sulla qualità del software che si sta producendo. L'utilizzo di algoritmi e procedure non ottimizzate potrebbe peggiorare le prestazioni del sistema e influire negativamente sulla qualità del nostro prodotto.
+\end{itemize}
+Essendo la classificazione soprastante troppo generica, Grupp0ne ha individuato un elenco di rischi maggiormente dettagliato:
+\begin{itemize}
+	\item \textbf{Rischi del personale}: riguardano i membri di Grupp0ne. L'assenza o l'indisponibilità di un componente del gruppo per un lungo periodo di tempo ne è un esempio.
+	\item \textbf{Rischi dei requisiti}: riguardano il modo in cui Grupp0ne gestisce requisiti del cliente. Un esempio potrebbe essere il fraintendimento di un requisito del cliente durante l'attività di analisi dei requisiti.
+	\item \textbf{Rischi tecnologici}: sono rischi che riguardano i software e l'hardware utilizzato per sviluppare il sistema. Un esempio potrebbe essere la mancanza di alcune feature nei software scelti per lo sviluppo del prodotto.
+	\item \textbf{Rischi degli strumenti}: sono rischi che riguardano i software di supporto impiegati. Un esempio potrebbe essere la presenza di un bug in uno strumento e la necessità di risolverlo.
 \end{itemize}
 \subsection{Gestione del personale}
 \label{sub:gestione del personale}
@@ -22,8 +47,10 @@ Gli scopi del processo di gestione del personale sono:
 	\item Organizzare come e dove svolgere gli incontri
 \end{itemize}
 \subsubsection{Pianificazione}
-\paragraph{Piano di progetto}\mbox{}\\
-\label{par:piano di progetto}
+\paragraph{Documenti di pianificazione}
+\label{par:documenti di pianificazione}
+\subparagraph{Piano di progetto}\mbox{}\\
+\label{subp:piano di progetto}
 \\Il piano di progetto è redatto dal responsabile e contiene l'organizzazione dell'attività allo scopo di raggiungere l'economicità. Esso rappresenta, anche mediante l'utilizzo di diagrammi le risorse fondamentali a disposizione e come andrebbero impiegate per organizzare un efficiente pianificazione delle attività. Il documento è così strutturato:
 \begin{itemize}
 	\item \textbf{Introduzione}: si presentano lo scopo e la struttura del documento.
@@ -31,8 +58,8 @@ Gli scopi del processo di gestione del personale sono:
 	\item \textbf{Pianificazione}: si stabiliscono quali sono le risorse temporali e umane a disposizione e si decide come suddividerle nelle diverse attività.
 	\item \textbf{Preventivo e consuntivo}: Il preventivo presenta una stima dei costi totali di progetto, mentre il consuntivo illustra un bilancio totale delle attività di processo compiute in un determinato periodo di tempo.
 \end{itemize}
-\paragraph{Piano di qualifica}\mbox{}\\
-\label{par:piano di qualifica}
+\subparagraph{Piano di qualifica}\mbox{}\\
+\label{subp:piano di qualifica}
 \subsubsection{Ruoli di progetto}
 \label{subs:ruoli di progetto}
 Grupp0ne ha deciso che ogni membro del team deve svolgere ogni ruolo a rotazione che verrà effettuata ogni due settimane. Per tale motivo si realizza un file Google docs per poter rendicontare il numero di ore svolte da ciascun membro del team in ogni ruolo.
@@ -102,19 +129,19 @@ Il responsabile fissa le date degli incontri su \glossario{Google Calendar} dove
  \\Per organizzare gli incontri con il proponente o le revisioni di progetto col committente, Grupp0ne utilizza la mail ufficiale del gruppo \url{gruppone.swe@gmail.com} che è gestita dal responsabile.
 \paragraph{Coordinamento comunicazioni}
 \label{par:coordinamento comunicazioni}
-\subparagraph{interni}\mbox{}\\
-\label{subp:interni}
+\subparagraph{interne}\mbox{}\\
+\label{subp:interne}
 \\Per le comunicazioni interne Grupp0ne fa uso di due differenti mezzi di comunicazione:
 \begin{itemize}
 	\item \textbf{Telegram}: è un software di messaggistica istantanea che viene utilizzato dal team per comunicazioni urgenti, avvisi dell'ultimo minuto o eventi imminenenti.
 	\item \textbf{Slack}: è uno strumento di collaborazione aziendale che permette la creazione di canali diversi suddivisi per argomento. Ha, inoltre, il pregio di potersi connettere con software di terze parti e quindi la possibilità di inviare notifiche non appena ci sono delle novità (es: apertura di nuove issue su Github). Per tale motivo Grupp0ne ha preso in considerazione l'utilizzo di Slack. Come norma generale si è stabilito inoltre che tutti i membri del gruppo dovrebbero avere una scheda del proprio browser con Slack aperto per poter mostrare agli altri che si è online e si sta lavorando.
 \end{itemize}
-\subparagraph{esterni}\mbox{}\\
-\label{subp:interni}
+\subparagraph{esterne}\mbox{}\\
+\label{subp:interne}
 \\Per comunicazioni con il proponente o con il committente, Grupp0ne utilizza la mail ufficiale del gruppo come già illustrato nel paragrafo \ref{subp:interni}.
-\subsection{Formazione personale}
-\label{sub:formazione personale}
+\subsection{Formazione del personale}
+\label{sub:formazione del personale}
 \subsubsection{Formazione individuale}
 \label{subs:formazione individuale}
-Il prodotto da sviluppare è decisamente di elevata complessità. Molti degli strumenti che si utilizzano nel corso  progetto sono sconosciuti alla maggior parte dei componenti del team. Per tale motivo è fondamentale che ciascun membro del gruppo investa una parte del proprio tempo nell'autoapprendimento di nuove tecnologie. Nel caso in cui fosse presente qualcuno già a conoscenza delle tecnologie è invitato a condividere la propria conoscenza con gli altri.
+Il prodotto da sviluppare è decisamente di elevata complessità. Molti degli strumenti che si utilizzano nel corso  progetto sono sconosciuti alla maggior parte dei componenti del team. Per tale motivo è fondamentale che ciascun membro del gruppo investa una parte del proprio tempo nell'autoapprendimento di nuove tecnologie. Nel caso in cui fosse presente qualcuno già a conoscenza delle tecnologie è invitato a condividere le proprie conoscenze con gli altri.
 \end{document}
