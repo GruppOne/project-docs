@@ -5,6 +5,37 @@
 \begin{document}
 La presente sezione ha lo scopo di descrivere in maniera dettagliata, attraverso il linguaggio \glossario{UML} le funzionalitá offerte da \glossario{Stalker}.
 
+\subsection{Attori dei casi d'uso}
+\label{sub:attori_casi_duso}
 
+\subsubsection{Utenti}
+\label{subsub:utenti}
+
+
+\begin{itemize}
+  \item \emph{Utente non registrato}: Si riferisce ad un utente generico che non ha ancora effettuato la registrazione alla piattaforma.
+  \item \emph{Utente non autenticato}: Si riferisce ad un utente generico che non ha ancora effettuato l'autenticazione alla piattaforma.
+  \item \emph{Utente autenticato}: Si riferisce ad un utente non autenticato che ha effettuato l'autenticazione alla piattaforma.
+  \item \emph{Utente non collegato}: Si riferisce ad un utente autenticato che ha non ha effettuato il collegamento ad un'organizzazione.
+  \item \emph{Utente collegato}: Si riferisce ad un utente autenticato che ha effettuato il collegamento ad un'organizzazione.
+  \item \emph{Utente collegato incognito}: Si riferisce ad un utente collegato che ha deciso di rimanere in modalità incognito all'interno di un'organizzazione.
+  \item \emph{Utente collegato noto}: Si riferisce ad un utente collegato che ha deciso di essere noto all'interno di un'organizzazione.
+\end{itemize}
+% subsub:utenti (end)
+
+\subsubsection{Super Utenti}
+\label{subsub:super_utenti}
+
+\begin{itemize}
+  \item \emph{Amministratore}: Si riferisce ad un super utente con privilegi avanzati, che gestisce le richieste di \emph{Gestore} e \emph{Owner}.
+  \item \emph{Root}: Si riferisce ad un amministratore con privilegi avanzati su tutto il sistema. Gestisce gli amministratori.
+  \item \emph{Visualizzatore}: Si riferisce ad un super utente con privilegi di visualizzazione sugli utenti e organizzazione.
+  \item \emph{Gestore}: Si riferisce ad un visualizzatore con privilegi di richieste di modifiche all'organizzazione.
+  \item \emph{Owner}: Si riferisce ad un gestore con privilegi di gestione utenti e organizzazione. É il proprietario di un'organizzazione.
+\end{itemize}
+% subsub:super_utenti (end)
+
+
+% sub:attori_casi_duso (end)
 
 \end{document}
