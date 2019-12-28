@@ -14,11 +14,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC1}
 
 \begin{itemize}
-\item Attori primari: \glossario{amministratore};
-\item Descrizione: il possibile \glossario{amministratore} tenta di autenticarsi al sistema;
-\item Scenario principale: il possibile \glossario{amministratore} non è ancora autenticato e vuole eseguire il login;
-\item Precondizione: il possibile \glossario{amministratore} non è autenticato alla piattaforma;
-\item Postcondizione: l'\glossario{amministratore} ha effettuato correttamente il login nel sistema.
+\item Attori primari: \glossario{super utente non autenticato};
+\item Descrizione: il \glossario{super utente non autenticato} tenta di autenticarsi al sistema;
+\item Scenario principale: il \glossario{super utente non autenticato} non è ancora autenticato e vuole eseguire il login;
+\item Precondizione: il \glossario{super utente non autenticato} non è autenticato alla piattaforma;
+\item Postcondizione: il \glossario{super utente} ha effettuato correttamente il login nel sistema.
 
 \end{itemize}
 % subsub:UC1 (end)
@@ -26,13 +26,13 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC1.1}
 
 \begin{itemize}
-\item Attori primari: amministratore;
-\item Descrizione: l'\glossario{amministratore} visualizza la pagina di login, dove poter inserire le proprie credenziali. 
-\item Scenario principale: ll possibile \glossario{amministratore} accede alla pagina di login, e visualizza tutti i campi da compilare;
+\item Attori primari: \glossario{super utente non autenticato}
+\item Descrizione: il \glossario{super utente non autenticato} visualizza la pagina di login, dove poter inserire le proprie credenziali. 
+\item Scenario principale: il \glossario{super utente non autenticato} accede alla pagina di login, e visualizza tutti i campi da compilare;
 \item Estensioni: \\\emph{UC1.3} Visualizzazione messaggio di credenziali errate;
 \item Inclusioni: \\\emph{UC1.2} Verifica credenziali;
-\item Precondizione: il sistema è raggiungibile e funzionante, il possibile \glossario{amministratore} deve poter visualizzare la pagina di login;
-\item Postcondizione: il possibile \glossario{amministratore} ha inserito le possibili credenziali e sta tentando di effettuare il login. Ogni volta che cercherà di effettuare
+\item Precondizione: il sistema è raggiungibile e funzionante, il \glossario{super utente non autenticato} deve poter visualizzare la pagina di login;
+\item Postcondizione: il \glossario{super utente non autenticato} ha inserito le possibili credenziali e sta tentando di effettuare il login. Ogni volta che cercherà di effettuare
 login sarà verificato che le credenziali inserite siano corrette. In caso contrario verrà visualizzato un messaggio di errore, e l'accesso sarà negato;
 
 \end{itemize}
@@ -42,11 +42,11 @@ login sarà verificato che le credenziali inserite siano corrette. In caso contr
 \label{subsub:UC1.2}
 
 \begin{itemize}
-\item Attori primari: \glossario{amministratore};
-\item Descrizione: vengono verificate le credenziali immesse dal possibile \glossario{amministratore};
-\item Scenario principale: il possibile \glossario{amministratore} sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse;
-\item Precondizione: il possibile \glossario{amministratore} ha inviato al server le sue credenziali per tentare il login;
-\item Postcondizione: il possibile \glossario{amministratore} deve poter accedere alla sua area riservata, nel caso in cui le credenziali siano corrette. In caso
+\item Attori primari: \glossario{super utente non autenticato};
+\item Descrizione: vengono verificate le credenziali immesse dal \glossario{super utente non autenticato};
+\item Scenario principale: il \glossario{super utente non autenticato} sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse;
+\item Precondizione: il \glossario{super utente non autenticato} ha inviato al server le sue credenziali per tentare il login;
+\item Postcondizione: il \glossario{super utente non autenticato} deve poter accedere alla sua area riservata, nel caso in cui le credenziali siano corrette. In caso
 contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph{UC1.3}).
 
 \end{itemize}
@@ -56,11 +56,11 @@ contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph
 \label{subsub:UC1.3}
 
 \begin{itemize}
-\item Attori primari: \glossario{amministratore};
+\item Attori primari: \glossario{super utente non autenticato};
 \item Descrizione: viene visualizzato un errore di login;
-\item Scenario principale: il possibile \glossario{amministratore} cerca di effettuare il login con delle credenziali sbagliate;
-\item Precondizione: il possibile \glossario{amministratore} ha inviato al server le sue credenziali per tentare il login, e le credenziali sono state verificate;
-\item Postcondizione: il possibile amministraotre visualizza un messaggio di credenziali sbagliate. (\emph{UC1.3}).
+\item Scenario principale: il \glossario{super utente non autenticato} cerca di effettuare il login con delle credenziali sbagliate;
+\item Precondizione: il \glossario{super utente non autenticato} ha inviato al server le sue credenziali per tentare il login, e le credenziali sono state verificate;
+\item Postcondizione: il \glossario{super utente non autenticato} visualizza un messaggio di credenziali sbagliate. (\emph{UC1.3}).
 
 \end{itemize}
 
@@ -268,6 +268,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 
 \end{itemize}
 % subsub:UC16 (end)
+
 
 
 % par:Visualizzatore (end)
