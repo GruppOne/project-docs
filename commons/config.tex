@@ -1,6 +1,7 @@
 \usepackage[italian]{babel}
 \usepackage[margin=2cm, footskip=5mm]{geometry}
 \usepackage{hyperref}
+\usepackage{titlesec}
 \usepackage{soulutf8}
 \usepackage{contour}
 \usepackage{float}
@@ -45,6 +46,10 @@
 }
 
 \setlength{\headheight}{1.2cm}
+
+% setup forma \paragraph e \subparagraph
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titleformat{\subparagraph}[hang]{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
 
 % shortcut per i placeholder
 \newcommand{\plchold}[1]{\textit{\{#1\}}}
