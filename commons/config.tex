@@ -4,7 +4,9 @@
 \usepackage{soulutf8}
 \usepackage{contour}
 \usepackage{float}
-\usepackage[T1]{fontenc}
+% package non necessari in lualatex; ref https://tex.stackexchange.com/a/413046
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{longtable}
@@ -23,9 +25,6 @@
   \llap{\contour{white}{#1}}%
 }
 
-% comando per utilizzare double-quotes corrette
-\newcommand{\quotes}[1]{``#1''}
-
 % setup dei link
 \hypersetup{
   colorlinks=true, % set true if you want colored links
@@ -33,25 +32,25 @@
   linkcolor=black, % choose some color if you want links to stand out
 }
 
-% shortcut per i placeholder
-\newcommand{\plchold}[1]{\textit{\{#1\}}}
-
-% hook per lo script che genera il glossario
-\newcommand{\glossario}[1]{\textsc{#1}\textsubscript{g}}
-
 % setup di header e footer
 \pagestyle{fancy}
 
 \fancyhf{}
 \fancyhead[L]{\includegraphics[width=1cm]{\commons/img/logo.png}}
 \fancyhead[R]{\thetitle}
-\fancyfoot[R]{\thepage\ di \pageref{LastPage}}
+\fancyfoot[R]{\thepage\ di~\pageref{LastPage}}
 
 \fancypagestyle{nopage}{%
   \fancyfoot{}%
 }
 
 \setlength{\headheight}{1.2cm}
+
+% shortcut per i placeholder
+\newcommand{\plchold}[1]{\textit{\{#1\}}}
+
+% hook per lo script che genera il glossario
+\newcommand{\glossario}[1]{\textsc{#1}\textsubscript{g}}
 
 % definizione dei comandi \uso e \stato
 \makeatletter
