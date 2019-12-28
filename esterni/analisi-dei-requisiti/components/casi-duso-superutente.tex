@@ -1,120 +1,142 @@
+\documentclass[../analisi-dei-requisiti]{subfiles}
+
+\renewcommand{\commons}{../../../commons}
+
+\begin{document}
+
 \paragraph{Amministratore}
+\label{par:amministratore}
 Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super utente} \glossario{amministratore}.
 
 %inserire UML generale amministratore
 
 \subsubsection{UC1 - Sistema di autenticazione amministratore}
+\label{subsub:UC1}
 
 \begin{itemize}
-\item Attori primari: amministratore;
-\item Descrizione: il possibile amministratore tenta di autenticarsi al sistema;
-\item Scenario principale: il possibile amministratore non è ancora autenticato e vuole eseguire il login;
-\item Precondizione: il possibile amministratore non è autenticato alla piattaforma;
-\item Postcondizione: l'amministratore ha effettuato correttamente il login nel sistema.
+\item Attori primari: \glossario{amministratore};
+\item Descrizione: il possibile \glossario{amministratore} tenta di autenticarsi al sistema;
+\item Scenario principale: il possibile \glossario{amministratore} non è ancora autenticato e vuole eseguire il login;
+\item Precondizione: il possibile \glossario{amministratore} non è autenticato alla piattaforma;
+\item Postcondizione: l'\glossario{amministratore} ha effettuato correttamente il login nel sistema.
 
 \end{itemize}
-
+% subsub:UC1 (end)
 \subsubsection{UC1.1 - Autenticazione}
+\label{subsub:UC1.1}
 
 \begin{itemize}
 \item Attori primari: amministratore;
-\item Descrizione: l'amministratore visualizza la pagina di login, dove poter inserire le proprie credenziali. 
-\item Scenario principale: ll possibile amministratore accede alla pagina di login, e visualizza tutti i campi da compilare;
+\item Descrizione: l'\glossario{amministratore} visualizza la pagina di login, dove poter inserire le proprie credenziali. 
+\item Scenario principale: ll possibile \glossario{amministratore} accede alla pagina di login, e visualizza tutti i campi da compilare;
 \item Estensioni: \\\emph{UC1.3} Visualizzazione messaggio di credenziali errate;
 \item Inclusioni: \\\emph{UC1.2} Verifica credenziali;
-\item Precondizione: il sistema è raggiungibile e funzionante, il possibile amministratore deve poter visualizzare la pagina di login;
-\item Postcondizione: il possibile amministratore ha inserito le possibili credenziali e sta tentando di effettuare il login.Ogni volta che cercherà di effettuare
+\item Precondizione: il sistema è raggiungibile e funzionante, il possibile \glossario{amministratore} deve poter visualizzare la pagina di login;
+\item Postcondizione: il possibile \glossario{amministratore} ha inserito le possibili credenziali e sta tentando di effettuare il login. Ogni volta che cercherà di effettuare
 login sarà verificato che le credenziali inserite siano corrette. In caso contrario verrà visualizzato un messaggio di errore, e l'accesso sarà negato;
 
 \end{itemize}
 
-
+% subsub:UC1,1 (end)
 \subsubsection{UC1.2 - Verifica Credenziali}
+\label{subsub:UC1.2}
 
 \begin{itemize}
-\item Attori primari: amministratore;
-\item Descrizione: vengono verificate le credenziali immesse dal possibile amministratore;
-\item Scenario principale: il possibile amministratore sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse;
-\item Precondizione: il possibile amministratore ha inviato al server le sue credenziali per tentare il login;
-\item Postcondizione: il possibile amministratore deve poter accedere alla sua area riservata, nel caso in cui le credenziali siano corrette. In caso
+\item Attori primari: \glossario{amministratore};
+\item Descrizione: vengono verificate le credenziali immesse dal possibile \glossario{amministratore};
+\item Scenario principale: il possibile \glossario{amministratore} sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse;
+\item Precondizione: il possibile \glossario{amministratore} ha inviato al server le sue credenziali per tentare il login;
+\item Postcondizione: il possibile \glossario{amministratore} deve poter accedere alla sua area riservata, nel caso in cui le credenziali siano corrette. In caso
 contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph{UC1.3}).
 
 \end{itemize}
 
-
+% subsub:UC1,2 (end)
 \subsubsection{UC1.3 - Visualizzazione credenziali errate}
+\label{subsub:UC1.3}
 
 \begin{itemize}
-\item Attori primari: amministratore;
+\item Attori primari: \glossario{amministratore};
 \item Descrizione: viene visualizzato un errore di login;
-\item Scenario principale: il possibile amministratore cerca di effettuare il login con delle credenziali sbagliate;
-\item Precondizione: il possibile amministratore ha inviato al server le sue credenziali per tentare il login, e le credenziali sono state verificate;
+\item Scenario principale: il possibile \glossario{amministratore} cerca di effettuare il login con delle credenziali sbagliate;
+\item Precondizione: il possibile \glossario{amministratore} ha inviato al server le sue credenziali per tentare il login, e le credenziali sono state verificate;
 \item Postcondizione: il possibile amministraotre visualizza un messaggio di credenziali sbagliate. (\emph{UC1.3}).
 
 \end{itemize}
 
+% subsub:UC1.3 (end)
 \subsubsection{UC2 - Approvazione owner}
+\label{subsub:UC2}
 
 \begin{itemize}
-\item Attori primari: amministratore;
-\item Descrizione: l'amministratore approva il compito di owner ad un gestore di una organizzazione;
-\item Scenario principale: deve essere assegnato ad un'organizzazione un owner;
-\item Precondizione: l'organizzazione scelta non deve avere nessun Owner approvato;
-\item Postcondizione: viene approvata la richiesta, e l'organizzazione avrà un nuovo owner.
+\item Attori primari: \glossario{amministratore};
+\item Descrizione: l'\glossario{amministratore} approva il compito di \glossario{owner} ad un gestore di una \glossario{organizzazione};
+\item Scenario principale: deve essere assegnato ad un'\glossario{organizzazione} un \glossario{owner};
+\item Precondizione: l'\glossario{organizzazione} scelta non deve avere nessun \glossario{owner} approvato;
+\item Postcondizione: viene approvata la richiesta, e l'\glossario{organizzazione} avrà un nuovo \glossario{owner}.
 
 \end{itemize}
-
+% subsub:UC2 (end)
 \subsubsection{UC3 - Approvazione creazione organizzazione}
+\label{subsub:UC3}
 
 \begin{itemize}
-\item Attori primari: amministratore;
-\item Descrizione: l'amministratore approva la richiesta di creazione di una nuova organizzazione;
-\item Scenario principale: viene richiesta la creazione di una nuova organizzazione, che vuole utilizzare \glossario{Stalker};
-\item Precondizione: l'organizzazione non deve essere già creata dal sistema, devono essere stati specificati i dati necessari per la creazione;
-\item Postcondizione: viene approvata la richiesta, e l'organizzazione viene creata.
+\item Attori primari: \glossario{amministratore};
+\item Descrizione: l'\glossario{amministratore} approva la richiesta di creazione di una nuova \glossario{organizzazione};
+\item Scenario principale: viene richiesta la creazione di una nuova \glossario{organizzazione}, che vuole utilizzare \glossario{Stalker};
+\item Precondizione: l'\glossario{organizzazione} non deve essere già creata dal sistema, devono essere stati specificati i dati necessari per la creazione;
+\item Postcondizione: viene approvata la richiesta, e l'\glossario{organizzazione} viene creata.
 
 \end{itemize}
-
+% subsub:UC3 (end)
 \subsubsection{UC4 - Approvazione modifica organizzazione}
+\label{subsub:UC4}
 
 \begin{itemize}
-\item Attori primari: amministratore;
-\item Descrizione: l'amministratore approva la richiesta di modifica di una organizzazione;
-\item Scenario principale: viene richiesta la modifica di una organizzazione, presente in \glossario{Stalker};
-\item Precondizione: l'organizzazione deve essere già stata creata dal sistema, devono essere state apportate modifiche;
-\item Postcondizione: viene approvata la richiesta, e l'organizzazione viene modificata.
+\item Attori primari: \glossario{amministratore};
+\item Descrizione: l'\glossario{amministratore} approva la richiesta di modifica di una \glossario{organizzazione};
+\item Scenario principale: viene richiesta la modifica di una \glossario{organizzazione}, presente in \glossario{Stalker};
+\item Precondizione: l'\glossario{organizzazione} deve essere già stata creata dal sistema, devono essere state apportate modifiche;
+\item Postcondizione: viene approvata la richiesta, e l'\glossario{organizzazione} viene modificata.
 
 \end{itemize}
-
+% subsub:UC4 (end)
 \subsubsection{UC5 - Approvazione aggiunta luogo}
+\label{subsub:UC5}
 
 \begin{itemize}
-\item Attori primari: amministratore;
-\item Descrizione: l'amministratore approva la richiesta di aggiunta di un luogo all'interno di un'organizzazione;
-\item Scenario principale: viene richiesta l'aggiunta di un luogo all'interno di un'organizzazione;
-\item Precondizione: l'organizzazione deve essere già stata creata dal sistema, e deve essere stata fatta la richiesta di aggiunta luogo;
-\item Postcondizione: viene approvata la richiesta, e viene aggiunto il luogo all'organizzazione interessata.
+\item Attori primari: \glossario{amministratore};
+\item Descrizione: l'\glossario{amministratore} approva la richiesta di aggiunta di un luogo all'interno di un'\glossario{organizzazione};
+\item Scenario principale: viene richiesta l'aggiunta di un luogo all'interno di un'\glossario{organizzazione};
+\item Precondizione: l'\glossario{organizzazione} deve essere già stata creata dal sistema, e deve essere stata fatta la richiesta di aggiunta luogo;
+\item Postcondizione: viene approvata la richiesta, e viene aggiunto il luogo all'\glossario{organizzazione} interessata.
 
 \end{itemize}
-
+% subsub:UC5 (end)
 \subsubsection{UC6 - Approvazione modifica luogo}
+\label{subsub:UC6}
 
 \begin{itemize}
-\item Attori primari: amministratore;
-\item Descrizione: l'amministratore approva la richiesta di una modifica di un luogo all'interno di un'organizzazione;
-\item Scenario principale: viene richiesta una modifica di un luogo all'interno di un'organizzazione;
-\item Precondizione: l'organizzazione e il luogo devono essere già stati creati dal sistema, e deve essere stata fatta la richiesta di modifica luogo;
-\item Postcondizione: viene approvata la richiesta, e viene modificato il luogo dell'organizzazione interessata.
+\item Attori primari: \glossario{amministratore};
+\item Descrizione: l'\glossario{amministratore} approva la richiesta di una modifica di un luogo all'interno di un'\glossario{organizzazione};
+\item Scenario principale: viene richiesta una modifica di un luogo all'interno di un'\glossario{organizzazione};
+\item Precondizione: l'\glossario{organizzazione} e il luogo devono essere già stati creati dal sistema, e deve essere stata fatta la richiesta di modifica luogo;
+\item Postcondizione: viene approvata la richiesta, e viene modificato il luogo dell'\glossario{organizzazione} interessata.
 
 \end{itemize}
-
+% subsub:UC6 (end)
 \subsubsection{UC7 - Approvazione trasferimento di proprietà organizzazione}
+\label{subsub:UC7}
 
 \begin{itemize}
-\item Attori primari: amministratore;
-\item Descrizione: l'amministratore approva la richiesta di un trasferimento di proprietà di un'organizzazione;
-\item Scenario principale: viene richiesto un traferimento di proprietà di un'organizzazione;
-\item Precondizione: l'organizzazione deve essere già stata creata dal sistema, e deve essere stata fatta la richiesta trasferimento di proprietà;
-\item Postcondizione: viene approvata la richiesta, e viene trasferita la proprietà dell'organizzazione interessata.
+\item Attori primari: \glossario{amministratore};
+\item Descrizione: l'\glossario{amministratore} approva la richiesta di un trasferimento di proprietà di un'\glossario{organizzazione};
+\item Scenario principale: viene richiesto un traferimento di proprietà di un'\glossario{organizzazione};
+\item Precondizione: l'\glossario{organizzazione} deve essere già stata creata dal sistema, e deve essere stata fatta la richiesta trasferimento di proprietà;
+\item Postcondizione: viene approvata la richiesta, e viene trasferita la proprietà dell'\glossario{organizzazione} interessata.
 
 \end{itemize}
+% subsub:UC7 (end)
+% par:Amministratore (end)
+
+\end{document}
