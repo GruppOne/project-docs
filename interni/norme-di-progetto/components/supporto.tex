@@ -232,10 +232,10 @@ Le principali attività coinvolte nel processo di accertamento della qualità so
 \end{itemize}
 \paragraph{Accertamento qualità di prodotto}\mbox{}\\
 \label{par:accertamento qualità di prodotto}
-\\ L'attività di accertamento della qualità di prodotto vigila sulla qualità dei prodotti realizzati. Essa promuove controlli continui che possano prevenire danni irreparabili al termine del progetto. È fortemente dipendente dalla qualità di processo: da processi privi di qualità, infatti, non è possibile ottenere buoni prodotti.  
-\paragraph{Accertamento qualità di processo}
+\\L'attività di accertamento della qualità di prodotto vigila sulla qualità dei prodotti realizzati. Essa promuove controlli continui che possano prevenire danni irreparabili al termine del progetto. È fortemente dipendente dalla qualità di processo: da processi privi di qualità, infatti, non è possibile ottenere buoni prodotti.  
+\paragraph{Accertamento qualità di processo}\mbox{}\\
 \label{par:accertamento qualità di processo}
-L'attività di accertamento della qualità di processo monitora i processi istanziati. Per avere un sistema di accertamento della qualità di processo che funzioni è necessario che:
+\\L'attività di accertamento della qualità di processo monitora i processi istanziati. Per avere un sistema di accertamento della qualità di processo che funzioni è necessario che:
 \begin{itemize}
 	\item Si individuino i processi da controllare
 	\item Si stabiliscano le metriche di valutazione del processo
@@ -265,11 +265,9 @@ Il processo di verifica è il processo che controlla e garantisce che i prodotti
 	\item Implementazione di processo
 	\item Verifica 
 \end{itemize} 
-\subsubsection{Verifica}
-\label{subs:verifica}
 \paragraph{Analisi statica}\mbox{}\\
 \label{par:analisi statica}
-L'analisi statica  fornisce l'insieme delle buone pratiche che valutano un componente del sistema sulla base della sua forma, struttura e contenuto. L'analisi statica quindi definisce una serie di regole  a cui tutti i prodotti intermedi del ciclo di vita del software devono attenersi. Esistono due tipi di analisi statica:
+\\L'analisi statica  fornisce l'insieme delle buone pratiche che valutano un componente del sistema sulla base della sua forma, struttura e contenuto. L'analisi statica quindi definisce una serie di regole  a cui tutti i prodotti intermedi del ciclo di vita del software devono attenersi. Esistono due tipi di analisi statica:
 \begin{itemize} 
 	\item \textbf{Walkthrough}: La tecnica walkthrough esegue una verifica a largo spettro del prodotto. Si articola nelle seguenti attività:
 	\begin{itemize}
@@ -294,7 +292,7 @@ Grupp0ne predilige la tecnica inspection pertanto si impegna a fornire una check
 		\item \textbf{Errori di ortografia}: si devono individuare errori di punteggiatura.
 		\item \textbf{Errori nei verbi}: si deve controllare che tutti i verbi siano in forma attiva.
 		\item \textbf{Errori di sintassi}: si deve verificare che non ci siano paragrafi di lunghezza eccessiva e che le frasi siano il più brevi possibile.
-		\item \textbf{Errori negli elenchi puntati}: si deve controllare che ogni elemento di elenco puntato inizi con la lettera maiuscola e che vengano rispettare le regole definite in \ref{subp:elenchi puntati}.
+		\item \textbf{Errori negli elenchi puntati}: si deve controllare che ogni elemento di elenco puntato inizi con la lettera maiuscola e che vengano rispettate le regole definite in \ref{subp:elenchi puntati}.
 		\item \textbf{Errori nella strutturazione del documento}: si deve verificare che tutti i paragrafi si trovino nella sezione corretta, che le sezioni siano ben strutturate e che i titoli siano significativi.
 \end{itemize}
 Sarà compito dei verificatori attenersi alla checklist definita in \ref{subp:analisi statica dei documenti} per le attività di verifica.
@@ -306,20 +304,45 @@ Sarà compito dei verificatori attenersi alla checklist definita in \ref{subp:an
 	\item Ripetibilità
 	\item Bassa interazione umana
 \end{itemize}
-Nei successivi paragrafi si presentano i diversi tipi di test.
+\subparagraph{Copertura dei test}\mbox{}\\
+\label{subp:copertura dei test}
+\\Per ogni tipo di test è necessario fornire la sua copertura. Essa è un valore percentuale e indica quante linee di codice i test hanno esercitato sul totale. Più la copertura è alta meglio è, tuttavia una copertura del 100 \% non dà in alcun modo la certezza di essere in assenza di difetti. Il capitolato di Stalker richiede una copertura dei test pari almeno all' 80 \% corredata da report.
 \subparagraph{Test di unità}\mbox{}\\
+\label{subp:test di unità}
 \\ Il software è un insieme di componenti. Per effettuare verifica del software è necessario adottare un approccio \glossario{bottom-up} che deve necessariamente occuparsi di controllare prima che le unità su cui è costruito il software siano corrette. I test di unità, quindi, servono proprio a testare i moduli elementari del software. 
 \subparagraph{Test di integrazione}\mbox{}\\
+\label{subp:test di integrazione}
 \\ I test di integrazione si occupano di verificare l'interazione tra le sottocomponenti del sistema. Essi suppongono che i test di unità siano già stati eseguiti e abbiano dato esito positivo. Lo scopo dei test di integrazione è, pertanto quello di dimostrare che le interfacce delle componenti del software si comportino conformemente alle specifiche richieste.
 \subparagraph{Test di sistema}\mbox{}\\
+\label{test di sistemaa}
 \\ I test di sistema si possono iniziare solo nel momento in cui i test di integrazione abbiano dato esito positivo. Essi verificano il comportamento generale del software rispetto ai requisiti. Durante i test di sistema si esercitano quelle funzionalità di alcune componenti del software che sono fortemente dipendenti da altri moduli del sistema.
 \subparagraph{Test di regressione}\mbox{}\\
+\label{test di regressione}
+\\I test di regressione servono per accertare che modifiche apportate non comportino altri errori nel software: consiste nella ripetizione selettiva di test di unità, test di integrazione, test di sistema.
 \subparagraph{Test di accettazione}\mbox{}\\
+\label{test di accettazione}
+\\I test di accettazione verificano il completo soddisfacimento dei requisiti utente. Sono eseguiti in collaborazione con il committente.
 \paragraph{Strumenti}\mbox{}\\
+\label{par:strumenti}
 \subparagraph{Controllo ortografico e della sintassi}\mbox{}\\
+\label{subp:controllo ortografico e della sintassi}
 \subparagraph{Code owners}\mbox{}\\
+\label{subp:code owners}
 \subsection{Validazione}
+\label{sub:validazione}
 \subsubsection{Finalità}
+\label{subs:finalità}
+Grupp0ne istanzia il processo di validazione per assicurarsi che il prodotto finale realizzato abbia pienamente soddisfatto le attese del committente.
 \subsubsection{Descrizione}
-\subsubsection{Attività}
+\label{subs:descrizione}
+Dovendo verificare se il prodotto finale soddisfa i requisiti, anche il processo di validazione fa uso dell'analisi dinamica del codice e quindi di test ad hoc per dimostrare la correttezza del prodotto.
+\subsubsection{Piano di validazione}
+\label{subs:piano di validazione}
+Il piano di validazione comprende tutte le attività del processo di validazione:
+\begin{itemize}
+	\item Scelta dell'oggetto di validazione
+	\item Decisione dei compiti da eseguire per realizzare la validazione
+	\item Determinazione delle risorse e delle responsabilità
+	\item Procedure per fornire al cliente i report di validazione
+\end{itemize}
 \end{document}
