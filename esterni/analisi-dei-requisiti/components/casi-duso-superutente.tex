@@ -53,7 +53,7 @@ contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph
 
 \end{itemize}
 
-\subsubsection{UC2- Approvazione owner}
+\subsubsection{UC2 - Approvazione owner}
 
 \begin{itemize}
 \item Attori primari: amministratore;
@@ -61,5 +61,16 @@ contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph
 \item Scenario principale: deve essere assegnato ad un'organizzazione un owner;
 \item Precondizione: l'organizzazione scelta non deve avere nessun Owner approvato;
 \item Postcondizione: viene approvata la richiesta, e l'organizzazione avrà un nuovo owner.
+
+\end{itemize}
+
+\subsubsection{UC3 - Approvazione creazione organizzazione}
+
+\begin{itemize}
+\item Attori primari: amministratore;
+\item Descrizione: l'amministratore approva la richiesta di creazione di una nuova organizzazione;
+\item Scenario principale: viene richiesta la creazione di una nuova organizzazione, che vuole utilizzare \glossario{Stalker};
+\item Precondizione: l'organizzazione non deve essere già creata dal sistema, devono essere stati specificati i dati necessari per la creazione;
+\item Postcondizione: viene approvata la richiesta, e l'organizzazione viene creata.
 
 \end{itemize}
