@@ -77,13 +77,45 @@ Il processo di sviluppo contiene le attività e i compiti dello sviluppatore. Es
 Il documento di riferimento, \textit{Analisi dei requisiti v1.0.0}, è redatto dagli analisti.
 \subparagraph{Classificazione dei requisiti}\mbox{}\\
 \label{subp:classificazione dei requisiti}
-\subparagraph{Diagrammi UML}\mbox{}\\
-\label{subp:diagrammi UML}
+\subparagraph{Casi d'uso}\mbox{}\\
+\label{subp:casi d'uso}
+\\ I diagrammi dei casi d'uso descrivono le funzioni e i servizi offerti dal prodotto agli attori che interagiscono con il sistema. Ogni caso d'uso ha :
+\begin{itemize}
+	\item Una rappresentazione testuale
+	\item Una rappresentazione grafica
+\end{itemize}
+Nel presente paragrafo si descrive la rappresentazione testuale mentre nel successivo verrà descritta la rappresentazione grafica. Un generico caso d'uso è caratterizzato da:
+\begin{itemize}
+\item \textbf{Titolo}: breve titolo del caso d'uso.
+\item \textbf{Codice}: codice identificativo del caso d'uso. Ogni caso d'uso può essere suddiviso in altri sottocasi. La denominazione convenzionale è la seguente:
+\begin{itemize}
+	\item \textbf{Caso d'uso}: UC[codice numerico].
+    \item \textbf{Sottocaso d'uso}: UC[codice numerico del padre].[codice numerico del sottocaso].
+\end{itemize}
+Ad esempio il primo caso d'uso avrà codice identificativo UC1 mentre i relativi sottocasi saranno UC1.1 UC1.2 UC1.3..
+\item \textbf{Attore primario}: attore principale coinvolto nel caso d'uso.
+\item \textbf{Attori secondari}(opzionale): attori secondari coinvolti nel caso d'uso.
+\item \textbf{Precondizioni}: condizione in cui si trovano gli attori prima del verificarsi del caso d'uso.
+\item \textbf{Postcondizioni}: condizione in cui si trovano gli attori dopo il verificarsi del caso d'uso.
+\item \textbf{Scenario principale}: sequenza di azioni svolte dall'attore per portare a compimento il caso d'uso.
+\item \textbf{Estensioni}(opzionale): sequenza di possibilità dell'attore al verificarsi di eventi anomali o di situazioni di errore.
+\end{itemize}
+\subparagraph{Diagrammi dei casi d'uso}
+\label{subp:diagrammi dei casi d'uso} 
 \paragraph{Progettazione}\mbox{}\\
 \label{par:progettazione}
 \subsubsection{Strumenti}
 \label{subs:strumenti}
-\begin{comment}
-inserire immagine di plantUML
-\end{comment}
+\paragraph{PlantUml}\mbox{}\\
+\label{par:plantuml}
+\\ Per la costruzione dei diagrammi dei casi d'uso il team ha deciso di utilizzare PlantUml. È un software open source che permette la costruzione di diagrammi UML a partire dalla scrittura di codice. PlantUml fa uso di GraphViz per la traduzione del plain text in elementi grafici. Grupp0ne ha valutato positivamente tale strumento in quanto:
+\begin{itemize}
+	\item Permette di scrivere i diagrammi dei casi d'uso sotto forma di codice, mentre il ruolo di costruzione dei diagrammi è demandato al software sottostante.
+	\item Permette di scrivere agevolmente non solo i diagrammi dei casi d'uso, ma anche diagrammi delle classi, di sequenza e di package.
+\end{itemize}
+\begin{figure}[H]
+\includegraphics[width=8cm]{components/owner_use_cases.png}
+\centering
+\caption{diagramma dei casi d'uso realizzato con PlantUml}
+\end{figure}
 \end{document}
