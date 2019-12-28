@@ -155,18 +155,31 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 % subsub:UC8 (end)
 
 \subsubsection{UC9 - Eliminazione organizzazione}
-\label{subsub:UC8}
+\label{subsub:UC9}
 
 \begin{itemize}
 \item Attori primari: \glossario{root};
 \item Descrizione: il \glossario{root} elimina un'\glossario{organizzazione};
-\item Scenario principale: sorge la necessità di eliminare un'\glossario{organizzazione}, che per sconusciuti motivi non intende più utilizzare \glossario{Stalker}; 
-\item Precondizione: deve essere stata selezionata l'\glossario{organizzazione} da eliminare, che deve essere presente nella lista di \glossario{Stalker};
+\item Scenario principale: sorge la necessità di eliminare un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner}; 
+\item Precondizione: deve essere stata selezionata l'\glossario{organizzazione} da eliminare, presente nella lista di \glossario{Stalker};
 \item Postcondizione: l'\glossario{organizzazione} viene eliminata.
 
 \end{itemize}
 % subsub:UC9 (end)
 
+
+\subsubsection{UC10 - Modifica organizzazione}
+\label{subsub:UC10}
+
+\begin{itemize}
+\item Attori primari: \glossario{root};
+\item Descrizione: il \glossario{root} modifica un'\glossario{organizzazione};
+\item Scenario principale: sorge la necessità di modificare un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner}; 
+\item Precondizione: deve essere stata selezionata l'\glossario{organizzazione} da modificare, presente nella lista di \glossario{Stalker}, effettivamente modificata;
+\item Postcondizione: l'\glossario{organizzazione} viene modificata.
+
+\end{itemize}
+% subsub:UC10 (end)
 
 % par:Root (end)
 \end{document}
