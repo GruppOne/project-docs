@@ -1,0 +1,19 @@
+name: LaTeX workflows
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  chktex:
+    name: Lint all *.tex files
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: LaTeX linter (chktex)
+        uses: j2kun/chktex-action@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

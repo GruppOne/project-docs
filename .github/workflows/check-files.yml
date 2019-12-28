@@ -1,4 +1,4 @@
-name: Check files for BOMs and CRLF endings
+name: Best practices for source files
 
 on:
   pull_request:
@@ -7,21 +7,21 @@ on:
 
 jobs:
   check-bom:
-    name: check files for BOMs
+    name: no BOMs found
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
-      - name: Use an external action to check for BOMs
+      - name: check for BOMs
         uses: arma-actions/bom-check@v1.0
 
   check-crlf:
-    name: check files for crlf line endings
+    name: no CRLF endings found
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
-      - name: Use an external action to check for CRLF endings
+      - name: check for CRLF endings
         uses: erclu/check-crlf@v1.0
