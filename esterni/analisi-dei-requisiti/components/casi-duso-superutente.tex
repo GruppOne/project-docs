@@ -6,7 +6,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \subsubsection{UC1 - Sistema di autenticazione amministratore}
 
 \begin{itemize}
-\item Attori primari: Amministratore;
+\item Attori primari: amministratore;
 \item Descrizione: il possibile amministratore tenta di autenticarsi al sistema;
 \item Scenario principale: il possibile amministratore non è ancora autenticato e vuole eseguire il login;
 \item Precondizione: il possibile amministratore non è autenticato alla piattaforma;
@@ -17,7 +17,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \subsubsection{UC1.1 - Autenticazione}
 
 \begin{itemize}
-\item Attori primari: Amministratore;
+\item Attori primari: amministratore;
 \item Descrizione: l'amministratore visualizza la pagina di login, dove poter inserire le proprie credenziali. 
 \item Scenario principale: ll possibile amministratore accede alla pagina di login, e visualizza tutti i campi da compilare;
 \item Estensioni: \\\emph{UC1.3} Visualizzazione messaggio di credenziali errate;
@@ -32,7 +32,7 @@ login sarà verificato che le credenziali inserite siano corrette. In caso contr
 \subsubsection{UC1.2 - Verifica Credenziali}
 
 \begin{itemize}
-\item Attori primari: Amministratore;
+\item Attori primari: amministratore;
 \item Descrizione: vengono verificate le credenziali immesse dal possibile amministratore;
 \item Scenario principale: il possibile amministratore sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse;
 \item Precondizione: il possibile amministratore ha inviato al server le sue credenziali per tentare il login;
@@ -42,13 +42,24 @@ contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph
 \end{itemize}
 
 
-\subsubsection{UC1.2 - Visualizzazione credenziali errate}
+\subsubsection{UC1.3 - Visualizzazione credenziali errate}
 
 \begin{itemize}
-\item Attori primari: Amministratore;
+\item Attori primari: amministratore;
 \item Descrizione: viene visualizzato un errore di login;
 \item Scenario principale: il possibile amministratore cerca di effettuare il login con delle credenziali sbagliate;
 \item Precondizione: il possibile amministratore ha inviato al server le sue credenziali per tentare il login, e le credenziali sono state verificate;
 \item Postcondizione: il possibile amministraotre visualizza un messaggio di credenziali sbagliate. (\emph{UC1.3}).
+
+\end{itemize}
+
+\subsubsection{UC2- Approvazione owner}
+
+\begin{itemize}
+\item Attori primari: amministratore;
+\item Descrizione: l'amministratore approva il compito di owner ad un gestore di una organizzazione;
+\item Scenario principale: deve essere assegnato ad un'organizzazione un owner;
+\item Precondizione: l'organizzazione scelta non deve avere nessun Owner approvato;
+\item Postcondizione: viene approvata la richiesta, e l'organizzazione avrà un nuovo owner.
 
 \end{itemize}
