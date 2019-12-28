@@ -1,1 +1,54 @@
-﻿
+﻿\paragraph{Amministratore}
+Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super utente} \glossario{amministratore}.
+
+%inserire UML generale amministratore
+
+\subsubsection{UC1 - Sistema di autenticazione amministratore}
+
+\begin{itemize}
+\item Attori primari: Amministratore;
+\item Descrizione: il possibile amministratore tenta di autenticarsi al sistema;
+\item Scenario principale: il possibile amministratore non è ancora autenticato e vuole eseguire il login;
+\item Precondizione: il possibile amministratore non è autenticato alla piattaforma;
+\item Postcondizione: l'amministratore ha effettuato correttamente il login nel sistema.
+
+\end{itemize}
+
+\subsubsection{UC1.1 - Autenticazione}
+
+\begin{itemize}
+\item Attori primari: Amministratore;
+\item Descrizione: l'amministratore visualizza la pagina di login, dove poter inserire le proprie credenziali. 
+\item Scenario principale: ll possibile amministratore accede alla pagina di login, e visualizza tutti i campi da compilare;
+\item Estensioni: \\\emph{UC1.3} Visualizzazione messaggio di credenziali errate;
+\item Inclusioni: \\\emph{UC1.2} Verifica credenziali;
+\item Precondizione: il sistema è raggiungibile e funzionante, il possibile amministratore deve poter visualizzare la pagina di login;
+\item Postcondizione: il possibile amministratore ha inserito le possibili credenziali e sta tentando di effettuare il login.Ogni volta che cercherà di effettuare
+login sarà verificato che le credenziali inserite siano corrette. In caso contrario verrà visualizzato un messaggio di errore, e l'accesso sarà negato;
+
+\end{itemize}
+
+
+\subsubsection{UC1.2 - Verifica Credenziali}
+
+\begin{itemize}
+\item Attori primari: Amministratore;
+\item Descrizione: vengono verificate le credenziali immesse dal possibile amministratore;
+\item Scenario principale: il possibile amministratore sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse;
+\item Precondizione: il possibile amministratore ha inviato al server le sue credenziali per tentare il login;
+\item Postcondizione: il possibile amministratore deve poter accedere alla sua area riservata, nel caso in cui le credenziali siano corrette. In caso
+contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph{UC1.3}).
+
+\end{itemize}
+
+
+\subsubsection{UC1.2 - Visualizzazione credenziali errate}
+
+\begin{itemize}
+\item Attori primari: Amministratore;
+\item Descrizione: viene visualizzato un errore di login;
+\item Scenario principale: il possibile amministratore cerca di effettuare il login con delle credenziali sbagliate;
+\item Precondizione: il possibile amministratore ha inviato al server le sue credenziali per tentare il login, e le credenziali sono state verificate;
+\item Postcondizione: il possibile amministraotre visualizza un messaggio di credenziali sbagliate. (\emph{UC1.3}).
+
+\end{itemize}
