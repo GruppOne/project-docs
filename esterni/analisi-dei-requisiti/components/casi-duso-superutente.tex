@@ -55,6 +55,28 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \subsubsection{UC1.1 - Autenticazione}
 \label{subsub:UC1.1}
 
+\begin{plantuml}
+@startuml UC1.1.1
+!include style.pu
+left to right direction
+
+title Autenticazione SuperUtente
+
+actor :SuperUtente non autenticato: as A1.1
+
+rectangle UC1.1{
+  together {
+  usecase (UC1.1.1) as "UC1.1.1\nInserimento e-mail"
+  usecase (UC1.1.2) as "UC1.1.2\nInserimento password"
+  }
+}
+A1.1 -- UC1.1.1
+A1.1 -- UC1.1.2
+
+@enduml
+\end{plantuml}
+
+
 \begin{itemize}
   \item \textbf{Attori primari:} \glossario{super utente non autenticato}
   \item \textbf{Descrizione:} il \glossario{super utente non autenticato} visualizza la pagina di login, dove poter inserire le proprie credenziali.
