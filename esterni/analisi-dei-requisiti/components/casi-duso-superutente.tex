@@ -15,40 +15,40 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 
 
 \begin{plantuml}
-@startuml UC1
-!include ../../../commons/style/use-cases.pu
-left to right direction
+  @startuml UC1
+  !include ../../../commons/style/use-cases.pu
+  left to right direction
 
-title Login SuperUtente
+  title Login SuperUtente
 
-actor :SuperUtente non autenticato: as A1.1
+  actor :SuperUtente non autenticato: as A1.1
 
-rectangle UC1{
-  together {
-  usecase (UC1.1) as "UC1.1\nAutenticazione"
-  usecase (UC1.2) as "UC1.2\nVerifica credenziali"
-  usecase (UC1.3) as "UC1.3\nVisualizzazione credenziali errate"
-  note "Condition: credenziali errate" as N1
-  }
-}
-  
-UC1.1 .> UC1.2 : <<include>>
-UC1.3 . N1
-N1 .> UC1.1 : <<extends>>
+  rectangle UC1{
+      together {
+          usecase (UC1.1) as "UC1.1\nAutenticazione"
+          usecase (UC1.2) as "UC1.2\nVerifica credenziali"
+          usecase (UC1.3) as "UC1.3\nVisualizzazione credenziali errate"
+          note "Condition: credenziali errate" as N1
+        }
+    }
 
-A1.1 -- UC1.1
+  UC1.1 .> UC1.2 : <<include>>
+  UC1.3 . N1
+  N1 .> UC1.1 : <<extends>>
+
+  A1.1 -- UC1.1
 
 
-@enduml
+  @enduml
 \end{plantuml}
 
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{super utente non autenticato};
-\item \textbf{Descrizione:} il \glossario{super utente non autenticato} tenta di autenticarsi al sistema;
-\item \textbf{Scenario principale:} il \glossario{super utente non autenticato} non è ancora autenticato e vuole eseguire il login;
-\item \textbf{Precondizione:} il \glossario{super utente non autenticato} non è autenticato alla piattaforma;
-\item \textbf{Postcondizione:} il \glossario{super utente} ha effettuato correttamente il login nel sistema.
+  \item \textbf{Attori primari:} \glossario{super utente non autenticato};
+  \item \textbf{Descrizione:} il \glossario{super utente non autenticato} tenta di autenticarsi al sistema;
+  \item \textbf{Scenario principale:} il \glossario{super utente non autenticato} non è ancora autenticato e vuole eseguire il login;
+  \item \textbf{Precondizione:} il \glossario{super utente non autenticato} non è autenticato alla piattaforma;
+  \item \textbf{Postcondizione:} il \glossario{super utente} ha effettuato correttamente il login nel sistema.
 
 \end{itemize}
 % subsub:UC1 (end)
@@ -56,28 +56,57 @@ A1.1 -- UC1.1
 \label{subsub:UC1.1}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{super utente non autenticato}
-\item \textbf{Descrizione:} il \glossario{super utente non autenticato} visualizza la pagina di login, dove poter inserire le proprie credenziali. 
-\item \textbf{Scenario principale:} il \glossario{super utente non autenticato} accede alla pagina di login, e visualizza tutti i campi da compilare;
-\item Estensioni: \\\emph{UC1.3} Visualizzazione messaggio di credenziali errate;
-\item Inclusioni: \\\emph{UC1.2} Verifica credenziali;
-\item \textbf{Precondizione:} il sistema è raggiungibile e funzionante, il \glossario{super utente non autenticato} deve poter visualizzare la pagina di login;
-\item \textbf{Postcondizione:} il \glossario{super utente non autenticato} ha inserito le possibili credenziali e sta tentando di effettuare il login. Ogni volta che cercherà di effettuare
-login sarà verificato che le credenziali inserite siano corrette. In caso contrario verrà visualizzato un messaggio di errore, e l'accesso sarà negato;
+  \item \textbf{Attori primari:} \glossario{super utente non autenticato}
+  \item \textbf{Descrizione:} il \glossario{super utente non autenticato} visualizza la pagina di login, dove poter inserire le proprie credenziali.
+  \item \textbf{Scenario principale:} il \glossario{super utente non autenticato} accede alla pagina di login, e visualizza tutti i campi da compilare:
+        \\a. L'utente inserisce l’email associata all’account \emph{[UC1.1.1]};
+        \\b. L'utente inserisce la password associata all’account \emph{[UC1.1.2]};
+  \item Estensioni:
+        \\a. Visualizzazione messaggio di credenziali errate \emph{[UC1.3]};
+  \item Inclusioni:
+        \\a. Verifica credenziali \emph{[UC1.2]};
+  \item \textbf{Precondizione:} il sistema è raggiungibile e funzionante, il \glossario{super utente non autenticato} deve poter visualizzare la pagina di login;
+  \item \textbf{Postcondizione:} il \glossario{super utente non autenticato} ha inserito le possibili credenziali e sta tentando di effettuare il login. Ogni volta che cercherà di effettuare
+        login sarà verificato che le credenziali inserite siano corrette. In caso contrario verrà visualizzato un messaggio di errore, e l'accesso sarà negato;
 
 \end{itemize}
+% subsub:UC1.1 (end)
 
-% subsub:UC1,1 (end)
+\subsubsection{UC1.1.1 - Inserimento e-mail}
+\label{subsub:UC1.1.1}
+
+\begin{itemize}
+  \item \textbf{Attori primari:} \glossario{super utente non autenticato}
+  \item \textbf{Descrizione:} al fine di portare a termine il processo di login di un \glossario{super utente}, esso deve inserire la propria e-mail, campo obbligatorio;
+  \item \textbf{Scenario principale:} il \glossario{super utente non autenticato} compila il campo relativo alla sua e-mail di registrazione;
+  \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento della e-mail;
+  \item \textbf{Postcondizione:} il \glossario{super utente non autenticato} ha compilato il campo relativo alla sua e-mail.
+\end{itemize}
+% subsub:UC1.1.1 (end)
+
+\subsubsection{UC1.1.2 - Inserimento password}
+\label{subsub:UC1.1.2}
+
+\begin{itemize}
+  \item \textbf{Attori primari:} \glossario{super utente non autenticato}
+  \item \textbf{Descrizione:} al fine di portare a termine il processo di login di un \glossario{super utente}, esso deve inserire la propria password, campo obbligatorio;
+  \item \textbf{Scenario principale:} il \glossario{super utente non autenticato} compila il campo relativo alla sua password di registrazione;
+  \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento della password;
+  \item \textbf{Postcondizione:} il \glossario{super utente non autenticato} ha compilato il campo relativo alla sua password.
+\end{itemize}
+% subsub:UC1.1.2 (end)
+
+
 \subsubsection{UC1.2 - Verifica Credenziali}
 \label{subsub:UC1.2}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{super utente non autenticato};
-\item \textbf{Descrizione:} vengono verificate le credenziali immesse dal \glossario{super utente non autenticato};
-\item \textbf{Scenario principale:} il \glossario{super utente non autenticato} sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse;
-\item \textbf{Precondizione:} il \glossario{super utente non autenticato} ha inviato al server le sue credenziali per tentare il login;
-\item \textbf{Postcondizione:} il \glossario{super utente non autenticato} deve poter accedere alla sua area riservata, nel caso in cui le credenziali siano corrette. In caso
-contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph{UC1.3}).
+  \item \textbf{Attori primari:} \glossario{super utente non autenticato};
+  \item \textbf{Descrizione:} vengono verificate le credenziali immesse dal \glossario{super utente non autenticato};
+  \item \textbf{Scenario principale:} il \glossario{super utente non autenticato} sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse;
+  \item \textbf{Precondizione:} il \glossario{super utente non autenticato} ha inviato al server le sue credenziali per tentare il login;
+  \item \textbf{Postcondizione:} il \glossario{super utente non autenticato} deve poter accedere alla sua area riservata, nel caso in cui le credenziali siano corrette. In caso
+        contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph{UC1.3}).
 
 \end{itemize}
 
@@ -86,11 +115,11 @@ contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph
 \label{subsub:UC1.3}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{super utente non autenticato};
-\item \textbf{Descrizione:} viene visualizzato un errore di login;
-\item \textbf{Scenario principale:} il \glossario{super utente non autenticato} cerca di effettuare il login con delle credenziali sbagliate;
-\item \textbf{Precondizione:} il \glossario{super utente non autenticato} ha inviato al server le sue credenziali per tentare il login, e le credenziali sono state verificate;
-\item \textbf{Postcondizione:} il \glossario{super utente non autenticato} visualizza un messaggio di credenziali sbagliate. (\emph{UC1.3}).
+  \item \textbf{Attori primari:} \glossario{super utente non autenticato};
+  \item \textbf{Descrizione:} viene visualizzato un errore di login;
+  \item \textbf{Scenario principale:} il \glossario{super utente non autenticato} cerca di effettuare il login con delle credenziali sbagliate;
+  \item \textbf{Precondizione:} il \glossario{super utente non autenticato} ha inviato al server le sue credenziali per tentare il login, e le credenziali sono state verificate;
+  \item \textbf{Postcondizione:} il \glossario{super utente non autenticato} visualizza un messaggio di credenziali sbagliate. (\emph{UC1.3}).
 
 \end{itemize}
 
@@ -99,11 +128,11 @@ contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph
 \label{subsub:UC2}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{amministratore};
-\item \textbf{Descrizione:} l'\glossario{amministratore} approva il compito di \glossario{owner} ad un gestore di una \glossario{organizzazione};
-\item \textbf{Scenario principale:} deve essere assegnato ad un'\glossario{organizzazione} un \glossario{owner};
-\item \textbf{Precondizione:} l'\glossario{organizzazione} scelta non deve avere nessun \glossario{owner} approvato;
-\item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{organizzazione} avrà un nuovo \glossario{owner}.
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Descrizione:} l'\glossario{amministratore} approva il compito di \glossario{owner} ad un gestore di una \glossario{organizzazione};
+  \item \textbf{Scenario principale:} deve essere assegnato ad un'\glossario{organizzazione} un \glossario{owner};
+  \item \textbf{Precondizione:} l'\glossario{organizzazione} scelta non deve avere nessun \glossario{owner} approvato;
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{organizzazione} avrà un nuovo \glossario{owner}.
 
 \end{itemize}
 % subsub:UC2 (end)
@@ -111,11 +140,11 @@ contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph
 \label{subsub:UC3}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{amministratore};
-\item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di creazione di una nuova \glossario{organizzazione};
-\item \textbf{Scenario principale:} viene richiesta la creazione di una nuova \glossario{organizzazione}, che vuole utilizzare \glossario{Stalker};
-\item \textbf{Precondizione:} l'\glossario{organizzazione} non deve essere già creata dal sistema, devono essere stati specificati i dati necessari per la creazione;
-\item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{organizzazione} viene creata.
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di creazione di una nuova \glossario{organizzazione};
+  \item \textbf{Scenario principale:} viene richiesta la creazione di una nuova \glossario{organizzazione}, che vuole utilizzare \glossario{Stalker};
+  \item \textbf{Precondizione:} l'\glossario{organizzazione} non deve essere già creata dal sistema, devono essere stati specificati i dati necessari per la creazione;
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{organizzazione} viene creata.
 
 \end{itemize}
 % subsub:UC3 (end)
@@ -123,11 +152,11 @@ contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph
 \label{subsub:UC4}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{amministratore};
-\item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di modifica di una \glossario{organizzazione};
-\item \textbf{Scenario principale:} viene richiesta la modifica di una \glossario{organizzazione}, presente in \glossario{Stalker};
-\item \textbf{Precondizione:} l'\glossario{organizzazione} deve essere già stata creata dal sistema, devono essere state apportate modifiche;
-\item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{organizzazione} viene modificata.
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di modifica di una \glossario{organizzazione};
+  \item \textbf{Scenario principale:} viene richiesta la modifica di una \glossario{organizzazione}, presente in \glossario{Stalker};
+  \item \textbf{Precondizione:} l'\glossario{organizzazione} deve essere già stata creata dal sistema, devono essere state apportate modifiche;
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{organizzazione} viene modificata.
 
 \end{itemize}
 % subsub:UC4 (end)
@@ -135,11 +164,11 @@ contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph
 \label{subsub:UC5}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{amministratore};
-\item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di aggiunta di un luogo all'interno di un'\glossario{organizzazione};
-\item \textbf{Scenario principale:} viene richiesta l'aggiunta di un luogo all'interno di un'\glossario{organizzazione};
-\item \textbf{Precondizione:} l'\glossario{organizzazione} deve essere già stata creata dal sistema, e deve essere stata fatta la richiesta di aggiunta luogo;
-\item \textbf{Postcondizione:} viene approvata la richiesta, e viene aggiunto il luogo all'\glossario{organizzazione} interessata.
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di aggiunta di un luogo all'interno di un'\glossario{organizzazione};
+  \item \textbf{Scenario principale:} viene richiesta l'aggiunta di un luogo all'interno di un'\glossario{organizzazione};
+  \item \textbf{Precondizione:} l'\glossario{organizzazione} deve essere già stata creata dal sistema, e deve essere stata fatta la richiesta di aggiunta luogo;
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e viene aggiunto il luogo all'\glossario{organizzazione} interessata.
 
 \end{itemize}
 % subsub:UC5 (end)
@@ -147,11 +176,11 @@ contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph
 \label{subsub:UC6}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{amministratore};
-\item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di una modifica di un luogo all'interno di un'\glossario{organizzazione};
-\item \textbf{Scenario principale:} viene richiesta una modifica di un luogo all'interno di un'\glossario{organizzazione};
-\item \textbf{Precondizione:} l'\glossario{organizzazione} e il luogo devono essere già stati creati dal sistema, e deve essere stata fatta la richiesta di modifica luogo;
-\item \textbf{Postcondizione:} viene approvata la richiesta, e viene modificato il luogo dell'\glossario{organizzazione} interessata.
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di una modifica di un luogo all'interno di un'\glossario{organizzazione};
+  \item \textbf{Scenario principale:} viene richiesta una modifica di un luogo all'interno di un'\glossario{organizzazione};
+  \item \textbf{Precondizione:} l'\glossario{organizzazione} e il luogo devono essere già stati creati dal sistema, e deve essere stata fatta la richiesta di modifica luogo;
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e viene modificato il luogo dell'\glossario{organizzazione} interessata.
 
 \end{itemize}
 % subsub:UC6 (end)
@@ -159,11 +188,11 @@ contrario deve essere visualizzato un messaggio di credenziali sbagliate. (\emph
 \label{subsub:UC7}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{amministratore};
-\item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di un trasferimento di proprietà di un'\glossario{organizzazione};
-\item \textbf{Scenario principale:} viene richiesto un traferimento di proprietà di un'\glossario{organizzazione};
-\item \textbf{Precondizione:} l'\glossario{organizzazione} deve essere già stata creata dal sistema, e deve essere stata fatta la richiesta trasferimento di proprietà;
-\item \textbf{Postcondizione:} viene approvata la richiesta, e viene trasferita la proprietà dell'\glossario{organizzazione} interessata.
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di un trasferimento di proprietà di un'\glossario{organizzazione};
+  \item \textbf{Scenario principale:} viene richiesto un traferimento di proprietà di un'\glossario{organizzazione};
+  \item \textbf{Precondizione:} l'\glossario{organizzazione} deve essere già stata creata dal sistema, e deve essere stata fatta la richiesta trasferimento di proprietà;
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e viene trasferita la proprietà dell'\glossario{organizzazione} interessata.
 
 \end{itemize}
 % subsub:UC7 (end)
@@ -175,11 +204,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC8}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{root};
-\item \textbf{Descrizione:} il \glossario{root} crea un \glossario{super utente} \glossario{amministratore};
-\item \textbf{Scenario principale:} sorge la necessità di creare un nuovo \glossario{amministratore} per gestire \glossario{Stalker};
-\item \textbf{Precondizione:} devono essere specificate le credenziali del nuovo \glossario{amministratore}, che devono essere univoche;
-\item \textbf{Postcondizione:} l'\glossario{amministratore} viene creato.
+  \item \textbf{Attori primari:} \glossario{root};
+  \item \textbf{Descrizione:} il \glossario{root} crea un \glossario{super utente} \glossario{amministratore};
+  \item \textbf{Scenario principale:} sorge la necessità di creare un nuovo \glossario{amministratore} per gestire \glossario{Stalker};
+  \item \textbf{Precondizione:} devono essere specificate le credenziali del nuovo \glossario{amministratore}, che devono essere univoche;
+  \item \textbf{Postcondizione:} l'\glossario{amministratore} viene creato.
 
 \end{itemize}
 % subsub:UC8 (end)
@@ -188,11 +217,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC9}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{root};
-\item \textbf{Descrizione:} il \glossario{root} elimina un'\glossario{organizzazione};
-\item \textbf{Scenario principale:} sorge la necessità di eliminare un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner}; 
-\item \textbf{Precondizione:} deve essere stata selezionata l'\glossario{organizzazione} da eliminare, presente nella lista di \glossario{Stalker};
-\item \textbf{Postcondizione:} l'\glossario{organizzazione} viene eliminata.
+  \item \textbf{Attori primari:} \glossario{root};
+  \item \textbf{Descrizione:} il \glossario{root} elimina un'\glossario{organizzazione};
+  \item \textbf{Scenario principale:} sorge la necessità di eliminare un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
+  \item \textbf{Precondizione:} deve essere stata selezionata l'\glossario{organizzazione} da eliminare, presente nella lista di \glossario{Stalker};
+  \item \textbf{Postcondizione:} l'\glossario{organizzazione} viene eliminata.
 
 \end{itemize}
 % subsub:UC9 (end)
@@ -202,11 +231,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC10}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{root};
-\item \textbf{Descrizione:} il \glossario{root} modifica un'\glossario{organizzazione};
-\item \textbf{Scenario principale:} sorge la necessità di modificare un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner}; 
-\item \textbf{Precondizione:} deve essere stata selezionata l'\glossario{organizzazione} da modificare, presente nella lista di \glossario{Stalker}, effettivamente modificata;
-\item \textbf{Postcondizione:} l'\glossario{organizzazione} viene modificata.
+  \item \textbf{Attori primari:} \glossario{root};
+  \item \textbf{Descrizione:} il \glossario{root} modifica un'\glossario{organizzazione};
+  \item \textbf{Scenario principale:} sorge la necessità di modificare un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
+  \item \textbf{Precondizione:} deve essere stata selezionata l'\glossario{organizzazione} da modificare, presente nella lista di \glossario{Stalker}, effettivamente modificata;
+  \item \textbf{Postcondizione:} l'\glossario{organizzazione} viene modificata.
 
 \end{itemize}
 % subsub:UC10 (end)
@@ -216,11 +245,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC11}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{root};
-\item \textbf{Descrizione:} il \glossario{root} crea un'\glossario{organizzazione};
-\item \textbf{Scenario principale:} sorge la necessità di creare un'\glossario{organizzazione}, senza essere effettivamente richiesta; 
-\item \textbf{Precondizione:} l'\glossario{organizzazione} non deve esistere nella lista di \glossario{Stalker}, deve essere specificato il suo nome;
-\item \textbf{Postcondizione:} l'\glossario{organizzazione} viene creata.
+  \item \textbf{Attori primari:} \glossario{root};
+  \item \textbf{Descrizione:} il \glossario{root} crea un'\glossario{organizzazione};
+  \item \textbf{Scenario principale:} sorge la necessità di creare un'\glossario{organizzazione}, senza essere effettivamente richiesta;
+  \item \textbf{Precondizione:} l'\glossario{organizzazione} non deve esistere nella lista di \glossario{Stalker}, deve essere specificato il suo nome;
+  \item \textbf{Postcondizione:} l'\glossario{organizzazione} viene creata.
 
 \end{itemize}
 % subsub:UC11 (end)
@@ -229,11 +258,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC12}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{root};
-\item \textbf{Descrizione:} il \glossario{root} elimina un \glossario{luogo} di un'\glossario{organizzazione};
-\item \textbf{Scenario principale:} sorge la necessità di elimanare un \glossario{luogo} di un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner}; 
-\item \textbf{Precondizione:} il \glossario{luogo} dell'\glossario{organizzazione} deve essere presente in \glossario{Stalker};
-\item \textbf{Postcondizione:} il \glossario{luogo} dell'\glossario{organizzazione} viene eliminato.
+  \item \textbf{Attori primari:} \glossario{root};
+  \item \textbf{Descrizione:} il \glossario{root} elimina un \glossario{luogo} di un'\glossario{organizzazione};
+  \item \textbf{Scenario principale:} sorge la necessità di elimanare un \glossario{luogo} di un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
+  \item \textbf{Precondizione:} il \glossario{luogo} dell'\glossario{organizzazione} deve essere presente in \glossario{Stalker};
+  \item \textbf{Postcondizione:} il \glossario{luogo} dell'\glossario{organizzazione} viene eliminato.
 
 \end{itemize}
 % subsub:UC12 (end)
@@ -242,11 +271,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC13}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{root};
-\item \textbf{Descrizione:} il \glossario{root} modifica un \glossario{luogo} di un'\glossario{organizzazione};
-\item \textbf{Scenario principale:} sorge la necessità di modificare un \glossario{luogo} di un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner}; 
-\item \textbf{Precondizione:} il \glossario{luogo} dell'\glossario{organizzazione} deve essere presente in \glossario{Stalker};
-\item \textbf{Postcondizione:} il \glossario{luogo} dell'\glossario{organizzazione} viene modificato.
+  \item \textbf{Attori primari:} \glossario{root};
+  \item \textbf{Descrizione:} il \glossario{root} modifica un \glossario{luogo} di un'\glossario{organizzazione};
+  \item \textbf{Scenario principale:} sorge la necessità di modificare un \glossario{luogo} di un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
+  \item \textbf{Precondizione:} il \glossario{luogo} dell'\glossario{organizzazione} deve essere presente in \glossario{Stalker};
+  \item \textbf{Postcondizione:} il \glossario{luogo} dell'\glossario{organizzazione} viene modificato.
 
 \end{itemize}
 % subsub:UC13 (end)
@@ -255,11 +284,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC14}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{root};
-\item \textbf{Descrizione:} il \glossario{root} elimina un qualsiasi \glossario{account} registrato in \glossario{Stalker}. Quest'ultimo può essere un \glossario{utente} oppure un \glossario{super utente};
-\item \textbf{Scenario principale:} sorge la necessità di eliminare un \glossario{account} per sconosciuti motivi; 
-\item \textbf{Precondizione:} deve essere stato selezionato l'\glossario{account} da eliminare, che deve esistere in \glossario{Stalker};
-\item \textbf{Postcondizione:} l'\glossario{account} selezionato è stato eliminato.
+  \item \textbf{Attori primari:} \glossario{root};
+  \item \textbf{Descrizione:} il \glossario{root} elimina un qualsiasi \glossario{account} registrato in \glossario{Stalker}. Quest'ultimo può essere un \glossario{utente} oppure un \glossario{super utente};
+  \item \textbf{Scenario principale:} sorge la necessità di eliminare un \glossario{account} per sconosciuti motivi;
+  \item \textbf{Precondizione:} deve essere stato selezionato l'\glossario{account} da eliminare, che deve esistere in \glossario{Stalker};
+  \item \textbf{Postcondizione:} l'\glossario{account} selezionato è stato eliminato.
 
 \end{itemize}
 % subsub:UC14 (end)
@@ -275,11 +304,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC15}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{visualizzatore};
-\item \textbf{Descrizione:} il \glossario{visualizzatore} effettua delle interrogazioni per trarre informazioni relative all'\glossario{organizzazione} su cui opera;
-\item \textbf{Scenario principale:} il \glossario{visualizzatore} vuole avere delle informazioni riguardanti l'\glossario{organizzazione} su cui opera;
-\item \textbf{Precondizione:} il sistema risponde correttamente alle interrogazioni;
-\item \textbf{Postcondizione:} il \glossario{visualizzatore} ottiene le informazioni di cui ha bisogno.
+  \item \textbf{Attori primari:} \glossario{visualizzatore};
+  \item \textbf{Descrizione:} il \glossario{visualizzatore} effettua delle interrogazioni per trarre informazioni relative all'\glossario{organizzazione} su cui opera;
+  \item \textbf{Scenario principale:} il \glossario{visualizzatore} vuole avere delle informazioni riguardanti l'\glossario{organizzazione} su cui opera;
+  \item \textbf{Precondizione:} il sistema risponde correttamente alle interrogazioni;
+  \item \textbf{Postcondizione:} il \glossario{visualizzatore} ottiene le informazioni di cui ha bisogno.
 
 \end{itemize}
 % subsub:UC15 (end)
@@ -289,11 +318,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC16}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{visualizzatore};
-\item \textbf{Descrizione:} il \glossario{visualizzatore} effettua delle interrogazioni per trarre informazioni relative al dipendente dell'\glossario{organizzazione} su cui opera;
-\item \textbf{Scenario principale:} il \glossario{visualizzatore} vuole avere delle informazioni riguardanti il\glossario{dipendente} dell'\glossario{organizzazione} su cui opera;
-\item \textbf{Precondizione:} il sistema risponde correttamente alle interrogazioni;
-\item \textbf{Postcondizione:} il \glossario{visualizzatore} ottiene le informazioni di cui ha bisogno.
+  \item \textbf{Attori primari:} \glossario{visualizzatore};
+  \item \textbf{Descrizione:} il \glossario{visualizzatore} effettua delle interrogazioni per trarre informazioni relative al dipendente dell'\glossario{organizzazione} su cui opera;
+  \item \textbf{Scenario principale:} il \glossario{visualizzatore} vuole avere delle informazioni riguardanti il\glossario{dipendente} dell'\glossario{organizzazione} su cui opera;
+  \item \textbf{Precondizione:} il sistema risponde correttamente alle interrogazioni;
+  \item \textbf{Postcondizione:} il \glossario{visualizzatore} ottiene le informazioni di cui ha bisogno.
 
 \end{itemize}
 % subsub:UC16 (end)
@@ -306,11 +335,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC17}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{gestore};
-\item \textbf{Descrizione:} il \glossario{gestore} dell'\glossario{organizzazione} richiede di aggiungere un nuovo \glossario{luogo};
-\item \textbf{Scenario principale:} il \glossario{gestore} vuole aggiungere un nuovo \glossario{luogo} all'\glossario{organizzazione} su cui opera;
-\item \textbf{Precondizione:} il \glossario{luogo} da aggiungere non deve già esistere;
-\item \textbf{Postcondizione:} la richiesta di aggiunta di un nuovo \glossario{luogo} viene posta.
+  \item \textbf{Attori primari:} \glossario{gestore};
+  \item \textbf{Descrizione:} il \glossario{gestore} dell'\glossario{organizzazione} richiede di aggiungere un nuovo \glossario{luogo};
+  \item \textbf{Scenario principale:} il \glossario{gestore} vuole aggiungere un nuovo \glossario{luogo} all'\glossario{organizzazione} su cui opera;
+  \item \textbf{Precondizione:} il \glossario{luogo} da aggiungere non deve già esistere;
+  \item \textbf{Postcondizione:} la richiesta di aggiunta di un nuovo \glossario{luogo} viene posta.
 
 \end{itemize}
 % subsub:UC17 (end)
@@ -319,11 +348,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC18}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{gestore};
-\item \textbf{Descrizione:} il \glossario{gestore} dell'\glossario{organizzazione} richiede di eliminare un \glossario{luogo};
-\item \textbf{Scenario principale:} il \glossario{gestore} vuole eliminare un \glossario{luogo} all'\glossario{organizzazione} su cui opera;
-\item \textbf{Precondizione:} il \glossario{luogo} da eliminare deve esistere;
-\item \textbf{Postcondizione:} la richiesta di eliminazione di un \glossario{luogo} viene posta.
+  \item \textbf{Attori primari:} \glossario{gestore};
+  \item \textbf{Descrizione:} il \glossario{gestore} dell'\glossario{organizzazione} richiede di eliminare un \glossario{luogo};
+  \item \textbf{Scenario principale:} il \glossario{gestore} vuole eliminare un \glossario{luogo} all'\glossario{organizzazione} su cui opera;
+  \item \textbf{Precondizione:} il \glossario{luogo} da eliminare deve esistere;
+  \item \textbf{Postcondizione:} la richiesta di eliminazione di un \glossario{luogo} viene posta.
 
 \end{itemize}
 % subsub:UC18 (end)
@@ -332,11 +361,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC19}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{gestore};
-\item \textbf{Descrizione:} il \glossario{gestore} dell'\glossario{organizzazione} richiede di modificare un \glossario{luogo};
-\item \textbf{Scenario principale:} il \glossario{gestore} vuole modificare un \glossario{luogo} dell'\glossario{organizzazione} su cui opera;
-\item \textbf{Precondizione:} il \glossario{luogo} da modificare deve esistere;
-\item \textbf{Postcondizione:} la richiesta di modifica di un \glossario{luogo} viene posta.
+  \item \textbf{Attori primari:} \glossario{gestore};
+  \item \textbf{Descrizione:} il \glossario{gestore} dell'\glossario{organizzazione} richiede di modificare un \glossario{luogo};
+  \item \textbf{Scenario principale:} il \glossario{gestore} vuole modificare un \glossario{luogo} dell'\glossario{organizzazione} su cui opera;
+  \item \textbf{Precondizione:} il \glossario{luogo} da modificare deve esistere;
+  \item \textbf{Postcondizione:} la richiesta di modifica di un \glossario{luogo} viene posta.
 
 \end{itemize}
 % subsub:UC19 (end)
@@ -346,11 +375,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC20}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{gestore};
-\item \textbf{Descrizione:} il \glossario{gestore} dell'\glossario{organizzazione} richiede di modificare i parametri di essa;
-\item \textbf{Scenario principale:} il \glossario{gestore} vuole modificare i parametri dell'\glossario{organizzazione} su cui opera;
-\item \textbf{Precondizione:} i parametri devono essere effettivamente modificati;
-\item \textbf{Postcondizione:} la richiesta di modifica parametri viene posta.
+  \item \textbf{Attori primari:} \glossario{gestore};
+  \item \textbf{Descrizione:} il \glossario{gestore} dell'\glossario{organizzazione} richiede di modificare i parametri di essa;
+  \item \textbf{Scenario principale:} il \glossario{gestore} vuole modificare i parametri dell'\glossario{organizzazione} su cui opera;
+  \item \textbf{Precondizione:} i parametri devono essere effettivamente modificati;
+  \item \textbf{Postcondizione:} la richiesta di modifica parametri viene posta.
 
 \end{itemize}
 % subsub:UC20 (end)
@@ -363,11 +392,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC21}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{owner};
-\item \textbf{Descrizione:} l' \glossario{owner} nomina un \glossario{visualizzatore} per la sua \glossario{organizzazione};
-\item \textbf{Scenario principale:} l' \glossario{owner} vuole aggiungere un \glossario{visualizzatore} alla sua \glossario{organizzazione};
-\item \textbf{Precondizione:} il nuovo \glossario{super utente} non deve già esistere come \glossario{visualizzatore};
-\item \textbf{Postcondizione:} il nuovo \glossario{visualizzatore} è stato aggiunto.
+  \item \textbf{Attori primari:} \glossario{owner};
+  \item \textbf{Descrizione:} l' \glossario{owner} nomina un \glossario{visualizzatore} per la sua \glossario{organizzazione};
+  \item \textbf{Scenario principale:} l' \glossario{owner} vuole aggiungere un \glossario{visualizzatore} alla sua \glossario{organizzazione};
+  \item \textbf{Precondizione:} il nuovo \glossario{super utente} non deve già esistere come \glossario{visualizzatore};
+  \item \textbf{Postcondizione:} il nuovo \glossario{visualizzatore} è stato aggiunto.
 
 \end{itemize}
 % subsub:UC21 (end)
@@ -377,11 +406,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC22}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{owner};
-\item \textbf{Descrizione:} l' \glossario{owner} nomina un \glossario{gestore} per la sua \glossario{organizzazione};
-\item \textbf{Scenario principale:} l' \glossario{owner} vuole aggiungere un \glossario{gestore} alla sua \glossario{organizzazione};
-\item \textbf{Precondizione:} il nuovo \glossario{super utente} non deve già esistere come \glossario{gestore};
-\item \textbf{Postcondizione:} il nuovo \glossario{gestore} è stato aggiunto.
+  \item \textbf{Attori primari:} \glossario{owner};
+  \item \textbf{Descrizione:} l' \glossario{owner} nomina un \glossario{gestore} per la sua \glossario{organizzazione};
+  \item \textbf{Scenario principale:} l' \glossario{owner} vuole aggiungere un \glossario{gestore} alla sua \glossario{organizzazione};
+  \item \textbf{Precondizione:} il nuovo \glossario{super utente} non deve già esistere come \glossario{gestore};
+  \item \textbf{Postcondizione:} il nuovo \glossario{gestore} è stato aggiunto.
 
 \end{itemize}
 % subsub:UC22 (end)
@@ -391,11 +420,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC23}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{owner};
-\item \textbf{Descrizione:} l' \glossario{owner} nomina un \glossario{gestore} per la sua \glossario{organizzazione};
-\item \textbf{Scenario principale:} l' \glossario{owner} vuole aggiungere un \glossario{gestore} alla sua \glossario{organizzazione};
-\item \textbf{Precondizione:} il nuovo \glossario{super utente} non deve già esistere come \glossario{gestore};
-\item \textbf{Postcondizione:} il nuovo \glossario{gestore} è stato aggiunto.
+  \item \textbf{Attori primari:} \glossario{owner};
+  \item \textbf{Descrizione:} l' \glossario{owner} nomina un \glossario{gestore} per la sua \glossario{organizzazione};
+  \item \textbf{Scenario principale:} l' \glossario{owner} vuole aggiungere un \glossario{gestore} alla sua \glossario{organizzazione};
+  \item \textbf{Precondizione:} il nuovo \glossario{super utente} non deve già esistere come \glossario{gestore};
+  \item \textbf{Postcondizione:} il nuovo \glossario{gestore} è stato aggiunto.
 
 \end{itemize}
 % subsub:UC23 (end)
@@ -405,11 +434,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC24}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{owner};
-\item \textbf{Descrizione:} l' \glossario{owner} richiede di creare una nuova \glossario{organizzazione};
-\item \textbf{Scenario principale:} l' \glossario{owner} vuole creare una nuova \glossario{organizzazione};
-\item \textbf{Precondizione:} l' \glossario{organizzazione} non deve già esistere;
-\item \textbf{Postcondizione:} la richiesta di creare una nuova \glossario{organizzazione} è stata posta.
+  \item \textbf{Attori primari:} \glossario{owner};
+  \item \textbf{Descrizione:} l' \glossario{owner} richiede di creare una nuova \glossario{organizzazione};
+  \item \textbf{Scenario principale:} l' \glossario{owner} vuole creare una nuova \glossario{organizzazione};
+  \item \textbf{Precondizione:} l' \glossario{organizzazione} non deve già esistere;
+  \item \textbf{Postcondizione:} la richiesta di creare una nuova \glossario{organizzazione} è stata posta.
 
 \end{itemize}
 % subsub:UC24 (end)
@@ -418,11 +447,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \label{subsub:UC25}
 
 \begin{itemize}
-\item \textbf{Attori primari:} \glossario{owner};
-\item \textbf{\textbf{Descrizione:}} l' \glossario{owner} richiede che l'\glossario{organizzazione} venga ceduta ad un altro futuro \glossario{owner};
-\item \textbf{\textbf{Scenario principale:}} l' \glossario{owner} vuole cedere l'\glossario{organizzazione} ad un'altro \glossario{owner};
-\item \textbf{Precondizione:} il futuro \glossario{owner} deve esistere;
-\item \textbf{Postcondizione:} la richiesta di cedere l'\glossario{organizzazione} è stata posta.
+  \item \textbf{Attori primari:} \glossario{owner};
+  \item \textbf{\textbf{Descrizione:}} l' \glossario{owner} richiede che l'\glossario{organizzazione} venga ceduta ad un altro futuro \glossario{owner};
+  \item \textbf{\textbf{Scenario principale:}} l' \glossario{owner} vuole cedere l'\glossario{organizzazione} ad un'altro \glossario{owner};
+  \item \textbf{Precondizione:} il futuro \glossario{owner} deve esistere;
+  \item \textbf{Postcondizione:} la richiesta di cedere l'\glossario{organizzazione} è stata posta.
 
 \end{itemize}
 % subsub:UC25 (end)
