@@ -1,9 +1,12 @@
 \documentclass{article}
 \usepackage{subfiles}
+
 \newcommand{\commons}{../../commons}
 
 \input{\commons/config}
+
 \renewcommand\descriptionlabel[1]{$\bullet$ \textbf{#1}}
+
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
 
@@ -26,26 +29,26 @@
 
 \begin{document}
 
-  \input{\commons/template}
+\input{\commons/template}
 
-	\section{Introduzione}
- 	\label{sec:introduzione}
+\section{Introduzione}%
+\label{sec:introduzione}
 
-	\subfile{components/introduzione}
+\subfile{components/introduzione}
 
-	\section{Processi primari}
-	\label{sec:processi primari}
+\section{Processi primari}%
+\label{sec:processi primari}
 
-	\subfile{components/processi-primari}
+\subfile{components/processi-primari}
 
-	\section{Processi di supporto}
-	\label{sec:processi di supporto}
+\section{Processi di supporto}%
+\label{sec:processi di supporto}
 
-	\subfile{components/processi-di-supporto}
+\subfile{components/processi-di-supporto}
 
-	\section{Processi organizzativi}
-	\label{sec:pocessi organizzativi}
+\section{Processi organizzativi}%
+\label{sec:pocessi organizzativi}
 
-	\subfile{components/processi-organizzativi}
+\subfile{components/processi-organizzativi}
 
 \end{document}
