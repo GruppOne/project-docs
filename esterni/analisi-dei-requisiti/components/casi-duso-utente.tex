@@ -1,0 +1,316 @@
+﻿\documentclass[../analisi-dei-requisiti]{subfiles}
+
+\renewcommand{\commons}{../../../commons}
+
+\begin{document}
+
+%UC1 (start)
+\subsection{UC1: apertura applicazione mobile}
+\label{sub:uc1utente}
+
+% integrare diagramma UC1
+
+\begin{itemize}
+  \item \textbf{Caso d’uso:} UC1 
+  \item \textbf{Titolo:} apertura applicazione mobile
+  \item \textbf{Attori primari:} utente non autenticato, utente non registrato
+  \item \textbf{Precondizioni:} l'utente deve aprire l'applicazione mobile e non è riconosciuto dal sistema.
+  \item \textbf{Postcondizioni:} se l'utente non è registrato al \glossary{servizio} offerto dall'applicazione, allora si deve registrare e diventa un utente non autenticato; 
+  altrimenti se lo è già, allora si deve autenticare e può utilizzare le funzionalità messe a disposizione dall'applicazione. 
+  \item \textbf{Scenario principale:} 
+  \begin{enumerate}
+    \item l'utente non registrato deve accedere all'apposito form di registrazione per poter registrare le proprie credenziali nel sistema
+    \item l'utente non autenticato è già registrato al sistema, ma non è ancora collegato al sistema: deve accedere all'apposito form di autenticazione per usufruire delle funzionalità
+    messe a disposizione dal servizio
+  \end{enumerate}  
+  \item \textbf{Inclusioni:} 
+  \begin{enumerate}
+    \item al momento della registrazione, l'utente visualizzerà l'\glossary{EULA} e dovrà accettarla per continuare il processo di registrazione
+    \item a registrazione ultimata, l'utente registrato sarà rilanciato alla schermata di autenticazione, dove avrà la possiblità di accedere direttamente al servizio
+  \end{enumerate}  
+  \item \textbf{Estensioni:} 
+  \begin{enumerate}
+    \item se l'utente registrato, nella registrazione non inserisce correttamente le credenziali username e password, verrà visualizzato un errore 
+    \item se l'utente non autenticato inserisce erroneamente le credenziali nel form di autenticazione, allora verrà visualizzato un errore
+  \end{enumerate}  
+\end{itemize}
+% sub:uc1utente (end)
+
+\subsection{UC1.1: registrazione}
+\label{sub:uc1.1utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC1.1
+  \item \textbf{Titolo:} registrazione
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate} 
+\end{itemize}
+% sub:uc1.1utente (end)
+
+\subsection{UC1.1.1: informazioni non valide}
+\label{sub:uc1.1.1utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC1.1.1
+  \item \textbf{Titolo:} informazioni non valide
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc1.1.1utente (end)
+
+\subsection{UC1.1.2: visualizzazione EULA}
+\label{sub:uc1.1.2utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC1.1.2
+  \item \textbf{Titolo:} visualizzazione EULA
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc1.1.2utente (end)
+
+\subsection{UC1.2: autenticazione}
+\label{sub:uc1.2utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC1.2
+  \item \textbf{Titolo:} autenticazione
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc1.2utente (end)
+
+\subsection{UC1.2.1: credenziali errate}
+\label{sub:uc1.2.1utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC1.2.1
+  \item \textbf{Titolo:} credenziali errate
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc1.2.1utente (end)
+
+
+%UC2 (start)
+\subsection{UC2: autenticazione utente}
+\label{sub:uc2utente}
+
+% integrare diagramma UC2
+
+\begin{itemize}
+  \item \textbf{Caso d’uso:} UC2
+  \item \textbf{Titolo:} autenticazione utente
+  \item \textbf{Attore primario:} utente autenticato, che può essere utente non collegato oppure utente collegato
+  \item \textbf{Precondizioni:} 
+  \item \textbf{Postcondizioni:} 
+  \item \textbf{Scenario principale:} 
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+  \item \textbf{Inclusioni:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+  \item \textbf{Estensioni:} 
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc2utente (end)
+
+\subsection{UC2.1: visualizzazione lista organizzazioni}
+\label{sub:uc2.1utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC2.1
+  \item \textbf{Titolo:} visualizzazione lista organizzazioni
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc2.1utente (end)
+
+\subsection{UC2.1.1: aggiornamento lista organizzazioni}
+\label{sub:uc2.1utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC2.1.1
+  \item \textbf{Titolo:} aggiornamento lista organizzazioni
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc2.1.1utente (end)
+
+\subsection{UC2.2: collegarsi ad un'organizzazione}
+\label{sub:uc2.1utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC2.2
+  \item \textbf{Titolo:} collegarsi ad un'organizzazione
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc2.2utente (end)
+
+\subsection{UC2.3: scollegarsi ad un'organizzazione}
+\label{sub:uc2.1utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC2.3
+  \item \textbf{Titolo:} scollegarsi ad un'organizzazione
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc2.3utente (end)
+
+\subsection{UC2.4: schermata scelta noto o incognito}
+\label{sub:uc2.1utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC2.4
+  \item \textbf{Titolo:} schermata scelta noto o incognito
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc2.4utente (end)
+
+\subsection{UC2.5: visualizzazione storico accessi}
+\label{sub:uc2.1utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC2.5
+  \item \textbf{Titolo:} visualizzazione storico accessi
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc2.5utente (end)
+
+\subsection{UC2.6: visualizzazione tempo trascorso in un'organizzazione}
+\label{sub:uc2.1utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC2.6
+  \item \textbf{Titolo:} visualizzazione tempo trascorso in un'organizzazione
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc2.6utente (end)
+
+\subsection{UC2.7: visualizzazione errore rete mancante}
+\label{sub:uc2.1utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC2.7
+  \item \textbf{Titolo:} visualizzazione errore rete mancante
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc2.7utente (end)
+
+
+%UC3 (start)
+\subsection{UC3: collegamento utente}
+\label{sub:uc3utente}
+
+% integrare diagramma UC3
+
+\begin{itemize}
+  \item \textbf{Caso d’uso:} UC3
+  \item \textbf{Titolo:} collegamento utente
+  \item \textbf{Attore primario:} utente collegato, che può essere utente noto oppure utente incognito
+  \item \textbf{Precondizioni:} 
+  \item \textbf{Postcondizioni:} 
+  \item \textbf{Scenario principale:} 
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+  \item \textbf{Estensioni:} 
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc3utente (end)
+
+\subsection{UC3.1: passaggio a incognito}
+\label{sub:uc3.1utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC3.1
+  \item \textbf{Titolo:} passaggio a incognito
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc3.1utente (end)
+
+\subsection{UC3.2: passaggio a noto}
+\label{sub:uc3.2utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC3.2
+  \item \textbf{Titolo:} passaggio a noto
+  \item \textbf{Attori primari:}
+  \item \textbf{Precondizione:}
+  \item \textbf{Postcondizione:}
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item
+  \end{enumerate}
+\end{itemize}
+% sub:uc3.2utente (end)
+
+\end{document}
