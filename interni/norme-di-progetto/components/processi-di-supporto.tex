@@ -3,7 +3,7 @@
 \begin{document}
 
 \subsection{Descrizione}%
-\label{sub:descrizione}
+\label{sub:processi di supporto/descrizione}
 
 I processo di supporto operano a sostegno degli altri processi con lo scopo di garantire il successo e fornire qualità. Essi non esistono autonomamente ma hanno la necessità di appoggiarsi ad altri processi. ISO 11207-1995 ne distingue otto:
 
@@ -22,12 +22,12 @@ I processo di supporto operano a sostegno degli altri processi con lo scopo di g
 \label{sub:documentazione}
 
 \subsubsection{Finalità}%
-\label{subs:finalità}
+\label{subs:documentazione/finalità}
 
 Grupp0ne istanzia il processo di documentazione per illustrare in maniera chiara e coerente le attività di processo svolte e i prodotti da esse ottenuti.
 
 \subsubsection{Descrizione}%
-\label{subs:descrizione}
+\label{subs:documentazione/descrizione}
 
 La documentazione è essenziale durante ogni attività del ciclo di vita del software.
 Essa costituisce un importante mezzo di comunicazione sia internamente per il team che esternamente verso il committente.
@@ -36,7 +36,7 @@ Si vogliono quindi definire delle norme che possano standardizzare il processo d
 \subsubsection{Implementazione}%
 \label{subs:implementazione}
 
-\paragraph{Configurazione} \mbox{}\\
+\paragraph{Configurazione} \mbox{}\\%
 \label{par:configurazione}
 \\Ogni documento ha una sua configurazione di base. Tale configurazione è definita in un file \LaTeX  che contiene la struttura e la formattazione che ogni file deve avere. Si riporta un elenco di ciò che è presente nel file di configurazione:
 
@@ -48,7 +48,7 @@ Si vogliono quindi definire delle norme che possano standardizzare il processo d
   \item Dichiarazione di nuovi comandi.
 \end{itemize}
 
-\paragraph{Ciclo di vita}\mbox{}\\
+\paragraph{Ciclo di vita}\mbox{}\\%
 \label{par:ciclo di vita}
 \\Il ciclo di vita di rappresenta gli stadi in cui il documento si può trovare nel corso della sua esistenza. Ne distinguiamo cinque:
 \begin{description}
@@ -61,7 +61,7 @@ Si vogliono quindi definire delle norme che possano standardizzare il processo d
 \subsubsection{Struttura}
 \label{subs:struttura}
 
-\paragraph{Frontespizio}\mbox{}\\
+\paragraph{Frontespizio}\mbox{}\\%
 \label{par:frontespizio}
 \\Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: nella prima è presente l'intestazione contenente logo, nome del gruppo e nome del documento, mentre la seconda consiste di uno schema contenente alcune informazioni essenziali sul documento descritto. In esso compaiono, ordinatamente, dall'alto verso il basso:
 
@@ -187,7 +187,10 @@ Tutte le immagini devono essere inoltre centrate all'interno della pagina e muni
 \\L'uso di tabelle è consigliato solo quando strettamente necessario. La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento in cui risulti molto difficile organizzare informazioni aventi una struttura complessa. È obbligatorio l'uso di colori che abbiano un elevato contrasto al fine di promuovere la leggibilità. Inoltre, non devono essere eccessivamente lunghe ( massimo 2 pagine), altrimenti risultano dispersive.
 \subsubsection{Produzione}
 \paragraph{Suddivisione dei documenti}\mbox{}\\
-\\I documenti utilizzano la struttura a \glossario{subfiles} offerta da \LaTeX. La struttura di base del documento è definita nel file che porta il nome del documento. La cartella components, che è unica per ogni documento, contiene un file per la definizione di ogni sezione. In ogni sezione si definiscono poi le relative sottosezioni, paragrafi e sottoparagrafi.
+\label{par:suddivisione dei documenti}
+\\I documenti utilizzano la struttura a \glossario{subfiles} offerta da \LaTeX.
+La struttura di base del documento è definita nel file che porta il nome del documento.
+La cartella components, che è unica per ogni documento, contiene un file per la definizione di ogni sezione. In ogni sezione si definiscono poi le relative sottosezioni, paragrafi e sottoparagrafi.
 Ad esempio, il file norme di progetto ha la seguente struttura:
 
 \begin{itemize}
@@ -209,7 +212,7 @@ Ad esempio, il file norme di progetto ha la seguente struttura:
 \end{itemize}
 
 \subparagraph{Interni}\mbox{}\\
-\label{subp:interni}
+\label{subp:suddivisione dei documenti/interni}
 \\ I documenti interni sono destinati alla comunicazione tra i componenti di Grupp0ne. Appartengono a tale categoria:
 
 \begin{itemize}
@@ -219,7 +222,7 @@ Ad esempio, il file norme di progetto ha la seguente struttura:
 \end{itemize}
 
 \subparagraph{Esterni}\mbox{}\\
-\label{subp:esterni}
+\label{subp:suddivisione dei documenti/esterni}
 \\ I documenti esterni sono destinati al committente. Appartengono a tale categoria:
 
 \begin{itemize}
@@ -239,12 +242,16 @@ Ad esempio, il file norme di progetto ha la seguente struttura:
 \subsubsection{Strumenti}
 \paragraph {\LaTeX}\mbox{}\\
 \label{par:LaTeX}
-\\ \LaTeX  è lo strumento utilizzato da Grupp0ne per la stesura: si è preferito non utilizzare dei tool online per la scrittura dei documenti. Ogni componente del gruppo ha scaricato, invece, un' estensione per il proprio IDE preferito( sublime text o Visual Studio Code) che consentisse l'installazione dei principali package di \LaTeX e che garantisse correttamente l'esecuzione del processo di build dei file .tex.
-\subsection{Gestione della configurazione}
+\\ \LaTeX è lo strumento utilizzato da Grupp0ne per la stesura: si è preferito non utilizzare dei tool online per la scrittura dei documenti.
+Ogni componente del gruppo ha scaricato, invece, un'estensione per il proprio IDE preferito (Sublime Text o Visual Studio Code) che consentisse l'installazione dei principali package di \LaTeX e che garantisse correttamente l'esecuzione del processo di build dei file *.tex.
+
+\subsection{Gestione della configurazione}%
 \label{sub:gestione della configurazione}
-\subsubsection{Finalità}
-\label{subs:finalità}
-\subsubsection{Gestione versionamento}
+
+\subsubsection{Finalità}%
+\label{subs:gestione della configurazione/finalità}
+
+\subsubsection{Gestione versionamento}%
 \label{subs:gestione versionamento}
 
 \paragraph{Repository}\mbox{}\\
@@ -254,16 +261,23 @@ Ad esempio, il file norme di progetto ha la seguente struttura:
 \label{par:struttura dei commit}
 
 \subsubsection{Strumenti}%
-\label{subs:strumenti}
-\subsection{Accertamento della qualità}
-\label{sub:accertamento della qualità}
+\label{subs:gestione della configurazione/strumenti}
 
-\subsubsection{Finalità}
-\label{subs:finalità}
-Grupp0ne istanzia il processo di accertamento della qualità per garantire qualità di processo e di prodotto. Gli esiti dei processi di verifica e validazione saranno indispensabili al buon svolgimento del processo di accertamento della qualità.
-\subsubsection{Descrizione}
-\label{subs:descrizione}
-Il processo di accertamento della qualità garantisce che i prodotti e i processi del ciclo di vita del software rispettino i requisiti e che aderiscano ai piani esecutivi prestabiliti. Le metriche e gli strumenti per valutare la qualità sono presentati nel \glossario{piano di qualifica}.
+\subsection{Accertamento della qualità}%
+\label{subs:accertamento della qualità}
+
+\subsubsection{Finalità}%
+\label{subs:accertamento della qualità/finalità}
+
+Grupp0ne istanzia il processo di accertamento della qualità per garantire qualità di processo e di prodotto.
+Gli esiti dei processi di verifica e validazione saranno indispensabili al buon svolgimento del processo di accertamento della qualità.
+
+\subsubsection{Descrizione}%
+\label{subs:accertamento della qualità/descrizione}
+
+Il processo di accertamento della qualità garantisce che i prodotti e i processi del ciclo di vita del software rispettino i requisiti prestabiliti e che aderiscano ai piani esecutivi prestabiliti. Le metriche e gli strumenti per valutare la qualità sono presentati nel \glossario{piano di qualifica}.
+
+% TODO aggiungere label mancante
 \subsubsection{Attività}
 \label{subs:attivita}
 Le principali attività coinvolte nel processo di accertamento della qualità sono:
@@ -288,7 +302,8 @@ Le principali attività coinvolte nel processo di accertamento della qualità so
 
 \subparagraph{PDCA}\mbox{}\\
 \label{subp:PDCA}
-\\Il ciclo deming o ciclo di PDCA è un processo iterativo per il monitoraggio e il miglioramento di processo. Sfrutta la ripetizione di quattro attività:
+\\Il ciclo di Deming o ciclo PDCA è un processo iterativo per il monitoraggio e il miglioramento di processo. Sfrutta la ripetizione di quattro attività:
+
 \begin{description}
   \item [Plan]: definisce gli obiettivi, le attività e i processi necessari per raggiungere i risultati attesi.
   \item [Do]: esegue ciò che è stato definito nella fase di pianificazione.
@@ -301,14 +316,18 @@ Le principali attività coinvolte nel processo di accertamento della qualità so
   \caption{ciclo di Deming o PDCA.}
 \end{figure}
 
-% TODO aggiungere label mancante
-\subsection{Verifica}
+\subsection{Verifica}%
 \label{sub:verifica}
-\subsubsection{Finalità}
-\label{subs:finalità}
-Grupp0ne istanzia il processo di verifica  per certificare che il susseguirsi di attività diverse non comporti l'introduzione di errori nei prodotti intermedi.
-Si deve verificare qualsiasi prodotto intermedio, pertanto sia documentazione che codice sono soggetti a verifica
-\subsubsection{Descrizione}
+
+\subsubsection{Finalità}%
+\label{subs:verifica/finalità}
+
+Grupp0ne istanzia il processo di verifica per certificare che il susseguirsi di attività diverse non comporti l'introduzione di errori nei prodotti intermedi.
+Si deve verificare qualsiasi prodotti intermedio, pertanto sia documentazione che codice sono soggetti a verifica
+
+\subsubsection{Descrizione}%
+\label{subs:verifica/descrizione}
+
 
 Il processo di verifica è il processo che controlla e garantisce che i prodotti di una determinata attività soddisfino i requisiti e le condizioni che quel prodotto deve avere. Il processo di verifica si integra in toto con gli altri processi, in particolare con quello di sviluppo e offre attività di revisione, analisi e test. È composto da due attività:
 
@@ -328,7 +347,7 @@ Il processo di verifica è il processo che controlla e garantisce che i prodotti
     \item Discussione dei difetti individuati da tutti i componenti del team.
     \item Correzione concordata degli errori trovati.
   \end{itemize}
-  \item [Inspection]: l'inspection esegue una verifica mirata del prodotto. Si articola nelle seguenti attività:
+  \item [Inspection]: la tecnica inspection esegue una verifica mirata del prodotto. Si articola nelle seguenti attività:
   \begin{itemize}
     \item Pianificazione di cosa è necessario monitorare.
     \item Costruzione di una checklist di controllo.
@@ -341,26 +360,39 @@ Grupp0ne predilige la tecnica inspection pertanto si impegna a fornire una check
 \subparagraph{Analisi statica dei documenti}\mbox{}\\
 \label{subp:analisi statica dei documenti}
 \\ Di seguito si riporta una checklist da seguire per effettuare l'analisi statica dei documenti:
+
 \begin{description}
     \item [Errori di ortografia]: si devono individuare errori di punteggiatura.
     \item [Errori nei verbi]: si deve controllare che tutti i verbi siano in forma attiva.
     \item [Errori di sintassi]: si deve verificare che non ci siano paragrafi di lunghezza eccessiva e che le frasi siano il più brevi possibile.
-    \item [Errori negli elenchi puntati]: si deve controllare che ogni elemento di elenco puntato inizi con la lettera maiuscola e che vengano rispettate le regole definite in \ref{subp:elenchi puntati}.
+    \item [Errori negli elenchi puntati]: si deve controllare che ogni elemento di elenco puntato inizi con la lettera maiuscola e che vengano rispettate le regole definite in~\ref{subp:elenchi puntati}.
     \item [Errori nella strutturazione del documento]: si deve verificare che tutti i paragrafi si trovino nella sezione corretta, che le sezioni siano ben strutturate e che i titoli siano significativi.
 \end{description}
-Sarà compito dei verificatori attenersi alla checklist definita in \ref{subp:analisi statica dei documenti} per le attività di verifica.
+
+Sarà compito dei verificatori attenersi alla checklist definita in~\ref{subp:analisi statica dei documenti} per le attività di verifica.
 
 \paragraph{Analisi dinamica del codice}\mbox{}\\
 \label{par:analisi dinamica del codice}
-\\L'analisi dinamica del codice necessita che l'oggetto di verifica sia in esecuzione. Essa cerca di dimostrare che il programma svolge i compiti per il quale è stato realizzato e identifica gli errori prima che il software sia messo in uso. Si realizza attraverso la creazione e l'esecuzione di test che producono deterministicamente un risultato da confrontare con un valore atteso. Il numero di test è chiaramente finito e quindi non sarà possibile provare tutte le esecuzioni possibili. Per questo motivo bisogna produrre dei test sensati. Un test affinchè sia definito come tale deve avere delle precise caratteristiche:
+\\L'analisi dinamica del codice necessita che l'oggetto di verifica sia in esecuzione.
+Essa cerca di dimostrare che il programma svolge i compiti per il quale è stato realizzato e identifica gli errori prima che il software sia messo in uso.
+Si realizza attraverso la creazione e l'esecuzione di test che producono deterministicamente un risultato da confrontare con un valore atteso.
+Il numero di test è chiaramente finito e quindi non sarà possibile provare tutte le esecuzioni possibili.
+Per questo motivo bisogna produrre dei test sensati.
+Un test affinché sia definito come tale deve avere delle precise caratteristiche:
+
 \begin{itemize}
   \item Velocità
   \item Ripetibilità
   \item Bassa interazione umana
 \end{itemize}
+
 \subparagraph{Copertura dei test}\mbox{}\\
 \label{subp:copertura dei test}
-\\Per ogni tipo di test è necessario fornire la sua copertura. Essa è un valore percentuale e indica quante linee di codice i test hanno esercitato sul totale. Più la copertura è alta meglio è, tuttavia una copertura del 100 \% non dà in alcun modo la certezza di essere in assenza di difetti. Il capitolato di Stalker richiede una copertura dei test pari almeno all' 80 \% corredata da report.
+\\Per ogni tipo di test è necessario fornire la sua copertura.
+Essa è un valore percentuale e indica quante linee di codice i test hanno esercitato sul totale.
+Più la copertura è alta meglio è, tuttavia una copertura del 100 \% non dà in alcun modo la certezza di essere in assenza di difetti.
+Il capitolato di Stalker richiede una copertura dei test pari almeno all' 80 \% corredata da report.
+
 \subparagraph{Test di unità}\mbox{}\\
 \label{subp:test di unità}
 \\ Il software è un insieme di componenti. Per effettuare verifica del software è necessario adottare un approccio \glossario{bottom-up} che deve necessariamente occuparsi di controllare prima che le unità su cui è costruito il software siano corrette. I test di unità, quindi, servono proprio a testare i moduli elementari del software.
@@ -377,7 +409,7 @@ Sarà compito dei verificatori attenersi alla checklist definita in \ref{subp:an
 \label{test di accettazione}
 \\I test di accettazione verificano il completo soddisfacimento dei requisiti utente. Sono eseguiti in collaborazione con il committente.
 \paragraph{Strumenti}\mbox{}\\
-\label{par:strumenti}
+\label{par:verifica/descrizione/strumenti}
 \subparagraph{Controllo ortografico e della sintassi}\mbox{}\\
 \label{subp:controllo ortografico e della sintassi}
 \subparagraph{Code owners}\mbox{}\\
@@ -387,12 +419,12 @@ Sarà compito dei verificatori attenersi alla checklist definita in \ref{subp:an
 \label{sub:validazione}
 
 \subsubsection{Finalità}%
-\label{subs:finalità}
+\label{subs:validazione/finalità}
 
 Grupp0ne istanzia il processo di validazione per assicurarsi che il prodotto finale realizzato abbia pienamente soddisfatto le attese del committente.
 
 \subsubsection{Descrizione}%
-\label{subs:descrizione}
+\label{subs:validazione/descrizione}
 
 Dovendo verificare se il prodotto finale soddisfa i requisiti, anche il processo di validazione fa uso dell'analisi dinamica del codice e quindi di test ad hoc per dimostrare la correttezza del prodotto.
 
