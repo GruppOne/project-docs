@@ -5,7 +5,7 @@
 
 \title{Piano di progetto}
 
-% \setVersione{\plchold{versione}}
+\setVersione{\plchold{versione}}
 \setResponsabile{Alessandro Rizzo}
 \setRedattori{
   Riccardo Agatea \\ &
@@ -17,37 +17,35 @@
 }
 \setStato{WIP}
 \setUso{Esterno}
-% \setDescrizione{\plchold{descrizione}}
+\setDescrizione{\plchold{descrizione}}
 \setModifiche{}
 
 \begin{document}
+
 \input{../../commons/template}
 
-\maketitle
-
-  \section{Introduzione}
-  \label{sec:introduzione}
-	\subfile{components/introduzione.tex}
-  \newpage
-  % section introduzione (end)
-  \section{Analisi dei rischi}
-  \label{sec:analisi_dei_rischi}
-	\subfile{components/analisi-dei-rischi.tex}
-  \newpage
-  % section analisi_dei_rischi (end)
-  \section{Pianificazione}
-  \label{sec:pianificazione}
-	\subfile{components/pianificazione.tex}
-  \newpage
-  % section pianificazione (end)
-  \section{Preventivo}
-  \label{sec:preventivo}
-	\subfile{components/preventivo.tex}
-  \newpage
-  % section preventivo (end)
-  \section{Consuntivo}
-  \label{sec:consuntivo}
-	\subfile{components/consuntivo.tex}
-  \newpage
-  % section consuntivo (end)
+\section{Introduzione}%
+\label{sec:introduzione}
+\subfile{components/introduzione.tex}
+% sec:introduzione (end)
+\newpage
+\section{Analisi dei rischi}%
+\label{sec:analisi_dei_rischi}
+\subfile{components/analisi-dei-rischi.tex}
+% sec:analisi_dei_rischi (end)
+\newpage
+\section{Pianificazione}%
+\label{sec:pianificazione}
+\subfile{components/pianificazione.tex}
+% sec:pianificazione (end)
+\newpage
+\section{Preventivo}%
+\label{sec:preventivo}
+\subfile{components/preventivo.tex}
+% sec:preventivo (end)
+\newpage
+\section{Consuntivo}%
+\label{sec:consuntivo}
+\subfile{components/consuntivo.tex}
+% sec:consuntivo (end)
 \end{document}
