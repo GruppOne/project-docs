@@ -72,7 +72,7 @@ rectangle {
 
   together {
     usecase (UC2.5) as "UC2.5\nvisualizzazione storico accessi\n(*)"
-    usecase (UC2.6) as "UC2.6\nvisualizzazione tempo trascorso\nin un'organizzazione"
+    usecase (UC2.6) as "UC2.6\nvisualizzazione tempo trascorso\nnell'organizzazione corrente(*)"
   }
 
   ' # TODO aggiungere errori ultima posizione nota troppo vecchia?
@@ -83,17 +83,18 @@ rectangle {
 
 :A3: ---- (UC2.1)
 :A3: -- (UC2.5)
-:A3: -- (UC2.6)
 
 :A3.1: -- (UC2.2)
 :A3.1: -- (UC2.3)
 :A3.1: -- (UC2.4)
+:A3.1: -- (UC2.6)
 
 :A3.2: -- (UC2.2)
 
 (UC2.7) .up.|> (UC2.1) : <<extends>>
 (UC2.7) .up.|> (UC2.2) : <<extends>>
 (UC2.7) .up.|> (UC2.3) : <<extends>>
+(UC2.7) .up.|> (UC2.4) : <<extends>>
 (UC2.7) .up.|> (UC2.5) : <<extends>>
 (UC2.7) .up.|> (UC2.6) : <<extends>>
 
