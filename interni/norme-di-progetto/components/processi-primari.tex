@@ -18,7 +18,7 @@ Sono i processi essenziali durante il ciclo di vita del software. ISO 12207-1995
 \label{sub:fornitura}
 
 \subsubsection{Finalità}%
-\label{subs:fornitura/finalità}
+\label{subs:fornitura/finalita}
 
 Grupp0ne istanza il processo di fornitura per potersi aggiudicare il capitolato attraverso un accordo con il committente e la successiva stipulazione di un contratto.
 
@@ -38,7 +38,7 @@ Il processo di fornitura contiene le attività e i compiti del fornitore. Esso g
 \end{itemize}
 
 \subsubsection{Studio di Fattibilità}%
-\label{subs:studio di fattibilità}
+\label{subs:studio di fattibilita}
 Grupp0ne si impegna a consegnare un sintetico documento contenente una breve descrizione, i pregi e le criticità riscontrati in ciascuno dei capitolati. Lo studio di fattibilità è redatto dall'\glossario{amministratore}
 con l'aiuto degli \glossario{analisti} e ha l'obiettivo di esporre quali capitolati sono stati presi in considerazione con le relative motivazioni. Il documento è così articolato:
 \begin{description}
@@ -66,7 +66,7 @@ Gli esiti degli argomenti discussi durante gli incontri saranno poi riportati in
 \label{sub:sviluppo}
 
 \subsubsection{Finalità}%
-\label{subs:sviluppo/finalità}
+\label{subs:sviluppo/finalita}
 
 Grupp0ne istanza il processo di sviluppo per realizzare il prodotto richiesto dal proponente.
 
@@ -84,9 +84,9 @@ Il processo di sviluppo contiene le attività e i compiti dello sviluppatore. Es
 \end{itemize}
 
 \subsubsection{Attività}%
-\label{subs:attività}
+\label{subs:attivita}
 
-\paragraph{Analisi dei requisiti}\mbox{}\\%
+\paragraph{Analisi dei requisiti}%
 \label{par:analisi dei requisiti}
 \\L'analisi dei requisiti è l'attività che studia e comprende il dominio applicativo del problema e che ha come scopo quello di offrire i requisiti che dovranno essere soddisfatti dal software. Si articola nei seguenti compiti:
 
@@ -102,7 +102,7 @@ Il documento di riferimento, \textit{Analisi dei requisiti v1.0.0}, è redatto d
 \subparagraph{Classificazione dei requisiti}%
 \label{subp:classificazione dei requisiti}
 
-\subparagraph{Casi d'uso}\mbox{}\\%
+\subparagraph{Casi d'uso}%
 \label{subp:casi d'uso}
 \\ I diagrammi dei casi d'uso descrivono le funzioni e i servizi offerti dal prodotto agli attori che interagiscono con il sistema. Ogni caso d'uso ha:
 
@@ -128,7 +128,7 @@ Ad esempio il primo caso d'uso avrà codice identificativo UC1 mentre i relativi
 \item [Estensioni (opzionale)]: sequenza di possibilità dell'attore al verificarsi di eventi anomali o di situazioni di errore.
 \end{description}
 
-\subparagraph{Diagrammi UML dei casi d'uso}\mbox{}\\%
+\subparagraph{Diagrammi UML dei casi d'uso}%
 \label{subp:diagrammi UML dei casi d'uso}
 \\I diagrammi dei casi d'uso forniscono una rappresentazione grafica del caso d'uso che si sta descrivendo. Purtroppo non danno alcun tipo di valore aggiunto alla rappresentazione testuale dato che non possono descrivere precondizioni e postcondizioni. I principali elementi di un diagramma UML sono:
 \begin{itemize}
@@ -144,7 +144,7 @@ Gli attori interagiscono con il sistema pertanto si trovano fuori dallo scenario
   \item [Generalizzazione]: La generalizzazione è un legame tra attori o più raramente tra use case. Dati due casi d'uso A e B, A è generalizzazione di B se condivide almeno le funzionalità di A. B può modificare le funzionalità di A, mentre tutte le funzionalità non ridefinite si mantengono identiche a quelle di A.
 \end{description}
 
-\paragraph{Progettazione}\mbox{}\\%
+\paragraph{Progettazione}%
 \label{par:progettazione}
 L'attività di progettazione si occupa di organizzare le componenti del sistema determinandone la struttura. Essa procede inversamente rispetto all'analisi dei requisiti la quale adotta un approccio investigativo, di studio del dominio applicativo e di scomposizione dei requisiti. La progettazione cerca, invece, di fissare l'architettura del prodotto scegliendo una soluzione che possa soddisfare tutti gli \glossario{stakeholders}.
 \begin{itemize}
@@ -176,14 +176,13 @@ La \glossario{product baseline} è un documento parte integrante della RQ. Ha il
 \subsubsection{Strumenti}%
 \label{subs:strumenti}
 
-\paragraph{PlantUml}\mbox{}\\%
+\paragraph{PlantUml}%
 \label{par:plantuml}
 \\ Per la costruzione dei diagrammi dei casi d'uso il team ha deciso di utilizzare PlantUml. È un software open source che permette la costruzione di diagrammi UML a partire dalla scrittura di codice. PlantUml fa uso di GraphViz per la traduzione del plain text in elementi grafici. Grupp0ne ha valutato positivamente tale strumento in quanto:
 
 \begin{itemize}
   \item Permette di scrivere i diagrammi dei casi d'uso sotto forma di codice, mentre il ruolo di costruzione dei diagrammi è demandato al software sottostante.
   \item Permette di scrivere agevolmente non solo i diagrammi dei casi d'uso, ma anche diagrammi delle classi, di sequenza e di package.
-  \item
 \end{itemize}
 
 \begin{figure}[H]
