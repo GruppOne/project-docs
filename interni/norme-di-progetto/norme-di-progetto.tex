@@ -4,8 +4,10 @@
 \newcommand{\commons}{../../commons}
 
 \input{\commons/config}
+% TODO sostituire \commons con questo:
+% \input{../../commons/config}
 
-\renewcommand\descriptionlabel[1]{$\bullet$ \textbf{#1}}
+\renewcommand\descriptionlabel[1]{$\bullet$ \textbf{#1}} % chktex 46
 
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
@@ -30,6 +32,8 @@
 \begin{document}
 
 \input{\commons/template}
+% TODO sostituire \commons con questo:
+% \input{../../commons/template}
 
 \section{Introduzione}%
 \label{sec:introduzione}
@@ -47,7 +51,7 @@
 \subfile{components/processi-di-supporto}
 
 \section{Processi organizzativi}%
-\label{sec:pocessi organizzativi}
+\label{sec:processi organizzativi}
 
 \subfile{components/processi-organizzativi}
 
