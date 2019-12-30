@@ -263,8 +263,8 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'\glossario{utente autenticato} sarà informato;
   \item \textbf{Scenario principale:} l'\glossario{amministratore} gestisce le richieste inviate dagli utenti autenticati di diventare \glossario{owner};
   \item \textbf{Inclusioni}:
-        \\a. Accetta richiesta \emph{[UC4.1]};
-        \\b. Rifiuta richiesta \emph{[UC4.2]}.
+        \\a. Accetta richiesta owner\emph{[UC4.1]};
+        \\b. Rifiuta richiesta owner\emph{[UC4.2]}.
 \end{itemize}
 % subsub:UC4 (end)
 
@@ -294,17 +294,48 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \end{itemize}
 % subsub:UC4.2 (end)
 
-\subsubsection{UC3 - Approvazione creazione organizzazione}
-\label{subsub:UC3}
+\subsubsection{UC5 - Gestione richieste creazione organizzazione}
+\label{subsub:UC5}
 \begin{itemize}
+  \item \textbf{Codice:} UC5;
+  \item \textbf{Titolo:} Gestione richieste creazione organizzazione;
   \item \textbf{Attori primari:} \glossario{amministratore};
-  \item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di creazione di una nuova \glossario{organizzazione};
-  \item \textbf{Scenario principale:} viene richiesta la creazione di una nuova \glossario{organizzazione}, che vuole utilizzare \glossario{Stalker};
-  \item \textbf{Precondizione:} l'\glossario{organizzazione} non deve essere già creata dal sistema, devono essere stati specificati i dati necessari per la creazione;
-  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{organizzazione} viene creata.
-
+  \item \textbf{Precondizione:} l'\glossario{owner} deve aver richiesto di creare un organizzazione;
+  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'\glossario{owner} viene informato;
+  \item \textbf{Scenario principale:} viene richiesta la creazione di una nuova \glossario{organizzazione}, che vuole utilizzare \glossario{Stalker}. 
+  L'\glossario{amministratore} può accettare o rifiutare la richiesta.
+  \item \textbf{Inclusioni}:
+        \\a. Accetta richiesta creazione organizzazione\emph{[UC5.1]};
+        \\b. Rifiuta richiesta creazione organizzazione\emph{[UC5.2]}.
 \end{itemize}
-% subsub:UC3 (end)
+% subsub:UC5 (end)
+
+\subsubsection{UC5.1 - Accetta richiesta creazione organizzazione}
+\label{subsub:UC5.1}
+\begin{itemize}
+  \item \textbf{Codice:} UC5.1;
+  \item \textbf{Titolo:} Accetta richiesta creazione organizzazione;
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Precondizione:} l'\glossario{owner} deve aver richiesto di creare un organizzazione;
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{owner} viene informato;
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} accetta la richiesta inviata dall'\glossario{owner} di creare
+  una nuova \glossario{organizzazione};
+\end{itemize}
+% subsub:UC5.1 (end)
+
+\subsubsection{UC5.2 - Rifiuta richiesta creazione organizzazione}
+\label{subsub:UC5.2}
+\begin{itemize}
+  \item \textbf{Codice:} UC5.2;
+  \item \textbf{Titolo:} Rifiuta richiesta creazione organizzazione;
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Precondizione:} l'\glossario{owner} deve aver richiesto di creare un organizzazione;
+  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e l'\glossario{owner} viene informato;
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} rifiuta la richiesta inviata dall'\glossario{owner} di creare
+  una nuova \glossario{organizzazione};
+\end{itemize}
+% subsub:UC5.2 (end)
+
 \subsubsection{UC4 - Approvazione modifica organizzazione}
 \label{subsub:UC4}
 
