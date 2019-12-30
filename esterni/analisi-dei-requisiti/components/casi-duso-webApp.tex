@@ -336,18 +336,50 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \end{itemize}
 % subsub:UC5.2 (end)
 
-\subsubsection{UC4 - Approvazione modifica organizzazione}
-\label{subsub:UC4}
+\subsubsection{UC6 - Gestione richieste modifica organizzazione}
+\label{subsub:UC6}
 
 \begin{itemize}
+  \item \textbf{Codice:} UC6;
+  \item \textbf{Titolo:} Gestione richieste modifica organizzazione;
   \item \textbf{Attori primari:} \glossario{amministratore};
-  \item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di modifica di una \glossario{organizzazione};
-  \item \textbf{Scenario principale:} viene richiesta la modifica di una \glossario{organizzazione}, presente in \glossario{Stalker};
-  \item \textbf{Precondizione:} l'\glossario{organizzazione} deve essere già stata creata dal sistema, devono essere state apportate modifiche;
-  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{organizzazione} viene modificata.
-
+  \item \textbf{Precondizione:} un \glossario{gestore} deve aver richiesto di modificare un'organizzazione;
+  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e il \glossario{gestore} viene informato;
+  \item \textbf{Scenario principale:} viene richiesta la modifica di una \glossario{organizzazione}. L'\glossario{amministratore} può accettare o rifiutare la richiesta.
+  \item \textbf{Inclusioni}:
+        \\a. Accetta richiesta modifica organizzazione\emph{[UC5.1]};
+        \\b. Rifiuta richiesta modifica organizzazione\emph{[UC5.2]}.
 \end{itemize}
-% subsub:UC4 (end)
+% subsub:UC6 (end)
+
+
+\subsubsection{UC6.1 - Accetta richiesta modifica organizzazione}
+\label{subsub:UC6.1}
+\begin{itemize}
+  \item \textbf{Codice:} UC6.1;
+  \item \textbf{Titolo:} Accetta richiesta modifica organizzazione;
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Precondizione:} il \glossario{gestore} deve aver richiesto di modificare un'organizzazione;
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e il \glossario{gestore} viene informato;
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} accetta la richiesta inviata dal \glossario{gestore} di modificare
+  un'\glossario{organizzazione};
+\end{itemize}
+% subsub:UC6.1 (end)
+
+\subsubsection{UC6.2 - Rifiuta richiesta modifica organizzazione}
+\label{subsub:UC6.2}
+\begin{itemize}
+  \item \textbf{Codice:} UC6.2;
+  \item \textbf{Titolo:} Rifiuta richiesta modifica organizzazione;
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Precondizione:} il \glossario{gestore} deve aver richiesto di modificare un'organizzazione;
+  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e il \glossario{gestore} viene informato;
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} rifiuta la richiesta inviata dal \glossario{gestore} di modificare
+  un'\glossario{organizzazione};
+\end{itemize}
+% subsub:UC6.2 (end)
+
+
 \subsubsection{UC5 - Approvazione aggiunta luogo}
 \label{subsub:UC5}
 
