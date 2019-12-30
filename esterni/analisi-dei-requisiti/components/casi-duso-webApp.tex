@@ -294,11 +294,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \end{itemize}
 % subsub:UC4.2 (end)
 
-\subsubsection{UC5 - Gestione richieste creazione organizzazione}
+\subsubsection{UC5 - Gestione richiesta creazione organizzazione}
 \label{subsub:UC5}
 \begin{itemize}
   \item \textbf{Codice:} UC5;
-  \item \textbf{Titolo:} Gestione richieste creazione organizzazione;
+  \item \textbf{Titolo:} Gestione richiesta creazione organizzazione;
   \item \textbf{Attori primari:} \glossario{amministratore};
   \item \textbf{Precondizione:} l'\glossario{owner} deve aver richiesto di creare un organizzazione;
   \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'\glossario{owner} viene informato;
@@ -336,19 +336,19 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \end{itemize}
 % subsub:UC5.2 (end)
 
-\subsubsection{UC6 - Gestione richieste modifica organizzazione}
+\subsubsection{UC6 - Gestione richiesta modifica organizzazione}
 \label{subsub:UC6}
 
 \begin{itemize}
   \item \textbf{Codice:} UC6;
-  \item \textbf{Titolo:} Gestione richieste modifica organizzazione;
+  \item \textbf{Titolo:} Gestione richiesta modifica organizzazione;
   \item \textbf{Attori primari:} \glossario{amministratore};
   \item \textbf{Precondizione:} un \glossario{gestore} deve aver richiesto di modificare un'organizzazione;
   \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e il \glossario{gestore} viene informato;
   \item \textbf{Scenario principale:} viene richiesta la modifica di una \glossario{organizzazione}. L'\glossario{amministratore} può accettare o rifiutare la richiesta.
   \item \textbf{Inclusioni}:
-        \\a. Accetta richiesta modifica organizzazione\emph{[UC5.1]};
-        \\b. Rifiuta richiesta modifica organizzazione\emph{[UC5.2]}.
+        \\a. Accetta richiesta modifica organizzazione\emph{[UC6.1]};
+        \\b. Rifiuta richiesta modifica organizzazione\emph{[UC6.2]}.
 \end{itemize}
 % subsub:UC6 (end)
 
@@ -380,18 +380,49 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 % subsub:UC6.2 (end)
 
 
-\subsubsection{UC5 - Approvazione aggiunta luogo}
-\label{subsub:UC5}
+\subsubsection{UC7 - Gestione richiesta aggiunta luogo}
+\label{subsub:UC7}
 
 \begin{itemize}
+  \item \textbf{Codice:} UC7;
+  \item \textbf{Titolo:} Gestione richiesta aggiunta luogo;
   \item \textbf{Attori primari:} \glossario{amministratore};
-  \item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di aggiunta di un luogo all'interno di un'\glossario{organizzazione};
-  \item \textbf{Scenario principale:} viene richiesta l'aggiunta di un luogo all'interno di un'\glossario{organizzazione};
-  \item \textbf{Precondizione:} l'\glossario{organizzazione} deve essere già stata creata dal sistema, e deve essere stata fatta la richiesta di aggiunta luogo;
-  \item \textbf{Postcondizione:} viene approvata la richiesta, e viene aggiunto il luogo all'\glossario{organizzazione} interessata.
+  \item \textbf{Precondizione:} un \glossario{gestore} deve aver richiesto di aggiungere un luogo;
+  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e il \glossario{gestore} viene informato;
+  \item \textbf{Scenario principale:} viene richiesto di aggiungere un luogo. L'\glossario{amministratore} può accettare o rifiutare la richiesta
+  \item \textbf{Inclusioni}:
+        \\a. Accetta richiesta aggiunta luogo\emph{[UC7.1]};
+        \\b. Rifiuta richiesta aggiunta luogo\emph{[UC7.2]}.
 
 \end{itemize}
-% subsub:UC5 (end)
+% subsub:UC7 (end)
+
+
+\subsubsection{UC7.1 - Accetta richiesta aggiungi luogo}
+\label{subsub:UC7.1}
+\begin{itemize}
+  \item \textbf{Codice:} UC7.1;
+  \item \textbf{Titolo:} Accetta richiesta aggiungi luogo;
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Precondizione:} il \glossario{gestore} deve aver richiesto di aggiungere un luogo;
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e il \glossario{gestore} viene informato;
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} accetta la richiesta inviata dal \glossario{gestore} di aggiungere un luogo.
+\end{itemize}
+% subsub:UC7.1 (end)
+
+\subsubsection{UC7.2 - Rifiuta richiesta aggiungi luogo}
+\label{subsub:UC7.2}
+\begin{itemize}
+  \item \textbf{Codice:} UC7.2;
+  \item \textbf{Titolo:} Rifiuta richiesta aggiungi luogo;
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Precondizione:} il \glossario{gestore} deve aver richiesto di aggiungere un luogo;
+  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e il \glossario{gestore} viene informato;
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} rifiuta la richiesta inviata dal \glossario{gestore} di aggiungere un luogo.
+\end{itemize}
+% subsub:UC7.2 (end)
+
+
 \subsubsection{UC6 - Approvazione modifica luogo}
 \label{subsub:UC6}
 
@@ -416,6 +447,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 
 \end{itemize}
 % subsub:UC7 (end)
+
+
+
+
+
 % par:Amministratore (end)
 \paragraph{Root}
 Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super utente} \glossario{root}.
