@@ -10,18 +10,18 @@
 # template, configurazione e file comuni di documenti LaTex
 /commons/ @RiccardoAgatea
 
-/esterni/analisi-dei-requisiti/ @AlbertoGobbo
+/esterni/analisi-dei-requisiti/ @erclu @TobiaApolloni
 
 /esterni/glossario/ @RiccardoAgatea
 
-/esterni/piano-di-progetto/ @fabioscettro
+/esterni/piano-di-progetto/ @RiccardoCestaro @Alberto1598
 
-/esterni/piano-di-qualifica/ @erclu
+/esterni/piano-di-qualifica/ @RiccardoAgatea @AlbertoGobbo
 
-/interni/norme-di-progetto/ @Alberto1598
+/interni/norme-di-progetto/ @fabioscettro @AlexRizzus
 
-/interni/studio-di-fattibilita/ @AlexRizzus
+/interni/studio-di-fattibilita/ @erclu @RiccardoAgatea
 
-/interni/verbali/ @RiccardoAgatea
+/interni/verbali/ @AlexRizzus
 
 /lettera-di-presentazione/ @Alberto1598
