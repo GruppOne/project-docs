@@ -466,18 +466,46 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 % subsub:UC8.2 (end)
 
 
-\subsubsection{UC7 - Approvazione trasferimento di proprietà organizzazione}
-\label{subsub:UC7}
+\subsubsection{UC9 - Gestione richiesta trasferimento di proprietà organizzazione}
+\label{subsub:UC9}
 
 \begin{itemize}
+  \item \textbf{Codice:} UC9;
+  \item \textbf{Titolo:} Gestione richiesta trasferimento di proprietà organizzazione;
   \item \textbf{Attori primari:} \glossario{amministratore};
-  \item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di un trasferimento di proprietà di un'\glossario{organizzazione};
-  \item \textbf{Scenario principale:} viene richiesto un traferimento di proprietà di un'\glossario{organizzazione};
   \item \textbf{Precondizione:} l'\glossario{organizzazione} deve essere già stata creata dal sistema, e deve essere stata fatta la richiesta trasferimento di proprietà;
-  \item \textbf{Postcondizione:} viene approvata la richiesta, e viene trasferita la proprietà dell'\glossario{organizzazione} interessata.
-
+  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'\glossario{owner} viene informato;
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} approva o rifiuta la richiesta di un trasferimento di proprietà di un'\glossario{organizzazione};
+  \item \textbf{Inclusioni}:
+        \\a. Accetta richiesta trasferimento di proprietà organizzazione\emph{[UC9.1]};
+        \\b. Rifiuta richiesta trasferimento di proprietà organizzazione\emph{[UC9.2]}.
 \end{itemize}
-% subsub:UC7 (end)
+% subsub:UC9 (end)
+
+
+\subsubsection{UC9.1 - Accetta richiesta trasferimento di proprietà organizzazione}
+\label{subsub:UC9.1}
+\begin{itemize}
+  \item \textbf{Codice:} UC9.1;
+  \item \textbf{Titolo:} Accetta richiesta trasferimento di proprietà organizzazione;
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Precondizione:} l'\glossario{owner} deve aver fatto richiesta di trasferimento di proprietà di organizzazione;
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{owner} viene informato;
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} approva la richiesta di un trasferimento di proprietà di un'\glossario{organizzazione};
+\end{itemize}
+% subsub:UC9.1 (end)
+
+\subsubsection{UC9.2 - Rifiuta richiesta trasferimento di proprietà organizzazione}
+\label{subsub:UC9.2}
+\begin{itemize}
+  \item \textbf{Codice:} UC9.2;
+  \item \textbf{Titolo:} Rifiuta richiesta trasferimento di proprietà organizzazione;
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Precondizione:} l'\glossario{owner} deve aver fatto richiesta di trasferimento di proprietà di organizzazione;
+  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e l'\glossario{owner} viene informato;
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} rifiuta la richiesta di un trasferimento di proprietà di un'\glossario{organizzazione};
+\end{itemize}
+% subsub:UC9.2 (end)
 
 
 % par:Amministratore (end)
