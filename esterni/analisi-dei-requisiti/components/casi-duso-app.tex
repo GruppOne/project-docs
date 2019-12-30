@@ -6,7 +6,7 @@
 
 %UC1 (start)
 \subsubsection{UC1 - Apertura applicazione mobile}
-\label{sub:uc1utente}
+\label{subsub:uc1utente}
 
 %inserire diagramma UC1
 
@@ -34,10 +34,10 @@
     \item se l'utente non autenticato inserisce erroneamente le credenziali nel form di autenticazione, allora verrà visualizzato un errore.
   \end{enumerate}  
 \end{itemize}
-% sub:uc1utente (end)
+% subsub:uc1utente (end)
 
 \subsubsection{UC1.1 - Registrazione}
-\label{sub:uc1.1utente}
+\label{subsub:uc1.1utente}
 \begin{itemize}
   \item \textbf{Codice:} UC1.1
   \item \textbf{Titolo:} registrazione
@@ -59,27 +59,12 @@
     \item se la registrazione è ultimata e va a buon fine, l'utente visualizzerà la schermata iniziale dell'applicazione mobile e potrà autenticarsi al servizio.
   \end{enumerate}
 \end{itemize}
-% sub:uc1.1utente (end)
+% subsub:uc1.1utente (end)
 
-\subsubsection{UC1.1.1 - Informazioni non valide}
-\label{sub:uc1.1.1utente}
+\subsubsection{UC1.1.1 - Visualizzazione EULA}
+\label{subsub:uc1.1.2utente}
 \begin{itemize}
   \item \textbf{Codice:} UC1.1.1
-  \item \textbf{Titolo:} informazioni non valide
-  \item \textbf{Attori primari:} utente non registrato
-  \item \textbf{Precondizione:} l'utente si trova nella schermata di registrazione e non rispetta le regole d'inserimento delle credenziali.
-  \item \textbf{Postcondizione:} l'applicazione mobile comunica all'utente l'errore.
-  \item \textbf{Scenario Principale:} 
-  \begin{enumerate}
-    \item l'utente visualizza il messaggio d'errore, in quanto le informazioni inserite non sono valide.
-  \end{enumerate}
-\end{itemize}
-% sub:uc1.1.1utente (end)
-
-\subsubsection{UC1.1.2 - Visualizzazione EULA}
-\label{sub:uc1.1.2utente}
-\begin{itemize}
-  \item \textbf{Codice:} UC1.1.2
   \item \textbf{Titolo:} visualizzazione EULA
   \item \textbf{Attori primari:} utente non registrato
   \item \textbf{Precondizione:} l'utente si trova nella schermata di registrazione e visualizza l'EULA\@.
@@ -89,10 +74,25 @@
     \item l'utente visualizza l'EULA e ha la possiblità di accettarla oppure non accettarla: nel caso la accetti, allora la registrazione può proseguire.
   \end{enumerate}
 \end{itemize}
-% sub:uc1.1.2utente (end)
+% subsub:uc1.1.1utente (end)
+
+\subsubsection{UC1.1.2 - Informazioni non valide}
+\label{subsub:uc1.1.2utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC1.1.2
+  \item \textbf{Titolo:} informazioni non valide
+  \item \textbf{Attori primari:} utente non registrato
+  \item \textbf{Precondizione:} l'utente si trova nella schermata di registrazione e non rispetta le regole d'inserimento delle credenziali.
+  \item \textbf{Postcondizione:} l'applicazione mobile comunica all'utente l'errore.
+  \item \textbf{Scenario Principale:} 
+  \begin{enumerate}
+    \item l'utente visualizza il messaggio d'errore, in quanto le informazioni inserite non sono valide.
+  \end{enumerate}
+\end{itemize}
+% subsub:uc1.1.2utente (end)
 
 \subsubsection{UC1.2 - Autenticazione}
-\label{sub:uc1.2utente}
+\label{subsub:uc1.2utente}
 \begin{itemize}
   \item \textbf{Codice:} UC1.2
   \item \textbf{Titolo:} autenticazione
@@ -114,10 +114,10 @@
     iniziale per l'autenticazione.
   \end{enumerate}
 \end{itemize}
-% sub:uc1.2utente (end)
+% subsub:uc1.2utente (end)
 
 \subsubsection{UC1.2.1 - Credenziali errate}
-\label{sub:uc1.2.1utente}
+\label{subsub:uc1.2.1utente}
 \begin{itemize}
   \item \textbf{Codice:} UC1.2.1
   \item \textbf{Titolo:} credenziali errate
@@ -129,12 +129,12 @@
     \item l'utente visualizza il messaggio d'errore, in quanto le credenziali inserite non sono valide.
   \end{enumerate}
 \end{itemize}
-% sub:uc1.2.1utente (end)
+% subsub:uc1.2.1utente (end)
 
 
 %UC2 (start)
 \subsubsection{UC2 - Schermata utente autenticato}
-\label{sub:uc2utente}
+\label{subsub:uc2utente}
 
 % integrare diagramma UC2
 
@@ -164,10 +164,10 @@
     \item se l'utente effettua un'operazione in assenza di \glossario{rete}, allora l'applicazione mobile comunica l'errore.
   \end{enumerate}
 \end{itemize}
-% sub:uc2utente (end)
+% subsub:uc2utente (end)
 
 \subsubsection{UC2.1 - Visualizzazione lista organizzazioni}
-\label{sub:uc2.1utente}
+\label{subsub:uc2.1utente}
 \begin{itemize}
   \item \textbf{Codice:} UC2.1
   \item \textbf{Titolo:} visualizzazione lista organizzazioni
@@ -187,10 +187,10 @@
     \item se l'utente aggiorna la lista delle organizzazioni in assenza di \glossario{rete}, allora l'applicazione mobile comunica l'errore.
   \end{enumerate}
 \end{itemize}
-% sub:uc2.1utente (end)
+% subsub:uc2.1utente (end)
 
 \subsubsection{UC2.1.1 - Aggiornamento lista organizzazioni}
-\label{sub:uc2.1utente}
+\label{subsub:uc2.1.1utente}
 \begin{itemize}
   \item \textbf{Codice:} UC2.1.1
   \item \textbf{Titolo:} aggiornamento lista organizzazioni
@@ -202,10 +202,10 @@
     \item l'utente richiede l'aggiornamento della lista delle organizzazioni.
   \end{enumerate}
 \end{itemize}
-% sub:uc2.1.1utente (end)
+% subsub:uc2.1.1utente (end)
 
 \subsubsection{UC2.2 - Collegarsi ad un'organizzazione}
-\label{sub:uc2.1utente}
+\label{subsub:uc2.2utente}
 \begin{itemize}
   \item \textbf{Codice:} UC2.2
   \item \textbf{Titolo:} collegarsi ad un'organizzazione
@@ -223,10 +223,10 @@
     \item se l'utente cerca di collegarsi ad un'organizzazione in assenza di \glossario{rete}, allora l'applicazione mobile comunica l'errore.
   \end{enumerate}
 \end{itemize}
-% sub:uc2.2utente (end)
+% subsub:uc2.2utente (end)
 
 \subsubsection{UC2.3 - Scollegarsi da un'organizzazione}
-\label{sub:uc2.1utente}
+\label{subsub:uc2.3utente}
 \begin{itemize}
   \item \textbf{Codice:} UC2.3
   \item \textbf{Titolo:} scollegarsi da un'organizzazione
@@ -242,30 +242,66 @@
     \item se l'utente cerca di scollegarsi ad un'organizzazione in assenza di rete, allora l'applicazione mobile comunica l'errore.
   \end{enumerate}
 \end{itemize}
-% sub:uc2.3utente (end)
+% subsub:uc2.3utente (end)
 
 \subsubsection{UC2.4 - Schermata scelta noto o incognito}
-\label{sub:uc2.1utente}
+\label{subsub:uc2.4utente}
+% integrare diagramma UC2.4
 \begin{itemize}
-  \item \textbf{Codice:} UC2.4
+  \item \textbf{Caso d’uso:} UC2.4
   \item \textbf{Titolo:} schermata scelta noto o incognito
-  \item \textbf{Attori primari:} utente collegato
-  \item \textbf{Precondizione:} l'utente deve essere collegato ad un'organizzazione.
-  \item \textbf{Postcondizione:} l'utente è noto all'organizzazione, oppure incognito.
+  \item \textbf{Attore primario:} utente collegato, che può essere \glossario{utente noto} oppure \glossario{utente incognito}
+  \item \textbf{Precondizioni:} l'utente deve essere collegato.
+  \item \textbf{Postcondizioni:} l'utente è noto oppure incognito.
+  \item \textbf{Scenario principale:} 
+  \begin{enumerate}
+    \item l'utente è collegato ad un'organizzazione in cui la sua presenza è nota; l'utente ha la possibilità di passare in modalità incognito.
+    \item l'utente è collegato ad un'organizzazione in cui la sua presenza è incognita; l'utente ha la possibilità di passare in modalità nota.
+  \end{enumerate}
+  \item \textbf{Estensioni:} 
+\end{itemize}
+% subsub:uc2.4utente (end)
+
+\subsubsection{UC2.4.1 - Passaggio a incognito}
+\label{subsub:uc2.4.1utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC2.4.1
+  \item \textbf{Titolo:} passaggio a incognito
+  \item \textbf{Attori primari:} utente noto
+  \item \textbf{Precondizione:} l'utente deve essere collegato e noto.
+  \item \textbf{Postcondizione:} l'utente è collegato ed incognito.
   \item \textbf{Scenario Principale:}
   \begin{enumerate}
-    \item l'utente è noto nel momento in cui si collega ad un'organizzazione; può passare in incognito per mezzo di una schermata dell'applicazione mobile, e può fare viceversa se vuole passare
-    da incognito a noto.
+    \item l'utente è noto in un'organizzazione e vuole diventare incognito: in questo modo la sua presenza è nota, ma non lo è la sua identità.
   \end{enumerate}
   \item \textbf{Estensioni:} 
   \begin{enumerate}
-    \item se l'utente cerca di eseguire questa operazione in assenza di rete, allora l'applicazione mobile comunica l'errore.
+    \item se l'utente cerca di passare da noto ad incognito in assenza di rete, allora l'applicazione mobile comunica l'errore.
   \end{enumerate}
 \end{itemize}
-% sub:uc2.4utente (end)
+% subsub:uc2.4.1utente (end)
+
+\subsubsection{UC2.4.2 - Passaggio a noto}
+\label{subsub:uc2.4.2utente}
+\begin{itemize}
+  \item \textbf{Codice:} UC2.4.2
+  \item \textbf{Titolo:} passaggio a noto
+  \item \textbf{Attori primari:} utente incognito
+  \item \textbf{Precondizione:} l'utente deve essere collegato ed incognito.
+  \item \textbf{Postcondizione:} l'utente è collegato e noto.
+  \item \textbf{Scenario Principale:}
+  \begin{enumerate}
+    \item l'utente è incognito in un'organizzazione e vuole diventare noto: in questo modo, sia la sua presenza che la sua identità sono note.
+  \end{enumerate}
+  \item \textbf{Estensioni:} 
+  \begin{enumerate}
+    \item se l'utente cerca di passare da incognito a noto in assenza di rete, allora l'applicazione mobile comunica l'errore.
+  \end{enumerate}
+\end{itemize}
+% subsub:uc2.4.2utente (end)
 
 \subsubsection{UC2.5 - Visualizzazione storico accessi}
-\label{sub:uc2.1utente}
+\label{subsub:uc2.5utente}
 \begin{itemize}
   \item \textbf{Codice:} UC2.5
   \item \textbf{Titolo:} visualizzazione storico accessi
@@ -281,14 +317,14 @@
     \item se l'utente cerca di visualizzare lo storico degli accessi in assenza di rete, allora l'applicazione mobile comunica l'errore.
   \end{enumerate}
 \end{itemize}
-% sub:uc2.5utente (end)
+% subsub:uc2.5utente (end)
 
 \subsubsection{UC2.6 - Visualizzazione tempo trascorso nell'organizzazione corrente}
-\label{sub:uc2.1utente}
+\label{subsub:uc2.6utente}
 \begin{itemize}
   \item \textbf{Codice:} UC2.6
   \item \textbf{Titolo:} visualizzazione tempo trascorso nell'organizzazione corrente
-  \item \textbf{Attori primari:} utente autenticato
+  \item \textbf{Attori primari:} utente collegato
   \item \textbf{Precondizione:} l'utente deve essere collegato ad un'organizzazione.
   \item \textbf{Postcondizione:} l'utente visualizza il tempo trascorso nell'organizzazione.
   \item \textbf{Scenario Principale:}
@@ -301,10 +337,10 @@
     \item se l'utente cerca di visualizzare il tempo trascorso nell'organizzazione corrente in assenza di rete, allora l'applicazione mobile comunica l'errore.
   \end{enumerate}
 \end{itemize}
-% sub:uc2.6utente (end)
+% subsub:uc2.6utente (end)
 
 \subsubsection{UC2.7 - Visualizzazione errore rete mancante}
-\label{sub:uc2.1utente}
+\label{subsub:uc2.7utente}
 \begin{itemize}
   \item \textbf{Codice:} UC2.7
   \item \textbf{Titolo:} visualizzazione errore rete mancante
@@ -316,69 +352,6 @@
     \item l'utente visualizza il messaggio d'errore, in quanto non si possono eseguire operazioni in mancanza di rete.
   \end{enumerate}
 \end{itemize}
-% sub:uc2.7utente (end)
-
-
-%UC3 (start)
-\subsubsection{UC3 - Cambio di contesto utente collegato}
-\label{sub:uc3utente}
-
-% integrare diagramma UC3
-
-\begin{itemize}
-  \item \textbf{Caso d’uso:} UC3
-  \item \textbf{Titolo:} cambio di contesto utente collegato
-  \item \textbf{Attore primario:} utente collegato, che può essere \glossario{utente noto} oppure \glossario{utente incognito}
-  \item \textbf{Precondizioni:} l'utente deve essere collegato.
-  \item \textbf{Postcondizioni:} l'utente è noto oppure incognito.
-  \item \textbf{Scenario principale:} 
-  \begin{enumerate}
-    \item l'utente è collegato ad un'organizzazione in cui la sua presenza è nota; l'utente ha la possibilità di passare in modalità incognito.
-    \item l'utente è collegato ad un'organizzazione in cui la sua presenza è incognita; l'utente ha la possibilità di passare in modalità nota.
-  \end{enumerate}
-  \item \textbf{Estensioni:} 
-  \begin{enumerate}
-    \item l'utente visualizza il messaggio d'errore, in quanto non si possono eseguire il \glossario{cambio di contesto} in mancanza di rete.
-  \end{enumerate}
-\end{itemize}
-% sub:uc3utente (end)
-
-\subsubsection{UC3.1 - Passaggio a incognito}
-\label{sub:uc3.1utente}
-\begin{itemize}
-  \item \textbf{Codice:} UC3.1
-  \item \textbf{Titolo:} passaggio a incognito
-  \item \textbf{Attori primari:} utente noto
-  \item \textbf{Precondizione:} l'utente deve essere collegato e noto.
-  \item \textbf{Postcondizione:} l'utente è collegato ed incognito.
-  \item \textbf{Scenario Principale:}
-  \begin{enumerate}
-    \item l'utente è noto in un'organizzazione e vuole diventare incognito: in questo modo la sua presenza è nota, ma non lo è la sua identità.
-  \end{enumerate}
-  \item \textbf{Estensioni:} 
-  \begin{enumerate}
-    \item se l'utente cerca di passare da noto ad incognito in assenza di rete, allora l'applicazione mobile comunica l'errore.
-  \end{enumerate}
-\end{itemize}
-% sub:uc3.1utente (end)
-
-\subsubsection{UC3.2 - Passaggio a noto}
-\label{sub:uc3.2utente}
-\begin{itemize}
-  \item \textbf{Codice:} UC3.2
-  \item \textbf{Titolo:} passaggio a noto
-  \item \textbf{Attori primari:} utente incognito
-  \item \textbf{Precondizione:} l'utente deve essere collegato ed incognito.
-  \item \textbf{Postcondizione:} l'utente è collegato e noto.
-  \item \textbf{Scenario Principale:}
-  \begin{enumerate}
-    \item l'utente è incognito in un'organizzazione e vuole diventare noto: in questo modo, sia la sua presenza che la sua identità sono note.
-  \end{enumerate}
-  \item \textbf{Estensioni:} 
-  \begin{enumerate}
-    \item se l'utente cerca di passare da incognito a noto in assenza di rete, allora l'applicazione mobile comunica l'errore.
-  \end{enumerate}
-\end{itemize}
-% sub:uc3.2utente (end)
+% subsub:uc2.7utente (end)
 
 \end{document}

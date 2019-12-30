@@ -14,8 +14,8 @@ together {
 rectangle {
   together {
     usecase (UC1.1) as "UC1.1\nregistrazione"
-    usecase (UC1.1.1) as "UC1.1.1\ninformazioni non valide"
-    usecase (UC1.1.2) as "UC1.1.2\nvisualizzazione EULA"
+    usecase (UC1.1.1) as "UC1.1.1\nvisualizzazione EULA"
+    usecase (UC1.1.2) as "UC1.1.2\ninformazioni non valide"
   }
 
   together {
@@ -72,7 +72,7 @@ rectangle {
 
   together {
     usecase (UC2.5) as "UC2.5\nvisualizzazione storico accessi\n(*)"
-    usecase (UC2.6) as "UC2.6\nvisualizzazione tempo trascorso\nnell'organizzazione corrente(*)"
+    usecase (UC2.6) as "UC2.6\nvisualizzazione tempo trascorso\nnell'organizzazione corrente\n(*)"
   }
 
   ' # TODO aggiungere errori ultima posizione nota troppo vecchia?
@@ -94,7 +94,6 @@ rectangle {
 (UC2.7) .up.|> (UC2.1) : <<extends>>
 (UC2.7) .up.|> (UC2.2) : <<extends>>
 (UC2.7) .up.|> (UC2.3) : <<extends>>
-(UC2.7) .up.|> (UC2.4) : <<extends>>
 (UC2.7) .up.|> (UC2.5) : <<extends>>
 (UC2.7) .up.|> (UC2.6) : <<extends>>
 
@@ -104,10 +103,10 @@ note as N1
 end note
 @enduml
 
-@startuml UC3
+@startuml UC2.4
 !include ../../../../commons/style/use-cases.pu
 
-title UC3
+title UC2.4
 
 ' actor :utente autenticato: as A3
 actor :utente collegato: as A3.1
@@ -121,18 +120,18 @@ actor :utente incognito: as A3.1.2
 
 ' #TODO passaggio a noto viene chiesto durante il login?
 rectangle {
-  usecase (UC3.1) as "UC3.1\npassaggio a incognito"
-  usecase (UC3.2) as "UC3.2\npassaggio a noto"
+  usecase (UC2.4.1) as "UC2.4.1\npassaggio a incognito"
+  usecase (UC2.4.2) as "UC2.4.2\npassaggio a noto"
 
   ' #TODO controllare se si può avere lo stesso UC in due diagrammi
   usecase (UC2.7) as "UC2.7\nvisualizzazione errore\nrete mancante"
 }
 
-:A3.1.1: -- (UC3.1)
-:A3.1.2: -- (UC3.2)
+:A3.1.1: -- (UC2.4.1)
+:A3.1.2: -- (UC2.4.2)
 
-(UC2.7) .up.|> (UC3.1) : <<extends>>
-(UC2.7) .up.|> (UC3.2) : <<extends>>
+(UC2.7) .up.|> (UC2.4.1) : <<extends>>
+(UC2.7) .up.|> (UC2.4.2) : <<extends>>
 
 ' #TODO cosa manca riguardo al tracciamento della posizione?
 
