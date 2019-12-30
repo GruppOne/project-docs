@@ -8,41 +8,44 @@ La presente sezione ha lo scopo di descrivere in maniera dettagliata, attraverso
 \subsection{Attori dei casi d'uso}
 \label{sub:attori_casi_duso}
 
-\subsubsection{Utenti}
+\subsubsection{App}
 \label{subsub:utenti}
 
 \begin{itemize}
-  \item \emph{Utente non registrato}: Si riferisce ad un utente generico che non ha ancora effettuato la registrazione alla piattaforma.
-  \item \emph{Utente non autenticato}: Si riferisce ad un utente generico che non ha ancora effettuato l'autenticazione alla piattaforma.
-  \item \emph{Utente autenticato}: Si riferisce ad un utente non autenticato che ha effettuato l'autenticazione alla piattaforma.
-  \item \emph{Utente non collegato}: Si riferisce ad un utente autenticato che ha non ha effettuato il collegamento ad un'organizzazione.
-  \item \emph{Utente collegato}: Si riferisce ad un utente autenticato che ha effettuato il collegamento ad un'organizzazione.
-  \item \emph{Utente collegato incognito}: Si riferisce ad un utente collegato che ha deciso di rimanere in modalità incognito all'interno di un'organizzazione.
-  \item \emph{Utente collegato noto}: Si riferisce ad un utente collegato che ha deciso di essere noto all'interno di un'organizzazione.
+  \item \textbf{\glossario{Utente non registrato}}: Si riferisce ad un \glossario{utente generico} che non ha ancora effettuato la registrazione alla piattaforma;
+  \item \textbf{\glossario{Utente non autenticato}}: Si riferisce ad un \glossario{utente generico} che non ha ancora effettuato l'autenticazione alla piattaforma;
+  \item \textbf{\glossario{Utente autenticato}}: Si riferisce ad un \glossario{utente non autenticato} che ha effettuato l'autenticazione alla piattaforma;
+  \item \textbf{\glossario{Utente non collegato}}: Si riferisce ad un \glossario{utente autenticato} che ha non ha effettuato il collegamento ad un'organizzazione;
+  \item \textbf{\glossario{Utente collegato}}: Si riferisce ad un \glossario{utente autenticato} che ha effettuato il collegamento ad un'organizzazione;
+  \item \textbf{\glossario{Utente collegato incognito}}: Si riferisce ad un \glossario{utente collegato} che ha deciso di rimanere in modalità incognito all'interno di un'organizzazione;
+  \item \textbf{\glossario{Utente collegato noto}}: Si riferisce ad un \glossario{utente collegato} che ha deciso di essere noto all'interno di un'organizzazione;
 \end{itemize}
 % subsub:utenti (end)
 
-\subsubsection{Super Utenti}
+\subsubsection{WebApp}
 \label{subsub:super_utenti}
 
 \begin{itemize}
-  \item \emph{Super Utente non autenticato}: si riferisce ad un super utente che non ha ancora effettuato l'accesso.
-  \item \emph{Amministratore}: Si riferisce ad un super utente con privilegi avanzati, che gestisce le richieste di \emph{Gestore} e \emph{Owner}.
-  \item \emph{Root}: Si riferisce ad un amministratore con privilegi avanzati su tutto il sistema. Gestisce gli amministratori.
-  \item \emph{Visualizzatore}: Si riferisce ad un super utente con privilegi di visualizzazione sugli utenti e organizzazione.
-  \item \emph{Gestore}: Si riferisce ad un visualizzatore con privilegi di richieste di modifiche all'organizzazione.
-  \item \emph{Owner}: Si riferisce ad un gestore con privilegi di gestione utenti e organizzazione. É il proprietario di un'organizzazione.
+  \item \textbf{\glossario{Utente non autenticato}}: si riferisce ad un \glossario{utente} che non ha ancora effettuato l'accesso;
+  \item \textbf{\glossario{Utente autenticato}}: si riferisce ad un \glossario{utente non autenticato} che ha affettuato l'accesso alla webApp;
+  \item \textbf{\glossario{Amministratore}}: Si riferisce ad un \glossario{utente} con privilegi su tutto il sistema, che gestisce le richieste di \emph{Gestore} e \emph{Owner}.
+  \item \textbf{\glossario{Root}}: Si riferisce ad un \glossario{amministratore} con privilegi avanzati su tutto il sistema. Gestisce gli amministratori.
+  \item \textbf{\glossario{Visualizzatore}}: Si riferisce ad un \glossario{utente} con privilegi di visualizzazione sugli utenti e organizzazione.
+  \item \textbf{\glossario{Gestore}}: Si riferisce ad un \glossario{visualizzatore} con privilegi di richieste di modifiche all'organizzazione.
+  \item \textbf{\glossario{Owner}}: Si riferisce ad un \glossario{gestore} con privilegi di gestione utenti e organizzazione. É il proprietario di un'organizzazione.
 \end{itemize}
 % subsub:super_utenti (end)
 
-\subsection{Elenco casi d'uso Utente}
-\label{sub:casi_duso_utente}
-\subfile{components/casi-duso-utente.tex}
-
-\subsection{Elenco casi d'uso Super Utente}
-\label{sub:casi_duso_superutente}
-\subfile{components/casi-duso-superutente.tex}
-
 % sub:attori_casi_duso (end)
+
+\subsection{Elenco casi d'uso app}
+\label{sub:casi_duso_app}
+\subfile{components/casi-duso-app.tex}
+% sub:casi_duso_app (end)
+\subsection{Elenco casi d'uso webApp}
+\label{sub:casi_duso_webApp}
+\subfile{components/casi-duso-webApp.tex}
+% sub:casi_duso_webApp (end)
+
 
 \end{document}

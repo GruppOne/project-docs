@@ -1,12 +1,12 @@
-\documentclass[../analisi-dei-requisiti]{subfiles}
+\documentclass[casi-duso]{subfiles}
 
-\renewcommand{\commons}{../../../commons}
+%\renewcommand{\commons}{../../../commons}
 
 \begin{document}
 
-\paragraph{Super Utente non autenticato}
-\label{par:super-utente-non-autenticato}
-Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super utente non autenticato}.
+\paragraph{Utente non autenticato}
+\label{par:utente-non-autenticato}
+Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente non autenticato}.
 
 \subsubsection{UC1 - Sistema di autenticazione}
 \label{subsub:UC1}
@@ -19,7 +19,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 
   title Login SuperUtente
 
-  actor :SuperUtente non autenticato: as A1.1
+  actor :Utente non autenticato: as A1.1
 
   rectangle UC1{
       together {
@@ -42,11 +42,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 
 
 \begin{itemize}
-  \item \textbf{Attori primari:} \glossario{super utente non autenticato};
-  \item \textbf{Descrizione:} il \glossario{super utente non autenticato} tenta di autenticarsi al sistema;
-  \item \textbf{Scenario principale:} il \glossario{super utente non autenticato} non è ancora autenticato e vuole eseguire il login;
-  \item \textbf{Precondizione:} il \glossario{super utente non autenticato} non è autenticato alla piattaforma;
-  \item \textbf{Postcondizione:} il \glossario{super utente} ha effettuato correttamente il login nel sistema.
+  \item \textbf{Attori primari:} \glossario{utente non autenticato};
+  \item \textbf{Descrizione:} l'\glossario{utente non autenticato} tenta di autenticarsi al sistema;
+  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} non è ancora autenticato e vuole eseguire il login;
+  \item \textbf{Precondizione:} l'\glossario{utente non autenticato} non è autenticato alla piattaforma;
+  \item \textbf{Postcondizione:} l'\glossario{utente} ha effettuato correttamente il login nel sistema.
 
 \end{itemize}
 % subsub:UC1 (end)
@@ -58,9 +58,9 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 !include style.pu
 left to right direction
 
-title Autenticazione SuperUtente
+title Autenticazione Utente
 
-actor :SuperUtente non autenticato: as A1.1
+actor :Utente non autenticato: as A1.1
 
 rectangle UC1.1{
   together {
@@ -76,17 +76,17 @@ A1.1 -- UC1.1.2
 
 
 \begin{itemize}
-  \item \textbf{Attori primari:} \glossario{super utente non autenticato}
-  \item \textbf{Descrizione:} il \glossario{super utente non autenticato} visualizza la pagina di login, dove poter inserire le proprie credenziali.
-  \item \textbf{Scenario principale:} il \glossario{super utente non autenticato} accede alla pagina di login, e visualizza tutti i campi da compilare:
+  \item \textbf{Attori primari:} \glossario{utente non autenticato};
+  \item \textbf{Descrizione:} l'\glossario{utente non autenticato} visualizza la pagina di login, dove poter inserire le proprie credenziali.
+  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} accede alla pagina di login, e visualizza tutti i campi da compilare:
         \\a. Inserisce l’email associata all’account \emph{[UC1.1.1]};
         \\b. Inserisce la password associata all’account \emph{[UC1.1.2]};
   \item Estensioni:
         \\a. Visualizzazione messaggio di credenziali errate \emph{[UC1.3]};
   \item Inclusioni:
         \\a. Verifica credenziali \emph{[UC1.2]};
-  \item \textbf{Precondizione:} il sistema è raggiungibile e funzionante, il \glossario{super utente non autenticato} deve poter visualizzare la pagina di login;
-  \item \textbf{Postcondizione:} il \glossario{super utente non autenticato} ha inserito le possibili credenziali e sta tentando di effettuare il login. Ogni volta che cercherà di effettuare
+  \item \textbf{Precondizione:} il sistema è raggiungibile e funzionante, l'\glossario{utente non autenticato} deve poter visualizzare la pagina di login;
+  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} ha inserito le possibili credenziali e sta tentando di effettuare il login. Ogni volta che cercherà di effettuare
         login sarà verificato che le credenziali inserite siano corrette. In caso contrario verrà visualizzato un messaggio di errore, e l'accesso sarà negato;
 
 \end{itemize}
@@ -96,11 +96,11 @@ A1.1 -- UC1.1.2
 \label{subsub:UC1.1.1}
 
 \begin{itemize}
-  \item \textbf{Attori primari:} \glossario{super utente non autenticato}
-  \item \textbf{Descrizione:} al fine di portare a termine il processo di login di un \glossario{super utente}, esso deve inserire la propria e-mail, campo obbligatorio;
-  \item \textbf{Scenario principale:} il \glossario{super utente non autenticato} compila il campo relativo alla sua e-mail di registrazione;
+  \item \textbf{Attori primari:} \glossario{utente non autenticato};
+  \item \textbf{Descrizione:} al fine di portare a termine il processo di login di un \glossario{utente}, esso deve inserire la propria e-mail, campo obbligatorio;
+  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} compila il campo relativo alla sua e-mail di registrazione;
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento della e-mail;
-  \item \textbf{Postcondizione:} il \glossario{super utente non autenticato} ha compilato il campo relativo alla sua e-mail.
+  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} ha compilato il campo relativo alla sua e-mail.
 \end{itemize}
 % subsub:UC1.1.1 (end)
 
@@ -108,11 +108,11 @@ A1.1 -- UC1.1.2
 \label{subsub:UC1.1.2}
 
 \begin{itemize}
-  \item \textbf{Attori primari:} \glossario{super utente non autenticato}
-  \item \textbf{Descrizione:} al fine di portare a termine il processo di login di un \glossario{super utente}, esso deve inserire la propria password, campo obbligatorio;
-  \item \textbf{Scenario principale:} il \glossario{super utente non autenticato} compila il campo relativo alla sua password di registrazione;
+  \item \textbf{Attori primari:} \glossario{utente non autenticato};
+  \item \textbf{Descrizione:} al fine di portare a termine il processo di login di un \glossario{utente}, esso deve inserire la propria password, campo obbligatorio;
+  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} compila il campo relativo alla sua password di registrazione;
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento della password;
-  \item \textbf{Postcondizione:} il \glossario{super utente non autenticato} ha compilato il campo relativo alla sua password.
+  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} ha compilato il campo relativo alla sua password.
 \end{itemize}
 % subsub:UC1.1.2 (end)
 
@@ -121,11 +121,11 @@ A1.1 -- UC1.1.2
 \label{subsub:UC1.2}
 
 \begin{itemize}
-  \item \textbf{Attori primari:} \glossario{super utente non autenticato};
-  \item \textbf{Descrizione:} vengono verificate le credenziali immesse dal \glossario{super utente non autenticato};
-  \item \textbf{Scenario principale:} il \glossario{super utente non autenticato} sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse;
-  \item \textbf{Precondizione:} il \glossario{super utente non autenticato} ha inviato al server le sue credenziali per tentare il login;
-  \item \textbf{Postcondizione:} il \glossario{super utente non autenticato} deve poter accedere alla sua area riservata, nel caso in cui le credenziali siano corrette. In caso
+  \item \textbf{Attori primari:} \glossario{utente non autenticato};
+  \item \textbf{Descrizione:} vengono verificate le credenziali immesse dall'\glossario{utente non autenticato};
+  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse;
+  \item \textbf{Precondizione:} l'\glossario{utente non autenticato} ha inviato al server le sue credenziali per tentare il login;
+  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} deve poter accedere alla sua area riservata, nel caso in cui le credenziali siano corrette. In caso
         contrario deve essere visualizzato un messaggio di credenziali sbagliate \emph{[UC1.3]}.
 
 \end{itemize}
@@ -135,16 +135,16 @@ A1.1 -- UC1.1.2
 \label{subsub:UC1.3}
 
 \begin{itemize}
-  \item \textbf{Attori primari:} \glossario{super utente non autenticato};
+  \item \textbf{Attori primari:} \glossario{utente non autenticato};
   \item \textbf{Descrizione:} viene visualizzato un errore di login;
-  \item \textbf{Scenario principale:} il \glossario{super utente non autenticato} cerca di effettuare il login con delle credenziali sbagliate;
-  \item \textbf{Precondizione:} il \glossario{super utente non autenticato} ha inviato al server le sue credenziali per tentare il login, e le credenziali sono state verificate;
-  \item \textbf{Postcondizione:} il \glossario{super utente non autenticato} visualizza un messaggio di credenziali sbagliate.
+  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} cerca di effettuare il login con delle credenziali sbagliate;
+  \item \textbf{Precondizione:} l'\glossario{utente non autenticato} ha inviato al server le sue credenziali per tentare il login, e le credenziali sono state verificate;
+  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} visualizza un messaggio di credenziali sbagliate.
 
 \end{itemize}
 
 % subsub:UC1.3 (end)
-% par:super-utente-non-autenticato (end)
+% par:utente-non-autenticato (end)
 
 \paragraph{Amministratore}
 \label{par:amministratore}
