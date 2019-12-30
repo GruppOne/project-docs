@@ -286,7 +286,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 
 \begin{itemize}
   \item \textbf{Codice:} UC4.2;
-  \item \textbf{Titolo:} Accetta richiesta owner;
+  \item \textbf{Titolo:} Rifiuta richiesta owner;
   \item \textbf{Attori primari:} \glossario{amministratore};
   \item \textbf{Precondizione:} l'\glossario{utente autenticato} deve aver richiesto di diventare un \glossario{owner};
   \item \textbf{Postcondizione:} viene rifiutata la richiesta da parte di un \glossario{amministratore};
@@ -423,18 +423,49 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 % subsub:UC7.2 (end)
 
 
-\subsubsection{UC6 - Approvazione modifica luogo}
-\label{subsub:UC6}
+\subsubsection{UC8 - Gestione richiesta modifica luogo}
+\label{subsub:UC8}
 
 \begin{itemize}
+  \item \textbf{Codice:} UC7;
+  \item \textbf{Titolo:} Gestione richiesta modifica luogo;
   \item \textbf{Attori primari:} \glossario{amministratore};
-  \item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di una modifica di un luogo all'interno di un'\glossario{organizzazione};
-  \item \textbf{Scenario principale:} viene richiesta una modifica di un luogo all'interno di un'\glossario{organizzazione};
-  \item \textbf{Precondizione:} l'\glossario{organizzazione} e il luogo devono essere già stati creati dal sistema, e deve essere stata fatta la richiesta di modifica luogo;
-  \item \textbf{Postcondizione:} viene approvata la richiesta, e viene modificato il luogo dell'\glossario{organizzazione} interessata.
+  \item \textbf{Precondizione:} un \glossario{gestore} deve aver richiesto di modificare un luogo;
+  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e il \glossario{gestore} viene informato;
+  \item \textbf{Scenario principale:} viene richiesto di modificare un luogo. L'\glossario{amministratore} può accettare o rifiutare la richiesta
+  \item \textbf{Inclusioni}:
+        \\a. Accetta richiesta modifica luogo\emph{[UC8.1]};
+        \\b. Rifiuta richiesta modifica luogo\emph{[UC8.2]}.
 
 \end{itemize}
-% subsub:UC6 (end)
+% subsub:UC8 (end)
+
+
+\subsubsection{UC8.1 - Accetta richiesta modifica luogo}
+\label{subsub:UC8.1}
+\begin{itemize}
+  \item \textbf{Codice:} UC8.1;
+  \item \textbf{Titolo:} Accetta richiesta modifica luogo;
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Precondizione:} il \glossario{gestore} deve aver richiesto di modificare un luogo;
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e il \glossario{gestore} viene informato;
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} accetta la richiesta inviata dal \glossario{gestore} di modificare un luogo.
+\end{itemize}
+% subsub:UC8.1 (end)
+
+\subsubsection{UC8.2 - Rifiuta richiesta modifica luogo}
+\label{subsub:UC8.2}
+\begin{itemize}
+  \item \textbf{Codice:} UC8.2;
+  \item \textbf{Titolo:} Rifiuta richiesta modifica luogo;
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Precondizione:} il \glossario{gestore} deve aver richiesto di modificare un luogo;
+  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e il \glossario{gestore} viene informato;
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} rifiuta la richiesta inviata dal \glossario{gestore} di modificare un luogo.
+\end{itemize}
+% subsub:UC8.2 (end)
+
+
 \subsubsection{UC7 - Approvazione trasferimento di proprietà organizzazione}
 \label{subsub:UC7}
 
@@ -447,9 +478,6 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 
 \end{itemize}
 % subsub:UC7 (end)
-
-
-
 
 
 % par:Amministratore (end)
