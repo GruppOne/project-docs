@@ -512,18 +512,79 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \paragraph{Root}
 Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super utente} \glossario{root}.
 
-\subsubsection{UC8 - Creazione amministratore}
-\label{subsub:UC8}
-
+\subsubsection{UC10 - Creazione amministratore}
+\label{subsub:UC10}
 \begin{itemize}
+  \item \textbf{Codice:} UC10;
+  \item \textbf{Titolo:} Creazione amministratore;
   \item \textbf{Attori primari:} \glossario{root};
-  \item \textbf{Descrizione:} il \glossario{root} crea un \glossario{super utente} \glossario{amministratore};
-  \item \textbf{Scenario principale:} sorge la necessità di creare un nuovo \glossario{amministratore} per gestire \glossario{Stalker};
   \item \textbf{Precondizione:} devono essere specificate le credenziali del nuovo \glossario{amministratore}, che devono essere univoche;
-  \item \textbf{Postcondizione:} l'\glossario{amministratore} viene creato.
-
+  \item \textbf{Postcondizione:} l'\glossario{amministratore} viene creato;
+  \item \textbf{Scenario principale:} sorge la necessità di creare un nuovo \glossario{amministratore} per gestire \glossario{Stalker};
+  \item \textbf{Inclusioni}:
+        \\a. Inserimento nuovo username\emph{[UC10.1]};
+        \\b. Inserimento nuova password\emph{[UC10.2]};
+        \\c. Verifica credenziali\emph{[UC10.3]};
+  \item \textbf{Estensioni}:
+        \\a. Visualizza creazione fallita\emph{[UC10.4]};
 \end{itemize}
-% subsub:UC8 (end)
+% subsub:UC10 (end)
+
+
+\subsubsection{UC10.1 - Inserimento nuovo username}
+\label{subsub:UC10.1}
+\begin{itemize}
+  \item \textbf{Codice:} UC10.1;
+  \item \textbf{Titolo:} Inserimento nuovo username;
+  \item \textbf{Attori primari:} \glossario{root};
+  \item \textbf{Scenario principale:} \glossario{Root} inserisce l'username dell'\glossario{amministratore} che vuole creare;
+  \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento dell'username;
+  \item \textbf{Postcondizione:} \glossario{Root} ha inserito l'username dell'\glossario{amministratore} che vuole creare;
+\end{itemize}
+% subsub:UC10.1 (end)
+
+
+\subsubsection{UC10.2 - Inserimento nuova password}
+\label{subsub:UC10.2}
+\begin{itemize}
+  \item \textbf{Codice:} UC10.2;
+  \item \textbf{Titolo:} Inserimento nuova password;
+  \item \textbf{Attori primari:} \glossario{root};
+  \item \textbf{Scenario principale:} \glossario{Root} inserisce la password dell'\glossario{amministratore} che vuole creare;
+  \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento della password;
+  \item \textbf{Postcondizione:} \glossario{Root} ha inserito la password dell'\glossario{amministratore} che vuole creare;
+\end{itemize}
+% subsub:UC10.2 (end)
+
+
+\subsubsection{UC10.3 - Verifica credenziali}
+\label{subsub:UC10.3}
+\begin{itemize}
+  \item \textbf{Codice:} UC10.3;
+  \item \textbf{Titolo:} Verifica credenziali;
+  \item \textbf{Attori primari:} \glossario{root};
+  \item \textbf{Scenario principale:} il sistema verifica se le credenziali immesse rispettano i requisiti:
+  \\a. Username e password non siano vuoti;
+  \\b. Username e password contengano solo i caratteri consentiti;
+  \\c. L'username non esista;
+  \item \textbf{Precondizione:} \glossario{Root} invia richiesta di creazione nuovo amministratore;
+  \item \textbf{Postcondizione:} il nuovo \glossario{amministratore} viene creato solo se i requisiti sono stati rispettati.
+\end{itemize}
+% subsub:UC10.3 (end)
+
+\subsubsection{UC10.4 - Visualizza creazione fallita}
+\label{subsub:UC10.4}
+\begin{itemize}
+  \item \textbf{Codice:} UC10.4;
+  \item \textbf{Titolo:} Visualizza creazione fallita;
+  \item \textbf{Attori primari:} \glossario{root};
+  \item \textbf{Scenario principale:} \glossario{root} cerca di creare un nuovo \glossario{amministratore} che non rispetta i requisiti;
+  \item \textbf{Precondizione:} la verifica delle credenziali è fallita;
+  \item \textbf{Postcondizione:} \glossario{root} visualizza un messaggio di creazione fallita.
+\end{itemize}
+% subsub:UC10.4 (end)
+
+
 
 \subsubsection{UC9 - Eliminazione organizzazione}
 \label{subsub:UC9}
