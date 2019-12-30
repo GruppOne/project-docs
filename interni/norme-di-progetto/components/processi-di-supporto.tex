@@ -3,9 +3,11 @@
 \begin{document}
 
 \subsection{Descrizione}%
-\label{sub:processi di supporto/descrizione}
+\label{sub:processi_di_supporto/descrizione}
 
-I processo di supporto operano a sostegno degli altri processi con lo scopo di garantire il successo e fornire qualità. Essi non esistono autonomamente ma hanno la necessità di appoggiarsi ad altri processi. ISO 11207-1995 ne distingue otto:
+I processo di supporto operano a sostegno degli altri processi con lo scopo di garantire il successo e fornire qualità.
+Essi non esistono autonomamente ma hanno la necessità di appoggiarsi ad altri processi.
+ISO 11207--1995 ne distingue otto:
 
 \begin{itemize}
   \item Documentazione
@@ -24,7 +26,7 @@ I processo di supporto operano a sostegno degli altri processi con lo scopo di g
 \subsubsection{Finalità}%
 \label{subs:documentazione/finalita}
 
-Grupp0ne istanzia il processo di documentazione per illustrare in maniera chiara e coerente le attività di processo svolte e i prodotti da esse ottenuti.
+GruppOne istanzia il processo di documentazione per illustrare in maniera chiara e coerente le attività di processo svolte e i prodotti da esse ottenuti.
 
 \subsubsection{Descrizione}%
 \label{subs:documentazione/descrizione}
@@ -38,25 +40,26 @@ Si vogliono quindi definire delle norme che possano standardizzare il processo d
 
 \paragraph{Configurazione}%
 \label{par:configurazione}
-Ogni documento ha una sua configurazione di base. Tale configurazione è definita in un file \LaTeX  che contiene la struttura e la formattazione che ogni file deve avere. Si riporta un elenco di ciò che è presente nel file di configurazione:
+La configurazione di base comune ai documenti rilevanti è astratta in due file \LaTeX{} che contiene ad es.\ la struttura e la formattazione che ogni file deve avere.
+Si riporta un elenco (non esaustivo) di ciò che è presente nel file di configurazione:
 
 \begin{itemize}
   \item Definizione e decorazione di header e footer.
   \item Definizione dei margini laterali e dell'altezza del footer.
-  \item Setup della sottolineatura delle parole.
   \item Configurazione dei link.
   \item Dichiarazione di nuovi comandi.
 \end{itemize}
 
 \paragraph{Ciclo di vita}%
-\label{par:ciclo di vita}
+\label{par:ciclo_di_vita}
 Il ciclo di vita di rappresenta gli stadi in cui il documento si può trovare nel corso della sua esistenza. Ne distinguiamo cinque:
+
 \begin{description}
   \item [Creazione del template del documento]: un membro del gruppo crea il template del documento il quale conterrà solamente una pagina di frontespizio. Inizialmente sono configurate una serie di impostazioni di base per la formattazione delle pagine grazie all'utilizzo di alcuni package di \LaTeX.
   \item [Scrittura del documento]: l'incaricato scrive il documento incrementalmente e lo termina entro la scadenza della \glossario{milestone} fissata.
   \item [Verifica del documento]: i \glossario{verificatori} effettuano una revisione del documento segnalando eventuali errori o discordanze che verranno segnalate all'autore del documento che sarà incaricato di correggerli.
   \item [Approvazione del documento]: il \glossario{responsabile} di progetto approva il documento.
-  \item [Archiviazione]: l'amministratore archivia il documento in un repository pubblico su \glossario{github}.
+  \item [Archiviazione]: l'amministratore archivia il documento in un repository pubblico su \glossario{GitHub}.
 \end{description}
 
 \subsubsection{Struttura}%
@@ -75,7 +78,7 @@ Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: ne
   \end{itemize}
   \item Schema
   \begin{itemize}
-    \item \textbf{Versione}: indica la versione attuale del documento (e.g. glossario v1.0.0).
+    \item \textbf{Versione}: indica la versione attuale del documento (e.g.:\ glossario v1.0.0).
     \item \textbf{Approvazione}: indica chi ha approvato il documento.
     \item \textbf{Redazione}: indica la lista dei redattori del documento.
     \item \textbf{Verifica}: indica la lista dei verificatori del documento.
@@ -87,7 +90,7 @@ Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: ne
 \end{itemize}
 
 \paragraph{Registro delle modifiche}%
-\label{par:registro delle modifiche}
+\label{par:registro_delle_modifiche}
 Il registro delle modifiche è la seconda pagina di ogni documento. Ha lo scopo di presentare quali cambiamenti sono stati effettuati e da parte di quale componente del gruppo. Consiste di quattro colonne ed è così articolato:
 \begin{description}
   \item [Versione]: indica la versione del documento in cui viene realizzata la modifica.
@@ -99,7 +102,8 @@ Il registro delle modifiche è la seconda pagina di ogni documento. Ha lo scopo 
 
 \paragraph{Indice}%
 \label{par:indice}
-L'indice inizia nella terza pagine del documento e presenta tutti gli argomenti trattati. Grupp0ne ha deciso di utilizzare la tipica suddivisione del testo offerta da \LaTeX che distingue cinque diversi blocchi testuali:
+L'indice inizia nella terza pagine del documento e presenta tutti gli argomenti trattati.
+GruppOne ha deciso di utilizzare la tipica suddivisione del testo offerta da \LaTeX{} che distingue cinque diversi blocchi testuali:
 
 \begin{itemize}
   \item Sezioni
@@ -109,7 +113,7 @@ L'indice inizia nella terza pagine del documento e presenta tutti gli argomenti 
   \item Sottoparagrafi
 \end{itemize}
 
-Ogni blocco testuale ha un numero identificativo univoco la cui lunghezza dipende dal grado di annidamento del blocco che è predefinita da \LaTeX (e.g.:\ la sezione Introduzione è indicata con 1, la relativa sottosezione quattro è indicata con 1.4 e i capitoli contenuti in quella sottosezione sono indicati con 1.4.1 e 1.4.2).
+Ogni blocco testuale ha un numero identificativo univoco la cui lunghezza dipende dal grado di annidamento del blocco che è predefinita da \LaTeX{} (e.g.:\ la sezione Introduzione è indicata con 1, la relativa sottosezione quattro è indicata con 1.4 e i capitoli contenuti in quella sottosezione sono indicati con 1.4.1 e 1.4.2).
 
 Ogni riga dell'indice contiene il numero di pagina in cui il blocco di testo è riferito e cliccando sopra il nome del blocco è possibile raggiungerlo direttamente attraverso un link.
 
@@ -123,11 +127,11 @@ Le pagine di contenuto sono suddivise in tre parti:
 \end{description}
 
 \paragraph{Norme per la redazione dei documenti}%
-\label{par:norme per la redazione dei documenti}
+\label{par:norme_per_la_redazione_dei_documenti}
 
 \subparagraph{Stile del testo}%
-\label{subp:stile del testo}
-In questo paragrafo Grupp0ne definisce le norme che uniformano lo stile di scrittura dei documenti:
+\label{subp:stile_del_testo}
+In questo paragrafo GruppOne definisce le norme che uniformano lo stile di scrittura dei documenti:
 \begin{description}
     \item [Verbi in forma attiva]: i verbi devono essere in forma attiva e al tempo presente indicativo o passato prossimo. È ammesso l'uso del futuro per esprimere azioni che devono ancora avvenire.
     \item [Struttura del testo chiara]: la suddivisione del testo in sezioni, sottosezioni e paragrafi aiuta la coerenza e la coesione.
@@ -149,7 +153,7 @@ Gli elenchi sono un mezzo ottimo per la scrittura di documentazione. Essi permet
 \end{enumerate}
 
 \subparagraph{Nomi dei file}%
-\label{nomi dei file}
+\label{nomi_dei_file}
 Per identificare i file memorizzati nel repository si seguono le seguenti convenzioni:
 
 \begin{itemize}
@@ -160,7 +164,7 @@ Per identificare i file memorizzati nel repository si seguono le seguenti conven
 Analisi dei requisiti sarà quindi salvato come analisi-dei-requisiti, mentre Norme di progetto come norme-di-progetto.
 
 \subparagraph{Sigle e convenzioni}%
-\label{sigle e convenzioni}
+\label{sigle_e_convenzioni}
 Si elencano una serie di sigle che possono essere utilizzate nei documenti. Si accompagna ad ognuna di esse il relativo significato:
 
 \begin{itemize}
@@ -179,6 +183,7 @@ Si elencano una serie di sigle che possono essere utilizzate nei documenti. Si a
     \item \textbf{PdP}: piano di progetto
     \item \textbf{MU}: manuale utente
     \item \textbf{MS}: manuale sviluppatore
+    \item \textbf{G}: glossario
     \item \textbf{V}: verbali
    \end{itemize}
  \end{itemize}
@@ -186,24 +191,30 @@ Si elencano una serie di sigle che possono essere utilizzate nei documenti. Si a
 \subparagraph{Immagini}%
 \label{subp:immagini}
 Le immagini si devono utilizzare per apportare un valore aggiunto a ciò che si sta descrivendo o per dare una rappresentazione grafica di ciò che si sta presentando.
-Immagini di bellezza non sono pertanto ammesse.
-Tutte le immagini devono essere inoltre centrate all'interno della pagina e munite di una breve didascalia così formata: \\\\\centerline{\textbf{Figura x : breve descrizione dell'immagine}} \\\\ dove x indica la numerazione delle immagini (e.g. figura 1, figura 2, figura 3).
+Immagini con funzione puramente estetica non sono pertanto ammesse, ad eccezione di quanto definito nel template comune.
+Tutte le immagini devono essere inoltre centrate all'interno della pagina e munite di una breve didascalia così formata:
+\begin{center}
+  \textbf{Figura x: breve descrizione dell'immagine}
+\end{center}
+dove x indica la numerazione delle immagini (e.g.:\ figura 1, figura 2, figura 3).
 
 \subparagraph{Tabelle}%
 \label{subp:tabelle}
-L'uso di tabelle è consigliato solo quando strettamente necessario. La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento in cui risulti molto difficile organizzare informazioni aventi una struttura complessa. È obbligatorio l'uso di colori che abbiano un elevato contrasto al fine di promuovere la leggibilità. Inoltre, non devono essere eccessivamente lunghe ( massimo 2 pagine), altrimenti risultano dispersive.
+L'uso di tabelle è consigliato solo quando strettamente necessario. La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento in cui risulti molto difficile organizzare informazioni aventi una struttura complessa. È obbligatorio l'uso di colori che abbiano un elevato contrasto al fine di promuovere la leggibilità. Inoltre, non devono essere eccessivamente lunghe (massimo 2 pagine), altrimenti risultano dispersive.
 
-\subsubsection{Produzione}
+\subsubsection{Produzione}%
+\label{subs:produzione}
 
 \paragraph{Suddivisione dei documenti}%
-\label{par:suddivisione dei documenti}
+\label{par:suddivisione_dei_documenti}
 I documenti utilizzano la struttura a \glossario{subfiles} offerta da \LaTeX.
 La struttura di base del documento è definita nel file che porta il nome del documento.
 La cartella components, che è unica per ogni documento, contiene un file per la definizione di ogni sezione. In ogni sezione si definiscono poi le relative sottosezioni, paragrafi e sottoparagrafi.
+
 Ad esempio, il file norme di progetto ha la seguente struttura:
 
 \begin{itemize}
-  \item ..\textbackslash interni
+  \item[] /interni/
   \begin{itemize}
   \item norme-di-progetto
      \begin{itemize}
@@ -218,11 +229,12 @@ Ad esempio, il file norme di progetto ha la seguente struttura:
      \end{itemize}
   \item studio-di-fattibilità
   \end{itemize}
+  \item[] \ldots
 \end{itemize}
 
 \subparagraph{Interni}%
-\label{subp:suddivisione dei documenti/interni}
- I documenti interni sono destinati alla comunicazione tra i componenti di Grupp0ne. Appartengono a tale categoria:
+\label{subp:suddivisione_dei_documenti/interni}
+I documenti interni sono destinati alla comunicazione tra i componenti di GruppOne. Appartengono a tale categoria:
 
 \begin{itemize}
   \item Verbali interni
@@ -231,7 +243,7 @@ Ad esempio, il file norme di progetto ha la seguente struttura:
 \end{itemize}
 
 \subparagraph{Esterni}%
-\label{subp:suddivisione dei documenti/esterni}
+\label{subp:suddivisione_dei_documenti/esterni}
 I documenti esterni sono destinati al committente. Appartengono a tale categoria:
 
 \begin{itemize}
@@ -242,10 +254,13 @@ I documenti esterni sono destinati al committente. Appartengono a tale categoria
 
 \subparagraph{Verbali}%
 \label{subp:verbali}
-I verbali contengono un riassunto degli incontri di Grupp0ne. Se qualche componente del gruppo non fosse presente a un incontro è necessario che prenda visione del relativo verbale in modo che possa informarsi su cosa è stato discusso alla riunione in cui era assente. I verbali sono così costituiti:
+I verbali contengono un riassunto degli incontri di GruppOne.
+Se qualche componente del gruppo non fosse presente a un incontro è necessario che prenda visione del relativo verbale in modo che possa informarsi su cosa è stato discusso alla riunione in cui era assente.
+I verbali sono così costituiti:
+
 \begin{description}
   \item [Titolo]: il titolo indica che il documento in questione è un verbale e mostra la data di redazione.
-  \item [Schema]: lo schema contiene le informazioni basilari relative al documento. È identico allo schema degli altri documenti, spiegato nella sezione \ref{par:frontespizio}.
+  \item [Schema]: lo schema contiene le informazioni basilari relative al documento. È identico allo schema degli altri documenti, spiegato nella sezione~\ref{par:frontespizio}.
   \item [Ordine del giorno]: l'ordine del giorno consiste in un elenco puntato degli argomenti che saranno trattati nel verbale. Ogni elemento dell'elenco verrà sviluppato in una sezione del documento che potrà contenere altre sottosezioni, paragrafi o sottoparagrafi.
 \end{description}
 
@@ -253,16 +268,16 @@ I verbali contengono un riassunto degli incontri di Grupp0ne. Se qualche compone
 
 \paragraph {\LaTeX}%
 \label{par:LaTeX}
-\LaTeX è lo strumento utilizzato da Grupp0ne per la stesura: si è preferito non utilizzare dei tool online per la scrittura dei documenti.
+\LaTeX è lo strumento utilizzato da GruppOne per la stesura: si è preferito non utilizzare dei tool online per la scrittura dei documenti.
 Ogni componente del gruppo ha scaricato, invece, un'estensione per il proprio IDE preferito (Sublime Text o Visual Studio Code) che consentisse l'installazione dei principali package di \LaTeX e che garantisse correttamente l'esecuzione del processo di build dei file *.tex.
 
 \subsection{Gestione della configurazione}%
-\label{sub:gestione della configurazione}
+\label{sub:gestione_della_configurazione}
 
 \subsubsection{Finalità}%
-\label{subs:gestione della configurazione/finalita}
+\label{subs:gestione_della_configurazione/finalita}
 
-Grupp0ne istanzia il processo di gestione della configurazione per:
+GruppOne istanzia il processo di gestione della configurazione per:
 \begin{itemize}
   \item Assicurare completezza e correttezza del prodotto
   \item Gestire al meglio il lavoro di gruppo
@@ -271,33 +286,33 @@ Grupp0ne istanzia il processo di gestione della configurazione per:
 \end{itemize}
 
 \subsubsection{Gestione versionamento}%
-\label{subs:gestione versionamento}
+\label{subs:gestione_versionamento}
 
 \paragraph{Repository}%
 \label{par:repository}
 
 \paragraph{Struttura dei commit}%
-\label{par:struttura dei commit}
+\label{par:struttura_dei_commit}
 
 \subsubsection{Strumenti}%
-\label{subs:gestione della configurazione/strumenti}
+\label{subs:gestione_della_configurazione/strumenti}
 
 \subsection{Accertamento della qualità}%
-\label{subs:accertamento della qualita}
+\label{subs:accertamento_della_qualita}
 
 \subsubsection{Finalità}%
-\label{subs:accertamento della qualita/finalita}
+\label{subs:accertamento_della_qualita/finalita}
 
-Grupp0ne istanzia il processo di accertamento della qualità per garantire qualità di processo e di prodotto.
+GruppOne istanzia il processo di accertamento della qualità per garantire qualità di processo e di prodotto.
 Gli esiti dei processi di verifica e validazione saranno indispensabili al buon svolgimento del processo di accertamento della qualità.
 
 \subsubsection{Descrizione}%
-\label{subs:accertamento della qualita/descrizione}
+\label{subs:accertamento_della_qualita/descrizione}
 
 Il processo di accertamento della qualità garantisce che i prodotti e i processi del ciclo di vita del software rispettino i requisiti prestabiliti e che aderiscano ai piani esecutivi prestabiliti. Le metriche e gli strumenti per valutare la qualità sono presentati nel \glossario{piano di qualifica}.
 
 \subsubsection{Attività}%
-\label{subs:accertamento della qualita/attivita}
+\label{subs:accertamento_della_qualita/attivita}
 
 Le principali attività coinvolte nel processo di accertamento della qualità sono:
 
@@ -308,11 +323,11 @@ Le principali attività coinvolte nel processo di accertamento della qualità so
 \end{description}
 
 \paragraph{Accertamento qualità di prodotto}%
-\label{par:accertamento qualita di prodotto}
+\label{par:accertamento_qualita_di_prodotto}
 L'attività di accertamento della qualità di prodotto vigila sulla qualità dei prodotti realizzati. Essa promuove controlli continui che possano prevenire danni irreparabili al termine del progetto. È fortemente dipendente dalla qualità di processo: da processi privi di qualità, infatti, non è possibile ottenere buoni prodotti.
 
 \paragraph{Accertamento qualità di processo}%
-\label{par:accertamento qualita di processo}
+\label{par:accertamento_qualita_di_processo}
 L'attività di accertamento della qualità di processo monitora i processi istanziati. Per avere un sistema di accertamento della qualità di processo che funzioni è necessario che:
 
 \begin{itemize}
@@ -344,8 +359,8 @@ Il ciclo di Deming o ciclo PDCA è un processo iterativo per il monitoraggio e i
 \subsubsection{Finalità}%
 \label{subs:verifica/finalita}
 
-Grupp0ne istanzia il processo di verifica per certificare che il susseguirsi di attività diverse non comporti l'introduzione di errori nei prodotti intermedi.
-Si deve verificare qualsiasi prodotti intermedio, pertanto sia documentazione che codice sono soggetti a verifica.
+GruppOne istanzia il processo di verifica per certificare che il susseguirsi di attività diverse non comporti l'introduzione di errori nei prodotti intermedi.
+Si deve verificare qualsiasi prodotti intermedio, pertanto sia documentazione che codice sono soggetti a verifica
 
 \subsubsection{Descrizione}%
 \label{subs:verifica/descrizione}
@@ -359,7 +374,7 @@ Il processo di verifica è il processo che controlla e garantisce che i prodotti
 \end{itemize}
 
 \paragraph{Analisi statica}%
-\label{par:analisi statica}
+\label{par:analisi_statica}
 L'analisi statica fornisce l'insieme delle buone pratiche che valutano un componente del sistema sulla base della sua forma, struttura e contenuto. L'analisi statica quindi definisce una serie di regole  a cui tutti i prodotti intermedi del ciclo di vita del software devono attenersi. Esistono due tipi di analisi statica:
 \begin{description}
   \item [Walkthrough]: La tecnica walkthrough esegue una verifica a largo spettro del prodotto. Si articola nelle seguenti attività:
@@ -377,10 +392,10 @@ L'analisi statica fornisce l'insieme delle buone pratiche che valutano un compon
     \item Correzione degli errori trovati.
   \end{itemize}
 \end{description}
-Grupp0ne predilige la tecnica inspection pertanto si impegna a fornire una checklist dei controlli da effettuare sui documenti e sul software.
+GruppOne predilige la tecnica inspection pertanto si impegna a fornire una checklist dei controlli da effettuare sui documenti e sul software.
 
 \subparagraph{Analisi statica dei documenti}%
-\label{subp:analisi statica dei documenti}
+\label{subp:analisi_statica_dei_documenti}
 Di seguito si riporta una checklist da seguire per effettuare l'analisi statica dei documenti:
 
 \begin{description}
@@ -391,10 +406,10 @@ Di seguito si riporta una checklist da seguire per effettuare l'analisi statica 
     \item [Errori nella strutturazione del documento]: si deve verificare che tutti i paragrafi si trovino nella sezione corretta, che le sezioni siano ben strutturate e che i titoli siano significativi.
 \end{description}
 
-Sarà compito dei verificatori attenersi alla checklist definita in~\ref{subp:analisi statica dei documenti} per le attività di verifica.
+Sarà compito dei verificatori attenersi alla checklist definita in~\ref{subp:analisi_statica_dei_documenti} per le attività di verifica.
 
 \paragraph{Analisi dinamica del codice}%
-\label{par:analisi dinamica del codice}
+\label{par:analisi_dinamica_del_codice}
 L'analisi dinamica del codice necessita che l'oggetto di verifica sia in esecuzione.
 Essa cerca di dimostrare che il programma svolge i compiti per il quale è stato realizzato e identifica gli errori prima che il software sia messo in uso.
 Si realizza attraverso la creazione e l'esecuzione di test che producono deterministicamente un risultato da confrontare con un valore atteso.
@@ -409,30 +424,30 @@ Un test affinché sia definito come tale deve avere delle precise caratteristich
 \end{itemize}
 
 \subparagraph{Copertura dei test}%
-\label{subp:copertura dei test}
+\label{subp:copertura_dei_test}
 Per ogni tipo di test è necessario fornire la sua copertura.
 Essa è un valore percentuale e indica quante linee di codice i test hanno esercitato sul totale.
 Più la copertura è alta meglio è, tuttavia una copertura del 100 \% non dà in alcun modo la certezza di essere in assenza di difetti.
 Il capitolato di Stalker richiede una copertura dei test pari almeno all' 80 \% corredata da report.
 
 \subparagraph{Test di unità}%
-\label{subp:test di unita}
+\label{subp:test_di_unita}
 Il software è un insieme di componenti. Per effettuare verifica del software è necessario adottare un approccio \glossario{bottom-up} che deve necessariamente occuparsi di controllare prima che le unità su cui è costruito il software siano corrette. I test di unità, quindi, servono proprio a testare i moduli elementari del software.
 
 \subparagraph{Test di integrazione}%
-\label{subp:test di integrazione}
+\label{subp:test_di_integrazione}
 I test di integrazione si occupano di verificare l'interazione tra le sottocomponenti del sistema. Essi suppongono che i test di unità siano già stati eseguiti e abbiano dato esito positivo. Lo scopo dei test di integrazione è, pertanto quello di dimostrare che le interfacce delle componenti del software si comportino conformemente alle specifiche richieste.
 
 \subparagraph{Test di sistema}%
-\label{test di sistemaa}
+\label{test_di_sistemaa}
 I test di sistema si possono iniziare solo nel momento in cui i test di integrazione abbiano dato esito positivo. Essi verificano il comportamento generale del software rispetto ai requisiti. Durante i test di sistema si esercitano quelle funzionalità di alcune componenti del software che sono fortemente dipendenti da altri moduli del sistema.
 
 \subparagraph{Test di regressione}%
-\label{test di regressione}
+\label{test_di_regressione}
 I test di regressione servono per accertare che modifiche apportate non comportino altri errori nel software: consiste nella ripetizione selettiva di test di unità, test di integrazione, test di sistema.
 
 \subparagraph{Test di accettazione}%
-\label{test di accettazione}
+\label{test_di_accettazione}
 I test di accettazione verificano il completo soddisfacimento dei requisiti utente. Sono eseguiti in collaborazione con il committente.
 
 \paragraph{Strumenti}%
@@ -441,12 +456,14 @@ I test di accettazione verificano il completo soddisfacimento dei requisiti uten
 \subparagraph{Linter}%
 \label{subp:linter}
 
-Per la verifica del codice ogni componente del team ha installato sulla propria macchina un linter. Un linter o lint è uno strumento che analizza il codice sorgente per determinare errori di programmazione o costrutti sintattici ritenuti non corretti. Il gruppo ha scelto di utilizzare chktek, il \LaTeX  syntax checker ufficiale di \LaTeX.
+Per la verifica del codice ogni componente ha installato sulla propria macchina un \glossario{linter}. Il gruppo ha scelto di utilizzare \href{https://www.nongnu.org/chktex/}{Chk\TeX}, che è incluso nella maggior parte delle distribuzioni \LaTeX{} ed è facilmente configurabile per le nostre necessità.
+
+% TODO parlare della GitHub action?
 
 \subparagraph{Code owners}%
-\label{subp:code owners}
+\label{subp:code_owners}
 
-Per la gestione delle pull request Grupp0ne ha optato per l'utilizzo di Code Owners. Code Owners è uno strumento che permette di attribuire responsabilità all'interno di un team: ad ogni documento di progetto corrisponde un Code Owner il quale verrà notificato ogniqualvolta un verificatore del team aprirà una pull request su un file di cui è responsabile. Ogni pull request sarà quindi approvata solo se il corrispettivo code owner ne prende visione e concorda con le modifiche proposte.
+Per la gestione delle pull request GruppOne ha optato per l'utilizzo di Code Owners. Code Owners è uno strumento che permette di attribuire responsabilità all'interno di un team: ad ogni documento di progetto corrisponde un Code Owner il quale verrà notificato ogniqualvolta un verificatore del team aprirà una pull request su un file di cui è responsabile. Ogni pull request sarà quindi approvata solo se il corrispettivo code owner ne prende visione e concorda con le modifiche proposte.
 
 \subsection{Validazione}%
 \label{sub:validazione}
@@ -454,7 +471,7 @@ Per la gestione delle pull request Grupp0ne ha optato per l'utilizzo di Code Own
 \subsubsection{Finalità}%
 \label{subs:validazione/finalita}
 
-Grupp0ne istanzia il processo di validazione per assicurarsi che il prodotto finale realizzato abbia pienamente soddisfatto le attese del committente.
+GruppOne istanzia il processo di validazione per assicurarsi che il prodotto finale realizzato abbia pienamente soddisfatto le attese del committente.
 
 \subsubsection{Descrizione}%
 \label{subs:validazione/descrizione}
@@ -462,7 +479,7 @@ Grupp0ne istanzia il processo di validazione per assicurarsi che il prodotto fin
 Dovendo verificare se il prodotto finale soddisfa i requisiti, anche il processo di validazione fa uso dell'analisi dinamica del codice e quindi di test ad hoc per dimostrare la correttezza del prodotto.
 
 \subsubsection{Piano di validazione}%
-\label{subs:piano di validazione}
+\label{subs:piano_di_validazione}
 
 Il piano di validazione comprende tutte le attività del processo di validazione:
 
