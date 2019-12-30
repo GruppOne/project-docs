@@ -157,12 +157,26 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
 \begin{itemize}
   \item \textbf{Attori primari:} \glossario{utente autenticato};
   \item \textbf{Descrizione:} l'\glossario{utente autenticato} richiede il compito di \glossario{owner}, per poi richiedere di creare un'\glossario{organizzazione};
-  \item \textbf{Scenario principale:} un \glossario{utente autenticato} vuole iniziare ad utilizzare \glossario{Stalker} creando una sua \glossario{organizzazione};
+  \item \textbf{Scenario principale:} l'\glossario{utente autenticato} vuole iniziare ad utilizzare \glossario{Stalker} creando una sua \glossario{organizzazione};
   \item \textbf{Precondizione:} l'\glossario{utente autenticato} non deve essere un \glossario{owner};
   \item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{utente autenticato} diventerà un \glossario{owner}.
 
 \end{itemize}
 % subsub:UC2 (end)
+
+
+\subsubsection{UC3 - Logout}
+\label{subsub:UC3}
+
+\begin{itemize}
+  \item \textbf{Attori primari:} \glossario{utente autenticato};
+  \item \textbf{Descrizione:} l'\glossario{utente autenticato} effettua il logout dalla piattaforma;
+  \item \textbf{Scenario principale:} l'\glossario{utente autenticato} vuole effettuare il logout dalla piattaforma;
+  \item \textbf{Precondizione:} il sistema ha reso disponibile la possibilità di effettuare il logout;
+  \item \textbf{Postcondizione:} l'\glossario{utente autenticato} diventerà un \glossario{utente non autenticato}, effettuando il logout.
+
+\end{itemize}
+% subsub:UC3 (end)
 
 
 % par:utente-autenticato (end)
