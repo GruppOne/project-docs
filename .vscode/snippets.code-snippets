@@ -1,0 +1,72 @@
+{
+  // Place your project-docs workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "chapter": {
+    "prefix": "chapter",
+    "body": [
+      "\\chapter{${1:chapter}}%",
+      "\\label{chap:${1/(\\w)|( )/${1:/downcase}${2:+_}/g}}",
+      "$0",
+      "% chap:${1/(\\w)|( )/${1:/downcase}${2:+_}/g} (end)"
+    ]
+  },
+  "section": {
+    "prefix": "section",
+    "body": [
+      "\\section{${1:section}}%",
+      "\\label{sec:${1/(\\w)|( )/${1:/downcase}${2:+_}/g}}",
+      "$0",
+      "% sec:${1/(\\w)|( )/${1:/downcase}${2:+_}/g} (end)"
+    ]
+  },
+  "subsection": {
+    "prefix": "subsection",
+    "body": [
+      "\\subsection{${1:subsection}}%",
+      "\\label{sub:${1/(\\w)|( )/${1:/downcase}${2:+_}/g}}",
+      "$0",
+      "% sub:${1/(\\w)|( )/${1:/downcase}${2:+_}/g} (end)"
+    ]
+  },
+  "subsubsection": {
+    "prefix": "subsubsection",
+    "body": [
+      "\\subsubsection{${1:subsubsection}}%",
+      "\\label{subs:${1/(\\w)|( )/${1:/downcase}${2:+_}/g}}",
+      "$0",
+      "% subs:${1/(\\w)|( )/${1:/downcase}${2:+_}/g} (end)"
+    ]
+  },
+  "paragraph": {
+    "prefix": "paragraph",
+    "body": [
+      "\\paragraph{${1:paragraph}}%",
+      "\\label{par:${1/(\\w)|( )/${1:/downcase}${2:+_}/g}}",
+      "$0",
+      "% par:${1/(\\w)|( )/${1:/downcase}${2:+_}/g} (end)"
+    ]
+  },
+  "subparagraph": {
+    "prefix": "subparagraph",
+    "body": [
+      "\\subparagraph{${1:subparagraph}}%",
+      "\\label{subp:${1/(\\w)|( )/${1:/downcase}${2:+_}/g}}",
+      "$0",
+      "% subp:${1/(\\w)|( )/${1:/downcase}${2:+_}/g} (end)"
+    ]
+  }
+}
