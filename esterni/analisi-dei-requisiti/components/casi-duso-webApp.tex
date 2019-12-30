@@ -175,8 +175,9 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
   \item \textbf{Scenario principale:} l'\glossario{utente autenticato} vuole iniziare ad utilizzare \glossario{Stalker} creando una sua \glossario{organizzazione};
   \item \textbf{Inclusioni}:
         \\a. Verifica tipologia utente \emph{[UC2.1]};
-        \\a. Invio richiesta owner \emph{[UC2.2]}.
-
+        \\b. Invio richiesta owner \emph{[UC2.2]}.
+  \item \textbf{Estensioni}:
+  \item \\a. Richiesta rifiutata \emph{[UC.2.3]}.
 
 \end{itemize}
 % subsub:UC2 (end)
@@ -211,6 +212,20 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
   \item \textbf{Precondizione:} l'\glossario{utente autenticato} utilizza l'apposito form per inviare la richiesta per diventare \glossario{owner};
   \item \textbf{Postcondizione:} viene inviata la richiesta, in attesa di essere approvata da un \glossario{amministratore};
   \item \textbf{Scenario principale:} l'\glossario{utente autenticato} invia la richiesta per diventare \glossario{owner}.
+\end{itemize}
+% subsub:UC2.2 (end)
+
+
+\subsubsection{UC2.3 - Richiesta rifiutata}
+\label{subsub:UC2.3}
+
+\begin{itemize}
+  \item \textbf{Codice:} UC2.3;
+  \item \textbf{Titolo:} Richiesta rifiutata;
+  \item \textbf{Attori primari:} \glossario{utente autenticato};
+  \item \textbf{Precondizione:} l'\glossario{utente autenticato} ha inviato la propria richiesta per diventare \glossario{owner}, l'\glossario{amministratore} ha rifiutato la richiesta;
+  \item \textbf{Postcondizione:} l'\glossario{utente autenticato} non ha ottenuto l'abilitazione per un \glossario{owner}, visualizza un errore.
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} non ha accettato la richiesta posta dall'\glossario{utente autenticato}.
 \end{itemize}
 % subsub:UC2.2 (end)
 
