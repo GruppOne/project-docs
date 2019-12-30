@@ -158,11 +158,43 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
   \item \textbf{Attori primari:} \glossario{utente autenticato};
   \item \textbf{Descrizione:} l'\glossario{utente autenticato} richiede il compito di \glossario{owner}, per poi richiedere di creare un'\glossario{organizzazione};
   \item \textbf{Scenario principale:} l'\glossario{utente autenticato} vuole iniziare ad utilizzare \glossario{Stalker} creando una sua \glossario{organizzazione};
+  \item \textbf{Inclusioni}:
+        \\a. Verifica tipologia utente \emph{[UC2.1]};
+        \\a. Invio richiesta owner \emph{[UC2.2]};
   \item \textbf{Precondizione:} l'\glossario{utente autenticato} non deve essere un \glossario{owner};
-  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{utente autenticato} diventerà un \glossario{owner}.
+  \item \textbf{Postcondizione:} se viene approvata la richiesta, l'\glossario{utente autenticato} diventerà un \glossario{owner}.
 
 \end{itemize}
 % subsub:UC2 (end)
+
+
+\subsubsection{UC2.1 - Verifica tipologia utente}
+\label{subsub:UC2.1}
+
+\begin{itemize}
+  \item \textbf{Attori primari:} \glossario{utente autenticato};
+  \item \textbf{Scenario principale:} l'\glossario{utente autenticato} può richiedere di diventare un \glossario{owner}, nel caso in cui sia:
+  un \glossario{amministratore}, un \glossario{visualizzatore}, un \glossario{gestore} oppure un utente senza alcun privilegio. \\
+  Ogni tentativo di richiesta da un già \glossario{owner} viene rifiutato.
+  \glossario{Root} è già un \glossario{owner}.
+  L'\glossario{amministratore} potrà accettare la propria richiesta inviata. 
+  \item \textbf{Precondizione:} l'\glossario{utente autenticato} visualizza l'apposito form per inviare la richiesta per diventare \glossario{owner};
+  \item \textbf{Postcondizione:} il form relativo alla richiesta di \glossario{owner} viene abilitato o disabilitato di conseguenza.
+
+\end{itemize}
+% subsub:UC2.1 (end)
+
+\subsubsection{UC2.2 - Invio richiesta owner}
+\label{subsub:UC2.2}
+
+\begin{itemize}
+  \item \textbf{Attori primari:} \glossario{utente autenticato};
+  \item \textbf{Scenario principale:} l'\glossario{utente autenticato} invia la richiesta per diventare \glossario{owner};
+  \item \textbf{Precondizione:} l'\glossario{utente autenticato} utilizza l'apposito form per inviare la richiesta per diventare \glossario{owner};
+  \item \textbf{Postcondizione:} viene inviata la richiesta, in attesa di essere approvata da un \glossario{amministratore}.
+
+\end{itemize}
+% subsub:UC2.2 (end)
 
 
 \subsubsection{UC3 - Logout}
