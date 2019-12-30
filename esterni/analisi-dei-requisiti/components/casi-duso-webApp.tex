@@ -252,21 +252,50 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 
 %inserire UML generale amministratore
 
-\subsubsection{UC2 - Approvazione owner}
-\label{subsub:UC2}
+\subsubsection{UC4 - Gestione richieste owner}
+\label{subsub:UC4}
 
 \begin{itemize}
+  \item \textbf{Codice:} UC4;
+  \item \textbf{Titolo:} Gestione richieste owner;
   \item \textbf{Attori primari:} \glossario{amministratore};
-  \item \textbf{Descrizione:} l'\glossario{amministratore} approva il compito di \glossario{owner} ad un gestore di una \glossario{organizzazione};
-  \item \textbf{Scenario principale:} deve essere assegnato ad un'\glossario{organizzazione} un \glossario{owner};
-  \item \textbf{Precondizione:} l'\glossario{organizzazione} scelta non deve avere nessun \glossario{owner} approvato;
-  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{organizzazione} avrà un nuovo \glossario{owner}.
-
+  \item \textbf{Precondizione:} l'\glossario{utente autenticato} deve aver richiesto di diventare un \glossario{owner};
+  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'\glossario{utente autenticato} sarà informato;
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} gestisce le richieste inviate dagli utenti autenticati di diventare \glossario{owner};
+  \item \textbf{Inclusioni}:
+        \\a. Accetta richiesta \emph{[UC4.1]};
+        \\b. Rifiuta richiesta \emph{[UC4.2]}.
 \end{itemize}
-% subsub:UC2 (end)
+% subsub:UC4 (end)
+
+\subsubsection{UC4.1 - Accetta richiesta owner}
+\label{subsub:UC4.1}
+
+\begin{itemize}
+  \item \textbf{Codice:} UC4.1;
+  \item \textbf{Titolo:} Accetta richiesta owner;
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Precondizione:} l'\glossario{utente autenticato} deve aver richiesto di diventare un \glossario{owner};
+  \item \textbf{Postcondizione:} viene approvata la richiesta da parte di un \glossario{amministratore};
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} accetta la richiesta inviata dall'\glossario{utente autenticato} di diventare \glossario{owner};
+\end{itemize}
+% subsub:UC4.1 (end)
+
+\subsubsection{UC4.2 - Rifiuta richiesta owner}
+\label{subsub:UC4.2}
+
+\begin{itemize}
+  \item \textbf{Codice:} UC4.2;
+  \item \textbf{Titolo:} Accetta richiesta owner;
+  \item \textbf{Attori primari:} \glossario{amministratore};
+  \item \textbf{Precondizione:} l'\glossario{utente autenticato} deve aver richiesto di diventare un \glossario{owner};
+  \item \textbf{Postcondizione:} viene rifiutata la richiesta da parte di un \glossario{amministratore};
+  \item \textbf{Scenario principale:} l'\glossario{amministratore} rifiuta la richiesta inviata dall'\glossario{utente autenticato} di diventare \glossario{owner};
+\end{itemize}
+% subsub:UC4.2 (end)
+
 \subsubsection{UC3 - Approvazione creazione organizzazione}
 \label{subsub:UC3}
-
 \begin{itemize}
   \item \textbf{Attori primari:} \glossario{amministratore};
   \item \textbf{Descrizione:} l'\glossario{amministratore} approva la richiesta di creazione di una nuova \glossario{organizzazione};
