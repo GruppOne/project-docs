@@ -42,12 +42,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
 
 
 \begin{itemize}
+  \item \textbf{Codice:} UC1;
+  \item \textbf{Titolo:} Sistema di autenticazione;
   \item \textbf{Attori primari:} \glossario{utente non autenticato};
-  \item \textbf{Descrizione:} l'\glossario{utente non autenticato} tenta di autenticarsi al sistema;
-  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} non è ancora autenticato e vuole eseguire il login;
   \item \textbf{Precondizione:} l'\glossario{utente non autenticato} non è autenticato alla piattaforma;
-  \item \textbf{Postcondizione:} l'\glossario{utente} ha effettuato correttamente il login nel sistema.
-
+  \item \textbf{Postcondizione:} l'\glossario{utente} ha effettuato correttamente il login nel sistema;
+  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} non è ancora autenticato e vuole eseguire il login.
 \end{itemize}
 % subsub:UC1 (end)
 \subsubsection{UC1.1 - Autenticazione}
@@ -76,31 +76,35 @@ A1.1 -- UC1.1.2
 
 
 \begin{itemize}
+  \item \textbf{Codice:} UC1.1;
+  \item \textbf{Titolo:} Autenticazione;
   \item \textbf{Attori primari:} \glossario{utente non autenticato};
-  \item \textbf{Descrizione:} l'\glossario{utente non autenticato} visualizza la pagina di login, dove poter inserire le proprie credenziali.
-  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} accede alla pagina di login, e visualizza tutti i campi da compilare:
-        \\a. Inserisce l’email associata all’account \emph{[UC1.1.1]};
-        \\b. Inserisce la password associata all’account \emph{[UC1.1.2]};
-  \item Estensioni:
-        \\a. Visualizzazione messaggio di credenziali errate \emph{[UC1.3]};
-  \item Inclusioni:
-        \\a. Verifica credenziali \emph{[UC1.2]};
   \item \textbf{Precondizione:} il sistema è raggiungibile e funzionante, l'\glossario{utente non autenticato} deve poter visualizzare la pagina di login;
   \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} ha inserito le possibili credenziali e sta tentando di effettuare il login. Ogni volta che cercherà di effettuare
         login sarà verificato che le credenziali inserite siano corrette. In caso contrario verrà visualizzato un messaggio di errore, e l'accesso sarà negato;
-
+  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} accede alla pagina di login, e visualizza tutti i campi da compilare:
+        \\a. Inserisce l’email associata all’account \emph{[UC1.1.1]};
+        \\b. Inserisce la password associata all’account \emph{[UC1.1.2]}.
+  \item Estensioni:
+        \\a. Visualizzazione messaggio di credenziali errate \emph{[UC1.3]}.
+  \item Inclusioni:
+        \\a. Verifica credenziali \emph{[UC1.2]}.
+  
 \end{itemize}
 % subsub:UC1.1 (end)
 
-\subsubsection{UC1.1.1 - Inserimento e-mail}
+\subsubsection{UC1.1.1 - Inserimento username}
 \label{subsub:UC1.1.1}
 
 \begin{itemize}
+  \item \textbf{Codice:} UC1.1.1;
+  \item \textbf{Titolo:} Inserimento username;
   \item \textbf{Attori primari:} \glossario{utente non autenticato};
-  \item \textbf{Descrizione:} al fine di portare a termine il processo di login di un \glossario{utente}, esso deve inserire la propria e-mail, campo obbligatorio;
-  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} compila il campo relativo alla sua e-mail di registrazione;
-  \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento della e-mail;
-  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} ha compilato il campo relativo alla sua e-mail.
+  \item \textbf{Descrizione:} al fine di portare a termine il processo di login di un \glossario{utente}, esso deve inserire il proprio username, campo obbligatorio;
+  \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento del proprio username;
+  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} ha compilato il campo relativo al proprio username;
+  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} compila il campo relativo al proprio username di registrazione.
+
 \end{itemize}
 % subsub:UC1.1.1 (end)
 
@@ -108,11 +112,14 @@ A1.1 -- UC1.1.2
 \label{subsub:UC1.1.2}
 
 \begin{itemize}
+  \item \textbf{Codice:} UC1.1.2;
+  \item \textbf{Titolo:} Inserimento password;
   \item \textbf{Attori primari:} \glossario{utente non autenticato};
   \item \textbf{Descrizione:} al fine di portare a termine il processo di login di un \glossario{utente}, esso deve inserire la propria password, campo obbligatorio;
-  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} compila il campo relativo alla sua password di registrazione;
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento della password;
-  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} ha compilato il campo relativo alla sua password.
+  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} ha compilato il campo relativo alla sua password;
+  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} compila il campo relativo alla sua password di registrazione.
+  
 \end{itemize}
 % subsub:UC1.1.2 (end)
 
@@ -121,13 +128,14 @@ A1.1 -- UC1.1.2
 \label{subsub:UC1.2}
 
 \begin{itemize}
+  \item \textbf{Codice:} UC1.2;
+  \item \textbf{Titolo:} Verifica credenziali;
   \item \textbf{Attori primari:} \glossario{utente non autenticato};
   \item \textbf{Descrizione:} vengono verificate le credenziali immesse dall'\glossario{utente non autenticato};
-  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse;
   \item \textbf{Precondizione:} l'\glossario{utente non autenticato} ha inviato al server le sue credenziali per tentare il login;
   \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} deve poter accedere alla sua area riservata, nel caso in cui le credenziali siano corrette. In caso
-        contrario deve essere visualizzato un messaggio di credenziali sbagliate \emph{[UC1.3]}.
-
+        contrario deve essere visualizzato un messaggio di credenziali sbagliate \emph{[UC1.3]};
+  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse.
 \end{itemize}
 
 % subsub:UC1.2 (end)
@@ -135,11 +143,14 @@ A1.1 -- UC1.1.2
 \label{subsub:UC1.3}
 
 \begin{itemize}
+  \item \textbf{Codice:} UC1.3;
+  \item \textbf{Titolo:} Visualizzazione credenziali errate;
   \item \textbf{Attori primari:} \glossario{utente non autenticato};
   \item \textbf{Descrizione:} viene visualizzato un errore di login;
-  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} cerca di effettuare il login con delle credenziali sbagliate;
   \item \textbf{Precondizione:} l'\glossario{utente non autenticato} ha inviato al server le sue credenziali per tentare il login, e le credenziali sono state verificate;
-  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} visualizza un messaggio di credenziali sbagliate.
+  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} visualizza un messaggio di credenziali sbagliate;
+  \item \textbf{Scenario principale:} l'\glossario{utente non autenticato} cerca di effettuare il login con delle credenziali sbagliate.
+  
 
 \end{itemize}
 
@@ -155,14 +166,17 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
 \label{subsub:UC2}
 
 \begin{itemize}
+  \item \textbf{Codice:} UC2;
+  \item \textbf{Titolo:} Richiesta owner;
   \item \textbf{Attori primari:} \glossario{utente autenticato};
   \item \textbf{Descrizione:} l'\glossario{utente autenticato} richiede il compito di \glossario{owner}, per poi richiedere di creare un'\glossario{organizzazione};
+  \item \textbf{Precondizione:} l'\glossario{utente autenticato} non deve essere un \glossario{owner};
+  \item \textbf{Postcondizione:} se viene approvata la richiesta, l'\glossario{utente autenticato} diventerà un \glossario{owner};
   \item \textbf{Scenario principale:} l'\glossario{utente autenticato} vuole iniziare ad utilizzare \glossario{Stalker} creando una sua \glossario{organizzazione};
   \item \textbf{Inclusioni}:
         \\a. Verifica tipologia utente \emph{[UC2.1]};
-        \\a. Invio richiesta owner \emph{[UC2.2]};
-  \item \textbf{Precondizione:} l'\glossario{utente autenticato} non deve essere un \glossario{owner};
-  \item \textbf{Postcondizione:} se viene approvata la richiesta, l'\glossario{utente autenticato} diventerà un \glossario{owner}.
+        \\a. Invio richiesta owner \emph{[UC2.2]}.
+
 
 \end{itemize}
 % subsub:UC2 (end)
@@ -172,14 +186,17 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
 \label{subsub:UC2.1}
 
 \begin{itemize}
+  \item \textbf{Codice:} UC2.1;
+  \item \textbf{Titolo:} Verifica tipologia utente;
   \item \textbf{Attori primari:} \glossario{utente autenticato};
+  \item \textbf{Precondizione:} l'\glossario{utente autenticato} visualizza l'apposito form per inviare la richiesta per diventare \glossario{owner};
+  \item \textbf{Postcondizione:} il form relativo alla richiesta di \glossario{owner} viene abilitato o disabilitato di conseguenza;
   \item \textbf{Scenario principale:} l'\glossario{utente autenticato} può richiedere di diventare un \glossario{owner}, nel caso in cui sia:
   un \glossario{amministratore}, un \glossario{visualizzatore}, un \glossario{gestore} oppure un utente senza alcun privilegio. \\
   Ogni tentativo di richiesta da un già \glossario{owner} viene rifiutato.
   \glossario{Root} è già un \glossario{owner}.
   L'\glossario{amministratore} potrà accettare la propria richiesta inviata. 
-  \item \textbf{Precondizione:} l'\glossario{utente autenticato} visualizza l'apposito form per inviare la richiesta per diventare \glossario{owner};
-  \item \textbf{Postcondizione:} il form relativo alla richiesta di \glossario{owner} viene abilitato o disabilitato di conseguenza.
+  
 
 \end{itemize}
 % subsub:UC2.1 (end)
@@ -188,11 +205,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
 \label{subsub:UC2.2}
 
 \begin{itemize}
+  \item \textbf{Codice:} UC2.2;
+  \item \textbf{Titolo:} Invio richiesta owner;
   \item \textbf{Attori primari:} \glossario{utente autenticato};
-  \item \textbf{Scenario principale:} l'\glossario{utente autenticato} invia la richiesta per diventare \glossario{owner};
   \item \textbf{Precondizione:} l'\glossario{utente autenticato} utilizza l'apposito form per inviare la richiesta per diventare \glossario{owner};
-  \item \textbf{Postcondizione:} viene inviata la richiesta, in attesa di essere approvata da un \glossario{amministratore}.
-
+  \item \textbf{Postcondizione:} viene inviata la richiesta, in attesa di essere approvata da un \glossario{amministratore};
+  \item \textbf{Scenario principale:} l'\glossario{utente autenticato} invia la richiesta per diventare \glossario{owner}.
 \end{itemize}
 % subsub:UC2.2 (end)
 
@@ -201,12 +219,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
 \label{subsub:UC3}
 
 \begin{itemize}
+  \item \textbf{Codice:} UC3;
+  \item \textbf{Titolo:} Logout;
   \item \textbf{Attori primari:} \glossario{utente autenticato};
-  \item \textbf{Descrizione:} l'\glossario{utente autenticato} effettua il logout dalla piattaforma;
-  \item \textbf{Scenario principale:} l'\glossario{utente autenticato} vuole effettuare il logout dalla piattaforma;
   \item \textbf{Precondizione:} il sistema ha reso disponibile la possibilità di effettuare il logout;
   \item \textbf{Postcondizione:} l'\glossario{utente autenticato} diventerà un \glossario{utente non autenticato}, effettuando il logout.
-
+  \item \textbf{Scenario principale:} l'\glossario{utente autenticato} vuole effettuare il logout dalla piattaforma;
 \end{itemize}
 % subsub:UC3 (end)
 
