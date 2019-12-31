@@ -228,7 +228,7 @@ rectangle {
 @startuml UCVisualizzazioneStorico
 !include ../../../../commons/style/use-cases.pu
 
-title UC10 - Visualizzazione storico degli accessi
+title UC10 - Storico utente
 
 actor :utente autenticato: as A
 
@@ -249,7 +249,7 @@ rectangle {
 @startuml UCVisualizzazioneTempo
 !include ../../../../commons/style/use-cases.pu
 
-title UC11 - Visualizzazione tempo trascorso organizzazione
+title UC11 - Tempo utente nell'organizzazione
 
 actor :utente autenticato: as A3
 actor :utente collegato: as A3.1
