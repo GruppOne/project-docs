@@ -1,138 +1,271 @@
-@startuml UC1
+@startuml UCAperturaApp
 !include ../../../../commons/style/use-cases.pu
 
-title UC1
+title UC1 - Apertura applicazione mobile
 
-together {
-  actor :utente non registrato: as A1
-  actor :utente non autenticato: as A2
-}
-
-' actor :utente autenticato incognito: as A4
-' actor :utente autenticato noto: as A5
+actor :utente non registrato: as A1
+actor :utente non autenticato: as A2
 
 rectangle {
   together {
-    usecase (UC1.1) as "UC1.1\nregistrazione"
-    usecase (UC1.1.1) as "UC1.1.1\nvisualizzazione EULA"
-    usecase (UC1.1.2) as "UC1.1.2\ninformazioni non valide"
-  }
-
-  together {
-    usecase (UC1.2) as "UC1.2\nautenticazione"
-    usecase (UC1.2.1) as "UC1.2.1\ncredenziali errate"
+    usecase (UC2) as "UC2\nRegistrazione"
+    usecase (UC3) as "UC3\nAutenticazione"
+    usecase (UC4) as "UC4\nRecupero credenziali"
   }
 }
 
-' #TODO aggiungere condizione errore sugli extend
-
-:A1: -- (UC1.1)
-
-(UC1.1.1) ..|> (UC1.1) : <<extends>>
-(UC1.1) ..|> (UC1.1.2) : <<include>>
-
-:A2: -- (UC1.2)
-
-(UC1.1) ..|> (UC1.2) : <<include>>
-(UC1.2.1) ..|> (UC1.2) : <<extends>>
-
-' #TODO valutare se aggiungere collegamenti incrociati tra A e UC
-' :A2: -- (UC1.1)
-' :A1: -- (UC1.2)
+:A1: -- (UC2)
+:A2: -- (UC3)
+:A2: -- (UC4)
 
 @enduml
 
-@startuml UC2
+@startuml UCRegistrazione
 !include ../../../../commons/style/use-cases.pu
-left to right direction
 
-title UC2
+title UC2 - Registrazione
+
+actor :utente non registrato: as A
+
+rectangle {
+  together {
+    usecase (UC2.1) as "UC2.1\nVisualizzazione EULA"
+    usecase (UC2.2) as "UC2.2\nInserimento dati registrazione"
+    usecase (UC2.1.1) as "UC2.1.1\nConferma EULA"
+  }  
+}
+
+:A: -- (UC2.1)
+:A: -- (UC2.2)
+
+(UC2.1.1) .up.|> (UC2.1) : <<include>>
+
+@enduml
+
+@startuml UCInserimentoDatiRegistrazione
+!include ../../../../commons/style/use-cases.pu
+
+title UC2.2 - Inserimento dati registrazione
+
+actor :utente non registrato: as A
+
+rectangle {
+  together {
+    usecase (UC2.2.1) as "UC2.2.1\nRegistrazione email\n--\nExtension points:\nVisualizzazione errore se la mail\nnon è scritta in modo corretto"
+    usecase (UC2.2.2) as "UC2.2.2\nRegistrazione password\n--\nExtension points:\nVisualizzazione errore se la\npassword non rispetta i criteri" 
+    usecase (UC2.2.3) as "UC2.2.3\nConferma password\n--\nExtension points:\nVisualizzazione errore se le\ndue password non coincidono"     
+    usecase (UC2.2.4) as "UC2.2.4\nInserimento dati anagrafici\n--\nExtension points:\nVisualizzazione errore\ndati mancanti" 
+    usecase (UC2.2.5) as "UC2.2.5\nInformazioni registrazione non valide"
+  }
+}
+
+:A: -- (UC2.2.1)
+:A: -- (UC2.2.2)
+:A: -- (UC2.2.3)
+:A: -- (UC2.2.4)
+
+(UC2.2.5) .up.|> (UC2.2.4) : <<extends>>
+(UC2.2.5) .up.|> (UC2.2.3) : <<extends>>
+(UC2.2.5) .up.|> (UC2.2.2) : <<extends>>
+(UC2.2.5) .up.|> (UC2.2.1) : <<extends>>
+
+@enduml
+
+@startuml UCAutenticazione
+!include ../../../../commons/style/use-cases.pu
+
+title UC3 - Autenticazione
+
+actor :utente non autenticato: as A
+
+rectangle {
+  together {
+    usecase (UC3.1) as "UC3.1\nInserimento email\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
+    usecase (UC3.2) as "UC3.2\nInserimento password\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate" 
+    usecase (UC3.3) as "UC3.3\nInformazioni autenticazione non valide"     
+  }
+}
+
+:A: -- (UC3.1)
+:A: -- (UC3.2)
+
+(UC3.3) .up.|> (UC3.2) : <<extends>>
+(UC3.3) .up.|> (UC3.1) : <<extends>>
+
+@enduml
+
+@startuml UCRecuperoCredenziali
+!include ../../../../commons/style/use-cases.pu
+
+title UC4 - Recupero credenziali
+
+actor :utente non autenticato: as A
+
+rectangle {
+  together {
+    usecase (UC4.1) as "UC4.1\nRecupero password" 
+  }
+}
+
+:A: -- (UC4.1)
+
+@enduml
+
+@startuml UCVisualizzazioneOrganizzazioni
+!include ../../../../commons/style/use-cases.pu
+
+title UC5 - Visualizzazione organizzazioni
+
+actor :utente autenticato: as A
+
+rectangle {
+  together {
+    usecase (UC5.1) as "UC5.1\nVisualizzazione\nlista organizzazioni\n--\nExtension points:\nVisualizzazione errore causa\n-richiesta di visualizzazione della lista con rete mancante\n-aggiornamento della lista con rete mancante"
+    usecase (UC5.1.1) as "UC5.1.1\nAggiornamento\nlista organizzazioni"
+    usecase (UC6) as "UC6\nVisualizzazione errore\nrete mancante"
+  }
+}
+
+:A: -- (UC5.1)
+
+(UC5.1.1) .up.|> (UC5.1) : <<include>>
+(UC6) .up.|> (UC5.1) : <<extends>>
+
+@enduml
+
+@startuml UCCollegamentoOrganizzazione
+!include ../../../../commons/style/use-cases.pu
+
+title UC7 - Collegamento organizzazione
 
 actor :utente autenticato: as A3
+actor :utente non collegato: as A3.1
 
+:A3.1: -up-|> :A3:
+
+rectangle {
+  together {
+    usecase (UC7.1) as "UC7.1\nSelezionamento di un'organizzazione\n--\nExtension points:\nVisualizzazione errore in caso di\nselezionamento di un'organizzazione\n con rete mancante"
+    usecase (UC6) as "UC6\nVisualizzazione errore\nrete mancante"
+  }
+}
+
+:A3.1: -- (UC7.1)
+
+(UC6) .up.|> (UC7.1) : <<extends>>
+
+@enduml
+
+@startuml UCScollegamentoOrganizzazione
+!include ../../../../commons/style/use-cases.pu
+
+title UC8 - Scollegamento organizzazione
+
+actor :utente autenticato: as A3
 actor :utente collegato: as A3.1
-actor :utente non collegato: as A3.2
+:A3.1: -up-|> :A3:
+
+rectangle {
+  together {
+    usecase (UC8.1) as "UC8.1\nUscita da un'organizzazione\n--\nExtension points:\nVisualizzazione errore in caso di\nuscita dall'organizzazione\n con rete mancante"
+    usecase (UC6) as "UC6\nVisualizzazione errore\nrete mancante"
+  }
+}
+
+:A3.1: -- (UC8.1)
+
+(UC6) .up.|> (UC8.1) : <<extends>>
+
+@enduml
+
+@startuml UCNotoIncognito
+!include ../../../../commons/style/use-cases.pu
+
+title UC9 - Passaggio noto/incognito
+
+actor :utente autenticato: as A3
+actor :utente collegato: as A3.1
+:A3.1: -up-|> :A3:
+
+rectangle {
+  together {
+    usecase (UC9.1) as "UC9.1\nScelta noto o incognito\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
+    usecase (UC6) as "UC6\nVisualizzazione errore\nrete mancante"
+  }
+}
+
+:A3.1: -- (UC9.1)
+
+(UC6) .up.|> (UC9.1) : <<extends>>
+
+@enduml
+
+@startuml UC9.1
+!include ../../../../commons/style/use-cases.pu
+
+title UC9.1 - Scelta noto o incognito
+
+actor :utente collegato: as A3
+
+actor :utente noto: as A3.1
+actor :utente incognito: as A3.2
 
 :A3.1: -up-|> :A3:
 :A3.2: -up-|> :A3:
 
 rectangle {
   together {
-    together {
-      usecase (UC2.1) as "UC2.1\nvisualizzazione\nlista organizzazioni"
-      usecase (UC2.1.1) as "UC2.1.1\naggiornamento\nlista organizzazioni"
-    }
-
-    usecase (UC2.2) as "UC2.2\ncollegarsi ad un'organizzazione"
-    usecase (UC2.3) as "UC2.3\nscollegarsi da un'organizzazione"
-
+    usecase (UC9.1.1) as "UC9.1.1\nPassaggio a incognito"
+    usecase (UC9.1.2) as "UC9.1.2\nPassaggio a noto"
   }
-  ' # XXX ogni volta che entro nell'app mi chiedono se noto o incognito, dopo che ho almeno un collegamento
-  usecase (UC2.4) as "UC2.4\nschermata scelta\nnoto o incognito"
-
-  together {
-    usecase (UC2.5) as "UC2.5\nvisualizzazione storico accessi\n(*)"
-    usecase (UC2.6) as "UC2.6\nvisualizzazione tempo trascorso\nnell'organizzazione corrente\n(*)"
-  }
-
-  ' # TODO aggiungere errori ultima posizione nota troppo vecchia?
-  usecase (UC2.7) as "UC2.7\nvisualizzazione errore\nrete mancante"
 }
 
-(UC2.1.1) .up.|> (UC2.1) : <<include>>
+:A3.1: -- (UC9.1.1)
+:A3.2: -- (UC9.1.2)
 
-:A3: ---- (UC2.1)
-:A3: -- (UC2.5)
-
-:A3.1: -- (UC2.2)
-:A3.1: -- (UC2.3)
-:A3.1: -- (UC2.4)
-:A3.1: -- (UC2.6)
-
-:A3.2: -- (UC2.2)
-
-(UC2.7) .up.|> (UC2.1) : <<extends>>
-(UC2.7) .up.|> (UC2.2) : <<extends>>
-(UC2.7) .up.|> (UC2.3) : <<extends>>
-(UC2.7) .up.|> (UC2.5) : <<extends>>
-(UC2.7) .up.|> (UC2.6) : <<extends>>
-
-' #TODO dobbiamo includere i requisiti opzionali nei casi d'uso?
-note as N1
-  (*) l'implementazione di questo caso d'uso è opzionale
-end note
 @enduml
 
-@startuml UC2.4
+@startuml UCVisualizzazioneStorico
 !include ../../../../commons/style/use-cases.pu
 
-title UC2.4
+title UC10 - Visualizzazione storico degli accessi
 
-' actor :utente autenticato: as A3
-actor :utente collegato: as A3.1
+actor :utente autenticato: as A
 
-actor :utente noto: as A3.1.1
-actor :utente incognito: as A3.1.2
-
-' :A3.1: -up-|> :A3:
-:A3.1.1: -up-|> :A3.1:
-:A3.1.2: -up-|> :A3.1:
-
-' #TODO passaggio a noto viene chiesto durante il login?
 rectangle {
-  usecase (UC2.4.1) as "UC2.4.1\npassaggio a incognito"
-  usecase (UC2.4.2) as "UC2.4.2\npassaggio a noto"
-
-  ' #TODO controllare se si può avere lo stesso UC in due diagrammi
-  usecase (UC2.7) as "UC2.7\nvisualizzazione errore\nrete mancante"
+  together {
+    usecase (UC10.1) as "UC10.1\nVisualizzazione storico accessi\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta storico\nin mancanza di rete"
+    usecase (UC6) as "UC6\nVisualizzazione errore\nrete mancante"
+    note right of (UC10.1): implementazione opzionale
+  }
 }
 
-:A3.1.1: -- (UC2.4.1)
-:A3.1.2: -- (UC2.4.2)
+:A: -- (UC10.1)
 
-(UC2.7) .up.|> (UC2.4.1) : <<extends>>
-(UC2.7) .up.|> (UC2.4.2) : <<extends>>
+(UC6) .up.|> (UC10.1) : <<extends>>
 
-' #TODO cosa manca riguardo al tracciamento della posizione?
+@enduml
+
+@startuml UCVisualizzazioneTempo
+!include ../../../../commons/style/use-cases.pu
+
+title UC11 - Visualizzazione tempo trascorso organizzazione
+
+actor :utente autenticato: as A3
+actor :utente collegato: as A3.1
+
+:A3.1: -up-|> :A3:
+
+rectangle {
+  together {
+    usecase (UC11.1) as "UC11.1\nVisualizzazione tempo trascorso\nnell'organizzazione corrente\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta tempo trascorso\nin mancanza di rete"
+    usecase (UC6) as "UC6\nVisualizzazione errore\nrete mancante"
+    note right of (UC11.1): implementazione opzionale
+  }
+}
+
+:A3.1: -- (UC11.1)
+
+(UC6) .up.|> (UC11.1) : <<extends>>
 
 @enduml
