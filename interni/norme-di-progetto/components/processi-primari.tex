@@ -42,11 +42,11 @@ Il processo di fornitura contiene le attività e i compiti del fornitore. Esso g
 GruppOne si impegna a consegnare un sintetico documento contenente una breve descrizione, i pregi e le criticità riscontrati in ciascuno dei capitolati. Lo studio di fattibilità è redatto dall'\glossario{amministratore}
 con l'aiuto degli \glossario{analisti} e ha l'obiettivo di esporre quali capitolati sono stati presi in considerazione con le relative motivazioni. Il documento è così articolato:
 \begin{description}
-\item [Descrizione]: si fornisce una breve descrizione del problema esposto dal proponente.
-\item [Finalità del progetto]: si descrive che cosa bisogna realizzare.
-\item [Tecnologie interessate]: si mostrano le tecnologie da considerare in fase di sviluppo.
-\item [Aspetti positivi]: si espongono i pregi del capitolato.
-\item [Criticità e fattori di rischio]: si illustrano i difetti osservati studiando il capitolato.
+  \item [Descrizione]: si fornisce una breve descrizione del problema esposto dal proponente.
+  \item [Finalità del progetto]: si descrive che cosa bisogna realizzare.
+  \item [Tecnologie interessate]: si mostrano le tecnologie da considerare in fase di sviluppo.
+  \item [Aspetti positivi]: si espongono i pregi del capitolato.
+  \item [Criticità e fattori di rischio]: si illustrano i difetti osservati studiando il capitolato.
 \end{description}
 
 \subsubsection{Incontri con il proponente}%
@@ -56,9 +56,9 @@ Gruppo0ne intende mantenere uno stretto rapporto di collaborazione con i propone
 
 Gli obiettivi degli incontri sono:
 \begin{description}
-\item [Comprensione e perfezionamento dei requisiti]: il team discute col proponente i problemi e i dubbi riscontrati durante l'analisi del capitolato in modo da comprendere incrementalmente i requisiti.
-\item [Ricerca e valutazione del software]: il team chiede al proponente se le componenti e i software proposti soddisfino le funzionalità richieste.
-\item [Convalida dei documenti e del prodotto]: il team si rivolge al proponente per avere conferme sul lavoro svolto siano essi documenti, \glossario{prototipi} appena abbozzati o prodotti software ad uno stato avanzato.
+  \item [Comprensione e perfezionamento dei requisiti]: il team discute col proponente i problemi e i dubbi riscontrati durante l'analisi del capitolato in modo da comprendere incrementalmente i requisiti.
+  \item [Ricerca e valutazione del software]: il team chiede al proponente se le componenti e i software proposti soddisfino le funzionalità richieste.
+  \item [Convalida dei documenti e del prodotto]: il team si rivolge al proponente per avere conferme sul lavoro svolto siano essi documenti, \glossario{prototipi} appena abbozzati o prodotti software ad uno stato avanzato.
 \end{description}
 Gli esiti degli argomenti discussi durante gli incontri saranno poi riportati in verbali.
 
@@ -94,7 +94,7 @@ L'analisi dei requisiti è l'attività che studia e comprende il dominio applica
   \item Studiare e definire il problema da risolvere
   \item Classificare i requisiti
   \item Realizzare i diagrammi UML dei casi d'uso
-  \item Fornire ai progettisti dei requisiti atomici da poter analizzare per iniziare l'attività di progettazione
+  \item Ricavare i requisiti atomici da fornire ai progettisti perché possano iniziare l'attività di progettazione
 \end{itemize}
 
 Il documento di riferimento, \textit{Analisi dei requisiti v1.0.0}, è redatto dagli analisti.
@@ -102,31 +102,32 @@ Il documento di riferimento, \textit{Analisi dei requisiti v1.0.0}, è redatto d
 \subparagraph{Classificazione dei requisiti}%
 \label{subp:classificazione_dei_requisiti}
 
-\label{subp:classificazione dei requisiti}
-Per identificare i requisiti in maniera univoca, Grupp0ne ha deciso di adottare delle norme per la classificazione dei requisiti.
+Per identificare i requisiti in maniera univoca, GruppOne ha deciso di adottare delle norme per la classificazione dei requisiti.
 Ogni requisito è caratterizzato da un codice alfanumerico così formato:
-\\\\\centerline{\textbf{R[numero][tipo][priorità]}}
-in cui ogni elememento ha un diverso significato:
+\begin{center}
+  \textbf{R[numero][tipo][priorità]}
+\end{center}
+in cui ogni elemento ha un diverso significato:
 \begin{itemize}
-	\item \textbf{Numero}: indica quale numero di caso d'uso si sta esaminando. È un numero progressivo che parte da 1.
-	\item \textbf{Tipo}: individua la tipologia di requisito. Esso può essere:
-	\begin{itemize}
-		\item F: funzionale - indica servizi che il sistema dovrebbe fornire.
-		\item N: legislativo - indica che le regole che il sistema deve rispettare affinchè sia legale.
-		\item O: organizzativo - indica le norme da seguire nel processo di sviluppo : ambiente di sviluppo, linguaggio di programmazione o standard di processo.
-		\item P: prestazionale - indica le prestazioni che il programma deve fornire : velocità in esecuzione e memoria occupata.
-		\item S: per la sicurezza - indica procedure da adottare affinchè il sistema sia considerabile sicuro.
-	\end{itemize}
-	\item \textbf{Priorità}: determina la priorità del requisito con un numero da 1 a 3 :
-	\begin{itemize}
-		\item 1 : requisito obbligatorio che deve essere assolutamente soddisfatto dal sistema.
-		\item 2 : requisito desiderabile il cui soddisfacimento è apprezzato dal committente.
-		\item 3 : requisito facoltativo la cui decisione è lasciata al team.
-	\end{itemize}
+  \item \textbf{Numero}: indica quale numero di caso d'uso si sta esaminando. È un numero progressivo che parte da 1.
+  \item \textbf{Tipo}: individua la tipologia di requisito. Esso può essere:
+        \begin{itemize}
+          \item F:\@funzionale --\@indica servizi che il sistema dovrebbe fornire.
+          \item N:\@legislativo --\@indica che le regole che il sistema deve rispettare affinché sia legale.
+          \item O:\@organizzativo --\@indica le norme da seguire nel processo di sviluppo:\@ambiente di sviluppo, linguaggio di programmazione o standard di processo.
+          \item P:\@prestazionale --\@indica le prestazioni che il programma deve fornire:\@velocità in esecuzione e memoria occupata.
+          \item S:\@per la sicurezza --\@indica procedure da adottare affinché il sistema sia considerabile sicuro.
+        \end{itemize}
+  \item \textbf{Priorità}: determina la priorità del requisito con un numero da 1 a 3:
+        \begin{itemize}
+          \item 1:\@requisito obbligatorio che deve essere assolutamente soddisfatto dal sistema.
+          \item 2:\@requisito desiderabile il cui soddisfacimento è apprezzato dal committente.
+          \item 3:\@requisito facoltativo la cui decisione è lasciata al team.
+        \end{itemize}
 \end{itemize}
 \subparagraph{Casi d'uso}%
 \label{subp:casi_d'uso}
- I diagrammi dei casi d'uso descrivono le funzioni e i servizi offerti dal prodotto agli attori che interagiscono con il sistema. Ogni caso d'uso ha:
+I diagrammi dei casi d'uso descrivono le funzioni e i servizi offerti dal prodotto agli attori che interagiscono con il sistema. Ogni caso d'uso ha:
 
 \begin{itemize}
   \item Una rappresentazione testuale
@@ -135,19 +136,19 @@ in cui ogni elememento ha un diverso significato:
 
 Nel presente paragrafo si descrive la rappresentazione testuale mentre nel successivo verrà descritta la rappresentazione grafica. Un generico caso d'uso è caratterizzato da:
 \begin{description}
-\item [Titolo]: breve titolo del caso d'uso.
-\item [Codice]: codice identificativo del caso d'uso. Ogni caso d'uso può essere suddiviso in altri sottocasi. La denominazione convenzionale è la seguente:
-\begin{description}
-  \item [Caso d'uso]: UC[codice numerico].
-    \item [Sottocaso d'uso]: UC[codice numerico del padre].[codice numerico del sottocaso].
-\end{description}
-Ad esempio il primo caso d'uso avrà codice identificativo UC1 mentre i relativi sottocasi saranno UC1.1 UC1.2 UC1.3..
-\item [Attore primario]: attore principale coinvolto nel caso d'uso.
-\item [Attori secondari (opzionale)]: attori secondari coinvolti nel caso d'uso.
-\item [Precondizioni]: condizione in cui si trovano gli attori prima del verificarsi del caso d'uso.
-\item [Postcondizioni]: condizione in cui si trovano gli attori dopo il verificarsi del caso d'uso.
-\item [Scenario principale]: sequenza di azioni svolte dall'attore per portare a compimento il caso d'uso.
-\item [Estensioni (opzionale)]: sequenza di possibilità dell'attore al verificarsi di eventi anomali o di situazioni di errore.
+  \item [Titolo]: breve titolo del caso d'uso.
+  \item [Codice]: codice identificativo del caso d'uso. Ogni caso d'uso può essere suddiviso in altri sottocasi. La denominazione convenzionale è la seguente:
+        \begin{description}
+          \item [Caso d'uso]: UC[codice numerico].
+          \item [Sottocaso d'uso]: UC[codice numerico del padre].[codice numerico del sottocaso].
+        \end{description}
+        Ad esempio il primo caso d'uso avrà codice identificativo UC1 mentre i relativi sottocasi saranno UC1.1 UC1.2 UC1.3..
+  \item [Attore primario]: attore principale coinvolto nel caso d'uso.
+  \item [Attori secondari (opzionale)]: attori secondari coinvolti nel caso d'uso.
+  \item [Precondizioni]: condizione in cui si trovano gli attori prima del verificarsi del caso d'uso.
+  \item [Postcondizioni]: condizione in cui si trovano gli attori dopo il verificarsi del caso d'uso.
+  \item [Scenario principale]: sequenza di azioni svolte dall'attore per portare a compimento il caso d'uso.
+  \item [Estensioni (opzionale)]: sequenza di possibilità dell'attore al verificarsi di eventi anomali o di situazioni di errore.
 \end{description}
 
 \subparagraph{Diagrammi UML dei casi d'uso}%
@@ -177,7 +178,8 @@ L'attività di progettazione si occupa di organizzare le componenti del sistema 
 
 \subparagraph{Technology Baseline}%
 \label{subp:technology_baseline}
-La \glossario{technology baseline} è un documento parte integrante della RP. Essa presenta:
+La \glossario{technology baseline} è un documento parte integrante della RP.\@ Essa presenta:
+
 \begin{itemize}
   \item Le tecnologie
   \item I framework
@@ -187,7 +189,8 @@ Deve contenere inoltre una \glossario{proof of concept} che ha lo scopo di evide
 
 \subparagraph{Product Baseline}%
 \label{subp:product_baseline}
-La \glossario{product baseline} è un documento parte integrante della RQ. Ha il compito di mostrare l'architettura del prodotto attraverso la creazione di:
+La \glossario{product baseline} è un documento parte integrante della RQ.\@ Ha il compito di mostrare l'architettura del prodotto attraverso la creazione di:
+
 \begin{itemize}
   \item Diagrammi delle classi
   \item Diagrammi di sequenza
