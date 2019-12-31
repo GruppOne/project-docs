@@ -683,6 +683,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \begin{enumerate}
     \item sorge la necessità di modificare un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
   \end{enumerate}
+  \item \textbf{Inclusioni:}
+  \begin{enumerate}
+    \item Modifica nome organizzazione\emph{[UC12.1]};
+    \item Modifica indirizzo organizzazione\emph{[UC12.2]};
+    \item Modifica descrizione organizzazione\emph{[UC12.3]}.
+  \end{enumerate}
 \end{itemize}
 % subsub:UC12 (end)
 
@@ -740,7 +746,62 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Precondizione:} l'\glossario{organizzazione} non deve esistere nella lista di \glossario{Stalker}, deve essere specificato il suo nome.
   \item \textbf{Postcondizione:} l'\glossario{organizzazione} viene creata.
   \item \textbf{Scenario principale:} sorge la necessità di creare un'\glossario{organizzazione}, senza essere effettivamente richiesta;
+  \item \textbf{Inclusioni:}
+  \begin{enumerate}
+    \item Inserisci nome organizzazione\emph{[UC12.1]};
+    \item Inserisci indirizzo organizzazione\emph{[UC12.2]};
+    \item Inserisci descrizione organizzazione\emph{[UC12.3]}.
+  \end{enumerate}
+
+
+  \subsubsection{UC13.1 - Inserisci nome organizzazione}
+  \label{subsub:UC13.1}
+  \begin{itemize}
+    \item \textbf{Codice:} UC13.1
+    \item \textbf{Titolo:} Inserisci nome organizzazione
+    \item \textbf{Attori primari:} root
+    \item \textbf{Precondizione:} il sistema fornisce il campo di inserimento nome.
+    \item \textbf{Postcondizione:} il nome viene opportunamente inserito.
+    \item \textbf{Scenario principale:} 
+    \begin{enumerate}
+      \item si vuole inserire il nome di un'\glossario{organizzazione}.
+    \end{enumerate}
+    
+  \end{itemize}
+  % subsub:UC13.1 (end)
   
+  \subsubsection{UC13.2 - Inserisci indirizzo organizzazione}
+  \label{subsub:UC13.2}
+  \begin{itemize}
+    \item \textbf{Codice:} UC13.2
+    \item \textbf{Titolo:} Inserisci indirizzo organizzazione
+    \item \textbf{Attori primari:} root
+    \item \textbf{Precondizione:} il sistema fornisce il campo di inserimento indirizzo organizzazione.
+    \item \textbf{Postcondizione:} l'indirizzo viene opportunamente inserito.
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+      \item si vuole inserire l'indirizzo di un'\glossario{organizzazione}.
+    \end{enumerate}
+  \end{itemize}
+  % subsub:UC13.2 (end)
+  
+  \subsubsection{UC13.3 - Inserisci descrizione organizzazione}
+  \label{subsub:UC13.3}
+  \begin{itemize}
+    \item \textbf{Codice:} UC13.3
+    \item \textbf{Titolo:} Inserisci descrizione organizzazione
+    \item \textbf{Attori primari:} root
+    \item \textbf{Precondizione:} il sistema fornisce il campo di inserimento descrizione organizzazione.
+    \item \textbf{Postcondizione:} la descrizione viene opportunamente inserito.
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+      \item si vuole inserire la descrizione di un'\glossario{organizzazione}.
+    \end{enumerate}
+  \end{itemize}
+  % subsub:UC13.3 (end)
+
+
+
 \end{itemize}
 % subsub:UC13 (end)
 
