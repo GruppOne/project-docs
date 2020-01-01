@@ -12,13 +12,17 @@
   \item \textbf{Caso d’uso:} UC1 
   \item \textbf{Titolo:} Apertura applicazione mobile
   \item \textbf{Attori primari:} utente non registrato, utente non autenticato
-  \item \textbf{Precondizioni:} l'utente deve aprire l'\glossario{applicazione mobile} e non è riconosciuto dal sistema.
-  \item \textbf{Postcondizioni:} se l'utente non è registrato al \glossario{servizio} offerto dall'applicazione, allora si deve registrare e diventa un utente non autenticato; 
-  altrimenti se lo è già, allora si deve autenticare e può utilizzare le funzionalità messe a disposizione dall'applicazione. 
+  \item \textbf{Precondizioni:} l'utente deve installare l'applicazione mobile sul proprio dispositivo.
+  \item \textbf{Postcondizioni:} l'utente ha installato l'applicazione mobile e la apre.
   \item \textbf{Scenario principale:} 
   \begin{enumerate}
-    \item 
-  \end{enumerate}  
+    \item Al momento dell'apertura dell'applicazione mobile, l'utente visualizza una schermata con tre opzioni:
+    \begin{enumerate}
+      \item registrazione, se l'utente accede la prima volta e non è registrato;
+      \item autenticazione, se l'utente è già registrato ma non è ancora autenticato;
+      \item recupero credenziali, nel caso in cui l'utente voglia autenticarsi ma ha smarrito le sue credenziali.
+    \end{enumerate}
+  \end{enumerate}   
 \end{itemize}
 % subsub:uc1utente (end)
 
@@ -30,15 +34,16 @@
   \item \textbf{Caso d’uso:} UC1 
   \item \textbf{Titolo:} Registrazione
   \item \textbf{Attori primari:} utente non registrato
-  \item \textbf{Precondizioni:} 
-  \item \textbf{Postcondizioni:} 
+  \item \textbf{Precondizioni:} l'utente non è registrato al servizio
+  \item \textbf{Postcondizioni:} la registrazione va a buon fine e l'utente è registrato
   \item \textbf{Scenario principale:} 
   \begin{enumerate}
-    \item 
+    \item prima di procedere con la registrazione, l'utente visualizza l'\glossario{EULA} e per continuare deve accettare i vincoli stabiliti da essa;
+    \item una volta accettata l'EULA, l'utente provvede all'inserimento dei dati personali per la registrazione.
   \end{enumerate}  
   \item \textbf{Inclusioni:} 
   \begin{enumerate}
-    \item 
+    \item EULA deve essere confermata, altrimenti la registrazione non può continuare
   \end{enumerate}  
 \end{itemize}
 % subsub:uc2utente (end)
