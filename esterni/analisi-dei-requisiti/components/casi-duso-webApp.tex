@@ -560,10 +560,10 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \paragraph{Root}
 Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super utente} \glossario{root}.
 
-\subsubsection{AUC10 - Creazione amministratore}
-\label{subsub:AUC10}
+\subsubsection{AUC5 - Creazione amministratore}
+\label{subsub:AUC5}
 \begin{itemize}
-  \item \textbf{Codice:} AUC10
+  \item \textbf{Codice:} AUC5
   \item \textbf{Titolo:} creazione amministratore
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} devono essere specificate le credenziali del nuovo \glossario{amministratore}, che devono essere univoche.
@@ -572,23 +572,36 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \begin{enumerate}
     \item sorge la necessità di creare un nuovo \glossario{amministratore} per gestire \glossario{Stalker}.
   \end{enumerate}
+\end{itemize}
+
+
+\subsubsection{AUC5.1 - Inserimento credenziali}
+\label{subsub:AUC5.1}
+\begin{itemize}
+  \item \textbf{Codice:} AUC5.1
+  \item \textbf{Titolo:} inserimento credenziali
+  \item \textbf{Attori primari:} root
+  \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di creazione nuovo \glossario{amministratore}.
+  \item \textbf{Postcondizione:} \glossario{Root} ha inserito le credenziali dell'\glossario{amministratore} che vuole creare.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item \glossario{Root} inserisce le credenziali dell'\glossario{amministratore} che vuole creare.
+  \end{enumerate}
   \item \textbf{Inclusioni}:
   \begin{enumerate}
-    \item inserimento nuovo username\emph{[AUC10.1]};
-    \item inserimento nuova password\emph{[AUC10.2]};
-    \item verifica credenziali\emph{[AUC10.3]}.
+    \item verifica credenziali\emph{[AUC5.2]}.
   \end{enumerate}
   \item \textbf{Estensioni}:
   \begin{enumerate}
-    \item  visualizza creazione fallita\emph{[AUC10.4]}.
+    \item  visualizza creazione fallita\emph{[AUC5.3]}.
   \end{enumerate}
 \end{itemize}
-% subsub:AUC10 (end)
+% subsub:AUC5.1 (end)
 
-\subsubsection{AUC10.1 - Inserimento nuova e-mail}
-\label{subsub:AUC10.1}
+\subsubsection{AUC5.1.1 - Inserimento nuova e-mail}
+\label{subsub:AUC5.1.1}
 \begin{itemize}
-  \item \textbf{Codice:} AUC10.1
+  \item \textbf{Codice:} AUC5.1.1
   \item \textbf{Titolo:} inserimento nuova e-mail
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento dell'e-mail.
@@ -598,12 +611,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
     \item \glossario{Root} inserisce l'e-mail dell'\glossario{amministratore} che vuole creare.
   \end{enumerate}
 \end{itemize}
-% subsub:AUC10.1 (end)
+% subsub:AUC5.1.1 (end)
 
-\subsubsection{AUC10.2 - Inserimento nuova password}
-\label{subsub:AUC10.2}
+\subsubsection{AUC5.1.2 - Inserimento nuova password}
+\label{subsub:AUC5.1.2}
 \begin{itemize}
-  \item \textbf{Codice:} AUC10.2
+  \item \textbf{Codice:} AUC5.1.2
   \item \textbf{Titolo:} inserimento nuova password
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento della password.
@@ -613,12 +626,27 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
     \item \glossario{Root} inserisce la password dell'\glossario{amministratore} che vuole creare.
   \end{enumerate}
 \end{itemize}
-% subsub:AUC10.2 (end)
+% subsub:AUC5.1.2 (end)
 
-\subsubsection{AUC10.3 - Verifica credenziali}
-\label{subsub:AUC10.3}
+\subsubsection{AUC5.1.2 - Conferma password}
+\label{subsub:AUC5.1.2}
 \begin{itemize}
-  \item \textbf{Codice:} AUC10.3
+  \item \textbf{Codice:} AUC5.1.2
+  \item \textbf{Titolo:} conferma password
+  \item \textbf{Attori primari:} root
+  \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento del campo conferma password.
+  \item \textbf{Postcondizione:} \glossario{Root} ha inserito la password nel campo di conferma dell'\glossario{amministratore} che vuole creare.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item \glossario{Root} inserisce la password nel campo di conferma dell'\glossario{amministratore} che vuole creare.
+  \end{enumerate}
+\end{itemize}
+% subsub:AUC5.1.2 (end)
+
+\subsubsection{AUC5.2 - Verifica credenziali}
+\label{subsub:AUC5.2}
+\begin{itemize}
+  \item \textbf{Codice:} AUC5.2
   \item \textbf{Titolo:} verifica credenziali
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} \glossario{Root} invia richiesta di creazione nuovo amministratore.
@@ -633,12 +661,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
     \end{enumerate}
   \end{enumerate}
 \end{itemize}
-% subsub:AUC10.3 (end)
+% subsub:AUC5.2 (end)
 
-\subsubsection{AUC10.4 - Visualizza creazione fallita}
-\label{subsub:AUC10.4}
+\subsubsection{AUC5.3 - Visualizza creazione fallita}
+\label{subsub:AUC5.3}
 \begin{itemize}
-  \item \textbf{Codice:} AUC10.4
+  \item \textbf{Codice:} AUC5.3
   \item \textbf{Titolo:} visualizza creazione fallita
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} la verifica delle credenziali è fallita.
@@ -648,7 +676,8 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
     \item \glossario{root} cerca di creare un nuovo \glossario{amministratore} che non rispetta i requisiti.
   \end{enumerate}
 \end{itemize}
-% subsub:AUC10.4 (end)
+% subsub:AUC5.3 (end)
+% subsub:AUC5 (end)
 
 \subsubsection{AUC11 - Seleziona organizzazione}
 \label{subsub:AUC11}
