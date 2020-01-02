@@ -1,153 +1,562 @@
-@startuml admin
+@startuml AUCSistemaAutenticazione
 !include ../../../../commons/style/use-cases.pu
 
-title admin
+title AUC1 - Sistema di autenticazione
 
-actor :Amministratore: as A1.1
+actor :utente non autenticato: as A
 
 rectangle {
   together {
-  usecase (AUC1.1) as "AUC1.1\nAutenticazione"
-  usecase (AUC1.2) as "AUC1.2\nVerifica credenziali"
-  usecase (AUC1.3) as "AUC1.3\nVisualizzazione credenziali errate"
-  note "Condition: credenziali errate" as N1
-  }
-
-  usecase (AUC2) as "AUC2\nApprovazione owner"
-
-  together {
-    usecase (AUC3) as "AUC3\nApprovazione creazione organizzazione"
-    usecase (AUC4) as "AUC4\nApprovazione modifica organizzazione"
-  }
-
-  together {
-    usecase (AUC5) as "AUC5\nApprovazione aggiunta luogo"
-    usecase (AUC6) as "AUC6\nApprovazione modifica luogo"
-    usecase (AUC7) as "AUC7\nApprovazione trasferimento di proprietÃ  organizzazione"
+    usecase (AUC1.1) as "AUC1.1\nAutenticazione\n--\nExtension points:\nVisualizzazione errore se\nle credenziali inserite\n non sono corrette"
+    usecase (AUC1.2) as "AUC1.2\nVerifica credenziali"
+    usecase (AUC1.3) as "AUC1.3\nVisualizzazione credenziali errate"
   }
 }
 
-AUC1.1 ..> AUC1.2 : <<include>>
-AUC1.3 .. N1
-N1 ..> AUC1.1 : <<extends>>
+:A: -- AUC1.1
 
-A1.1 - AUC1.1
-A1.1 -- AUC2
-A1.1 -- AUC3
-A1.1 -- AUC4
-A1.1 -- AUC5
-A1.1 -- AUC6
-A1.1 -- AUC7
+(AUC1.2) .up.|> (AUC1.1) : <<include>>
+(AUC1.3) .up.|> (AUC1.1) : <<extends>>
 
 @enduml
 
-@startuml root
+@startuml AUCAutenticazione
 !include ../../../../commons/style/use-cases.pu
 
-title root
+title AUC1.1 - Autenticazione
 
-actor :Amministratore: as A1.1
-actor :Root: as A1.2
-
-rectangle {
-  usecase (AUC8) as "AUC8\nCreazione amministratore"
-
-  together {
-    usecase (AUC9) as "AUC9\nEliminazione organizzazione"
-    usecase (AUC10) as "AUC10\nModifica organizzazione"
-    usecase (AUC11) as "AUC11\nCreazione organizzazione"
-  }
-
-  together {
-    usecase (AUC12) as "AUC12\nEliminazione luogo"
-    usecase (AUC13) as "AUC13\nModifica luogo"
-  }
-  usecase (AUC14) as "AUC14\nEliminazione account"
-}
-
-A1.1 <|-- A1.2
-
-A1.2 -- AUC8
-A1.2 -- AUC9
-A1.2 -- AUC10
-A1.2 -- AUC11
-A1.2 -- AUC12
-A1.2 -- AUC13
-A1.2 -- AUC14
-@enduml
-
-@startuml visualizzatore
-!include ../../../../commons/style/use-cases.pu
-
-title Visualizzatore
-
-actor :Visualizzatore: as A2.1
+actor :utente non autenticato: as A
 
 rectangle {
-  usecase (AUC17) as "AUC17\nLogin"
-
   together {
-    usecase (AUC15) as "AUC15\nQuery sull'organizzazione"
-    usecase (AUC16) as "AUC16\nQuery sul dipendente"
+  usecase (AUC1.1.1) as "AUC1.1.1\nInserimento email"
+  usecase (AUC1.1.2) as "AUC1.1.2\nInserimento password"
   }
 }
 
-A2.1 -- AUC15
-A2.1 -- AUC16
-A2.1 -- AUC17
+:A: -- AUC1.1.1
+:A: -- AUC1.1.2
 
 @enduml
 
-@startuml gestore
+@startuml AUCRichiestaOwner
 !include ../../../../commons/style/use-cases.pu
 
-title gestore
+title AUC2 - Richiesta owner
 
-actor :Visualizzatore: as A2.1
-actor :Gestore: as A2.2
+actor :utente autenticato: as A
 
 rectangle {
   together {
-    usecase (AUC18) as "AUC18\nRichiesta aggiunta luogo"
-    usecase (AUC19) as "AUC19\nRichiesta rimozione luogo"
-    usecase (AUC20) as "AUC20\nRichiesta modifica luogo"
+    usecase (AUC2.3) as "AUC2.3\nRichiesta rifiutata"
+    usecase (AUC2.2) as "AUC2.2\nInvio richiesta owner"
+    usecase (AUC2.1) as "AUC2.1\nVerifica tipologia utente"
   }
-
-  usecase (AUC21) as "AUC21\nRichiesta modifica parametri organizzazione"
 }
 
-A2.1 <|-- A2.2
+:A: -- AUC2.1
+:A: -- AUC2.2
+:A: -- AUC2.3
 
-A2.2 -- AUC18
-A2.2 -- AUC19
-A2.2 -- AUC20
-A2.2 -- AUC21
 @enduml
 
-@startuml owner
+@startuml AUCDisconnessione
 !include ../../../../commons/style/use-cases.pu
 
-title owner
+title AUC3 - Disconnessione
 
-actor :Gestore: as A2.2
-actor :Owner: as A2.3
+actor :utente autenticato: as A
 
 rectangle {
-    together {
-    usecase (AUC22) as "AUC22\nNomina visualizzatore"
-    usecase (AUC23) as "AUC23\nNomina gestore"
-    }
-
-    together {
-    usecase (AUC24) as "AUC24\nRichiesta creazione organizzazione"
-    usecase (AUC25) as "AUC25\nRichiesta cedimento proprietÃ  di organizzazione"
-    }
+  together {
+    usecase (AUC3.1) as "AUC3.1\nDisconnessione utente"
+  }
 }
 
-A2.2 <|-- A2.3
+:A: -- AUC3.1
 
-:A2.3: -- AUC22
-:A2.3: -- (AUC23)
-:A2.3: -- (AUC24)
-:A2.3: -- (AUC25)
+@enduml
+
+
+@startuml AUCGestioneRichieste
+!include ../../../../commons/style/use-cases.pu
+
+title AUC4 - Gestione richieste
+
+actor :amministratore: as A
+
+rectangle {
+  together {
+    usecase (AUC4.6) as "AUC4.6\nGestione richiesta trasferimento di proprietà organizzazione"
+    usecase (AUC4.5) as "AUC4.5\nGestione richiesta modifica luogo"
+    usecase (AUC4.4) as "AUC4.4\nGestione richiesta aggiunta luogo"
+    usecase (AUC4.3) as "AUC4.3\nGestione richiesta modifica organizzazione"
+    usecase (AUC4.2) as "AUC4.2\nGestione richiesta creazione organizzazione"
+    usecase (AUC4.1) as "AUC4.1\nGestione richieste owner"  
+  }
+}
+
+:A: -- AUC4.1
+:A: -- AUC4.2
+:A: -- AUC4.3
+:A: -- AUC4.4
+:A: -- AUC4.5
+:A: -- AUC4.6
+
+@enduml
+
+@startuml AUCGROwner
+!include ../../../../commons/style/use-cases.pu
+
+title AUC4.1 - Gestione richieste owner
+
+actor :amministratore: as A
+
+rectangle {
+  together {
+    usecase (AUC4.1.2) as "AUC4.1.2\nRifiuta richiesta owner"
+    usecase (AUC4.1.1) as "AUC4.1.1\nAccetta richiesta owner"
+  }
+}
+
+:A: -- AUC4.1.1
+:A: -- AUC4.1.2
+
+@enduml
+
+
+@startuml AUCGRCreazioneOrganizzazione
+!include ../../../../commons/style/use-cases.pu
+
+title AUC4.2 - Gestione richiesta creazione organizzazione
+
+actor :amministratore: as A
+
+rectangle {
+  together {
+    usecase (AUC4.2.2) as "AUC4.2.2\nRifiuta richiesta\ncreazione organizzazione"
+    usecase (AUC4.2.1) as "AUC4.2.1\nAccetta richiesta\ncreazione organizzazione"
+  }
+}
+
+:A: -- AUC4.2.1
+:A: -- AUC4.2.2
+
+@enduml
+
+@startuml AUCGRModificaOrganizzazione
+!include ../../../../commons/style/use-cases.pu
+
+title AUC4.3 - Gestione richiesta modifica organizzazione
+
+actor :amministratore: as A
+
+rectangle {
+  together {
+    usecase (AUC4.3.2) as "AUC4.3.2\nRifiuta richiesta\nmodifica organizzazione"
+    usecase (AUC4.3.1) as "AUC4.3.1\nAccetta richiesta\nmodifica organizzazione"
+  }
+}
+
+:A: -- AUC4.3.1
+:A: -- AUC4.3.2
+
+@enduml
+
+@startuml AUCGRAggiuntaLuogo
+!include ../../../../commons/style/use-cases.pu
+
+title AUC4.4 - Gestione richiesta aggiunta luogo
+
+actor :amministratore: as A
+
+rectangle {
+  together {
+    usecase (AUC4.4.2) as "AUC4.4.2\nRifiuta richiesta\naggiungi luogo"
+    usecase (AUC4.4.1) as "AUC4.4.1\nAccetta richiesta\naggiungi luogo"
+  }
+}
+
+:A: -- AUC4.4.1
+:A: -- AUC4.4.2
+
+@enduml
+
+@startuml AUCGRModificaLuogo
+!include ../../../../commons/style/use-cases.pu
+
+title AUC4.5 - Gestione richiesta modifica luogo
+
+actor :amministratore: as A
+
+rectangle {
+  together {
+    usecase (AUC4.5.2) as "AUC4.5.2\nRifiuta richiesta modifica luogo"
+    usecase (AUC4.5.1) as "AUC4.5.1\nAccetta richiesta modifica luogo"
+  }
+}
+
+:A: -- AUC4.5.1
+:A: -- AUC4.5.2
+
+@enduml
+
+@startuml AUCGRTrasferimentoProprietaOrganizzazione
+!include ../../../../commons/style/use-cases.pu
+
+title AUC4.6 - Gestione richiesta trasferimento di proprietà organizzazione
+
+actor :amministratore: as A
+
+rectangle {
+  together {
+    usecase (AUC4.6.2) as "AUC4.6.2\nRifiuta richiesta trasferimento\ndi proprietà organizzazione"
+    usecase (AUC4.6.1) as "AUC4.6.1\nAccetta richiesta trasferimento\ndi proprietà organizzazione"
+  }
+}
+
+:A: -- AUC4.6.1
+:A: -- AUC4.6.2
+
+@enduml
+
+@startuml AUCCreazioneAdmin
+!include ../../../../commons/style/use-cases.pu
+
+title AUC5 - Creazione amministratore
+
+actor :root: as A
+
+rectangle {
+  together {
+    usecase (AUC5.1) as "AUC5.1\nInserimento credenziali\n--\nExtension points:\nvisualizzazione errore se non\nvengono rispettati i requisiti"
+    usecase (AUC5.2) as "AUC5.2\nVerifica credenziali"
+    usecase (AUC5.3) as "AUC5.3\nVisualizza creazione fallita"
+  }
+}
+
+:A: -- AUC5.1
+
+(AUC5.2) .up.|> (AUC5.1) : <<include>>
+(AUC5.3) .up.|> (AUC5.1) : <<extends>>
+
+@enduml
+
+@startuml AUCInserimentoCredenziali
+!include ../../../../commons/style/use-cases.pu
+
+title AUC5.1 - Inserimento credenziali
+
+actor :root: as A
+
+rectangle {
+  together {
+    usecase (AUC5.1.3) as "AUC5.1.3\nConferma password"
+    usecase (AUC5.1.2) as "AUC5.1.2\nInserimento nuova password"
+    usecase (AUC5.1.1) as "AUC5.1.1\nInserimento nuova email"
+  }
+}
+
+:A: -- AUC5.1.1
+:A: -- AUC5.1.2
+:A: -- AUC5.1.3
+
+@enduml
+
+@startuml AUCGestioneOrganizzazione
+!include ../../../../commons/style/use-cases.pu
+
+title AUC6 - Gestione organizzazione
+
+actor :root: as A
+
+rectangle {
+  together {
+    usecase (AUC6.4) as "AUC6.4\nSeleziona organizzazione"
+    usecase (AUC6.3) as "AUC6.3\nModifica organizzazione"
+    usecase (AUC6.2) as "AUC6.2\nEliminazione organizzazione"
+    usecase (AUC6.1) as "AUC6.1\nCreazione organizzazione"
+  }
+}
+
+:A: -- AUC6.1
+:A: -- AUC6.2
+:A: -- AUC6.3
+
+(AUC6.4) .up.|> (AUC6.2) : <<include>>
+(AUC6.4) .up.|> (AUC6.3) : <<include>>
+
+@enduml
+
+@startuml AUCCreazioneOrganizzazione
+!include ../../../../commons/style/use-cases.pu
+
+title AUC6.1 - Creazione organizzazione
+
+actor :root: as A1
+actor :owner: as A2
+
+
+rectangle {
+  together {
+    usecase (AUC6.1.3) as "AUC6.1.3\nInserisci descrizione organizzazione"
+    usecase (AUC6.1.2) as "AUC6.1.2\nInserisci indirizzo organizzazione"
+    usecase (AUC6.1.1) as "AUC6.1.1\nInserisci nome organizzazione"
+  }
+}
+
+:A1: -- AUC6.1.1
+:A1: -- AUC6.1.2
+:A1: -- AUC6.1.3
+
+:A2: -- AUC6.1.1
+:A2: -- AUC6.1.2
+:A2: -- AUC6.1.3
+
+@enduml
+
+@startuml AUCModificaOrganizzazione
+!include ../../../../commons/style/use-cases.pu
+
+title AUC6.3 - Modifica organizzazione
+
+actor :root: as A
+
+rectangle {
+  together {
+    usecase (AUC6.3.4) as "AUC6.3.4\nGestione luoghi"
+    usecase (AUC6.3.3) as "AUC6.3.3\nModifica descrizione organizzazione"
+    usecase (AUC6.3.2) as "AUC6.3.2\nModifica indirizzo organizzazione"
+    usecase (AUC6.3.1) as "AUC6.3.1\nModifica nome organizzazione" 
+  }
+}
+
+:A: -- AUC6.3.1
+:A: -- AUC6.3.2
+:A: -- AUC6.3.3
+:A: -- AUC6.3.4
+
+@enduml
+
+@startuml AUCGestioneLuoghi
+!include ../../../../commons/style/use-cases.pu
+
+title AUC6.3.4 - Gestione luoghi
+
+actor :root: as A
+
+rectangle {
+  together {
+    usecase (AUC6.3.4.4) as "AUC6.3.4.4\nAUC6.3.4.4\nSeleziona luogo"
+    usecase (AUC6.3.4.3) as "AUC6.3.4.3\nModifica luogo"
+    usecase (AUC6.3.4.2) as "AUC6.3.4.2\nEliminazione luogo"
+    usecase (AUC6.3.4.1) as "AUC6.3.4.1\nAggiungi luogo"
+  }
+}
+
+:A: -- AUC6.3.4.1
+:A: -- AUC6.3.4.2
+:A: -- AUC6.3.4.3
+:A: -- AUC6.3.4.4
+
+@enduml
+
+@startuml AUCAggiungiLuogo
+!include ../../../../commons/style/use-cases.pu
+
+title AUC6.3.4.1 - Aggiungi luogo
+
+actor :root: as A
+
+rectangle {
+  together {
+    usecase (AUC6.3.4.1.1) as "AUC6.3.4.1.1\nInserisci coordinate geografiche"
+  }
+}
+
+:A: -- AUC6.3.4.1.1
+
+@enduml
+
+@startuml AUCModificaLuogo
+!include ../../../../commons/style/use-cases.pu
+
+title AUC6.3.4.3 - Modifica luogo
+
+actor :root: as A
+
+rectangle {
+  together {
+    usecase (AUC6.3.4.3.1) as "AUC6.3.4.3.1\nModifica coordinate geografiche"
+  }
+}
+
+:A: -- AUC6.3.4.3.1
+
+@enduml
+
+@startuml AUCEliminazioneAccount
+!include ../../../../commons/style/use-cases.pu
+
+title AUC7 - Eliminazione account
+
+actor :root: as A
+
+rectangle {
+  together {
+    usecase (AUC7.1) as "AUC7.1\nSeleziona account"
+  }
+}
+
+:A: -- AUC7.1
+
+@enduml
+
+@startuml AUCQueryOrganizzazione
+!include ../../../../commons/style/use-cases.pu
+
+title AUC8 - Query sull'organizzazione
+
+actor :visualizzatore: as A
+
+rectangle {
+  together {
+    usecase (AUC8.1) as "AUC8.1\nRisposta alla query organizzazione"
+  }
+}
+
+:A: -- AUC8.1
+
+@enduml
+
+@startuml AUCQueryDipendente
+!include ../../../../commons/style/use-cases.pu
+
+title AUC9 - Query sul dipendente
+
+actor :visualizzatore: as A
+
+rectangle {
+  together {
+    usecase (AUC9.1) as "AUC9.1\nRisposta alla query dipendente"
+  }
+}
+
+:A: -- AUC9.1
+
+@enduml
+
+@startuml AUCRichiestaLuoghi
+!include ../../../../commons/style/use-cases.pu
+
+title AUC10 - Richiesta su luoghi
+
+actor :gestore: as A
+
+rectangle {
+  together {
+    usecase (AUC10.1) as "AUC10.1\nRichiesta aggiunta luogo"
+    usecase (AUC10.2) as "AUC10.2\nRichiesta rimozione luogo"
+    usecase (AUC10.3) as "AUC10.3\nRichiesta modifica luogo"
+    usecase (AUC10.4) as "AUC10.4\nRichiesta modifica organizzazione"
+  }
+  together {
+    usecase (AUC6.3.1) as "AUC6.3.1\nModifica nome organizzazione"
+    usecase (AUC6.3.2) as "AUC6.3.2\nModifica indirizzo organizzazione"
+    usecase (AUC6.3.3) as "AUC6.3.3\nModifica descrizione organizzazione"
+    usecase (AUC6.3.4.3.1) as "AUC6.3.4.3.1\nModifica coordinate geografiche"
+    usecase (AUC6.3.4.1.1) as "AUC6.3.4.1.1\nInserisci coordinate geografiche"  
+  }
+}
+
+:A: -- AUC10.1
+:A: -- AUC10.2
+:A: -- AUC10.3
+:A: -- AUC10.4
+
+
+(AUC6.3.1) .up.|> (AUC10.4) : <<include>>
+(AUC6.3.2) .up.|> (AUC10.4) : <<include>>
+(AUC6.3.3) .up.|> (AUC10.4) : <<include>>
+(AUC6.3.4.3.1) .up.|> (AUC10.3) : <<include>>
+(AUC6.3.4.1.1) .up.|> (AUC10.1) : <<include>>
+
+@enduml
+
+@startuml AUCRichiestaCreazioneOrganizzazione
+!include ../../../../commons/style/use-cases.pu
+
+title AUC11 - Richiesta creazione organizzazione
+
+actor :owner: as A
+
+rectangle {
+  together {
+    usecase (AUC11.1) as "AUC11.1\nEffettuare la richiesta"
+  }
+  together {
+    usecase (AUC6.1.1) as "AUC6.1.1\nInserisci nome organizzazione"
+    usecase (AUC6.1.2) as "AUC6.1.2\nInserisci indirizzo organizzazione"
+    usecase (AUC6.1.3) as "AUC6.1.3\nInserisci descrizione organizzazione"
+    usecase (AUC6.1.2) as "AUC6.1.2\nInserisci indirizzo organizzazione"
+  }
+}
+
+:A: -- AUC11.1
+
+(AUC6.1.1) .up.|> (AUC11.1) : <<include>>
+(AUC6.1.2) .up.|> (AUC11.1) : <<include>>
+(AUC6.1.3) .up.|> (AUC11.1) : <<include>>
+
+@enduml
+
+@startuml AUCRichiestaCedimentoProprieetaOrganizzazione
+!include ../../../../commons/style/use-cases.pu
+
+title AUC12 - Richiesta cedimento proprietà organizzazione
+
+actor :owner: as A
+
+rectangle {
+  together {
+    usecase (AUC12.1) as "AUC12.1\nInserimento e-mail nuovo owner"
+  }
+}
+
+:A: -- AUC12.1
+
+@enduml
+
+@startuml AUCNominaAmministratore
+!include ../../../../commons/style/use-cases.pu
+
+title AUC13 - Nomina visualizzatore
+
+actor :owner: as A
+
+rectangle {
+  together {
+    usecase (AUC13.1) as "AUC13.1\nInserimento e-mail visualizzatore"
+  }
+}
+
+:A: -- AUC13.1
+
+@enduml
+
+@startuml AUCNominagestore
+!include ../../../../commons/style/use-cases.pu
+
+title AUC14 - Nomina gestore
+
+actor :owner: as A
+
+rectangle {
+  together {
+    usecase (AUC14.1) as "AUC14.1\nInserimento e-mail gestore"
+  }
+}
+
+:A: -- AUC14.1
+
 @enduml
