@@ -1,142 +1,142 @@
-@startuml UCAperturaApp
+@startuml UUCAperturaApp
 !include ../../../../commons/style/use-cases.pu
 
-title UC1 - Apertura applicazione mobile
+title UUC1 - Apertura applicazione mobile
 
 actor :utente non registrato: as A1
 actor :utente non autenticato: as A2
 
 rectangle {
   together {
-    usecase (UC2) as "UC2\nRegistrazione"
-    usecase (UC3) as "UC3\nAutenticazione"
-    usecase (UC4) as "UC4\nRecupero credenziali"
+    usecase (UUC2) as "UUC2\nRegistrazione"
+    usecase (UUC3) as "UUC3\nAutenticazione"
+    usecase (UUC4) as "UUC4\nRecupero credenziali"
   }
 }
 
-:A1: -- (UC2)
-:A2: -- (UC3)
-:A2: -- (UC4)
+:A1: -- (UUC2)
+:A2: -- (UUC3)
+:A2: -- (UUC4)
 
 @enduml
 
-@startuml UCRegistrazione
+@startuml UUCRegistrazione
 !include ../../../../commons/style/use-cases.pu
 
-title UC2 - Registrazione
+title UUC2 - Registrazione
 
 actor :utente non registrato: as A
 
 rectangle {
   together {
-    usecase (UC2.1) as "UC2.1\nVisualizzazione EULA"
-    usecase (UC2.2) as "UC2.2\nInserimento dati registrazione"
-    usecase (UC2.1.1) as "UC2.1.1\nConferma EULA"
+    usecase (UUC2.1) as "UUC2.1\nVisualizzazione EULA"
+    usecase (UUC2.2) as "UUC2.2\nInserimento dati registrazione"
+    usecase (UUC2.1.1) as "UUC2.1.1\nConferma EULA"
   }  
 }
 
-:A: -- (UC2.1)
-:A: -- (UC2.2)
+:A: -- (UUC2.1)
+:A: -- (UUC2.2)
 
-(UC2.1.1) .up.|> (UC2.1) : <<include>>
+(UUC2.1.1) .up.|> (UUC2.1) : <<include>>
 
 @enduml
 
-@startuml UCInserimentoDatiRegistrazione
+@startuml UUCInserimentoDatiRegistrazione
 !include ../../../../commons/style/use-cases.pu
 
-title UC2.2 - Inserimento dati registrazione
+title UUC2.2 - Inserimento dati registrazione
 
 actor :utente non registrato: as A
 
 rectangle {
   together {
-    usecase (UC2.2.1) as "UC2.2.1\nRegistrazione email\n--\nExtension points:\nVisualizzazione errore se la mail\nnon è scritta in modo corretto"
-    usecase (UC2.2.2) as "UC2.2.2\nRegistrazione password\n--\nExtension points:\nVisualizzazione errore se la\npassword non rispetta i criteri" 
-    usecase (UC2.2.3) as "UC2.2.3\nConferma password\n--\nExtension points:\nVisualizzazione errore se le\ndue password non coincidono"     
-    usecase (UC2.2.4) as "UC2.2.4\nInserimento dati anagrafici\n--\nExtension points:\nVisualizzazione errore\ndati mancanti" 
-    usecase (UC2.2.5) as "UC2.2.5\nInformazioni registrazione non valide"
+    usecase (UUC2.2.1) as "UUC2.2.1\nRegistrazione email\n--\nExtension points:\nVisualizzazione errore se la mail\nnon è scritta in modo corretto"
+    usecase (UUC2.2.2) as "UUC2.2.2\nRegistrazione password\n--\nExtension points:\nVisualizzazione errore se la\npassword non rispetta i criteri" 
+    usecase (UUC2.2.3) as "UUC2.2.3\nConferma password\n--\nExtension points:\nVisualizzazione errore se le\ndue password non coincidono"     
+    usecase (UUC2.2.4) as "UUC2.2.4\nInserimento dati anagrafici\n--\nExtension points:\nVisualizzazione errore\ndati mancanti" 
+    usecase (UUC2.2.5) as "UUC2.2.5\nInformazioni registrazione non valide"
   }
 }
 
-:A: -- (UC2.2.1)
-:A: -- (UC2.2.2)
-:A: -- (UC2.2.3)
-:A: -- (UC2.2.4)
+:A: -- (UUC2.2.1)
+:A: -- (UUC2.2.2)
+:A: -- (UUC2.2.3)
+:A: -- (UUC2.2.4)
 
-(UC2.2.5) .up.|> (UC2.2.4) : <<extends>>
-(UC2.2.5) .up.|> (UC2.2.3) : <<extends>>
-(UC2.2.5) .up.|> (UC2.2.2) : <<extends>>
-(UC2.2.5) .up.|> (UC2.2.1) : <<extends>>
+(UUC2.2.5) .up.|> (UUC2.2.4) : <<extends>>
+(UUC2.2.5) .up.|> (UUC2.2.3) : <<extends>>
+(UUC2.2.5) .up.|> (UUC2.2.2) : <<extends>>
+(UUC2.2.5) .up.|> (UUC2.2.1) : <<extends>>
 
 @enduml
 
-@startuml UCAutenticazione
+@startuml UUCAutenticazione
 !include ../../../../commons/style/use-cases.pu
 
-title UC3 - Autenticazione
+title UUC3 - Autenticazione
 
 actor :utente non autenticato: as A
 
 rectangle {
   together {
-    usecase (UC3.1) as "UC3.1\nInserimento email\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
-    usecase (UC3.2) as "UC3.2\nInserimento password\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate" 
-    usecase (UC3.3) as "UC3.3\nInformazioni autenticazione non valide"     
+    usecase (UUC3.1) as "UUC3.1\nInserimento email\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
+    usecase (UUC3.2) as "UUC3.2\nInserimento password\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate" 
+    usecase (UUC3.3) as "UUC3.3\nInformazioni autenticazione non valide"     
   }
 }
 
-:A: -- (UC3.1)
-:A: -- (UC3.2)
+:A: -- (UUC3.1)
+:A: -- (UUC3.2)
 
-(UC3.3) .up.|> (UC3.2) : <<extends>>
-(UC3.3) .up.|> (UC3.1) : <<extends>>
+(UUC3.3) .up.|> (UUC3.2) : <<extends>>
+(UUC3.3) .up.|> (UUC3.1) : <<extends>>
 
 @enduml
 
-@startuml UCRecuperoCredenziali
+@startuml UUCRecuperoCredenziali
 !include ../../../../commons/style/use-cases.pu
 
-title UC4 - Recupero credenziali
+title UUC4 - Recupero credenziali
 
 actor :utente non autenticato: as A
 
 rectangle {
   together {
-    usecase (UC4.1) as "UC4.1\nRecupero password" 
+    usecase (UUC4.1) as "UUC4.1\nRecupero password" 
   }
 }
 
-:A: -- (UC4.1)
+:A: -- (UUC4.1)
 
 @enduml
 
-@startuml UCVisualizzazioneOrganizzazioni
+@startuml UUCVisualizzazioneOrganizzazioni
 !include ../../../../commons/style/use-cases.pu
 
-title UC5 - Visualizzazione organizzazioni
+title UUC5 - Visualizzazione organizzazioni
 
 actor :utente autenticato: as A
 
 rectangle {
   together {
-    usecase (UC5.1) as "UC5.1\nVisualizzazione\nlista organizzazioni\n--\nExtension points:\nVisualizzazione errore causa\n-richiesta di visualizzazione della lista con rete mancante\n-aggiornamento della lista con rete mancante"
-    usecase (UC5.1.1) as "UC5.1.1\nAggiornamento\nlista organizzazioni"
-    usecase (UC6) as "UC6\nVisualizzazione errore\nrete mancante"
+    usecase (UUC5.1) as "UUC5.1\nVisualizzazione\nlista organizzazioni\n--\nExtension points:\nVisualizzazione errore causa\n-richiesta di visualizzazione della lista con rete mancante\n-aggiornamento della lista con rete mancante"
+    usecase (UUC5.1.1) as "UUC5.1.1\nAggiornamento\nlista organizzazioni"
+    usecase (UUC6) as "UUC6\nVisualizzazione errore\nrete mancante"
   }
 }
 
-:A: -- (UC5.1)
+:A: -- (UUC5.1)
 
-(UC5.1.1) .up.|> (UC5.1) : <<include>>
-(UC6) .up.|> (UC5.1) : <<extends>>
+(UUC5.1.1) .up.|> (UUC5.1) : <<include>>
+(UUC6) .up.|> (UUC5.1) : <<extends>>
 
 @enduml
 
-@startuml UCCollegamentoOrganizzazione
+@startuml UUCCollegamentoOrganizzazione
 !include ../../../../commons/style/use-cases.pu
 
-title UC7 - Collegamento organizzazione
+title UUC7 - Collegamento organizzazione
 
 actor :utente autenticato: as A3
 actor :utente non collegato: as A3.1
@@ -145,21 +145,21 @@ actor :utente non collegato: as A3.1
 
 rectangle {
   together {
-    usecase (UC7.1) as "UC7.1\nSelezionamento di un'organizzazione\n--\nExtension points:\nVisualizzazione errore in caso di\nselezionamento di un'organizzazione\n con rete mancante"
-    usecase (UC6) as "UC6\nVisualizzazione errore\nrete mancante"
+    usecase (UUC7.1) as "UUC7.1\nSelezionamento di un'organizzazione\n--\nExtension points:\nVisualizzazione errore in caso di\nselezionamento di un'organizzazione\n con rete mancante"
+    usecase (UUC6) as "UUC6\nVisualizzazione errore\nrete mancante"
   }
 }
 
-:A3.1: -- (UC7.1)
+:A3.1: -- (UUC7.1)
 
-(UC6) .up.|> (UC7.1) : <<extends>>
+(UUC6) .up.|> (UUC7.1) : <<extends>>
 
 @enduml
 
-@startuml UCScollegamentoOrganizzazione
+@startuml UUCScollegamentoOrganizzazione
 !include ../../../../commons/style/use-cases.pu
 
-title UC8 - Scollegamento organizzazione
+title UUC8 - Scollegamento organizzazione
 
 actor :utente autenticato: as A3
 actor :utente collegato: as A3.1
@@ -167,21 +167,21 @@ actor :utente collegato: as A3.1
 
 rectangle {
   together {
-    usecase (UC8.1) as "UC8.1\nUscita da un'organizzazione\n--\nExtension points:\nVisualizzazione errore in caso di\nuscita dall'organizzazione\n con rete mancante"
-    usecase (UC6) as "UC6\nVisualizzazione errore\nrete mancante"
+    usecase (UUC8.1) as "UUC8.1\nUscita da un'organizzazione\n--\nExtension points:\nVisualizzazione errore in caso di\nuscita dall'organizzazione\n con rete mancante"
+    usecase (UUC6) as "UUC6\nVisualizzazione errore\nrete mancante"
   }
 }
 
-:A3.1: -- (UC8.1)
+:A3.1: -- (UUC8.1)
 
-(UC6) .up.|> (UC8.1) : <<extends>>
+(UUC6) .up.|> (UUC8.1) : <<extends>>
 
 @enduml
 
-@startuml UCNotoIncognito
+@startuml UUCNotoIncognito
 !include ../../../../commons/style/use-cases.pu
 
-title UC9 - Passaggio noto/incognito
+title UUC9 - Passaggio noto/incognito
 
 actor :utente autenticato: as A3
 actor :utente collegato: as A3.1
@@ -189,21 +189,21 @@ actor :utente collegato: as A3.1
 
 rectangle {
   together {
-    usecase (UC9.1) as "UC9.1\nScelta noto o incognito\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
-    usecase (UC6) as "UC6\nVisualizzazione errore\nrete mancante"
+    usecase (UUC9.1) as "UUC9.1\nScelta noto o incognito\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
+    usecase (UUC6) as "UUC6\nVisualizzazione errore\nrete mancante"
   }
 }
 
-:A3.1: -- (UC9.1)
+:A3.1: -- (UUC9.1)
 
-(UC6) .up.|> (UC9.1) : <<extends>>
+(UUC6) .up.|> (UUC9.1) : <<extends>>
 
 @enduml
 
-@startuml UC9.1
+@startuml UUC9.1
 !include ../../../../commons/style/use-cases.pu
 
-title UC9.1 - Scelta noto o incognito
+title UUC9.1 - Scelta noto o incognito
 
 actor :utente collegato: as A3
 
@@ -215,41 +215,41 @@ actor :utente incognito: as A3.2
 
 rectangle {
   together {
-    usecase (UC9.1.1) as "UC9.1.1\nPassaggio a incognito"
-    usecase (UC9.1.2) as "UC9.1.2\nPassaggio a noto"
+    usecase (UUC9.1.1) as "UUC9.1.1\nPassaggio a incognito"
+    usecase (UUC9.1.2) as "UUC9.1.2\nPassaggio a noto"
   }
 }
 
-:A3.1: -- (UC9.1.1)
-:A3.2: -- (UC9.1.2)
+:A3.1: -- (UUC9.1.1)
+:A3.2: -- (UUC9.1.2)
 
 @enduml
 
-@startuml UCVisualizzazioneStorico
+@startuml UUCVisualizzazioneStorico
 !include ../../../../commons/style/use-cases.pu
 
-title UC10 - Storico utente
+title UUC10 - Storico utente
 
 actor :utente autenticato: as A
 
 rectangle {
   together {
-    usecase (UC10.1) as "UC10.1\nVisualizzazione storico accessi\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta storico\nin mancanza di rete"
-    usecase (UC6) as "UC6\nVisualizzazione errore\nrete mancante"
-    note right of (UC10.1): implementazione opzionale
+    usecase (UUC10.1) as "UUC10.1\nVisualizzazione storico accessi\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta storico\nin mancanza di rete"
+    usecase (UUC6) as "UUC6\nVisualizzazione errore\nrete mancante"
+    note right of (UUC10.1): implementazione opzionale
   }
 }
 
-:A: -- (UC10.1)
+:A: -- (UUC10.1)
 
-(UC6) .up.|> (UC10.1) : <<extends>>
+(UUC6) .up.|> (UUC10.1) : <<extends>>
 
 @enduml
 
-@startuml UCVisualizzazioneTempo
+@startuml UUCVisualizzazioneTempo
 !include ../../../../commons/style/use-cases.pu
 
-title UC11 - Tempo utente nell'organizzazione
+title UUC11 - Tempo utente nell'organizzazione
 
 actor :utente autenticato: as A3
 actor :utente collegato: as A3.1
@@ -258,14 +258,14 @@ actor :utente collegato: as A3.1
 
 rectangle {
   together {
-    usecase (UC11.1) as "UC11.1\nVisualizzazione tempo trascorso\nnell'organizzazione corrente\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta tempo trascorso\nin mancanza di rete"
-    usecase (UC6) as "UC6\nVisualizzazione errore\nrete mancante"
-    note right of (UC11.1): implementazione opzionale
+    usecase (UUC11.1) as "UUC11.1\nVisualizzazione tempo trascorso\nnell'organizzazione corrente\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta tempo trascorso\nin mancanza di rete"
+    usecase (UUC6) as "UUC6\nVisualizzazione errore\nrete mancante"
+    note right of (UUC11.1): implementazione opzionale
   }
 }
 
-:A3.1: -- (UC11.1)
+:A3.1: -- (UUC11.1)
 
-(UC6) .up.|> (UC11.1) : <<extends>>
+(UUC6) .up.|> (UUC11.1) : <<extends>>
 
 @enduml

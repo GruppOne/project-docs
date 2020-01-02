@@ -7,37 +7,37 @@ actor :Amministratore: as A1.1
 
 rectangle {
   together {
-  usecase (UC1.1) as "UC1.1\nAutenticazione"
-  usecase (UC1.2) as "UC1.2\nVerifica credenziali"
-  usecase (UC1.3) as "UC1.3\nVisualizzazione credenziali errate"
+  usecase (AUC1.1) as "AUC1.1\nAutenticazione"
+  usecase (AUC1.2) as "AUC1.2\nVerifica credenziali"
+  usecase (AUC1.3) as "AUC1.3\nVisualizzazione credenziali errate"
   note "Condition: credenziali errate" as N1
   }
 
-  usecase (UC2) as "UC2\nApprovazione owner"
+  usecase (AUC2) as "AUC2\nApprovazione owner"
 
   together {
-    usecase (UC3) as "UC3\nApprovazione creazione organizzazione"
-    usecase (UC4) as "UC4\nApprovazione modifica organizzazione"
+    usecase (AUC3) as "AUC3\nApprovazione creazione organizzazione"
+    usecase (AUC4) as "AUC4\nApprovazione modifica organizzazione"
   }
 
   together {
-    usecase (UC5) as "UC5\nApprovazione aggiunta luogo"
-    usecase (UC6) as "UC6\nApprovazione modifica luogo"
-    usecase (UC7) as "UC7\nApprovazione trasferimento di proprietà organizzazione"
+    usecase (AUC5) as "AUC5\nApprovazione aggiunta luogo"
+    usecase (AUC6) as "AUC6\nApprovazione modifica luogo"
+    usecase (AUC7) as "AUC7\nApprovazione trasferimento di proprietà organizzazione"
   }
 }
 
-UC1.1 ..> UC1.2 : <<include>>
-UC1.3 .. N1
-N1 ..> UC1.1 : <<extends>>
+AUC1.1 ..> AUC1.2 : <<include>>
+AUC1.3 .. N1
+N1 ..> AUC1.1 : <<extends>>
 
-A1.1 - UC1.1
-A1.1 -- UC2
-A1.1 -- UC3
-A1.1 -- UC4
-A1.1 -- UC5
-A1.1 -- UC6
-A1.1 -- UC7
+A1.1 - AUC1.1
+A1.1 -- AUC2
+A1.1 -- AUC3
+A1.1 -- AUC4
+A1.1 -- AUC5
+A1.1 -- AUC6
+A1.1 -- AUC7
 
 @enduml
 
@@ -50,30 +50,30 @@ actor :Amministratore: as A1.1
 actor :Root: as A1.2
 
 rectangle {
-  usecase (UC8) as "UC8\nCreazione amministratore"
+  usecase (AUC8) as "AUC8\nCreazione amministratore"
 
   together {
-    usecase (UC9) as "UC9\nEliminazione organizzazione"
-    usecase (UC10) as "UC10\nModifica organizzazione"
-    usecase (UC11) as "UC11\nCreazione organizzazione"
+    usecase (AUC9) as "AUC9\nEliminazione organizzazione"
+    usecase (AUC10) as "AUC10\nModifica organizzazione"
+    usecase (AUC11) as "AUC11\nCreazione organizzazione"
   }
 
   together {
-    usecase (UC12) as "UC12\nEliminazione luogo"
-    usecase (UC13) as "UC13\nModifica luogo"
+    usecase (AUC12) as "AUC12\nEliminazione luogo"
+    usecase (AUC13) as "AUC13\nModifica luogo"
   }
-  usecase (UC14) as "UC14\nEliminazione account"
+  usecase (AUC14) as "AUC14\nEliminazione account"
 }
 
 A1.1 <|-- A1.2
 
-A1.2 -- UC8
-A1.2 -- UC9
-A1.2 -- UC10
-A1.2 -- UC11
-A1.2 -- UC12
-A1.2 -- UC13
-A1.2 -- UC14
+A1.2 -- AUC8
+A1.2 -- AUC9
+A1.2 -- AUC10
+A1.2 -- AUC11
+A1.2 -- AUC12
+A1.2 -- AUC13
+A1.2 -- AUC14
 @enduml
 
 @startuml visualizzatore
@@ -84,17 +84,17 @@ title Visualizzatore
 actor :Visualizzatore: as A2.1
 
 rectangle {
-  usecase (UC17) as "UC17\nLogin"
+  usecase (AUC17) as "AUC17\nLogin"
 
   together {
-    usecase (UC15) as "UC15\nQuery sull'organizzazione"
-    usecase (UC16) as "UC16\nQuery sul dipendente"
+    usecase (AUC15) as "AUC15\nQuery sull'organizzazione"
+    usecase (AUC16) as "AUC16\nQuery sul dipendente"
   }
 }
 
-A2.1 -- UC15
-A2.1 -- UC16
-A2.1 -- UC17
+A2.1 -- AUC15
+A2.1 -- AUC16
+A2.1 -- AUC17
 
 @enduml
 
@@ -108,20 +108,20 @@ actor :Gestore: as A2.2
 
 rectangle {
   together {
-    usecase (UC18) as "UC18\nRichiesta aggiunta luogo"
-    usecase (UC19) as "UC19\nRichiesta rimozione luogo"
-    usecase (UC20) as "UC20\nRichiesta modifica luogo"
+    usecase (AUC18) as "AUC18\nRichiesta aggiunta luogo"
+    usecase (AUC19) as "AUC19\nRichiesta rimozione luogo"
+    usecase (AUC20) as "AUC20\nRichiesta modifica luogo"
   }
 
-  usecase (UC21) as "UC21\nRichiesta modifica parametri organizzazione"
+  usecase (AUC21) as "AUC21\nRichiesta modifica parametri organizzazione"
 }
 
 A2.1 <|-- A2.2
 
-A2.2 -- UC18
-A2.2 -- UC19
-A2.2 -- UC20
-A2.2 -- UC21
+A2.2 -- AUC18
+A2.2 -- AUC19
+A2.2 -- AUC20
+A2.2 -- AUC21
 @enduml
 
 @startuml owner
@@ -134,20 +134,20 @@ actor :Owner: as A2.3
 
 rectangle {
     together {
-    usecase (UC22) as "UC22\nNomina visualizzatore"
-    usecase (UC23) as "UC23\nNomina gestore"
+    usecase (AUC22) as "AUC22\nNomina visualizzatore"
+    usecase (AUC23) as "AUC23\nNomina gestore"
     }
 
     together {
-    usecase (UC24) as "UC24\nRichiesta creazione organizzazione"
-    usecase (UC25) as "UC25\nRichiesta cedimento proprietà di organizzazione"
+    usecase (AUC24) as "AUC24\nRichiesta creazione organizzazione"
+    usecase (AUC25) as "AUC25\nRichiesta cedimento proprietà di organizzazione"
     }
 }
 
 A2.2 <|-- A2.3
 
-:A2.3: -- UC22
-:A2.3: -- (UC23)
-:A2.3: -- (UC24)
-:A2.3: -- (UC25)
+:A2.3: -- AUC22
+:A2.3: -- (AUC23)
+:A2.3: -- (AUC24)
+:A2.3: -- (AUC25)
 @enduml
