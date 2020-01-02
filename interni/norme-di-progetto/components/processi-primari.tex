@@ -136,17 +136,22 @@ I diagrammi dei casi d'uso descrivono le funzioni e i servizi offerti dal prodot
 
 Nel presente paragrafo si descrive la rappresentazione testuale mentre nel successivo verrà descritta la rappresentazione grafica. Un generico caso d'uso è caratterizzato da:
 \begin{description}
+  \item [Sigla del caso d`uso]: per avere più ordine nell'esposizione dei casi d'uso si antepone una lettera maiuscola al caso d'uso. Useremo:
+  \begin{itemize}
+   \item --A per distinguere i casi d'uso dell'admin.
+   \item --U per distinguere i casi d'uso utente.
+  \end{itemize}
   \item [Titolo]: breve titolo del caso d'uso.
   \item [Codice]: codice identificativo del caso d'uso. Ogni caso d'uso può essere suddiviso in altri sottocasi. La denominazione convenzionale è la seguente:
         \begin{description}
-          \item [Caso d'uso]: UC[codice numerico].
-          \item [Sottocaso d'uso]: UC[codice numerico del padre].[codice numerico del sottocaso].
+          \item [Caso d'uso]: [A/U]UC[codice numerico].
+          \item [Sottocaso d'uso]: [A/U]UC[codice numerico del padre].[codice numerico del sottocaso].
         \end{description}
-        Ad esempio il primo caso d'uso avrà codice identificativo UC1 mentre i relativi sottocasi saranno UC1.1 UC1.2 UC1.3..
+        Ad esempio il primo caso d'uso admin avrà codice identificativo AUC1 mentre i relativi sottocasi saranno AUC1.1 AUC1.2 AUC1.3..
   \item [Attore primario]: attore principale coinvolto nel caso d'uso.
   \item [Attori secondari (opzionale)]: attori secondari coinvolti nel caso d'uso.
-  \item [Precondizioni]: condizione in cui si trovano gli attori prima del verificarsi del caso d'uso.
-  \item [Postcondizioni]: condizione in cui si trovano gli attori dopo il verificarsi del caso d'uso.
+  \item [Precondizione]: condizione in cui si trovano gli attori prima del verificarsi del caso d'uso.
+  \item [Postcondizione]: condizione in cui si trovano gli attori dopo il verificarsi del caso d'uso.
   \item [Scenario principale]: sequenza di azioni svolte dall'attore per portare a compimento il caso d'uso.
   \item [Inclusioni (opzionale)]: il caso d'uso incluso è incondizionatamente eseguito dal caso d'uso che lo include.
   \item [Estensioni (opzionale)]: sequenza di possibilità dell'attore al verificarsi di eventi anomali o di situazioni di errore.
