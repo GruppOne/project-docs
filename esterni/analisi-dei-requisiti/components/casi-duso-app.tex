@@ -5,35 +5,13 @@
 \begin{document}
 
 %UUC1 (start)
-\subsubsection{UUC1 - Apertura applicazione mobile}
+\subsubsection{UUC1 - Registrazione}
 \label{subsub:UUC1utente}
 %inserire diagramma UUC1
 \begin{itemize}
   \item \textbf{Caso d’uso:} UUC1 
-  \item \textbf{Titolo:} Apertura applicazione mobile
-  \item \textbf{Attori primari:} utente non registrato, utente non autenticato
-  \item \textbf{Precondizione:} l'utente deve installare l'applicazione mobile sul proprio dispositivo.
-  \item \textbf{Postcondizione:} l'utente ha installato l'applicazione mobile e la apre.
-  \item \textbf{Scenario principale:} 
-  \begin{enumerate}
-    \item Al momento dell'apertura dell'applicazione mobile, l'utente visualizza una schermata con tre opzioni:
-    \begin{enumerate}
-      \item registrazione, se l'utente accede la prima volta e non è registrato;
-      \item autenticazione, se l'utente è già registrato ma non è ancora autenticato;
-      \item recupero credenziali, nel caso in cui l'utente voglia autenticarsi ma ha smarrito le sue credenziali.
-    \end{enumerate}
-  \end{enumerate}   
-\end{itemize}
-% subsub:UUC1utente (end)
-
-%UUC2 (start)
-\subsubsection{UUC2 - Registrazione}
-\label{subsub:UUC2utente}
-%inserire diagramma UUC2
-\begin{itemize}
-  \item \textbf{Caso d’uso:} UUC1 
   \item \textbf{Titolo:} Registrazione
-  \item \textbf{Attori primari:} utente non registrato
+  \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente non è registrato al servizio.
   \item \textbf{Postcondizione:} la registrazione va a buon fine e l'utente è registrato.
   \item \textbf{Scenario principale:} 
@@ -46,15 +24,15 @@
     \item EULA deve essere confermata, altrimenti la registrazione non può continuare.
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC2utente (end)
+% subsub:UUC1utente (end)
 
-%UUC2.1 (start)
-\subsubsection{UUC2.1 - Visualizzazione EULA}
-\label{subsub:UUC2.1utente}
+%UUC1.1 (start)
+\subsubsection{UUC1.1 - Visualizzazione EULA}
+\label{subsub:UUC1.1utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC2.1 
+  \item \textbf{Caso d’uso:} UUC1.1 
   \item \textbf{Titolo:} Visualizzazione EULA
-  \item \textbf{Attori primari:} utente non registrato
+  \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente è all'interno della schermata di registrazione
   \item \textbf{Postcondizione:} l'utente visualizza l'EULA
   \item \textbf{Scenario principale:} 
@@ -66,15 +44,15 @@
     \item l'utente deve confermare l'EULA per continuare la registrazione.
   \end{enumerate}     
 \end{itemize}
-% subsub:UUC2.1utente (end)
+% subsub:UUC1.1utente (end)
 
-%UUC2.2 (start)
-\subsubsection{UUC2.1.1 - Conferma EULA}
-\label{subsub:UUC2.1.1utente}
+%UUC1.1.1 (start)
+\subsubsection{UUC1.1.1 - Conferma EULA}
+\label{subsub:UUC1.1.1utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC2.1.1 
+  \item \textbf{Caso d’uso:} UUC1.1.1 
   \item \textbf{Titolo:} Conferma EULA
-  \item \textbf{Attori primari:} utente non registrato
+  \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente visualizza l'EULA.
   \item \textbf{Postcondizione:} l'utente continua la registrazione in quanto ha accettato l'EULA. 
   \item \textbf{Scenario principale:} 
@@ -82,16 +60,16 @@
     \item E' presente un'opzione per accettare l'EULA: in caso affermativo, la registrazione può andare avanti. 
   \end{enumerate}    
 \end{itemize}
-% subsub:UUC2.1.1utente (end)
+% subsub:UUC1.1.1utente (end)
 
-%UUC2.2 (start)
-\subsubsection{UUC2.2 - Inserimento dati registrazione}
-\label{subsub:UUC2.2utente}
-%inserire diagramma UUC2.2
+%UUC1.2 (start)
+\subsubsection{UUC1.2 - Inserimento dati registrazione}
+\label{subsub:UUC1.2utente}
+%inserire diagramma UUC1.2
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC2.1 
+  \item \textbf{Caso d’uso:} UUC1.2
   \item \textbf{Titolo:} Visualizzazione EULA
-  \item \textbf{Attori primari:} utente non registrato
+  \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente ha accettato l'EULA.
   \item \textbf{Postcondizione:} l'utente ha inserito correttamente tutti i dati necessari alla registrazione e diventa un utente registrato. 
   \item \textbf{Scenario principale:} 
@@ -103,15 +81,15 @@
     \item se i dati inseriti non sono validi, l'utente visualizzerà un errore.
   \end{enumerate}     
 \end{itemize}
-% subsub:UUC2.2utente (end)
+% subsub:UUC1.2utente (end)
 
-%UUC2.2.1 (start)
-\subsubsection{UUC2.2.1 - Registrazione email}
-\label{subsub:UUC2.2.1utente}
+%UUC1.2.1 (start)
+\subsubsection{UUC1.2.1 - Registrazione email}
+\label{subsub:UUC1.2.1utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC2.2.1 
+  \item \textbf{Caso d’uso:} UUC1.2.1 
   \item \textbf{Titolo:} Registrazione email
-  \item \textbf{Attori primari:} utente non registrato
+  \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente si trova nella schermata di registrazione nel campo dell'email.
   \item \textbf{Postcondizione:} l'utente ha inserito la email in modo corretto. 
   \item \textbf{Scenario principale:} 
@@ -123,15 +101,15 @@
     \item se la mail è scritta in una forma non corretta, verrà visualizzato un'errore di mail non valida.
   \end{enumerate}     
 \end{itemize}
-% subsub:UUC2.2.1utente (end)
+% subsub:UUC1.2.1utente (end)
 
-%UUC2.2.2 (start)
-\subsubsection{UUC2.2.2 - Registrazione password}
-\label{subsub:UUC2.2.2utente}
+%UUC1.2.2 (start)
+\subsubsection{UUC1.2.2 - Registrazione password}
+\label{subsub:UUC1.2.2utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC2.2.2 
+  \item \textbf{Caso d’uso:} UUC1.2.2 
   \item \textbf{Titolo:} Registrazione password
-  \item \textbf{Attori primari:} utente non registrato
+  \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente si trova nella schermata di registrazione nel campo della password.
   \item \textbf{Postcondizione:} l'utente ha inserito la password in modo corretto.  
   \item \textbf{Scenario principale:} 
@@ -143,15 +121,15 @@
     \item se la password non rispetta determinati vincoli, verrà visualizzato un'errore di password non valida.
   \end{enumerate}     
 \end{itemize}
-% subsub:UUC2.2.2utente (end)
+% subsub:UUC1.2.2utente (end)
 
-%UUC2.2.3 (start)
-\subsubsection{UUC2.2.3 - Conferma password}
-\label{subsub:UUC2.2.3utente}
+%UUC1.2.3 (start)
+\subsubsection{UUC1.2.3 - Conferma password}
+\label{subsub:UUC1.2.3utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC2.2.1 
+  \item \textbf{Caso d’uso:} UUC1.2.3
   \item \textbf{Titolo:} Conferma password
-  \item \textbf{Attori primari:} utente non registrato
+  \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente si trova nella schermata di registrazione nel campo della conferma della password, 
   e la password inserita in precedenza dall'utente rispetta tutti i vincoli.
   \item \textbf{Postcondizione:} l'utente ha inserito la conferma della password in modo corretto. 
@@ -164,15 +142,15 @@
     \item se la password inserita non è uguale a quella precedente, verrà visualizzato un'errore di conferma password non valida.
   \end{enumerate}     
 \end{itemize}
-% subsub:UUC2.2.3utente (end)
+% subsub:UUC1.2.3utente (end)
 
-%UUC2.2.4 (start)
-\subsubsection{UUC2.2.4 - Inserimento dati anagrafici}
-\label{subsub:UUC2.2.4utente}
+%UUC1.2.4 (start)
+\subsubsection{UUC1.2.4 - Inserimento dati anagrafici}
+\label{subsub:UUC1.2.4utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC2.2.4 
+  \item \textbf{Caso d’uso:} UUC1.2.4 
   \item \textbf{Titolo:} Inserimento dati anagrafici
-  \item \textbf{Attori primari:} utente non registrato
+  \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente si trova nella schermata di registrazione nei campi dei dati anagrafici.
   \item \textbf{Postcondizione:} l'utente ha inserito i dati anagrafici in modo corretto. 
   \item \textbf{Scenario principale:} 
@@ -184,15 +162,15 @@
     \item se uno o più dati anagrafici inseriti non rispettano determinati vincoli, verrà visualizzato un'errore sui campi in cui è segnalato l'errore.
   \end{enumerate}     
 \end{itemize}
-% subsub:UUC2.2.4utente (end)
+% subsub:UUC1.2.4utente (end)
 
-%UUC2.2.5 (start)
-\subsubsection{UUC2.2.5 - Informazioni registrazione non valide}
-\label{subsub:UUC2.2.5utente}
+%UUC1.2.5 (start)
+\subsubsection{UUC1.2.5 - Informazioni registrazione non valide}
+\label{subsub:UUC1.2.5utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC2.2.5 
+  \item \textbf{Caso d’uso:} UUC1.2.5 
   \item \textbf{Titolo:} informazioni registrazione non valide
-  \item \textbf{Attori primari:} utente non registrato
+  \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente si trova nella schermata di registrazione e non rispetta i vincoli imposti sui campi presenti.
   \item \textbf{Postcondizione:} l'applicazione mobile comunica all'utente l'errore.
   \item \textbf{Scenario Principale:} 
@@ -200,14 +178,14 @@
     \item l'utente visualizza il messaggio d'errore, in quanto le informazioni inserite non sono valide.
   \end{enumerate}   
 \end{itemize}
-% subsub:UUC2.2.5utente (end)
+% subsub:UUC1.2.5utente (end)
 
-%UUC3 (start)
-\subsubsection{UUC3 - Autenticazione}
+%UUC2 (start)
+\subsubsection{UUC2 - Autenticazione}
 \label{subsub:UUC2utente}
-%inserire diagramma UUC3
+%inserire diagramma UUC2
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC3 
+  \item \textbf{Caso d’uso:} UUC2
   \item \textbf{Titolo:} Autenticazione
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente è registrato al servizio.
@@ -223,11 +201,11 @@
 \end{itemize}
 % subsub:UUC3utente (end)
 
-%UUC3.1 (start)
-\subsubsection{UUC3.1 - Inserimento email}
+%UUC2.1 (start)
+\subsubsection{UUC2.1 - Inserimento email}
 \label{subsub:UUC2.1utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC3.1 
+  \item \textbf{Caso d’uso:} UUC2.1 
   \item \textbf{Titolo:} Inserimento email
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente si posiziona sul campo dell'email.
@@ -242,13 +220,13 @@
     non si indica qual è il campo errato).
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC3.1utente (end)
+% subsub:UUC2.1utente (end)
 
-%UUC3.2 (start)
-\subsubsection{UUC3.2 - inserimento password}
-\label{subsub:UUC3.2utente}
+%UUC2.2 (start)
+\subsubsection{UUC2.2 - inserimento password}
+\label{subsub:UUC2.2utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC3.2 
+  \item \textbf{Caso d’uso:} UUC2.2 
   \item \textbf{Titolo:} Inserimento password
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente si posiziona sul campo della password.
@@ -263,13 +241,13 @@
     non si indica qual è il campo errato).
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC3.2utente (end)
+% subsub:UUC2.2utente (end)
 
 %UUC3.3 (start)
-\subsubsection{UUC3.3 - Informazioni autenticazione non valide}
-\label{subsub:UUC3.3utente}
+\subsubsection{UUC2.3 - Informazioni autenticazione non valide}
+\label{subsub:UUC2.3utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC3.3 
+  \item \textbf{Caso d’uso:} UUC2.3 
   \item \textbf{Titolo:} Informazioni autenticazione non valide
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente si trova nella schermata di autenticazione e non rispetta i vincoli imposti sui campi presenti.
@@ -279,14 +257,14 @@
     \item l'utente visualizza il messaggio d'errore, in quanto le informazioni inserite non sono valide.
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC3.3utente (end)
+% subsub:UUC2.3utente (end)
 
-%UUC4 (start)
-\subsubsection{UUC4 - Recupero credenziali}
-\label{subsub:UUC4utente}
-%inserire diagramma UUC4
+%UUC3 (start)
+\subsubsection{UUC3 - Recupero credenziali}
+\label{subsub:UUC3utente}
+%inserire diagramma UUC3
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC4 
+  \item \textbf{Caso d’uso:} UUC3 
   \item \textbf{Titolo:} Recupero credenziali
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente si trova nella schermata principale ed è registrato al servizio.
@@ -296,13 +274,13 @@
     \item l'utente seleziona la voce per il recupero credenziali e avviene tramite recupero password.
   \end{enumerate} 
 \end{itemize}
-% subsub:UUC4utente (end)
+% subsub:UUC3utente (end)
 
-%UUC4.1 (start)
-\subsubsection{UUC4.1 - Recupero password}
-\label{subsub:UUC4.1utente}
+%UUC3.1 (start)
+\subsubsection{UUC3.1 - Recupero password}
+\label{subsub:UUC3.1utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC4.1 
+  \item \textbf{Caso d’uso:} UUC3.1 
   \item \textbf{Titolo:} Recupero password
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente si trova nella schermata del recupero credenziali.
@@ -316,21 +294,21 @@
     \end{enumerate}
   \end{enumerate} 
 \end{itemize}
-% subsub:UUC4.1utente (end)
+% subsub:UUC3.1utente (end)
 
-%UUC5 (start)
-\subsubsection{UUC5 - Visualizzazione organizzazioni}
-\label{subsub:UUC5utente}
-%inserire diagramma UUC5
+%UUC4 (start)
+\subsubsection{UUC4 - Recupero lista organizzazioni}
+\label{subsub:UUC4utente}
+%inserire diagramma UUC4
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC5 
-  \item \textbf{Titolo:} Visualizzazione organizzazioni
+  \item \textbf{Caso d’uso:} UUC4
+  \item \textbf{Titolo:} Recupero lista organizzazioni
   \item \textbf{Attori primari:} utente autenticato
   \item \textbf{Precondizione:} l'utente si è appena autenticato.
-  \item \textbf{Postcondizione:} l'utente visualizza tutte le organizzazioni.
+  \item \textbf{Postcondizione:} l'utente visualizza una lista di tutte le organizzazioni.
   \item \textbf{Scenario principale:} 
   \begin{enumerate}
-    \item l'utente visualizza una lista di organizzazioni alla quale si può fare richiesta di monitoraggio.
+    \item l'utente ha la possibilità di recuperare una lista di organizzazioni alla quale si può collegare;
   \end{enumerate}  
   \item \textbf{Inclusioni:} 
   \begin{enumerate}
@@ -341,20 +319,20 @@
     \item in caso di rete mancante, non possono essere eseguite queste operazioni e quindi verrà notificato un errore.
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC5utente (end)
+% subsub:UUC4utente (end)
 
-%UUC5.1 (start)
-\subsubsection{UUC5.1 - Visualizzazione lista organizzazioni}
-\label{subsub:UUC5utente}
+%UUC4.1 (start)
+\subsubsection{UUC4.1 - Visualizzazione lista organizzazioni}
+\label{subsub:UUC4.1utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC5 
+  \item \textbf{Caso d’uso:} UUC4.1
   \item \textbf{Titolo:} Visualizzazione lista organizzazioni
   \item \textbf{Attori primari:} utente autenticato
   \item \textbf{Precondizione:} l'utente si trova nella schermata post-autenticazione.
-  \item \textbf{Postcondizione:} l'utente visualizza la lista delle organizzazioni.
+  \item \textbf{Postcondizione:} l'utente visualizza la lista di tutte le organizzazioni.
   \item \textbf{Scenario principale:} 
   \begin{enumerate}
-    \item l'utente visualizza la lista delle organizzazioni.
+    \item l'utente visualizza, tramite un'apposita operazione, la lista di tutte le organizzazioni autorizzate a monitorare l'utente autenticato.
   \end{enumerate}  
   \item \textbf{Inclusioni:} 
   \begin{enumerate}
@@ -366,13 +344,13 @@
     oppure di aggiornamento della lista delle organizzazioni.
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC5.1utente (end)
+% subsub:UU4.1utente (end)
 
-%UUC5.1.1 (start)
-\subsubsection{UUC5.1.1 - Aggiornamento lista organizzazioni}
-\label{subsub:UUC5utente}
+%UUC4.1.1 (start)
+\subsubsection{UUC4.1.1 - Aggiornamento lista organizzazioni}
+\label{subsub:UUC4.1.1utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC5 
+  \item \textbf{Caso d’uso:} UUC4.1.1
   \item \textbf{Titolo:} Aggiornamento lista organizzazioni
   \item \textbf{Attori primari:} utente autenticato
   \item \textbf{Precondizione:} l'utente visualizza la lista delle organizzazioni.
@@ -383,13 +361,13 @@
     dell'applicazione mobile.
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC5.1.1utente (end)
+% subsub:UUC4.1.1.1utente (end)
 
-%UUC6 (start)
-\subsubsection{UUC6 - Visualizzazione errore rete mancante}
-\label{subsub:UUC6utente}
+%UUC5 (start)
+\subsubsection{UUC5 - Visualizzazione errore rete mancante}
+\label{subsub:UUC5utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC6
+  \item \textbf{Caso d’uso:} UUC5
   \item \textbf{Titolo:} Visualizzazione errore rete mancante
   \item \textbf{Attori primari:} utente autenticato
   \item \textbf{Precondizione:} l'utente è autenticato, ma nel suo dispositivo non c'è alcun accesso alla rete.
@@ -399,14 +377,14 @@
     \item l'utente visualizza il messaggio d'errore, in quanto non è possibile eseguire operazioni che necessitano della rete in mancanza di essa.
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC6utente (end)
+% subsub:UUC5utente (end)
 
-%UUC7 (start)
-\subsubsection{UUC7 - Collegamento organizzazione}
-\label{subsub:UUC7utente}
-%inserire diagramma UUC7
+%UUC6 (start)
+\subsubsection{UUC6 - Collegamento organizzazione}
+\label{subsub:UUC6utente}
+%inserire diagramma UUC6
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC7
+  \item \textbf{Caso d’uso:} UUC6
   \item \textbf{Titolo:} Collegamento organizzazione
   \item \textbf{Attori primari:} utente autenticato, in particolare utente non collegato
   \item \textbf{Precondizione:} l'utente si trova sulla lista delle organizzazioni.
@@ -420,13 +398,13 @@
     \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione.
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC7utente (end)
+% subsub:UUC6utente (end)
 
-%UUC7.1 (start)
-\subsubsection{UUC7.1 - Selezionamento di un'organizzazione}
-\label{subsub:UUC7utente}
+%UUC6.1 (start)
+\subsubsection{UUC6.1 - Selezionamento di un'organizzazione}
+\label{subsub:UUC6utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC7.1
+  \item \textbf{Caso d’uso:} UUC6.1
   \item \textbf{Titolo:} Selezionamento di un'organizzazione
   \item \textbf{Attori primari:} utente autenticato, in particolare utente non collegato
   \item \textbf{Precondizione:} l'utente visualizza la lista delle organizzazioni.
@@ -440,14 +418,14 @@
     \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione.
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC7.1utente (end)
+% subsub:UUC6.1utente (end)
 
-%UUC8 (start)
-\subsubsection{UUC8 - Scollegamento organizzazione}
-\label{subsub:UUC8utente}
-%inserire diagramma UUC8
+%UUC7 (start)
+\subsubsection{UUC7 - Scollegamento organizzazione}
+\label{subsub:UUC7utente}
+%inserire diagramma UUC7
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC8
+  \item \textbf{Caso d’uso:} UUC7
   \item \textbf{Titolo:} Scollegamento organizzazione
   \item \textbf{Attori primari:} utente autenticato, in particolare utente collegato
   \item \textbf{Precondizione:} l'utente è collegato ad un'organizzazione.
@@ -462,13 +440,13 @@
     \item se l'utente cerca di scollegarsi da un'organizzazione in caso di rete mancante, si visualizzerà un errore.
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC8utente (end)
+% subsub:UUC7utente (end)
 
-%UUC8.1 (start)
-\subsubsection{UUC8.1 - Uscita da un'organizzazione}
-\label{subsub:UUC8.1utente}
+%UUC7.1 (start)
+\subsubsection{UUC7.1 - Uscita da un'organizzazione}
+\label{subsub:UUC7.1utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC8.1
+  \item \textbf{Caso d’uso:} UUC7.1
   \item \textbf{Titolo:} Uscita da un'organizzazione
   \item \textbf{Attori primari:} utente autenticato, in particolare utente collegato
   \item \textbf{Precondizione:} l'utente si trova sulla schermata specifica dell'utente collegato ad un'organizzazione.
@@ -482,14 +460,14 @@
     \item se l'utente cerca di scollegarsi da un'organizzazione in caso di rete mancante, si visualizzerà un errore.
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC8.1utente (end)
+% subsub:UUC7.1utente (end)
 
-%UUC9 (start)
-\subsubsection{UUC9 - Passaggio noto/incognito}
-\label{subsub:UUC9utente}
-%inserire diagramma UUC9
+%UUC8 (start)
+\subsubsection{UUC8 - Passaggio noto/incognito}
+\label{subsub:UUC8utente}
+%inserire diagramma UUC8
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC9
+  \item \textbf{Caso d’uso:} UUC8
   \item \textbf{Titolo:} Passaggio noto/incognito
   \item \textbf{Attori primari:} utente autenticato, in particolare utente collegato
   \item \textbf{Precondizione:} l'utente si trova sulla schermata specifica dell'utente collegato ad un'organizzazione.
@@ -503,14 +481,14 @@
     \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore. 
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC9utente (end)
+% subsub:UUC8utente (end)
 
-%UUC9.1 (start)
-\subsubsection{UUC9.1 - Scelta noto o incognito}
-\label{subsub:UUC9.1utente}
-%inserire diagramma UUC9.1
+%UUC8.1 (start)
+\subsubsection{UUC8.1 - Scelta noto o incognito}
+\label{subsub:UUC8.1utente}
+%inserire diagramma UUC8.1
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC9.1
+  \item \textbf{Caso d’uso:} UUC8.1
   \item \textbf{Titolo:} Scelta noto o incognito
   \item \textbf{Attori primari:} utente collegato, in particolare utente noto ed utente incognito
   \item \textbf{Precondizione:} l'utente si trova sulla schermata specifica dell'utente collegato ad un'organizzazione.
@@ -525,11 +503,11 @@
     \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore. 
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC9.1utente (end)
+% subsub:UUC8.1utente (end)
 
-%UUC9.1.1 (start)
-\subsubsection{UUC9.1.1 - Passaggio a incognito}
-\label{subsub:UUC9.1.1utente}
+%UUC8.1.1 (start)
+\subsubsection{UUC8.1.1 - Passaggio a incognito}
+\label{subsub:UUC8.1.1utente}
 \begin{itemize}
   \item \textbf{Caso d’uso:} UUC9.1.1
   \item \textbf{Titolo:} Passaggio a incognito
@@ -541,13 +519,13 @@
     \item l'utente è noto in un'organizzazione e vuole diventare incognito: in questo modo la sua presenza è nota, ma non lo è la sua identità.
   \end{enumerate}
 \end{itemize}
-% subsub:UUC9.1.1utente (end)
+% subsub:UUC8.1.1utente (end)
 
-%UUC9.1.2 (start)
-\subsubsection{UUC9.1.2 - Passaggio a noto}
-\label{subsub:UUC9.1.2utente}
+%UUC8.1.2 (start)
+\subsubsection{UUC8.1.2 - Passaggio a noto}
+\label{subsub:UUC8.1.2utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC9.1.2
+  \item \textbf{Caso d’uso:} UUC8.1.2
   \item \textbf{Titolo:} Passaggio a noto
   \item \textbf{Attori primari:} utente collegato, in particolare utente incognito
   \item \textbf{Precondizione:} l'utente deve essere collegato ed incognito.
@@ -557,14 +535,14 @@
     \item l'utente è incognito in un'organizzazione e vuole diventare noto: in questo modo, sia la sua presenza che la sua identità sono note.
   \end{enumerate}
 \end{itemize}
-% subsub:UUC9.1.2utente (end)
+% subsub:UUC8.1.2utente (end)
 
-%UUC10 (start)
-\subsubsection{UUC10 - Storico utente}
-\label{subsub:UUC10utente}
-%inserire diagramma UUC10
+%UUC9 (start)
+\subsubsection{UUC9 - Storico utente}
+\label{subsub:UUC9utente}
+%inserire diagramma UUC9
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC10
+  \item \textbf{Caso d’uso:} UUC9
   \item \textbf{Titolo:} Storico utente
   \item \textbf{Attori primari:} utente autenticato
   \item \textbf{Precondizione:}  l'utente si è appena autenticato.
@@ -578,13 +556,13 @@
     \item se l'utente cerca di visualizzare lo storico degli accessi in assenza di rete, si visualizzerà un errore.
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC10utente (end)
+% subsub:UUC9utente (end)
 
-%UUC10.1 (start)
-\subsubsection{UUC10.1 - Visualizzazione storico accessi}
-\label{subsub:UUC10.1utente}
+%UUC9.1 (start)
+\subsubsection{UUC9.1 - Visualizzazione storico accessi}
+\label{subsub:UUC9.1utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC10.1
+  \item \textbf{Caso d’uso:} UUC9.1
   \item \textbf{Titolo:} Visualizzazione storico accessi
   \item \textbf{Attori primari:} utente autenticato
   \item \textbf{Precondizione:} l'utente si trova nella schermata post-autenticazione.
@@ -598,14 +576,14 @@
     \item se l'utente cerca di visualizzare lo storico degli accessi in assenza di rete, si visualizzerà un errore.
   \end{enumerate} 
 \end{itemize}
-% subsub:UUC10.1utente (end)
+% subsub:UUC9.1utente (end)
 
-%UUC11 (start)
-\subsubsection{UUC11 - Tempo utente nell'organizzazione}
-\label{subsub:UUC11utente}
-%inserire diagramma UUC11
+%UUC10 (start)
+\subsubsection{UUC10 - Tempo utente nell'organizzazione}
+\label{subsub:UUC10utente}
+%inserire diagramma UUC10
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC11
+  \item \textbf{Caso d’uso:} UUC10
   \item \textbf{Titolo:} Tempo utente nell'organizzazione
   \item \textbf{Attori primari:} utente autenticato, in particolare utente collegato
   \item \textbf{Precondizione:} l'utente deve essere collegato ad un'organizzazione.
@@ -619,13 +597,13 @@
     \item se l'utente cerca di visualizzare il tempo trascorso nell'organizzazione in assenza di rete, si visualizzerà un errore.
   \end{enumerate}  
 \end{itemize}
-% subsub:UUC11utente (end)
+% subsub:UUC10utente (end)
 
-%UUC11.1 (start)
-\subsubsection{UUC11.1 - Visualizzazione tempo trascorso nell'organizzazione corrente}
-\label{subsub:UUC11utente}
+%UUC10.1 (start)
+\subsubsection{UUC10.1 - Visualizzazione tempo trascorso nell'organizzazione corrente}
+\label{subsub:UUC10utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC11
+  \item \textbf{Caso d’uso:} UUC10
   \item \textbf{Titolo:} Visualizzazione tempo trascorso nell'organizzazione corrente
   \item \textbf{Attori primari:} utente autenticato, in particolare utente collegato
   \item \textbf{Precondizione:} 
@@ -637,6 +615,47 @@
   \item \textbf{Estensioni:} 
   \begin{enumerate}
     \item se l'utente cerca di visualizzare il tempo trascorso nell'organizzazione in assenza di rete, si visualizzerà un errore.
+  \end{enumerate}  
+\end{itemize}
+% subsub:UUC10.1utente (end)
+
+%UUC11 (start)
+\subsubsection{UUC11 - Disconnessione}
+\label{subsub:UUC11utente}
+%inserire diagramma UUC11
+\begin{itemize}
+  \item \textbf{Caso d’uso:} UUC11
+  \item \textbf{Titolo:} Disconnessione
+  \item \textbf{Attori primari:} utente autenticato
+  \item \textbf{Precondizione:} l'utente deve essere autenticato.
+  \item \textbf{Postcondizione:} l'utente non è più autenticato.
+  \item \textbf{Scenario principale:} 
+  \begin{enumerate}
+    \item l'utente ha la possibilità di disconnettersi dal servizio offerto dall'applicazione mobile.
+  \end{enumerate}  
+  \item \textbf{Estensioni:} 
+  \begin{enumerate}
+    \item se l'utente cerca di disconnettersi in assenza di rete, si visualizzerà un errore.
+  \end{enumerate}  
+\end{itemize}
+% subsub:UUC11utente (end)
+
+%UUC11.1 (start)
+\subsubsection{UUC11.1 - Disconnessione utente autenticato}
+\label{subsub:UUC11.1utente}
+\begin{itemize}
+  \item \textbf{Caso d’uso:} UUC11.1
+  \item \textbf{Titolo:} Disconnessione utente autenticato
+  \item \textbf{Attori primari:} utente autenticato
+  \item \textbf{Precondizione:} l'utente si trova nella schermata di post-autenticazione.
+  \item \textbf{Postcondizione:} l'utente è disconnesso.
+  \item \textbf{Scenario principale:} 
+  \begin{enumerate}
+    \item l'utente esegue la disconnessione tramite un'apposita operazione che è eseguibile dalla schermata post-autenticazione.
+  \end{enumerate}  
+  \item \textbf{Estensioni:} 
+  \begin{enumerate}
+    \item se l'utente cerca di disconnettersi in assenza di rete, si visualizzerà un errore.
   \end{enumerate}  
 \end{itemize}
 % subsub:UUC11.1utente (end)
