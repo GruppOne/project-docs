@@ -1,0 +1,46 @@
+\documentclass[../analisi-dei-requisiti]{subfiles}
+
+\renewcommand{\commons}{../../../commons}
+
+\begin{document}
+In questa sezione verranno assegnati dei codici ai requisiti, in modo da semplificarne l’identificazione. La procedura per stabilire l'identificatore di un requisito è descritta nella sezione 2.3.3.1.1 del documento\textit{Norme di Progetto}.
+
+\subsection{Requisiti funzionali}
+\label{sub:requisiti_funzionali}
+In questa sezione esaminiamo iservizi che il sistema dovrebbe fornire.
+
+\subsubsection{Requisiti funzionali Utente}
+\label{subsub:requisiti_funzionali_utente}
+
+\begin{table}[H]
+\centering
+\rowcolors{2}{lightgray}{white!80!lightgray!100}
+\renewcommand{\arraystretch}{2}
+\begin{longtable}{>{\centering\bfseries}m{3cm} >{\centering}m{10cm} >{\centering\arraybackslash}m{3cm}}
+  \rowcolor{darkgray!90!}\color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}} & \color{white}{\textbf{Fonte}}\endhead
+  R1F1 & Il sistema deve permettere ad un nuovo utente di registrarsi & UUC1 \\
+  R1.1F1 & Il sistema deve permettere all'utente di visualizzare l'EULA & UUC1.1 \\
+  R1.1.1F1 & Il sistema deve permettere all'utente di confermare l'EULA & UUC1.1.1 \\
+  R1.2F1 & Il sistema deve permettere all'utente di effettuare la procedura di registrazione & UUC1.2 \\
+  R1.2.1F1 & Il sistema deve permettere all'utente di compilare il campo \textit{email} nel form di registrazione & UUC1.2.1 \\
+  R1.2.2F1 & Il sistema deve permettere all'utente di compilare il campo \textit{password} nel form di registrazione & UUC1.2.2 \\
+  R1.2.3F1 & Il sistema deve permettere all'utente di compilare il campo \textit{conferma password} nel form di registrazione & UUC1.2.3 \\
+  R1.2.4F1 & Il sistema deve permettere all'utente di compilare il campo \textit{dati anagrafici} nel form di registrazione & UUC1.2.4 \\
+  R1.2.5F1 & Il sistema deve rifiutare la richiesta di registrazione se i dati inseriti non rispettano i vincoli imposti & UUC1.2.5 \\
+  R2F1 & Il sistema deve permettere all'utente di autenticarsi & UUC2 \\
+  R2.1F1 & Il sistema deve permettere all'utente di compilare il campo \textit{email} nel form di autenticazione & UUC2.1 \\
+  R2.2F1 & Il sistema deve permettere all'utente di compilare il campo \textit{password} nel form di autenticazione & UUC2.2 \\
+  R2.3F1 & Il sistema deve rifiutare la richiesta di autenticazione se i dati inseriti non rispettano i vincoli imposti & UUC2.3 \\
+  R3F1 & Il sistema deve permettere all'utente di recuperare le sue credenziali di accesso & UUC3 \\
+  R3.1F1 & Il sistema deve permettere all'utente di compilare il campo \textit{email} nel form di recupero password & UUC3.1 \\
+  R3.2F1 & Il sistema deve permettere all'utente di compilare il campo \textit{password} nel form di reimpostazione password & UUC3.2 \\
+  R4F1 & Il sistema deve permettere all'utente di recuperare una lista di organizzazioni a cui può collegarsi & UUC4 \\
+\end{longtable}
+\end{table}
+
+\subsubsection{Requisiti funzionali Amministratore}
+\label{subsub:requisiti_funzionali_amministratore}
+
+
+
+\end{document}
