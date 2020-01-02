@@ -17,6 +17,14 @@
 \usepackage{ifthen}
 \usepackage{subfiles}
 
+% XXX definizione dei percorsi in cui cercare immagini
+\graphicspath{ {./}
+    {./img/}
+    {../commons/img/}
+    {../../commons/img/}
+    {../../../commons/img/}
+}
+
 % setup della sottolineatura
 \setuldepth{Flat}
 \contourlength{0.8pt}
@@ -37,7 +45,7 @@
 \pagestyle{fancy}
 
 \fancyhf{}
-\fancyhead[L]{\includegraphics[width=1cm]{\commons/img/logo.png}}
+\fancyhead[L]{\includegraphics[width=1cm]{logo.png}}
 \fancyhead[R]{\thetitle}
 \fancyfoot[R]{\thepage\ di~\pageref{LastPage}}
 
@@ -50,6 +58,10 @@
 % setup forma \paragraph e \subparagraph
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titleformat{\subparagraph}[hang]{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+
+% setup profondità indice di default
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
 
 % shortcut per i placeholder
 \newcommand{\plchold}[1]{\textit{\{#1\}}}

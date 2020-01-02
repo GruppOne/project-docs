@@ -214,6 +214,8 @@ UserWarn
     ChkTeX
     github
     Github
+    \commons
+    \quotes
 }
 [
 
@@ -226,7 +228,6 @@ UserWarn
   # utilizziamo \href per i link
   \url
   grupp0ne
-
 ]
 
 
