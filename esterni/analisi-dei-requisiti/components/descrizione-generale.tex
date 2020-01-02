@@ -3,14 +3,14 @@
 \renewcommand{\commons}{../../../commons}
 
 \begin{document}
-\subsection{Obiettivo del prodotto}
+\subsection{Obiettivo del prodotto}%
 \label{sub:obiettivo_del_prodotto}
 Il prodotto richiesto da capitolato si pone l'obiettivo di tracciare il numero di persone presenti all’interno di una data organizzazione.\\
-Per soddisfare la richiesta, sarà implementato un server con annessa \glossario{UI} per la gestione delle organizzazioni e il monitoraggio degli utenti, e 
+Per soddisfare la richiesta, sarà implementato un server con annessa \glossario{UI} per la gestione delle organizzazioni e il monitoraggio degli utenti, e
 di un'\glossario{applicazione mobile} per l'utente finale che gli permetta di essere monitorato dalla specifica organizzazione scelta.
 
 % sub:obiettivo_del_prodotto (end)
-\subsection{Funzionalità del prodotto}
+\subsection{Funzionalità del prodotto}%
 \label{sub:funzionalita_del_prodotto}
 Le funzionalità che sono offerte dall'applicazione mobile sono:
 \begin{itemize}
@@ -31,33 +31,33 @@ Le comunicazioni tra applicazione mobile e server avvengono solo al momento d'in
 la privacy dell'utente.
 
 % sub:funzionalita_del_prodotto (end)
-\subsection{Caratteristiche degli utenti}
+\subsection{Caratteristiche degli utenti}%
 \label{sub:caratteristiche_degli_utenti}
 Nell'ambito di questo progetto, sono presenti due tipologie di utenti, con caratteristiche diverse dovute all'utilizzo del prodotto:
 \begin{itemize}
-  \item \textbf{Amministratore:} è l'utente che detiene i privilegi per gestire il server e monitorare gli utenti generici; 
+  \item \textbf{Amministratore:} è l'utente che detiene i privilegi per gestire il server e monitorare gli utenti generici;
   \item \textbf{Utente generico:} è l'utente utilizzatore dell'applicazione mobile. Può essere un dipendente di un'azienda che monitora la sua presenza, oppure
   un visitatore di un evento pubblico.
 \end{itemize}
 Le due tipologie di utenti sono descritte nel dettaglio al capitolo 3, sezione \emph{Casi d'uso - Attori nei casi d'uso}
 
 % sub:caratteristiche_degli_utenti (end)
-\subsection{Macroarchitetture del progetto}
+\subsection{Macroarchitetture del progetto}%
 \label{sub:macroarchitetture_del_progetto}
-\paragraph{Back-end}
+\paragraph{Back-end}%
 \label{par:back-end}
 E' richiesto lo sviluppo \glossario{back-end} del server, dove è richiesto l'utilizzo di protocolli asincroni per le comunicazioni tra applicazione mobile e server.\\
-Sarà necessario lo sviluppo di un database che contenga tutti i dati d'interesse per il prodotto, dai dati appartenenti ai vari utenti fino ai dati che appartengono ai 
-luoghi delle organizzazioni. 
+Sarà necessario lo sviluppo di un database che contenga tutti i dati d'interesse per il prodotto, dai dati appartenenti ai vari utenti fino ai dati che appartengono ai
+luoghi delle organizzazioni.
 % par:back-end (end)
-\paragraph{Front-end}
+\paragraph{Front-end}%
 \label{par:front-end}
 Lo sviluppo \glossario{front-end} sarà costituito:
 \begin{itemize}
   \item dalla UI del server, raggiungibile solo dall'amministratore tramite autenticazione, per eseguire determinate operazioni in base al tipo di privilegi;
-  \item dall'applicazione mobile, scaricabile da ogni utente interessato all'utilizzo del prodotto, che consente di visualizzare le informazioni d'interesse ed eseguire determinate 
+  \item dall'applicazione mobile, scaricabile da ogni utente interessato all'utilizzo del prodotto, che consente di visualizzare le informazioni d'interesse ed eseguire determinate
   operazioni in presenza di rete.
-\end{itemize} 
+\end{itemize}
 
 % par:front-end (end)
 % sub:macroarchitetture_del_progetto (end)
