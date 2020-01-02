@@ -627,11 +627,10 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \end{enumerate}
 \end{itemize}
 % subsub:AUC5.1.2 (end)
-
-\subsubsection{AUC5.1.2 - Conferma password}
-\label{subsub:AUC5.1.2}
+\subsubsection{AUC5.1.3 - Conferma password}
+\label{subsub:AUC5.1.3}
 \begin{itemize}
-  \item \textbf{Codice:} AUC5.1.2
+  \item \textbf{Codice:} AUC5.1.3
   \item \textbf{Titolo:} conferma password
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento del campo conferma password.
@@ -641,7 +640,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
     \item \glossario{Root} inserisce la password nel campo di conferma dell'\glossario{amministratore} che vuole creare.
   \end{enumerate}
 \end{itemize}
-% subsub:AUC5.1.2 (end)
+% subsub:AUC5.1.3 (end)
 
 \subsubsection{AUC5.2 - Verifica credenziali}
 \label{subsub:AUC5.2}
@@ -679,223 +678,36 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 % subsub:AUC5.3 (end)
 % subsub:AUC5 (end)
 
-\subsubsection{AUC11 - Seleziona organizzazione}
-\label{subsub:AUC11}
+
+
+\subsubsection{AUC6 - Gestione organizzazione}
+\label{subsub:AUC6}
 \begin{itemize}
-  \item \textbf{Codice:} AUC11
-  \item \textbf{Titolo:} seleziona organizzazione
+  \item \textbf{Codice:} AUC6
+  \item \textbf{Titolo:} gestione organizzazione
   \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} il sistema deve mostrare la lista di organizzazioni in \glossario{Stalker}.
-  \item \textbf{Postcondizione:} viene scelta l'\glossario{organizzazione} desiderata.
+  \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di gestione \glossario{organizzazione}.
+  \item \textbf{Postcondizione:} vengono gestite una o più \glossario{organizzazioni}.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item sorge la necessità di effettuare operazioni su un'organizzazione, e viene offerta la possibilità di selezionarla;
+    \item sorge la necessità di effettuare operazioni su una o più \glossario{organizzazioni};
   \end{enumerate}
 \end{itemize}
-% subsub:AUC11 (end)
-
-\subsubsection{AUC12 - Eliminazione organizzazione}
-\label{subsub:AUC12}
-\begin{itemize}
-  \item \textbf{Codice:} AUC12
-  \item \textbf{Titolo:} eliminazione organizzazione
-  \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} deve essere stata selezionata l'\glossario{organizzazione} da eliminare, presente nella lista di \glossario{Stalker}.
-  \item \textbf{Postcondizione:} l'\glossario{organizzazione} viene eliminata.
-  \item \textbf{Scenario principale:} 
-  \begin{enumerate}
-    \item sorge la necessità di eliminare un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
-  \end{enumerate}
-  \item \textbf{Inclusioni:}
-  \begin{enumerate}
-    \item Seleziona organizzazione\emph{[AUC11]};
-  \end{enumerate}
-\end{itemize}
-% subsub:AUC12 (end)
 
 
-
-
-\subsubsection{AUC13 - Modifica organizzazione}
-\label{subsub:AUC13}
-\begin{itemize}
-  \item \textbf{Codice:} AUC13
-  \item \textbf{Titolo:} modifica organizzazione
-  \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} deve essere stata selezionata l'\glossario{organizzazione} da modificare, presente nella lista di \glossario{Stalker}.
-  \item \textbf{Postcondizione:} l'\glossario{organizzazione} viene modificata.
-  \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item sorge la necessità di modificare un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
-  \end{enumerate}
-  \item \textbf{Inclusioni:}
-  \begin{enumerate}
-    \item Seleziona organizzazione\emph{[AUC11]};
-    \item Modifica nome organizzazione\emph{[AUC13.1]};
-    \item Modifica indirizzo organizzazione\emph{[AUC13.2]};
-    \item Modifica descrizione organizzazione\emph{[AUC13.3]};
-    \item Gestione luoghi\emph{[AUC13.4]}.
-  \end{enumerate}
-\end{itemize}
-% subsub:AUC13 (end)
-
-\subsubsection{AUC13.1 - Modifica nome organizzazione}
-\label{subsub:AUC13.1}
-\begin{itemize}
-  \item \textbf{Codice:} AUC13.1
-  \item \textbf{Titolo:} modifica nome organizzazione
-  \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} il sistema fornisce il campo di modifica nome.
-  \item \textbf{Postcondizione:} il nome viene opportunamente modificato.
-  \item \textbf{Scenario principale:} 
-  \begin{enumerate}
-    \item si vuole modificare il nome di un'\glossario{organizzazione}.
-  \end{enumerate}
-  
-\end{itemize}
-% subsub:AUC13.1 (end)
-
-\subsubsection{AUC13.2 - Modifica indirizzo organizzazione}
-\label{subsub:AUC13.2}
-\begin{itemize}
-  \item \textbf{Codice:} AUC13.2
-  \item \textbf{Titolo:} Modifica indirizzo organizzazione
-  \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} il sistema fornisce il campo di modifica indirizzo organizzazione.
-  \item \textbf{Postcondizione:} l'indirizzo viene opportunamente modificato.
-  \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item si vuole modificare l'indirizzo di un'\glossario{organizzazione}.
-  \end{enumerate}
-\end{itemize}
-% subsub:AUC13.2 (end)
-
-\subsubsection{AUC13.3 - Modifica descrizione organizzazione}
-\label{subsub:AUC13.3}
-\begin{itemize}
-  \item \textbf{Codice:} AUC13.3
-  \item \textbf{Titolo:} Modifica descrizione organizzazione
-  \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} il sistema fornisce il campo di modifica descrizione organizzazione.
-  \item \textbf{Postcondizione:} la descrizione viene opportunamente modificata.
-  \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item si vuole modificare la descrizione di un'\glossario{organizzazione}.
-  \end{enumerate}
-\end{itemize}
-% subsub:AUC13.3 (end)
-
-\subsubsection{AUC13.4 - Gestione luoghi}
-\label{subsub:AUC13.4}
-\begin{itemize}
-  \item \textbf{Codice:} AUC13.4
-  \item \textbf{Titolo:} gestione luoghi
-  \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di gestione dei luoghi di un'\glossario{organizzazione}.
-  \item \textbf{Postcondizione:} vengono gestiti i luoghi di un'\glossario{organizzazione}.
-  \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item sorge la necessità di effettuare operazioni sul luogo di un'organizzazione, e viene offerta la possibilità di selezionarlo;
-  \end{enumerate}
-  \item \textbf{Inclusioni:}
-  \begin{enumerate}
-    \item Eliminazione luogo\emph{[AUC13.4.1]};
-  \end{enumerate}
-\end{itemize}
-% subsub:AUC13.4 (end)
-
-\subsubsection{AUC13.4.1 - Aggiungi luogo}
-\label{subsub:AUC13.4.1}
-\begin{itemize}
-  \item \textbf{Codice:} AUC13.4.1
-  \item \textbf{Titolo:} aggiungi luogo
-  \item \textbf{Attori primari:} \glossario{root}
-  \item \textbf{Precondizione:} il \glossario{luogo} dell'\glossario{organizzazione} deve non esistere.
-  \item \textbf{Postcondizione:} il \glossario{luogo} dell'\glossario{organizzazione} viene aggiunto.
-  \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item sorge la necessità di aggiungere un \glossario{luogo} ad un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
-  \end{enumerate}
-  \item \textbf{Inclusioni:}
-  \begin{enumerate}
-    \item Seleziona luogo\emph{[AUC13.5]};
-  \end{enumerate}
-\end{itemize}
-% subsub:AUC13.4.1 (end)
-
-
-\subsubsection{AUC13.4.2 - Eliminazione luogo}
-\label{subsub:AUC13.4.2}
-\begin{itemize}
-  \item \textbf{Codice:} AUC13.4.2
-  \item \textbf{Titolo:} eliminazione luogo
-  \item \textbf{Attori primari:} \glossario{root}
-  \item \textbf{Precondizione:} il \glossario{luogo} dell'\glossario{organizzazione} deve essere presente in \glossario{Stalker}.
-  \item \textbf{Postcondizione:} il \glossario{luogo} dell'\glossario{organizzazione} viene eliminato.
-  \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item sorge la necessità di eliminare un \glossario{luogo} di un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
-  \end{enumerate}
-  \item \textbf{Inclusioni:}
-  \begin{enumerate}
-    \item Seleziona luogo\emph{[AUC13.5]};
-  \end{enumerate}
-\end{itemize}
-% subsub:AUC13.4.2 (end)
-
-\subsubsection{AUC13.4.3 - Modifica luogo}
-\label{subsub:AUC13.4.3}
-\begin{itemize}
-  \item \textbf{Codice:} AUC13.4.3
-  \item \textbf{Titolo:} modifica luogo
-  \item \textbf{Attori primari:} \glossario{root};
-  \item \textbf{Precondizione:} il \glossario{luogo} dell'\glossario{organizzazione} deve essere presente in \glossario{Stalker};
-  \item \textbf{Postcondizione:} il \glossario{luogo} dell'\glossario{organizzazione} viene modificato.
-  \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item sorge la necessità di modificare un \glossario{luogo} di un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
-  \end{enumerate}
-  \item \textbf{Inclusioni:}
-  \begin{enumerate}
-    \item Seleziona luogo\emph{[AUC13.5]};
-  \end{enumerate}
-\end{itemize}
-% subsub:AUC17 (end)
-
-\subsubsection{AUC13.5 - Seleziona luogo}
-\label{subsub:AUC13.5}
-\begin{itemize}
-  \item \textbf{Codice:} AUC13.5
-  \item \textbf{Titolo:} seleziona luogo
-  \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} il sistema deve mostrare la lista dei luoghi all'interno di una \glossario{organizzazione}.
-  \item \textbf{Postcondizione:} viene scelto il luogo desiderato.
-  \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item sorge la necessità di effettuare operazioni sul luogo di un'\glossario{organizzazione}, e viene offerta la possibilità di selezionarlo;
-  \end{enumerate}
-\end{itemize}
-% subsub:AUC13.5 (end)
-
-\subsubsection{AUC14 - Creazione organizzazione}
-\label{subsub:AUC14}
+\subsubsection{AUC6.1 - Creazione organizzazione}
+\label{subsub:AUC6.1}
 \begin{itemize}
   \item \textbf{Attori primari:} \glossario{root};
   \item \textbf{Precondizione:} l'\glossario{organizzazione} non deve esistere nella lista di \glossario{Stalker}, deve essere specificato il suo nome.
   \item \textbf{Postcondizione:} l'\glossario{organizzazione} viene creata.
   \item \textbf{Scenario principale:} sorge la necessità di creare un'\glossario{organizzazione}, senza essere effettivamente richiesta;
-  \item \textbf{Inclusioni:}
-  \begin{enumerate}
-    \item Inserisci nome organizzazione\emph{[AUC14.1]};
-    \item Inserisci indirizzo organizzazione\emph{[AUC14.2]};
-    \item Inserisci descrizione organizzazione\emph{[AUC14.3]}.
-  \end{enumerate}
 \end{itemize}
 
-  \subsubsection{AUC14.1 - Inserisci nome organizzazione}
-  \label{subsub:AUC14.1}
+  \subsubsection{AUC6.1.1 - Inserisci nome organizzazione}
+  \label{subsub:AUC6.1.1}
   \begin{itemize}
-    \item \textbf{Codice:} AUC14.1
+    \item \textbf{Codice:} AUC6.1.1
     \item \textbf{Titolo:} Inserisci nome organizzazione
     \item \textbf{Attori primari:} root
     \item \textbf{Precondizione:} il sistema fornisce il campo di inserimento nome.
@@ -906,12 +718,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
     \end{enumerate}
     
   \end{itemize}
-  % subsub:AUC14.1 (end)
+  % subsub:AUC6.1.1 (end)
   
-  \subsubsection{AUC14.2 - Inserisci indirizzo organizzazione}
-  \label{subsub:AUC14.2}
+  \subsubsection{AUC6.1.2 - Inserisci indirizzo organizzazione}
+  \label{subsub:AUC6.1.2}
   \begin{itemize}
-    \item \textbf{Codice:} AUC14.2
+    \item \textbf{Codice:} AUC6.1.2
     \item \textbf{Titolo:} Inserisci indirizzo organizzazione
     \item \textbf{Attori primari:} root
     \item \textbf{Precondizione:} il sistema fornisce il campo di inserimento indirizzo organizzazione.
@@ -921,12 +733,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
       \item si vuole inserire l'indirizzo di un'\glossario{organizzazione}.
     \end{enumerate}
   \end{itemize}
-  % subsub:AUC14.2 (end)
+  % subsub:AUC6.1.2 (end)
   
-  \subsubsection{AUC14.3 - Inserisci descrizione organizzazione}
-  \label{subsub:AUC14.3}
+  \subsubsection{AUC6.1.3 - Inserisci descrizione organizzazione}
+  \label{subsub:AUC6.1.3}
   \begin{itemize}
-    \item \textbf{Codice:} AUC14.3
+    \item \textbf{Codice:} AUC6.1.3
     \item \textbf{Titolo:} Inserisci descrizione organizzazione
     \item \textbf{Attori primari:} root
     \item \textbf{Precondizione:} il sistema fornisce il campo di inserimento descrizione organizzazione.
@@ -936,10 +748,195 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
       \item si vuole inserire la descrizione di un'\glossario{organizzazione}.
     \end{enumerate}
   \end{itemize}
-  % subsub:AUC14.3 (end)
+  % subsub:AUC6.1.3 (end)
 
+
+
+\subsubsection{AUC6.2 - Eliminazione organizzazione}
+\label{subsub:AUC6.2}
+\begin{itemize}
+  \item \textbf{Codice:} AUC6.2
+  \item \textbf{Titolo:} eliminazione organizzazione
+  \item \textbf{Attori primari:} root
+  \item \textbf{Precondizione:} deve essere stata selezionata l'\glossario{organizzazione} da eliminare, presente nella lista di \glossario{Stalker}.
+  \item \textbf{Postcondizione:} l'\glossario{organizzazione} viene eliminata.
+  \item \textbf{Scenario principale:} 
+  \begin{enumerate}
+    \item sorge la necessità di eliminare un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
+  \end{enumerate}
+  \item \textbf{Inclusioni:}
+  \begin{enumerate}
+    \item Seleziona organizzazione\emph{[AUC6.4]};
+  \end{enumerate}
 \end{itemize}
-% subsub:AUC14 (end)
+% subsub:AUC6.2 (end)
+
+
+\subsubsection{AUC6.3 - Modifica organizzazione}
+\label{subsub:AUC6.3}
+\begin{itemize}
+  \item \textbf{Codice:} AUC6.3
+  \item \textbf{Titolo:} modifica organizzazione
+  \item \textbf{Attori primari:} root
+  \item \textbf{Precondizione:} deve essere stata selezionata l'\glossario{organizzazione} da modificare, presente nella lista di \glossario{Stalker}.
+  \item \textbf{Postcondizione:} l'\glossario{organizzazione} viene modificata.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item sorge la necessità di modificare un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
+  \end{enumerate}
+  \item \textbf{Inclusioni:}
+  \begin{enumerate}
+    \item Seleziona organizzazione\emph{[AUC6.4]};
+  \end{enumerate}
+\end{itemize}
+% subsub:AUC6.3 (end)
+
+\subsubsection{AUC6.3.1 - Modifica nome organizzazione}
+\label{subsub:AUC6.3.1}
+\begin{itemize}
+  \item \textbf{Codice:} AUC6.3.1
+  \item \textbf{Titolo:} modifica nome organizzazione
+  \item \textbf{Attori primari:} root
+  \item \textbf{Precondizione:} il sistema fornisce il campo di modifica nome.
+  \item \textbf{Postcondizione:} il nome viene opportunamente modificato.
+  \item \textbf{Scenario principale:} 
+  \begin{enumerate}
+    \item si vuole modificare il nome di un'\glossario{organizzazione}.
+  \end{enumerate}
+  
+\end{itemize}
+% subsub:AUC6.3.1 (end)
+
+\subsubsection{AUC6.3.2 - Modifica indirizzo organizzazione}
+\label{subsub:AUC6.3.2}
+\begin{itemize}
+  \item \textbf{Codice:} AUC6.3.2
+  \item \textbf{Titolo:} Modifica indirizzo organizzazione
+  \item \textbf{Attori primari:} root
+  \item \textbf{Precondizione:} il sistema fornisce il campo di modifica indirizzo organizzazione.
+  \item \textbf{Postcondizione:} l'indirizzo viene opportunamente modificato.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item si vuole modificare l'indirizzo di un'\glossario{organizzazione}.
+  \end{enumerate}
+\end{itemize}
+% subsub:AUC6.3.2 (end)
+
+\subsubsection{AUC6.3.3 - Modifica descrizione organizzazione}
+\label{subsub:AUC6.3.3}
+\begin{itemize}
+  \item \textbf{Codice:} AUC6.3.3
+  \item \textbf{Titolo:} Modifica descrizione organizzazione
+  \item \textbf{Attori primari:} root
+  \item \textbf{Precondizione:} il sistema fornisce il campo di modifica descrizione organizzazione.
+  \item \textbf{Postcondizione:} la descrizione viene opportunamente modificata.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item si vuole modificare la descrizione di un'\glossario{organizzazione}.
+  \end{enumerate}
+\end{itemize}
+% subsub:AUC6.3.3 (end)
+
+\subsubsection{AUC6.3.4 - Gestione luoghi}
+\label{subsub:AUC6.3.4}
+\begin{itemize}
+  \item \textbf{Codice:} AUC6.3.4
+  \item \textbf{Titolo:} gestione luoghi
+  \item \textbf{Attori primari:} root
+  \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di gestione dei luoghi di un'\glossario{organizzazione}.
+  \item \textbf{Postcondizione:} vengono gestiti i luoghi di un'\glossario{organizzazione}.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item sorge la necessità di effettuare operazioni sul luogo di un'organizzazione, e viene offerta la possibilità di selezionarlo;
+  \end{enumerate}
+\end{itemize}
+% subsub:AUC6.3.4 (end)
+
+\subsubsection{AUC6.3.4.1 - Aggiungi luogo}
+\label{subsub:AUC6.3.4.1}
+\begin{itemize}
+  \item \textbf{Codice:} AUC6.3.4.1
+  \item \textbf{Titolo:} aggiungi luogo
+  \item \textbf{Attori primari:} \glossario{root}
+  \item \textbf{Precondizione:} il \glossario{luogo} dell'\glossario{organizzazione} deve non esistere.
+  \item \textbf{Postcondizione:} il \glossario{luogo} dell'\glossario{organizzazione} viene aggiunto.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item sorge la necessità di aggiungere un \glossario{luogo} ad un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
+  \end{enumerate}
+\end{itemize}
+% subsub:AUC6.3.4.1 (end)
+
+
+\subsubsection{AUC6.3.4.2 - Eliminazione luogo}
+\label{subsub:AUC6.3.4.2}
+\begin{itemize}
+  \item \textbf{Codice:} AUC6.3.4.2
+  \item \textbf{Titolo:} eliminazione luogo
+  \item \textbf{Attori primari:} \glossario{root}
+  \item \textbf{Precondizione:} il \glossario{luogo} dell'\glossario{organizzazione} deve essere presente in \glossario{Stalker}.
+  \item \textbf{Postcondizione:} il \glossario{luogo} dell'\glossario{organizzazione} viene eliminato.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item sorge la necessità di eliminare un \glossario{luogo} di un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
+  \end{enumerate}
+  \item \textbf{Inclusioni:}
+  \begin{enumerate}
+    \item Seleziona luogo\emph{[AUC6.3.4.4]};
+  \end{enumerate}
+\end{itemize}
+% subsub:AUC6.3.4.2 (end)
+
+\subsubsection{AUC6.3.4.3 - Modifica luogo}
+\label{subsub:AUC6.3.4.3}
+\begin{itemize}
+  \item \textbf{Codice:} AUC6.3.4.3
+  \item \textbf{Titolo:} modifica luogo
+  \item \textbf{Attori primari:} \glossario{root};
+  \item \textbf{Precondizione:} il \glossario{luogo} dell'\glossario{organizzazione} deve essere presente in \glossario{Stalker};
+  \item \textbf{Postcondizione:} il \glossario{luogo} dell'\glossario{organizzazione} viene modificato.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item sorge la necessità di modificare un \glossario{luogo} di un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
+  \end{enumerate}
+  \item \textbf{Inclusioni:}
+  \begin{enumerate}
+    \item Seleziona luogo\emph{[AUC6.3.4.4]};
+  \end{enumerate}
+\end{itemize}
+% subsub:AUC6.3.4.3 (end)
+
+\subsubsection{AUC6.3.4.4 - Seleziona luogo}
+\label{subsub:AUC6.3.4.4}
+\begin{itemize}
+  \item \textbf{Codice:} AUC6.3.4.4
+  \item \textbf{Titolo:} seleziona luogo
+  \item \textbf{Attori primari:} root
+  \item \textbf{Precondizione:} il sistema deve mostrare la lista dei luoghi all'interno di una \glossario{organizzazione}.
+  \item \textbf{Postcondizione:} viene scelto il luogo desiderato.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item sorge la necessità di effettuare operazioni sul luogo di un'\glossario{organizzazione}, e viene offerta la possibilità di selezionarlo;
+  \end{enumerate}
+\end{itemize}
+% subsub:AUC6.3.4.4 (end)
+% subsub:AUC6.3.4 (end)
+
+\subsubsection{AUC6.4 - Seleziona organizzazione}
+\label{subsub:AUC6.4}
+\begin{itemize}
+  \item \textbf{Codice:} AUC6.4
+  \item \textbf{Titolo:} seleziona organizzazione
+  \item \textbf{Attori primari:} root
+  \item \textbf{Precondizione:} il sistema deve mostrare la lista di organizzazioni in \glossario{Stalker}.
+  \item \textbf{Postcondizione:} viene scelta l'\glossario{organizzazione} desiderata.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item sorge la necessità di effettuare operazioni su un'organizzazione, e viene offerta la possibilità di selezionarla;
+  \end{enumerate}
+\end{itemize}
+% subsub:AUC6.4 (end)
+% subsub:AUC6 (end)
 
 \subsubsection{AUC15 - Eliminazione account}
 \label{subsub:AUC15}
