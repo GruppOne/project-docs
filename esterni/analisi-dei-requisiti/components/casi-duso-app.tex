@@ -1,7 +1,5 @@
 \documentclass[casi-duso]{subfiles}
 
-%\renewcommand{\commons}{../../../commons}
-
 \begin{document}
 
 %UUC1 (start)
@@ -502,14 +500,12 @@
 \end{itemize}
 % subsub:UUC8utente (end)
 
-%okay da qua in su + UUC10 già controllato
-
-%UUC8 (start)
-\subsubsection{UUC8 - Passaggio noto/incognito}%
-\label{subsub:UUC8utente}
-%inserire diagramma UUC8
+%UUC9 (start)
+\subsubsection{UUC9 - Passaggio noto/incognito}%
+\label{subsub:UUC9utente}
+%inserire diagramma UUC9
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC8
+  \item \textbf{Caso d’uso:} UUC9
   \item \textbf{Titolo:} Passaggio noto/incognito
   \item \textbf{Attori primari:} utente autenticato, in particolare utente collegato
   \item \textbf{Precondizione:} l'utente si trova sulla schermata specifica dell'utente collegato ad un'organizzazione.
@@ -523,14 +519,14 @@
           \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore.
         \end{enumerate}
 \end{itemize}
-% subsub:UUC8utente (end)
+% subsub:UUC9utente (end)
 
-%UUC8.1 (start)
-\subsubsection{UUC8.1 - Scelta noto o incognito}%
-\label{subsub:UUC8.1utente}
-%inserire diagramma UUC8.1
+%UUC9.1 (start)
+\subsubsection{UUC9.1 - Scelta noto o incognito}%
+\label{subsub:UUC9.1utente}
+%inserire diagramma UUC9.1
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC8.1
+  \item \textbf{Caso d’uso:} UUC9.1
   \item \textbf{Titolo:} Scelta noto o incognito
   \item \textbf{Attori primari:} utente collegato, in particolare utente noto ed utente incognito
   \item \textbf{Precondizione:} l'utente si trova sulla schermata specifica dell'utente collegato ad un'organizzazione.
@@ -545,11 +541,11 @@
           \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore.
         \end{enumerate}
 \end{itemize}
-% subsub:UUC8.1utente (end)
+% subsub:UUC9.1utente (end)
 
-%UUC8.1.1 (start)
-\subsubsection{UUC8.1.1 - Passaggio a incognito}%
-\label{subsub:UUC8.1.1utente}
+%UUC9.1.1 (start)
+\subsubsection{UUC9.1.1 - Passaggio a incognito}%
+\label{subsub:UUC9.1.1utente}
 \begin{itemize}
   \item \textbf{Caso d’uso:} UUC9.1.1
   \item \textbf{Titolo:} Passaggio a incognito
@@ -561,13 +557,13 @@
           \item l'utente è noto in un'organizzazione e vuole diventare incognito: in questo modo la sua presenza è nota, ma non lo è la sua identità.
         \end{enumerate}
 \end{itemize}
-% subsub:UUC8.1.1utente (end)
+% subsub:UUC9.1.1utente (end)
 
-%UUC8.1.2 (start)
-\subsubsection{UUC8.1.2 - Passaggio a noto}%
-\label{subsub:UUC8.1.2utente}
+%UUC9.1.2 (start)
+\subsubsection{UUC9.1.2 - Passaggio a noto}%
+\label{subsub:UUC9.1.2utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC8.1.2
+  \item \textbf{Caso d’uso:} UUC9.1.2
   \item \textbf{Titolo:} Passaggio a noto
   \item \textbf{Attori primari:} utente collegato, in particolare utente incognito
   \item \textbf{Precondizione:} l'utente deve essere collegato ed incognito.
@@ -579,16 +575,16 @@
 \end{itemize}
 % subsub:UUC8.1.2utente (end)
 
-%UUC9 (start)
+%UUC10 (start)
 \subsubsection{UUC10 - Storico utente}%
-\label{subsub:UUC9utente}
-%inserire diagramma UUC9
+\label{subsub:UUC10utente}
+%inserire diagramma UUC10
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC9
+  \item \textbf{Caso d’uso:} UUC10
   \item \textbf{Titolo:} Storico utente
   \item \textbf{Attori primari:} utente autenticato
   \plchold{chiedere a tullio la precondizione}
-  \item \textbf{Precondizione:}  l'utente deve avere poter accedere al pulsante dello storico.
+  \item \textbf{Precondizione:}  l'utente deve poter accedere al pulsante dello storico.
   \item \textbf{Postcondizione:} l'utente visualizza lo storico degli accessi.
   \item \textbf{Scenario principale:}
         \begin{enumerate}
@@ -599,88 +595,48 @@
           \item se l'utente cerca di visualizzare lo storico degli accessi in assenza di rete, si visualizzerà un errore.
         \end{enumerate}
 \end{itemize}
-% subsub:UUC9utente (end)
+% subsub:UUC10utente (end)
 
-%UUC10 (start)
-\subsubsection{UUC10 - Tempo utente nell'organizzazione}%
-\label{subsub:UUC10utente}
-%inserire diagramma UUC10
+%UUC11 (start)
+\subsubsection{UUC11 - Visualizzazione tempo trascorso nell'organizzazione corrente}%
+\label{subsub:UUC11utente}
+%inserire diagramma UUC11
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC10
-  \item \textbf{Titolo:} Tempo utente nell'organizzazione
+  \item \textbf{Caso d’uso:} UUC11
+  \item \textbf{Titolo:} Visualizzazione tempo trascorso nell'organizzazione corrente
   \item \textbf{Attori primari:} utente autenticato, in particolare utente collegato
-  \item \textbf{Precondizione:} l'utente deve essere collegato ad un'organizzazione.
-  \item \textbf{Postcondizione:} l'utente visualizza il tempo trascorso nll'organizzazione.
+  \item \textbf{Precondizione:} l'utente deve poter accedere al pulsante del tempo.
+  \item \textbf{Postcondizione:} l'utente visualizza il tempo trascorso nell'organizzazione.
   \item \textbf{Scenario principale:}
         \begin{enumerate}
           \item l'utente visualizza in tempo reale il tempo trascorso all'interno di un'organizzazione.
         \end{enumerate}
   \item \textbf{Estensioni:}
         \begin{enumerate}
-          \item se l'utente cerca di visualizzare il tempo trascorso nell'organizzazione in assenza di rete, si visualizzerà un errore.
-        \end{enumerate}
-\end{itemize}
-% subsub:UUC10utente (end)
-
-%UUC10.1 (start)
-\subsubsection{UUC10.1 - Visualizzazione tempo trascorso nell'organizzazione corrente}%
-\label{subsub:UUC10utente}
-\begin{itemize}
-  \item \textbf{Caso d’uso:} UUC10
-  \item \textbf{Titolo:} Visualizzazione tempo trascorso nell'organizzazione corrente
-  \item \textbf{Attori primari:} utente autenticato, in particolare utente collegato
-  \item \textbf{Precondizione:}
-  \item \textbf{Postcondizione:}
-  \item \textbf{Scenario principale:}
-        \begin{enumerate}
-          \item l'utente accede ad una schermata per visualizzare in tempo reale il tempo trascorso all'interno dell'organizzazione corrente.
-        \end{enumerate}
-  \item \textbf{Estensioni:}
-        \begin{enumerate}
-          \item se l'utente cerca di visualizzare il tempo trascorso nell'organizzazione in assenza di rete, si visualizzerà un errore.
-        \end{enumerate}
-\end{itemize}
-% subsub:UUC10.1utente (end)
-
-%UUC11 (start)
-\subsubsection{UUC11 - Disconnessione}%
-\label{subsub:UUC11utente}
-%inserire diagramma UUC11
-\begin{itemize}
-  \item \textbf{Caso d’uso:} UUC11
-  \item \textbf{Titolo:} Disconnessione
-  \item \textbf{Attori primari:} utente autenticato
-  \item \textbf{Precondizione:} l'utente deve essere autenticato.
-  \item \textbf{Postcondizione:} l'utente non è più autenticato.
-  \item \textbf{Scenario principale:}
-        \begin{enumerate}
-          \item l'utente ha la possibilità di disconnettersi dal servizio offerto dall'applicazione mobile.
-        \end{enumerate}
-  \item \textbf{Estensioni:}
-        \begin{enumerate}
-          \item se l'utente cerca di disconnettersi in assenza di rete, si visualizzerà un errore.
+          \item se l'utente accede ad una schermata per la visualizzazione del tempo trascorso nell'organizzazione in assenza di rete, si visualizzerà un errore.
         \end{enumerate}
 \end{itemize}
 % subsub:UUC11utente (end)
 
-%UUC11.1 (start)
-\subsubsection{UUC11.1 - Disconnessione utente autenticato}%
-\label{subsub:UUC11.1utente}
+%UUC12 (start)
+\subsubsection{UUC12 - Disconnessione utente}%
+\label{subsub:UUC12utente}
+%inserire diagramma UUC12
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC11.1
-  \item \textbf{Titolo:} Disconnessione utente autenticato
+  \item \textbf{Caso d’uso:} UUC12
+  \item \textbf{Titolo:} Disconnessione
   \item \textbf{Attori primari:} utente autenticato
-  \item \textbf{Precondizione:} l'utente si trova nella schermata di post-autenticazione.
-  \item \textbf{Postcondizione:} l'utente è disconnesso.
+  \item \textbf{Precondizione:} l'utente deve poter accedere al pulsante di disconnessione.
+  \item \textbf{Postcondizione:} l'utente non è più autenticato.
   \item \textbf{Scenario principale:}
         \begin{enumerate}
-          \item l'utente esegue la disconnessione tramite un'apposita operazione che è eseguibile dalla schermata post-autenticazione.
+          \item l'utente esegue la disconnessione dal servizio.
         \end{enumerate}
   \item \textbf{Estensioni:}
         \begin{enumerate}
           \item se l'utente cerca di disconnettersi in assenza di rete, si visualizzerà un errore.
         \end{enumerate}
 \end{itemize}
-% subsub:UUC11.1utente (end)
+% subsub:UUC12utente (end)
 
 \end{document}

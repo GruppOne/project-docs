@@ -168,21 +168,21 @@ actor :utente collegato: as A3.1
 
 rectangle {
   together {
-    usecase (UUC7.1) as "UUC7.1\nUscita da un'organizzazione\n--\nExtension points:\nVisualizzazione errore in caso di\nuscita dall'organizzazione\n con rete mancante"
+    usecase (UUC7) as "UUC7\nScollegamento organizzazione\n--\nExtension points:\nVisualizzazione errore in caso di\nscollegamento dall'organizzazione\n con rete mancante"
     usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
   }
 }
 
-:A3.1: -- (UUC7.1)
+:A3.1: -- (UUC7)
 
-(UUC5) .up.|> (UUC7.1) : <<extends>>
+(UUC5) .up.|> (UUC7) : <<extends>>
 
 @enduml
 
-@startuml UUCNotoIncognito
+@startuml UUCScollegamentoOrganizzazioneLista
 !include ../../../../commons/style/use-cases.pu
 
-title UUC8 - Passaggio noto/incognito
+title UUC8 - Scollegamento da organizzazioni multiple
 
 actor :utente autenticato: as A3
 actor :utente collegato: as A3.1
@@ -190,21 +190,43 @@ actor :utente collegato: as A3.1
 
 rectangle {
   together {
-    usecase (UUC8.1) as "UUC8.1\nScelta noto o incognito\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
+    usecase (UUC8) as "UUC8\nScollegamento da organizzazioni multiple\n--\nExtension points:\nVisualizzazione errore in caso di\nscollegamento dall'organizzazione\n con rete mancante"
     usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
   }
 }
 
-:A3.1: -- (UUC8.1)
+:A3.1: -- (UUC8)
 
-(UUC5) .up.|> (UUC8.1) : <<extends>>
+(UUC5) .up.|> (UUC8) : <<extends>>
 
 @enduml
 
-@startuml UUC8.1
+@startuml UUCNotoIncognito
 !include ../../../../commons/style/use-cases.pu
 
-title UUC8.1 - Scelta noto o incognito
+title UUC9 - Passaggio noto/incognito
+
+actor :utente autenticato: as A3
+actor :utente collegato: as A3.1
+:A3.1: -up-|> :A3:
+
+rectangle {
+  together {
+    usecase (UUC9.1) as "UUC9.1\nScelta noto o incognito\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
+    usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+  }
+}
+
+:A3.1: -- (UUC9.1)
+
+(UUC5) .up.|> (UUC9.1) : <<extends>>
+
+@enduml
+
+@startuml UUC9.1
+!include ../../../../commons/style/use-cases.pu
+
+title UUC9.1 - Scelta noto o incognito
 
 actor :utente collegato: as A3
 
@@ -216,41 +238,41 @@ actor :utente incognito: as A3.2
 
 rectangle {
   together {
-    usecase (UUC8.1.1) as "UUC8.1.1\nPassaggio a incognito"
-    usecase (UUC8.1.2) as "UUC8.1.2\nPassaggio a noto"
+    usecase (UUC9.1.1) as "UUC9.1.1\nPassaggio a incognito"
+    usecase (UUC9.1.2) as "UUC9.1.2\nPassaggio a noto"
   }
 }
 
-:A3.1: -- (UUC8.1.1)
-:A3.2: -- (UUC8.1.2)
+:A3.1: -- (UUC9.1.1)
+:A3.2: -- (UUC9.1.2)
 
 @enduml
 
 @startuml UUCVisualizzazioneStorico
 !include ../../../../commons/style/use-cases.pu
 
-title UUC9 - Storico utente
+title UUC10 - Storico utente
 
 actor :utente autenticato: as A
 
 rectangle {
   together {
-    usecase (UUC9.1) as "UUC9.1\nVisualizzazione storico accessi\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta storico\nin mancanza di rete"
+    usecase (UUC10) as "UUC10\nVisualizzazione storico accessi\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta storico\nin mancanza di rete"
     usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
-    note right of (UUC9.1): implementazione opzionale
+    note right of (UUC10): implementazione opzionale
   }
 }
 
-:A: -- (UUC9.1)
+:A: -- (UUC10)
 
-(UUC5) .up.|> (UUC9.1) : <<extends>>
+(UUC5) .up.|> (UUC10) : <<extends>>
 
 @enduml
 
 @startuml UUCVisualizzazioneTempo
 !include ../../../../commons/style/use-cases.pu
 
-title UUC10 - Tempo utente nell'organizzazione
+title UUC11 - Visualizzazione tempo nell'organizzazione corrente
 
 actor :utente autenticato: as A3
 actor :utente collegato: as A3.1
@@ -259,35 +281,35 @@ actor :utente collegato: as A3.1
 
 rectangle {
   together {
-    usecase (UUC10.1) as "UUC10.1\nVisualizzazione tempo trascorso\nnell'organizzazione corrente\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta tempo trascorso\nin mancanza di rete"
+    usecase (UUC11) as "UUC11\nVisualizzazione tempo \nnell'organizzazione corrente\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta tempo trascorso\nin mancanza di rete"
     usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
-    note right of (UUC10.1): implementazione opzionale
+    note right of (UUC11): implementazione opzionale
   }
 }
 
-:A3.1: -- (UUC10.1)
+:A3.1: -- (UUC11)
 
-(UUC5) .up.|> (UUC10.1) : <<extends>>
+(UUC5) .up.|> (UUC11) : <<extends>>
 
 @enduml
 
 @startuml UUCDisconnessione
 !include ../../../../commons/style/use-cases.pu
 
-title UUC11 - Disconnessione
+title UUC12 - Disconnessione utente
 
 actor :utente autenticato: as A3
 
 rectangle {
   together {
-    usecase (UUC11.1) as "UUC11.1\nDisconnessione utente autenticato\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
+    usecase (UUC12) as "UUC12\nDisconnessione utente\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
     usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
   }
 }
 
-:A3: -- (UUC11.1)
+:A3: -- (UUC12)
 
-(UUC5) .up.|> (UUC11.1) : <<extends>>
+(UUC5) .up.|> (UUC12) : <<extends>>
 
 @enduml
 
