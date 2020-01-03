@@ -1,4 +1,8 @@
-# owner di default
+# ------------------------------------------ #
+# Verificatori assegnati alla configurazione #
+# ------------------------------------------ #
+
+# default reviewer
 * @erclu
 
 # configurazioni di varie feature di github
@@ -10,18 +14,20 @@
 # template, configurazione e file comuni di documenti LaTex
 /commons/ @RiccardoAgatea
 
+# ----------------------------------- #
+# Verificatori assegnati ai documenti #
+# ----------------------------------- #
+
 /esterni/analisi-dei-requisiti/ @erclu @TobiaApolloni
 
-/esterni/glossario/ @RiccardoAgatea
+/esterni/glossario/ @AlbertoGobbo @RiccardoAgatea
 
-/esterni/piano-di-progetto/ @RiccardoCestaro @Alberto1598
+/esterni/piano-di-progetto/ @Alberto1598 @RiccardoCestaro
 
-/esterni/piano-di-qualifica/ @RiccardoAgatea @AlbertoGobbo
+/esterni/piano-di-qualifica/ @AlbertoGobbo @RiccardoAgatea
 
-/interni/norme-di-progetto/ @fabioscettro @AlexRizzus
+/interni/norme-di-progetto/ @AlexRizzus @fabioscettro
 
 /interni/studio-di-fattibilita/ @erclu @RiccardoAgatea
 
-/interni/verbali/ @AlexRizzus
-
-/lettera-di-presentazione/ @Alberto1598
+/interni/verbali/ @RiccardoCestaro @TobiaApolloni
