@@ -1,13 +1,13 @@
 \usepackage[italian]{babel}
 \usepackage[margin=2cm, footskip=5mm]{geometry}
+% questi package non sono necessari in lualatex; ref https://tex.stackexchange.com/a/413046
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{soulutf8}
 \usepackage{contour}
 \usepackage{float}
-% package non necessari in lualatex; ref https://tex.stackexchange.com/a/413046
-% \usepackage[utf8]{inputenc}
-% \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{longtable}
@@ -20,10 +20,15 @@
 % XXX definizione dei percorsi in cui cercare immagini
 \graphicspath{ {./}
     {./img/}
-    {../commons/img/}
-    {../../commons/img/}
-    {../../../commons/img/}
 }
+
+% esempio di utilizzo: \appendToGraphicsPath{./img/} (un comando diverso per ogni path da includere)
+% N.B.: ci DEVE essere un forward slash alla fine del path, a indicare che è una cartella.
+\makeatletter
+\newcommand\appendToGraphicspath[1]{%
+  \g@addto@macro\Ginput@path{{#1}}%
+}
+\makeatother
 
 % setup della sottolineatura
 \setuldepth{Flat}
