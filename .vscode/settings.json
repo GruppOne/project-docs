@@ -20,12 +20,13 @@
   "git-graph.fetchAndPrune": true,
   "latex-workshop.latex.tools": [
     {
-      "name": "lualatex",
+      "name": "lualatex vscode tool",
       "command": "lualatex",
       "args": [
         "--synctex=1",
         "--interaction=nonstopmode",
         "--c-style-errors",
+        "--shell-escape",
         "--output-directory=%OUTDIR%",
         "%DOC%"
       ],
@@ -34,10 +35,10 @@
   ],
   "latex-workshop.latex.recipes": [
     {
-      "name": "lualatex",
+      "name": "lualatex recipe",
       "tools": [
-        "lualatex",
-        "lualatex"
+        "lualatex vscode tool",
+        "lualatex vscode tool"
       ]
     }
   ],
@@ -46,6 +47,7 @@
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.clean.subfolder.enabled": true,
   "spellright.documentTypes": [
+    "diagram",
     "latex",
     "markdown",
     "plaintext"
