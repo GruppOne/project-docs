@@ -15,14 +15,14 @@
   \item \textbf{Precondizione:} l'utente non è registrato al servizio.
   \item \textbf{Postcondizione:} la registrazione va a buon fine e l'utente è registrato.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item prima di procedere con la registrazione, l'utente visualizza l'\glossario{EULA} e per continuare deve accettare i vincoli stabiliti da essa;
-    \item una volta accettata l'EULA, l'utente provvede all'inserimento dei dati personali per la registrazione.
-  \end{enumerate}
+        \begin{enumerate}
+          \item prima di procedere con la registrazione, l'utente visualizza l'\glossario{EULA} e per continuare deve accettare i vincoli stabiliti da essa;
+          \item una volta accettata l'EULA, l'utente provvede all'inserimento dei dati personali per la registrazione.
+        \end{enumerate}
   \item \textbf{Inclusioni:}
-  \begin{enumerate}
-    \item EULA deve essere confermata, altrimenti la registrazione non può continuare.
-  \end{enumerate}
+        \begin{enumerate}
+          \item EULA deve essere confermata, altrimenti la registrazione non può continuare.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC1utente (end)
 
@@ -36,13 +36,13 @@
   \item \textbf{Precondizione:} l'utente è all'interno della schermata di registrazione
   \item \textbf{Postcondizione:} l'utente visualizza l'EULA
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente visualizza una schermata con tutti i vincoli da accettare presenti nell'EULA.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente visualizza una schermata con tutti i vincoli da accettare presenti nell'EULA.
+        \end{enumerate}
   \item \textbf{Inclusioni:}
-  \begin{enumerate}
-    \item l'utente deve confermare l'EULA per continuare la registrazione.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente deve confermare l'EULA per continuare la registrazione.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC1.1utente (end)
 
@@ -56,9 +56,9 @@
   \item \textbf{Precondizione:} l'utente visualizza l'EULA.
   \item \textbf{Postcondizione:} l'utente continua la registrazione in quanto ha accettato l'EULA.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item E' presente un'opzione per accettare l'EULA: in caso affermativo, la registrazione può andare avanti.
-  \end{enumerate}
+        \begin{enumerate}
+          \item E' presente un'opzione per accettare l'EULA: in caso affermativo, la registrazione può andare avanti.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC1.1.1utente (end)
 
@@ -68,18 +68,18 @@
 %inserire diagramma UUC1.2
 \begin{itemize}
   \item \textbf{Caso d’uso:} UUC1.2
-  \item \textbf{Titolo:} Visualizzazione EULA
+  \item \textbf{Titolo:} Inserimento dati registrazione
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente ha accettato l'EULA.
   \item \textbf{Postcondizione:} l'utente ha inserito correttamente tutti i dati necessari alla registrazione e diventa un utente registrato.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente visualizza una serie di campi da compilare.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente visualizza una serie di campi da compilare.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se i dati inseriti non sono validi, l'utente visualizzerà un errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se i dati inseriti non sono validi, l'utente visualizzerà un errore.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC1.2utente (end)
 
@@ -93,13 +93,13 @@
   \item \textbf{Precondizione:} l'utente si trova nella schermata di registrazione nel campo dell'email.
   \item \textbf{Postcondizione:} l'utente ha inserito la email in modo corretto.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente seleziona il campo della email e la inserisce.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente seleziona il campo della email e la inserisce.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se la mail è scritta in una forma non corretta, verrà visualizzato un'errore di mail non valida.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se la mail è scritta in una forma non corretta, verrà visualizzato un'errore di mail non valida.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC1.2.1utente (end)
 
@@ -113,13 +113,13 @@
   \item \textbf{Precondizione:} l'utente si trova nella schermata di registrazione nel campo della password.
   \item \textbf{Postcondizione:} l'utente ha inserito la password in modo corretto.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente seleziona il campo della password e la crea.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente seleziona il campo della password e la crea.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se la password non rispetta determinati vincoli, verrà visualizzato un'errore di password non valida.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se la password non rispetta determinati vincoli, verrà visualizzato un'errore di password non valida.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC1.2.2utente (end)
 
@@ -131,16 +131,16 @@
   \item \textbf{Titolo:} Conferma password
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente si trova nella schermata di registrazione nel campo della conferma della password,
-  e la password inserita in precedenza dall'utente rispetta tutti i vincoli.
+        e la password inserita in precedenza dall'utente rispetta tutti i vincoli.
   \item \textbf{Postcondizione:} l'utente ha inserito la conferma della password in modo corretto.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente seleziona il campo della conferma della password e la inserisce.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente seleziona il campo della conferma della password e la inserisce.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se la password inserita non è uguale a quella precedente, verrà visualizzato un'errore di conferma password non valida.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se la password inserita non è uguale a quella precedente, verrà visualizzato un'errore di conferma password non valida.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC1.2.3utente (end)
 
@@ -154,13 +154,13 @@
   \item \textbf{Precondizione:} l'utente si trova nella schermata di registrazione nei campi dei dati anagrafici.
   \item \textbf{Postcondizione:} l'utente ha inserito i dati anagrafici in modo corretto.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente seleziona i vari campi inerenti ai dati anagrafici e gli inserisce.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente seleziona i vari campi inerenti ai dati anagrafici e gli inserisce.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se uno o più dati anagrafici inseriti non rispettano determinati vincoli, verrà visualizzato un'errore sui campi in cui è segnalato l'errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se uno o più dati anagrafici inseriti non rispettano determinati vincoli, verrà visualizzato un'errore sui campi in cui è segnalato l'errore.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC1.2.4utente (end)
 
@@ -174,9 +174,9 @@
   \item \textbf{Precondizione:} l'utente si trova nella schermata di registrazione e non rispetta i vincoli imposti sui campi presenti.
   \item \textbf{Postcondizione:} l'applicazione mobile comunica all'utente l'errore.
   \item \textbf{Scenario Principale:}
-  \begin{enumerate}
-    \item l'utente visualizza il messaggio d'errore, in quanto le informazioni inserite non sono valide.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente visualizza il messaggio d'errore, in quanto le informazioni inserite non sono valide.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC1.2.5utente (end)
 
@@ -191,13 +191,13 @@
   \item \textbf{Precondizione:} l'utente è registrato al servizio.
   \item \textbf{Postcondizione:} l'utente è autenticato al servizio.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente visualizza la schermata per l'autenticazione e inserisce email e password sugli appositi campi.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente visualizza la schermata per l'autenticazione e inserisce email e password sugli appositi campi.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se la coppia email-password inserite non sono presenti all'interno del database di Stalker, allora verrà visualizzato un'errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se la coppia email-password inserite non sono presenti all'interno del database di Stalker, allora verrà visualizzato un'errore.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC3utente (end)
 
@@ -211,14 +211,14 @@
   \item \textbf{Precondizione:} l'utente si posiziona sul campo dell'email.
   \item \textbf{Postcondizione:} la email inserita è corretta.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente seleziona il campo dell'email e la inserisce.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente seleziona il campo dell'email e la inserisce.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se la email inserita non è presente nel database, si visualizzerà un errore di credenziali errate (per motivi di sicurezza
-    non si indica qual è il campo errato).
-  \end{enumerate}
+        \begin{enumerate}
+          \item se la email inserita non è presente nel database, si visualizzerà un errore di credenziali errate (per motivi di sicurezza
+                non si indica qual è il campo errato).
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC2.1utente (end)
 
@@ -232,14 +232,14 @@
   \item \textbf{Precondizione:} l'utente si posiziona sul campo della password.
   \item \textbf{Postcondizione:} la password inserita è corretta.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente seleziona il campo della password e la inserisce.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente seleziona il campo della password e la inserisce.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se la password inserita non è presente nel database, si visualizzerà un errore di credenziali errate (per motivi di sicurezza
-    non si indica qual è il campo errato).
-  \end{enumerate}
+        \begin{enumerate}
+          \item se la password inserita non è presente nel database, si visualizzerà un errore di credenziali errate (per motivi di sicurezza
+                non si indica qual è il campo errato).
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC2.2utente (end)
 
@@ -253,9 +253,9 @@
   \item \textbf{Precondizione:} l'utente si trova nella schermata di autenticazione e non rispetta i vincoli imposti sui campi presenti.
   \item \textbf{Postcondizione:} l'applicazione mobile comunica all'utente l'errore.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente visualizza il messaggio d'errore, in quanto le informazioni inserite non sono valide.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente visualizza il messaggio d'errore, in quanto le informazioni inserite non sono valide.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC2.3utente (end)
 
@@ -270,9 +270,9 @@
   \item \textbf{Precondizione:} l'utente si trova nella schermata iniziale ed è registrato al servizio.
   \item \textbf{Postcondizione:} l'utente si trova nella schermata di recupero credenziali.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente può selezionare la voce per il recupero credenziali e avviene tramite recupero password.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente può selezionare la voce per il recupero credenziali e avviene tramite recupero password.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC3utente (end)
 
@@ -287,9 +287,9 @@
   \item \textbf{Precondizione:} l'utente si trova nella schermata di recupero credenziali.
   \item \textbf{Postcondizione:} l'utente ha recuperato le credenziali e può nuovamente autenticarsi.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item tramite questa procedura, l'utente ha la possibilità di recuperare la password.
-  \end{enumerate}
+        \begin{enumerate}
+          \item tramite questa procedura, l'utente ha la possibilità di recuperare la password.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC3.1utente (end)
 
@@ -303,13 +303,13 @@
   \item \textbf{Precondizione:} l'utente deve ancora iniziare la procedura di recupero password.
   \item \textbf{Postcondizione:} l'utente ha inserito correttamente la email di registrazione.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente inserisce l'email personale per l'autenticazione, e riceve una email con il \glossario{link} per reimpostare la password.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente inserisce l'email personale per l'autenticazione, e riceve una email con il \glossario{link} per reimpostare la password.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se l'email inserita non è registrata nel database, allora verrà segnalato un errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se l'email inserita non è registrata nel database, allora verrà segnalato un errore.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC3.1.1utente (end)
 
@@ -323,18 +323,18 @@
   \item \textbf{Precondizione:} l'utente ha ricevuto il link presente nella email personale per reimpostare la password.
   \item \textbf{Postcondizione:} l'utente ha inserito correttamente la nuova password e ha recuperato le proprie credenziali.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente reimposta la password in una procedura che avviene in due passaggi:
-    \begin{enumerate}
-      \item reset della vecchia password, non visibile all'utente;
-      \item inserimento della nuova password e la conferma della nuova conferma.
-    \end{enumerate}
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente reimposta la password in una procedura che avviene in due passaggi:
+                \begin{enumerate}
+                  \item reset della vecchia password, non visibile all'utente;
+                  \item inserimento della nuova password e la conferma della nuova conferma.
+                \end{enumerate}
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se la nuova password non rispetta determinati vincoli, verrà visualizzato un'errore;
-    \item se la nuova password e la sua conferma non coincidono tra loro, verrà visualizzato un'errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se la nuova password non rispetta determinati vincoli, verrà visualizzato un'errore;
+          \item se la nuova password e la sua conferma non coincidono tra loro, verrà visualizzato un'errore.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC3.1.2utente (end)
 
@@ -349,17 +349,17 @@
   \item \textbf{Precondizione:} l'utente si è appena autenticato.
   \item \textbf{Postcondizione:} l'utente visualizza una lista di tutte le organizzazioni.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente ha la possibilità di recuperare una lista di organizzazioni alla quale si può collegare;
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente ha la possibilità di recuperare una lista di organizzazioni alla quale si può collegare;
+        \end{enumerate}
   \item \textbf{Inclusioni:}
-  \begin{enumerate}
-    \item la lista delle organizzazioni si può aggiornare.
-  \end{enumerate}
+        \begin{enumerate}
+          \item la lista delle organizzazioni si può aggiornare.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item in caso di rete mancante, non possono essere eseguite queste operazioni e quindi verrà notificato un errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item in caso di rete mancante, non possono essere eseguite queste operazioni e quindi verrà notificato un errore.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC4utente (end)
 
@@ -373,18 +373,18 @@
   \item \textbf{Precondizione:} l'utente si trova nella schermata post-autenticazione.
   \item \textbf{Postcondizione:} l'utente visualizza la lista di tutte le organizzazioni.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente visualizza, tramite un'apposita operazione, la lista di tutte le organizzazioni autorizzate a monitorare l'utente autenticato.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente visualizza, tramite un'apposita operazione, la lista di tutte le organizzazioni autorizzate a monitorare l'utente autenticato.
+        \end{enumerate}
   \item \textbf{Inclusioni:}
-  \begin{enumerate}
-    \item la lista delle organizzazioni può essere aggiornata.
-  \end{enumerate}
+        \begin{enumerate}
+          \item la lista delle organizzazioni può essere aggiornata.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item in caso di rete mancante, si visualizzerà un errore in caso di richiesta di visualizzazione della lista delle organizzazioni
-    oppure di aggiornamento della lista delle organizzazioni.
-  \end{enumerate}
+        \begin{enumerate}
+          \item in caso di rete mancante, si visualizzerà un errore in caso di richiesta di visualizzazione della lista delle organizzazioni
+                oppure di aggiornamento della lista delle organizzazioni.
+        \end{enumerate}
 \end{itemize}
 % subsub:UU4.1utente (end)
 
@@ -398,10 +398,9 @@
   \item \textbf{Precondizione:} l'utente visualizza la lista delle organizzazioni.
   \item \textbf{Postcondizione:} l'utente ha aggiornato la lista delle organizzazioni.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente ha la possibilità di aggiornare la lista delle organizzazioni, e viene avvisato mediante \glossario{notifica}
-    dell'applicazione mobile.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente ha la possibilità di aggiornare la lista delle organizzazioni, e viene avvisato mediante \glossario{notifica} dell'applicazione mobile.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC4.1.1.1utente (end)
 
@@ -415,9 +414,9 @@
   \item \textbf{Precondizione:} l'utente è autenticato, ma nel suo dispositivo non c'è alcun accesso alla rete.
   \item \textbf{Postcondizione:} l'applicazione mobile comunica all'utente l'errore.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente visualizza il messaggio d'errore, in quanto non è possibile eseguire operazioni che necessitano della rete in mancanza di essa.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente visualizza il messaggio d'errore, in quanto non è possibile eseguire operazioni che necessitano della rete in mancanza di essa.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC5utente (end)
 
@@ -432,33 +431,33 @@
   \item \textbf{Precondizione:} l'utente si trova sulla lista delle organizzazioni.
   \item \textbf{Postcondizione:} l'utente ha selezionato un'organizzazione ed è collegato ad essa.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente sceglie un'organizzazione alla quale collegarsi.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente sceglie un'organizzazione alla quale collegarsi.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione.
-  \end{enumerate}
+        \begin{enumerate}
+          \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC6utente (end)
 
 %UUC6.1 (start)
-\subsubsection{UUC6.1 - Selezionamento di un'organizzazione}%
+\subsubsection{UUC6.1 - Selezione di un'organizzazione}%
 \label{subsub:UUC6utente}
 \begin{itemize}
   \item \textbf{Caso d’uso:} UUC6.1
-  \item \textbf{Titolo:} Selezionamento di un'organizzazione
+  \item \textbf{Titolo:} Selezione di un'organizzazione
   \item \textbf{Attori primari:} utente autenticato, in particolare utente non collegato
   \item \textbf{Precondizione:} l'utente visualizza la lista delle organizzazioni.
   \item \textbf{Postcondizione:} l'utente è collegato ad un'organizzazione.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente seleziona un'organizzazione dalla lista.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente seleziona un'organizzazione dalla lista.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione.
-  \end{enumerate}
+        \begin{enumerate}
+          \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC6.1utente (end)
 
@@ -470,39 +469,40 @@
   \item \textbf{Caso d’uso:} UUC7
   \item \textbf{Titolo:} Scollegamento organizzazione
   \item \textbf{Attori primari:} utente autenticato, in particolare utente collegato
-  \item \textbf{Precondizione:} l'utente è collegato ad un'organizzazione.
-  \item \textbf{Postcondizione:} l'utente non è collegato ad alcuna organizzazione.
+  \item \textbf{Precondizione:} l'utente si trova sulla schermata specifica dell'organizzazione a cui è collegato.
+  \item \textbf{Postcondizione:} l'utente non è più collegato all'organizzazione.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente vuole scollegarsi dall'organizzazione corrente, e lo fa dalla schermata che specifica a quale organizzazione è collegato e le
-    sue informazioni relative.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente vuole scollegarsi da una organizzazione a cui è collegato, e lo fa dalla schermata dell'organizzazione.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se l'utente cerca di scollegarsi da un'organizzazione in caso di rete mancante, si visualizzerà un errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se l'utente cerca di scollegarsi da un'organizzazione in caso di rete mancante, si visualizzerà un errore.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC7utente (end)
 
-%UUC7.1 (start)
-\subsubsection{UUC7.1 - Uscita da un'organizzazione}%
-\label{subsub:UUC7.1utente}
+%UUC8 (start)
+\subsubsection{UUC8 - Scollegamento organizzazioni multiple}%
+\label{subsub:UUC8utente}
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC7.1
-  \item \textbf{Titolo:} Uscita da un'organizzazione
+  \item \textbf{Caso d’uso:} UUC8
+  \item \textbf{Titolo:} Scollegamento organizzazioni multiple
   \item \textbf{Attori primari:} utente autenticato, in particolare utente collegato
-  \item \textbf{Precondizione:} l'utente si trova sulla schermata specifica dell'utente collegato ad un'organizzazione.
-  \item \textbf{Postcondizione:} l'utente non è collegato ad alcuna organizzazione.
+  \item \textbf{Precondizione:} l'utente si trova sulla schermata della lista delle organizzazioni e ne ha selezionate una o più.
+  \item \textbf{Postcondizione:} l'utente non è più collegato alle organizzazioni che ha selezionato.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente esegue l'uscita dall'organizzazione tramite un'operazione specifica a questo requisito.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente vuole scollegarsi da una o più organizzazioni a cui è collegato e lo fa dalla schermata della lista.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se l'utente cerca di scollegarsi da un'organizzazione in caso di rete mancante, si visualizzerà un errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se l'utente cerca di scollegarsi da una o più organizzazioni in caso di rete mancante, si visualizzerà un errore.
+        \end{enumerate}
 \end{itemize}
-% subsub:UUC7.1utente (end)
+% subsub:UUC8utente (end)
+
+%okay da qua in su + UUC10 già controllato
 
 %UUC8 (start)
 \subsubsection{UUC8 - Passaggio noto/incognito}%
@@ -515,13 +515,13 @@
   \item \textbf{Precondizione:} l'utente si trova sulla schermata specifica dell'utente collegato ad un'organizzazione.
   \item \textbf{Postcondizione:} se l'utente era noto diventa incognito; vale anche il contrario.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente ha la possibilità di cambiare il tipo di monitoraggio che l'organizzazione è tenuta a conoscere.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente ha la possibilità di cambiare il tipo di monitoraggio che l'organizzazione è tenuta a conoscere.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC8utente (end)
 
@@ -536,14 +536,14 @@
   \item \textbf{Precondizione:} l'utente si trova sulla schermata specifica dell'utente collegato ad un'organizzazione.
   \item \textbf{Postcondizione:} se l'utente era noto diventa incognito; vale anche il contrario.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente è collegato ad un'organizzazione in cui la sua presenza è nota; l'utente ha la possibilità di passare in modalità incognito.
-    \item l'utente è collegato ad un'organizzazione in cui la sua presenza è incognita; l'utente ha la possibilità di passare in modalità nota.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente è collegato ad un'organizzazione in cui la sua presenza è nota; l'utente ha la possibilità di passare in modalità incognito.
+          \item l'utente è collegato ad un'organizzazione in cui la sua presenza è incognita; l'utente ha la possibilità di passare in modalità nota.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC8.1utente (end)
 
@@ -557,9 +557,9 @@
   \item \textbf{Precondizione:} l'utente deve essere collegato e noto.
   \item \textbf{Postcondizione:} l'utente è collegato ed incognito.
   \item \textbf{Scenario Principale:}
-  \begin{enumerate}
-    \item l'utente è noto in un'organizzazione e vuole diventare incognito: in questo modo la sua presenza è nota, ma non lo è la sua identità.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente è noto in un'organizzazione e vuole diventare incognito: in questo modo la sua presenza è nota, ma non lo è la sua identità.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC8.1.1utente (end)
 
@@ -573,52 +573,33 @@
   \item \textbf{Precondizione:} l'utente deve essere collegato ed incognito.
   \item \textbf{Postcondizione:} l'utente è collegato e noto.
   \item \textbf{Scenario Principale:}
-  \begin{enumerate}
-    \item l'utente è incognito in un'organizzazione e vuole diventare noto: in questo modo, sia la sua presenza che la sua identità sono note.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente è incognito in un'organizzazione e vuole diventare noto: in questo modo, sia la sua presenza che la sua identità sono note.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC8.1.2utente (end)
 
 %UUC9 (start)
-\subsubsection{UUC9 - Storico utente}%
+\subsubsection{UUC10 - Storico utente}%
 \label{subsub:UUC9utente}
 %inserire diagramma UUC9
 \begin{itemize}
   \item \textbf{Caso d’uso:} UUC9
   \item \textbf{Titolo:} Storico utente
   \item \textbf{Attori primari:} utente autenticato
-  \item \textbf{Precondizione:}  l'utente si è appena autenticato.
+  \plchold{chiedere a tullio la precondizione}
+  \item \textbf{Precondizione:}  l'utente deve avere poter accedere al pulsante dello storico.
   \item \textbf{Postcondizione:} l'utente visualizza lo storico degli accessi.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente ha la possibilità di vedere il personale storico degli accessi.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente accede ad una schermata per la visualizzazione dello storico personale degli accessi.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se l'utente cerca di visualizzare lo storico degli accessi in assenza di rete, si visualizzerà un errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se l'utente cerca di visualizzare lo storico degli accessi in assenza di rete, si visualizzerà un errore.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC9utente (end)
-
-%UUC9.1 (start)
-\subsubsection{UUC9.1 - Visualizzazione storico accessi}%
-\label{subsub:UUC9.1utente}
-\begin{itemize}
-  \item \textbf{Caso d’uso:} UUC9.1
-  \item \textbf{Titolo:} Visualizzazione storico accessi
-  \item \textbf{Attori primari:} utente autenticato
-  \item \textbf{Precondizione:} l'utente si trova nella schermata post-autenticazione.
-  \item \textbf{Postcondizione:} l'utente visualizza lo storico degli accessi.
-  \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente accede ad una schermata per la visualizzazione dello storico personale degli accessi.
-  \end{enumerate}
-  \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se l'utente cerca di visualizzare lo storico degli accessi in assenza di rete, si visualizzerà un errore.
-  \end{enumerate}
-\end{itemize}
-% subsub:UUC9.1utente (end)
 
 %UUC10 (start)
 \subsubsection{UUC10 - Tempo utente nell'organizzazione}%
@@ -631,13 +612,13 @@
   \item \textbf{Precondizione:} l'utente deve essere collegato ad un'organizzazione.
   \item \textbf{Postcondizione:} l'utente visualizza il tempo trascorso nll'organizzazione.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente visualizza in tempo reale il tempo trascorso all'interno di un'organizzazione.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente visualizza in tempo reale il tempo trascorso all'interno di un'organizzazione.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se l'utente cerca di visualizzare il tempo trascorso nell'organizzazione in assenza di rete, si visualizzerà un errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se l'utente cerca di visualizzare il tempo trascorso nell'organizzazione in assenza di rete, si visualizzerà un errore.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC10utente (end)
 
@@ -651,13 +632,13 @@
   \item \textbf{Precondizione:}
   \item \textbf{Postcondizione:}
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente accede ad una schermata per visualizzare in tempo reale il tempo trascorso all'interno dell'organizzazione corrente.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente accede ad una schermata per visualizzare in tempo reale il tempo trascorso all'interno dell'organizzazione corrente.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se l'utente cerca di visualizzare il tempo trascorso nell'organizzazione in assenza di rete, si visualizzerà un errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se l'utente cerca di visualizzare il tempo trascorso nell'organizzazione in assenza di rete, si visualizzerà un errore.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC10.1utente (end)
 
@@ -672,13 +653,13 @@
   \item \textbf{Precondizione:} l'utente deve essere autenticato.
   \item \textbf{Postcondizione:} l'utente non è più autenticato.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente ha la possibilità di disconnettersi dal servizio offerto dall'applicazione mobile.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente ha la possibilità di disconnettersi dal servizio offerto dall'applicazione mobile.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se l'utente cerca di disconnettersi in assenza di rete, si visualizzerà un errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se l'utente cerca di disconnettersi in assenza di rete, si visualizzerà un errore.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC11utente (end)
 
@@ -692,13 +673,13 @@
   \item \textbf{Precondizione:} l'utente si trova nella schermata di post-autenticazione.
   \item \textbf{Postcondizione:} l'utente è disconnesso.
   \item \textbf{Scenario principale:}
-  \begin{enumerate}
-    \item l'utente esegue la disconnessione tramite un'apposita operazione che è eseguibile dalla schermata post-autenticazione.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente esegue la disconnessione tramite un'apposita operazione che è eseguibile dalla schermata post-autenticazione.
+        \end{enumerate}
   \item \textbf{Estensioni:}
-  \begin{enumerate}
-    \item se l'utente cerca di disconnettersi in assenza di rete, si visualizzerà un errore.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se l'utente cerca di disconnettersi in assenza di rete, si visualizzerà un errore.
+        \end{enumerate}
 \end{itemize}
 % subsub:UUC11.1utente (end)
 
