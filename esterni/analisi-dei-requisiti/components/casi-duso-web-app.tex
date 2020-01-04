@@ -14,11 +14,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
   \item \textbf{Codice:} AUC1
   \item \textbf{Titolo:} sistema di autenticazione
   \item \textbf{Attori primari:} utente non autenticato
-  \item \textbf{Precondizione:} l'\glossario{utente non autenticato} non è autenticato alla piattaforma.
+  \item \textbf{Precondizione:} l'utente non autenticato non è autenticato alla piattaforma.
   \item \textbf{Postcondizione:} l'\glossario{utente} ha effettuato correttamente il login nel sistema.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{utente non autenticato} non è ancora autenticato e vuole eseguire il login.
+    \item l'utente non autenticato non è ancora autenticato e vuole eseguire il login.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC1 (end)
@@ -31,12 +31,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
   \item \textbf{Codice:} AUC1.1
   \item \textbf{Titolo:} autenticazione
   \item \textbf{Attori primari:} utente non autenticato
-  \item \textbf{Precondizione:} il sistema è raggiungibile e funzionante, l'\glossario{utente non autenticato} deve poter visualizzare la pagina di login.
-  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} ha inserito le possibili credenziali e sta tentando di effettuare l'autenticazione. Ogni volta che cercherà di effettuare
+  \item \textbf{Precondizione:} il sistema è raggiungibile e funzionante, l'utente non autenticato deve poter visualizzare la pagina di login.
+  \item \textbf{Postcondizione:} l'utente non autenticato ha inserito le possibili credenziali e sta tentando di effettuare l'autenticazione. Ogni volta che cercherà di effettuare
         login sarà verificato che le credenziali inserite siano corrette. In caso contrario verrà visualizzato un messaggio di errore, e l'accesso sarà negato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item  l'\glossario{utente non autenticato} accede alla pagina di login, e visualizza tutti i campi da compilare:
+    \item  l'utente non autenticato accede alla pagina di login, e visualizza tutti i campi da compilare:
     \begin{enumerate}
       \item inserisce l’email associata all’account \emph{[AUC1.1.1]};
       \item inserisce la password associata all’account \emph{[AUC1.1.2]}.
@@ -60,10 +60,10 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
   \item \textbf{Titolo:} inserimento e-mail
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento della propria e-mail.
-  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} ha compilato il campo relativo alla propria e-mail.
+  \item \textbf{Postcondizione:} l'utente non autenticato ha compilato il campo relativo alla propria e-mail.
   \item \textbf{Scenario principale:} 
   \begin{enumerate}
-    \item l'\glossario{utente non autenticato} compila il campo relativo al proprio username di registrazione.
+    \item l'utente non autenticato compila il campo relativo al proprio username di registrazione.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC1.1.1 (end)
@@ -75,10 +75,10 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
   \item \textbf{Titolo:} inserimento password
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento della password.
-  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} ha compilato il campo relativo alla sua password.
+  \item \textbf{Postcondizione:} l'utente non autenticato ha compilato il campo relativo alla sua password.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{utente non autenticato} compila il campo relativo alla sua password di registrazione.
+    \item l'utente non autenticato compila il campo relativo alla sua password di registrazione.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC1.1.2 (end)
@@ -89,12 +89,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
   \item \textbf{Codice:} AUC1.2
   \item \textbf{Titolo:} verifica credenziali
   \item \textbf{Attori primari:} utente non autenticato
-  \item \textbf{Precondizione:} l'\glossario{utente non autenticato} ha inviato al server le sue credenziali per tentare il login
-  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} deve poter accedere alla sua area riservata, nel caso in cui le credenziali siano corrette. In caso
+  \item \textbf{Precondizione:} l'utente non autenticato ha inviato al server le sue credenziali per tentare il login
+  \item \textbf{Postcondizione:} l'utente non autenticato deve poter accedere alla sua area riservata, nel caso in cui le credenziali siano corrette. In caso
   contrario deve essere visualizzato un messaggio di credenziali sbagliate \emph{[AUC1.3]}.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{utente non autenticato} sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse.
+    \item l'utente non autenticato sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC1.2 (end)
@@ -105,11 +105,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
   \item \textbf{Codice:} AUC1.3
   \item \textbf{Titolo:} visualizzazione credenziali errate
   \item \textbf{Attori primari:} utente non autenticato
-  \item \textbf{Precondizione:} l'\glossario{utente non autenticato} ha inviato al server le sue credenziali per tentare il login, e le credenziali sono state verificate.
-  \item \textbf{Postcondizione:} l'\glossario{utente non autenticato} visualizza un messaggio di credenziali sbagliate.
+  \item \textbf{Precondizione:} l'utente non autenticato ha inviato al server le sue credenziali per tentare il login, e le credenziali sono state verificate.
+  \item \textbf{Postcondizione:} l'utente non autenticato visualizza un messaggio di credenziali sbagliate.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{utente non autenticato} cerca di effettuare il login con delle credenziali sbagliate.
+    \item l'utente non autenticato cerca di effettuare il login con delle credenziali sbagliate.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC1.3 (end)
@@ -125,11 +125,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
   \item \textbf{Codice:} AUC2
   \item \textbf{Titolo:} richiesta owner
   \item \textbf{Attori primari:} utente autenticato
-  \item \textbf{Precondizione:} l'\glossario{utente autenticato} non deve essere un \glossario{owner}.
-  \item \textbf{Postcondizione:} se viene approvata la richiesta, l'\glossario{utente autenticato} diventerà un \glossario{owner}.
+  \item \textbf{Precondizione:} l'utente autenticato non deve essere un \glossario{owner}.
+  \item \textbf{Postcondizione:} se viene approvata la richiesta, l'utente autenticato diventerà un owner.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{utente autenticato} vuole iniziare ad utilizzare \glossario{Stalker} creando una sua \glossario{organizzazione}.
+    \item l'utente autenticato vuole iniziare ad utilizzare \emph{Stalker} creando una sua organizzazione.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC2 (end)
@@ -141,19 +141,19 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
   \item \textbf{Codice:} AUC2.1
   \item \textbf{Titolo:} verifica tipologia utente
   \item \textbf{Attori primari:} utente autenticato
-  \item \textbf{Precondizione:} l'\glossario{utente autenticato} visualizza l'apposito form per inviare la richiesta per diventare \glossario{owner}.
-  \item \textbf{Postcondizione:} il form relativo alla richiesta di \glossario{owner} viene abilitato o disabilitato di conseguenza.
+  \item \textbf{Precondizione:} l'utente autenticato visualizza l'apposito form per inviare la richiesta per diventare owner.
+  \item \textbf{Postcondizione:} il form relativo alla richiesta di owner viene abilitato o disabilitato di conseguenza.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{utente autenticato} può richiedere di diventare un \glossario{owner}, nel caso in cui sia:
+    \item l'utente autenticato può richiedere di diventare un owner, nel caso in cui sia:
     \begin{itemize}
       \item un \glossario{amministratore},
       \item un \glossario{visualizzatore},
       \item un \glossario{gestore} oppure un utente senza alcun privilegio;
     \end{itemize}
-    \item ogni tentativo di richiesta da un già \glossario{owner} viene rifiutato;
-    \item \glossario{root} è già un \glossario{owner};
-    \item l'\glossario{amministratore} potrà accettare la propria richiesta inviata.
+    \item ogni tentativo di richiesta da un già owner viene rifiutato;
+    \item \glossario{root} è già un owner;
+    \item l'amministratore potrà accettare la propria richiesta inviata.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC2.1 (end)
@@ -164,11 +164,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
   \item \textbf{Codice:} AUC2.2
   \item \textbf{Titolo:} invio richiesta owner
   \item \textbf{Attori primari:} utente autenticato
-  \item \textbf{Precondizione:} l'\glossario{utente autenticato} utilizza l'apposito form per inviare la richiesta per diventare \glossario{owner}.
-  \item \textbf{Postcondizione:} viene inviata la richiesta, in attesa di essere approvata da un \glossario{amministratore}.
+  \item \textbf{Precondizione:} l'utente autenticato utilizza l'apposito form per inviare la richiesta per diventare owner.
+  \item \textbf{Postcondizione:} viene inviata la richiesta, in attesa di essere approvata da un amministratore.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{utente autenticato} invia la richiesta per diventare \glossario{owner}.
+    \item l'utente autenticato invia la richiesta per diventare owner.
   \end{enumerate}
   \item \textbf{Inclusioni}:
   \begin{enumerate}
@@ -187,11 +187,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
   \item \textbf{Codice:} AUC2.3
   \item \textbf{Titolo:} richiesta rifiutata
   \item \textbf{Attori primari:} utente autenticato
-  \item \textbf{Precondizione:} l'\glossario{utente autenticato} ha inviato la propria richiesta per diventare \glossario{owner}, l'\glossario{amministratore} ha rifiutato la richiesta.
-  \item \textbf{Postcondizione:} l'\glossario{utente autenticato} non ha ottenuto l'abilitazione per un \glossario{owner}, visualizza un errore.
+  \item \textbf{Precondizione:} l'utente autenticato ha inviato la propria richiesta per diventare owner, l'amministratore ha rifiutato la richiesta.
+  \item \textbf{Postcondizione:} l'utente autenticato non ha ottenuto l'abilitazione per un owner, visualizza un errore.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{amministratore} non ha accettato la richiesta posta dall'\glossario{utente autenticato}.
+    \item l'amministratore non ha accettato la richiesta posta dall'utente autenticato.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC2.2 (end)
@@ -203,10 +203,10 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
   \item \textbf{Titolo:} disconnessione
   \item \textbf{Attori primari:} utente autenticato
   \item \textbf{Precondizione:} il sistema ha reso disponibile la possibilità di effettuare la disconnessione.
-  \item \textbf{Postcondizione:} l'\glossario{utente autenticato} diventerà un \glossario{utente non autenticato}, effettuando la disconnessione.
+  \item \textbf{Postcondizione:} l'utente autenticato diventerà un utente non autenticato, effettuando la disconnessione.
   \item \textbf{Scenario principale:} 
   \begin{enumerate}
-    \item l'\glossario{utente autenticato} vuole effettuare il logout dalla piattaforma;
+    \item l'utente autenticato vuole effettuare il logout dalla piattaforma;
   \end{enumerate}
 \end{itemize}
 % subsub:AUC3 (end)
@@ -214,7 +214,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono l'\glossario{utente
 
 \paragraph{Amministratore}%
 \label{par:amministratore}
-Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super utente} \glossario{amministratore}.
+Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super utente} amministratore.
 
 %inserire UML generale amministratore
 
@@ -225,11 +225,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4
   \item \textbf{Titolo:} gestione richieste
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} il sistema deve rendere disponibili le richieste effettuate dai \glossario{super utenti}.
+  \item \textbf{Precondizione:} il sistema deve rendere disponibili le richieste effettuate dai super utenti.
   \item \textbf{Postcondizione:} vengono approvate o rifiutate le richieste.
   \item \textbf{Scenario principale:} 
   \begin{enumerate}
-    \item l'\glossario{amministratore} gestisce le richieste.
+    \item l'amministratore gestisce le richieste.
     \item le richieste vengono accettate o rifiutate.
   \end{enumerate}
 \end{itemize}
@@ -240,11 +240,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.1
   \item \textbf{Titolo:} gestione richieste owner
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} l'\glossario{utente autenticato} deve aver richiesto di diventare un \glossario{owner}.
-  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'\glossario{utente autenticato} sarà informato.
+  \item \textbf{Precondizione:} l'utente autenticato deve aver richiesto di diventare un owner.
+  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'utente autenticato sarà informato.
   \item \textbf{Scenario principale:} 
   \begin{enumerate}
-    \item l'\glossario{amministratore} gestisce le richieste inviate dagli utenti autenticati di diventare \glossario{owner};
+    \item l'amministratore gestisce le richieste inviate dagli utenti autenticati di diventare owner;
     \item le richieste vengono accettate o rifiutate.
   \end{enumerate}
 \end{itemize}
@@ -256,11 +256,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.1.1
   \item \textbf{Titolo:} accetta richiesta owner
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} l'\glossario{utente autenticato} deve aver richiesto di diventare un \glossario{owner}.
-  \item \textbf{Postcondizione:} viene approvata la richiesta da parte di un \glossario{amministratore}.
+  \item \textbf{Precondizione:} l'utente autenticato deve aver richiesto di diventare un owner.
+  \item \textbf{Postcondizione:} viene approvata la richiesta da parte di un amministratore.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{amministratore} accetta la richiesta inviata dall'\glossario{utente autenticato} di diventare \glossario{owner};
+    \item l'amministratore accetta la richiesta inviata dall'utente autenticato di diventare owner;
   \end{enumerate}
 \end{itemize}
 % subsub:AUC4.1.1 (end)
@@ -271,11 +271,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.1.2
   \item \textbf{Titolo:} rifiuta richiesta owner
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} l'\glossario{utente autenticato} deve aver richiesto di diventare un \glossario{owner}.
-  \item \textbf{Postcondizione:} viene rifiutata la richiesta da parte di un \glossario{amministratore}.
+  \item \textbf{Precondizione:} l'utente autenticato deve aver richiesto di diventare un owner.
+  \item \textbf{Postcondizione:} viene rifiutata la richiesta da parte di un amministratore.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{amministratore} rifiuta la richiesta inviata dall'\glossario{utente autenticato} di diventare \glossario{owner};
+    \item l'amministratore rifiuta la richiesta inviata dall'utente autenticato di diventare owner;
   \end{enumerate}
 \end{itemize}
 % subsub:AUC4.1.2 (end)
@@ -286,12 +286,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.2
   \item \textbf{Titolo:} gestione richiesta creazione organizzazione
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} l'\glossario{owner} deve aver richiesto di creare un organizzazione.
-  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'\glossario{owner} viene informato.
+  \item \textbf{Precondizione:} l'owner deve aver richiesto di creare un organizzazione.
+  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'owner viene informato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item viene richiesta la creazione di una nuova \glossario{organizzazione}, che vuole utilizzare \glossario{Stalker};
-    \item L'\glossario{amministratore} può accettare o rifiutare la richiesta.
+    \item viene richiesta la creazione di una nuova organizzazione, che vuole utilizzare \emph{Stalker};
+    \item L'amministratore può accettare o rifiutare la richiesta.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC4.2 (end)
@@ -302,11 +302,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.2.1
   \item \textbf{Titolo:} accetta richiesta creazione organizzazione
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} l'\glossario{owner} deve aver richiesto di creare un organizzazione.
-  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{owner} viene informato.
+  \item \textbf{Precondizione:} l'owner deve aver richiesto di creare un organizzazione.
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'owner viene informato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item  l'\glossario{amministratore} accetta la richiesta inviata dall'\glossario{owner} di creare una nuova \glossario{organizzazione};
+    \item  l'amministratore accetta la richiesta inviata dall'owner di creare una nuova organizzazione;
   \end{enumerate}
 \end{itemize}
 % subsub:AUC4.2.1 (end)
@@ -317,11 +317,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.2.2
   \item \textbf{Titolo:} rifiuta richiesta creazione organizzazione
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} l'\glossario{owner} deve aver richiesto di creare un organizzazione;
-  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e l'\glossario{owner} viene informato;
+  \item \textbf{Precondizione:} l'owner deve aver richiesto di creare un organizzazione;
+  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e l'owner viene informato;
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item  l'\glossario{amministratore} rifiutala richiesta inviata dall'\glossario{owner} di creare una nuova \glossario{organizzazione};
+    \item  l'amministratore rifiutala richiesta inviata dall'owner di creare una nuova organizzazione;
   \end{enumerate}
 \end{itemize}
 % subsub:AUC4.2.2 (end)
@@ -332,12 +332,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.3
   \item \textbf{Titolo:} gestione richiesta modifica organizzazione
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} un \glossario{gestore} deve aver richiesto di modificare un'organizzazione.
-  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e il \glossario{gestore} viene informato.
+  \item \textbf{Precondizione:} un gestore deve aver richiesto di modificare un'organizzazione.
+  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e il gestore viene informato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item viene richiesta la modifica di una \glossario{organizzazione};
-    \item L'\glossario{amministratore} può accettare o rifiutare la richiesta.
+    \item viene richiesta la modifica di una organizzazione;
+    \item L'amministratore può accettare o rifiutare la richiesta.
   \end{enumerate}
 \end{itemize}
 
@@ -347,11 +347,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.3.1
   \item \textbf{Titolo:} accetta richiesta modifica organizzazione
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} il \glossario{gestore} deve aver richiesto di modificare un'organizzazione.
-  \item \textbf{Postcondizione:} viene approvata la richiesta, e il \glossario{gestore} viene informato.
+  \item \textbf{Precondizione:} il gestore deve aver richiesto di modificare un'organizzazione.
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e il gestore viene informato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item  l'\glossario{amministratore} accetta la richiesta inviata dal \glossario{gestore} di modificare un'\glossario{organizzazione};
+    \item  l'amministratore accetta la richiesta inviata dal gestore di modificare un'organizzazione;
   \end{enumerate}
 \end{itemize}
 % subsub:AUC4.3.1 (end)
@@ -362,11 +362,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.3.2
   \item \textbf{Titolo:} rifiuta richiesta modifica organizzazione
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} il \glossario{gestore} deve aver richiesto di modificare un'organizzazione.
-  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e il \glossario{gestore} viene informato.
+  \item \textbf{Precondizione:} il gestore deve aver richiesto di modificare un'organizzazione.
+  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e il gestore viene informato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{amministratore} rifiuta la richiesta inviata dal \glossario{gestore} di modificareun'\glossario{organizzazione};
+    \item l'amministratore rifiuta la richiesta inviata dal gestore di modificareun'organizzazione;
   \end{enumerate}
 \end{itemize}
 % subsub:AUC4.3.2 (end)
@@ -378,12 +378,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.4
   \item \textbf{Titolo:} gestione richiesta aggiunta luogo
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} un \glossario{gestore} deve aver richiesto di aggiungere un luogo.
-  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e il \glossario{gestore} viene informato.
+  \item \textbf{Precondizione:} un gestore deve aver richiesto di aggiungere un luogo.
+  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e il gestore viene informato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
     \item viene richiesto di aggiungere un luogo;
-    \item L'\glossario{amministratore} può accettare o rifiutare la richiesta.
+    \item L'amministratore può accettare o rifiutare la richiesta.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC4.4 (end)
@@ -394,11 +394,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.4.1
   \item \textbf{Titolo:} accetta richiesta aggiungi luogo
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} il \glossario{gestore} deve aver richiesto di aggiungere un luogo.
-  \item \textbf{Postcondizione:} viene approvata la richiesta, e il \glossario{gestore} viene informato.
+  \item \textbf{Precondizione:} il gestore deve aver richiesto di aggiungere un luogo.
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e il gestore viene informato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item  l'\glossario{amministratore} accetta la richiesta inviata dal \glossario{gestore} di aggiungere un luogo.
+    \item  l'amministratore accetta la richiesta inviata dal gestore di aggiungere un luogo.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC4.4.1 (end)
@@ -409,11 +409,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.4.2
   \item \textbf{Titolo:} rifiuta richiesta aggiungi luogo
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} il \glossario{gestore} deve aver richiesto di aggiungere un luogo.
-  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e il \glossario{gestore} viene informato.
+  \item \textbf{Precondizione:} il gestore deve aver richiesto di aggiungere un luogo.
+  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e il gestore viene informato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{amministratore} rifiuta la richiesta inviata dal \glossario{gestore} di aggiungere un luogo.
+    \item l'amministratore rifiuta la richiesta inviata dal gestore di aggiungere un luogo.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC4.4.2 (end)
@@ -424,12 +424,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.5
   \item \textbf{Titolo:} gestione richiesta modifica luogo
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} un \glossario{gestore} deve aver richiesto di modificare un luogo.
-  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e il \glossario{gestore} viene informato.
+  \item \textbf{Precondizione:} un gestore deve aver richiesto di modificare un luogo.
+  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e il gestore viene informato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
     \item viene richiesto di modificare un luogo;
-    \item L'\glossario{amministratore} può accettare o rifiutare la richiesta.
+    \item L'amministratore può accettare o rifiutare la richiesta.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC4.5 (end)
@@ -440,11 +440,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.5.1
   \item \textbf{Titolo:} accetta richiesta modifica luogo
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} il \glossario{gestore} deve aver richiesto di modificare un luogo.
-  \item \textbf{Postcondizione:} viene approvata la richiesta, e il \glossario{gestore} viene informato.
+  \item \textbf{Precondizione:} il gestore deve aver richiesto di modificare un luogo.
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e il gestore viene informato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item  l'\glossario{amministratore} accetta la richiesta inviata dal \glossario{gestore} di modificare un luogo.
+    \item  l'amministratore accetta la richiesta inviata dal gestore di modificare un luogo.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC4.5.1 (end)
@@ -455,11 +455,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.5.2
   \item \textbf{Titolo:} rifiuta richiesta modifica luogo
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} il \glossario{gestore} deve aver richiesto di modificare un luogo.
-  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e il \glossario{gestore} viene informato.
+  \item \textbf{Precondizione:} il gestore deve aver richiesto di modificare un luogo.
+  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e il gestore viene informato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{amministratore} rifiuta la richiesta inviata dal \glossario{gestore} di modificare un luogo.
+    \item l'amministratore rifiuta la richiesta inviata dal gestore di modificare un luogo.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC4.5.2 (end)
@@ -470,11 +470,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.6
   \item \textbf{Titolo:} gestione richiesta trasferimento di proprietà organizzazione
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} l'\glossario{organizzazione} deve essere già stata creata dal sistema, e deve essere stata fatta la richiesta trasferimento di proprietà.
-  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'\glossario{owner} viene informato.
+  \item \textbf{Precondizione:} l'organizzazione deve essere già stata creata dal sistema, e deve essere stata fatta la richiesta trasferimento di proprietà.
+  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'owner viene informato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{amministratore} approva o rifiuta la richiesta di un trasferimento di proprietà di un'\glossario{organizzazione}.
+    \item l'amministratore approva o rifiuta la richiesta di un trasferimento di proprietà di un'organizzazione.
   \end{enumerate}
 \end{itemize}
 
@@ -485,11 +485,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.6.1
   \item \textbf{Titolo:} accetta richiesta trasferimento di proprietà organizzazione
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} l'\glossario{owner} deve aver fatto richiesta di trasferimento di proprietà di organizzazione.
-  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'\glossario{owner} viene informato.
+  \item \textbf{Precondizione:} l'owner deve aver fatto richiesta di trasferimento di proprietà di organizzazione.
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'owner viene informato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l'\glossario{amministratore} approva la richiesta di un trasferimento di proprietà di un'\glossario{organizzazione}.
+    \item l'amministratore approva la richiesta di un trasferimento di proprietà di un'organizzazione.
   \end{enumerate}
 \end{itemize}  
 % subsub:AUC4.6.1 (end)
@@ -500,11 +500,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC4.6.2
   \item \textbf{Titolo:} rifiuta richiesta trasferimento di proprietà organizzazione
   \item \textbf{Attori primari:} amministratore
-  \item \textbf{Precondizione:} l'\glossario{owner} deve aver fatto richiesta di trasferimento di proprietà di organizzazione.
-  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e l'\glossario{owner} viene informato.
+  \item \textbf{Precondizione:} l'owner deve aver fatto richiesta di trasferimento di proprietà di organizzazione.
+  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e l'owner viene informato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item  l'\glossario{amministratore} rifiuta la richiesta di un trasferimento di proprietà di un'\glossario{organizzazione}.
+    \item  l'amministratore rifiuta la richiesta di un trasferimento di proprietà di un'organizzazione.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC4.6.2 (end)
@@ -512,7 +512,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 % par:Amministratore (end)
 
 \paragraph{Root}
-Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super utente} \glossario{root}.
+Di seguito sono riportati tutti i casi d'uso che coinvolgono il super utente root.
 
 \subsubsection{AUC5 - Creazione amministratore}%
 \label{subsub:AUC5}
@@ -520,11 +520,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC5
   \item \textbf{Titolo:} creazione amministratore
   \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} devono essere specificate le credenziali del nuovo \glossario{amministratore}, che devono essere univoche.
-  \item \textbf{Postcondizione:} l'\glossario{amministratore} viene creato.
+  \item \textbf{Precondizione:} devono essere specificate le credenziali del nuovo amministratore, che devono essere univoche.
+  \item \textbf{Postcondizione:} l'amministratore viene creato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item sorge la necessità di creare un nuovo \glossario{amministratore} per gestire \glossario{Stalker}.
+    \item sorge la necessità di creare un nuovo amministratore per gestire \emph{Stalker}.
   \end{enumerate}
 \end{itemize}
 
@@ -535,11 +535,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC5.1
   \item \textbf{Titolo:} inserimento credenziali
   \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di creazione nuovo \glossario{amministratore}.
-  \item \textbf{Postcondizione:} \glossario{Root} ha inserito le credenziali dell'\glossario{amministratore} che vuole creare.
+  \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di creazione nuovo amministratore.
+  \item \textbf{Postcondizione:} root ha inserito le credenziali dell'amministratore che vuole creare.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item \glossario{Root} inserisce le credenziali dell'\glossario{amministratore} che vuole creare.
+    \item \glossario{Root} inserisce le credenziali dell'amministratore che vuole creare.
   \end{enumerate}
   \item \textbf{Inclusioni}:
   \begin{enumerate}
@@ -559,10 +559,10 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Titolo:} inserimento nuova e-mail
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento dell'e-mail.
-  \item \textbf{Postcondizione:} \glossario{Root} ha inserito l'e-mail dell'\glossario{amministratore} che vuole creare.
+  \item \textbf{Postcondizione:} root ha inserito l'e-mail dell'amministratore che vuole creare.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item \glossario{Root} inserisce l'e-mail dell'\glossario{amministratore} che vuole creare.
+    \item \glossario{Root} inserisce l'e-mail dell'amministratore che vuole creare.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC5.1.1 (end)
@@ -574,10 +574,10 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Titolo:} inserimento nuova password
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento della password.
-  \item \textbf{Postcondizione:} \glossario{Root} ha inserito la password dell'\glossario{amministratore} che vuole creare.
+  \item \textbf{Postcondizione:} root ha inserito la password dell'amministratore che vuole creare.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item \glossario{Root} inserisce la password dell'\glossario{amministratore} che vuole creare.
+    \item \glossario{Root} inserisce la password dell'amministratore che vuole creare.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC5.1.2 (end)
@@ -588,10 +588,10 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Titolo:} conferma password
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento del campo conferma password.
-  \item \textbf{Postcondizione:} \glossario{Root} ha inserito la password nel campo di conferma dell'\glossario{amministratore} che vuole creare.
+  \item \textbf{Postcondizione:} root ha inserito la password nel campo di conferma dell'amministratore che vuole creare.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item \glossario{Root} inserisce la password nel campo di conferma dell'\glossario{amministratore} che vuole creare.
+    \item \glossario{Root} inserisce la password nel campo di conferma dell'amministratore che vuole creare.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC5.1.3 (end)
@@ -602,8 +602,8 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC5.2
   \item \textbf{Titolo:} verifica credenziali
   \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} \glossario{Root} invia richiesta di creazione nuovo amministratore.
-  \item \textbf{Postcondizione:} il nuovo \glossario{amministratore} viene creato solo se i requisiti sono stati rispettati.
+  \item \textbf{Precondizione:} root invia richiesta di creazione nuovo amministratore.
+  \item \textbf{Postcondizione:} il nuovo amministratore viene creato solo se i requisiti sono stati rispettati.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
     \item il sistema verifica se le credenziali immesse rispettano i requisiti:
@@ -623,10 +623,10 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Titolo:} visualizza creazione fallita
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} la verifica delle credenziali è fallita.
-  \item \textbf{Postcondizione:} \glossario{root} visualizza un messaggio di creazione fallita.
+  \item \textbf{Postcondizione:} root visualizza un messaggio di creazione fallita.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item \glossario{root} cerca di creare un nuovo \glossario{amministratore} che non rispetta i requisiti.
+    \item root cerca di creare un nuovo amministratore che non rispetta i requisiti.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC5.3 (end)
@@ -640,11 +640,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC6
   \item \textbf{Titolo:} gestione organizzazione
   \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di gestione \glossario{organizzazione}.
-  \item \textbf{Postcondizione:} vengono gestite una o più \glossario{organizzazioni}.
+  \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di gestione organizzazione.
+  \item \textbf{Postcondizione:} vengono gestite una o più organizzazioni.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item sorge la necessità di effettuare operazioni su una o più \glossario{organizzazioni};
+    \item sorge la necessità di effettuare operazioni su una o più organizzazioni;
   \end{enumerate}
 \end{itemize}
 
@@ -652,10 +652,10 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \subsubsection{AUC6.1 - Creazione organizzazione}%
 \label{subsub:AUC6.1}
 \begin{itemize}
-  \item \textbf{Attori primari:} \glossario{root};
-  \item \textbf{Precondizione:} l'\glossario{organizzazione} non deve esistere nella lista di \glossario{Stalker}, deve essere specificato il suo nome.
-  \item \textbf{Postcondizione:} l'\glossario{organizzazione} viene creata.
-  \item \textbf{Scenario principale:} sorge la necessità di creare un'\glossario{organizzazione}, senza essere effettivamente richiesta;
+  \item \textbf{Attori primari:} root;
+  \item \textbf{Precondizione:} l'organizzazione non deve esistere nella lista di \emph{Stalker}, deve essere specificato il suo nome.
+  \item \textbf{Postcondizione:} l'organizzazione viene creata.
+  \item \textbf{Scenario principale:} sorge la necessità di creare un'organizzazione, senza essere effettivamente richiesta;
 \end{itemize}
 
   \subsubsection{AUC6.1.1 - Inserisci nome organizzazione}%
@@ -668,7 +668,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
     \item \textbf{Postcondizione:} il nome viene opportunamente inserito.
     \item \textbf{Scenario principale:} 
     \begin{enumerate}
-      \item si vuole inserire il nome di un'\glossario{organizzazione}.
+      \item si vuole inserire il nome di un'organizzazione.
     \end{enumerate}
     
   \end{itemize}
@@ -684,7 +684,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
     \item \textbf{Postcondizione:} l'indirizzo viene opportunamente inserito.
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-      \item si vuole inserire l'indirizzo di un'\glossario{organizzazione}.
+      \item si vuole inserire l'indirizzo di un'organizzazione.
     \end{enumerate}
   \end{itemize}
   % subsub:AUC6.1.2 (end)
@@ -699,7 +699,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
     \item \textbf{Postcondizione:} la descrizione viene opportunamente inserito.
     \item \textbf{Scenario principale:}
     \begin{enumerate}
-      \item si vuole inserire la descrizione di un'\glossario{organizzazione}.
+      \item si vuole inserire la descrizione di un'organizzazione.
     \end{enumerate}
   \end{itemize}
   % subsub:AUC6.1.3 (end)
@@ -712,11 +712,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC6.2
   \item \textbf{Titolo:} eliminazione organizzazione
   \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} deve essere stata selezionata l'\glossario{organizzazione} da eliminare, presente nella lista di \glossario{Stalker}.
-  \item \textbf{Postcondizione:} l'\glossario{organizzazione} viene eliminata.
+  \item \textbf{Precondizione:} deve essere stata selezionata l'organizzazione da eliminare, presente nella lista di \emph{Stalker}.
+  \item \textbf{Postcondizione:} l'organizzazione viene eliminata.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item sorge la necessità di eliminare un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
+    \item sorge la necessità di eliminare un'organizzazione, senza interagire con il suo owner;
   \end{enumerate}
   \item \textbf{Inclusioni:}
   \begin{enumerate}
@@ -732,11 +732,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC6.3
   \item \textbf{Titolo:} modifica organizzazione
   \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} deve essere stata selezionata l'\glossario{organizzazione} da modificare, presente nella lista di \glossario{Stalker}.
-  \item \textbf{Postcondizione:} l'\glossario{organizzazione} viene modificata.
+  \item \textbf{Precondizione:} deve essere stata selezionata l'organizzazione da modificare, presente nella lista di \emph{Stalker}.
+  \item \textbf{Postcondizione:} l'organizzazione viene modificata.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item sorge la necessità di modificare un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
+    \item sorge la necessità di modificare un'organizzazione, senza interagire con il suo owner;
   \end{enumerate}
   \item \textbf{Inclusioni:}
   \begin{enumerate}
@@ -755,7 +755,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Postcondizione:} il nome viene opportunamente modificato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item si vuole modificare il nome di un'\glossario{organizzazione}.
+    \item si vuole modificare il nome di un'organizzazione.
   \end{enumerate}
 
 \end{itemize}
@@ -771,7 +771,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Postcondizione:} l'indirizzo viene opportunamente modificato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item si vuole modificare l'indirizzo di un'\glossario{organizzazione}.
+    \item si vuole modificare l'indirizzo di un'organizzazione.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC6.3.2 (end)
@@ -786,7 +786,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Postcondizione:} la descrizione viene opportunamente modificata.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item si vuole modificare la descrizione di un'\glossario{organizzazione}.
+    \item si vuole modificare la descrizione di un'organizzazione.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC6.3.3 (end)
@@ -797,8 +797,8 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC6.3.4
   \item \textbf{Titolo:} gestione luoghi
   \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di gestione dei luoghi di un'\glossario{organizzazione}.
-  \item \textbf{Postcondizione:} vengono gestiti i luoghi di un'\glossario{organizzazione}.
+  \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di gestione dei luoghi di un'organizzazione.
+  \item \textbf{Postcondizione:} vengono gestiti i luoghi di un'organizzazione.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
     \item sorge la necessità di effettuare operazioni sul luogo di un'organizzazione, e viene offerta la possibilità di selezionarlo;
@@ -811,12 +811,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC6.3.4.1
   \item \textbf{Titolo:} aggiungi luogo
-  \item \textbf{Attori primari:} \glossario{root}
-  \item \textbf{Precondizione:} il \glossario{luogo} dell'\glossario{organizzazione} deve non esistere.
-  \item \textbf{Postcondizione:} il \glossario{luogo} dell'\glossario{organizzazione} viene aggiunto.
+  \item \textbf{Attori primari:} root
+  \item \textbf{Precondizione:} il \glossario{luogo} dell'organizzazione deve non esistere.
+  \item \textbf{Postcondizione:} il luogo dell'organizzazione viene aggiunto.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item sorge la necessità di aggiungere un \glossario{luogo} ad un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
+    \item sorge la necessità di aggiungere un luogo ad un'organizzazione, senza interagire con il suo owner;
   \end{enumerate}
 \end{itemize}
 
@@ -825,7 +825,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC6.3.4.1.1
   \item \textbf{Titolo:} inserisci coordinate geografiche
-  \item \textbf{Attori primari:} \glossario{root}
+  \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema deve fornire i campi relativi alle coordinate geografiche.
   \item \textbf{Postcondizione:} i campi relativi alle coordinate geografiche sono stati riempiti.
   \item \textbf{Scenario principale:}
@@ -841,12 +841,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC6.3.4.2
   \item \textbf{Titolo:} eliminazione luogo
-  \item \textbf{Attori primari:} \glossario{root}
-  \item \textbf{Precondizione:} il \glossario{luogo} dell'\glossario{organizzazione} deve essere presente in \glossario{Stalker}.
-  \item \textbf{Postcondizione:} il \glossario{luogo} dell'\glossario{organizzazione} viene eliminato.
+  \item \textbf{Attori primari:} root
+  \item \textbf{Precondizione:} il luogo dell'organizzazione deve essere presente in \emph{Stalker}.
+  \item \textbf{Postcondizione:} il luogo dell'organizzazione viene eliminato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item sorge la necessità di eliminare un \glossario{luogo} di un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
+    \item sorge la necessità di eliminare un luogo di un'organizzazione, senza interagire con il suo owner;
   \end{enumerate}
   \item \textbf{Inclusioni:}
   \begin{enumerate}
@@ -860,12 +860,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC6.3.4.3
   \item \textbf{Titolo:} modifica luogo
-  \item \textbf{Attori primari:} \glossario{root};
-  \item \textbf{Precondizione:} il \glossario{luogo} dell'\glossario{organizzazione} deve essere presente in \glossario{Stalker};
-  \item \textbf{Postcondizione:} il \glossario{luogo} dell'\glossario{organizzazione} viene modificato.
+  \item \textbf{Attori primari:} root;
+  \item \textbf{Precondizione:} il luogo dell'organizzazione deve essere presente in \emph{Stalker};
+  \item \textbf{Postcondizione:} il luogo dell'organizzazione viene modificato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item sorge la necessità di modificare un \glossario{luogo} di un'\glossario{organizzazione}, senza interagire con il suo \glossario{owner};
+    \item sorge la necessità di modificare un luogo di un'organizzazione, senza interagire con il suo owner;
   \end{enumerate}
   \item \textbf{Inclusioni:}
   \begin{enumerate}
@@ -879,7 +879,7 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC6.3.4.3.1
   \item \textbf{Titolo:} modifica coordinate geografiche
-  \item \textbf{Attori primari:} \glossario{root}
+  \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema deve fornire i campi relativi alle coordinate geografiche.
   \item \textbf{Postcondizione:} i campi relativi alle coordinate geografiche sono stati modificati.
   \item \textbf{Scenario principale:}
@@ -896,11 +896,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC6.3.4.4
   \item \textbf{Titolo:} seleziona luogo
   \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} il sistema deve mostrare la lista dei luoghi all'interno di una \glossario{organizzazione}.
+  \item \textbf{Precondizione:} il sistema deve mostrare la lista dei luoghi all'interno di una organizzazione.
   \item \textbf{Postcondizione:} viene scelto il luogo desiderato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item sorge la necessità di effettuare operazioni sul luogo di un'\glossario{organizzazione}, e viene offerta la possibilità di selezionarlo;
+    \item sorge la necessità di effettuare operazioni sul luogo di un'organizzazione, e viene offerta la possibilità di selezionarlo;
   \end{enumerate}
 \end{itemize}
 % subsub:AUC6.3.4.4 (end)
@@ -912,8 +912,8 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
   \item \textbf{Codice:} AUC6.4
   \item \textbf{Titolo:} seleziona organizzazione
   \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} il sistema deve mostrare la lista di organizzazioni in \glossario{Stalker}.
-  \item \textbf{Postcondizione:} viene scelta l'\glossario{organizzazione} desiderata.
+  \item \textbf{Precondizione:} il sistema deve mostrare la lista di organizzazioni in \emph{Stalker}.
+  \item \textbf{Postcondizione:} viene scelta l'organizzazione desiderata.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
     \item sorge la necessità di effettuare operazioni su un'organizzazione, e viene offerta la possibilità di selezionarla;
@@ -927,12 +927,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC7
   \item \textbf{Titolo:} eliminazione account
-  \item \textbf{Attori primari:} \glossario{root};
-  \item \textbf{Precondizione:} deve essere stato selezionato l'\glossario{account} da eliminare, che deve esistere in \glossario{Stalker};
-  \item \textbf{Postcondizione:} l'\glossario{account} selezionato è stato eliminato.
+  \item \textbf{Attori primari:} root;
+  \item \textbf{Precondizione:} deve essere stato selezionato l'\glossario{account} da eliminare, che deve esistere in \emph{Stalker};
+  \item \textbf{Postcondizione:} l'account selezionato è stato eliminato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item sorge la necessità di eliminare un \glossario{account} per sconosciuti motivi;
+    \item sorge la necessità di eliminare un account per sconosciuti motivi;
   \end{enumerate}
 \end{itemize}
 
@@ -942,9 +942,9 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC7.1
   \item \textbf{Titolo:} seleziona account
-  \item \textbf{Attori primari:} \glossario{root};
-  \item \textbf{Precondizione:} il sistema deve rendere disponibile la lista degli account registrati a \glossario{Stalker}.
-  \item \textbf{Postcondizione:} l'\glossario{account} è stato selezionato.
+  \item \textbf{Attori primari:} root;
+  \item \textbf{Precondizione:} il sistema deve rendere disponibile la lista degli account registrati a \emph{Stalker}.
+  \item \textbf{Postcondizione:} l'account è stato selezionato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
     \item \glossario{Root} seleziona l'account da eliminare;
@@ -955,19 +955,19 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 % par:Root (end)
 
 \paragraph{Visualizzatore}
-Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super utente} \glossario{Visualizzatore}.
+Di seguito sono riportati tutti i casi d'uso che coinvolgono il super utente visualizzatore.
 
 \subsubsection{AUC8 - Query sull'organizzazione}%
 \label{subsub:AUC8}
 \begin{itemize}
   \item \textbf{Codice:} AUC8
   \item \textbf{Titolo:} query sull'organizzazione
-  \item \textbf{Attori primari:} \glossario{visualizzatore};
+  \item \textbf{Attori primari:} visualizzatore;
   \item \textbf{Precondizione:} il sistema risponde correttamente alle interrogazioni;
-  \item \textbf{Postcondizione:} il \glossario{visualizzatore} ottiene le informazioni di cui ha bisogno.
+  \item \textbf{Postcondizione:} il visualizzatore ottiene le informazioni di cui ha bisogno.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item il \glossario{visualizzatore} vuole avere delle informazioni riguardanti l'\glossario{organizzazione} su cui opera;
+    \item il visualizzatore vuole avere delle informazioni riguardanti l'organizzazione su cui opera;
   \end{enumerate}
 \end{itemize}
 % subsub:AUC8 (end)
@@ -977,12 +977,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC9
   \item \textbf{Titolo:} query sul dipendente
-  \item \textbf{Attori primari:} \glossario{visualizzatore};
+  \item \textbf{Attori primari:} visualizzatore;
   \item \textbf{Precondizione:} il sistema risponde correttamente alle interrogazioni;
-  \item \textbf{Postcondizione:} il \glossario{visualizzatore} ottiene le informazioni di cui ha bisogno.
+  \item \textbf{Postcondizione:} il visualizzatore ottiene le informazioni di cui ha bisogno.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item il \glossario{visualizzatore} vuole avere delle informazioni riguardanti il\glossario{dipendente} dell'\glossario{organizzazione} su cui opera;
+    \item il visualizzatore vuole avere delle informazioni riguardanti il dipendente dell'organizzazione su cui opera;
   \end{enumerate}
   \item \textbf{Inclusioni:}
   \begin{enumerate}
@@ -993,19 +993,19 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 % par:Visualizzatore (end)
 
 \paragraph{Gestore}
-Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super utente} \glossario{Gestore}.
+Di seguito sono riportati tutti i casi d'uso che coinvolgono il super utente gestore.
 
 \subsubsection{AUC10 - Richiesta su luoghi}%
 \label{subsub:AUC10}
 \begin{itemize}
   \item \textbf{Codice:} AUC10
   \item \textbf{Titolo:} richiesta su luoghi
-  \item \textbf{Attori primari:} \glossario{gestore}
+  \item \textbf{Attori primari:} gestore
   \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina delle richieste sui luoghi.
-  \item \textbf{Postcondizione:} la richiesta di aggiunta di un nuovo \glossario{luogo} viene posta.
+  \item \textbf{Postcondizione:} la richiesta di aggiunta di un nuovo luogo viene posta.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item il \glossario{gestore} vuole effettuare richieste sui \glossario{luoghi} dell'\glossario{organizzazione} su cui opera;
+    \item il gestore vuole effettuare richieste sui luoghi dell'organizzazione su cui opera;
   \end{enumerate}
 \end{itemize}
 
@@ -1014,12 +1014,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC10.1
   \item \textbf{Titolo:} richiesta aggiunta luogo
-  \item \textbf{Attori primari:} \glossario{gestore};
-  \item \textbf{Precondizione:} il \glossario{luogo} da aggiungere non deve già esistere;
-  \item \textbf{Postcondizione:} la richiesta di aggiunta di un nuovo \glossario{luogo} viene posta.
+  \item \textbf{Attori primari:} gestore;
+  \item \textbf{Precondizione:} il luogo da aggiungere non deve già esistere;
+  \item \textbf{Postcondizione:} la richiesta di aggiunta di un nuovo luogo viene posta.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item il \glossario{gestore} vuole aggiungere un nuovo \glossario{luogo} all'\glossario{organizzazione} su cui opera;
+    \item il gestore vuole aggiungere un nuovo luogo all'organizzazione su cui opera;
   \end{enumerate}
   \item \textbf{Inclusioni:}
   \begin{enumerate}
@@ -1033,12 +1033,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC10.2
   \item \textbf{Titolo:} richiesta rimozione luogo
-  \item \textbf{Attori primari:} \glossario{gestore}
-  \item \textbf{Precondizione:} il \glossario{luogo} da eliminare deve esistere.
-  \item \textbf{Postcondizione:} la richiesta di eliminazione di un \glossario{luogo} viene posta.
+  \item \textbf{Attori primari:} gestore
+  \item \textbf{Precondizione:} il luogo da eliminare deve esistere.
+  \item \textbf{Postcondizione:} la richiesta di eliminazione di un luogo viene posta.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item il \glossario{gestore} vuole eliminare un \glossario{luogo} all'\glossario{organizzazione} su cui opera;
+    \item il gestore vuole eliminare un luogo all'organizzazione su cui opera;
   \end{enumerate}
 \end{itemize}
 % subsub:AUC10.2 (end)
@@ -1048,12 +1048,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC10.3
   \item \textbf{Titolo:} richiesta modifica luogo
-  \item \textbf{Attori primari:} \glossario{gestore}
-  \item \textbf{Precondizione:} il \glossario{luogo} da modificare deve esistere.
-  \item \textbf{Postcondizione:} la richiesta di modifica di un \glossario{luogo} viene posta.
+  \item \textbf{Attori primari:} gestore
+  \item \textbf{Precondizione:} il luogo da modificare deve esistere.
+  \item \textbf{Postcondizione:} la richiesta di modifica di un luogo viene posta.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item il \glossario{gestore} vuole modificare un \glossario{luogo} dell'\glossario{organizzazione} su cui opera;
+    \item il gestore vuole modificare un luogo dell'organizzazione su cui opera;
   \end{enumerate}
   \item \textbf{Inclusioni:}
   \begin{enumerate}
@@ -1068,12 +1068,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC10.4
   \item \textbf{Titolo:} richiesta modifica organizzazione
-  \item \textbf{Attori primari:} \glossario{gestore}
+  \item \textbf{Attori primari:} gestore
   \item \textbf{Precondizione:} i parametri devono essere effettivamente modificati.
   \item \textbf{Postcondizione:} la richiesta di modifica viene posta.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item il \glossario{gestore} vuole modificare i parametri dell'\glossario{organizzazione} su cui opera;
+    \item il gestore vuole modificare i parametri dell'organizzazione su cui opera;
   \end{enumerate}
   \item \textbf{Inclusioni:}
   \begin{enumerate}
@@ -1086,19 +1086,19 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 % par:Gestore (end)
 
 \paragraph{Owner}
-Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super utente} \glossario{Owner}.
+Di seguito sono riportati tutti i casi d'uso che coinvolgono il super utente owner.
 
 \subsubsection{AUC11 - Richiesta creazione organizzazione}%
 \label{subsub:AUC11}
 \begin{itemize}
   \item \textbf{Codice:} AUC11
   \item \textbf{Titolo:} richiesta creazione organizzazione
-  \item \textbf{Attori primari:} \glossario{owner}
-  \item \textbf{Precondizione:} l' \glossario{organizzazione} non deve già esistere.
-  \item \textbf{Postcondizione:} la richiesta di creare una nuova \glossario{organizzazione} è stata posta.
+  \item \textbf{Attori primari:} owner
+  \item \textbf{Precondizione:} l' organizzazione non deve già esistere.
+  \item \textbf{Postcondizione:} la richiesta di creare una nuova organizzazione è stata posta.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l' \glossario{owner} vuole creare una nuova \glossario{organizzazione}.
+    \item l' owner vuole creare una nuova organizzazione.
   \end{enumerate}
   \item \textbf{Inclusioni:}
   \begin{enumerate}
@@ -1114,12 +1114,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC12
   \item \textbf{Titolo:} richiesta cedimento proprietà organizzazione
-  \item \textbf{Attori primari:} \glossario{owner}
-  \item \textbf{Precondizione:} il futuro \glossario{owner} deve esistere.
-  \item \textbf{Postcondizione:} la richiesta di cedere l'\glossario{organizzazione} è stata posta.
+  \item \textbf{Attori primari:} owner
+  \item \textbf{Precondizione:} il futuro owner deve esistere.
+  \item \textbf{Postcondizione:} la richiesta di cedere l'organizzazione è stata posta.
   \item \textbf{Scenario principale:} 
   \begin{enumerate}
-    \item l' \glossario{owner} vuole cedere l'\glossario{organizzazione} ad un'altro \glossario{owner};
+    \item l' owner vuole cedere l'organizzazione ad un'altro owner;
   \end{enumerate}
 \end{itemize}
 
@@ -1129,12 +1129,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC12.1
   \item \textbf{Titolo:} Inserimento e-mail nuovo owner
-  \item \textbf{Attori primari:} \glossario{owner}
+  \item \textbf{Attori primari:} owner
   \item \textbf{Precondizione:} il sistema deve rendere disponibile il campo per l'inserimento del nuovo owner.
   \item \textbf{Postcondizione:} il campo relativo al nuovo owner viene riempito.
   \item \textbf{Scenario principale:} 
   \begin{enumerate}
-    \item l' \glossario{owner} inserisce l'e-mail del nuovo owner;
+    \item l' owner inserisce l'e-mail del nuovo owner;
   \end{enumerate}
 \end{itemize}
 % subsub:AUC12.1 (end)
@@ -1144,11 +1144,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \subsubsection{AUC13 - Nomina visualizzatore}%
 \label{subsub:AUC13}
 \begin{itemize}
-  \item \textbf{Attori primari:} \glossario{owner};
-  \item \textbf{Descrizione:} l' \glossario{owner} nomina un \glossario{visualizzatore} per la sua \glossario{organizzazione};
-  \item \textbf{Scenario principale:} l' \glossario{owner} vuole aggiungere un \glossario{visualizzatore} alla sua \glossario{organizzazione};
-  \item \textbf{Precondizione:} il nuovo \glossario{super utente} non deve già esistere come \glossario{visualizzatore};
-  \item \textbf{Postcondizione:} il nuovo \glossario{visualizzatore} è stato aggiunto.
+  \item \textbf{Attori primari:} owner;
+  \item \textbf{Descrizione:} l' owner nomina un visualizzatore per la sua organizzazione;
+  \item \textbf{Scenario principale:} l' owner vuole aggiungere un visualizzatore alla sua organizzazione;
+  \item \textbf{Precondizione:} il nuovo super utente non deve già esistere come visualizzatore;
+  \item \textbf{Postcondizione:} il nuovo visualizzatore è stato aggiunto.
 \end{itemize}
 
 
@@ -1157,12 +1157,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC13.1
   \item \textbf{Titolo:} Inserimento e-mail visualizzatore
-  \item \textbf{Attori primari:} \glossario{owner}
+  \item \textbf{Attori primari:} owner
   \item \textbf{Precondizione:} il sistema deve rendere disponibile il campo per l'inserimento del nuovo visualizzatore.
   \item \textbf{Postcondizione:} il campo relativo al visualizzatore viene riempito.
   \item \textbf{Scenario principale:} 
   \begin{enumerate}
-    \item l' \glossario{owner} inserisce l'e-mail del nuovo visualizzatore;
+    \item l' owner inserisce l'e-mail del nuovo visualizzatore;
   \end{enumerate}
 \end{itemize}
 % subsub:AUC13.1 (end)
@@ -1171,11 +1171,11 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \subsubsection{AUC14 - Nomina gestore}%
 \label{subsub:AUC14}
 \begin{itemize}
-  \item \textbf{Attori primari:} \glossario{owner};
-  \item \textbf{Descrizione:} l' \glossario{owner} nomina un \glossario{gestore} per la sua \glossario{organizzazione};
-  \item \textbf{Scenario principale:} l' \glossario{owner} vuole aggiungere un \glossario{gestore} alla sua \glossario{organizzazione};
-  \item \textbf{Precondizione:} il nuovo \glossario{super utente} non deve già esistere come \glossario{gestore};
-  \item \textbf{Postcondizione:} il nuovo \glossario{gestore} è stato aggiunto.
+  \item \textbf{Attori primari:} owner;
+  \item \textbf{Descrizione:} l' owner nomina un gestore per la sua organizzazione;
+  \item \textbf{Scenario principale:} l' owner vuole aggiungere un gestore alla sua organizzazione;
+  \item \textbf{Precondizione:} il nuovo super utente non deve già esistere come gestore;
+  \item \textbf{Postcondizione:} il nuovo gestore è stato aggiunto.
 \end{itemize}
 
 \subsubsection{AUC14.1 - Inserimento e-mail gestore}%
@@ -1183,12 +1183,12 @@ Di seguito sono riportati tutti i casi d'uso che coinvolgono il \glossario{super
 \begin{itemize}
   \item \textbf{Codice:} AUC14.1
   \item \textbf{Titolo:} Inserimento e-mail gestore
-  \item \textbf{Attori primari:} \glossario{owner}
+  \item \textbf{Attori primari:} owner
   \item \textbf{Precondizione:} il sistema deve rendere disponibile il campo per l'inserimento del nuovo gestore.
   \item \textbf{Postcondizione:} il campo relativo al gestore viene riempito.
   \item \textbf{Scenario principale:} 
   \begin{enumerate}
-    \item l' \glossario{owner} inserisce l'e-mail del nuovo gestore;
+    \item l' owner inserisce l'e-mail del nuovo gestore;
   \end{enumerate}
 \end{itemize}
 % subsub:AUC14.1 (end)
