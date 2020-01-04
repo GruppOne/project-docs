@@ -8,7 +8,7 @@
 
 \begin{itemize}
   \item \textbf{Codice:} AUC1
-  \item \textbf{Titolo:} sistema di autenticazione
+  \item \textbf{Titolo:} Sistema di autenticazione
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente non autenticato non è autenticato alla piattaforma.
   \item \textbf{Postcondizione:} l'\glossario{utente} ha effettuato correttamente il login nel sistema.
@@ -26,7 +26,7 @@
 \begin{itemize}
   \item \textbf{Codice:} AUC1.1
   \item \textbf{Titolo:} autenticazione
-  \item \textbf{Attori primari:} utente non autenticato
+  \item \textbf{Attori primari:} Utente non autenticato
   \item \textbf{Precondizione:} il sistema è raggiungibile e funzionante, l'utente non autenticato deve poter visualizzare la pagina di login.
   \item \textbf{Postcondizione:} l'utente non autenticato ha inserito le possibili credenziali e sta tentando di effettuare l'autenticazione. Ogni volta che cercherà di effettuare
         login sarà verificato che le credenziali inserite siano corrette. In caso contrario verrà visualizzato un messaggio di errore, e l'accesso sarà negato.
@@ -53,7 +53,7 @@
 \label{subsub:AUC1.1.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC1.1.1
-  \item \textbf{Titolo:} inserimento e-mail
+  \item \textbf{Titolo:} Inserimento e-mail
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento della propria e-mail.
   \item \textbf{Postcondizione:} l'utente non autenticato ha compilato il campo relativo alla propria e-mail.
@@ -68,7 +68,7 @@
 \label{subsub:AUC1.1.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC1.1.2
-  \item \textbf{Titolo:} inserimento password
+  \item \textbf{Titolo:} Inserimento password
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento della password.
   \item \textbf{Postcondizione:} l'utente non autenticato ha compilato il campo relativo alla sua password.
@@ -83,7 +83,7 @@
 \label{subsub:AUC1.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC1.2
-  \item \textbf{Titolo:} verifica credenziali
+  \item \textbf{Titolo:} Verifica credenziali
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente non autenticato ha inviato al server le sue credenziali per tentare il login
   \item \textbf{Postcondizione:} l'utente non autenticato deve poter accedere alla sua area riservata, nel caso in cui le credenziali siano corrette. In caso
@@ -99,7 +99,7 @@
 \label{subsub:AUC1.3}
 \begin{itemize}
   \item \textbf{Codice:} AUC1.3
-  \item \textbf{Titolo:} visualizzazione credenziali errate
+  \item \textbf{Titolo:} Visualizzazione credenziali errate
   \item \textbf{Attori primari:} utente non autenticato
   \item \textbf{Precondizione:} l'utente non autenticato ha inviato al server le sue credenziali per tentare il login, e le credenziali sono state verificate.
   \item \textbf{Postcondizione:} l'utente non autenticato visualizza un messaggio di credenziali sbagliate.
@@ -115,7 +115,7 @@
 \label{subsub:AUC2}
 \begin{itemize}
   \item \textbf{Codice:} AUC2
-  \item \textbf{Titolo:} richiesta owner
+  \item \textbf{Titolo:} Richiesta owner
   \item \textbf{Attori primari:} utente autenticato
   \item \textbf{Precondizione:} l'utente autenticato non deve essere un \glossario{owner}.
   \item \textbf{Postcondizione:} se viene approvata la richiesta, l'utente autenticato diventerà un owner.
@@ -130,7 +130,7 @@
 \label{subsub:AUC2.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC2.1
-  \item \textbf{Titolo:} verifica tipologia utente
+  \item \textbf{Titolo:} Verifica tipologia utente
   \item \textbf{Attori primari:} utente autenticato
   \item \textbf{Precondizione:} l'utente autenticato visualizza l'apposito form per inviare la richiesta per diventare owner.
   \item \textbf{Postcondizione:} il form relativo alla richiesta di owner viene abilitato o disabilitato di conseguenza.
@@ -153,7 +153,7 @@
 \label{subsub:AUC2.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC2.2
-  \item \textbf{Titolo:} invio richiesta owner
+  \item \textbf{Titolo:} Invio richiesta owner
   \item \textbf{Attori primari:} utente autenticato
   \item \textbf{Precondizione:} l'utente autenticato utilizza l'apposito form per inviare la richiesta per diventare owner.
   \item \textbf{Postcondizione:} viene inviata la richiesta, in attesa di essere approvata da un amministratore.
@@ -176,7 +176,7 @@
 \label{subsub:AUC2.3}
 \begin{itemize}
   \item \textbf{Codice:} AUC2.3
-  \item \textbf{Titolo:} richiesta rifiutata
+  \item \textbf{Titolo:} Richiesta rifiutata
   \item \textbf{Attori primari:} utente autenticato
   \item \textbf{Precondizione:} l'utente autenticato ha inviato la propria richiesta per diventare owner, l'amministratore ha rifiutato la richiesta.
   \item \textbf{Postcondizione:} l'utente autenticato non ha ottenuto l'abilitazione per un owner, visualizza un errore.
@@ -191,7 +191,7 @@
 \label{subsub:AUC3}
 \begin{itemize}
   \item \textbf{Codice:} AUC3
-  \item \textbf{Titolo:} disconnessione
+  \item \textbf{Titolo:} Disconnessione
   \item \textbf{Attori primari:} utente autenticato
   \item \textbf{Precondizione:} il sistema ha reso disponibile la possibilità di effettuare la disconnessione.
   \item \textbf{Postcondizione:} l'utente autenticato diventerà un utente non autenticato, effettuando la disconnessione.
@@ -207,7 +207,7 @@
 \label{subsub:AUC4}
 \begin{itemize}
   \item \textbf{Codice:} AUC4
-  \item \textbf{Titolo:} gestione richieste
+  \item \textbf{Titolo:} Gestione richieste
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} il sistema deve rendere disponibili le richieste effettuate dai super utenti.
   \item \textbf{Postcondizione:} vengono approvate o rifiutate le richieste.
@@ -222,7 +222,7 @@
 \label{subsub:AUC4.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.1
-  \item \textbf{Titolo:} gestione richieste owner
+  \item \textbf{Titolo:} Gestione richieste owner
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} l'utente autenticato deve aver richiesto di diventare un owner.
   \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'utente autenticato sarà informato.
@@ -238,7 +238,7 @@
 \label{subsub:AUC4.1.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.1.1
-  \item \textbf{Titolo:} accetta richiesta owner
+  \item \textbf{Titolo:} Accetta richiesta owner
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} l'utente autenticato deve aver richiesto di diventare un owner.
   \item \textbf{Postcondizione:} viene approvata la richiesta da parte di un amministratore.
@@ -253,7 +253,7 @@
 \label{subsub:AUC4.1.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.1.2
-  \item \textbf{Titolo:} rifiuta richiesta owner
+  \item \textbf{Titolo:} Rifiuta richiesta owner
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} l'utente autenticato deve aver richiesto di diventare un owner.
   \item \textbf{Postcondizione:} viene rifiutata la richiesta da parte di un amministratore.
@@ -268,7 +268,7 @@
 \label{subsub:AUC4.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.2
-  \item \textbf{Titolo:} gestione richiesta creazione organizzazione
+  \item \textbf{Titolo:} Gestione richiesta creazione organizzazione
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} l'owner deve aver richiesto di creare un organizzazione.
   \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'owner viene informato.
@@ -284,7 +284,7 @@
 \label{subsub:AUC4.2.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.2.1
-  \item \textbf{Titolo:} accetta richiesta creazione organizzazione
+  \item \textbf{Titolo:} Accetta richiesta creazione organizzazione
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} l'owner deve aver richiesto di creare un organizzazione.
   \item \textbf{Postcondizione:} viene approvata la richiesta, e l'owner viene informato.
@@ -299,7 +299,7 @@
 \label{subsub:AUC4.2.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.2.2
-  \item \textbf{Titolo:} rifiuta richiesta creazione organizzazione
+  \item \textbf{Titolo:} Rifiuta richiesta creazione organizzazione
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} l'owner deve aver richiesto di creare un organizzazione;
   \item \textbf{Postcondizione:} viene rifiutata la richiesta, e l'owner viene informato;
@@ -314,7 +314,7 @@
 \label{subsub:AUC4.3}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.3
-  \item \textbf{Titolo:} gestione richiesta modifica organizzazione
+  \item \textbf{Titolo:} Gestione richiesta modifica organizzazione
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} un gestore deve aver richiesto di modificare un'organizzazione.
   \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e il gestore viene informato.
@@ -329,7 +329,7 @@
 \label{subsub:AUC4.3.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.3.1
-  \item \textbf{Titolo:} accetta richiesta modifica organizzazione
+  \item \textbf{Titolo:} Accetta richiesta modifica organizzazione
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} il gestore deve aver richiesto di modificare un'organizzazione.
   \item \textbf{Postcondizione:} viene approvata la richiesta, e il gestore viene informato.
@@ -344,7 +344,7 @@
 \label{subsub:AUC4.3.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.3.2
-  \item \textbf{Titolo:} rifiuta richiesta modifica organizzazione
+  \item \textbf{Titolo:} Rifiuta richiesta modifica organizzazione
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} il gestore deve aver richiesto di modificare un'organizzazione.
   \item \textbf{Postcondizione:} viene rifiutata la richiesta, e il gestore viene informato.
@@ -360,7 +360,7 @@
 \label{subsub:AUC4.4}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.4
-  \item \textbf{Titolo:} gestione richiesta aggiunta luogo
+  \item \textbf{Titolo:} Gestione richiesta aggiunta luogo
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} un gestore deve aver richiesto di aggiungere un luogo.
   \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e il gestore viene informato.
@@ -376,7 +376,7 @@
 \label{subsub:AUC4.4.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.4.1
-  \item \textbf{Titolo:} accetta richiesta aggiungi luogo
+  \item \textbf{Titolo:} Accetta richiesta aggiungi luogo
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} il gestore deve aver richiesto di aggiungere un luogo.
   \item \textbf{Postcondizione:} viene approvata la richiesta, e il gestore viene informato.
@@ -391,7 +391,7 @@
 \label{subsub:AUC4.4.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.4.2
-  \item \textbf{Titolo:} rifiuta richiesta aggiungi luogo
+  \item \textbf{Titolo:} Rifiuta richiesta aggiungi luogo
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} il gestore deve aver richiesto di aggiungere un luogo.
   \item \textbf{Postcondizione:} viene rifiutata la richiesta, e il gestore viene informato.
@@ -406,7 +406,7 @@
 \label{subsub:AUC4.5}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.5
-  \item \textbf{Titolo:} gestione richiesta modifica luogo
+  \item \textbf{Titolo:} Gestione richiesta modifica luogo
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} un gestore deve aver richiesto di modificare un luogo.
   \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e il gestore viene informato.
@@ -422,7 +422,7 @@
 \label{subsub:AUC4.5.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.5.1
-  \item \textbf{Titolo:} accetta richiesta modifica luogo
+  \item \textbf{Titolo:} Accetta richiesta modifica luogo
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} il gestore deve aver richiesto di modificare un luogo.
   \item \textbf{Postcondizione:} viene approvata la richiesta, e il gestore viene informato.
@@ -437,7 +437,7 @@
 \label{subsub:AUC4.5.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.5.2
-  \item \textbf{Titolo:} rifiuta richiesta modifica luogo
+  \item \textbf{Titolo:} Rifiuta richiesta modifica luogo
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} il gestore deve aver richiesto di modificare un luogo.
   \item \textbf{Postcondizione:} viene rifiutata la richiesta, e il gestore viene informato.
@@ -452,7 +452,7 @@
 \label{subsub:AUC4.6}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.6
-  \item \textbf{Titolo:} gestione richiesta trasferimento di proprietà organizzazione
+  \item \textbf{Titolo:} Gestione richiesta trasferimento di proprietà organizzazione
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} l'organizzazione deve essere già stata creata dal sistema, e deve essere stata fatta la richiesta trasferimento di proprietà.
   \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'owner viene informato.
@@ -467,7 +467,7 @@
 \label{subsub:AUC4.6.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.6.1
-  \item \textbf{Titolo:} accetta richiesta trasferimento di proprietà organizzazione
+  \item \textbf{Titolo:} Accetta richiesta trasferimento di proprietà organizzazione
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} l'owner deve aver fatto richiesta di trasferimento di proprietà di organizzazione.
   \item \textbf{Postcondizione:} viene approvata la richiesta, e l'owner viene informato.
@@ -482,7 +482,7 @@
 \label{subsub:AUC4.6.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC4.6.2
-  \item \textbf{Titolo:} rifiuta richiesta trasferimento di proprietà organizzazione
+  \item \textbf{Titolo:} Rifiuta richiesta trasferimento di proprietà organizzazione
   \item \textbf{Attori primari:} amministratore
   \item \textbf{Precondizione:} l'owner deve aver fatto richiesta di trasferimento di proprietà di organizzazione.
   \item \textbf{Postcondizione:} viene rifiutata la richiesta, e l'owner viene informato.
@@ -498,7 +498,7 @@
 \label{subsub:AUC5}
 \begin{itemize}
   \item \textbf{Codice:} AUC5
-  \item \textbf{Titolo:} creazione amministratore
+  \item \textbf{Titolo:} Creazione amministratore
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} devono essere specificate le credenziali del nuovo amministratore, che devono essere univoche.
   \item \textbf{Postcondizione:} l'amministratore viene creato.
@@ -513,7 +513,7 @@
 \label{subsub:AUC5.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC5.1
-  \item \textbf{Titolo:} inserimento credenziali
+  \item \textbf{Titolo:} Inserimento credenziali
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di creazione nuovo amministratore.
   \item \textbf{Postcondizione:} root ha inserito le credenziali dell'amministratore che vuole creare.
@@ -532,17 +532,17 @@
 \end{itemize}
 % subsub:AUC5.1 (end)
 
-\subsubsection{AUC5.1.1 - Inserimento nuova e-mail}%
+\subsubsection{AUC5.1.1 - Inserimento nuova email}%
 \label{subsub:AUC5.1.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC5.1.1
-  \item \textbf{Titolo:} inserimento nuova e-mail
+  \item \textbf{Titolo:} Inserimento nuova email
   \item \textbf{Attori primari:} root
-  \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento dell'e-mail.
-  \item \textbf{Postcondizione:} root ha inserito l'e-mail dell'amministratore che vuole creare.
+  \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento dell'email.
+  \item \textbf{Postcondizione:} root ha inserito l'email dell'amministratore che vuole creare.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item \glossario{Root} inserisce l'e-mail dell'amministratore che vuole creare.
+    \item \glossario{Root} inserisce l'email dell'amministratore che vuole creare.
   \end{enumerate}
 \end{itemize}
 % subsub:AUC5.1.1 (end)
@@ -551,7 +551,7 @@
 \label{subsub:AUC5.1.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC5.1.2
-  \item \textbf{Titolo:} inserimento nuova password
+  \item \textbf{Titolo:} Inserimento nuova password
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento della password.
   \item \textbf{Postcondizione:} root ha inserito la password dell'amministratore che vuole creare.
@@ -561,11 +561,12 @@
   \end{enumerate}
 \end{itemize}
 % subsub:AUC5.1.2 (end)
+
 \subsubsection{AUC5.1.3 - Conferma password}%
 \label{subsub:AUC5.1.3}
 \begin{itemize}
   \item \textbf{Codice:} AUC5.1.3
-  \item \textbf{Titolo:} conferma password
+  \item \textbf{Titolo:} Conferma password
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema ha reso disponibile il campo per l'inserimento del campo conferma password.
   \item \textbf{Postcondizione:} root ha inserito la password nel campo di conferma dell'amministratore che vuole creare.
@@ -580,7 +581,7 @@
 \label{subsub:AUC5.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC5.2
-  \item \textbf{Titolo:} verifica credenziali
+  \item \textbf{Titolo:} Verifica credenziali
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} root invia richiesta di creazione nuovo amministratore.
   \item \textbf{Postcondizione:} il nuovo amministratore viene creato solo se i requisiti sono stati rispettati.
@@ -600,7 +601,7 @@
 \label{subsub:AUC5.3}
 \begin{itemize}
   \item \textbf{Codice:} AUC5.3
-  \item \textbf{Titolo:} visualizza creazione fallita
+  \item \textbf{Titolo:} Visualizza creazione fallita
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} la verifica delle credenziali è fallita.
   \item \textbf{Postcondizione:} root visualizza un messaggio di creazione fallita.
@@ -612,13 +613,11 @@
 % subsub:AUC5.3 (end)
 % subsub:AUC5 (end)
 
-
-
 \subsubsection{AUC6 - Gestione organizzazione}%
 \label{subsub:AUC6}
 \begin{itemize}
   \item \textbf{Codice:} AUC6
-  \item \textbf{Titolo:} gestione organizzazione
+  \item \textbf{Titolo:} Gestione organizzazione
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di gestione organizzazione.
   \item \textbf{Postcondizione:} vengono gestite una o più organizzazioni.
@@ -628,15 +627,21 @@
   \end{enumerate}
 \end{itemize}
 
-
-\subsubsection{AUC6.1 - Creazione organizzazione}%
-\label{subsub:AUC6.1}
-\begin{itemize}
-  \item \textbf{Attori primari:} root;
-  \item \textbf{Precondizione:} l'organizzazione non deve esistere nella lista di \emph{Stalker}, deve essere specificato il suo nome.
-  \item \textbf{Postcondizione:} l'organizzazione viene creata.
-  \item \textbf{Scenario principale:} sorge la necessità di creare un'organizzazione, senza essere effettivamente richiesta;
-\end{itemize}
+  \subsubsection{AUC6.1 - Creazione organizzazione}%
+  \label{subsub:AUC6.1}
+  \begin{itemize}
+    \item \textbf{Codice:} AUC6.1
+    \item \textbf{Titolo:} Creazione organizzazione
+    \item \textbf{Attori primari:} root;
+    \item \textbf{Precondizione:} l'organizzazione non deve esistere nella lista di \emph{Stalker}, deve essere specificato il suo nome.
+    \item \textbf{Postcondizione:} l'organizzazione viene creata.
+    \item \textbf{Scenario principale:} sorge la necessità di creare un'organizzazione, senza essere effettivamente richiesta;
+    \item \textbf{Inclusioni:}
+    \begin{enumerate}
+      \item Invio richiesta aggiornamento lista organizzazioni \emph{[AUC6.5]};
+    \end{enumerate}
+  \end{itemize}
+  % subsub:AUC6.1 (end)
 
   \subsubsection{AUC6.1.1 - Inserisci nome organizzazione}%
   \label{subsub:AUC6.1.1}
@@ -684,13 +689,27 @@
   \end{itemize}
   % subsub:AUC6.1.3 (end)
 
-
+  \subsubsection{AUC6.1.4 - Configurazione dettagli server LDAP}%
+  \label{subsub:AUC6.1.4}
+  \begin{itemize}
+    \item \textbf{Codice:} AUC6.1.4
+    \item \textbf{Titolo:} Configurazione dettagli server LDAP
+    \item \textbf{Attori primari:} root,owner
+    \item \textbf{Precondizione:} il sistema fornisce i campi per la configurazione del server LDAP.
+    \item \textbf{Postcondizione:} il server LDAP è stato configurato.
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+      \item si vuole configurare i dettagli del \glossario{server LDAP} che le applicazioni dovranno utilizzare per registrarsi ad un'organizzazione
+      \item se l'organizzazione è segnata come pubblica, i parametri del server LDAP non verranno configurati. 
+    \end{enumerate}
+  \end{itemize}
+  % subsub:AUC6.1.4 (end)
 
 \subsubsection{AUC6.2 - Eliminazione organizzazione}%
 \label{subsub:AUC6.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC6.2
-  \item \textbf{Titolo:} eliminazione organizzazione
+  \item \textbf{Titolo:} Eliminazione organizzazione
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} deve essere stata selezionata l'organizzazione da eliminare, presente nella lista di \emph{Stalker}.
   \item \textbf{Postcondizione:} l'organizzazione viene eliminata.
@@ -701,6 +720,7 @@
   \item \textbf{Inclusioni:}
   \begin{enumerate}
     \item Seleziona organizzazione\emph{[AUC6.4]};
+    \item Invio richiesta aggiornamento lista organizzazioni \emph{[AUC6.5]};
   \end{enumerate}
 \end{itemize}
 % subsub:AUC6.2 (end)
@@ -710,7 +730,7 @@
 \label{subsub:AUC6.3}
 \begin{itemize}
   \item \textbf{Codice:} AUC6.3
-  \item \textbf{Titolo:} modifica organizzazione
+  \item \textbf{Titolo:} Modifica organizzazione
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} deve essere stata selezionata l'organizzazione da modificare, presente nella lista di \emph{Stalker}.
   \item \textbf{Postcondizione:} l'organizzazione viene modificata.
@@ -729,7 +749,7 @@
 \label{subsub:AUC6.3.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC6.3.1
-  \item \textbf{Titolo:} modifica nome organizzazione
+  \item \textbf{Titolo:} Modifica nome organizzazione
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema fornisce il campo di modifica nome.
   \item \textbf{Postcondizione:} il nome viene opportunamente modificato.
@@ -737,7 +757,6 @@
   \begin{enumerate}
     \item si vuole modificare il nome di un'organizzazione.
   \end{enumerate}
-
 \end{itemize}
 % subsub:AUC6.3.1 (end)
 
@@ -775,7 +794,7 @@
 \label{subsub:AUC6.3.4}
 \begin{itemize}
   \item \textbf{Codice:} AUC6.3.4
-  \item \textbf{Titolo:} gestione luoghi
+  \item \textbf{Titolo:} Gestione luoghi
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di gestione dei luoghi di un'organizzazione.
   \item \textbf{Postcondizione:} vengono gestiti i luoghi di un'organizzazione.
@@ -799,12 +818,13 @@
     \item sorge la necessità di aggiungere un luogo ad un'organizzazione, senza interagire con il suo owner;
   \end{enumerate}
 \end{itemize}
+% subsub:AUC6.3.4.1 (end)
 
 \subsubsection{AUC6.3.4.1.1 - Inserisci coordinate geografiche}%
 \label{subsub:AUC6.3.4.1.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC6.3.4.1.1
-  \item \textbf{Titolo:} inserisci coordinate geografiche
+  \item \textbf{Titolo:} Inserisci coordinate geografiche
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema deve fornire i campi relativi alle coordinate geografiche.
   \item \textbf{Postcondizione:} i campi relativi alle coordinate geografiche sono stati riempiti.
@@ -814,13 +834,12 @@
   \end{enumerate}
 \end{itemize}
 % subsub:AUC6.3.4.1.1 (end)
-% subsub:AUC6.3.4.1 (end)
 
 \subsubsection{AUC6.3.4.2 - Eliminazione luogo}%
 \label{subsub:AUC6.3.4.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC6.3.4.2
-  \item \textbf{Titolo:} eliminazione luogo
+  \item \textbf{Titolo:} Eliminazione luogo
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il luogo dell'organizzazione deve essere presente in \emph{Stalker}.
   \item \textbf{Postcondizione:} il luogo dell'organizzazione viene eliminato.
@@ -839,9 +858,9 @@
 \label{subsub:AUC6.3.4.3}
 \begin{itemize}
   \item \textbf{Codice:} AUC6.3.4.3
-  \item \textbf{Titolo:} modifica luogo
-  \item \textbf{Attori primari:} root;
-  \item \textbf{Precondizione:} il luogo dell'organizzazione deve essere presente in \emph{Stalker};
+  \item \textbf{Titolo:} Modifica luogo
+  \item \textbf{Attori primari:} root
+  \item \textbf{Precondizione:} il luogo dell'organizzazione deve essere presente in \emph{Stalker}.
   \item \textbf{Postcondizione:} il luogo dell'organizzazione viene modificato.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
@@ -852,13 +871,13 @@
     \item Seleziona luogo\emph{[AUC6.3.4.4]};
   \end{enumerate}
 \end{itemize}
-
+% subsub:AUC6.3.4.3 (end)
 
 \subsubsection{AUC6.3.4.3.1 - Modifica coordinate geografiche}%
 \label{subsub:AUC6.3.4.3.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC6.3.4.3.1
-  \item \textbf{Titolo:} modifica coordinate geografiche
+  \item \textbf{Titolo:} Modifica coordinate geografiche
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema deve fornire i campi relativi alle coordinate geografiche.
   \item \textbf{Postcondizione:} i campi relativi alle coordinate geografiche sono stati modificati.
@@ -868,13 +887,12 @@
   \end{enumerate}
 \end{itemize}
 % subsub:AUC6.3.4.3.1 (end)
-% subsub:AUC6.3.4.3 (end)
 
 \subsubsection{AUC6.3.4.4 - Seleziona luogo}%
 \label{subsub:AUC6.3.4.4}
 \begin{itemize}
   \item \textbf{Codice:} AUC6.3.4.4
-  \item \textbf{Titolo:} seleziona luogo
+  \item \textbf{Titolo:} Seleziona luogo
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema deve mostrare la lista dei luoghi all'interno di una organizzazione.
   \item \textbf{Postcondizione:} viene scelto il luogo desiderato.
@@ -886,11 +904,26 @@
 % subsub:AUC6.3.4.4 (end)
 % subsub:AUC6.3.4 (end)
 
+\subsubsection{AUC6.3.5 - Modifica configurazione dettagli server LDAP}%
+  \label{subsub:AUC6.3.5}
+  \begin{itemize}
+    \item \textbf{Codice:} AUC6.3.5
+    \item \textbf{Titolo:} Configurazione dettagli server LDAP
+    \item \textbf{Attori primari:} root,owner
+    \item \textbf{Precondizione:} il sistema fornisce i campi per la configurazione del server LDAP.
+    \item \textbf{Postcondizione:} il server LDAP è stato configurato.
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+      \item si vuole modificare la configurazione del server LDAP.
+    \end{enumerate}
+  \end{itemize}
+  % subsub:AUC6.3.5 (end)
+
 \subsubsection{AUC6.4 - Seleziona organizzazione}%
 \label{subsub:AUC6.4}
 \begin{itemize}
   \item \textbf{Codice:} AUC6.4
-  \item \textbf{Titolo:} seleziona organizzazione
+  \item \textbf{Titolo:} Seleziona organizzazione
   \item \textbf{Attori primari:} root
   \item \textbf{Precondizione:} il sistema deve mostrare la lista di organizzazioni in \emph{Stalker}.
   \item \textbf{Postcondizione:} viene scelta l'organizzazione desiderata.
@@ -900,13 +933,29 @@
   \end{enumerate}
 \end{itemize}
 % subsub:AUC6.4 (end)
+
+\subsubsection{AUC6.5 - Invio richiesta aggiornamento lista organizzazioni}%
+\label{subsub:AUC6.5}
+\begin{itemize}
+  \item \textbf{Codice:} AUC6.5
+  \item \textbf{Titolo:} Invio richiesta aggiornamento lista organizzazioni
+  \item \textbf{Attori primari:} root
+  \item \textbf{Precondizione:} il sistema mostra la pagina di creazione o eliminazione di un'organizzazione.
+  \item \textbf{Postcondizione:} la nuova lista delle organizzazioni viene inviata a tutte le applicazioni mobile.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item si vuole creare oppure eliminare un'organizzazione specifica
+    \item ad operazione avvenuta, la lista delle organizzazione viene aggiornata e inviata a tutti gli utenti che hanno installato l'applicazione mobile.
+  \end{enumerate}
+\end{itemize}
+% subsub:AUC6.5 (end)
 % subsub:AUC6 (end)
 
 \subsubsection{AUC7 - Eliminazione account}%
 \label{subsub:AUC7}
 \begin{itemize}
   \item \textbf{Codice:} AUC7
-  \item \textbf{Titolo:} eliminazione account
+  \item \textbf{Titolo:} Eliminazione account
   \item \textbf{Attori primari:} root;
   \item \textbf{Precondizione:} deve essere stato selezionato l'\glossario{account} da eliminare, che deve esistere in \emph{Stalker};
   \item \textbf{Postcondizione:} l'account selezionato è stato eliminato.
@@ -921,7 +970,7 @@
 \label{subsub:AUC7.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC7.1
-  \item \textbf{Titolo:} seleziona account
+  \item \textbf{Titolo:} Seleziona account
   \item \textbf{Attori primari:} root;
   \item \textbf{Precondizione:} il sistema deve rendere disponibile la lista degli account registrati a \emph{Stalker}.
   \item \textbf{Postcondizione:} l'account è stato selezionato.
@@ -937,7 +986,7 @@
 \label{subsub:AUC8}
 \begin{itemize}
   \item \textbf{Codice:} AUC8
-  \item \textbf{Titolo:} query sull'organizzazione
+  \item \textbf{Titolo:} Query sull'organizzazione
   \item \textbf{Attori primari:} visualizzatore;
   \item \textbf{Precondizione:} il sistema risponde correttamente alle interrogazioni;
   \item \textbf{Postcondizione:} il visualizzatore ottiene le informazioni di cui ha bisogno.
@@ -952,7 +1001,7 @@
 \label{subsub:AUC9}
 \begin{itemize}
   \item \textbf{Codice:} AUC9
-  \item \textbf{Titolo:} query sul dipendente
+  \item \textbf{Titolo:} Query sul dipendente
   \item \textbf{Attori primari:} visualizzatore;
   \item \textbf{Precondizione:} il sistema risponde correttamente alle interrogazioni;
   \item \textbf{Postcondizione:} il visualizzatore ottiene le informazioni di cui ha bisogno.
@@ -971,7 +1020,7 @@
 \label{subsub:AUC10}
 \begin{itemize}
   \item \textbf{Codice:} AUC10
-  \item \textbf{Titolo:} richiesta su luoghi
+  \item \textbf{Titolo:} Richiesta su luoghi
   \item \textbf{Attori primari:} gestore
   \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina delle richieste sui luoghi.
   \item \textbf{Postcondizione:} la richiesta di aggiunta di un nuovo luogo viene posta.
@@ -985,7 +1034,7 @@
 \label{subsub:AUC10.1}
 \begin{itemize}
   \item \textbf{Codice:} AUC10.1
-  \item \textbf{Titolo:} richiesta aggiunta luogo
+  \item \textbf{Titolo:} Richiesta aggiunta luogo
   \item \textbf{Attori primari:} gestore;
   \item \textbf{Precondizione:} il luogo da aggiungere non deve già esistere;
   \item \textbf{Postcondizione:} la richiesta di aggiunta di un nuovo luogo viene posta.
@@ -1004,7 +1053,7 @@
 \label{subsub:AUC10.2}
 \begin{itemize}
   \item \textbf{Codice:} AUC10.2
-  \item \textbf{Titolo:} richiesta rimozione luogo
+  \item \textbf{Titolo:} Richiesta rimozione luogo
   \item \textbf{Attori primari:} gestore
   \item \textbf{Precondizione:} il luogo da eliminare deve esistere.
   \item \textbf{Postcondizione:} la richiesta di eliminazione di un luogo viene posta.
@@ -1019,7 +1068,7 @@
 \label{subsub:AUC10.3}
 \begin{itemize}
   \item \textbf{Codice:} AUC10.3
-  \item \textbf{Titolo:} richiesta modifica luogo
+  \item \textbf{Titolo:} Richiesta modifica luogo
   \item \textbf{Attori primari:} gestore
   \item \textbf{Precondizione:} il luogo da modificare deve esistere.
   \item \textbf{Postcondizione:} la richiesta di modifica di un luogo viene posta.
@@ -1039,7 +1088,7 @@
 \label{subsub:AUC10.4}
 \begin{itemize}
   \item \textbf{Codice:} AUC10.4
-  \item \textbf{Titolo:} richiesta modifica organizzazione
+  \item \textbf{Titolo:} Richiesta modifica organizzazione
   \item \textbf{Attori primari:} gestore
   \item \textbf{Precondizione:} i parametri devono essere effettivamente modificati.
   \item \textbf{Postcondizione:} la richiesta di modifica viene posta.
@@ -1052,6 +1101,8 @@
     \item Modifica nome organizzazione \emph{[AUC6.3.1]}.
     \item Modifica indirizzo organizzazione \emph{[AUC6.3.2]}.
     \item Modifica descrizione organizzazione \emph{[AUC6.3.3]}.
+    \item Gestione luoghi \emph{[AUC6.3.4]} 
+    \item Modifica configurazione dettagli server LDAP \emph{[AUC6.3.5]} 
   \end{enumerate}
 \end{itemize}
 % subsub:AUC10.4 (end)
@@ -1060,19 +1111,20 @@
 \label{subsub:AUC11}
 \begin{itemize}
   \item \textbf{Codice:} AUC11
-  \item \textbf{Titolo:} richiesta creazione organizzazione
+  \item \textbf{Titolo:} Richiesta creazione organizzazione
   \item \textbf{Attori primari:} owner
   \item \textbf{Precondizione:} l' organizzazione non deve già esistere.
   \item \textbf{Postcondizione:} la richiesta di creare una nuova organizzazione è stata posta.
   \item \textbf{Scenario principale:}
   \begin{enumerate}
-    \item l' owner vuole creare una nuova organizzazione.
+    \item l'owner vuole creare una nuova organizzazione.
   \end{enumerate}
   \item \textbf{Inclusioni:}
   \begin{enumerate}
     \item Inserimento nome organizzazione \emph{[AUC6.1.1]}.
     \item Inserimento indirizzo organizzazione \emph{[AUC6.1.2]}.
     \item Inserimento descrizione organizzazione \emph{[AUC6.1.3]}.
+    \item Configurazione dettagli server LDAP \emph{[AUC6.1.4]}
   \end{enumerate}
 \end{itemize}
 % subsub:AUC11 (end)
@@ -1081,7 +1133,7 @@
 \label{subsub:AUC12}
 \begin{itemize}
   \item \textbf{Codice:} AUC12
-  \item \textbf{Titolo:} richiesta cedimento proprietà organizzazione
+  \item \textbf{Titolo:} Richiesta cedimento proprietà organizzazione
   \item \textbf{Attori primari:} owner
   \item \textbf{Precondizione:} il futuro owner deve esistere.
   \item \textbf{Postcondizione:} la richiesta di cedere l'organizzazione è stata posta.
@@ -1090,7 +1142,7 @@
     \item l' owner vuole cedere l'organizzazione ad un'altro owner;
   \end{enumerate}
 \end{itemize}
-
+% subsub:AUC12 (end)
 
 \subsubsection{AUC12.1 - Inserimento e-mail nuovo owner}%
 \label{subsub:AUC12.1}
@@ -1106,19 +1158,19 @@
   \end{enumerate}
 \end{itemize}
 % subsub:AUC12.1 (end)
-% subsub:AUC12 (end)
-
 
 \subsubsection{AUC13 - Nomina visualizzatore}%
 \label{subsub:AUC13}
 \begin{itemize}
-  \item \textbf{Attori primari:} owner;
+  \item \textbf{Codice:} AUC13
+  \item \textbf{Titolo:} Nomina visualizzatore
+  \item \textbf{Attori primari:} owner
   \item \textbf{Descrizione:} l' owner nomina un visualizzatore per la sua organizzazione;
   \item \textbf{Scenario principale:} l' owner vuole aggiungere un visualizzatore alla sua organizzazione;
   \item \textbf{Precondizione:} il nuovo super utente non deve già esistere come visualizzatore;
   \item \textbf{Postcondizione:} il nuovo visualizzatore è stato aggiunto.
 \end{itemize}
-
+% subsub:AUC13 (end)
 
 \subsubsection{AUC13.1 - Inserimento e-mail visualizzatore}%
 \label{subsub:AUC13.1}
@@ -1134,17 +1186,19 @@
   \end{enumerate}
 \end{itemize}
 % subsub:AUC13.1 (end)
-% subsub:AUC13 (end)
 
 \subsubsection{AUC14 - Nomina gestore}%
 \label{subsub:AUC14}
 \begin{itemize}
-  \item \textbf{Attori primari:} owner;
-  \item \textbf{Descrizione:} l' owner nomina un gestore per la sua organizzazione;
-  \item \textbf{Scenario principale:} l' owner vuole aggiungere un gestore alla sua organizzazione;
+  \item \textbf{Codice:} AUC14
+  \item \textbf{Titolo:} Nomina gestore
+  \item \textbf{Attori primari:} owner
+  \item \textbf{Descrizione:} l' owner nomina un gestore per la sua organizzazione.
+  \item \textbf{Scenario principale:} l' owner vuole aggiungere un gestore alla sua organizzazione.
   \item \textbf{Precondizione:} il nuovo super utente non deve già esistere come gestore;
   \item \textbf{Postcondizione:} il nuovo gestore è stato aggiunto.
 \end{itemize}
+% subsub:AUC14 (end)
 
 \subsubsection{AUC14.1 - Inserimento e-mail gestore}%
 \label{subsub:AUC14.1}
@@ -1160,10 +1214,6 @@
   \end{enumerate}
 \end{itemize}
 % subsub:AUC14.1 (end)
-% subsub:AUC14 (end)
-
-
 
 % par:Owner (end)
-
 \end{document}
