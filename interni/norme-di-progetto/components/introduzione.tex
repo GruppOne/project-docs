@@ -12,15 +12,13 @@ Il documento verrà aggiornato nel corso del tempo, pertanto è ancora incomplet
 \subsection{Scopo del prodotto}%
 \label{sub:scopo_del_prodotto}
 
-Si vuole realizzare un'applicazione che permetta di monitorare le persone presenti in un determinato luogo.
-In particolare, l'obiettivo è quello di sviluppare un applicazione software per Android o iOS in grado di segnalare ad un server l'entrata e l'uscita dall'area di interesse.
-
-Si vogliono tracciare:
-
-\begin{itemize}
-  \item Le singole presenze dei dipendenti nei differenti luoghi di lavoro di Imola Informatica.
-  \item Le persone presenti alla fiera di Verona e nei singoli padiglioni.
-\end{itemize}
+Si vuole realizzare un'applicazione che permetta di monitorare le persone presenti in un determinato luogo che sono in possesso di uno smartphone (Android o Ios) e nelle condizioni di installare un'applicazione.
+In particolare, l'obiettivo è quello di sviluppare un applicazione software in grado di segnalare ad un server l'entrata e l'uscita dall'area di interesse di ogni utente. La tracciatura può essere:
+\begin{description}
+  \item Anonima: se il soggetto è non autenticato all'organizzazione di riferimento.
+  \item Autenticata: se il soggetto è autenticato all'organizzazione di riferimento.
+\end{description}
+Alla registrazione nell'applicazione si effettua una richiesta al server per poter ottenere la lista delle organizzazioni alle quali è possibile registrarsi. L'organizzazione, infatti, è il soggetto di interesse nella tracciatura degli utenti. Essa può possedere uno o più luoghi, ciascuno contrassegnato da opportune coordinate geografiche.
 
 \subsection{Glossario}%
 \label{sub:glossario}
@@ -39,7 +37,7 @@ Per garantire l'inequivocabilità, le parole che possono assumere un significato
   \item \href{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/FC01.pdf}{Slide amministrazione di progetto}
   \item \href{https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}{Standard ISO 12207-1995}
   \item \href{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C5.pdf}{Capitolato d'appalto C5}
-  \item \href{https://www.pearson.it/opera/pearson/0-6424-ingegneria_del_software}{Ingegneria del software - Ian Sommerville - decima edizione}
+  \item \href{https://www.pearson.it/opera/pearson/0-6424-ingegneria_del_software}{Ingegneria del software - Ian Sommerville - decima edizione}.
 \end{itemize}
 
 \subsubsection{Informativi}%
@@ -55,7 +53,7 @@ Per garantire l'inequivocabilità, le parole che possono assumere un significato
   \item \href{https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners}{Code owners}
   \item \href{https://slack.com/intl/en-it/}{Slack}
   \item \href{https://hangouts.google.com}{Hangouts}
-  \item \href{https://plantuml.com/}{PlantUML}
+  \item \href{https://plantuml.com/}{PlantUML}.
 \end{itemize}
 
 \end{document}
