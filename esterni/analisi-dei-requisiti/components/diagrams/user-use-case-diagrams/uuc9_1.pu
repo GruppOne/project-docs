@@ -1,0 +1,24 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+
+title UUC9.1 - Scelta noto o incognito
+
+actor :utente collegato: as A3
+
+actor :utente noto: as A3.1
+actor :utente incognito: as A3.2
+
+:A3.1: -up-|> :A3:
+:A3.2: -up-|> :A3:
+
+rectangle {
+  together {
+    usecase (UUC9.1.1) as "UUC9.1.1\nPassaggio a incognito"
+    usecase (UUC9.1.2) as "UUC9.1.2\nPassaggio a noto"
+  }
+}
+
+:A3.1: -- (UUC9.1.1)
+:A3.2: -- (UUC9.1.2)
+
+@enduml

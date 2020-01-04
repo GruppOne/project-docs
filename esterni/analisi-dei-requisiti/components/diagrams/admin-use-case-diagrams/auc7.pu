@@ -1,0 +1,16 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC7 - Eliminazione account
+
+actor :root: as A
+
+rectangle {
+  together {
+    usecase (AUC7.1) as "AUC7.1\nSeleziona account"
+  }
+}
+
+:A: -- AUC7.1
+
+@enduml

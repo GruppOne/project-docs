@@ -1,0 +1,15 @@
+﻿@startuml AUCNominagestore
+!include ../../../../../commons/style/use-cases.pu
+title AUC14 - Nomina gestore
+
+actor :owner: as A
+
+rectangle {
+  together {
+    usecase (AUC14.1) as "AUC14.1\nInserimento e-mail gestore"
+  }
+}
+
+:A: -- AUC14.1
+
+@enduml

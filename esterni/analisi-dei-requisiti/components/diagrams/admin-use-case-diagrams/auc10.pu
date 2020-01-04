@@ -1,0 +1,39 @@
+﻿@startuml 
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC10 - Richiesta su luoghi
+
+actor :gestore: as A
+
+rectangle {
+  together {
+    usecase (AUC10.1) as "AUC10.1\nRichiesta aggiunta luogo"
+    usecase (AUC10.2) as "AUC10.2\nRichiesta rimozione luogo"
+    usecase (AUC10.3) as "AUC10.3\nRichiesta modifica luogo"
+    usecase (AUC10.4) as "AUC10.4\nRichiesta modifica organizzazione"
+  }
+  together {
+    usecase (AUC6.3.1) as "AUC6.3.1\nModifica nome organizzazione"
+    usecase (AUC6.3.2) as "AUC6.3.2\nModifica indirizzo organizzazione"
+    usecase (AUC6.3.3) as "AUC6.3.3\nModifica descrizione organizzazione"
+    usecase (AUC6.3.4.3.1) as "AUC6.3.4.3.1\nModifica coordinate geografiche"
+    usecase (AUC6.3.4.1.1) as "AUC6.3.4.1.1\nInserisci coordinate geografiche"
+    usecase (AUC6.3.5) as "AUC6.3.5\nModifica configurazione dettagli server LDAP"
+  }
+}
+
+:A: -- AUC10.1
+:A: -- AUC10.2
+:A: -- AUC10.3
+:A: -- AUC10.4
+
+
+(AUC6.3.1) .up.|> (AUC10.4) : <<include>>
+(AUC6.3.2) .up.|> (AUC10.4) : <<include>>
+(AUC6.3.3) .up.|> (AUC10.4) : <<include>>
+(AUC6.3.4.3.1) .up.|> (AUC10.3) : <<include>>
+(AUC6.3.4.1.1) .up.|> (AUC10.1) : <<include>>
+(AUC6.3.5) .up.|> (AUC10.4) : <<include>>
+
+
+@enduml

@@ -1,0 +1,18 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC4.2 - Gestione richiesta creazione organizzazione
+
+actor :amministratore: as A
+
+rectangle {
+  together {
+    usecase (AUC4.2.2) as "AUC4.2.2\nRifiuta richiesta\ncreazione organizzazione"
+    usecase (AUC4.2.1) as "AUC4.2.1\nAccetta richiesta\ncreazione organizzazione"
+  }
+}
+
+:A: -- AUC4.2.1
+:A: -- AUC4.2.2
+
+@enduml

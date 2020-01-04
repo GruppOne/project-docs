@@ -1,0 +1,16 @@
+﻿@startuml 
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC12 - Richiesta cedimento proprietà organizzazione
+
+actor :owner: as A
+
+rectangle {
+  together {
+    usecase (AUC12.1) as "AUC12.1\nInserimento e-mail nuovo owner"
+  }
+}
+
+:A: -- AUC12.1
+
+@enduml

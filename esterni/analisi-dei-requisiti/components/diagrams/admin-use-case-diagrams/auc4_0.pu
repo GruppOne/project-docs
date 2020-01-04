@@ -1,0 +1,26 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC4 - Gestione richieste
+
+actor :amministratore: as A
+
+rectangle {
+  together {
+    usecase (AUC4.6) as "AUC4.6\nGestione richiesta trasferimento di proprietà organizzazione"
+    usecase (AUC4.5) as "AUC4.5\nGestione richiesta modifica luogo"
+    usecase (AUC4.4) as "AUC4.4\nGestione richiesta aggiunta luogo"
+    usecase (AUC4.3) as "AUC4.3\nGestione richiesta modifica organizzazione"
+    usecase (AUC4.2) as "AUC4.2\nGestione richiesta creazione organizzazione"
+    usecase (AUC4.1) as "AUC4.1\nGestione richieste owner"  
+  }
+}
+
+:A: -- AUC4.1
+:A: -- AUC4.2
+:A: -- AUC4.3
+:A: -- AUC4.4
+:A: -- AUC4.5
+:A: -- AUC4.6
+
+@enduml

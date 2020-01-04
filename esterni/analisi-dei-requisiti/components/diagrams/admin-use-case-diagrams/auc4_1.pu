@@ -1,0 +1,18 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC4.1 - Gestione richieste owner
+
+actor :amministratore: as A
+
+rectangle {
+  together {
+    usecase (AUC4.1.2) as "AUC4.1.2\nRifiuta richiesta owner"
+    usecase (AUC4.1.1) as "AUC4.1.1\nAccetta richiesta owner"
+  }
+}
+
+:A: -- AUC4.1.1
+:A: -- AUC4.1.2
+
+@enduml

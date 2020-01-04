@@ -1,0 +1,16 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC3 - Disconnessione
+
+actor :utente autenticato: as A
+
+rectangle {
+  together {
+    usecase (AUC3.1) as "AUC3.1\nDisconnessione utente"
+  }
+}
+
+:A: -- AUC3.1
+
+@enduml

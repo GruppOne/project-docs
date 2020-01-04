@@ -1,0 +1,21 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC1 - Sistema di autenticazione
+
+actor :utente non autenticato: as A
+
+rectangle {
+  together {
+    usecase (AUC1.1) as "AUC1.1\nAutenticazione\n--\nExtension points:\nVisualizzazione errore se\nle credenziali inserite\n non sono corrette"
+    usecase (AUC1.2) as "AUC1.2\nVerifica credenziali"
+    usecase (AUC1.3) as "AUC1.3\nVisualizzazione credenziali errate"
+  }
+}
+
+:A: -- AUC1.1
+
+(AUC1.2) .up.|> (AUC1.1) : <<include>>
+(AUC1.3) .up.|> (AUC1.1) : <<extends>>
+
+@enduml

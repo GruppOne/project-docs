@@ -1,0 +1,20 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC2 - Richiesta owner
+
+actor :utente autenticato: as A
+
+rectangle {
+  together {
+    usecase (AUC2.3) as "AUC2.3\nRichiesta rifiutata"
+    usecase (AUC2.2) as "AUC2.2\nInvio richiesta owner"
+    usecase (AUC2.1) as "AUC2.1\nVerifica tipologia utente"
+  }
+}
+
+:A: -- AUC2.1
+:A: -- AUC2.2
+:A: -- AUC2.3
+
+@enduml

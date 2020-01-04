@@ -1,0 +1,16 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC9 - Query sul dipendente
+
+actor :visualizzatore: as A
+
+rectangle {
+  together {
+    usecase (AUC9) as "AUC9\nQuery sul dipendente"
+  }
+}
+
+:A: -- AUC9
+
+@enduml

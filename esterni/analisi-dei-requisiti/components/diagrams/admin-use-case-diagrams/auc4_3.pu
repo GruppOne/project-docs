@@ -1,0 +1,18 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC4.3 - Gestione richiesta modifica organizzazione
+
+actor :amministratore: as A
+
+rectangle {
+  together {
+    usecase (AUC4.3.2) as "AUC4.3.2\nRifiuta richiesta\nmodifica organizzazione"
+    usecase (AUC4.3.1) as "AUC4.3.1\nAccetta richiesta\nmodifica organizzazione"
+  }
+}
+
+:A: -- AUC4.3.1
+:A: -- AUC4.3.2
+
+@enduml

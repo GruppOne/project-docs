@@ -1,0 +1,18 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC4.5 - Gestione richiesta modifica luogo
+
+actor :amministratore: as A
+
+rectangle {
+  together {
+    usecase (AUC4.5.2) as "AUC4.5.2\nRifiuta richiesta modifica luogo"
+    usecase (AUC4.5.1) as "AUC4.5.1\nAccetta richiesta modifica luogo"
+  }
+}
+
+:A: -- AUC4.5.1
+:A: -- AUC4.5.2
+
+@enduml

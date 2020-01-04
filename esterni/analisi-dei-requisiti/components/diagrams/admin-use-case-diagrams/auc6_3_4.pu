@@ -1,0 +1,22 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC6.3.4 - Gestione luoghi
+
+actor :root: as A
+
+rectangle {
+  together {
+    usecase (AUC6.3.4.4) as "AUC6.3.4.4\nAUC6.3.4.4\nSeleziona luogo"
+    usecase (AUC6.3.4.3) as "AUC6.3.4.3\nModifica luogo"
+    usecase (AUC6.3.4.2) as "AUC6.3.4.2\nEliminazione luogo"
+    usecase (AUC6.3.4.1) as "AUC6.3.4.1\nAggiungi luogo"
+  }
+}
+
+:A: -- AUC6.3.4.1
+:A: -- AUC6.3.4.2
+:A: -- AUC6.3.4.3
+:A: -- AUC6.3.4.4
+
+@enduml

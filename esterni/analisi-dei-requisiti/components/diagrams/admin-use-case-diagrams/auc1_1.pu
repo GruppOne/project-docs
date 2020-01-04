@@ -1,0 +1,18 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC1.1 - Autenticazione
+
+actor :utente non autenticato: as A
+
+rectangle {
+  together {
+  usecase (AUC1.1.1) as "AUC1.1.1\nInserimento email"
+  usecase (AUC1.1.2) as "AUC1.1.2\nInserimento password"
+  }
+}
+
+:A: -- AUC1.1.1
+:A: -- AUC1.1.2
+
+@enduml
