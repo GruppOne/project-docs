@@ -1,7 +1,28 @@
 \documentclass[../analisi-dei-requisiti]{subfiles}
 
 \begin{document}
-In questa sezione verranno assegnati dei codici ai requisiti, in modo da semplificarne l’identificazione. La procedura per stabilire l'identificatore di un requisito è descritta nella sezione 2.3.3.1.1 del documento \textit{Norme di Progetto}.
+In questa sezione verranno assegnati dei codici ai requisiti, in modo da semplificarne l’identificazione.
+Ogni requisito è caratterizzato da un codice alfanumerico così formato:
+\begin{center}
+  \textbf{R[numero][tipo][priorità]}
+\end{center}
+in cui ogni elemento ha un diverso significato:
+\begin{itemize}
+  \item \textbf{Numero}: indica quale numero di caso d'uso si sta esaminando. È un numero progressivo a partire da 1.
+  \item \textbf{Tipo}: individua la tipologia di requisito. Esso può essere:
+        \begin{itemize}
+          \item F: \@funzionale -- \@indica servizi che il sistema dovrebbe fornire.
+          \item P: \@prestazionale -- \@indica le prestazioni che il programma deve fornire: \@velocità in esecuzione e memoria occupata.
+          \item D: \@dichiarativo -- \@indica requisiti definiti dall'esterno, ad esempio requisiti di vincolo esposti nel capitolato.
+        \end{itemize}
+  \item \textbf{Priorità}: determina la priorità del requisito con un numero da 1 a 3:
+        \begin{itemize}
+          \item 1: \@requisito obbligatorio che deve essere assolutamente soddisfatto dal sistema.
+          \item 2: \@requisito desiderabile il cui soddisfacimento è apprezzato dal committente.
+          \item 3: \@requisito facoltativo la cui decisione è lasciata al team.
+        \end{itemize}
+\end{itemize}
+
 
 \subsection{Requisiti funzionali}%
 \label{sub:requisiti_funzionali}
@@ -13,34 +34,118 @@ In questa sezione esaminiamo i servizi che il sistema dovrebbe fornire.
 \begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{\centering}m{10cm} >{\centering\arraybackslash}m{3cm}}
   \rowcolor{darkgray!90!}
   \color{white}
-  {\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                               & \color{white}{\textbf{Fonte}} \\
+  {\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                                            & \color{white}{\textbf{Fonte}} \\
   \endhead
-  R001F1                  & Il sistema deve permettere ad un nuovo utente di registrarsi                                                      & UUC1                          \\
-  R002F1                  & Il sistema deve permettere all'utente di visualizzare l'EULA                                                      & UUC1.1                        \\
-  R003F1                  & Il sistema deve permettere all'utente di confermare l'EULA                                                        & UUC1.1.1                      \\
-  R004F1                  & Il sistema deve permettere all'utente di effettuare la procedura di registrazione                                 & UUC1.2                        \\
-  R005F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{email} nel form di registrazione              & UUC1.2.1                      \\
-  R006F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{password} nel form di registrazione           & UUC1.2.2                      \\
-  R007F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{conferma password} nel form di registrazione  & UUC1.2.3                      \\
-  R008F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{dati anagrafici} nel form di registrazione    & UUC1.2.4                      \\
-  R009F1                  & Il sistema deve rifiutare la richiesta di registrazione se i dati inseriti non rispettano i vincoli imposti       & UUC1.2.5                      \\
-  R010F1                  & Il sistema deve permettere all'utente di autenticarsi                                                             & UUC2                          \\
-  R011F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{email} nel form di autenticazione             & UUC2.1                        \\
-  R012F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{password} nel form di autenticazione          & UUC2.2                        \\
-  R013F1                  & Il sistema deve rifiutare la richiesta di autenticazione se i dati inseriti non rispettano i vincoli imposti      & UUC2.3                        \\
-  R014F1                  & Il sistema deve permettere all'utente di recuperare le sue credenziali di accesso                                 & UUC3                          \\
-  R015F1                  & Il sistema deve permettere all'utente di reimpostare la sua password                                              & UUC3.1                        \\
-  R016F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{email} nel form di recupero password          & UUC3.1.1                      \\
-  R017F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{password} nel form di reimpostazione password & UUC3.1.2                      \\
-  R018F1                  & Il sistema deve permettere all'utente di recuperare una lista di organizzazioni a cui può collegarsi              & UUC4                          \\
-  R019F1                  & Il sistema deve permettere all'utente di visualizzare la lista di organizzazioni                                  & UUC4.1                        \\
-  R020F1                  & Il sistema deve permettere all'utente di aggiornare la lista di organizzazioni                                    & UUC4.1.1                      \\
-  R021F1                  & Il sistema deve mostrare un errore all'utente in caso di mancanza di rete                                         & UUC5                          \\
-  R022F1                  & Il sistema deve permettere all'utente di collegarsi ad un'organizzazione                                          & UUC6                          \\
-  R023F1                  & Il sistema deve permettere all'utente di selezionare un'organizzazione                                            & UUC6.1                        \\
+  \rowcolor{white}
+  \multicolumn{3}{r}{\textit{Continua alla pagina seguente}}
+  \endfoot
+  \endlastfoot
+  R001F1                  & Il sistema deve permettere ad un nuovo utente di registrarsi                                                                                   & UUC1                          \\
+  R002F1                  & Il sistema deve permettere all'utente di visualizzare l'EULA                                                                                   & UUC1.1                        \\
+  R003F1                  & Il sistema deve permettere all'utente di confermare l'EULA                                                                                     & UUC1.1.1                      \\
+  R004F1                  & Il sistema deve permettere all'utente di effettuare la procedura di registrazione                                                              & UUC1.2                        \\
+  R005F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{email} nel form di registrazione                                           & UUC1.2.1                      \\
+  R006F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{password} nel form di registrazione                                        & UUC1.2.2                      \\
+  R007F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{conferma password} nel form di registrazione                               & UUC1.2.3                      \\
+  R008F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{dati anagrafici} nel form di registrazione                                 & UUC1.2.4                      \\
+  R009F1                  & Il sistema deve rifiutare la richiesta di registrazione se i dati inseriti non rispettano i vincoli imposti                                    & UUC1.2.5                      \\
+  R010F1                  & Il sistema deve permettere all'utente di autenticarsi                                                                                          & UUC2                          \\
+  R011F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{email} nel form di autenticazione                                          & UUC2.1                        \\
+  R012F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{password} nel form di autenticazione                                       & UUC2.2                        \\
+  R013F1                  & Il sistema deve rifiutare la richiesta di autenticazione se i dati inseriti non rispettano i vincoli imposti                                   & UUC2.3                        \\
+  R014F1                  & Il sistema deve permettere all'utente di recuperare le sue credenziali di accesso                                                              & UUC3                          \\
+  R015F1                  & Il sistema deve permettere all'utente di reimpostare la sua password                                                                           & UUC3.1                        \\
+  R016F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{email} nel form di recupero password                                       & UUC3.1.1                      \\
+  R017F1                  & Il sistema deve permettere all'utente di compilare il campo \textit{password} nel form di reimpostazione password                              & UUC3.1.2                      \\
+  R018F1                  & Il sistema deve permettere all'utente di recuperare una lista di organizzazioni a cui può collegarsi                                           & UUC4                          \\
+  R019F1                  & Il sistema deve permettere all'utente di visualizzare la lista di organizzazioni                                                               & UUC4.1                        \\
+  R020F1                  & Il sistema deve permettere all'utente di aggiornare la lista di organizzazioni                                                                 & UUC4.1.1                      \\
+  R021F1                  & Il sistema deve mostrare un errore all'utente in caso di mancanza di rete                                                                      & UUC5                          \\
+  R022F1                  & Il sistema deve permettere all'utente di collegarsi ad un'organizzazione                                                                       & UUC6                          \\
+  R023F1                  & Il sistema deve permettere all'utente di selezionare un'organizzazione                                                                         & UUC6.1                        \\
+  R024F1                  & Il sistema deve permettere all'utente di scollegarsi da un'organizzazione                                                                      & UUC7                          \\
+  R025F3                  & Il sistema deve permettere all'utente di selezionare una o più organizzazioni da una lista e scollegarvisi                                     & UUC8                          \\
+  R026F1                  & Il sistema deve permettere all'utente il passaggio da noto ad incognito e viceversa                                                            & UUC9                          \\
+  R027F1                  & Il sistema deve permettere all'utente di scegliere di cambiare stato (noto o incognito)                                                        & UUC9.1                        \\
+  R028F1                  & Il sistema deve permettere all'utente di passare ad incognito                                                                                  & UUC9.1.1                      \\
+  R029F1                  & Il sistema deve permettere all'utente di passare a noto                                                                                        & UUC9.1.2                      \\
+  R030F2                  & Il sistema deve permettere all'utente di visualizzare uno storico degli accessi                                                                & UUC10                         \\
+  R031F2                  & Il sistema deve permettere all'utente di visualizzare il tempo trascorso all'interno di un'organizzazione                                      & UUC11                         \\
+  R032F1                  & Il sistema deve permettere all'utente di disconnettersi dall'applicazione                                                                      & UUC12                         \\
+  R033F1                  & L'interfaccia web deve permettere all'utente di autenticarsi                                                                                   & AUC1                          \\
+  R034F1                  & L'interfaccia web deve permettere all'utente di visualizzare la pagina di login                                                                & AUC1.1                        \\
+  R035F1                  & L'interfaccia web deve permettere all'utente di compilare il campo \textit{email} nel form di autenticazione                                   & AUC1.1.1                      \\
+  R036F1                  & L'interfaccia web deve permettere all'utente di compilare il campo \textit{password} nel form di autenticazione                                & AUC1.1.2                      \\
+  R037F1                  & Il sistema deve verificare che i dati inseriti siano corretti                                                                                  & AUC1.2                        \\
+  R038F1                  & Il sistema deve rifiutare la richiesta di autenticazione se i dati inseriti non sono corretti                                                  & AUC1.3                        \\
+  R039F1                  & L'interfaccia web deve permettere all'utente di effettuare la richiesta di essere riconosciuto come owner                                      & AUC2                          \\
+  R040F1                  & Il sistema deve verificare che l'utente possieda i requisiti per essere riconosciuto come owner                                                & AUC2.1                        \\
+  R041F1                  & L'interfaccia web deve permettere all'utente di effettuare la richiesta di essere riconosciuto come owner tramite apposito form                & AUC2.2                        \\
+  R042F1                  & Il sistema deve rifiutare la richiesta di essere riconosciuto come owner se l'amministratore non l'ha accettata                                & AUC2.3                        \\
+  R043F1                  & L'interfaccia web deve permettere all'utente di disconnettersi dall'applicazione                                                               & AUC3                          \\
+  R044F1                  & L'interfaccia web deve permettere all'amministratore di gestire le richieste                                                                   & AUC4                          \\
+  R045F1                  & L'interfaccia web deve permettere all'amministratore di gestire le richieste di diventare owner                                                & AUC4.1                        \\
+  R046F1                  & L'interfaccia web deve permettere all'amministratore di accettare la richiesta di diventare owner                                              & AUC4.1.1                      \\
+  R047F1                  & L'interfaccia web deve permettere all'amministratore di rifiutare la richiesta di diventare owner                                              & AUC4.1.2                      \\
+  R048F1                  & L'interfaccia web deve permettere all'amministratore di gestire le richieste di creare un'organizzazione                                       & AUC4.2                        \\
+  R049F1                  & L'interfaccia web deve permettere all'amministratore di accettare la richiesta di creare un'organizzazione                                     & AUC4.2.1                      \\
+  R050F1                  & L'interfaccia web deve permettere all'amministratore di rifiutare la richiesta di creare un'organizzazione                                     & AUC4.2.2                      \\
+  R051F1                  & L'interfaccia web deve permettere all'amministratore di gestire le richieste di modifica di un'organizzazione                                  & AUC4.3                        \\
+  R052F1                  & L'interfaccia web deve permettere all'amministratore di accettare la richiesta di modifica di un'organizzazione                                & AUC4.3.1                      \\
+  R053F1                  & L'interfaccia web deve permettere all'amministratore di rifiutare la richiesta di modifica di un'organizzazione                                & AUC4.3.2                      \\
+  R054F1                  & L'interfaccia web deve permettere all'amministratore di gestire le richieste di aggiunta luogo ad un'organizzazione                            & AUC4.4                        \\
+  R055F1                  & L'interfaccia web deve permettere all'amministratore di accettare la richiesta di aggiunta luogo ad un'organizzazione                          & AUC4.4.1                      \\
+  R056F1                  & L'interfaccia web deve permettere all'amministratore di rifiutare la richiesta di aggiunta luogo ad un'organizzazione                          & AUC4.4.2                      \\
+  R057F1                  & L'interfaccia web deve permettere all'amministratore di gestire le richieste di modifica del luogo di un'organizzazione                        & AUC4.5                        \\
+  R058F1                  & L'interfaccia web deve permettere all'amministratore di accettare la richiesta di modifica del luogo di un'organizzazione                      & AUC4.5.1                      \\
+  R059F1                  & L'interfaccia web deve permettere all'amministratore di rifiutare la richiesta di modifica del luogo di un'organizzazione                      & AUC4.5.2                      \\
+  R060F1                  & L'interfaccia web deve permettere all'amministratore di gestire le richieste di trasferimento di proprietà di un'organizzazione                & AUC4.6                        \\
+  R061F1                  & L'interfaccia web deve permettere all'amministratore di accettare la richiesta di trasferimento di proprietà di un'organizzazione              & AUC4.6.1                      \\
+  R062F1                  & L'interfaccia web deve permettere all'amministratore di rifiutare la richiesta di trasferimento di proprietà di un'organizzazione              & AUC4.6.2                      \\
+  R063F1                  & L'interfaccia web deve permettere all'utente \textit{root} la creazione di un amministratore                                                   & AUC5                          \\
+  R064F1                  & L'interfaccia web deve permettere all'utente \textit{root} la visualizzazione del form per inserire le credenziali di uno nuovo amministratore & AUC5.1                        \\
+  R065F1                  & L'interfaccia web deve permettere all'utente \textit{root} di compilare il campo \textit{email} nel form                                       & AUC5.1.1                      \\
+  R066F1                  & L'interfaccia web deve permettere all'utente \textit{root} di compilare il campo \textit{password} nel form                                    & AUC5.1.2                      \\
+  R066F1                  & L'interfaccia web deve permettere all'utente \textit{root} di compilare il campo \textit{conferma password} nel form                           & AUC5.1.3                      \\
+  R067F1                  & Il sistema deve verificare che i dati inseriti rispettino i vincoli imposti                                                                    & AUC5.2                        \\
+  R068F1                  & L'interfaccia web deve visualizzare una pagina di errore nel caso in cui i dati inseriti non rispettino i vincoli imposti                      & AUC5.3                        \\
+  R069F1                  & L'interfaccia web deve permettere all'utente \textit{root} di gestire le organizzazioni                                                        & AUC6                          \\
+  R070F1                  & L'interfaccia web deve permettere all'utente \textit{root} di creare un'organizzazione                                                         & AUC6.1                        \\
+  R071F1                  & L'interfaccia web deve permettere agli utenti \textit{root} e owner di inserire il nome di un'organizzazione                                   & AUC6.1.1                      \\
+  R072F1                  & L'interfaccia web deve permettere agli utenti \textit{root} e owner di inserire l'indirizzo di un'organizzazione                               & AUC6.1.2                      \\
+  R073F1                  & L'interfaccia web deve permettere agli utenti \textit{root} e owner di inserire la descrizione di un'organizzazione                            & AUC6.1.3                      \\
+  R074F1                  & L'interfaccia web deve permettere agli utenti \textit{root} e owner di inserire i dati del server LDAP di un'organizzazione                    & AUC6.1.4                      \\
+  R075F1                  & L'interfaccia web deve permettere all'utente \textit{root} di eliminare un'organizzazione                                                      & AUC6.2                        \\
+  R076F1                  & L'interfaccia web deve permettere all'utente \textit{root} di modificare un'organizzazione                                                     & AUC6.3                        \\
+  R077F1                  & L'interfaccia web deve permettere all'utente \textit{root} di modificare il nome di un'organizzazione                                          & AUC6.3.1                      \\
+  R078F1                  & L'interfaccia web deve permettere all'utente \textit{root} di modificare l'indirizzo di un'organizzazione                                      & AUC6.3.2                      \\
+  R079F1                  & L'interfaccia web deve permettere all'utente \textit{root} di modificare la descrizione di un'organizzazione                                   & AUC6.3.3                      \\
+  R080F1                  & L'interfaccia web deve permettere all'utente \textit{root} di gestire i luoghi di un'organizzazione                                            & AUC6.3.4                      \\
+  R081F1                  & L'interfaccia web deve permettere all'utente \textit{root} di aggiungere un luogo ad un'organizzazione                                         & AUC6.3.4.1                    \\
+  R082F1                  & L'interfaccia web deve permettere all'utente \textit{root} di compilare il campo \textit{coordinate geografiche} nel form                      & AUC6.3.4.1.1                  \\
+  R083F1                  & L'interfaccia web deve permettere all'utente \textit{root} di eliminare un luogo da un'organizzazione                                          & AUC6.3.4.2                    \\
+  R084F1                  & L'interfaccia web deve permettere all'utente \textit{root} di modificare un luogo di un'organizzazione                                         & AUC6.3.4.3                    \\
+  R085F1                  & L'interfaccia web deve permettere all'utente \textit{root} di compilare il campo \textit{coordinate geografiche} nel form di modifica          & AUC6.3.4.3.1                  \\
+  R086F1                  & L'interfaccia web deve permettere all'utente \textit{root} di selezionare un luogo di un'organizzazione da una lista                           & AUC6.3.4.4                    \\
+  R087F1                  & L'interfaccia web deve permettere all'utente \textit{root} di modificare i dati del server LDAP di un'organizzazione                           & AUC6.3.5                      \\
+  R088F1                  & L'interfaccia web deve permettere all'utente \textit{root} di selezionare un'organizzazione da una lista                                       & AUC6.4                        \\
+  R089F1                  & L'interfaccia web deve permettere all'utente \textit{root} di aggiornare la lista delle organizzazioni                                         & AUC6.5                        \\
+  R090F1                  & L'interfaccia web deve permettere all'utente \textit{root} di eliminare un account                                                             & AUC7                          \\
+  R091F1                  & L'interfaccia web deve permettere all'utente \textit{root} di selezionare un account da una lista                                              & AUC7.1                        \\
+  R092F1                  & Il sistema restituisce correttamente le informazioni richieste riguardo le interrogazioni                                                      & AUC8                          \\
+  R093F1                  & Il sistema restituisce correttamente le informazioni richieste riguardo i dipendenti                                                           & AUC9                          \\
+  R094F1                  & L'interfaccia web deve permettere al gestore di visualizzare le richieste sui luoghi                                                           & AUC10                         \\
+  R095F1                  & L'interfaccia web deve permettere al gestore di richiedere che venga aggiunto un luogo alla sua organizzazione                                 & AUC10.1                       \\
+  R096F1                  & L'interfaccia web deve permettere al gestore di richiedere che venga rimosso un luogo dalla sua organizzazione                                 & AUC10.2                       \\
+  R097F1                  & L'interfaccia web deve permettere al gestore di richiedere che venga modificato un luogo della sua organizzazione                              & AUC10.3                       \\
+  R098F1                  & L'interfaccia web deve permettere al gestore di richiedere che venga modificata la sua organizzazione                                          & AUC10.4                       \\
+  R099F1                  & L'interfaccia web deve permettere all'owner di richiedere che venga creata un'organizzazione                                                   & AUC11                         \\
+  R100F1                  & L'interfaccia web deve permettere all'owner di richiedere che venga ceduta la proprietà di una sua organizzazione                              & AUC12                         \\
+  R101F1                  & L'interfaccia web deve permettere all'owner di compilare il campo \textit{email del nuovo owner} nel form                                      & AUC12.1                       \\
+  R102F1                  & L'interfaccia web deve permettere all'owner di nominare un visualizzatore per la sua organizzazione                                            & AUC13                         \\
+  R103F1                  & L'interfaccia web deve permettere all'owner di compilare il campo \textit{email del visualizzatore} nel form                                   & AUC13.1                       \\
+  R104F1                  & L'interfaccia web deve permettere all'owner di nominare un gestore per la sua organizzazione                                                   & AUC14                         \\
+  R105F1                  & L'interfaccia web deve permettere all'owner di compilare il campo \textit{email del gestore} nel form                                          & AUC14.1                       \\
 \end{longtable}
-
-\plchold{chiedere a davide}
-% storico utente: requisito funzionale desiderabile - fonte: capitolato
 
 \end{document}
