@@ -5,7 +5,31 @@
 %UUC1 (start)
 \subsubsection{UUC1 - Registrazione}%
 \label{subsub:UUC1utente}
-%inserire diagramma UUC1
+
+\begin{plantuml}
+@startuml
+!include ../../commons/style/use-cases.pu
+
+title UUC1 - Registrazione
+
+actor :utente non autenticato: as A
+
+rectangle {
+  together {
+    usecase (UUC1.1) as "UUC1.1\nVisualizzazione EULA"
+    usecase (UUC1.2) as "UUC1.2\nInserimento dati registrazione"
+    usecase (UUC1.1.1) as "UUC1.1.1\nConferma EULA"
+  }
+}
+
+:A: -- (UUC1.1)
+:A: -- (UUC1.2)
+
+(UUC1.1.1) .up.|> (UUC1.1) : <<include>>
+
+@enduml
+\end{plantuml}
+
 \begin{itemize}
   \item \textbf{Caso d’uso:} UUC1
   \item \textbf{Titolo:} Registrazione
