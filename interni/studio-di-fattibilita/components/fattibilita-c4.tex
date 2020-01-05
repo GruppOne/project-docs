@@ -2,73 +2,73 @@
 \appendToGraphicspath{../../commons/img/}
 
 \begin{document}
-	\subsection{Informazioni generali}
-	\label{subsec:informazioni_generali}
-	\begin{description}
-		\item[Nome] C4-Predire in Grafana
-		\item[Proponente] Zucchetti S.p.A.
-		\item[Committente] Tullio Vardanega
-	\end{description}
-	% subsection informazioni_generali (end)
+  \subsection{Informazioni generali}%
+  \label{subsec:informazioni_generali}
+  \begin{description}
+    \item[Nome] C4-Predire in Grafana
+    \item[Proponente] Zucchetti S.p.A.
+    \item[Committente] Tullio Vardanega
+  \end{description}
+  % subsection informazioni_generali (end)
 
 
-	\subsection{Descrizione}
-	\label{subsec:descrizione}
-	Nello scenario Dev-Ops, Zucchetti S.p.A. utilizza Grafana come strumento di monitoraggio di sistemi.
-	Grafana è un prodotto open-source che possiede diversi elementi, quali sistemi di presentazione del dato e sistemi di allarme, raccolti in dashboard che fanno uso di grafici per rappresentare il flusso di dati analizzati.
-	% subsection descrizione (end)
+  \subsection{Descrizione}%
+  \label{subsec:descrizione}
+  Nello scenario Dev-Ops, Zucchetti S.p.A. utilizza Grafana come strumento di monitoraggio di sistemi.
+  Grafana è un prodotto open-source che possiede diversi elementi, quali sistemi di presentazione del dato e sistemi di allarme, raccolti in dashboard che fanno uso di grafici per rappresentare il flusso di dati analizzati.
+  % subsection descrizione (end)
 
 
-	\subsection{Finalità del progetto}
-	\label{subsec:finalita_del_progetto}
-	Si vuole realizzare un plugin scritto in Javascript che effettui previsioni sul flusso di dati raccolti per monitorare lo stato del sistema e, conseguentemente, segnalare agli operatori eventuali problemi, o zone, in cui è richiesto un intervento. La Zucchetti propone come soluzione un algoritmo predittivo di apprendimento automatico, il Support Vector Machine (SVM), e un metodo di stima dell'andamento di un insieme di dati, la regressione lineare (RL).
+  \subsection{Finalità del progetto}%
+  \label{subsec:finalita_del_progetto}
+  Si vuole realizzare un plugin scritto in Javascript che effettui previsioni sul flusso di dati raccolti per monitorare lo stato del sistema e, conseguentemente, segnalare agli operatori eventuali problemi, o zone, in cui è richiesto un intervento. La Zucchetti propone come soluzione un algoritmo predittivo di apprendimento automatico, il Support Vector Machine (SVM), e un metodo di stima dell'andamento di un insieme di dati, la regressione lineare (RL).
 
-	Nello specifico sono richiesti i seguenti compiti:
-	\begin{itemize}
-		\item Produrre un file JSON con i parametri per le previsioni che dovrà essere utilizzato dalla metodologia scelta;
-		\item leggere il predittore dal file json;
-		\item associare i predittori al flusso dati di Grafana;
-		\item applicare la previsione e rendere disponibili i dati al sistema Grafana;
-		\item rendere consultabili i dati tramite una dashboard contenente grafici esplicativi;
-	\end{itemize}
-	% subsection finalità_del_progetto (end)
-
-	
-	\subsection{Tecnologie e Metodologie di sviluppo interessate}
-	\label{subsec:tecnologie_interessate}
-	\begin{description}
-		\item [Grafana]: il plug-in è sviluppato per la piattaforma Grafana;
-		\item [Linguaggio Javascript]: è richiesta la realizzazione di un plug-in che possa integrarsi con la piattaforma Grafana, stata sviluppata in Javascript;
-		\item [Librerie Javascript]: sono necessarie per l'implementazione dei modelli di classificazione e regressione (SVM e RL);
-		\item [Orange Canvas]: è lo strumento di analisi dei dati consigliato dal proponente.
-	\end{description}
-	% subsection tecnologie_interessate (end)
+  Nello specifico sono richiesti i seguenti compiti:
+  \begin{itemize}
+    \item Produrre un file JSON con i parametri per le previsioni che dovrà essere utilizzato dalla metodologia scelta;
+    \item leggere il predittore dal file json;
+    \item associare i predittori al flusso dati di Grafana;
+    \item applicare la previsione e rendere disponibili i dati al sistema Grafana;
+    \item rendere consultabili i dati tramite una dashboard contenente grafici esplicativi;
+  \end{itemize}
+  % subsection finalità_del_progetto (end)
 
 
-	\subsection{Aspetti positivi}
-	\label{subsec:aspetti_positivi}
-	\begin{itemize}
-		\item Le librerie Javascript e la documentazione per SVM e RL sono direttamente fornite dal proponente;
-		\item gli algoritmi proposti sono interessanti dal punto di vista formativo;
-		\item la possibilità di poter implementare dei meccanismi di apprendimento di flusso in costante adattamento con i dati osservati;
-		\item la facilità nell'esecuzione dei test di verifica.
-	\end{itemize}
-	% subsection aspetti_positivi (end)
+  \subsection{Tecnologie e Metodologie di sviluppo interessate}%
+  \label{subsec:tecnologie_interessate}
+  \begin{description}
+    \item [Grafana]: il plug-in è sviluppato per la piattaforma Grafana;
+    \item [Linguaggio Javascript]: è richiesta la realizzazione di un plug-in che possa integrarsi con la piattaforma Grafana, stata sviluppata in Javascript;
+    \item [Librerie Javascript]: sono necessarie per l'implementazione dei modelli di classificazione e regressione (SVM e RL);
+    \item [Orange Canvas]: è lo strumento di analisi dei dati consigliato dal proponente.
+  \end{description}
+  % subsection tecnologie_interessate (end)
 
 
-	\subsection{Criticità e fattori di rischio}
-	\label{subsec:criticita_e_fattori_di_rischio}
-	\begin{itemize}
-		\item Si devono utilizzare i propri dati. Zucchetti non consente l'uso dei dati di Grafana.
-		\item Il gruppo non reputa interessante lo sviluppo di un plug-in Javascript.
-	\end{itemize}
-	% subsection criticità_e_fattori_di_rischio (end)
+  \subsection{Aspetti positivi}%
+  \label{subsec:aspetti_positivi}
+  \begin{itemize}
+    \item Le librerie Javascript e la documentazione per SVM e RL sono direttamente fornite dal proponente;
+    \item gli algoritmi proposti sono interessanti dal punto di vista formativo;
+    \item la possibilità di poter implementare dei meccanismi di apprendimento di flusso in costante adattamento con i dati osservati;
+    \item la facilità nell'esecuzione dei test di verifica.
+  \end{itemize}
+  % subsection aspetti_positivi (end)
 
 
-	\subsection{Conclusioni}
-	\label{subsec:conclusioni}
-	Il progetto non richiede un oneroso carico di lavoro in termini di ore di apprendimento e sviluppo per il soddisfacimento dei requisiti obbligatori. È invece richiesto un impegno più consistente nel caso in cui si vogliano soddisfare tutti i requisiti opzionali proposti.
-	Il gruppo ha considerato il capitolato come terza scelta.
-	% subsection conclusioni (end)
+  \subsection{Criticità e fattori di rischio}%
+  \label{subsec:criticita_e_fattori_di_rischio}
+  \begin{itemize}
+    \item Si devono utilizzare i propri dati. Zucchetti non consente l'uso dei dati di Grafana.
+    \item Il gruppo non reputa interessante lo sviluppo di un plug-in Javascript.
+  \end{itemize}
+  % subsection criticità_e_fattori_di_rischio (end)
+
+
+  \subsection{Conclusioni}%
+  \label{subsec:conclusioni}
+  Il progetto non richiede un oneroso carico di lavoro in termini di ore di apprendimento e sviluppo per il soddisfacimento dei requisiti obbligatori. È invece richiesto un impegno più consistente nel caso in cui si vogliano soddisfare tutti i requisiti opzionali proposti.
+  Il gruppo ha considerato il capitolato come terza scelta.
+  % subsection conclusioni (end)
 
 \end{document}
