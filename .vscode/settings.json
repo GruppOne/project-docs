@@ -26,6 +26,7 @@
         "--synctex=1",
         "--interaction=nonstopmode",
         "--c-style-errors",
+        // XXX N.B.: --shell-escape costituisce un rischio alla sicurezza perché consente a LaTeX di eseguire snippet di codice potenzialmente dannoso. Per noi la flag è necessaria per poter compilare correttamente i diagrammi plantuml
         "--shell-escape",
         "--output-directory=%OUTDIR%",
         "%DOC%"
@@ -56,4 +57,9 @@
     "en",
     "it"
   ],
+  "spellright.ignoreRegExpsByClass": {
+    "latex": [
+      "/\\\\begin{plantuml}[^]*?\\\\end{plantuml}/gm"
+    ]
+  }
 }
