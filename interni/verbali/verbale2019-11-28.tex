@@ -1,10 +1,9 @@
 \documentclass{article}
 
-\newcommand{\commons}{../../commons}
+\input{../../commons/config}
+\appendToGraphicspath{../../commons/img/}
 
-\input{\commons/config}
-
-\title{Verbale - 28/11/2019} % chktex 8
+\title{Verbale --- 28/11/2019}
 
 \setVersione{\plchold{versione}}
 \setResponsabile{\plchold{responsabile}}
@@ -17,10 +16,9 @@
 
 \begin{document}
 
-\input{\commons/template}
-\pagenumbering{arabic}
+\input{../../commons/template}
 
-\section{Ordine del giorno}
+\section{Ordine del giorno}%
 \label{sec:ordine_del_giorno}
 
 \begin{itemize}
@@ -36,7 +34,7 @@
 \end{itemize}
 
 % section Ordine_del_giorno (end)
-\section{Ruoli}
+\section{Ruoli}%
 \label{sec:ruoli}
 
 In prima analisi, abbiamo scelto di dividere i ruoli come segue:
@@ -53,7 +51,7 @@ In prima analisi, abbiamo scelto di dividere i ruoli come segue:
 \end{description}
 
 % section ruoli (end)
-\section{Configurazione repo}
+\section{Configurazione repo}%
 \label{sec:configurazione_repo}
 
 Abbiamo scelto di utilizzare repo separate per documentazione e prodotto, anche considerando che i capitolati verso cui siamo orientati prevedono lo sviluppo, ad esempio, di un server centrale e di un app separata.
@@ -61,15 +59,15 @@ La repo di documentazione è divisa nelle cartelle \verb|interni| e \verb|estern
 Ciascuna cartella contiene il file principale del documento ed una sottocartella contenente i file relativi alle sue singole parti.
 Abbiamo rimandato la definizione della struttura delle repo di codice alla stesura delle Norme di Progetto.
 
-\subsection{Template documenti}
+\subsection{Template documenti}%
 \label{sub:template_documenti}
 
 I documenti saranno scritti in LaTeX, usando una struttura a più file separati (come evidenziato dall'organizzazione della repo).
-Abbiamo deciso di utilizzare dei \quotes{file di configurazione} di alto livello e dei file template per uniformare la struttura dei documenti.
+Abbiamo deciso di utilizzare dei ``file di configurazione'' di alto livello e dei file template per uniformare la struttura dei documenti.
 Per la stesura del registro delle modifiche abbiamo deciso di utilizzare dei tool automatici, legati ai messaggi di commit (vedi sezione~\ref{sub:standard_messaggi_di_commit}).
 
 % subsection template_documenti (end)
-\subsection{Scansione date e milestone}
+\subsection{Scansione date e milestone}%
 \label{sub:scansione_date_e_milestone}
 
 \begin{description}
@@ -82,21 +80,21 @@ Per la stesura del registro delle modifiche abbiamo deciso di utilizzare dei too
 \end{description}
 
 % subsection scansione_date_e_milestone (end)
-\subsection{Standard messaggi di commit}
+\subsection{Standard messaggi di commit}%
 \label{sub:standard_messaggi_di_commit}
 
 Abbiamo scelto di scrivere i messaggi di commit seguendo lo standard dato da \href{https://www.conventionalcommits.org/en/v1.0.0/}{conventional commits v1.0.0};
 i commit relativi alla repo di documentazione avranno commit message in italiano per facilitare la generazione automatica del registro delle modifiche.
 
 % subsection standard_messaggi_di_commit (end)
-\subsection{Versionamento}
+\subsection{Versionamento}%
 \label{sub:versionamento}
 Abbiamo deciso di utilizzare il \href{https://semver.org/}{semantic versioning 2.0.0} per il versionamento, considerandone una versione modificata per il versionamento dei documenti.
 Per le specifiche, rimandiamo alle Norme di Progetto, ma l'idea sarà di incrementare MAJOR con le approvazioni, MINOR con le verifiche e PATCH con le modifiche.
 
 % subsection versionamento (end)
 % section configurazione_repo (end)
-\section{Studio di fattibilità}
+\section{Studio di fattibilità}%
 \label{sec:studio_di_fattibilità}
 
 Abbiamo riunito le informazioni raccolte dai singoli componenti del gruppo sui singoli capitolati in un unico file, studio-di-fattibilita.tex
