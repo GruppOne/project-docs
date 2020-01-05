@@ -282,3 +282,7 @@ TSWLatexianTemp*
 
 # ignora file temporanei di latexindent
 __latexindent_temp.tex
+
+# ignora file generati dal package plantuml
+*plantuml.txt
+*plantuml.latex

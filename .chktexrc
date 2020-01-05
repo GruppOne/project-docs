@@ -227,6 +227,7 @@ UserWarn
 
   # utilizziamo \href per i link
   \url
+  \plchold
   grupp0ne
 ]
 
@@ -553,6 +554,7 @@ VerbEnvir
 {
     verbatim comment listing verbatimtab rawhtml errexam picture texdraw
     filecontents pgfpicture tikzpicture minted lstlisting IPA
+    plantuml
 }
 
 #####################################################################
