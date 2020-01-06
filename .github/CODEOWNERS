@@ -1,3 +1,39 @@
+# ------------------------------ #
+# Responsabile: Alessandro Rizzo #
+# ------------------------------ #
+
+# ----------------------------------------------- #
+# Verificatori e Redattori assegnati ai documenti #
+# ----------------------------------------------- #
+
+/esterni/analisi-dei-requisiti/ @TobiaApolloni @erclu
+# Redattori:
+# Riccardo Cestaro, Alberto Gobbo, Fabio Scettro
+
+/esterni/glossario/ @RiccardoAgatea
+# Redattori:
+# Alberto Gobbo
+
+/esterni/piano-di-progetto/ @RiccardoCestaro @Alberto1598
+# Redattori:
+# Riccardo Agatea, Alessandro Rizzo
+
+/esterni/piano-di-qualifica/ @RiccardoAgatea @AlbertoGobbo
+# Redattori:
+# Tobia Apolloni, Riccardo Cestaro, Luca Ercole
+
+/interni/norme-di-progetto/ @AlexRizzus @fabioscettro
+# Redattori:
+# Alberto Cocco, Luca Ercole
+
+/interni/studio-di-fattibilita/ @RiccardoAgatea @erclu
+# Redattori:
+# Riccardo Agatea, Tobia Apolloni, Riccardo Cestaro, Alberto Cocco, Alberto Gobbo, Alessandro Rizzo, Fabio Scettro
+
+/interni/verbali/ @TobiaApolloni @RiccardoCestaro
+# Redattori:
+# Riccardo Agatea, Luca Ercole
+
 # ------------------------------------------ #
 # Verificatori assegnati alla configurazione #
 # ------------------------------------------ #
@@ -13,21 +49,3 @@
 
 # template, configurazione e file comuni di documenti LaTex
 /commons/ @RiccardoAgatea
-
-# ----------------------------------- #
-# Verificatori assegnati ai documenti #
-# ----------------------------------- #
-
-/esterni/analisi-dei-requisiti/ @erclu @TobiaApolloni
-
-/esterni/glossario/ @AlbertoGobbo @RiccardoAgatea
-
-/esterni/piano-di-progetto/ @Alberto1598 @RiccardoCestaro
-
-/esterni/piano-di-qualifica/ @AlbertoGobbo @RiccardoAgatea
-
-/interni/norme-di-progetto/ @AlexRizzus @fabioscettro
-
-/interni/studio-di-fattibilita/ @erclu @RiccardoAgatea
-
-/interni/verbali/ @RiccardoCestaro @TobiaApolloni

@@ -24,4 +24,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: check for CRLF endings
-        uses: erclu/check-crlf@v1.0
+        uses: erclu/check-crlf@v1
