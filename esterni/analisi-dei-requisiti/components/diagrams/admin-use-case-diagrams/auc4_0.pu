@@ -7,6 +7,8 @@ actor :amministratore: as A
 
 rectangle {
   together {
+    usecase (AUC4.8) as "AUC4.8\nGestione richiesta nuovo gestore"
+    usecase (AUC4.7) as "AUC4.7\nGestione richiesta nuovo visualizzatore"
     usecase (AUC4.6) as "AUC4.6\nGestione richiesta trasferimento di proprietà organizzazione"
     usecase (AUC4.5) as "AUC4.5\nGestione richiesta modifica luogo"
     usecase (AUC4.4) as "AUC4.4\nGestione richiesta aggiunta luogo"
@@ -22,5 +24,7 @@ rectangle {
 :A: -- AUC4.4
 :A: -- AUC4.5
 :A: -- AUC4.6
+:A: -- AUC4.7
+:A: -- AUC4.8
 
 @enduml

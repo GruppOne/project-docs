@@ -1,7 +1,7 @@
 ﻿@startuml
 !include ../../../../../commons/style/use-cases.pu
 
-title AUC13 - Nomina visualizzatore
+title AUC13 - Richiesta aggiunta visualizzatore
 
 actor :owner: as A
 

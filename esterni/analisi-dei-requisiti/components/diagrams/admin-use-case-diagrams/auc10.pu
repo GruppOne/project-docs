@@ -35,5 +35,4 @@ rectangle {
 (AUC6.3.4.1.1) .up.|> (AUC10.1) : <<include>>
 (AUC6.3.5) .up.|> (AUC10.4) : <<include>>
 
-
 @enduml

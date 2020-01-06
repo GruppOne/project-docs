@@ -1,0 +1,18 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+
+title AUC4.7 - Gestione richiesta nuovo visualizzatore
+
+actor :amministratore: as A
+
+rectangle {
+  together {
+    usecase (AUC4.7.2) as "AUC4.7.2\nRifiuta richiesta\nnuovo visualizzatore"
+    usecase (AUC4.7.1) as "AUC4.7.1\nAccetta richiesta\nnuovo visualizzatore"
+  }
+}
+
+:A: -- AUC4.7.1
+:A: -- AUC4.7.2
+
+@enduml

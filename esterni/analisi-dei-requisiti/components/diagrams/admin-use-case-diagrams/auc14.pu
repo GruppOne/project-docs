@@ -1,6 +1,6 @@
-﻿@startuml AUCNominagestore
+﻿@startuml
 !include ../../../../../commons/style/use-cases.pu
-title AUC14 - Nomina gestore
+title AUC14 - Richiesta aggiunta gestore
 
 actor :owner: as A
 
