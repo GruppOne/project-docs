@@ -7,7 +7,7 @@ Considerate le scadenze scelte in sottosezione~\ref{sub:scadenze_fissate} ed il 
   \item Preparazione in entrata alla RR
   \item Progettazione architetturale
   \item Preparazione in entrata alla RP
-  \item Sette fasi di incremento
+  \item Sette \glossario{fasi di incremento}
   \item Preparazione in entrata alla RQ
   \item Verifica e collaudo finali
   \item Preparazione in entrata alla RA
@@ -324,44 +324,103 @@ Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
   \end{itemize}
 \end{itemize}
 % sub:preparazione_in_entrata_alla_rp (end)
-\subsection[Incremento 1]{Incremento 1 {\normalsize\normalfont\itshape(DD/MM/2020 \symbol{8594} DD/MM/2020)}}%
-\label{sub:incremento_1}
-\plchold{Registrazione, login, (setup root), root elimina account}
-% sub:incremento_1 (end)
-\subsection[Incremento 2]{Incremento 2 {\normalsize\normalfont\itshape(DD/MM/2020 \symbol{8594} DD/MM/2020)}}%
-\label{sub:incremento_2}
-\plchold{Creazione admin, richiesta ownering, gestione richieste (ownering)}
-% sub:incremento_2 (end)
-\subsection[Incremento 3]{Incremento 3 {\normalsize\normalfont\itshape(DD/MM/2020 \symbol{8594} DD/MM/2020)}}%
-\label{sub:incremento_3}
-\plchold{richiesta creazione organizzazione, gestione richieste (creazione organizzazione), root crea organizzazione, richiesta modifica organizzazione, gestione richieste (modifica organizzazione), root modifica organizzazione, root elimina organizzazione}
-% sub:incremento_3 (end)
-\subsection[Incremento 4]{Incremento 4 {\normalsize\normalfont\itshape(DD/MM/2020 \symbol{8594} DD/MM/2020)}}%
-\label{sub:incremento_4}
-\plchold{visualizza lista organizzazioni, collegamento a (lista) organizzazione/i, richiesta interrogazioni, richiesta dipendenti, anonimato}
-% sub:incremento_4 (end)
-\subsection[Incremento 5]{Incremento 5 {\normalsize\normalfont\itshape(DD/MM/2020 \symbol{8594} DD/MM/2020)}}%
-\label{sub:incremento_5}
-\plchold{richiesta creazione gestore, richiesta creazione visualizzatore}
-% sub:incremento_5 (end)
-\subsection[Incremento 6]{Incremento 6 {\normalsize\normalfont\itshape(DD/MM/2020 \symbol{8594} DD/MM/2020)}}%
-\label{sub:incremento_6}
-\plchold{richiesta gestione luogo, gestione richieste (creazione luogo), gestione richieste (modifica luogo), root gestione luoghi}
-% sub:incremento_6 (end)
-\subsection[Incremento 7]{Incremento 7 {\normalsize\normalfont\itshape(DD/MM/2020 \symbol{8594} DD/MM/2020)}}%
-\label{sub:incremento_7}
-\plchold{recupero credenziali, storico accessi utente, richiesta trasferimento proprietà, gestione richieste (trasferimento proprietà)}
-% sub:incremento_7 (end)
+\subsection{Incrementi}%
+\label{sub:incrementi}
+Durante le fasi di incremento, il gruppo progetta i dettagli del prodotto, li implementa e verifica che siano coerenti con il resto del sistema e che soddisfino i requisiti considerati.
+Data la natura ciclica del modello di sviluppo incrementale, le fasi di incremento hanno tutte la stessa struttura. Per ciascuna fase di incremento i ruoli coinvolti sono:
+\begin{itemize}
+  \item Responsabile
+  \item Amministratore
+  \item Progettista
+  \item Programmatore
+  \item Verificatore
+\end{itemize}
+Le precondizioni sono:
+\begin{itemize}
+  \item Tutte le postcondizioni della fase precedente sono state soddisfatte
+\end{itemize}
+Le postcondizioni sono:
+\begin{itemize}
+  \item Il prodotto soddisfa tutti i requisiti associati con questa fase di incremento
+  \item Il gruppo ha raccolto le considerazioni della progettazione nella \textit{Product baseline}
+\end{itemize}
+L'associazione fra requisiti e fasi di incremento verrà presentata in seguito.\par
+Ciascuna fase di incremento è divisa in tre periodi.
+Per ciascuno si elencano le attività coinvolte ed i rispettivi compiti che devono essere svolti.
+\subsubsection{Progettazione di dettaglio}%
+\label{subs:progettazione_di_dettaglio}
+\begin{itemize}
+  \item Progettazione
+  \begin{itemize}
+    \item Definizione delle classi e delle loro interrelazioni
+  \end{itemize}
+  \item Produzione documentazione
+  \begin{itemize}
+    \item Stesura \textit{Product baseline}
+  \end{itemize}
+\end{itemize}
+% subs:progettazione_di_dettaglio (end)
+\subsubsection{Implementazione}%
+\label{subs:implementazione}
+\begin{itemize}
+  \item Codifica delle classi
+\end{itemize}
+% subs:implementazione (end)
+\subsubsection{Verifica}%
+\label{subs:verifica}
+\begin{itemize}
+  \item Test
+  \begin{itemize}
+    \item Test del codice
+    \item Collaudo delle funzionalità
+  \end{itemize}
+\end{itemize}
+% subs:verifica (end)
+\subsubsection{Dettagli degli incrementi}%
+\label{subs:dettagli_degli_incrementi}
+Per ogni fase di incremento vengono presentate le date di inizio e fine ed i requisiti associati.
+\begin{description}
+  \item[Incremento 1] DD/MM/2020 \symbol{8594} DD/MM/2020
+  \begin{itemize}
+    \item \plchold{Registrazione, login, (setup root), root elimina account}
+  \end{itemize}
+  \item[Incremento 2] DD/MM/2020 \symbol{8594} DD/MM/2020
+  \begin{itemize}
+    \item \plchold{Creazione admin, richiesta ownering, gestione richieste (ownering)}
+  \end{itemize}
+  \item[Incremento 3] DD/MM/2020 \symbol{8594} DD/MM/2020
+  \begin{itemize}
+    \item \plchold{richiesta creazione organizzazione, gestione richieste (creazione organizzazione), root crea organizzazione, richiesta modifica organizzazione, gestione richieste (modifica organizzazione), root modifica organizzazione, root elimina organizzazione}
+  \end{itemize}
+  \item[Incremento 4] DD/MM/2020 \symbol{8594} DD/MM/2020
+  \begin{itemize}
+    \item \plchold{visualizza lista organizzazioni, collegamento a (lista) organizzazione/i, richiesta interrogazioni, richiesta dipendenti, anonimato}
+  \end{itemize}
+  \item[Incremento 5] DD/MM/2020 \symbol{8594} DD/MM/2020
+  \begin{itemize}
+    \item \plchold{richiesta creazione gestore, richiesta creazione visualizzatore}
+  \end{itemize}
+  \item[Incremento 6] DD/MM/2020 \symbol{8594} DD/MM/2020
+  \begin{itemize}
+    \item \plchold{richiesta gestione luogo, gestione richieste (creazione luogo), gestione richieste (modifica luogo), root gestione luoghi}
+  \end{itemize}
+  \item[Incremento 7] DD/MM/2020 \symbol{8594} DD/MM/2020
+  \begin{itemize}
+    \item \plchold{recupero credenziali, storico accessi utente, richiesta trasferimento proprietà, gestione richieste (trasferimento proprietà)}
+  \end{itemize}
+\end{description}
+% subs:dettagli_degli_incrementi (end)
+% sub:incrementi (end)
 \subsection[Preparazione in entrata alla RQ]{Preparazione in entrata alla RQ {\normalsize\normalfont\itshape(DD/MM/2020 \symbol{8594} DD/MM/2020)}}%
 \label{sub:preparazione_in_entrata_alla_rq}
-
+\plchold{help}
 % sub:preparazione_in_entrata_alla_rq (end)
 \subsection[Verifica e collaudo finali]{Verifica e collaudo finali {\normalsize\normalfont\itshape(DD/MM/2020 \symbol{8594} DD/MM/2020)}}%
 \label{sub:verifica_e_collaudo_finali}
-
+\plchold{help}
 % sub:verifica_e_collaudo_finali (end)
 \subsection[Preparazione in entrata alla RA]{Preparazione in entrata alla RA {\normalsize\normalfont\itshape(DD/MM/2020 \symbol{8594} DD/MM/2020)}}%
 \label{sub:preparazione_in_entrata_alla_ra}
-
+\plchold{help}
 % sub:preparazione_in_entrata_alla_rp (end)
 \end{document}
