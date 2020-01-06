@@ -3,7 +3,8 @@
 \begin{document}
 
 %UUC1 (start)
-\subsubsection{UUC1 - Registrazione}%
+\subsubsection*{UUC1 - Registrazione}%
+\addtocounter{section}{1}
 \label{subsub:UUC1utente}
 
 \begin{plantuml}
@@ -982,5 +983,24 @@ rectangle {
         \end{enumerate}
 \end{itemize}
 % subsub:UUC12utente (end)
+
+
+%UUC13 (start)
+\begin{itemize}
+  \item \textbf{Caso d’uso:} UUC13
+  \item \textbf{Titolo:} Eliminazione account
+  \item \textbf{Attori primari:} utente autenticato
+  \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di eliminazione account.
+  \item \textbf{Postcondizione:} l'utente cancella il suo account.
+  \item \textbf{Scenario principale:}
+        \begin{enumerate}
+          \item l'utente vuole cancellare il suo account.
+        \end{enumerate}
+  \item \textbf{Estensioni:}
+        \begin{enumerate}
+          \item se l'utente cerca di cancellare il suo account in assenza di rete, si visualizzerà un errore.
+        \end{enumerate}
+\end{itemize}
+% subsub:UUC13 (end)
 
 \end{document}
