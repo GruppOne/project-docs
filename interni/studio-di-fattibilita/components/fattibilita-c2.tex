@@ -12,27 +12,26 @@
   % subsection informazioni_generali (end)
   \subsection{Descrizione}%
   \label{subsec:descrizione}
-  \textit{Etherless} si pone come servizio di calcolo distribuito per funzioni JavaScript, che permetta allo sviluppatore di mettere a disposizione una funzione a pagamento, e all'utente di usufruirne da remoto. È inoltre in grado di automatizzare il processo di pagamento della prestazione e di far pagare all'utente soltanto l'effettivo utilizzo del servizio.
+  \textit{Etherless} si propone come servizio di calcolo distribuito per funzioni JavaScript, che permetta allo sviluppatore di definire una funzione a pagamento, e all'utente di usufruirne da remoto. Deve inoltre essere in grado di automatizzare il processo di pagamento della prestazione e di far pagare all'utente soltanto l'effettivo utilizzo del servizio.
   % subsection descrizione (end)
   \subsection{Finalità del progetto}%
   \label{subsec:finalita_del_progetto}
-  Il software da realizzare consisterà in un pacchetto di \textit{Node.js}, installabile tramite \textit{npm} (\textit{node package manager ndr}), utilizzabile tramite interfaccia a riga di comando.
+  Il software da realizzare consiste in un pacchetto di \textit{Node.js}, installabile tramite \textit{npm} (\textbf{Node Package Manager}), utilizzabile tramite interfaccia a riga di comando.
   Il programma deve offrire le seguenti funzionalità:
   \begin{itemize}
     \item inizializzare \textit{Etherless} sulla propria macchina;
     \item configurare il proprio account \textit{Ethereum};
-    \item caricare le funzioni javascript da eseguire remotamente;
+    \item caricare le funzioni javascript eseguibili da remoto;
+    \item tracciare l'utilizzo delle funzioni in Ethereum;
     \item mostrare la lista delle funzioni a propria disposizione;
     \item utilizzare le funzioni messe a disposizione nel network;
     \item rimuovere le funzioni precendemente caricate.
   \end{itemize}
-  Per il server, il requisito più forte è la sua scalabilità, con un accento sulla scelta fra scalabilità orizzontale e verticale, in base al numero di utenti attivi.
   % subsection finalità_del_progetto (end)
   \subsection{Tecnologie e Metodologie di sviluppo interessate}%
   \label{subsec:tecnologie_interessate}
-    L'utilizzo di una funzione deve essere automaticamente tracciato e bisogna gestire il corrispondente pagamento in Ethereum.
   \begin{description}
-    \item[Blockchain] Ethereum;
+    \item[Ethereum] Blockchain sulla quale devono essere messe a disposizione le funzioni caricate dagli utenti;
     \item[Serverless Tecnology] per la gestione e l'esecuzione delle funzioni;
     \item[Typescript 3.6] per le comunicazioni tra utente e network;
     \item[ESlint] per l'analisi statica del codice;
