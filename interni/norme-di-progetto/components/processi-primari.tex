@@ -42,11 +42,11 @@ Il processo di fornitura contiene le attività e i compiti del fornitore. Esso g
 GruppOne si impegna a consegnare un sintetico documento contenente una breve descrizione, i pregi e le criticità riscontrati in ciascuno dei capitolati. Lo studio di fattibilità è redatto dall'\glossario{amministratore}
 con l'aiuto degli \glossario{analisti} e ha l'obiettivo di esporre quali capitolati sono stati presi in considerazione con le relative motivazioni. Il documento è così articolato:
 \begin{description}
-  \item [Descrizione]: si fornisce una breve descrizione del problema esposto dal proponente.
-  \item [Finalità del progetto]: si descrive che cosa bisogna realizzare.
-  \item [Tecnologie interessate]: si presentano le tecnologie da considerare in fase di sviluppo.
-  \item [Aspetti positivi]: si espongono i pregi del capitolato.
-  \item [Criticità e fattori di rischio]: si illustrano i difetti osservati studiando il capitolato.
+  \item [Descrizione] si fornisce una breve descrizione del problema esposto dal proponente.
+  \item [Finalità del progetto] si descrive che cosa bisogna realizzare.
+  \item [Tecnologie interessate] si presentano le tecnologie da considerare in fase di sviluppo.
+  \item [Aspetti positivi] si espongono i pregi del capitolato.
+  \item [Criticità e fattori di rischio] si illustrano i difetti osservati studiando il capitolato.
 \end{description}
 
 \subsubsection{Incontri con il proponente}%
@@ -56,9 +56,9 @@ Gruppo0ne intende mantenere uno stretto rapporto di collaborazione con i propone
 
 Gli obiettivi degli incontri sono:
 \begin{description}
-  \item [Comprensione e perfezionamento dei requisiti]: il team discute col proponente i problemi e i dubbi riscontrati durante l'analisi del capitolato in modo da comprendere incrementalmente i requisiti.
-  \item [Ricerca e valutazione del software]: il team chiede al proponente se le componenti e i software proposti soddisfino le funzionalità richieste.
-  \item [Convalida dei documenti e del prodotto]: il team si rivolge al proponente per avere conferme sul lavoro svolto siano essi documenti, \glossario{prototipi} appena abbozzati o prodotti software ad uno stato avanzato.
+  \item [Comprensione e perfezionamento dei requisiti] il team discute col proponente i problemi e i dubbi riscontrati durante l'analisi del capitolato in modo da comprendere incrementalmente i requisiti.
+  \item [Ricerca e valutazione del software] il team chiede al proponente se le componenti e i software proposti soddisfino le funzionalità richieste.
+  \item [Convalida dei documenti e del prodotto] il team si rivolge al proponente per avere conferme sul lavoro svolto siano essi documenti, \glossario{prototipi} appena abbozzati o prodotti software ad uno stato avanzato.
 \end{description}
 Gli esiti degli argomenti discussi durante gli incontri saranno poi riportati in verbali.
 
@@ -134,25 +134,25 @@ I diagrammi dei casi d'uso descrivono le funzioni e i servizi offerti dal prodot
 
 Nel presente paragrafo si descrive la rappresentazione testuale mentre nel successivo verrà descritta la rappresentazione grafica. Un generico caso d'uso è caratterizzato da:
 \begin{description}
-  \item [Sigla del caso d`uso]: per avere più ordine nell'esposizione dei casi d'uso si antepone una lettera maiuscola al caso d'uso. Useremo:
-  \begin{itemize}
-   \item A per distinguere i casi d'uso dell'admin.
-   \item U per distinguere i casi d'uso utente.
-  \end{itemize}
-  \item [Titolo]: breve titolo del caso d'uso.
-  \item [Codice]: codice identificativo del caso d'uso. Ogni caso d'uso può essere suddiviso in altri sottocasi. La denominazione convenzionale è la seguente:
+  \item [Sigla del caso d`uso] per avere più ordine nell'esposizione dei casi d'uso si antepone una lettera maiuscola al caso d'uso. Useremo:
+        \begin{itemize}
+          \item A per distinguere i casi d'uso dell'admin.
+          \item U per distinguere i casi d'uso utente.
+        \end{itemize}
+  \item [Titolo] breve titolo del caso d'uso.
+  \item [Codice] codice identificativo del caso d'uso. Ogni caso d'uso può essere suddiviso in altri sottocasi. La denominazione convenzionale è la seguente:
         \begin{description}
-          \item [Caso d'uso]: [A/U]UC[codice numerico].
-          \item [Sottocaso d'uso]: [A/U]UC[codice numerico del padre].[codice numerico del sottocaso].
+          \item [Caso d'uso]: [A/U]UC[codice numerico]
+          \item [Sottocaso d'uso]: [A/U]UC[codice numerico del padre].[codice numerico del sottocaso]
         \end{description}
         Ad esempio il primo caso d'uso admin avrà codice identificativo AUC1 mentre i relativi sottocasi saranno AUC1.1 AUC1.2 AUC1.3..
-  \item [Attore primario]: attore principale coinvolto nel caso d'uso.
-  \item [Attori secondari (opzionale)]: attori secondari coinvolti nel caso d'uso.
-  \item [Precondizione]: condizione in cui si trovano gli attori prima del verificarsi del caso d'uso.
-  \item [Postcondizione]: condizione in cui si trovano gli attori dopo il verificarsi del caso d'uso.
-  \item [Scenario principale]: sequenza di azioni svolte dall'attore per portare a compimento il caso d'uso.
-  \item [Inclusioni (opzionale)]: il caso d'uso incluso è incondizionatamente eseguito dal caso d'uso che lo include.
-  \item [Estensioni (opzionale)]: sequenza di possibilità dell'attore al verificarsi di eventi anomali o di situazioni di errore.
+  \item [Attore primario] attore principale coinvolto nel caso d'uso.
+  \item [Attori secondari (opzionale)] attori secondari coinvolti nel caso d'uso.
+  \item [Precondizione] condizione in cui si trovano gli attori prima del verificarsi del caso d'uso.
+  \item [Postcondizione] condizione in cui si trovano gli attori dopo il verificarsi del caso d'uso.
+  \item [Scenario principale] sequenza di azioni svolte dall'attore per portare a compimento il caso d'uso.
+  \item [Inclusioni (opzionale)] il caso d'uso incluso è incondizionatamente eseguito dal caso d'uso che lo include.
+  \item [Estensioni (opzionale)] sequenza di possibilità dell'attore al verificarsi di eventi anomali o di situazioni di errore.
 \end{description}
 
 \subparagraph{Diagrammi UML dei casi d'uso}%
@@ -165,10 +165,10 @@ I diagrammi dei casi d'uso forniscono una rappresentazione grafica del caso d'us
 \end{itemize}
 Gli attori interagiscono con il sistema pertanto si trovano fuori dallo scenario, mentre gli use case sono parte integrante dello scenario. I collegamenti tra attori e casi d'uso e tra quest'ultimi e altri casi d'uso avvengono tramite legami rappresentati mediante linee. Possono essere di quattro differenti tipi:
 \begin{description}
-  \item [Associazione]: l'associazione è la comunicazione diretta tra attore e use case. Rappresenta la partecipazione dell'attore al caso d'uso a cui è legato.
-  \item [Inclusione]: L'inclusione è un legame diretto stretto tra due use case. Dati due casi d'uso A e B, si dice che A include B se ogni istanza di A esegue B. B è incluso nell'esecuzione di A e la responsabilità di esecuzione di B è unicamente di A.
-  \item [Estensione]: L'estensione aumenta le funzionalità di uno use case. Dati due casi d'uso A e B, si dice che B estende A se A esegue B solo a determinate condizioni. L'esecuzione di B interrompe A e per questo motivo viene utilizzata prevalentemente per gestire errori e eccezioni.
-  \item [Generalizzazione]: La generalizzazione è un legame tra attori o più raramente tra use case. Dati due casi d'uso A e B, A è generalizzazione di B se condivide almeno le funzionalità di A. B può modificare le funzionalità di A, mentre tutte le funzionalità non ridefinite si mantengono identiche a quelle di A.
+  \item [Associazione] l'associazione è la comunicazione diretta tra attore e use case. Rappresenta la partecipazione dell'attore al caso d'uso a cui è legato.
+  \item [Inclusione] L'inclusione è un legame diretto stretto tra due use case. Dati due casi d'uso A e B, si dice che A include B se ogni istanza di A esegue B. B è incluso nell'esecuzione di A e la responsabilità di esecuzione di B è unicamente di A.
+  \item [Estensione] L'estensione aumenta le funzionalità di uno use case. Dati due casi d'uso A e B, si dice che B estende A se A esegue B solo a determinate condizioni. L'esecuzione di B interrompe A e per questo motivo viene utilizzata prevalentemente per gestire errori e eccezioni.
+  \item [Generalizzazione] La generalizzazione è un legame tra attori o più raramente tra use case. Dati due casi d'uso A e B, A è generalizzazione di B se condivide almeno le funzionalità di A. B può modificare le funzionalità di A, mentre tutte le funzionalità non ridefinite si mantengono identiche a quelle di A.
 \end{description}
 
 \paragraph{Progettazione}%
