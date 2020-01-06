@@ -108,21 +108,21 @@ Ogni requisito è caratterizzato da un codice alfanumerico così formato:
   \textbf{R[numero][tipo][priorità]}
 \end{center}
 in cui ogni elemento ha un diverso significato:
-\begin{itemize}
-  \item \textbf{Numero}: indica quale numero di caso d'uso si sta esaminando. È un numero progressivo a partire da 1.
-  \item \textbf{Tipo}: individua la tipologia di requisito. Esso può essere:
-        \begin{itemize}
-          \item F:\@funzionale --- \@indica servizi che il sistema dovrebbe fornire.
-          \item P:\@prestazionale ---\@indica le prestazioni che il programma deve fornire: \@velocità in esecuzione e memoria occupata.
-          \item D:\@dichiarativo --- \@indica requisiti definiti dall'esterno, ad esempio requisiti di vincolo esposti nel capitolato.
-        \end{itemize}
-  \item \textbf{Priorità}: determina la priorità del requisito con un numero da 1 a 3:
-        \begin{itemize}
-          \item 1: \@requisito obbligatorio che deve essere assolutamente soddisfatto dal sistema.
-          \item 2: \@requisito desiderabile il cui soddisfacimento è apprezzato dal committente.
-          \item 3: \@requisito facoltativo la cui decisione è lasciata al team.
-        \end{itemize}
-\end{itemize}
+\begin{description}
+  \item [Numero] indica quale numero di caso d'uso si sta esaminando. È un numero progressivo a partire da 1.
+  \item [Tipo] individua la tipologia di requisito. Esso può essere:
+        \begin{description}
+          \item [F (funzionale)] indica servizi che il sistema dovrebbe fornire.
+          \item [P (prestazionale)] indica le prestazioni che il programma deve fornire: velocità in esecuzione e memoria occupata.
+          \item [D (dichiarativo)] indica requisiti definiti dall'esterno, ad esempio requisiti di vincolo esposti nel capitolato.
+        \end{description}
+  \item [Priorità] determina la priorità del requisito con un numero da 1 a 3:
+        \begin{enumerate}
+          \item requisito obbligatorio che deve essere assolutamente soddisfatto dal sistema.
+          \item requisito desiderabile il cui soddisfacimento è apprezzato dal committente.
+          \item requisito facoltativo la cui decisione è lasciata al team.
+        \end{enumerate}
+\end{description}
 \subparagraph{Casi d'uso}%
 \label{subp:casi_d'uso}
 I diagrammi dei casi d'uso descrivono le funzioni e i servizi offerti dal prodotto agli attori che interagiscono con il sistema. Ogni caso d'uso ha:
