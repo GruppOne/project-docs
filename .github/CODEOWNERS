@@ -14,20 +14,34 @@
 # template, configurazione e file comuni di documenti LaTex
 /commons/ @RiccardoAgatea
 
-# ----------------------------------- #
-# Verificatori assegnati ai documenti #
-# ----------------------------------- #
+# ----------------------------------------------- #
+# Verificatori e Redattori assegnati ai documenti #
+# ----------------------------------------------- #
 
 /esterni/analisi-dei-requisiti/ @erclu @TobiaApolloni
+# Redattori:
+# Riccardo Cestaro, Alberto Gobbo, Fabio Scettro
 
-/esterni/glossario/ @AlbertoGobbo @RiccardoAgatea
+/esterni/glossario/ @RiccardoAgatea
+# Redattori:
+# Alberto Gobbo
 
 /esterni/piano-di-progetto/ @Alberto1598 @RiccardoCestaro
+# Redattori:
+# Riccardo Agatea, Alessandro Rizzo
 
 /esterni/piano-di-qualifica/ @AlbertoGobbo @RiccardoAgatea
+# Redattori:
+# Tobia Apolloni, Luca Ercole
 
 /interni/norme-di-progetto/ @AlexRizzus @fabioscettro
+# Redattori:
+# Alberto Cocco, Luca Ercole
 
 /interni/studio-di-fattibilita/ @erclu @RiccardoAgatea
+# Redattori:
+# Riccardo Agatea, Tobia Apolloni, Riccardo Cestaro, Alberto Cocco, Alberto Gobbo, Alessandro Rizzo, Fabio Scettro
 
 /interni/verbali/ @RiccardoCestaro @TobiaApolloni
+# Redattori:
+# Riccardo Agatea, Luca Ercole
