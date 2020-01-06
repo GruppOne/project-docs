@@ -494,6 +494,100 @@
 % subsub:AUC4.6.2 (end)
 % subsub:AUC4.6 (end)
 
+\subsubsection{AUC4.7 - Gestione richiesta nuovo visualizzatore}%
+\label{subsub:AUC4.7}
+\begin{itemize}
+  \item \textbf{Codice:} AUC4.7
+  \item \textbf{Titolo:} Gestione richiesta nuovo visualizzatore
+  \item \textbf{Attori primari:} amministratore
+  \item \textbf{Precondizione:} deve essere stata fatta la richiesta di nuovo visualizzatore da parte di un owner.
+  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'owner viene informato.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item l'amministratore approva o rifiuta la richiesta di nuovo visualizzatore.
+  \end{enumerate}
+\end{itemize}
+
+
+\subsubsection{AUC4.7.1 - Accetta richiesta nuovo visualizzatore}%
+\label{subsub:AUC4.7.1}
+\begin{itemize}
+  \item \textbf{Codice:} AUC4.7.1
+  \item \textbf{Titolo:} Accetta richiesta nuovo visualizzatore
+  \item \textbf{Attori primari:} amministratore
+  \item \textbf{Precondizione:} l'owner deve aver fatto richiesta di nuovo visualizzatore.
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'owner viene informato.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item l'amministratore approva la richiesta di nuovo visualizzatore.
+  \end{enumerate}
+\end{itemize}  
+% subsub:AUC4.7.1 (end)
+
+\subsubsection{AUC4.7.2 - Rifiuta richiesta nuovo visualizzatore}%
+\label{subsub:AUC4.7.2}
+\begin{itemize}
+  \item \textbf{Codice:} AUC4.7.2
+  \item \textbf{Titolo:} Rifiuta richiesta nuovo visualizzatore
+  \item \textbf{Attori primari:} amministratore
+  \item \textbf{Precondizione:} l'owner deve aver fatto richiesta di nuovo visualizzatore.
+  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e l'owner viene informato.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item l'amministratore rifiuta la richiesta di nuovo visualizzatore.
+  \end{enumerate}
+\end{itemize}  
+% subsub:AUC4.7.2 (end)
+% subsub:AUC4.7
+
+\subsubsection{AUC4.8 - Gestione richiesta nuovo gestore}%
+\label{subsub:AUC4.8}
+\begin{itemize}
+  \item \textbf{Codice:} AUC4.8
+  \item \textbf{Titolo:} Gestione richiesta nuovo gestore
+  \item \textbf{Attori primari:} amministratore
+  \item \textbf{Precondizione:} deve essere stata fatta la richiesta di nuovo gestore da parte di un owner.
+  \item \textbf{Postcondizione:} viene approvata o rifiutata la richiesta, e l'owner viene informato.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item l'amministratore approva o rifiuta la richiesta di nuovo gestore.
+  \end{enumerate}
+\end{itemize}
+
+
+\subsubsection{AUC4.8.1 - Accetta richiesta nuovo gestore}%
+\label{subsub:AUC4.8.1}
+\begin{itemize}
+  \item \textbf{Codice:} AUC4.8.1
+  \item \textbf{Titolo:} Accetta richiesta nuovo gestore
+  \item \textbf{Attori primari:} amministratore
+  \item \textbf{Precondizione:} l'owner deve aver fatto richiesta di nuovo gestore.
+  \item \textbf{Postcondizione:} viene approvata la richiesta, e l'owner viene informato.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item l'amministratore approva la richiesta di nuovo gestore.
+  \end{enumerate}
+\end{itemize}  
+% subsub:AUC4.8.1 (end)
+
+\subsubsection{AUC4.8.2 - Rifiuta richiesta nuovo gestore}%
+\label{subsub:AUC4.8.2}
+\begin{itemize}
+  \item \textbf{Codice:} AUC4.8.2
+  \item \textbf{Titolo:} Rifiuta richiesta nuovo gestore
+  \item \textbf{Attori primari:} amministratore
+  \item \textbf{Precondizione:} l'owner deve aver fatto richiesta di nuovo gestore.
+  \item \textbf{Postcondizione:} viene rifiutata la richiesta, e l'owner viene informato.
+  \item \textbf{Scenario principale:}
+  \begin{enumerate}
+    \item l'amministratore rifiuta la richiesta di nuovo gestore.
+  \end{enumerate}
+\end{itemize}  
+% subsub:AUC4.8.2 (end)
+% subsub:AUC4.8
+
+
+
 \subsubsection{AUC5 - Creazione amministratore}%
 \label{subsub:AUC5}
 \begin{itemize}
@@ -1159,16 +1253,16 @@
 \end{itemize}
 % subsub:AUC12.1 (end)
 
-\subsubsection{AUC13 - Nomina visualizzatore}%
+\subsubsection{AUC13 - Richiesta aggiunta visualizzatore}%
 \label{subsub:AUC13}
 \begin{itemize}
   \item \textbf{Codice:} AUC13
-  \item \textbf{Titolo:} Nomina visualizzatore
+  \item \textbf{Titolo:} Richiesta aggiunta visualizzatore
   \item \textbf{Attori primari:} owner
-  \item \textbf{Descrizione:} l' owner nomina un visualizzatore per la sua organizzazione;
-  \item \textbf{Scenario principale:} l' owner vuole aggiungere un visualizzatore alla sua organizzazione;
-  \item \textbf{Precondizione:} il nuovo super utente non deve già esistere come visualizzatore;
-  \item \textbf{Postcondizione:} il nuovo visualizzatore è stato aggiunto.
+  \item \textbf{Descrizione:} l' owner nomina un visualizzatore per la sua organizzazione, la nomina deve essere approvata da un amministratore.
+  \item \textbf{Scenario principale:} l' owner vuole aggiungere un visualizzatore alla sua organizzazione.
+  \item \textbf{Precondizione:} il nuovo super utente non deve già esistere come visualizzatore.
+  \item \textbf{Postcondizione:} viene inviata la richiesta di nomina visualizzatore all'amministratore.
 \end{itemize}
 % subsub:AUC13 (end)
 
@@ -1187,16 +1281,16 @@
 \end{itemize}
 % subsub:AUC13.1 (end)
 
-\subsubsection{AUC14 - Nomina gestore}%
+\subsubsection{AUC14 - Richiesta aggiunta gestore}%
 \label{subsub:AUC14}
 \begin{itemize}
   \item \textbf{Codice:} AUC14
-  \item \textbf{Titolo:} Nomina gestore
+  \item \textbf{Titolo:} Richiesta aggiunta gestore
   \item \textbf{Attori primari:} owner
   \item \textbf{Descrizione:} l' owner nomina un gestore per la sua organizzazione.
-  \item \textbf{Scenario principale:} l' owner vuole aggiungere un gestore alla sua organizzazione.
-  \item \textbf{Precondizione:} il nuovo super utente non deve già esistere come gestore;
-  \item \textbf{Postcondizione:} il nuovo gestore è stato aggiunto.
+  \item \textbf{Scenario principale:} l' owner vuole aggiungere un gestore alla sua organizzazione, la nomina deve essere approvata da un amministratore.
+  \item \textbf{Precondizione:} il nuovo super utente non deve già esistere come gestore.
+  \item \textbf{Postcondizione:} viene inviata la richiesta di nomina gestore all'amministratore.
 \end{itemize}
 % subsub:AUC14 (end)
 
