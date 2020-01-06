@@ -286,3 +286,6 @@ __latexindent_temp.tex
 # ignora file generati dal package plantuml
 *plantuml.txt
 *plantuml.latex
+
+# ignora cartella contenente alcuni script
+.pwsh/scripts
