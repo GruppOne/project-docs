@@ -4,7 +4,6 @@
 
 %UUC1 (start)
 \subsubsection*{UUC1 - Registrazione}%
-\addtocounter{section}{1}
 \label{subsub:UUC1utente}
 
 \begin{plantuml}
@@ -986,21 +985,41 @@ rectangle {
 
 
 %UUC13 (start)
+\subsubsection{UUC13 - Eliminazione account}%
+\label{subsub:UUC13utente}
+
 \begin{itemize}
-  \item \textbf{Caso d’uso:} UUC13
-  \item \textbf{Titolo:} Eliminazione account
-  \item \textbf{Attori primari:} utente autenticato
-  \item \textbf{Precondizione:} il sistema deve rendere disponibile la pagina di eliminazione account.
-  \item \textbf{Postcondizione:} l'utente cancella il suo account.
-  \item \textbf{Scenario principale:}
+  \item[Caso d’uso:] UUC13
+  \item[Titolo:] Eliminazione account
+  \item[Attori primari:] utente autenticato
+  \item[Precondizione:] il sistema deve rendere disponibile la pagina di eliminazione account.
+  \item[Postcondizione:] l'utente cancella il suo account.
+  \item[Scenario principale:]
         \begin{enumerate}
           \item l'utente vuole cancellare il suo account.
         \end{enumerate}
-  \item \textbf{Estensioni:}
+        \item[Estensioni:]
         \begin{enumerate}
           \item se l'utente cerca di cancellare il suo account in assenza di rete, si visualizzerà un errore.
         \end{enumerate}
 \end{itemize}
 % subsub:UUC13 (end)
+
+%UUC13.1 (start)
+\subsubsection{UUC13.1 - Conferma eliminazione account}%
+\label{subsub:UUC13.1utente}
+
+\begin{itemize}
+  \item[Caso d’uso:] UUC13.1
+  \item[Titolo:] Conferma eliminazione account
+  \item[Attori primari:] utente autenticato
+  \item[Precondizione:] l'utente autenticato tenta di eliminare il suo account.
+  \item[Postcondizione:] l'utente conferma la cancellazione del suo account.
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente deve confermare la cancellazione del suo account.
+        \end{enumerate}
+\end{itemize}
+% subsub:UUC13.1 (end)
 
 \end{document}
