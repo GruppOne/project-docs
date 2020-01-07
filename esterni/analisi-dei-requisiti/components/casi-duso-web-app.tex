@@ -5,29 +5,35 @@
 \subsubsection{AUC1 - Sistema di autenticazione}%
 \label{subsub:AUC1}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC1 - Sistema di autenticazione
+  title AUC1 - Sistema di autenticazione
 
-actor :utente non autenticato: as A
+  actor :utente non autenticato: as A
 
-rectangle {
-  together {
-    usecase (AUC1.1) as "AUC1.1\nAutenticazione\n--\nExtension points:\nVisualizzazione errore se\nle credenziali inserite\n non sono corrette"
-    usecase (AUC1.2) as "AUC1.2\nVerifica credenziali"
-    usecase (AUC1.3) as "AUC1.3\nVisualizzazione credenziali errate"
+  rectangle {
+    together {
+      usecase (AUC1.1) as "AUC1.1\nAutenticazione\n--\nExtension points:\nVisualizzazione errore se\nle credenziali inserite\n non sono corrette"
+      usecase (AUC1.2) as "AUC1.2\nVerifica credenziali"
+      usecase (AUC1.3) as "AUC1.3\nVisualizzazione credenziali errate"
+    }
   }
-}
 
-:A: -- AUC1.1
+  :A: -- AUC1.1
 
-(AUC1.2) .up.|> (AUC1.1) : <<include>>
-(AUC1.3) .up.|> (AUC1.1) : <<extends>>
+  (AUC1.2) .up.|> (AUC1.1) : <<include>>
+  (AUC1.3) .up.|> (AUC1.1) : <<extends>>
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC1: Sistema di autenticazione} 
+  \label{fig:auc1} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC1
@@ -45,26 +51,32 @@ rectangle {
 \subsubsection{AUC1.1 - Autenticazione}%
 \label{subsub:AUC1.1}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC1.1 - Autenticazione
+  title AUC1.1 - Autenticazione
 
-actor :utente non autenticato: as A
+  actor :utente non autenticato: as A
 
-rectangle {
-  together {
-  usecase (AUC1.1.1) as "AUC1.1.1\nInserimento email"
-  usecase (AUC1.1.2) as "AUC1.1.2\nInserimento password"
+  rectangle {
+    together {
+    usecase (AUC1.1.1) as "AUC1.1.1\nInserimento email"
+    usecase (AUC1.1.2) as "AUC1.1.2\nInserimento password"
+    }
   }
-}
 
-:A: -- AUC1.1.1
-:A: -- AUC1.1.2
+  :A: -- AUC1.1.1
+  :A: -- AUC1.1.2
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC1.1: Autenticazione} 
+  \label{fig:auc1_1} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC1.1
@@ -157,28 +169,34 @@ rectangle {
 \subsubsection{AUC2 - Richiesta owner}%
 \label{subsub:AUC2}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC2 - Richiesta owner
+  title AUC2 - Richiesta owner
 
-actor :utente autenticato: as A
+  actor :utente autenticato: as A
 
-rectangle {
-  together {
-    usecase (AUC2.3) as "AUC2.3\nRichiesta rifiutata"
-    usecase (AUC2.2) as "AUC2.2\nInvio richiesta owner"
-    usecase (AUC2.1) as "AUC2.1\nVerifica tipologia utente"
+  rectangle {
+    together {
+      usecase (AUC2.3) as "AUC2.3\nRichiesta rifiutata"
+      usecase (AUC2.2) as "AUC2.2\nInvio richiesta owner"
+      usecase (AUC2.1) as "AUC2.1\nVerifica tipologia utente"
+    }
   }
-}
 
-:A: -- AUC2.1
-:A: -- AUC2.2
-:A: -- AUC2.3
+  :A: -- AUC2.1
+  :A: -- AUC2.2
+  :A: -- AUC2.3
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC2: Richiesta owner} 
+  \label{fig:auc2} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC2
@@ -257,24 +275,30 @@ rectangle {
 \subsubsection{AUC3 - Disconnessione}%
 \label{subsub:AUC3}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC3 - Disconnessione
+  title AUC3 - Disconnessione
 
-actor :utente autenticato: as A
+  actor :utente autenticato: as A
 
-rectangle {
-  together {
-    usecase (AUC3.1) as "AUC3.1\nDisconnessione utente"
+  rectangle {
+    together {
+      usecase (AUC3.1) as "AUC3.1\nDisconnessione utente"
+    }
   }
-}
 
-:A: -- AUC3.1
+  :A: -- AUC3.1
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC3: Disconnessione} 
+  \label{fig:auc3} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC3
@@ -289,43 +313,48 @@ rectangle {
 \end{description}
 % subsub:AUC3 (end)
 
-
 \subsubsection{AUC4 - Gestione richieste}%
 \label{subsub:AUC4}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC4 - Gestione richieste
+  title AUC4 - Gestione richieste
 
-actor :amministratore: as A
+  actor :amministratore: as A
 
-rectangle {
-  together {
-    usecase (AUC4.8) as "AUC4.8\nGestione richiesta nuovo gestore"
-    usecase (AUC4.7) as "AUC4.7\nGestione richiesta nuovo visualizzatore"
-    usecase (AUC4.6) as "AUC4.6\nGestione richiesta trasferimento di proprietà organizzazione"
-    usecase (AUC4.5) as "AUC4.5\nGestione richiesta modifica luogo"
-    usecase (AUC4.4) as "AUC4.4\nGestione richiesta aggiunta luogo"
-    usecase (AUC4.3) as "AUC4.3\nGestione richiesta modifica organizzazione"
-    usecase (AUC4.2) as "AUC4.2\nGestione richiesta creazione organizzazione"
-    usecase (AUC4.1) as "AUC4.1\nGestione richieste owner"  
+  rectangle {
+    together {
+      usecase (AUC4.8) as "AUC4.8\nGestione richiesta nuovo gestore"
+      usecase (AUC4.7) as "AUC4.7\nGestione richiesta nuovo visualizzatore"
+      usecase (AUC4.6) as "AUC4.6\nGestione richiesta trasferimento di proprietà organizzazione"
+      usecase (AUC4.5) as "AUC4.5\nGestione richiesta modifica luogo"
+      usecase (AUC4.4) as "AUC4.4\nGestione richiesta aggiunta luogo"
+      usecase (AUC4.3) as "AUC4.3\nGestione richiesta modifica organizzazione"
+      usecase (AUC4.2) as "AUC4.2\nGestione richiesta creazione organizzazione"
+      usecase (AUC4.1) as "AUC4.1\nGestione richieste owner"  
+    }
   }
-}
 
-:A: -- AUC4.1
-:A: -- AUC4.2
-:A: -- AUC4.3
-:A: -- AUC4.4
-:A: -- AUC4.5
-:A: -- AUC4.6
-:A: -- AUC4.7
-:A: -- AUC4.8
+  :A: -- AUC4.1
+  :A: -- AUC4.2
+  :A: -- AUC4.3
+  :A: -- AUC4.4
+  :A: -- AUC4.5
+  :A: -- AUC4.6
+  :A: -- AUC4.7
+  :A: -- AUC4.8
 
-@enduml
+  @enduml
 
-\end{plantuml}
+  \end{plantuml} 
+  \caption{AUC4: Gestione richieste} 
+  \label{fig:auc4} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC4
@@ -343,26 +372,32 @@ rectangle {
 \subsubsection{AUC4.1 - Gestione richieste owner}%
 \label{subsub:AUC4.1}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC4.1 - Gestione richieste owner
+  title AUC4.1 - Gestione richieste owner
 
-actor :amministratore: as A
+  actor :amministratore: as A
 
-rectangle {
-  together {
-    usecase (AUC4.1.2) as "AUC4.1.2\nRifiuta richiesta owner"
-    usecase (AUC4.1.1) as "AUC4.1.1\nAccetta richiesta owner"
+  rectangle {
+    together {
+      usecase (AUC4.1.2) as "AUC4.1.2\nRifiuta richiesta owner"
+      usecase (AUC4.1.1) as "AUC4.1.1\nAccetta richiesta owner"
+    }
   }
-}
 
-:A: -- AUC4.1.1
-:A: -- AUC4.1.2
+  :A: -- AUC4.1.1
+  :A: -- AUC4.1.2
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC4.1: Gestione richieste owner} 
+  \label{fig:auc4_1} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC4.1
@@ -411,26 +446,32 @@ rectangle {
 \subsubsection{AUC4.2 - Gestione richiesta creazione organizzazione}%
 \label{subsub:AUC4.2}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC4.2 - Gestione richiesta creazione organizzazione
+  title AUC4.2 - Gestione richiesta creazione organizzazione
 
-actor :amministratore: as A
+  actor :amministratore: as A
 
-rectangle {
-  together {
-    usecase (AUC4.2.2) as "AUC4.2.2\nRifiuta richiesta\ncreazione organizzazione"
-    usecase (AUC4.2.1) as "AUC4.2.1\nAccetta richiesta\ncreazione organizzazione"
+  rectangle {
+    together {
+      usecase (AUC4.2.2) as "AUC4.2.2\nRifiuta richiesta\ncreazione organizzazione"
+      usecase (AUC4.2.1) as "AUC4.2.1\nAccetta richiesta\ncreazione organizzazione"
+    }
   }
-}
 
-:A: -- AUC4.2.1
-:A: -- AUC4.2.2
+  :A: -- AUC4.2.1
+  :A: -- AUC4.2.2
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC4.2: Gestione richiesta creazione organizzazione} 
+  \label{fig:auc4_2} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC4.2
@@ -479,26 +520,32 @@ rectangle {
 \subsubsection{AUC4.3 - Gestione richiesta modifica organizzazione}%
 \label{subsub:AUC4.3}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC4.3 - Gestione richiesta modifica organizzazione
+  title AUC4.3 - Gestione richiesta modifica organizzazione
 
-actor :amministratore: as A
+  actor :amministratore: as A
 
-rectangle {
-  together {
-    usecase (AUC4.3.2) as "AUC4.3.2\nRifiuta richiesta\nmodifica organizzazione"
-    usecase (AUC4.3.1) as "AUC4.3.1\nAccetta richiesta\nmodifica organizzazione"
+  rectangle {
+    together {
+      usecase (AUC4.3.2) as "AUC4.3.2\nRifiuta richiesta\nmodifica organizzazione"
+      usecase (AUC4.3.1) as "AUC4.3.1\nAccetta richiesta\nmodifica organizzazione"
+    }
   }
-}
 
-:A: -- AUC4.3.1
-:A: -- AUC4.3.2
+  :A: -- AUC4.3.1
+  :A: -- AUC4.3.2
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC4.3: Gestione richiesta modifica organizzazione} 
+  \label{fig:auc4_3} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC4.3
@@ -547,26 +594,32 @@ rectangle {
 \subsubsection{AUC4.4 - Gestione richiesta aggiunta luogo}%
 \label{subsub:AUC4.4}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC4.4 - Gestione richiesta aggiunta luogo
+  title AUC4.4 - Gestione richiesta aggiunta luogo
 
-actor :amministratore: as A
+  actor :amministratore: as A
 
-rectangle {
-  together {
-    usecase (AUC4.4.2) as "AUC4.4.2\nRifiuta richiesta\naggiungi luogo"
-    usecase (AUC4.4.1) as "AUC4.4.1\nAccetta richiesta\naggiungi luogo"
+  rectangle {
+    together {
+      usecase (AUC4.4.2) as "AUC4.4.2\nRifiuta richiesta\naggiungi luogo"
+      usecase (AUC4.4.1) as "AUC4.4.1\nAccetta richiesta\naggiungi luogo"
+    }
   }
-}
 
-:A: -- AUC4.4.1
-:A: -- AUC4.4.2
+  :A: -- AUC4.4.1
+  :A: -- AUC4.4.2
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC4.4: Gestione richiesta aggiunta luogo} 
+  \label{fig:auc4_4} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC4.4
@@ -615,26 +668,32 @@ rectangle {
 \subsubsection{AUC4.5 - Gestione richiesta modifica luogo}%
 \label{subsub:AUC4.5}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC4.5 - Gestione richiesta modifica luogo
+  title AUC4.5 - Gestione richiesta modifica luogo
 
-actor :amministratore: as A
+  actor :amministratore: as A
 
-rectangle {
-  together {
-    usecase (AUC4.5.2) as "AUC4.5.2\nRifiuta richiesta modifica luogo"
-    usecase (AUC4.5.1) as "AUC4.5.1\nAccetta richiesta modifica luogo"
+  rectangle {
+    together {
+      usecase (AUC4.5.2) as "AUC4.5.2\nRifiuta richiesta modifica luogo"
+      usecase (AUC4.5.1) as "AUC4.5.1\nAccetta richiesta modifica luogo"
+    }
   }
-}
 
-:A: -- AUC4.5.1
-:A: -- AUC4.5.2
+  :A: -- AUC4.5.1
+  :A: -- AUC4.5.2
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC4.5: Gestione richiesta modifica luogo} 
+  \label{fig:auc } 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC4.5
@@ -683,26 +742,32 @@ rectangle {
 \subsubsection{AUC4.6 - Gestione richiesta trasferimento di proprietà organizzazione}%
 \label{subsub:AUC4.6}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC4.6 - Gestione richiesta trasferimento di proprietà organizzazione
+  title AUC4.6 - Gestione richiesta trasferimento di proprietà organizzazione
 
-actor :amministratore: as A
+  actor :amministratore: as A
 
-rectangle {
-  together {
-    usecase (AUC4.6.2) as "AUC4.6.2\nRifiuta richiesta trasferimento\ndi proprietà organizzazione"
-    usecase (AUC4.6.1) as "AUC4.6.1\nAccetta richiesta trasferimento\ndi proprietà organizzazione"
+  rectangle {
+    together {
+      usecase (AUC4.6.2) as "AUC4.6.2\nRifiuta richiesta trasferimento\ndi proprietà organizzazione"
+      usecase (AUC4.6.1) as "AUC4.6.1\nAccetta richiesta trasferimento\ndi proprietà organizzazione"
+    }
   }
-}
 
-:A: -- AUC4.6.1
-:A: -- AUC4.6.2
+  :A: -- AUC4.6.1
+  :A: -- AUC4.6.2
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC4.6: Gestione richiesta trasferimento di proprietà organizzazione}
+  \label{fig:auc4_6} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC4.6
@@ -751,26 +816,32 @@ rectangle {
 \subsubsection{AUC4.7 - Gestione richiesta nuovo visualizzatore}%
 \label{subsub:AUC4.7}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC4.7 - Gestione richiesta nuovo visualizzatore
+  title AUC4.7 - Gestione richiesta nuovo visualizzatore
 
-actor :amministratore: as A
+  actor :amministratore: as A
 
-rectangle {
-  together {
-    usecase (AUC4.7.2) as "AUC4.7.2\nRifiuta richiesta\nnuovo visualizzatore"
-    usecase (AUC4.7.1) as "AUC4.7.1\nAccetta richiesta\nnuovo visualizzatore"
+  rectangle {
+    together {
+      usecase (AUC4.7.2) as "AUC4.7.2\nRifiuta richiesta\nnuovo visualizzatore"
+      usecase (AUC4.7.1) as "AUC4.7.1\nAccetta richiesta\nnuovo visualizzatore"
+    }
   }
-}
 
-:A: -- AUC4.7.1
-:A: -- AUC4.7.2
+  :A: -- AUC4.7.1
+  :A: -- AUC4.7.2
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC4.7: Gestione richiesta nuovo visualizzatore} 
+  \label{fig:auc4_7} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC4.7
@@ -818,26 +889,32 @@ rectangle {
 \subsubsection{AUC4.8 - Gestione richiesta nuovo gestore}%
 \label{subsub:AUC4.8}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC4.8 - Gestione richiesta nuovo gestore
+  title AUC4.8 - Gestione richiesta nuovo gestore
 
-actor :amministratore: as A
+  actor :amministratore: as A
 
-rectangle {
-  together {
-    usecase (AUC4.8.2) as "AUC4.8.2\nRifiuta richiesta\nnuovo gestore"
-    usecase (AUC4.8.1) as "AUC4.8.1\nAccetta richiesta\nnuovo gestore"
+  rectangle {
+    together {
+      usecase (AUC4.8.2) as "AUC4.8.2\nRifiuta richiesta\nnuovo gestore"
+      usecase (AUC4.8.1) as "AUC4.8.1\nAccetta richiesta\nnuovo gestore"
+    }
   }
-}
 
-:A: -- AUC4.8.1
-:A: -- AUC4.8.2
+  :A: -- AUC4.8.1
+  :A: -- AUC4.8.2
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC4.8: Gestione richiesta nuovo gestore} 
+  \label{fig:auc4_8} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC4.8
@@ -885,29 +962,35 @@ rectangle {
 \subsubsection{AUC5 - Creazione amministratore}%
 \label{subsub:AUC5}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC5 - Creazione amministratore
+  title AUC5 - Creazione amministratore
 
-actor :root: as A
+  actor :root: as A
 
-rectangle {
-  together {
-    usecase (AUC5.1) as "AUC5.1\nInserimento credenziali\n--\nExtension points:\nvisualizzazione errore se non\nvengono rispettati i requisiti"
-    usecase (AUC5.2) as "AUC5.2\nVerifica credenziali"
-    usecase (AUC5.3) as "AUC5.3\nVisualizza creazione fallita"
+  rectangle {
+    together {
+      usecase (AUC5.1) as "AUC5.1\nInserimento credenziali\n--\nExtension points:\nvisualizzazione errore se non\nvengono rispettati i requisiti"
+      usecase (AUC5.2) as "AUC5.2\nVerifica credenziali"
+      usecase (AUC5.3) as "AUC5.3\nVisualizza creazione fallita"
+    }
   }
-}
 
-:A: -- AUC5.1
+  :A: -- AUC5.1
 
-(AUC5.2) .up.|> (AUC5.1) : <<include>>
-(AUC5.3) .up.|> (AUC5.1) : <<extends>>
+  (AUC5.2) .up.|> (AUC5.1) : <<include>>
+  (AUC5.3) .up.|> (AUC5.1) : <<extends>>
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC5: Creazione amministratore} 
+  \label{fig:auc5} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC5
@@ -925,28 +1008,34 @@ rectangle {
 \subsubsection{AUC5.1 - Inserimento credenziali}%
 \label{subsub:AUC5.1}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC5.1 - Inserimento credenziali
+  title AUC5.1 - Inserimento credenziali
 
-actor :root: as A
+  actor :root: as A
 
-rectangle {
-  together {
-    usecase (AUC5.1.3) as "AUC5.1.3\nConferma password"
-    usecase (AUC5.1.2) as "AUC5.1.2\nInserimento nuova password"
-    usecase (AUC5.1.1) as "AUC5.1.1\nInserimento nuova email"
+  rectangle {
+    together {
+      usecase (AUC5.1.3) as "AUC5.1.3\nConferma password"
+      usecase (AUC5.1.2) as "AUC5.1.2\nInserimento nuova password"
+      usecase (AUC5.1.1) as "AUC5.1.1\nInserimento nuova email"
+    }
   }
-}
 
-:A: -- AUC5.1.1
-:A: -- AUC5.1.2
-:A: -- AUC5.1.3
+  :A: -- AUC5.1.1
+  :A: -- AUC5.1.2
+  :A: -- AUC5.1.3
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC5.1: Inserimento credenziali} 
+  \label{fig:auc5_1} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC5.1
@@ -1053,36 +1142,42 @@ rectangle {
 \subsubsection{AUC6 - Gestione organizzazione}%
 \label{subsub:AUC6}
 
-\begin{plantuml}
-@startuml 
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml 
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC6 - Gestione organizzazione
+  title AUC6 - Gestione organizzazione
 
-actor :root: as A
+  actor :root: as A
 
-rectangle {
-  together {
-    usecase (AUC6.5) as "AUC6.5\nInvio richiesta aggiornamento\nlista organizzazioni"
-    usecase (AUC6.4) as "AUC6.4\nSeleziona organizzazione"
-    usecase (AUC6.3) as "AUC6.3\nModifica organizzazione"
-    usecase (AUC6.2) as "AUC6.2\nEliminazione organizzazione"
-    usecase (AUC6.1) as "AUC6.1\nCreazione organizzazione"
+  rectangle {
+    together {
+      usecase (AUC6.5) as "AUC6.5\nInvio richiesta aggiornamento\nlista organizzazioni"
+      usecase (AUC6.4) as "AUC6.4\nSeleziona organizzazione"
+      usecase (AUC6.3) as "AUC6.3\nModifica organizzazione"
+      usecase (AUC6.2) as "AUC6.2\nEliminazione organizzazione"
+      usecase (AUC6.1) as "AUC6.1\nCreazione organizzazione"
+    }
   }
-}
 
-:A: -- AUC6.1
-:A: -- AUC6.2
-:A: -- AUC6.3
+  :A: -- AUC6.1
+  :A: -- AUC6.2
+  :A: -- AUC6.3
 
-(AUC6.4) .up.|> (AUC6.2) : <<include>>
-(AUC6.4) .up.|> (AUC6.3) : <<include>>
+  (AUC6.4) .up.|> (AUC6.2) : <<include>>
+  (AUC6.4) .up.|> (AUC6.3) : <<include>>
 
-(AUC6.5) .up.|> (AUC6.1) : <<include>>
-(AUC6.5) .up.|> (AUC6.2) : <<include>>
+  (AUC6.5) .up.|> (AUC6.1) : <<include>>
+  (AUC6.5) .up.|> (AUC6.2) : <<include>>
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC6: Gestione organizzazione} 
+  \label{fig:auc6} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC6
@@ -1099,37 +1194,43 @@ rectangle {
   \subsubsection{AUC6.1 - Creazione organizzazione}%
   \label{subsub:AUC6.1}
 
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
+  \begin{figure}[h!] 
+    \centering 
+    \begin{plantuml}
+    @startuml
+    !include ../../commons/style/use-cases.pu
+    scale 3/4
 
-  title AUC6.1 - Creazione organizzazione
+    title AUC6.1 - Creazione organizzazione
 
-  actor :root: as A1
-  actor :owner: as A2
+    actor :root: as A1
+    actor :owner: as A2
 
 
-  rectangle {
-    together {
-      usecase (AUC6.1.4) as "AUC6.1.4\nConfigurazione dettagli server LDAP"
-      usecase (AUC6.1.3) as "AUC6.1.3\nInserisci descrizione organizzazione"
-      usecase (AUC6.1.2) as "AUC6.1.2\nInserisci indirizzo organizzazione"
-      usecase (AUC6.1.1) as "AUC6.1.1\nInserisci nome organizzazione"
+    rectangle {
+      together {
+        usecase (AUC6.1.4) as "AUC6.1.4\nConfigurazione dettagli server LDAP"
+        usecase (AUC6.1.3) as "AUC6.1.3\nInserisci descrizione organizzazione"
+        usecase (AUC6.1.2) as "AUC6.1.2\nInserisci indirizzo organizzazione"
+        usecase (AUC6.1.1) as "AUC6.1.1\nInserisci nome organizzazione"
+      }
     }
-  }
 
-  :A1: -- AUC6.1.1
-  :A1: -- AUC6.1.2
-  :A1: -- AUC6.1.3
-  :A1: -- AUC6.1.4
+    :A1: -- AUC6.1.1
+    :A1: -- AUC6.1.2
+    :A1: -- AUC6.1.3
+    :A1: -- AUC6.1.4
 
-  :A2: -- AUC6.1.1
-  :A2: -- AUC6.1.2
-  :A2: -- AUC6.1.3
-  :A2: -- AUC6.1.4
+    :A2: -- AUC6.1.1
+    :A2: -- AUC6.1.2
+    :A2: -- AUC6.1.3
+    :A2: -- AUC6.1.4
 
-  @enduml
-  \end{plantuml}
+    @enduml
+    \end{plantuml} 
+    \caption{AUC6.1: Creazione organizzazione} 
+    \label{fig:auc6_1} 
+  \end{figure}
 
   \begin{description}
     \item[Codice:] AUC6.1
@@ -1230,32 +1331,38 @@ rectangle {
 \subsubsection{AUC6.3 - Modifica organizzazione}%
 \label{subsub:AUC6.3}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC6.3 - Modifica organizzazione
+  title AUC6.3 - Modifica organizzazione
 
-actor :root: as A
+  actor :root: as A
 
-rectangle {
-  together {
-    usecase (AUC6.3.5) as "AUC6.3.5\nModifica configurazione dettagli server LDAP"
-    usecase (AUC6.3.4) as "AUC6.3.4\nGestione luoghi"
-    usecase (AUC6.3.3) as "AUC6.3.3\nModifica descrizione organizzazione"
-    usecase (AUC6.3.2) as "AUC6.3.2\nModifica indirizzo organizzazione"
-    usecase (AUC6.3.1) as "AUC6.3.1\nModifica nome organizzazione" 
+  rectangle {
+    together {
+      usecase (AUC6.3.5) as "AUC6.3.5\nModifica configurazione dettagli server LDAP"
+      usecase (AUC6.3.4) as "AUC6.3.4\nGestione luoghi"
+      usecase (AUC6.3.3) as "AUC6.3.3\nModifica descrizione organizzazione"
+      usecase (AUC6.3.2) as "AUC6.3.2\nModifica indirizzo organizzazione"
+      usecase (AUC6.3.1) as "AUC6.3.1\nModifica nome organizzazione" 
+    }
   }
-}
 
-:A: -- AUC6.3.1
-:A: -- AUC6.3.2
-:A: -- AUC6.3.3
-:A: -- AUC6.3.4
-:A: -- AUC6.3.5
+  :A: -- AUC6.3.1
+  :A: -- AUC6.3.2
+  :A: -- AUC6.3.3
+  :A: -- AUC6.3.4
+  :A: -- AUC6.3.5
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC6.3: Modifica organizzazione} 
+  \label{fig:auc6_3} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC6.3
@@ -1322,30 +1429,36 @@ rectangle {
 \subsubsection{AUC6.3.4 - Gestione luoghi}%
 \label{subsub:AUC6.3.4}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC6.3.4 - Gestione luoghi
+  title AUC6.3.4 - Gestione luoghi
 
-actor :root: as A
+  actor :root: as A
 
-rectangle {
-  together {
-    usecase (AUC6.3.4.4) as "AUC6.3.4.4\nAUC6.3.4.4\nSeleziona luogo"
-    usecase (AUC6.3.4.3) as "AUC6.3.4.3\nModifica luogo"
-    usecase (AUC6.3.4.2) as "AUC6.3.4.2\nEliminazione luogo"
-    usecase (AUC6.3.4.1) as "AUC6.3.4.1\nAggiungi luogo"
+  rectangle {
+    together {
+      usecase (AUC6.3.4.4) as "AUC6.3.4.4\nAUC6.3.4.4\nSeleziona luogo"
+      usecase (AUC6.3.4.3) as "AUC6.3.4.3\nModifica luogo"
+      usecase (AUC6.3.4.2) as "AUC6.3.4.2\nEliminazione luogo"
+      usecase (AUC6.3.4.1) as "AUC6.3.4.1\nAggiungi luogo"
+    }
   }
-}
 
-:A: -- AUC6.3.4.1
-:A: -- AUC6.3.4.2
-:A: -- AUC6.3.4.3
-:A: -- AUC6.3.4.4
+  :A: -- AUC6.3.4.1
+  :A: -- AUC6.3.4.2
+  :A: -- AUC6.3.4.3
+  :A: -- AUC6.3.4.4
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC6.3.4: Gestione luoghi} 
+  \label{fig:auc6_3_4} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC6.3.4
@@ -1363,24 +1476,30 @@ rectangle {
 \subsubsection{AUC6.3.4.1 - Aggiungi luogo}%
 \label{subsub:AUC6.3.4.1}
 
-\begin{plantuml}
-@startuml 
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml 
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC6.3.4.1 - Aggiungi luogo
+  title AUC6.3.4.1 - Aggiungi luogo
 
-actor :root: as A
+  actor :root: as A
 
-rectangle {
-  together {
-    usecase (AUC6.3.4.1.1) as "AUC6.3.4.1.1\nInserisci coordinate geografiche"
+  rectangle {
+    together {
+      usecase (AUC6.3.4.1.1) as "AUC6.3.4.1.1\nInserisci coordinate geografiche"
+    }
   }
-}
 
-:A: -- AUC6.3.4.1.1
+  :A: -- AUC6.3.4.1.1
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC6.3.4.1: Aggiungi luogo} 
+  \label{fig:auc6_3_4_1} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC6.3.4.1
@@ -1432,24 +1551,30 @@ rectangle {
 \subsubsection{AUC6.3.4.3 - Modifica luogo}%
 \label{subsub:AUC6.3.4.3}
 
-\begin{plantuml}
-@startuml 
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml 
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC6.3.4.3 - Modifica luogo
+  title AUC6.3.4.3 - Modifica luogo
 
-actor :root: as A
+  actor :root: as A
 
-rectangle {
-  together {
-    usecase (AUC6.3.4.3.1) as "AUC6.3.4.3.1\nModifica coordinate geografiche"
+  rectangle {
+    together {
+      usecase (AUC6.3.4.3.1) as "AUC6.3.4.3.1\nModifica coordinate geografiche"
+    }
   }
-}
 
-:A: -- AUC6.3.4.3.1
+  :A: -- AUC6.3.4.3.1
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC6.3.4.3: Modifica luogo} 
+  \label{fig:auc6_3_4_3} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC6.3.4.3
@@ -1549,24 +1674,30 @@ rectangle {
 \subsubsection{AUC7 - Eliminazione account}%
 \label{subsub:AUC7}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC7 - Eliminazione account
+  title AUC7 - Eliminazione account
 
-actor :root: as A
+  actor :root: as A
 
-rectangle {
-  together {
-    usecase (AUC7.1) as "AUC7.1\nSeleziona account"
+  rectangle {
+    together {
+      usecase (AUC7.1) as "AUC7.1\nSeleziona account"
+    }
   }
-}
 
-:A: -- AUC7.1
+  :A: -- AUC7.1
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC7: Eliminazione account} 
+  \label{fig:auc7} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC7
@@ -1599,24 +1730,30 @@ rectangle {
 \subsubsection{AUC8 - Query sull'organizzazione}%
 \label{subsub:AUC8}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC8 - Query sull'organizzazione
+  title AUC8 - Query sull'organizzazione
 
-actor :visualizzatore: as A
+  actor :visualizzatore: as A
 
-rectangle {
-  together {
-    usecase (AUC8) as "AUC8\nQuery sull'organizzazione"
+  rectangle {
+    together {
+      usecase (AUC8) as "AUC8\nQuery sull'organizzazione"
+    }
   }
-}
 
-:A: -- AUC8
+  :A: -- AUC8
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC8: Query sull'organizzazione} 
+  \label{fig:auc8} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC8
@@ -1634,24 +1771,30 @@ rectangle {
 \subsubsection{AUC9 - Query sul dipendente}%
 \label{subsub:AUC9}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC9 - Query sul dipendente
+  title AUC9 - Query sul dipendente
 
-actor :visualizzatore: as A
+  actor :visualizzatore: as A
 
-rectangle {
-  together {
-    usecase (AUC9) as "AUC9\nQuery sul dipendente"
+  rectangle {
+    together {
+      usecase (AUC9) as "AUC9\nQuery sul dipendente"
+    }
   }
-}
 
-:A: -- AUC9
+  :A: -- AUC9
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC9: Query sul dipendente} 
+  \label{fig:auc9} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC9
@@ -1673,46 +1816,52 @@ rectangle {
 \subsubsection{AUC10 - Richiesta su luoghi}%
 \label{subsub:AUC10}
 
-\begin{plantuml}
-@startuml 
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml 
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC10 - Richiesta su luoghi
+  title AUC10 - Richiesta su luoghi
 
-actor :gestore: as A
+  actor :gestore: as A
 
-rectangle {
-  together {
-    usecase (AUC10.1) as "AUC10.1\nRichiesta aggiunta luogo"
-    usecase (AUC10.2) as "AUC10.2\nRichiesta rimozione luogo"
-    usecase (AUC10.3) as "AUC10.3\nRichiesta modifica luogo"
-    usecase (AUC10.4) as "AUC10.4\nRichiesta modifica organizzazione"
+  rectangle {
+    together {
+      usecase (AUC10.1) as "AUC10.1\nRichiesta aggiunta luogo"
+      usecase (AUC10.2) as "AUC10.2\nRichiesta rimozione luogo"
+      usecase (AUC10.3) as "AUC10.3\nRichiesta modifica luogo"
+      usecase (AUC10.4) as "AUC10.4\nRichiesta modifica organizzazione"
+    }
+    together {
+      usecase (AUC6.3.1) as "AUC6.3.1\nModifica nome organizzazione"
+      usecase (AUC6.3.2) as "AUC6.3.2\nModifica indirizzo organizzazione"
+      usecase (AUC6.3.3) as "AUC6.3.3\nModifica descrizione organizzazione"
+      usecase (AUC6.3.4.3.1) as "AUC6.3.4.3.1\nModifica coordinate geografiche"
+      usecase (AUC6.3.4.1.1) as "AUC6.3.4.1.1\nInserisci coordinate geografiche"
+      usecase (AUC6.3.5) as "AUC6.3.5\nModifica configurazione dettagli server LDAP"
+    }
   }
-  together {
-    usecase (AUC6.3.1) as "AUC6.3.1\nModifica nome organizzazione"
-    usecase (AUC6.3.2) as "AUC6.3.2\nModifica indirizzo organizzazione"
-    usecase (AUC6.3.3) as "AUC6.3.3\nModifica descrizione organizzazione"
-    usecase (AUC6.3.4.3.1) as "AUC6.3.4.3.1\nModifica coordinate geografiche"
-    usecase (AUC6.3.4.1.1) as "AUC6.3.4.1.1\nInserisci coordinate geografiche"
-    usecase (AUC6.3.5) as "AUC6.3.5\nModifica configurazione dettagli server LDAP"
-  }
-}
 
-:A: -- AUC10.1
-:A: -- AUC10.2
-:A: -- AUC10.3
-:A: -- AUC10.4
+  :A: -- AUC10.1
+  :A: -- AUC10.2
+  :A: -- AUC10.3
+  :A: -- AUC10.4
 
 
-(AUC6.3.1) .up.|> (AUC10.4) : <<include>>
-(AUC6.3.2) .up.|> (AUC10.4) : <<include>>
-(AUC6.3.3) .up.|> (AUC10.4) : <<include>>
-(AUC6.3.4.3.1) .up.|> (AUC10.3) : <<include>>
-(AUC6.3.4.1.1) .up.|> (AUC10.1) : <<include>>
-(AUC6.3.5) .up.|> (AUC10.4) : <<include>>
+  (AUC6.3.1) .up.|> (AUC10.4) : <<include>>
+  (AUC6.3.2) .up.|> (AUC10.4) : <<include>>
+  (AUC6.3.3) .up.|> (AUC10.4) : <<include>>
+  (AUC6.3.4.3.1) .up.|> (AUC10.3) : <<include>>
+  (AUC6.3.4.1.1) .up.|> (AUC10.1) : <<include>>
+  (AUC6.3.5) .up.|> (AUC10.4) : <<include>>
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC10: Richiesta su luoghi} 
+  \label{fig:auc10} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC10
@@ -1806,35 +1955,41 @@ rectangle {
 \subsubsection{AUC11 - Richiesta creazione organizzazione}%
 \label{subsub:AUC11}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC11 - Richiesta creazione organizzazione
+  title AUC11 - Richiesta creazione organizzazione
 
-actor :owner: as A
+  actor :owner: as A
 
-rectangle {
-  together {
-    usecase (AUC11) as "AUC11\nRichiesta creazione organizzazione"
+  rectangle {
+    together {
+      usecase (AUC11) as "AUC11\nRichiesta creazione organizzazione"
+    }
+    together {
+      usecase (AUC6.1.1) as "AUC6.1.1\nInserisci nome organizzazione"
+      usecase (AUC6.1.2) as "AUC6.1.2\nInserisci indirizzo organizzazione"
+      usecase (AUC6.1.3) as "AUC6.1.3\nInserisci descrizione organizzazione"
+      usecase (AUC6.1.4) as "AUC6.1.4\nConfigurazione dettagli server LDAP"
+    }
   }
-  together {
-    usecase (AUC6.1.1) as "AUC6.1.1\nInserisci nome organizzazione"
-    usecase (AUC6.1.2) as "AUC6.1.2\nInserisci indirizzo organizzazione"
-    usecase (AUC6.1.3) as "AUC6.1.3\nInserisci descrizione organizzazione"
-    usecase (AUC6.1.4) as "AUC6.1.4\nConfigurazione dettagli server LDAP"
-  }
-}
 
-:A: -- AUC11
+  :A: -- AUC11
 
-(AUC6.1.1) .up.|> (AUC11) : <<include>>
-(AUC6.1.2) .up.|> (AUC11) : <<include>>
-(AUC6.1.3) .up.|> (AUC11) : <<include>>
-(AUC6.1.4) .up.|> (AUC11) : <<include>>
+  (AUC6.1.1) .up.|> (AUC11) : <<include>>
+  (AUC6.1.2) .up.|> (AUC11) : <<include>>
+  (AUC6.1.3) .up.|> (AUC11) : <<include>>
+  (AUC6.1.4) .up.|> (AUC11) : <<include>>
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC11: Richiesta creazione organizzazione} 
+  \label{fig:auc11} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC11
@@ -1856,31 +2011,37 @@ rectangle {
 \end{description}
 % subsub:AUC11 (end)
 
-\subsubsection{AUC12 - Richiesta cedimento proprietà organizzazione}%
+\subsubsection{AUC12 - Richiesta cessione proprietà organizzazione}%
 \label{subsub:AUC12}
 
-\begin{plantuml}
-@startuml 
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml 
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC12 - Richiesta cedimento proprietà organizzazione
+  title AUC12 - Richiesta cessione proprietà organizzazione
 
-actor :owner: as A
+  actor :owner: as A
 
-rectangle {
-  together {
-    usecase (AUC12.1) as "AUC12.1\nInserimento e-mail nuovo owner"
+  rectangle {
+    together {
+      usecase (AUC12.1) as "AUC12.1\nInserimento e-mail nuovo owner"
+    }
   }
-}
 
-:A: -- AUC12.1
+  :A: -- AUC12.1
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC12: Richiesta cessione proprietà organizzazione} 
+  \label{fig:auc12} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC12
-  \item[Titolo:] Richiesta cedimento proprietà organizzazione
+  \item[Titolo:] Richiesta cessione proprietà organizzazione
   \item[Attori primari:] owner
   \item[Precondizione:] il futuro owner deve esistere.
   \item[Postcondizione:] la richiesta di cedere l'organizzazione è stata posta.
@@ -1909,24 +2070,30 @@ rectangle {
 \subsubsection{AUC13 - Richiesta aggiunta visualizzatore}%
 \label{subsub:AUC13}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title AUC13 - Richiesta aggiunta visualizzatore
+  title AUC13 - Richiesta aggiunta visualizzatore
 
-actor :owner: as A
+  actor :owner: as A
 
-rectangle {
-  together {
-    usecase (AUC13.1) as "AUC13.1\nInserimento e-mail visualizzatore"
+  rectangle {
+    together {
+      usecase (AUC13.1) as "AUC13.1\nInserimento e-mail visualizzatore"
+    }
   }
-}
 
-:A: -- AUC13.1
+  :A: -- AUC13.1
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC13: Richiesta aggiunta visualizzatore} 
+  \label{fig:auc13} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC13
@@ -1956,23 +2123,29 @@ rectangle {
 \subsubsection{AUC14 - Richiesta aggiunta gestore}%
 \label{subsub:AUC14}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
-title AUC14 - Richiesta aggiunta gestore
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  title AUC14 - Richiesta aggiunta gestore
+  scale 3/4
 
-actor :owner: as A
+  actor :owner: as A
 
-rectangle {
-  together {
-    usecase (AUC14.1) as "AUC14.1\nInserimento e-mail gestore"
+  rectangle {
+    together {
+      usecase (AUC14.1) as "AUC14.1\nInserimento e-mail gestore"
+    }
   }
-}
 
-:A: -- AUC14.1
+  :A: -- AUC14.1
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{AUC14: Richiesta aggiunta gestore} 
+  \label{fig:auc14} 
+\end{figure}
 
 \begin{description}
   \item[Codice:] AUC14

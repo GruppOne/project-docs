@@ -3,32 +3,38 @@
 \begin{document}
 
 %UUC1 (start)
-\subsubsection*{UUC1 - Registrazione}%
+\subsubsection{UUC1 - Registrazione}%
 \label{subsub:UUC1utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title UUC1 - Registrazione
+  title UUC1 - Registrazione
 
-actor :utente non autenticato: as A
+  actor :utente non autenticato: as A
 
-rectangle {
-  together {
-    usecase (UUC1.1) as "UUC1.1\nVisualizzazione EULA"
-    usecase (UUC1.2) as "UUC1.2\nInserimento dati registrazione"
-    usecase (UUC1.1.1) as "UUC1.1.1\nConferma EULA"
+  rectangle {
+    together {
+      usecase (UUC1.1) as "UUC1.1\nVisualizzazione EULA"
+      usecase (UUC1.2) as "UUC1.2\nInserimento dati registrazione"
+      usecase (UUC1.1.1) as "UUC1.1.1\nConferma EULA"
+    }
   }
-}
 
-:A: -- (UUC1.1)
-:A: -- (UUC1.2)
+  :A: -- (UUC1.1)
+  :A: -- (UUC1.2)
 
-(UUC1.1.1) .up.|> (UUC1.1) : <<include>>
+  (UUC1.1.1) .up.|> (UUC1.1) : <<include>>
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{UUC1: Registrazione}
+  \label{fig:uuc1}
+\end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC1
@@ -88,36 +94,42 @@ rectangle {
 \subsubsection{UUC1.2 - Inserimento dati registrazione}%
 \label{subsub:UUC1.2utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
-  
-title UUC1.2 - Inserimento dati registrazione
-  
-actor :utente non autenticato: as A
-  
-rectangle {
-  together {
-    usecase (UUC1.2.1) as "UUC1.2.1\nRegistrazione email\n--\nExtension points:\nVisualizzazione errore se la mail\nnon Ã¨ scritta in modo corretto"
-    usecase (UUC1.2.2) as "UUC1.2.2\nRegistrazione password\n--\nExtension points:\nVisualizzazione errore se la\npassword non rispetta i criteri" 
-    usecase (UUC1.2.3) as "UUC1.2.3\nConferma password\n--\nExtension points:\nVisualizzazione errore se le\ndue password non coincidono"     
-    usecase (UUC1.2.4) as "UUC1.2.4\nInserimento dati anagrafici\n--\nExtension points:\nVisualizzazione errore\ndati mancanti" 
-    usecase (UUC1.2.5) as "UUC1.2.5\nInformazioni registrazione non valide"
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+    
+  title UUC1.2 - Inserimento dati registrazione
+    
+  actor :utente non autenticato: as A
+    
+  rectangle {
+    together {
+      usecase (UUC1.2.1) as "UUC1.2.1\nRegistrazione email\n--\nExtension points:\nVisualizzazione errore se la mail\nnon Ã¨ scritta in modo corretto"
+      usecase (UUC1.2.2) as "UUC1.2.2\nRegistrazione password\n--\nExtension points:\nVisualizzazione errore se la\npassword non rispetta i criteri" 
+      usecase (UUC1.2.3) as "UUC1.2.3\nConferma password\n--\nExtension points:\nVisualizzazione errore se le\ndue password non coincidono"     
+      usecase (UUC1.2.4) as "UUC1.2.4\nInserimento dati anagrafici\n--\nExtension points:\nVisualizzazione errore\ndati mancanti" 
+      usecase (UUC1.2.5) as "UUC1.2.5\nInformazioni registrazione non valide"
+    }
   }
-}
-  
-:A: -- (UUC1.2.1)
-:A: -- (UUC1.2.2)
-:A: -- (UUC1.2.3)
-:A: -- (UUC1.2.4)
-  
-(UUC1.2.5) .up.|> (UUC1.2.4) : <<extends>>
-(UUC1.2.5) .up.|> (UUC1.2.3) : <<extends>>
-(UUC1.2.5) .up.|> (UUC1.2.2) : <<extends>>
-(UUC1.2.5) .up.|> (UUC1.2.1) : <<extends>>
-  
-@enduml  
-\end{plantuml}
+    
+  :A: -- (UUC1.2.1)
+  :A: -- (UUC1.2.2)
+  :A: -- (UUC1.2.3)
+  :A: -- (UUC1.2.4)
+    
+  (UUC1.2.5) .up.|> (UUC1.2.4) : <<extends>>
+  (UUC1.2.5) .up.|> (UUC1.2.3) : <<extends>>
+  (UUC1.2.5) .up.|> (UUC1.2.2) : <<extends>>
+  (UUC1.2.5) .up.|> (UUC1.2.1) : <<extends>>
+    
+  @enduml  
+  \end{plantuml} 
+  \caption{UUC1.2: Inserimento dati registrazione} 
+  \label{fig:uuc1_2} 
+\end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC1.2
@@ -237,30 +249,36 @@ rectangle {
 \subsubsection{UUC2 - Autenticazione}%
 \label{subsub:UUC2utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
-  
-title UUC2 - Autenticazione
-  
-actor :utente non autenticato: as A
-  
-rectangle {
-  together {
-    usecase (UUC2.1) as "UUC2.1\nInserimento email\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
-    usecase (UUC2.2) as "UUC2.2\nInserimento password\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate" 
-    usecase (UUC2.3) as "UUC2.3\nInformazioni autenticazione non valide"     
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  title UUC2 - Autenticazione
+    
+  actor :utente non autenticato: as A
+    
+  rectangle {
+    together {
+      usecase (UUC2.1) as "UUC2.1\nInserimento email\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
+      usecase (UUC2.2) as "UUC2.2\nInserimento password\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate" 
+      usecase (UUC2.3) as "UUC2.3\nInformazioni autenticazione non valide"     
+    }
   }
-}
-  
-:A: -- (UUC2.1)
-:A: -- (UUC2.2)
-  
-(UUC2.3) .up.|> (UUC2.2) : <<extends>>
-(UUC2.3) .up.|> (UUC2.1) : <<extends>>
-  
-@enduml
-\end{plantuml}
+    
+  :A: -- (UUC2.1)
+  :A: -- (UUC2.2)
+    
+  (UUC2.3) .up.|> (UUC2.2) : <<extends>>
+  (UUC2.3) .up.|> (UUC2.1) : <<extends>>
+    
+  @enduml
+  \end{plantuml} 
+  \caption{UUC2: Autenticazione} 
+  \label{fig:uuc2} 
+\end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC2
@@ -341,24 +359,30 @@ rectangle {
 \subsubsection{UUC3 - Recupero credenziali}%
 \label{subsub:UUC3utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title UUC3 - Recupero credenziali
+  title UUC3 - Recupero credenziali
 
-actor :utente non autenticato: as A
+  actor :utente non autenticato: as A
 
-rectangle {
-  together {
-    usecase (UUC3.1) as "UUC3.1\nRecupero password" 
+  rectangle {
+    together {
+      usecase (UUC3.1) as "UUC3.1\nRecupero password" 
+    }
   }
-}
 
-:A: -- (UUC3.1)
+  :A: -- (UUC3.1)
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{UUC3: Recupero credenziali} 
+  \label{fig:uuc3} 
+\end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC3
@@ -377,30 +401,36 @@ rectangle {
 \subsubsection{UUC3.1 - Recupero password}%
 \label{subsub:UUC3.1utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title UUC3.1 - Recupero password
+  title UUC3.1 - Recupero password
 
-actor :utente non autenticato: as A
+  actor :utente non autenticato: as A
 
-rectangle {
-  together {
-    usecase (UUC3.1.1) as "UUC3.1.1\nInserimento\nemail di registrazione\n--\nExtension points:\nVisualizzazione errore se l'email\nnon è registrata"
-    usecase (UUC3.1.2) as "UUC3.1.2\nReimpostazione password\n--\nExtension points:\nVisualizzazione errore se:\n-nuova password non rispetta vincoli\n-nuova password e sua conferma\nnon coincidono"  
-    usecase (UUC3.1.3) as "UUC3.1.3\nInformazioni recupero non valide" 
+  rectangle {
+    together {
+      usecase (UUC3.1.1) as "UUC3.1.1\nInserimento\nemail di registrazione\n--\nExtension points:\nVisualizzazione errore se l'email\nnon è registrata"
+      usecase (UUC3.1.2) as "UUC3.1.2\nReimpostazione password\n--\nExtension points:\nVisualizzazione errore se:\n-nuova password non rispetta vincoli\n-nuova password e sua conferma\nnon coincidono"  
+      usecase (UUC3.1.3) as "UUC3.1.3\nInformazioni recupero non valide" 
+    }
   }
-}
 
-:A: -- (UUC3.1.1)
-:A: -- (UUC3.1.2)
+  :A: -- (UUC3.1.1)
+  :A: -- (UUC3.1.2)
 
-(UUC3.1.3) .up.|> (UUC3.1.2) : <<extends>>
-(UUC3.1.3) .up.|> (UUC3.1.1) : <<extends>>
+  (UUC3.1.3) .up.|> (UUC3.1.2) : <<extends>>
+  (UUC3.1.3) .up.|> (UUC3.1.1) : <<extends>>
 
-@enduml  
-\end{plantuml}
+  @enduml  
+  \end{plantuml} 
+  \caption{UUC3.1: Recupero password} 
+  \label{fig:uuc3_1} 
+\end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC3.1
@@ -464,29 +494,35 @@ rectangle {
 \subsubsection{UUC4 - Recupero lista organizzazioni}%
 \label{subsub:UUC4utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title UUC4 - Recupero lista organizzazioni
+  title UUC4 - Recupero lista organizzazioni
 
-actor :utente autenticato: as A
+  actor :utente autenticato: as A
 
-rectangle {
-  together {
-    usecase (UUC4.1) as "UUC4.1\nVisualizzazione\nlista organizzazioni\n--\nExtension points:\nVisualizzazione errore causa\n-richiesta di visualizzazione della lista con rete mancante\n-aggiornamento della lista con rete mancante"
-    usecase (UUC4.1.1) as "UUC4.1.1\nAggiornamento\nlista organizzazioni"
-    usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+  rectangle {
+    together {
+      usecase (UUC4.1) as "UUC4.1\nVisualizzazione\nlista organizzazioni\n--\nExtension points:\nVisualizzazione errore causa\n-richiesta di visualizzazione della lista con rete mancante\n-aggiornamento della lista con rete mancante"
+      usecase (UUC4.1.1) as "UUC4.1.1\nAggiornamento\nlista organizzazioni"
+      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+    }
   }
-}
 
-:A: -- (UUC4.1)
+  :A: -- (UUC4.1)
 
-(UUC4.1.1) .up.|> (UUC4.1) : <<include>>
-(UUC5) .up.|> (UUC4.1) : <<extends>>
+  (UUC4.1.1) .up.|> (UUC4.1) : <<include>>
+  (UUC5) .up.|> (UUC4.1) : <<extends>>
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{UUC4: Recupero lista organizzazioni} 
+  \label{fig:uuc4} 
+\end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC4
@@ -570,30 +606,36 @@ rectangle {
 \subsubsection{UUC6 - Collegamento organizzazione}%
 \label{subsub:UUC6utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title UUC6 - Collegamento organizzazione
+  title UUC6 - Collegamento organizzazione
 
-actor :utente autenticato: as A3
-actor :utente non collegato: as A3.1
+  actor :utente autenticato: as A3
+  actor :utente non collegato: as A3.1
 
-:A3.1: -up-|> :A3:
+  :A3.1: -up-|> :A3:
 
-rectangle {
-  together {
-    usecase (UUC6.1) as "UUC6.1\nSelezionamento di un'organizzazione\n--\nExtension points:\nVisualizzazione errore in caso di\nselezionamento di un'organizzazione\n con rete mancante"
-    usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+  rectangle {
+    together {
+      usecase (UUC6.1) as "UUC6.1\nSelezionamento di un'organizzazione\n--\nExtension points:\nVisualizzazione errore in caso di\nselezionamento di un'organizzazione\n con rete mancante"
+      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+    }
   }
-}
 
-:A3.1: -- (UUC6.1)
+  :A3.1: -- (UUC6.1)
 
-(UUC5) .up.|> (UUC6.1) : <<extends>>
+  (UUC5) .up.|> (UUC6.1) : <<extends>>
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{UUC6: Collegamento organizzazione} 
+  \label{fig:uuc6} 
+\end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC6
@@ -636,29 +678,35 @@ rectangle {
 \subsubsection{UUC7 - Scollegamento organizzazione}%
 \label{subsub:UUC7utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title UUC7 - Scollegamento organizzazione
+  title UUC7 - Scollegamento organizzazione
 
-actor :utente autenticato: as A3
-actor :utente collegato: as A3.1
-:A3.1: -up-|> :A3:
+  actor :utente autenticato: as A3
+  actor :utente collegato: as A3.1
+  :A3.1: -up-|> :A3:
 
-rectangle {
-  together {
-    usecase (UUC7) as "UUC7\nScollegamento organizzazione\n--\nExtension points:\nVisualizzazione errore in caso di\nscollegamento dall'organizzazione\n con rete mancante"
-    usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+  rectangle {
+    together {
+      usecase (UUC7) as "UUC7\nScollegamento organizzazione\n--\nExtension points:\nVisualizzazione errore in caso di\nscollegamento dall'organizzazione\n con rete mancante"
+      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+    }
   }
-}
 
-:A3.1: -- (UUC7)
+  :A3.1: -- (UUC7)
 
-(UUC5) .up.|> (UUC7) : <<extends>>
+  (UUC5) .up.|> (UUC7) : <<extends>>
 
-@enduml  
-\end{plantuml}
+  @enduml  
+    \end{plantuml} 
+  \caption{UUC7: Scollegamento organizzazione} 
+  \label{fig:uuc7} 
+\end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC7
@@ -681,29 +729,35 @@ rectangle {
 \subsubsection{UUC8 - Scollegamento da organizzazioni multiple}%
 \label{subsub:UUC8utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title UUC8 - Scollegamento da organizzazioni multiple
+  title UUC8 - Scollegamento da organizzazioni multiple
 
-actor :utente autenticato: as A3
-actor :utente collegato: as A3.1
-:A3.1: -up-|> :A3:
+  actor :utente autenticato: as A3
+  actor :utente collegato: as A3.1
+  :A3.1: -up-|> :A3:
 
-rectangle {
-  together {
-    usecase (UUC8) as "UUC8\nScollegamento da organizzazioni multiple\n--\nExtension points:\nVisualizzazione errore in caso di\nscollegamento dall'organizzazione\n con rete mancante"
-    usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+  rectangle {
+    together {
+      usecase (UUC8) as "UUC8\nScollegamento da organizzazioni multiple\n--\nExtension points:\nVisualizzazione errore in caso di\nscollegamento dall'organizzazione\n con rete mancante"
+      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+    }
   }
-}
 
-:A3.1: -- (UUC8)
+  :A3.1: -- (UUC8)
 
-(UUC5) .up.|> (UUC8) : <<extends>>
+  (UUC5) .up.|> (UUC8) : <<extends>>
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{UUC8: Scollegamento da organizzazioni multiple} 
+  \label{fig:uuc8} 
+\end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC8
@@ -726,29 +780,35 @@ rectangle {
 \subsubsection{UUC9 - Passaggio noto/incognito}%
 \label{subsub:UUC9utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title UUC9 - Passaggio noto/incognito
+  title UUC9 - Passaggio noto/incognito
 
-actor :utente autenticato: as A3
-actor :utente collegato: as A3.1
-:A3.1: -up-|> :A3:
+  actor :utente autenticato: as A3
+  actor :utente collegato: as A3.1
+  :A3.1: -up-|> :A3:
 
-rectangle {
-  together {
-    usecase (UUC9.1) as "UUC9.1\nScelta noto o incognito\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
-    usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+  rectangle {
+    together {
+      usecase (UUC9.1) as "UUC9.1\nScelta noto o incognito\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
+      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+    }
   }
-}
 
-:A3.1: -- (UUC9.1)
+  :A3.1: -- (UUC9.1)
 
-(UUC5) .up.|> (UUC9.1) : <<extends>>
+  (UUC5) .up.|> (UUC9.1) : <<extends>>
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{UUC9: Passaggio noto/incognito} 
+  \label{fig:uuc9} 
+\end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC9
@@ -771,32 +831,38 @@ rectangle {
 \subsubsection{UUC9.1 - Scelta noto o incognito}%
 \label{subsub:UUC9.1utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title UUC9.1 - Scelta noto o incognito
+  title UUC9.1 - Scelta noto o incognito
 
-actor :utente collegato: as A3
+  actor :utente collegato: as A3
 
-actor :utente noto: as A3.1
-actor :utente incognito: as A3.2
+  actor :utente noto: as A3.1
+  actor :utente incognito: as A3.2
 
-:A3.1: -up-|> :A3:
-:A3.2: -up-|> :A3:
+  :A3.1: -up-|> :A3:
+  :A3.2: -up-|> :A3:
 
-rectangle {
-  together {
-    usecase (UUC9.1.1) as "UUC9.1.1\nPassaggio a incognito"
-    usecase (UUC9.1.2) as "UUC9.1.2\nPassaggio a noto"
+  rectangle {
+    together {
+      usecase (UUC9.1.1) as "UUC9.1.1\nPassaggio a incognito"
+      usecase (UUC9.1.2) as "UUC9.1.2\nPassaggio a noto"
+    }
   }
-}
 
-:A3.1: -- (UUC9.1.1)
-:A3.2: -- (UUC9.1.2)
+  :A3.1: -- (UUC9.1.1)
+  :A3.2: -- (UUC9.1.2)
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{UUC9.1: Scelta noto o incognito} 
+  \label{fig:uuc9_1} 
+\end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC9.1
@@ -852,28 +918,34 @@ rectangle {
 \subsubsection{UUC10 - Storico utente}%
 \label{subsub:UUC10utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title UUC10 - Storico utente
+  title UUC10 - Storico utente
 
-actor :utente autenticato: as A
+  actor :utente autenticato: as A
 
-rectangle {
-  together {
-    usecase (UUC10) as "UUC10\nVisualizzazione storico accessi\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta storico\nin mancanza di rete"
-    usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
-    note right of (UUC10): implementazione opzionale
+  rectangle {
+    together {
+      usecase (UUC10) as "UUC10\nVisualizzazione storico accessi\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta storico\nin mancanza di rete"
+      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+      note right of (UUC10): implementazione opzionale
+    }
   }
-}
 
-:A: -- (UUC10)
+  :A: -- (UUC10)
 
-(UUC5) .up.|> (UUC10) : <<extends>>
+  (UUC5) .up.|> (UUC10) : <<extends>>
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{UUC10: Storico utente} 
+  \label{fig:uuc10} 
+\end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC10
@@ -897,31 +969,37 @@ rectangle {
 \subsubsection{UUC11 - Visualizzazione tempo trascorso nell'organizzazione corrente}%
 \label{subsub:UUC11utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title UUC11 - Visualizzazione tempo nell'organizzazione corrente
+  title UUC11 - Visualizzazione tempo nell'organizzazione corrente
 
-actor :utente autenticato: as A3
-actor :utente collegato: as A3.1
+  actor :utente autenticato: as A3
+  actor :utente collegato: as A3.1
 
-:A3.1: -up-|> :A3:
+  :A3.1: -up-|> :A3:
 
-rectangle {
-  together {
-    usecase (UUC11) as "UUC11\nVisualizzazione tempo \nnell'organizzazione corrente\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta tempo trascorso\nin mancanza di rete"
-    usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
-    note right of (UUC11): implementazione opzionale
+  rectangle {
+    together {
+      usecase (UUC11) as "UUC11\nVisualizzazione tempo \nnell'organizzazione corrente\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta tempo trascorso\nin mancanza di rete"
+      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+      note right of (UUC11): implementazione opzionale
+    }
   }
-}
 
-:A3.1: -- (UUC11)
+  :A3.1: -- (UUC11)
 
-(UUC5) .up.|> (UUC11) : <<extends>>
+  (UUC5) .up.|> (UUC11) : <<extends>>
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{UUC11: Visualizzazione tempo trascorso nell'organizzazione corrente} 
+  \label{fig:uuc11} 
+\end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC11
@@ -944,29 +1022,35 @@ rectangle {
 \subsubsection{UUC12 - Disconnessione utente}%
 \label{subsub:UUC12utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
 
-title UUC12 - Disconnessione utente
+  title UUC12 - Disconnessione utente
 
-actor :utente autenticato: as A3
+  actor :utente autenticato: as A3
 
-rectangle {
-  together {
-    usecase (UUC12) as "UUC12\nDisconnessione utente\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
-    usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+  rectangle {
+    together {
+      usecase (UUC12) as "UUC12\nDisconnessione utente\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
+      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+    }
   }
-}
 
-:A3: -- (UUC12)
+  :A3: -- (UUC12)
 
-(UUC5) .up.|> (UUC12) : <<extends>>
+  (UUC5) .up.|> (UUC12) : <<extends>>
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{UUC12: Disconnessione} 
+  \label{fig:uuc12} 
+\end{figure}
 
-\begin{description}
+  \begin{description}
   \item[Caso d’uso:] UUC12
   \item[Titolo:] Disconnessione
   \item[Attori primari:] utente autenticato
@@ -983,32 +1067,37 @@ rectangle {
 \end{description}
 % subsub:UUC12utente (end)
 
-
 %UUC13 (start)
 \subsubsection{UUC13 - Eliminazione account}%
 \label{subsub:UUC13utente}
 
-\begin{plantuml}
-@startuml
-!include ../../commons/style/use-cases.pu
+\begin{figure}[h!] 
+  \centering 
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+  
+  title UUC13 - Eliminazione account
 
-title UUC13 - Eliminazione account
+  actor :utente autenticato: as A
 
-actor :utente autenticato: as A
-
-rectangle {
-  together {
-    usecase (UUC13.1) as "UUC13.1\nConferma eliminazione account\n--\nExtension points:\nVisualizzazione errore in\ncaso di eliminazione account\nin mancanza di rete"
-    usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+  rectangle {
+    together {
+      usecase (UUC13.1) as "UUC13.1\nConferma eliminazione account\n--\nExtension points:\nVisualizzazione errore in\ncaso di eliminazione account\nin mancanza di rete"
+      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+    }
   }
-}
 
-:A: -- (UUC13.1)
+  :A: -- (UUC13.1)
 
-(UUC5) .up.|> (UUC13.1) : <<extends>>
+  (UUC5) .up.|> (UUC13.1) : <<extends>>
 
-@enduml
-\end{plantuml}
+  @enduml
+  \end{plantuml} 
+  \caption{UUC13: Eliminazione account} 
+  \label{fig:uuc13} 
+\end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC13
