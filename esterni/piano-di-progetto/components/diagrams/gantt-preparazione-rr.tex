@@ -1,0 +1,28 @@
+\documentclass[../pianificazione.tex]{subfiles}
+
+\ganttset{time slot format=little-endian,%
+newline shortcut=true,%
+y unit title=0.8cm,%
+y unit chart=0.5cm,%
+expand chart=207mm,%
+calendar week text=Sett.~\currentweek,%
+inline=true,%
+bar inline label node/.append style={font=\tiny, above},%
+group inline label node/.append style={font=\scriptsize},%
+milestone inline label node/.append style={font=\scriptsize}%
+}
+
+\def\pgfcalendarmonthitaly#1{%
+  \ifcase#1\or Gennaio\or Febbraio\or Marzo \or Aprile\or Maggio\or Giugno\or Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi
+}
+
+\begin{document}
+  \hspace*{-1.7cm}
+  \begin{ganttchart}{13/1/2020}{26/1/2020}
+    \gantttitle{Preparazione in entrata alla RR}{14}\\
+    \gantttitlecalendar*{13/1/2020}{26/1/2020}{month=italy,week=1}\\
+    \gantttitlecalendar*[title label font=\tiny]{13/1/2020}{26/1/2020}{day}\\
+
+    \ganttbar{Preparazione presentazione}{14/1/2020}{21/1/2020}
+  \end{ganttchart}
+\end{document}
