@@ -1,4 +1,4 @@
-﻿@startuml
+@startuml
 !include ../../../../../commons/style/use-cases.pu
 
 title AUC4 - Gestione richieste
@@ -14,7 +14,7 @@ rectangle {
     usecase (AUC4.4) as "AUC4.4\nGestione richiesta aggiunta luogo"
     usecase (AUC4.3) as "AUC4.3\nGestione richiesta modifica organizzazione"
     usecase (AUC4.2) as "AUC4.2\nGestione richiesta creazione organizzazione"
-    usecase (AUC4.1) as "AUC4.1\nGestione richieste owner"  
+    usecase (AUC4.1) as "AUC4.1\nGestione richieste owner"
   }
 }
 

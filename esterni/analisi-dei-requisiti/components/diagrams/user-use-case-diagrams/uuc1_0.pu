@@ -1,4 +1,4 @@
-﻿@startuml
+@startuml
 !include ../../../../../commons/style/use-cases.pu
 
 title UUC1 - Registrazione
@@ -10,7 +10,7 @@ rectangle {
     usecase (UUC1.1) as "UUC1.1\nVisualizzazione EULA"
     usecase (UUC1.2) as "UUC1.2\nInserimento dati registrazione"
     usecase (UUC1.1.1) as "UUC1.1.1\nConferma EULA"
-  }  
+  }
 }
 
 :A: -- (UUC1.1)

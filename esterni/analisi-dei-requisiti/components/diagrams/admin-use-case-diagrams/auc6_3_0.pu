@@ -1,4 +1,4 @@
-﻿@startuml
+@startuml
 !include ../../../../../commons/style/use-cases.pu
 
 title AUC6.3 - Modifica organizzazione
@@ -11,7 +11,7 @@ rectangle {
     usecase (AUC6.3.4) as "AUC6.3.4\nGestione luoghi"
     usecase (AUC6.3.3) as "AUC6.3.3\nModifica descrizione organizzazione"
     usecase (AUC6.3.2) as "AUC6.3.2\nModifica indirizzo organizzazione"
-    usecase (AUC6.3.1) as "AUC6.3.1\nModifica nome organizzazione" 
+    usecase (AUC6.3.1) as "AUC6.3.1\nModifica nome organizzazione"
   }
 }
 

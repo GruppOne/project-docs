@@ -1,4 +1,4 @@
-﻿@startuml
+@startuml
 !include ../../../../../commons/style/use-cases.pu
 
 title UUC2 - Autenticazione
@@ -8,8 +8,8 @@ actor :utente non autenticato: as A
 rectangle {
   together {
     usecase (UUC2.1) as "UUC2.1\nInserimento email\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
-    usecase (UUC2.2) as "UUC2.2\nInserimento password\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate" 
-    usecase (UUC2.3) as "UUC2.3\nInformazioni autenticazione non valide"     
+    usecase (UUC2.2) as "UUC2.2\nInserimento password\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
+    usecase (UUC2.3) as "UUC2.3\nInformazioni autenticazione non valide"
   }
 }
 

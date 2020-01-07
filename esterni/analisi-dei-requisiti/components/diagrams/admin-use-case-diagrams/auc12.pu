@@ -1,4 +1,4 @@
-﻿@startuml 
+@startuml
 !include ../../../../../commons/style/use-cases.pu
 
 title AUC12 - Richiesta cedimento proprietà organizzazione

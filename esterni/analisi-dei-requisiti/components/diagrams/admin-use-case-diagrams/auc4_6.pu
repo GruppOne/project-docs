@@ -1,4 +1,4 @@
-﻿@startuml
+@startuml
 !include ../../../../../commons/style/use-cases.pu
 
 title AUC4.6 - Gestione richiesta trasferimento di proprietà organizzazione

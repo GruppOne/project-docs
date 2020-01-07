@@ -1,4 +1,4 @@
-﻿@startuml
+@startuml
 !include ../../../../../commons/style/use-cases.pu
 
 title UUC3.1 - Recupero password
@@ -8,8 +8,8 @@ actor :utente non autenticato: as A
 rectangle {
   together {
     usecase (UUC3.1.1) as "UUC3.1.1\nInserimento\nemail di registrazione\n--\nExtension points:\nVisualizzazione errore se l'email\nnon è registrata"
-    usecase (UUC3.1.2) as "UUC3.1.2\nReimpostazione password\n--\nExtension points:\nVisualizzazione errore se:\n-nuova password non rispetta vincoli\n-nuova password e sua conferma\nnon coincidono"  
-    usecase (UUC3.1.3) as "UUC3.1.3\nInformazioni recupero non valide" 
+    usecase (UUC3.1.2) as "UUC3.1.2\nReimpostazione password\n--\nExtension points:\nVisualizzazione errore se:\n-nuova password non rispetta vincoli\n-nuova password e sua conferma\nnon coincidono"
+    usecase (UUC3.1.3) as "UUC3.1.3\nInformazioni recupero non valide"
   }
 }
 

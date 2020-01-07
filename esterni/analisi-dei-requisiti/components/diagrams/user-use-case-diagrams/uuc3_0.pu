@@ -1,4 +1,4 @@
-﻿@startuml
+@startuml
 !include ../../../../../commons/style/use-cases.pu
 
 title UUC3 - Recupero credenziali
@@ -7,7 +7,7 @@ actor :utente non autenticato: as A
 
 rectangle {
   together {
-    usecase (UUC3.1) as "UUC3.1\nRecupero password" 
+    usecase (UUC3.1) as "UUC3.1\nRecupero password"
   }
 }
 

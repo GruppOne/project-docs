@@ -1,4 +1,4 @@
-﻿@startuml
+@startuml
 !include ../../../../../commons/style/use-cases.pu
 
 title UUC1.2 - Inserimento dati registrazione
@@ -8,9 +8,9 @@ actor :utente non autenticato: as A
 rectangle {
   together {
     usecase (UUC1.2.1) as "UUC1.2.1\nRegistrazione email\n--\nExtension points:\nVisualizzazione errore se la mail\nnon Ã¨ scritta in modo corretto"
-    usecase (UUC1.2.2) as "UUC1.2.2\nRegistrazione password\n--\nExtension points:\nVisualizzazione errore se la\npassword non rispetta i criteri" 
-    usecase (UUC1.2.3) as "UUC1.2.3\nConferma password\n--\nExtension points:\nVisualizzazione errore se le\ndue password non coincidono"     
-    usecase (UUC1.2.4) as "UUC1.2.4\nInserimento dati anagrafici\n--\nExtension points:\nVisualizzazione errore\ndati mancanti" 
+    usecase (UUC1.2.2) as "UUC1.2.2\nRegistrazione password\n--\nExtension points:\nVisualizzazione errore se la\npassword non rispetta i criteri"
+    usecase (UUC1.2.3) as "UUC1.2.3\nConferma password\n--\nExtension points:\nVisualizzazione errore se le\ndue password non coincidono"
+    usecase (UUC1.2.4) as "UUC1.2.4\nInserimento dati anagrafici\n--\nExtension points:\nVisualizzazione errore\ndati mancanti"
     usecase (UUC1.2.5) as "UUC1.2.5\nInformazioni registrazione non valide"
   }
 }
