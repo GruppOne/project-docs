@@ -3,6 +3,7 @@
 % questi package non sono necessari in lualatex; ref https://tex.stackexchange.com/a/413046
 % \usepackage[utf8]{inputenc}
 % \usepackage[T1]{fontenc}
+\usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{soulutf8}
@@ -129,3 +130,7 @@
 \newcommand{\modifiche}{\@modifiche}
 
 \makeatother
+
+% setup delle description
+\setlist[description,1]{font=$\bullet$\hspace{1.5mm}, leftmargin=*,labelindent=12.5mm}
+\setlist[description,2]{font=$\bullet$\hspace{1.5mm}, leftmargin=*,labelindent=12.5mm}
