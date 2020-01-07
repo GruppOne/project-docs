@@ -4,7 +4,7 @@
 \subsection{Obiettivo del prodotto}%
 \label{sub:obiettivo_del_prodotto}
 Il prodotto richiesto da capitolato si pone l'obiettivo di tracciare il numero di persone presenti all’interno di una data organizzazione.\\
-Per soddisfare la richiesta, sarà implementato un server con annessa \glossario{UI} per la gestione delle organizzazioni e il monitoraggio degli utenti, e
+Per soddisfare la richiesta, sarà implementata una \glossario{web application} per la gestione delle organizzazioni e il monitoraggio degli utenti, e
 di un'\glossario{applicazione mobile} per l'utente finale che gli permetta di essere monitorato dalla specifica organizzazione scelta.
 
 % sub:obiettivo_del_prodotto (end)
@@ -31,9 +31,9 @@ la privacy dell'utente.
 % sub:funzionalita_del_prodotto (end)
 \subsection{Caratteristiche degli utenti}%
 \label{sub:caratteristiche_degli_utenti}
-Nell'ambito di questo progetto, sono presenti due tipologie di utenti, con caratteristiche diverse dovute all'utilizzo del prodotto:
+Nell'ambito di questo progetto, sono presenti due tipologie generiche di utenti, con caratteristiche diverse dovute all'utilizzo del prodotto:
 \begin{description}
-  \item[Amministratore:] è l'utente che detiene i privilegi per gestire il server e monitorare gli utenti generici;
+  \item[Super utente:] è l'utente che detiene dei privilegi avanzati per l'uso della web application, diversi per ogni sottocategoria di super utente;
   \item[Utente generico:] è l'utente utilizzatore dell'applicazione mobile. Può essere un dipendente di un'azienda che monitora la sua presenza, oppure
   un visitatore di un evento pubblico.
 \end{description}
@@ -52,7 +52,7 @@ luoghi delle organizzazioni.
 \label{par:front-end}
 Lo sviluppo \glossario{front-end} sarà costituito:
 \begin{itemize}
-  \item dalla UI del server, raggiungibile solo dall'amministratore tramite autenticazione, per eseguire determinate operazioni in base al tipo di privilegi;
+  \item dalla web application, raggiungibile da qualunque utente (anche generico), per eseguire determinate operazioni in base al tipo di privilegi;
   \item dall'applicazione mobile, scaricabile da ogni utente interessato all'utilizzo del prodotto, che consente di visualizzare le informazioni d'interesse ed eseguire determinate
   operazioni in presenza di rete.
 \end{itemize}
