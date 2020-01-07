@@ -6,12 +6,12 @@
   \label{sub:gestione_dei_rischi}
   Nel corso di un progetto complesso non è così raro incontrare problematiche che possono rallentare o addirittura annullare la distribuzione del software finale.
   Allo sopo di evitare per quanto possibile queste problematiche in questa sezione viene riportata l'analisi svolta sui possibili rischi del progetto; I rischi analizzati sono stati classificati secondo le seguenti caratteristiche:
-  \begin{itemize}
-      \item Identificazione dei rischi: Stiliamo un elenco dei rischi in base alla categoria a cui appartengono, ossia alla causa generale del rischio;
-      \item Analisi dei rischi: analizziamo i rischi individuati nel punto sopra e li cataloghiamo in base alla probabilità di incorrere in questi rischi e alla gravità delle conseguenze che questi rischi comporterebbero per il progetto;
-      \item Pianificazione dei rischi: elaboriamo dei piani per ridurre la probabilità che questi eventi accadano o ridurne le conseguenze;
-      \item Monitoraggio dei rischi: Controlliamo regolarmente i rischi e li modifichiamo, rimuoviamo o aggiungiamo qual'ora le esigenze cambino nel corso del progetto.
-    \end{itemize}
+  \begin{description}
+      \item[Identificazione dei rischi:] Stiliamo un elenco dei rischi in base alla categoria a cui appartengono, ossia alla causa generale del rischio;
+      \item[Analisi dei rischi:] analizziamo i rischi individuati nel punto sopra e li cataloghiamo in base alla probabilità di incorrere in questi rischi e alla gravità delle conseguenze che questi rischi comporterebbero per il progetto;
+      \item[Pianificazione dei rischi:] elaboriamo dei piani per ridurre la probabilità che questi eventi accadano o ridurne le conseguenze;
+      \item[Monitoraggio dei rischi:] Controlliamo regolarmente i rischi e li modifichiamo, rimuoviamo o aggiungiamo qual'ora le esigenze cambino nel corso del progetto.
+    \end{description}
     I rischi sono stati classificati dal gruppo nei seguenti tipi:
     \begin{itemize}
       \item Rischi del Personale;
@@ -27,17 +27,33 @@
   \rowcolors{2}{lightgray!80!white}{white}
   \begin{longtable}{|p{10em}|p{13em}|p{13em}|p{10em}|}
   \hline
-  Rischio & Descrizione & Pianificazione & Indicatori  \\
+  Rischio & Descrizione & Pianificazione & Indicatori\\
   \hline
   \endhead
   Scarse conoscenze tecnologiche [Rischio tecnologico] & Inesperienza del gruppo riguardo alle tecnologie utilizzate, per la maggior parte nuove. & L'amministratore ha redatto le norme di progetto con velocità e ponendo particolare attenzione alle tecnologie utilizzate nel progetto così da consentire ai membri del gruppo un apprendimento più veloce e completo dei nuovi strumenti utilizzati. & \textbf{Probabilità:} Alta \textbf{Impatto:} Tollerabile \\
-  Ritardo nella consegna del progetto [Rischio per il progetto] & La nostra inesperienza nella gestione di un progetto software unita alle conoscenze limitate sulle tecnologie coinvolte potrebbero portare ad un ritardo nella consegna del prodotto. & Il piano di progetto terrà conto dell'inesperienza del gruppo nella valutazione delle tempistiche e i membri del gruppo sono invitati a aggiornarsi preventivamente sulle aree in cui hanno minor competenza. & \textbf{Probabilità:}   Bassa \textbf{Impatto: }  Importante  \\
-  Problemi Accademici[Rischio del personale] & La quasi totalità dei membri del gruppo porta avanti altre attività accademiche oltre a questo progetto e dunque possono sovrapporsi gli impegni dei vari membri. & Il team ha approvato sin dal primo periodo un calendario condiviso di impegni per cui era richiesta la partecipazione di tutti i componenti del gruppo. & \textbf{Probabilità: }    Alta \textbf{Impatto: }    Basso\\
-  Problemi Personali[Rischio del personale] & Possono intercorrere nel corso del progetto impegni personali che costringano alcuni membri del gruppo a sospendere le attività e risultare irreperibili. & Questi eventi, se non saranno compatibili con gli impegni già determinati per il progetto, andranno comunicati appena possibile al responsabile che se necessario provvederà a ridistribuire le risorse disponibili. & \textbf{Probabilità: }  Alta \textbf{Impatto: }    Molto Basso\\
-  Comunicazioni esterne[Rischio del personale] & Il proponente ha la sede lontana da Padova e dunque le comunicazioni faccia a faccia risultano complicate & Vengono programmate chiamate hangouts e, se necessari,gli incontri dal vivo vengono programmati con largo anticipo. & \textbf{Probabilità: }   Alta \textbf{Impatto: }   Basso\\
-  Calcolo costi del progetto[Rischio per il progetto] & La poca esperienza del gruppo potrebbe portare ad un calcolo dei costi differente da quello che sarà invece necessario per il progetto. & Le stime sui costi sono state discusse con tutti i membri del gruppo. Se la stima sarà al ribasso si cercerà di ridurre al massimo i cambiamenti nei costi che verranno comunicati tempestivamente al committente. & \textbf{Probabilità: }  Media \textbf{Impatto: } Tollerabile\\
+  Monitoraggio: & \multicolumn{3}{p{38.5em}|}{In caso vengano aggiunte nuove tecnologie i membri del gruppo verranno invitati ad aggiornarsi sulle nuove tecnologie.}\\
+  \hline
+  Ritardo nella consegna del progetto [Rischio per il progetto] & La nostra inesperienza nella gestione di un progetto software unita alle conoscenze limitate sulle tecnologie coinvolte potrebbero portare ad un ritardo nella consegna del prodotto. & Il piano di progetto terrà conto dell'inesperienza del gruppo nella valutazione delle tempistiche e i membri del gruppo sono invitati a aggiornarsi preventivamente sulle aree in cui hanno minor competenza. & \textbf{Probabilità:}   Bassa \textbf{Impatto: }  Significativo  \\
+  Monitoraggio: & \multicolumn{3}{p{38.5em}|}{Il responsabile monitorerà spesso lo stato del progetto per eventualmente riassegnare le risorse disponibili e limitare il ritardo.}\\
+  \hline
+  Problemi Accademici[Rischio del personale] & La quasi totalità dei membri del gruppo porta avanti altre attività accademiche oltre a questo progetto e dunque possono sovrapporsi gli impegni dei vari membri. & Il team ha approvato sin dal primo periodo un calendario condiviso di impegni per cui era richiesta la partecipazione di tutti i componenti del gruppo. & \textbf{Probabilità: }   Alta \textbf{Impatto: }    Basso\\
+  Monitoraggio: & \multicolumn{3}{p{38.5em}|}{I membri del gruppo sono sempre invitati a comunicare preventivamente gli impegni accademici così da poter gestire al meglio gli impegni del gruppo.}\\
+  \hline
+  Problemi Personali[Rischio del personale] & Possono intercorrere nel corso del progetto impegni personali che costringano alcuni membri del gruppo a sospendere le attività e risultare irreperibili. & Questi eventi, se non saranno compatibili con gli impegni già determinati per il progetto, andranno comunicati appena possibile al responsabile che se necessario provvederà a ridistribuire le risorse disponibili. & \textbf{Probabilità:}  Alta \textbf{Impatto: }    Molto Basso\\
+  Monitoraggio: & \multicolumn{3}{p{38.5em}|}{In caso sopraggiungano impegni personali tutti i membri sono tenuti a comunicarli al responsabile il prima possibile.}\\
+  \hline
+  Comunicazioni esterne[Rischio del personale] & Il proponente ha la sede lontana da Padova e dunque le comunicazioni faccia a faccia risultano complicate & Se sono necessari incontri col proponente in tempi brevi vengono preferite chiamate Hangouts a incontri fisici. & \textbf{Probabilità: }   Alta \textbf{Impatto: }   Basso\\
+  Monitoraggio: & \multicolumn{3}{p{38.5em}|}{Il responsabile se possibile organizzerà con largo anticipo incontri e chiamate con il proponente.}\\
+  \hline
+  Calcolo costi del progetto[Rischio per il progetto] & La poca esperienza del gruppo potrebbe portare ad un calcolo dei costi differente da quello che sarà invece necessario per il progetto. & Le stime sui costi sono state discusse con tutti i membri del gruppo. Se la stima si rivelerà essere al ribasso si cercerà di ridurre al massimo i cambiamenti nei costi che verranno comunicati tempestivamente al committente. & \textbf{Probabilità: }  Media \textbf{Impatto: } Tollerabile\\
+  Monitoraggio: & \multicolumn{3}{p{38.5em}|}{Per gestire al meglio eventuali problemi legati ai costi i membri del gruppo aggiornano costantemente le proprie ore di lavoro così che il responsabile e gli altri membri del gruppo possano controllare la situazione attuale in relazione alle previsioni fatte.}\\
+  \hline
   Ridefinizione dei requisiti[Rischio dei requisiti] & I requisiti decisi in fase di analisi potrebbero essere modificati in seguito ad esigenze del proponente o del gruppo. & I membri del gruppo hanno discusso le stime sui costi e le hanno proposte al proponente per trovare soluzioni comuni, nel caso sia necessario ridefinire i requisiti si parlerà approfonditamente con proponente e committente e si cercherà di gravare il meno possibile sul prospetto orario del progetto. & \textbf{Probabilità: }  Bassa \textbf{Impatto: }  Significativo\\
+  Monitoraggio: & \multicolumn{3}{p{38.5em}|}{I requisiti verranno discussi attentamente e se ne parlerà con il proponente prima di consegnarli in revisione.}\\
+  \hline
   Problema al server di Imola Informatica[Rischio degli strumenti] & Il proponente mette a disposizione del gruppo un server dell'azienda che tuttavia potrebbe subire problematiche o essere spento per un certo periodo di tempo per motivazioni interne all'azienda. & Il gruppo provvederà a produrre più copie dell'applicazione e in particolare verranno fatte diverse copie del software definitivo così da non dipendere necessariamente dall'hardware fornito da Imola Informatica. & \textbf{Probabilità: }  Bassa \textbf{Impatto: } Tollerabile\\
+  Monitoraggio: & \multicolumn{3}{p{38.5em}|}{Il proponente notificherà il gruppo in caso di problemi se possibile e in ogni caso la copia dell'applicazione sul server non sarà l'unica copia disponibile.}\\
+  \hline
   \hline
   \end{longtable}
   % sub:elenco_dei_rischi
