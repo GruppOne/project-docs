@@ -1,0 +1,73 @@
+\documentclass[../pianificazione.tex]{subfiles}
+
+\ganttset{time slot format=little-endian,%
+newline shortcut=true,%
+y unit title=0.8cm,%
+y unit chart=0.5cm,%
+expand chart=207mm,%
+calendar week text=Sett.~\currentweek,%
+inline=true,%
+bar inline label node/.append style={font=\tiny, above},%
+group inline label node/.append style={font=\scriptsize},%
+milestone inline label node/.append style={font=\scriptsize}%
+}
+
+\def\pgfcalendarmonthitaly#1{%
+  \ifcase#1\or Gennaio\or Febbraio\or Marzo \or Aprile\or Maggio\or Giugno\or Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi
+}
+
+\begin{document}
+  \hspace*{-1.7cm}
+  \begin{ganttchart}{11/11/2019}{19/1/2020}
+    \gantttitle{Analisi Preliminare}{70}\\
+    \gantttitlecalendar*{11/11/2019}{19/1/2020}{month=italy,week=1}\\
+    \gantttitlecalendar*[title label font=\tiny]{11/11/2019}{19/1/2020}{day}\\
+
+    \ganttgroup[name=group1]{Formazione del gruppo}{14/11/2019}{6/12/2019}\\
+    \ganttbar[name=bar1]{Caratterizzazione del gruppo}{14/11/2019}{19/11/2019}\\
+    \ganttbar[name=bar2]{Normazione}{14/11/2019}{19/11/2019}\\
+    \ganttbar[name=bar3,bar inline label node/.append style={anchor=south west, xshift=-0.7cm}]{Pianificazione di progetto}{20/11/2019}{25/11/2019}\\
+    \ganttbar[name=bar4]{Studio di fattibilità}{26/11/2019}{6/12/2019}\\
+    \ganttbar[name=bar5]{Terminologia e nomenclatura}{20/11/2019}{6/12/2019}\\
+    \ganttbar[name=bar6]{Produzione documentazione}{20/11/2019}{30/11/2019}\\
+    \ganttbar[name=bar7,bar inline label node/.append style={anchor=south west, xshift=-0.7cm}]{Verifica documentazione}{1/12/2019}{6/12/2019}\\
+    \ganttlink[link mid=0.75]{bar1}{bar3}
+    \ganttlink{bar2}{bar3}
+    \ganttlink{bar3}{bar4}
+    \ganttlink[link mid=0.83]{bar2}{bar5}
+    \ganttlink{bar6}{bar7}
+    \\
+    \ganttgroup[name=group2]{Impostazione strumenti e template}{7/12/2019}{20/12/2019}\\
+    \ganttbar[name=bar8]{Normazione}{7/12/2019}{11/12/2019}\\
+    \ganttbar[name=bar9,bar inline label node/.append style={anchor=south west, xshift=-0.3cm}]{Analisi dei Requisiti}{12/12/2019}{15/12/2019}\\
+    \ganttbar[name=bar10,bar inline label node/.append style={anchor=south west, xshift=-0.5cm}]{Incontri con il proponente}{16/12/2019}{20/12/2019}\\
+    \ganttbar[name=bar11,bar inline label node/.append style={anchor=south west, xshift=-1.1cm}]{Termonologia e nomenclatura}{12/12/2019}{20/12/2019}\\
+    \ganttlink{bar8}{bar9}
+    \ganttlink{bar9}{bar10}
+    \ganttlink[link mid=0.83]{bar8}{bar11}
+    \\
+    \ganttgroup[name=group3]{Analisi e pianificazione}{21/12/2019}{7/1/2020}\\
+    \ganttbar[name=bar12]{Normazione}{21/12/2019}{28/12/2019}\\
+    \ganttbar[name=bar13,bar inline label node/.append style={anchor=south west, xshift=-0.7cm}]{Analisi dei Requisiti}{29/12/2019}{3/1/2020}\\
+    \ganttbar[name=bar14,bar inline label node/.append style={anchor=south west, xshift=-0.3cm}]{Pianificazione di progetto}{4/1/2020}{7/1/2020}\\
+    \ganttbar[name=bar15,bar inline label node/.append style={anchor=south west, xshift=-0.3cm}]{Pianificazione di qualifica}{4/1/2020}{7/1/2020}\\
+    \ganttbar[name=bar16]{Terminologia e nomenclatura}{20/12/2019}{7/1/2020}\\
+    \ganttbar[name=bar17]{Produzione documentazione}{20/12/2019}{7/1/2020}\\
+    \ganttlink{bar12}{bar13}
+    \ganttlink{bar13}{bar14}
+    \ganttlink[link mid=0.75]{bar13}{bar15}
+    \\
+    \ganttgroup[name=group4]{Dettagli finali}{8/1/2020}{14/1/2020}\\
+    \ganttbar[name=bar19]{Produzione documentazione}{8/1/2020}{8/1/2020}\\
+    \ganttbar[name=bar18]{Incontri con il proponente}{8/1/2020}{9/1/2020}\\
+    \ganttbar[name=bar19,bar inline label node/.append style={anchor=south west, xshift=-0.3cm}]{Verifica documentazione}{10/1/2020}{12/1/2020}\\
+    \ganttlink{bar18}{bar19}
+    \\
+    \ganttmilestone[name=mile1,milestone inline label node/.append style={anchor=east, xshift=-0.2cm}]{Consegna documenti}{14/1/2020}\\
+
+    \ganttlink[link mid=0.88]{group1}{group2}
+    \ganttlink[link mid=0.83]{group2}{group3}
+    \ganttlink[link mid=0.875]{group3}{group4}
+    \ganttlink[link mid=0.8]{group4}{mile1}
+  \end{ganttchart}
+\end{document}
