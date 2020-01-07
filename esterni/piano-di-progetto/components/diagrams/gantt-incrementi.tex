@@ -1,0 +1,41 @@
+\documentclass[../../piano-di-progetto.tex]{subfiles}
+
+\ganttset{time slot format=little-endian,%
+newline shortcut=true,%
+y unit title=0.8cm,%
+y unit chart=0.5cm,%
+expand chart=207mm,%
+calendar week text=Sett.~\currentweek,%
+inline=true,%
+bar inline label node/.append style={font=\tiny, above},%
+group inline label node/.append style={font=\scriptsize},%
+milestone inline label node/.append style={font=\scriptsize}%
+}
+
+\def\pgfcalendarmonthitaly#1{%
+  \ifcase#1\or Gennaio\or Febbraio\or Marzo \or Aprile\or Maggio\or Giugno\or Luglio\or Agosto\or Settembre\or Ottobre\or Novembre\or Dicembre\fi
+}
+
+\begin{document}
+  \hspace*{-1.7cm}
+  \begin{ganttchart}{16/3/2020}{19/4/2020}
+    \gantttitle{Incrementi}{35}\\
+    \gantttitlecalendar*{16/3/2020}{19/4/2020}{month=italy,week=1}\\
+    \gantttitlecalendar*[title label font=\tiny]{16/3/2020}{19/4/2020}{day}\\
+    \ganttgroup[name=group1]{Incremento 1}{17/3/2020}{20/3/2020}\\
+    \\
+    \ganttgroup[name=group2]{Incremento 2}{21/3/2020}{24/3/2020}\\
+    \\
+    \ganttgroup[name=group3]{Incremento 3}{25/3/2020}{28/3/2020}\\
+    \\
+    \ganttgroup[name=group4]{Incremento 4}{29/3/2020}{1/4/2020}\\
+    \\
+    \ganttgroup[name=group5]{Incremento 5}{2/4/2020}{5/4/2020}\\
+    \\
+    \ganttgroup[name=group6]{Incremento 6}{6/4/2020}{9/4/2020}\\
+    \\
+    \ganttgroup[name=group7]{Incremento 7}{10/4/2020}{13/4/2020}\\
+    \\
+    \ganttmilestone[name=mile1]{Consegna documenti}{13/4/2020}\\
+  \end{ganttchart}
+\end{document}
