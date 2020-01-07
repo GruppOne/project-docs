@@ -18,6 +18,6 @@ rectangle {
 
 :A3.1: -- (UUC11)
 
-(UUC5) .up.|> (UUC11) : <<extends>>
+(UUC5) .|> (UUC11) : <<extends>>
 
 @enduml

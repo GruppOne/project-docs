@@ -16,6 +16,6 @@ rectangle {
 :A: -- (UUC1.1)
 :A: -- (UUC1.2)
 
-(UUC1.1.1) .up.|> (UUC1.1) : <<include>>
+(UUC1.1.1) .|> (UUC1.1) : <<include>>
 
 @enduml
