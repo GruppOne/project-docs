@@ -13,8 +13,6 @@
   !include ../../commons/style/use-cases.pu
   scale 3/4
 
-  title UUC1 - Registrazione
-
   actor :utente non autenticato: as A
 
   rectangle {
@@ -100,9 +98,7 @@
   @startuml
   !include ../../commons/style/use-cases.pu
   scale 3/4
-    
-  title UUC1.2 - Inserimento dati registrazione
-    
+
   actor :utente non autenticato: as A
     
   rectangle {
@@ -256,8 +252,6 @@
   !include ../../commons/style/use-cases.pu
   scale 3/4
 
-  title UUC2 - Autenticazione
-    
   actor :utente non autenticato: as A
     
   rectangle {
@@ -366,8 +360,6 @@
   !include ../../commons/style/use-cases.pu
   scale 3/4
 
-  title UUC3 - Recupero credenziali
-
   actor :utente non autenticato: as A
 
   rectangle {
@@ -407,8 +399,6 @@
   @startuml
   !include ../../commons/style/use-cases.pu
   scale 3/4
-
-  title UUC3.1 - Recupero password
 
   actor :utente non autenticato: as A
 
@@ -500,8 +490,6 @@
   @startuml
   !include ../../commons/style/use-cases.pu
   scale 3/4
-
-  title UUC4 - Recupero lista organizzazioni
 
   actor :utente autenticato: as A
 
@@ -613,8 +601,6 @@
   !include ../../commons/style/use-cases.pu
   scale 3/4
 
-  title UUC6 - Collegamento organizzazione
-
   actor :utente autenticato: as A3
   actor :utente non collegato: as A3.1
 
@@ -685,8 +671,6 @@
   !include ../../commons/style/use-cases.pu
   scale 3/4
 
-  title UUC7 - Scollegamento organizzazione
-
   actor :utente autenticato: as A3
   actor :utente collegato: as A3.1
   :A3.1: -up-|> :A3:
@@ -735,8 +719,6 @@
   @startuml
   !include ../../commons/style/use-cases.pu
   scale 3/4
-
-  title UUC8 - Scollegamento da organizzazioni multiple
 
   actor :utente autenticato: as A3
   actor :utente collegato: as A3.1
@@ -787,8 +769,6 @@
   !include ../../commons/style/use-cases.pu
   scale 3/4
 
-  title UUC9 - Passaggio noto/incognito
-
   actor :utente autenticato: as A3
   actor :utente collegato: as A3.1
   :A3.1: -up-|> :A3:
@@ -837,8 +817,6 @@
   @startuml
   !include ../../commons/style/use-cases.pu
   scale 3/4
-
-  title UUC9.1 - Scelta noto o incognito
 
   actor :utente collegato: as A3
 
@@ -925,8 +903,6 @@
   !include ../../commons/style/use-cases.pu
   scale 3/4
 
-  title UUC10 - Storico utente
-
   actor :utente autenticato: as A
 
   rectangle {
@@ -975,8 +951,6 @@
   @startuml
   !include ../../commons/style/use-cases.pu
   scale 3/4
-
-  title UUC11 - Visualizzazione tempo nell'organizzazione corrente
 
   actor :utente autenticato: as A3
   actor :utente collegato: as A3.1
@@ -1029,8 +1003,6 @@
   !include ../../commons/style/use-cases.pu
   scale 3/4
 
-  title UUC12 - Disconnessione utente
-
   actor :utente autenticato: as A3
 
   rectangle {
@@ -1078,8 +1050,6 @@
   !include ../../commons/style/use-cases.pu
   scale 3/4
   
-  title UUC13 - Eliminazione account
-
   actor :utente autenticato: as A
 
   rectangle {
