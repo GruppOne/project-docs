@@ -5,8 +5,8 @@
 \subsubsection{AUC1 - Sistema di autenticazione}%
 \label{subsub:AUC1}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -28,9 +28,9 @@
   (AUC1.3) .up.|> (AUC1.1) : <<extends>>
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC1: Sistema di autenticazione} 
-  \label{fig:auc1} 
+  \end{plantuml}
+  \caption{AUC1: Sistema di autenticazione}
+  \label{fig:auc1}
 \end{figure}
 
 \begin{description}
@@ -49,8 +49,8 @@
 \subsubsection{AUC1.1 - Autenticazione}%
 \label{subsub:AUC1.1}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -69,9 +69,9 @@
   :A: -- AUC1.1.2
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC1.1: Autenticazione} 
-  \label{fig:auc1_1} 
+  \end{plantuml}
+  \caption{AUC1.1: Autenticazione}
+  \label{fig:auc1_1}
 \end{figure}
 
 \begin{description}
@@ -108,7 +108,7 @@
   \item[Attori primari:] utente non autenticato
   \item[Precondizione:] il sistema ha reso disponibile il campo per l'inserimento della propria e-mail.
   \item[Postcondizione:] l'utente non autenticato ha compilato il campo relativo alla propria e-mail.
-  \item[Scenario principale:] 
+  \item[Scenario principale:]
   \begin{enumerate}
     \item l'utente non autenticato compila il campo relativo al proprio username di registrazione.
   \end{enumerate}
@@ -165,8 +165,8 @@
 \subsubsection{AUC2 - Richiesta owner}%
 \label{subsub:AUC2}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -187,9 +187,9 @@
   :A: -- AUC2.3
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC2: Richiesta owner} 
-  \label{fig:auc2} 
+  \end{plantuml}
+  \caption{AUC2: Richiesta owner}
+  \label{fig:auc2}
 \end{figure}
 
 \begin{description}
@@ -269,8 +269,8 @@
 \subsubsection{AUC3 - Disconnessione}%
 \label{subsub:AUC3}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -287,9 +287,9 @@
   :A: -- AUC3.1
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC3: Disconnessione} 
-  \label{fig:auc3} 
+  \end{plantuml}
+  \caption{AUC3: Disconnessione}
+  \label{fig:auc3}
 \end{figure}
 
 \begin{description}
@@ -298,7 +298,7 @@
   \item[Attori primari:] utente autenticato
   \item[Precondizione:] il sistema ha reso disponibile la possibilità di effettuare la disconnessione.
   \item[Postcondizione:] l'utente autenticato diventerà un utente non autenticato, effettuando la disconnessione.
-  \item[Scenario principale:] 
+  \item[Scenario principale:]
   \begin{enumerate}
     \item l'utente autenticato vuole effettuare il logout dalla piattaforma;
   \end{enumerate}
@@ -308,8 +308,8 @@
 \subsubsection{AUC4 - Gestione richieste}%
 \label{subsub:AUC4}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -326,7 +326,7 @@
       usecase (AUC4.4) as "AUC4.4\nGestione richiesta aggiunta luogo"
       usecase (AUC4.3) as "AUC4.3\nGestione richiesta modifica organizzazione"
       usecase (AUC4.2) as "AUC4.2\nGestione richiesta creazione organizzazione"
-      usecase (AUC4.1) as "AUC4.1\nGestione richieste owner"  
+      usecase (AUC4.1) as "AUC4.1\nGestione richieste owner"
     }
   }
 
@@ -341,9 +341,9 @@
 
   @enduml
 
-  \end{plantuml} 
-  \caption{AUC4: Gestione richieste} 
-  \label{fig:auc4} 
+  \end{plantuml}
+  \caption{AUC4: Gestione richieste}
+  \label{fig:auc4}
 \end{figure}
 
 \begin{description}
@@ -352,7 +352,7 @@
   \item[Attori primari:] amministratore
   \item[Precondizione:] il sistema deve rendere disponibili le richieste effettuate dai super utenti.
   \item[Postcondizione:] vengono approvate o rifiutate le richieste.
-  \item[Scenario principale:] 
+  \item[Scenario principale:]
   \begin{enumerate}
     \item l'amministratore gestisce le richieste.
     \item le richieste vengono accettate o rifiutate.
@@ -362,8 +362,8 @@
 \subsubsection{AUC4.1 - Gestione richieste owner}%
 \label{subsub:AUC4.1}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -382,9 +382,9 @@
   :A: -- AUC4.1.2
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC4.1: Gestione richieste owner} 
-  \label{fig:auc4_1} 
+  \end{plantuml}
+  \caption{AUC4.1: Gestione richieste owner}
+  \label{fig:auc4_1}
 \end{figure}
 
 \begin{description}
@@ -393,7 +393,7 @@
   \item[Attori primari:] amministratore
   \item[Precondizione:] l'utente autenticato deve aver richiesto di diventare un owner.
   \item[Postcondizione:] viene approvata o rifiutata la richiesta, e l'utente autenticato sarà informato.
-  \item[Scenario principale:] 
+  \item[Scenario principale:]
   \begin{enumerate}
     \item l'amministratore gestisce le richieste inviate dagli utenti autenticati di diventare owner;
     \item le richieste vengono accettate o rifiutate.
@@ -434,8 +434,8 @@
 \subsubsection{AUC4.2 - Gestione richiesta creazione organizzazione}%
 \label{subsub:AUC4.2}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -454,9 +454,9 @@
   :A: -- AUC4.2.2
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC4.2: Gestione richiesta creazione organizzazione} 
-  \label{fig:auc4_2} 
+  \end{plantuml}
+  \caption{AUC4.2: Gestione richiesta creazione organizzazione}
+  \label{fig:auc4_2}
 \end{figure}
 
 \begin{description}
@@ -506,8 +506,8 @@
 \subsubsection{AUC4.3 - Gestione richiesta modifica organizzazione}%
 \label{subsub:AUC4.3}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -526,9 +526,9 @@
   :A: -- AUC4.3.2
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC4.3: Gestione richiesta modifica organizzazione} 
-  \label{fig:auc4_3} 
+  \end{plantuml}
+  \caption{AUC4.3: Gestione richiesta modifica organizzazione}
+  \label{fig:auc4_3}
 \end{figure}
 
 \begin{description}
@@ -578,8 +578,8 @@
 \subsubsection{AUC4.4 - Gestione richiesta aggiunta luogo}%
 \label{subsub:AUC4.4}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -598,9 +598,9 @@
   :A: -- AUC4.4.2
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC4.4: Gestione richiesta aggiunta luogo} 
-  \label{fig:auc4_4} 
+  \end{plantuml}
+  \caption{AUC4.4: Gestione richiesta aggiunta luogo}
+  \label{fig:auc4_4}
 \end{figure}
 
 \begin{description}
@@ -650,8 +650,8 @@
 \subsubsection{AUC4.5 - Gestione richiesta modifica luogo}%
 \label{subsub:AUC4.5}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -670,9 +670,9 @@
   :A: -- AUC4.5.2
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC4.5: Gestione richiesta modifica luogo} 
-  \label{fig:auc } 
+  \end{plantuml}
+  \caption{AUC4.5: Gestione richiesta modifica luogo}
+  \label{fig:auc }
 \end{figure}
 
 \begin{description}
@@ -722,8 +722,8 @@
 \subsubsection{AUC4.6 - Gestione richiesta trasferimento di proprietà organizzazione}%
 \label{subsub:AUC4.6}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -742,9 +742,9 @@
   :A: -- AUC4.6.2
 
   @enduml
-  \end{plantuml} 
+  \end{plantuml}
   \caption{AUC4.6: Gestione richiesta trasferimento di proprietà organizzazione}
-  \label{fig:auc4_6} 
+  \label{fig:auc4_6}
 \end{figure}
 
 \begin{description}
@@ -772,7 +772,7 @@
   \begin{enumerate}
     \item l'amministratore approva la richiesta di un trasferimento di proprietà di un'organizzazione.
   \end{enumerate}
-\end{description}  
+\end{description}
 % subsub:AUC4.6.1 (end)
 
 \subsubsection{AUC4.6.2 - Rifiuta richiesta trasferimento di proprietà organizzazione}%
@@ -794,8 +794,8 @@
 \subsubsection{AUC4.7 - Gestione richiesta nuovo visualizzatore}%
 \label{subsub:AUC4.7}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -814,9 +814,9 @@
   :A: -- AUC4.7.2
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC4.7: Gestione richiesta nuovo visualizzatore} 
-  \label{fig:auc4_7} 
+  \end{plantuml}
+  \caption{AUC4.7: Gestione richiesta nuovo visualizzatore}
+  \label{fig:auc4_7}
 \end{figure}
 
 \begin{description}
@@ -843,7 +843,7 @@
   \begin{enumerate}
     \item l'amministratore approva la richiesta di nuovo visualizzatore.
   \end{enumerate}
-\end{description}  
+\end{description}
 % subsub:AUC4.7.1 (end)
 
 \subsubsection{AUC4.7.2 - Rifiuta richiesta nuovo visualizzatore}%
@@ -858,15 +858,15 @@
   \begin{enumerate}
     \item l'amministratore rifiuta la richiesta di nuovo visualizzatore.
   \end{enumerate}
-\end{description}  
+\end{description}
 % subsub:AUC4.7.2 (end)
 % subsub:AUC4.7
 
 \subsubsection{AUC4.8 - Gestione richiesta nuovo gestore}%
 \label{subsub:AUC4.8}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -885,9 +885,9 @@
   :A: -- AUC4.8.2
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC4.8: Gestione richiesta nuovo gestore} 
-  \label{fig:auc4_8} 
+  \end{plantuml}
+  \caption{AUC4.8: Gestione richiesta nuovo gestore}
+  \label{fig:auc4_8}
 \end{figure}
 
 \begin{description}
@@ -914,7 +914,7 @@
   \begin{enumerate}
     \item l'amministratore approva la richiesta di nuovo gestore.
   \end{enumerate}
-\end{description}  
+\end{description}
 % subsub:AUC4.8.1 (end)
 
 \subsubsection{AUC4.8.2 - Rifiuta richiesta nuovo gestore}%
@@ -929,15 +929,15 @@
   \begin{enumerate}
     \item l'amministratore rifiuta la richiesta di nuovo gestore.
   \end{enumerate}
-\end{description}  
+\end{description}
 % subsub:AUC4.8.2 (end)
 % subsub:AUC4.8
 
 \subsubsection{AUC5 - Creazione amministratore}%
 \label{subsub:AUC5}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -959,9 +959,9 @@
   (AUC5.3) .up.|> (AUC5.1) : <<extends>>
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC5: Creazione amministratore} 
-  \label{fig:auc5} 
+  \end{plantuml}
+  \caption{AUC5: Creazione amministratore}
+  \label{fig:auc5}
 \end{figure}
 
 \begin{description}
@@ -980,8 +980,8 @@
 \subsubsection{AUC5.1 - Inserimento credenziali}%
 \label{subsub:AUC5.1}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -1002,9 +1002,9 @@
   :A: -- AUC5.1.3
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC5.1: Inserimento credenziali} 
-  \label{fig:auc5_1} 
+  \end{plantuml}
+  \caption{AUC5.1: Inserimento credenziali}
+  \label{fig:auc5_1}
 \end{figure}
 
 \begin{description}
@@ -1112,10 +1112,10 @@
 \subsubsection{AUC6 - Gestione organizzazione}%
 \label{subsub:AUC6}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
-  @startuml 
+  @startuml
   !include ../../commons/style/use-cases.pu
   scale 3/4
 
@@ -1142,9 +1142,9 @@
   (AUC6.5) .up.|> (AUC6.2) : <<include>>
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC6: Gestione organizzazione} 
-  \label{fig:auc6} 
+  \end{plantuml}
+  \caption{AUC6: Gestione organizzazione}
+  \label{fig:auc6}
 \end{figure}
 
 \begin{description}
@@ -1162,8 +1162,8 @@
   \subsubsection{AUC6.1 - Creazione organizzazione}%
   \label{subsub:AUC6.1}
 
-  \begin{figure}[h!] 
-    \centering 
+  \begin{figure}[h!]
+    \centering
     \begin{plantuml}
     @startuml
     !include ../../commons/style/use-cases.pu
@@ -1193,9 +1193,9 @@
     :A2: -- AUC6.1.4
 
     @enduml
-    \end{plantuml} 
-    \caption{AUC6.1: Creazione organizzazione} 
-    \label{fig:auc6_1} 
+    \end{plantuml}
+    \caption{AUC6.1: Creazione organizzazione}
+    \label{fig:auc6_1}
   \end{figure}
 
   \begin{description}
@@ -1220,14 +1220,14 @@
     \item[Attori primari:] root,owner
     \item[Precondizione:] il sistema fornisce il campo di inserimento nome.
     \item[Postcondizione:] il nome viene opportunamente inserito.
-    \item[Scenario principale:] 
+    \item[Scenario principale:]
     \begin{enumerate}
       \item si vuole inserire il nome di un'organizzazione.
     \end{enumerate}
-    
+
   \end{description}
   % subsub:AUC6.1.1 (end)
-  
+
   \subsubsection{AUC6.1.2 - Inserisci indirizzo organizzazione}%
   \label{subsub:AUC6.1.2}
   \begin{description}
@@ -1242,7 +1242,7 @@
     \end{enumerate}
   \end{description}
   % subsub:AUC6.1.2 (end)
-  
+
   \subsubsection{AUC6.1.3 - Inserisci descrizione organizzazione}%
   \label{subsub:AUC6.1.3}
   \begin{description}
@@ -1269,7 +1269,7 @@
     \item[Scenario principale:]
     \begin{enumerate}
       \item si vuole configurare i dettagli del \glossario{server LDAP} che le applicazioni dovranno utilizzare per registrarsi ad un'organizzazione
-      \item se l'organizzazione è segnata come pubblica, i parametri del server LDAP non verranno configurati. 
+      \item se l'organizzazione è segnata come pubblica, i parametri del server LDAP non verranno configurati.
     \end{enumerate}
   \end{description}
   % subsub:AUC6.1.4 (end)
@@ -1297,8 +1297,8 @@
 \subsubsection{AUC6.3 - Modifica organizzazione}%
 \label{subsub:AUC6.3}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -1312,7 +1312,7 @@
       usecase (AUC6.3.4) as "AUC6.3.4\nGestione luoghi"
       usecase (AUC6.3.3) as "AUC6.3.3\nModifica descrizione organizzazione"
       usecase (AUC6.3.2) as "AUC6.3.2\nModifica indirizzo organizzazione"
-      usecase (AUC6.3.1) as "AUC6.3.1\nModifica nome organizzazione" 
+      usecase (AUC6.3.1) as "AUC6.3.1\nModifica nome organizzazione"
     }
   }
 
@@ -1323,9 +1323,9 @@
   :A: -- AUC6.3.5
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC6.3: Modifica organizzazione} 
-  \label{fig:auc6_3} 
+  \end{plantuml}
+  \caption{AUC6.3: Modifica organizzazione}
+  \label{fig:auc6_3}
 \end{figure}
 
 \begin{description}
@@ -1393,8 +1393,8 @@
 \subsubsection{AUC6.3.4 - Gestione luoghi}%
 \label{subsub:AUC6.3.4}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -1417,9 +1417,9 @@
   :A: -- AUC6.3.4.4
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC6.3.4: Gestione luoghi} 
-  \label{fig:auc6_3_4} 
+  \end{plantuml}
+  \caption{AUC6.3.4: Gestione luoghi}
+  \label{fig:auc6_3_4}
 \end{figure}
 
 \begin{description}
@@ -1438,10 +1438,10 @@
 \subsubsection{AUC6.3.4.1 - Aggiungi luogo}%
 \label{subsub:AUC6.3.4.1}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
-  @startuml 
+  @startuml
   !include ../../commons/style/use-cases.pu
   scale 3/4
 
@@ -1456,9 +1456,9 @@
   :A: -- AUC6.3.4.1.1
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC6.3.4.1: Aggiungi luogo} 
-  \label{fig:auc6_3_4_1} 
+  \end{plantuml}
+  \caption{AUC6.3.4.1: Aggiungi luogo}
+  \label{fig:auc6_3_4_1}
 \end{figure}
 
 \begin{description}
@@ -1511,10 +1511,10 @@
 \subsubsection{AUC6.3.4.3 - Modifica luogo}%
 \label{subsub:AUC6.3.4.3}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
-  @startuml 
+  @startuml
   !include ../../commons/style/use-cases.pu
   scale 3/4
 
@@ -1529,9 +1529,9 @@
   :A: -- AUC6.3.4.3.1
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC6.3.4.3: Modifica luogo} 
-  \label{fig:auc6_3_4_3} 
+  \end{plantuml}
+  \caption{AUC6.3.4.3: Modifica luogo}
+  \label{fig:auc6_3_4_3}
 \end{figure}
 
 \begin{description}
@@ -1632,8 +1632,8 @@
 \subsubsection{AUC7 - Eliminazione account}%
 \label{subsub:AUC7}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -1650,9 +1650,9 @@
   :A: -- AUC7.1
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC7: Eliminazione account} 
-  \label{fig:auc7} 
+  \end{plantuml}
+  \caption{AUC7: Eliminazione account}
+  \label{fig:auc7}
 \end{figure}
 
 \begin{description}
@@ -1686,8 +1686,8 @@
 \subsubsection{AUC8 - Query sull'organizzazione}%
 \label{subsub:AUC8}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -1704,9 +1704,9 @@
   :A: -- AUC8
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC8: Query sull'organizzazione} 
-  \label{fig:auc8} 
+  \end{plantuml}
+  \caption{AUC8: Query sull'organizzazione}
+  \label{fig:auc8}
 \end{figure}
 
 \begin{description}
@@ -1725,8 +1725,8 @@
 \subsubsection{AUC9 - Query sul dipendente}%
 \label{subsub:AUC9}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -1743,9 +1743,9 @@
   :A: -- AUC9
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC9: Query sul dipendente} 
-  \label{fig:auc9} 
+  \end{plantuml}
+  \caption{AUC9: Query sul dipendente}
+  \label{fig:auc9}
 \end{figure}
 
 \begin{description}
@@ -1768,10 +1768,10 @@
 \subsubsection{AUC10 - Richiesta su luoghi}%
 \label{subsub:AUC10}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
-  @startuml 
+  @startuml
   !include ../../commons/style/use-cases.pu
   scale 3/4
 
@@ -1808,9 +1808,9 @@
   (AUC6.3.5) .up.|> (AUC10.4) : <<include>>
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC10: Richiesta su luoghi} 
-  \label{fig:auc10} 
+  \end{plantuml}
+  \caption{AUC10: Richiesta su luoghi}
+  \label{fig:auc10}
 \end{figure}
 
 \begin{description}
@@ -1896,8 +1896,8 @@
     \item Modifica nome organizzazione \emph{[AUC6.3.1]}.
     \item Modifica indirizzo organizzazione \emph{[AUC6.3.2]}.
     \item Modifica descrizione organizzazione \emph{[AUC6.3.3]}.
-    \item Gestione luoghi \emph{[AUC6.3.4]} 
-    \item Modifica configurazione dettagli server LDAP \emph{[AUC6.3.5]} 
+    \item Gestione luoghi \emph{[AUC6.3.4]}
+    \item Modifica configurazione dettagli server LDAP \emph{[AUC6.3.5]}
   \end{enumerate}
 \end{description}
 % subsub:AUC10.4 (end)
@@ -1905,8 +1905,8 @@
 \subsubsection{AUC11 - Richiesta creazione organizzazione}%
 \label{subsub:AUC11}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -1934,9 +1934,9 @@
   (AUC6.1.4) .up.|> (AUC11) : <<include>>
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC11: Richiesta creazione organizzazione} 
-  \label{fig:auc11} 
+  \end{plantuml}
+  \caption{AUC11: Richiesta creazione organizzazione}
+  \label{fig:auc11}
 \end{figure}
 
 \begin{description}
@@ -1962,10 +1962,10 @@
 \subsubsection{AUC12 - Richiesta cessione proprietà organizzazione}%
 \label{subsub:AUC12}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
-  @startuml 
+  @startuml
   !include ../../commons/style/use-cases.pu
   scale 3/4
 
@@ -1980,9 +1980,9 @@
   :A: -- AUC12.1
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC12: Richiesta cessione proprietà organizzazione} 
-  \label{fig:auc12} 
+  \end{plantuml}
+  \caption{AUC12: Richiesta cessione proprietà organizzazione}
+  \label{fig:auc12}
 \end{figure}
 
 \begin{description}
@@ -1991,7 +1991,7 @@
   \item[Attori primari:] owner
   \item[Precondizione:] il futuro owner deve esistere.
   \item[Postcondizione:] la richiesta di cedere l'organizzazione è stata posta.
-  \item[Scenario principale:] 
+  \item[Scenario principale:]
   \begin{enumerate}
     \item l' owner vuole cedere l'organizzazione ad un'altro owner;
   \end{enumerate}
@@ -2006,7 +2006,7 @@
   \item[Attori primari:] owner
   \item[Precondizione:] il sistema deve rendere disponibile il campo per l'inserimento del nuovo owner.
   \item[Postcondizione:] il campo relativo al nuovo owner viene riempito.
-  \item[Scenario principale:] 
+  \item[Scenario principale:]
   \begin{enumerate}
     \item l' owner inserisce l'e-mail del nuovo owner;
   \end{enumerate}
@@ -2016,8 +2016,8 @@
 \subsubsection{AUC13 - Richiesta aggiunta visualizzatore}%
 \label{subsub:AUC13}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -2034,9 +2034,9 @@
   :A: -- AUC13.1
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC13: Richiesta aggiunta visualizzatore} 
-  \label{fig:auc13} 
+  \end{plantuml}
+  \caption{AUC13: Richiesta aggiunta visualizzatore}
+  \label{fig:auc13}
 \end{figure}
 
 \begin{description}
@@ -2057,7 +2057,7 @@
   \item[Attori primari:] owner
   \item[Precondizione:] il sistema deve rendere disponibile il campo per l'inserimento del nuovo visualizzatore.
   \item[Postcondizione:] il campo relativo al visualizzatore viene riempito.
-  \item[Scenario principale:] 
+  \item[Scenario principale:]
   \begin{enumerate}
     \item l' owner inserisce l'e-mail del nuovo visualizzatore;
   \end{enumerate}
@@ -2067,8 +2067,8 @@
 \subsubsection{AUC14 - Richiesta aggiunta gestore}%
 \label{subsub:AUC14}
 
-\begin{figure}[h!] 
-  \centering 
+\begin{figure}[h!]
+  \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
@@ -2085,9 +2085,9 @@
   :A: -- AUC14.1
 
   @enduml
-  \end{plantuml} 
-  \caption{AUC14: Richiesta aggiunta gestore} 
-  \label{fig:auc14} 
+  \end{plantuml}
+  \caption{AUC14: Richiesta aggiunta gestore}
+  \label{fig:auc14}
 \end{figure}
 
 \begin{description}
@@ -2096,7 +2096,7 @@
   \item[Attori primari:] owner
   \item[Precondizione:] il nuovo super utente non deve già esistere come gestore.
   \item[Postcondizione:] viene inviata la richiesta di nomina gestore all'amministratore.
-  \item[Scenario principale:] l' owner vuole aggiungere un gestore alla sua organizzazione, la nomina deve essere approvata da un 
+  \item[Scenario principale:] l' owner vuole aggiungere un gestore alla sua organizzazione, la nomina deve essere approvata da un
   amministratore.
 \end{description}
 % subsub:AUC14 (end)
@@ -2109,7 +2109,7 @@
   \item[Attori primari:] owner
   \item[Precondizione:] il sistema deve rendere disponibile il campo per l'inserimento del nuovo gestore.
   \item[Postcondizione:] il campo relativo al gestore viene riempito.
-  \item[Scenario principale:] 
+  \item[Scenario principale:]
   \begin{enumerate}
     \item l' owner inserisce l'e-mail del nuovo gestore;
   \end{enumerate}
