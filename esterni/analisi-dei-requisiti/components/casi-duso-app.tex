@@ -47,7 +47,7 @@
         \end{enumerate}
   \item[Inclusioni:]
         \begin{enumerate}
-          \item EULA deve essere confermata, altrimenti la registrazione non può continuare.
+          \item EULA deve essere confermata, altrimenti la registrazione non può continuare \emph{[UUC1.1.1]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC1utente (end)
@@ -67,7 +67,7 @@
         \end{enumerate}
   \item[Inclusioni:]
         \begin{enumerate}
-          \item l'utente deve confermare l'EULA per continuare la registrazione.
+          \item l'utente deve confermare l'EULA per continuare la registrazione \emph{[UUC1.1.1]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC1.1utente (end)
@@ -134,13 +134,13 @@
   \item[Precondizione:] l'utente ha accettato l'EULA.
   \item[Postcondizione:] l'utente ha inserito correttamente tutti i dati necessari alla registrazione e diventa un utente registrato.
   \item[Scenario principale:]
-        \begin{enumerate}
-          \item l'utente visualizza una serie di campi da compilare.
-        \end{enumerate}
+  \begin{enumerate}
+    \item l'utente visualizza una serie di campi da compilare.
+  \end{enumerate}
   \item[Estensioni:]
-        \begin{enumerate}
-          \item se i dati inseriti non sono validi, l'utente visualizzerà un errore.
-        \end{enumerate}
+  \begin{enumerate}
+    \item se i dati inseriti non sono validi, l'utente visualizzerà un errore \emph{[UUC1.2.5]}.
+  \end{enumerate}
 \end{description}
 % subsub:UUC1.2utente (end)
 
@@ -154,13 +154,13 @@
   \item[Precondizione:] l'utente si trova nella schermata di registrazione nel campo dell'email.
   \item[Postcondizione:] l'utente ha inserito la email in modo corretto.
   \item[Scenario principale:]
-        \begin{enumerate}
-          \item l'utente seleziona il campo della email e la inserisce.
-        \end{enumerate}
+  \begin{enumerate}
+    \item l'utente seleziona il campo della email e la inserisce.
+  \end{enumerate}
   \item[Estensioni:]
-        \begin{enumerate}
-          \item se la mail è scritta in una forma non corretta, verrà visualizzato un'errore di mail non valida.
-        \end{enumerate}
+  \begin{enumerate}
+    \item se la mail è scritta in una forma non corretta, verrà visualizzato un'errore di email non valida \emph{[UUC1.2.5]}.
+  \end{enumerate}
 \end{description}
 % subsub:UUC1.2.1utente (end)
 
@@ -174,13 +174,13 @@
   \item[Precondizione:] l'utente si trova nella schermata di registrazione nel campo della password.
   \item[Postcondizione:] l'utente ha inserito la password in modo corretto.
   \item[Scenario principale:]
-        \begin{enumerate}
-          \item l'utente seleziona il campo della password e la crea.
-        \end{enumerate}
+  \begin{enumerate}
+    \item l'utente seleziona il campo della password e la crea.
+  \end{enumerate}
   \item[Estensioni:]
-        \begin{enumerate}
-          \item se la password non rispetta determinati vincoli, verrà visualizzato un'errore di password non valida.
-        \end{enumerate}
+  \begin{enumerate}
+    \item se la password non rispetta determinati vincoli, verrà visualizzato un'errore di password non valida \emph{[UUC1.2.5]}.
+  \end{enumerate}
 \end{description}
 % subsub:UUC1.2.2utente (end)
 
@@ -195,13 +195,13 @@
         e la password inserita in precedenza dall'utente rispetta tutti i vincoli.
   \item[Postcondizione:] l'utente ha inserito la conferma della password in modo corretto.
   \item[Scenario principale:]
-        \begin{enumerate}
-          \item l'utente seleziona il campo della conferma della password e la inserisce.
-        \end{enumerate}
+  \begin{enumerate}
+    \item l'utente seleziona il campo della conferma della password e la inserisce.
+  \end{enumerate}
   \item[Estensioni:]
-        \begin{enumerate}
-          \item se la password inserita non è uguale a quella precedente, verrà visualizzato un'errore di conferma password non valida.
-        \end{enumerate}
+  \begin{enumerate}
+    \item se la password inserita non è uguale a quella precedente, verrà visualizzato un'errore di conferma password non valida \emph{[UUC1.2.5]}.
+  \end{enumerate}
 \end{description}
 % subsub:UUC1.2.3utente (end)
 
@@ -215,13 +215,13 @@
   \item[Precondizione:] l'utente si trova nella schermata di registrazione nei campi dei dati anagrafici.
   \item[Postcondizione:] l'utente ha inserito i dati anagrafici in modo corretto.
   \item[Scenario principale:]
-        \begin{enumerate}
-          \item l'utente seleziona i vari campi inerenti ai dati anagrafici e gli inserisce.
-        \end{enumerate}
+  \begin{enumerate}
+    \item l'utente seleziona i vari campi inerenti ai dati anagrafici e gli inserisce.
+  \end{enumerate}
   \item[Estensioni:]
-        \begin{enumerate}
-          \item se uno o più dati anagrafici inseriti non rispettano determinati vincoli, verrà visualizzato un'errore sui campi in cui è segnalato l'errore.
-        \end{enumerate}
+  \begin{enumerate}
+    \item se uno o più dati anagrafici inseriti non rispettano determinati vincoli, verrà visualizzato un'errore sui campi in cui è segnalato l'errore \emph{[UUC1.2.5]}.
+  \end{enumerate}
 \end{description}
 % subsub:UUC1.2.4utente (end)
 
@@ -281,13 +281,13 @@
   \item[Precondizione:] l'utente è registrato al servizio.
   \item[Postcondizione:] l'utente è autenticato al servizio.
   \item[Scenario principale:]
-        \begin{enumerate}
-          \item l'utente visualizza la schermata per l'autenticazione e inserisce email e password sugli appositi campi.
-        \end{enumerate}
+  \begin{enumerate}
+    \item l'utente visualizza la schermata per l'autenticazione e inserisce email e password sugli appositi campi.
+  \end{enumerate}
   \item[Estensioni:]
-        \begin{enumerate}
-          \item se la coppia email-password inserite non sono presenti all'interno del database di Stalker, allora verrà visualizzato un'errore.
-        \end{enumerate}
+  \begin{enumerate}
+    \item se la coppia email-password inserite non sono presenti all'interno del database di Stalker, allora verrà visualizzato un'errore \emph{[UUC2.3]}.
+  \end{enumerate}
 \end{description}
 % subsub:UUC3utente (end)
 
@@ -301,14 +301,13 @@
   \item[Precondizione:] l'utente si posiziona sul campo dell'email.
   \item[Postcondizione:] la email inserita è corretta.
   \item[Scenario principale:]
-        \begin{enumerate}
-          \item l'utente seleziona il campo dell'email e la inserisce.
-        \end{enumerate}
+  \begin{enumerate}
+    \item l'utente seleziona il campo dell'email e la inserisce.
+  \end{enumerate}
   \item[Estensioni:]
-        \begin{enumerate}
-          \item se la email inserita non è presente nel database, si visualizzerà un errore di credenziali errate (per motivi di sicurezza
-                non si indica qual è il campo errato).
-        \end{enumerate}
+  \begin{enumerate}
+    \item se la email inserita non è presente nel database, si visualizzerà un errore di credenziali errate (per motivi di sicurezza non si indica qual è il campo errato) \emph{[UUC2.3]}.
+  \end{enumerate}
 \end{description}
 % subsub:UUC2.1utente (end)
 
@@ -322,14 +321,13 @@
   \item[Precondizione:] l'utente si posiziona sul campo della password.
   \item[Postcondizione:] la password inserita è corretta.
   \item[Scenario principale:]
-        \begin{enumerate}
-          \item l'utente seleziona il campo della password e la inserisce.
-        \end{enumerate}
+  \begin{enumerate}
+    \item l'utente seleziona il campo della password e la inserisce.
+  \end{enumerate}
   \item[Estensioni:]
-        \begin{enumerate}
-          \item se la password inserita non è presente nel database, si visualizzerà un errore di credenziali errate (per motivi di sicurezza
-                non si indica qual è il campo errato).
-        \end{enumerate}
+  \begin{enumerate}
+    \item se la password inserita non è presente nel database, si visualizzerà un errore di credenziali errate (per motivi di sicurezza non si indica qual è il campo errato) \emph{[UUC2.3]}.
+  \end{enumerate}
 \end{description}
 % subsub:UUC2.2utente (end)
 
@@ -450,7 +448,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se l'email inserita non è registrata nel database, allora verrà segnalato un errore.
+          \item se l'email inserita non è registrata nel database, allora verrà segnalato un errore \emph{[UUC3.1.3]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC3.1.1utente (end)
@@ -474,8 +472,8 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se la nuova password non rispetta determinati vincoli, verrà visualizzato un'errore;
-          \item se la nuova password e la sua conferma non coincidono tra loro, verrà visualizzato un'errore.
+          \item se la nuova password non rispetta determinati vincoli, verrà visualizzato un'errore \emph{[UUC3.1.3]};
+          \item se la nuova password e la sua conferma non coincidono tra loro, verrà visualizzato un'errore \emph{[UUC3.1.3]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC3.1.2utente (end)
@@ -524,11 +522,11 @@
         \end{enumerate}
   \item[Inclusioni:]
         \begin{enumerate}
-          \item la lista delle organizzazioni si può aggiornare.
+          \item la lista delle organizzazioni si può aggiornare \emph{[UUC4.1.1]}.
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item in caso di rete mancante, non possono essere eseguite queste operazioni e quindi verrà notificato un errore.
+          \item in caso di rete mancante, non possono essere eseguite queste operazioni e quindi verrà notificato un errore \emph{[UUC5]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC4utente (end)
@@ -548,12 +546,12 @@
         \end{enumerate}
   \item[Inclusioni:]
         \begin{enumerate}
-          \item la lista delle organizzazioni può essere aggiornata.
+          \item la lista delle organizzazioni può essere aggiornata \emph{[UUC4.1]}.
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
           \item in caso di rete mancante, si visualizzerà un errore in caso di richiesta di visualizzazione della lista delle organizzazioni
-                oppure di aggiornamento della lista delle organizzazioni.
+                oppure di aggiornamento della lista delle organizzazioni \emph{[UUC5]}.
         \end{enumerate}
 \end{description}
 % subsub:UU4.1utente (end)
@@ -635,7 +633,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione.
+          \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione \emph{[UUC5]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC6utente (end)
@@ -655,7 +653,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione.
+          \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione \emph{[UUC5]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC6.1utente (end)
@@ -704,7 +702,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se l'utente cerca di scollegarsi da un'organizzazione in caso di rete mancante, si visualizzerà un errore.
+          \item se l'utente cerca di scollegarsi da un'organizzazione in caso di rete mancante, si visualizzerà un errore \emph{[UUC5]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC7utente (end)
@@ -753,7 +751,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se l'utente cerca di scollegarsi da una o più organizzazioni in caso di rete mancante, si visualizzerà un errore.
+          \item se l'utente cerca di scollegarsi da una o più organizzazioni in caso di rete mancante, si visualizzerà un errore \emph{[UUC5]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC8utente (end)
@@ -802,7 +800,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore.
+          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore \emph{[UUC5]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC9utente (end)
@@ -855,7 +853,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore.
+          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore \emph{[UUC5]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC9.1utente (end)
@@ -936,7 +934,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se l'utente cerca di visualizzare lo storico degli accessi in assenza di rete, si visualizzerà un errore.
+          \item se l'utente cerca di visualizzare lo storico degli accessi in assenza di rete, si visualizzerà un errore \emph{[UUC5]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC10utente (end)
@@ -987,7 +985,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se l'utente accede ad una schermata per la visualizzazione del tempo trascorso nell'organizzazione in assenza di rete, si visualizzerà un errore.
+          \item se l'utente accede ad una schermata per la visualizzazione del tempo trascorso nell'organizzazione in assenza di rete, si visualizzerà un errore \emph{[UUC5]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC11utente (end)
@@ -1034,7 +1032,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se l'utente cerca di disconnettersi in assenza di rete, si visualizzerà un errore.
+          \item se l'utente cerca di disconnettersi in assenza di rete, si visualizzerà un errore \emph{[UUC5]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC12utente (end)
@@ -1081,7 +1079,7 @@
         \end{enumerate}
         \item[Estensioni:]
         \begin{enumerate}
-          \item se l'utente cerca di cancellare il suo account in assenza di rete, si visualizzerà un errore.
+          \item se l'utente cerca di cancellare il suo account in assenza di rete, si visualizzerà un errore \emph{[UUC5]}.
         \end{enumerate}
 \end{description}
 % subsub:UUC13 (end)
