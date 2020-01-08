@@ -23,19 +23,68 @@ milestone inline label node/.append style={font=\scriptsize}%
     \gantttitlecalendar*{16/3/2020}{19/4/2020}{month=italy,week=1}\\
     \gantttitlecalendar*[title label font=\tiny]{16/3/2020}{19/4/2020}{day}\\
     \ganttgroup[name=group1]{Incremento 1}{17/3/2020}{20/3/2020}\\
+    \ganttbar[name=bar1]{Progettazione}{17/3/2020}{18/3/2020}\\
+    \ganttbar[name=bar2]{Implementazione}{19/3/2020}{19/3/2020}\\
+    \ganttbar[name=bar3]{Verifica codice}{19/3/2020}{20/3/2020}\\
+    \ganttbar[name=bar4]{Produzione documentazione}{17/3/2020}{19/3/2020}\\
+    \ganttbar[name=bar5]{Verifica documentazione}{18/3/2020}{20/3/2020}\\
+    \ganttlink{bar1}{bar2}
     \\
     \ganttgroup[name=group2]{Incremento 2}{21/3/2020}{24/3/2020}\\
+    \ganttbar[name=bar6]{Progettazione}{21/3/2020}{22/3/2020}\\
+    \ganttbar[name=bar7]{Implementazione}{23/3/2020}{23/3/2020}\\
+    \ganttbar[name=bar8]{Verifica codice}{23/3/2020}{24/3/2020}\\
+    \ganttbar[name=bar9]{Produzione documentazione}{21/3/2020}{23/3/2020}\\
+    \ganttbar[name=bar10]{Verifica documentazione}{22/3/2020}{24/3/2020}\\
+    \ganttlink{bar6}{bar7}
     \\
     \ganttgroup[name=group3]{Incremento 3}{25/3/2020}{28/3/2020}\\
+    \ganttbar[name=bar11]{Progettazione}{25/3/2020}{26/3/2020}\\
+    \ganttbar[name=bar12]{Implementazione}{27/3/2020}{27/3/2020}\\
+    \ganttbar[name=bar13]{Verifica codice}{27/3/2020}{28/3/2020}\\
+    \ganttbar[name=bar14]{Produzione documentazione}{25/3/2020}{27/3/2020}\\
+    \ganttbar[name=bar15]{Verifica documentazione}{26/3/2020}{28/3/2020}\\
+    \ganttlink{bar11}{bar12}
     \\
     \ganttgroup[name=group4]{Incremento 4}{29/3/2020}{1/4/2020}\\
+    \ganttbar[name=bar16]{Progettazione}{29/3/2020}{30/3/2020}\\
+    \ganttbar[name=bar17]{Implementazione}{31/3/2020}{31/3/2020}\\
+    \ganttbar[name=bar18]{Verifica codice}{31/3/2020}{1/4/2020}\\
+    \ganttbar[name=bar19]{Produzione documentazione}{29/3/2020}{31/3/2020}\\
+    \ganttbar[name=bar20]{Verifica documentazione}{30/3/2020}{1/4/2020}\\
+    \ganttlink{bar16}{bar17}
     \\
     \ganttgroup[name=group5]{Incremento 5}{2/4/2020}{5/4/2020}\\
+    \ganttbar[name=bar21]{Progettazione}{2/4/2020}{3/4/2020}\\
+    \ganttbar[name=bar22]{Implementazione}{4/4/2020}{4/4/2020}\\
+    \ganttbar[name=bar23]{Verifica codice}{4/4/2020}{5/4/2020}\\
+    \ganttbar[name=bar24]{Produzione documentazione}{2/5/2020}{4/4/2020}\\
+    \ganttbar[name=bar25]{Verifica documentazione}{3/4/2020}{5/4/2020}\\
+    \ganttlink{bar21}{bar22}
     \\
     \ganttgroup[name=group6]{Incremento 6}{6/4/2020}{9/4/2020}\\
+    \ganttbar[name=bar26]{Progettazione}{6/4/2020}{7/4/2020}\\
+    \ganttbar[name=bar27]{Implementazione}{8/4/2020}{8/4/2020}\\
+    \ganttbar[name=bar28]{Verifica codice}{8/4/2020}{9/4/2020}\\
+    \ganttbar[name=bar29]{Produzione documentazione}{6/5/2020}{8/4/2020}\\
+    \ganttbar[name=bar30]{Verifica documentazione}{7/4/2020}{9/4/2020}\\
+    \ganttlink{bar26}{bar27}
     \\
     \ganttgroup[name=group7]{Incremento 7}{10/4/2020}{13/4/2020}\\
+    \ganttbar[name=bar31]{Progettazione}{10/4/2020}{11/4/2020}\\
+    \ganttbar[name=bar32]{Implementazione}{12/4/2020}{12/4/2020}\\
+    \ganttbar[name=bar33]{Verifica codice}{12/4/2020}{13/4/2020}\\
+    \ganttbar[name=bar34]{Produzione documentazione}{10/5/2020}{12/4/2020}\\
+    \ganttbar[name=bar35]{Verifica documentazione}{11/4/2020}{13/4/2020}\\
+    \ganttlink{bar31}{bar32}
     \\
     \ganttmilestone[name=mile1]{Consegna documenti}{13/4/2020}\\
+    \ganttlink{group1}{group2}
+    \ganttlink{group2}{group3}
+    \ganttlink{group3}{group4}
+    \ganttlink{group4}{group5}
+    \ganttlink{group5}{group6}
+    \ganttlink{group6}{group7}
+    \ganttlink{group7}{mile1}
   \end{ganttchart}
 \end{document}
