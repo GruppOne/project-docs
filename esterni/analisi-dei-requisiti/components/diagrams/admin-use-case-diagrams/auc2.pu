@@ -1,20 +1,24 @@
 @startuml
 !include ../../../../../commons/style/use-cases.pu
+scale 3/4
 
-title AUC2 - Richiesta owner
+title AUC2
 
 actor :utente autenticato: as A
 
 rectangle {
   together {
-    usecase (AUC2.3) as "AUC2.3\nRichiesta rifiutata"
-    usecase (AUC2.2) as "AUC2.2\nInvio richiesta owner"
-    usecase (AUC2.1) as "AUC2.1\nVerifica tipologia utente"
+    usecase (AUC2.1) as "AUC2.1\nInvio richiesta owner\n--\nExtension points:\nVisualizzazione errore nel\ncaso in cui la richiesta venga\nrifiutata dall'amministratore"
+    usecase (AUC2.2) as "AUC2.2\nVerifica tipologia utente\n--\nExtension points:\nVisualizzazione errore nel\ncaso in cui l'utente\nautenticato sia già owner"
   }
+  usecase (AUC2.3) as "AUC2.3\nRichiesta rifiutata"
 }
 
 :A: -- AUC2.1
-:A: -- AUC2.2
-:A: -- AUC2.3
+
+(AUC2.2) .right.|> (AUC2.1) : <<include>>
+
+(AUC2.3) .up.|> (AUC2.1) : <<extends>>
+(AUC2.3) .up.|> (AUC2.2) : <<extends>>
 
 @enduml

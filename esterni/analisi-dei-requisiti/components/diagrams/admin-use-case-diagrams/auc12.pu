@@ -1,13 +1,14 @@
 @startuml
 !include ../../../../../commons/style/use-cases.pu
+scale 3/4
 
-title AUC12 - Richiesta cedimento proprietà organizzazione
+title AUC12
 
 actor :owner: as A
 
 rectangle {
   together {
-    usecase (AUC12.1) as "AUC12.1\nInserimento e-mail nuovo owner"
+    usecase (AUC12.1) as "AUC12.1\nInserimento email nuovo owner"
   }
 }
 

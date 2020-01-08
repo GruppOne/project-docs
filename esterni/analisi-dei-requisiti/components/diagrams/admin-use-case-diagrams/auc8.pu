@@ -1,13 +1,14 @@
 @startuml
 !include ../../../../../commons/style/use-cases.pu
+scale 3/4
 
-title AUC8 - Query sull'organizzazione
+title AUC8
 
 actor :visualizzatore: as A
 
 rectangle {
   together {
-    usecase (AUC8) as "AUC8\nQuery sull'organizzazione"
+    usecase (AUC8) as "AUC8\nQuery sul dipendente"
   }
 }
 

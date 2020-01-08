@@ -1,0 +1,17 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+scale 3/4
+
+title AUC15
+
+actor :amministratore: as A
+
+rectangle {
+  together {
+    usecase (AUC15.1) as "AUC15.1\nInserimento email owner"
+  }
+}
+
+:A: -- AUC15.1
+
+@enduml

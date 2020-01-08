@@ -1,0 +1,25 @@
+@startuml
+  !include ../../../../../commons/style/use-cases.pu
+  scale 3/4
+
+  title AUC5.3.3
+
+  actor :amministratore: as A
+
+  rectangle {
+    together {
+      usecase (AUC5.3.3.1) as "AUC5.3.3.1\nAggiungi luogo"
+      usecase (AUC5.3.3.2) as "AUC5.3.3.2\nEliminazione luogo"
+      usecase (AUC5.3.3.3) as "AUC5.3.3.3\nModifica luogo"
+    }
+    usecase (AUC5.3.3.4) as "AUC5.3.3.4\nSeleziona luogo"
+  }
+
+  :A: -- AUC5.3.3.1
+  :A: -- AUC5.3.3.2
+  :A: -- AUC5.3.3.3
+
+  (AUC5.3.3.4) .left.|> (AUC5.3.3.2) : <<include>>
+  (AUC5.3.3.4) .up.|> (AUC5.3.3.3) : <<include>>
+
+  @enduml

@@ -1,20 +1,20 @@
 @startuml
 !include ../../../../../commons/style/use-cases.pu
+scale 3/4
 
-title AUC5.1 - Inserimento credenziali
+title AUC5.1
 
-actor :root: as A
+actor :amministratore: as A1
 
 rectangle {
-  together {
-    usecase (AUC5.1.3) as "AUC5.1.3\nConferma password"
-    usecase (AUC5.1.2) as "AUC5.1.2\nInserimento nuova password"
-    usecase (AUC5.1.1) as "AUC5.1.1\nInserimento nuova email"
+    together {
+      usecase (AUC5.1.1) as "AUC5.1.1\nInserisci nome organizzazione"
+      usecase (AUC5.1.2) as "AUC5.1.2\nInserisci descrizione organizzazione"
+      usecase (AUC5.1.3) as "AUC5.1.3\nConfigurazione dettagli server LDAP"
+    }
   }
-}
 
-:A: -- AUC5.1.1
-:A: -- AUC5.1.2
-:A: -- AUC5.1.3
-
+:A1: -- AUC5.1.1
+:A1: -- AUC5.1.2
+:A1: -- AUC5.1.3
 @enduml

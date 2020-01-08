@@ -1,6 +1,8 @@
 @startuml
 !include ../../../../../commons/style/use-cases.pu
-title AUC14 - Richiesta aggiunta gestore
+scale 3/4
+
+title AUC14
 
 actor :owner: as A
 

@@ -1,0 +1,19 @@
+﻿@startuml
+!include ../../../../../commons/style/use-cases.pu
+scale 3/4
+
+title AUC17
+
+actor :amministratore: as A1
+actor :owner: as A2
+
+rectangle {
+  together {
+    usecase (AUC17.1) as "AUC17.1\nInserimento email visualizzatore"
+  }
+}
+
+:A1: -- AUC17.1
+:A2: -- AUC17.1
+
+@enduml

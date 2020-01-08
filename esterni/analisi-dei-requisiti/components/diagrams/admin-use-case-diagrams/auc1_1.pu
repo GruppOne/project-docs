@@ -1,7 +1,8 @@
 @startuml
 !include ../../../../../commons/style/use-cases.pu
+scale 3/4
 
-title AUC1.1 - Autenticazione
+title AUC1.1
 
 actor :utente non autenticato: as A
 

@@ -1,16 +1,32 @@
 @startuml
 !include ../../../../../commons/style/use-cases.pu
+scale 3/4
 
-title AUC9 - Query sul dipendente
+title AUC9
 
-actor :visualizzatore: as A
+actor :gestore: as A
 
 rectangle {
   together {
-    usecase (AUC9) as "AUC9\nQuery sul dipendente"
+    usecase (AUC9.1) as "AUC10.1\nAggiunta luogo"
+    usecase (AUC9.2) as "AUC10.2\nRimozione luogo"
+    usecase (AUC9.3) as "AUC10.3\nModifica luogo"
+  }
+  together {
+    usecase (AUC5.3.3.3.1) as "AUC5.3.3.3.1\nModifica coordinate geografiche"
+    usecase (AUC5.3.3.3.2) as "AUC5.3.3.3.2\nModifica indirizzo luogo"
+    usecase (AUC5.3.3.1.1) as "AUC5.3.3.1.1\nInserisci coordinate geografiche"
+    usecase (AUC5.3.3.1.2) as "AUC5.3.3.1.2\nInserisci indirizzo luogo"
   }
 }
 
-:A: -- AUC9
+:A: -- AUC9.1
+:A: -- AUC9.2
+:A: -- AUC9.3
+
+(AUC5.3.3.3.1) .up.|> (AUC9.3) : <<include>>
+(AUC5.3.3.3.2) .up.|> (AUC9.3) : <<include>>
+(AUC5.3.3.1.1) .up.|> (AUC9.1) : <<include>>
+(AUC5.3.3.1.2) .up.|> (AUC9.1) : <<include>>
 
 @enduml
