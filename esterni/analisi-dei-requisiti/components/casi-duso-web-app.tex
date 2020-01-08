@@ -17,14 +17,12 @@
   rectangle {
     together {
       usecase (AUC1.1) as "AUC1.1\nAutenticazione\n--\nExtension points:\nVisualizzazione errore se\nle credenziali inserite\n non sono corrette"
-      usecase (AUC1.2) as "AUC1.2\nVerifica credenziali"
-      usecase (AUC1.3) as "AUC1.3\nVisualizzazione credenziali errate"
+      usecase (AUC1.2) as "AUC1.2\nVisualizzazione credenziali errate"
     }
   }
 
   :A: -- AUC1.1
 
-  (AUC1.2) .up.|> (AUC1.1) : <<include>>
   (AUC1.3) .up.|> (AUC1.1) : <<extends>>
 
   @enduml
@@ -130,23 +128,7 @@
 \end{description}
 % subsub:AUC1.1.2 (end)
 
-\subsubsection{AUC1.2 - Verifica Credenziali}%
-\label{subsub:AUC1.2}
-\begin{description}
-  \item[Codice:] AUC1.2
-  \item[Titolo:] Verifica credenziali
-  \item[Attori primari:] utente non autenticato
-  \item[Precondizione:] l'utente non autenticato ha inviato al server le sue credenziali per tentare il login
-  \item[Postcondizione:] l'utente non autenticato deve poter accedere alla sua area riservata, nel caso in cui le credenziali siano corrette. In caso
-  contrario deve essere visualizzato un messaggio di credenziali sbagliate \emph{[AUC1.3]}.
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item l'utente non autenticato sta tentando di effettuare l'accesso e sta attendendo la verifica delle credenziali immesse.
-  \end{enumerate}
-\end{description}
-% subsub:AUC1.2 (end)
-
-\subsubsection{AUC1.3 - Visualizzazione credenziali errate}%
+\subsubsection{AUC1.2 - Visualizzazione credenziali errate}%
 \label{subsub:AUC1.3}
 \begin{description}
   \item[Codice:] AUC1.3
@@ -1170,8 +1152,6 @@
     scale 3/4
 
     actor :root: as A1
-    actor :owner: as A2
-
 
     rectangle {
       together {
@@ -1186,12 +1166,6 @@
     :A1: -- AUC6.1.2
     :A1: -- AUC6.1.3
     :A1: -- AUC6.1.4
-
-    :A2: -- AUC6.1.1
-    :A2: -- AUC6.1.2
-    :A2: -- AUC6.1.3
-    :A2: -- AUC6.1.4
-
     @enduml
     \end{plantuml}
     \caption{AUC6.1: Creazione organizzazione}
@@ -1201,7 +1175,7 @@
   \begin{description}
     \item[Codice:] AUC6.1
     \item[Titolo:] Creazione organizzazione
-    \item[Attori primari:] root;
+    \item[Attori primari:] root
     \item[Precondizione:] l'organizzazione non deve esistere nella lista di \emph{Stalker}, deve essere specificato il suo nome.
     \item[Postcondizione:] l'organizzazione viene creata.
     \item[Scenario principale:] sorge la necessità di creare un'organizzazione, senza essere effettivamente richiesta;
@@ -1217,7 +1191,7 @@
   \begin{description}
     \item[Codice:] AUC6.1.1
     \item[Titolo:] Inserisci nome organizzazione
-    \item[Attori primari:] root,owner
+    \item[Attori primari:] root
     \item[Precondizione:] il sistema fornisce il campo di inserimento nome.
     \item[Postcondizione:] il nome viene opportunamente inserito.
     \item[Scenario principale:]
@@ -1233,9 +1207,9 @@
   \begin{description}
     \item[Codice:] AUC6.1.2
     \item[Titolo:] Inserisci indirizzo organizzazione
-    \item[Attori primari:] root,owner
+    \item[Attori primari:] root
     \item[Precondizione:] il sistema fornisce il campo di inserimento indirizzo organizzazione.
-    \item[Postcondizione:] l'indirizzo viene opportunamente inserito.
+    \item[Postcondizione:] il campo relativo all'indirizzo viene riempito.
     \item[Scenario principale:]
     \begin{enumerate}
       \item si vuole inserire l'indirizzo di un'organizzazione.
@@ -1248,9 +1222,9 @@
   \begin{description}
     \item[Codice:] AUC6.1.3
     \item[Titolo:] Inserisci descrizione organizzazione
-    \item[Attori primari:] root,owner
+    \item[Attori primari:] root
     \item[Precondizione:] il sistema fornisce il campo di inserimento descrizione organizzazione.
-    \item[Postcondizione:] la descrizione viene opportunamente inserito.
+    \item[Postcondizione:] il campo relativo alla descrizione viene riempito.
     \item[Scenario principale:]
     \begin{enumerate}
       \item si vuole inserire la descrizione di un'organizzazione.
@@ -1263,7 +1237,7 @@
   \begin{description}
     \item[Codice:] AUC6.1.4
     \item[Titolo:] Configurazione dettagli server LDAP
-    \item[Attori primari:] root,owner
+    \item[Attori primari:] root
     \item[Precondizione:] il sistema fornisce i campi per la configurazione del server LDAP.
     \item[Postcondizione:] il server LDAP è stato configurato.
     \item[Scenario principale:]
@@ -1751,7 +1725,7 @@
 \begin{description}
   \item[Codice:] AUC9
   \item[Titolo:] Query sul dipendente
-  \item[Attori primari:] visualizzatore;
+  \item[Attori primari:] visualizzatore
   \item[Precondizione:] il sistema risponde correttamente alle interrogazioni;
   \item[Postcondizione:] il visualizzatore ottiene le informazioni di cui ha bisogno.
   \item[Scenario principale:]
@@ -1830,7 +1804,7 @@
 \begin{description}
   \item[Codice:] AUC10.1
   \item[Titolo:] Richiesta aggiunta luogo
-  \item[Attori primari:] gestore;
+  \item[Attori primari:] gestore
   \item[Precondizione:] il luogo da aggiungere non deve già esistere;
   \item[Postcondizione:] la richiesta di aggiunta di un nuovo luogo viene posta.
   \item[Scenario principale:]
