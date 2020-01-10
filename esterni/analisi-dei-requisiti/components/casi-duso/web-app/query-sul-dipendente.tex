@@ -4,22 +4,7 @@
 
 \begin{figure}[H]
   \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :visualizzatore: as A
-
-  rectangle {
-    together {
-      usecase (AUC6) as "AUC6\nQuery sul dipendente"
-    }
-  }
-
-  :A: -- AUC6
-
-  @enduml
-  \end{plantuml}
+  \scalegraphics{query-sul-dipendente.png}
   \caption{AUC6: Query sul dipendente}%
   \label{fig:AUC6}
 \end{figure}
@@ -35,6 +20,5 @@
     \item il visualizzatore vuole ottenere delle informazioni riguardo l'organizzazione sulla quale opera, in particolare riguardo gli accessi di uno specifico dipendente.
   \end{enumerate}
 \end{description}
-
 
 \end{document}

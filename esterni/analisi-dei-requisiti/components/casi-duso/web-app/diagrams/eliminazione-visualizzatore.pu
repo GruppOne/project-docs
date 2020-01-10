@@ -1,0 +1,14 @@
+@startuml eliminazione-visualizzatore
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :owner: as A2
+
+rectangle {
+    together {
+        usecase (AUC12.1) as "AUC12.1\nInserimento email visualizzatore"
+      }
+  }
+
+:A2: -- AUC12.1
+
+@enduml

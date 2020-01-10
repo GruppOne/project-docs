@@ -1,0 +1,14 @@
+@startuml disconnessione
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :utente autenticato: as A
+
+rectangle {
+  together {
+    usecase (AUC2.1) as "AUC2.1\nDisconnessione utente"
+  }
+}
+
+:A: -- AUC2.1
+
+@enduml

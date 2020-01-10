@@ -4,22 +4,7 @@
 
 \begin{figure}[H]
   \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :amministratore: as A
-
-  rectangle {
-    together {
-      usecase (AUC10.1) as "AUC10.1\nInserimento email owner"
-    }
-  }
-
-  :A: -- AUC10.1
-
-  @enduml
-  \end{plantuml}
+  \scalegraphics{eliminazione-owner.png}
   \caption{AUC10: Eliminazione owner}%
   \label{fig:AUC10}
 \end{figure}

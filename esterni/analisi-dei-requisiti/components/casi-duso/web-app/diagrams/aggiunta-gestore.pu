@@ -1,0 +1,14 @@
+@startuml "aggiunta-gestore"
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :owner: as A
+
+rectangle {
+  together {
+    usecase (AUC8.1) as "AUC8.1\nInserimento email gestore"
+  }
+}
+
+:A: -- AUC8.1
+
+@enduml

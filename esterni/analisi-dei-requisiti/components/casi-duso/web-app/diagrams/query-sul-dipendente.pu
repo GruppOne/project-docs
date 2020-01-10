@@ -1,0 +1,14 @@
+@startuml query-sul-dipendente
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :visualizzatore: as A
+
+rectangle {
+  together {
+    usecase (AUC6) as "AUC6\nQuery sul dipendente"
+  }
+}
+
+:A: -- AUC6
+
+@enduml

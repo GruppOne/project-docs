@@ -4,22 +4,7 @@
 
 \begin{figure}[H]
   \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :utente autenticato: as A
-
-  rectangle {
-    together {
-      usecase (AUC2.1) as "AUC2.1\nDisconnessione utente"
-    }
-  }
-
-  :A: -- AUC2.1
-
-  @enduml
-  \end{plantuml}
+  \scalegraphics{disconnessione.png}
   \caption{AUC2: Disconnessione}%
   \label{fig:AUC2}
 \end{figure}

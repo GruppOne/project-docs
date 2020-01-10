@@ -4,22 +4,7 @@
 
 \begin{figure}[H]
   \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :utente autenticato: as A
-
-  rectangle {
-    together {
-      usecase (AUC7) as "AUC7.1\nConferma aumento privilegi ad owner"
-    }
-  }
-
-  :A: -- AUC7
-
-  @enduml
-  \end{plantuml}
+  \scalegraphics{creazione-owner.png}
   \caption{AUC7: Creazione owner}%
   \label{fig:AUC7}
 \end{figure}

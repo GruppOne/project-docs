@@ -4,35 +4,7 @@
 
 \begin{figure}[H]
   \centering
-  \begin{plantuml}
-    @startuml
-    !include ../../commons/style/use-cases.pu
-
-    actor :gestore: as G
-    actor :owner: as O
-
-    rectangle {
-        together {
-            usecase (AUC3.5) as "AUC3.5\nInvio richiesta aggiornamento\nlista organizzazioni"
-            usecase (AUC3.4) as "AUC3.4\nSeleziona organizzazione"
-            usecase (AUC3.3) as "AUC3.3\nModifica organizzazione"
-            usecase (AUC3.2) as "AUC3.2\nEliminazione organizzazione"
-            usecase (AUC3.1) as "AUC3.1\nCreazione organizzazione"
-          }
-      }
-
-    :O: -- AUC3.1
-    :G: -- AUC3.2
-    :G: -- AUC3.3
-
-    (AUC3.4) <.up. (AUC3.2) : <<include>>
-    (AUC3.4) <.up. (AUC3.3) : <<include>>
-
-    (AUC3.5) <.up. (AUC3.1) : <<include>>
-    (AUC3.5) <.up. (AUC3.2) : <<include>>
-
-    @enduml
-  \end{plantuml}
+  \scalegraphics{gestione-organizzazione.png}
   \caption{AUC3: Gestione organizzazione}%
   \label{fig:AUC3}
 \end{figure}
@@ -54,25 +26,7 @@
 
 \begin{figure}[H]
   \centering
-  \begin{plantuml}
-    @startuml
-    !include ../../commons/style/use-cases.pu
-
-    actor :owner: as O
-
-    rectangle {
-        together {
-            usecase (AUC3.1.1) as "AUC3.1.1\nInserisci nome organizzazione"
-            usecase (AUC3.1.2) as "AUC3.1.2\nInserisci descrizione organizzazione"
-            usecase (AUC3.1.3) as "AUC3.1.3\nConfigurazione dettagli server LDAP"
-          }
-      }
-
-    :O: -- AUC3.1.1
-    :O: -- AUC3.1.2
-    :O: -- AUC3.1.3
-    @enduml
-  \end{plantuml}
+  \scalegraphics{creazione-organizzazione.png}
   \caption{AUC3.1: Creazione organizzazione}%
   \label{fig:AUC3_1}
 \end{figure}
@@ -162,29 +116,7 @@
 
 \begin{figure}[H]
   \centering
-  \begin{plantuml}
-    @startuml
-    !include ../../commons/style/use-cases.pu
-
-    actor :gestore: as G
-    actor :owner: as O
-
-    rectangle {
-        together {
-            usecase (AUC3.3.1) as "AUC3.3.1\nModifica nome organizzazione"
-            usecase (AUC3.3.2) as "AUC3.3.2\nModifica descrizione organizzazione"
-            usecase (AUC4) as "AUC4\nGestione luoghi"
-            usecase (AUC3.3.4) as "AUC3.3.4\nModifica configurazione dettagli server LDAP"
-          }
-      }
-
-    :O: -- AUC3.3.1
-    :O: -- AUC3.3.2
-    :G: -- AUC4
-    :O: -- AUC3.3.4
-
-    @enduml
-  \end{plantuml}
+  \scalegraphics{modifica-organizzazione.png}
   \caption{AUC3.3: Modifica organizzazione}%
   \label{fig:AUC3_3}
 \end{figure}
