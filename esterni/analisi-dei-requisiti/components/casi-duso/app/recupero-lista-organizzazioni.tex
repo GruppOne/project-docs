@@ -15,15 +15,15 @@
     together {
       usecase (UUC4.1) as "UUC4.1\nAggiornamento\nlista organizzazioni"
       usecase (UUC4.2) as "UUC4.2\nSeleziona organizzazioni"
-      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+      usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
     }
   }
 
   :A: -- (UUC4.1)
   :A: -- (UUC4.2)
 
-  (UUC5) .up.> (UUC4.1) : <<extends>>
-  (UUC5) .up.> (UUC4.2) : <<extends>>
+  (UUC12) .up.> (UUC4.1) : <<extends>>
+  (UUC12) .up.> (UUC4.2) : <<extends>>
 
   @enduml
   \end{plantuml}
@@ -43,7 +43,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item in caso di rete mancante, non possono essere eseguite queste operazioni e quindi verrà notificato un errore \emph{[UUC5]}.
+          \item in caso di rete mancante, non possono essere eseguite queste operazioni e quindi verrà notificato un errore \emph{[UUC12]}.
         \end{enumerate}
 \end{description}
 

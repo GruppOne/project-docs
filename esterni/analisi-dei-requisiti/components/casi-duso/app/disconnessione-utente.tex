@@ -12,23 +12,23 @@
 
   rectangle {
     together {
-      usecase (UUC12) as "UUC12\nDisconnessione utente\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
-      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+      usecase (UUC10) as "UUC10\nDisconnessione utente\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
+      usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
     }
   }
 
-  :A3: -- (UUC12)
+  :A3: -- (UUC10)
 
-  (UUC5) .up.|> (UUC12) : <<extends>>
+  (UUC12) .up.> (UUC10) : <<extends>>
 
   @enduml
   \end{plantuml}
-  \caption{UUC12: Disconnessione}%
-  \label{fig:uuc12}
+  \caption{UUC10: Disconnessione}%
+  \label{fig:UUC10}
 \end{figure}
 
   \begin{description}
-  \item[Caso d’uso:] UUC12;
+  \item[Caso d’uso:] UUC10;
   \item[Titolo:] Disconnessione;
   \item[Attori primari:] utente autenticato;
   \item[Precondizione:] l'utente deve poter accedere al pulsante di disconnessione;
@@ -39,7 +39,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se l'utente cerca di disconnettersi in assenza di rete, si visualizzerà un errore \emph{[UUC5]}.
+          \item se l'utente cerca di disconnettersi in assenza di rete, si visualizzerà un errore \emph{[UUC12]}.
         \end{enumerate}
 \end{description}
 

@@ -15,15 +15,15 @@
       usecase (UUC4) as "UUC4\nRecupero lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
       usecase (UUC6.1) as "UUC6.1\nFiltra organizzazioni \ncollegato"
       usecase (UUC7.1) as "UUC7.1\nScelta noto o incognito"
-      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+      usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
     }
   }
 
   :A3.1: -- (UUC4)
 
-  (UUC4) .up.> (UUC5) : <<extends>>
-  (UUC4) <.up. (UUC7.1) : <<include>>
-  (UUC4) <.up. (UUC6.1) : <<include>>
+  (UUC4) <.up. (UUC12) : <<extends>>
+  (UUC4) .up.> (UUC7.1) : <<include>>
+  (UUC4) .up.> (UUC6.1) : <<include>>
 
 
   @enduml
@@ -45,7 +45,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore \emph{[UUC5]}.
+          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore \emph{[UUC12]}.
         \end{enumerate}
 \end{description}
 
@@ -95,7 +95,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore \emph{[UUC5]}.
+          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore \emph{[UUC12]}.
         \end{enumerate}
 \end{description}
 

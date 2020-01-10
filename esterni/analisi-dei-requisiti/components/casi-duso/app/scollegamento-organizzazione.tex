@@ -15,19 +15,19 @@
     together {
       usecase (UUC4) as "UUC4\nRecupero lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\nselezionamento di un'organizzazione\n con rete mancante"
       usecase (UUC6.1) as "UUC6.1\nFiltra organizzazioni \ncollegato"
-      usecase (UUC5) as "UUC.nd\nVisualizzazione errore\nrete mancante"
+      usecase (UUC12) as "UUC.nd\nVisualizzazione errore\nrete mancante"
     }
   }
 
   :A3: -- (UUC4)
 
   (UUC6.1) <.up. (UUC4) : <<include>>
-  (UUC5) .up.> (UUC4) : <<extends>>
+  (UUC12) .up.> (UUC4) : <<extends>>
 
   @enduml
   \end{plantuml}
   \caption{UUC6: Scollegamento organizzazione}%
-  \label{fig:uuc5}
+  \label{fig:UUC12}
 \end{figure}
 
 \begin{description}
@@ -42,7 +42,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione \emph{[UUC5]}.
+          \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione \emph{[UUC12]}.
         \end{enumerate}
 \end{description}
 
