@@ -2,10 +2,6 @@
 
 \begin{document}
 
-
-\subsubsection{AUC1: Autenticazione}%
-\label{subs:AUC1}
-
 \begin{figure}[H]
   \centering
   \begin{plantuml}
@@ -19,10 +15,14 @@
     usecase (AUC1.1) as "AUC1.1\nInserimento email"
     usecase (AUC1.2) as "AUC1.2\nInserimento password"
     }
+    usecase (AUC1.3) as "AUC1.3\nVisualizzazione credenziali errate"
   }
 
   :A: -- AUC1.1
   :A: -- AUC1.2
+
+  (AUC1.3) .left.|> (AUC1.1) : <<extends>>
+  (AUC1.3) .up.|> (AUC1.2) : <<extends>>
 
   @enduml
   \end{plantuml}
@@ -38,16 +38,16 @@
   \item[Postcondizione:] l'autenticazione è andata a buon fine e l'utente è autenticato.
   \item[Scenario principale:]
   \begin{enumerate}
-    \item  l'utente non autenticato accede alla pagina di autenticazione, e visualizza tutti i campi che deve compilare:
+    \item l'utente non autenticato accede alla pagina di autenticazione, e visualizza tutti i campi che deve compilare:
     \begin{enumerate}
-      \item inserisce l’email associata all’account \emph{[AUC1.1.1]};
-      \item inserisce la password associata all’account \emph{[AUC1.1.2]}.
+      \item inserisce l’email associata all’account \emph{[AUC1.1]};
+      \item inserisce la password associata all’account \emph{[AUC1.2]}.
     \end{enumerate}
     \item
   \end{enumerate}
   \item[Estensioni:]
   \begin{enumerate}
-    \item se l'utente inserisce le credenziali in modo errato, verrà visualizzato un messaggio d'errore \emph{[AUC1.2]}.
+    \item se l'utente inserisce le credenziali in modo errato, verrà visualizzato un messaggio d'errore \emph{[AUC1.3]}.
   \end{enumerate}
 \end{description}
 
@@ -63,6 +63,10 @@
   \begin{enumerate}
     \item l'utente compila il campo relativo alla propria mail di registrazione.
   \end{enumerate}
+  \item[Estensioni:]
+  \begin{enumerate}
+    \item se l'utente inserisce l'email in modo errato, verrà visualizzato un messaggio d'errore \emph{[AUC1.3]}.
+  \end{enumerate}
 \end{description}
 
 \subsubsection{AUC1.2: Inserimento password}%
@@ -77,12 +81,16 @@
   \begin{enumerate}
     \item l'utente compila il campo relativo alla propria password di registrazione.
   \end{enumerate}
+  \item[Estensioni:]
+  \begin{enumerate}
+    \item se l'utente inserisce la password in modo errato, verrà visualizzato un messaggio d'errore \emph{[AUC1.3]}.
+  \end{enumerate}
 \end{description}
 
-\subsubsection{AUC1.2: Visualizzazione credenziali errate}%
-\label{subs:AUC1.2}
+\subsubsection{AUC1.3: Visualizzazione credenziali errate}%
+\label{subs:AUC1.3}
 \begin{description}
-  \item[Codice:] AUC1.2;
+  \item[Codice:] AUC1.3;
   \item[Titolo:] Visualizzazione credenziali errate;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] l'utente ha inviato al server le credenziali per effettuare l'autenticazione;

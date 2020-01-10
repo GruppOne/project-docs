@@ -15,35 +15,35 @@
 
   rectangle {
     together {
-      usecase (AUC16.1) as "AUC16.1\nInserimento email gestore"
+      usecase (AUC13.1) as "AUC13.1\nInserimento email gestore"
     }
   }
 
-  :A1: -- AUC16.1
-  :A2: -- AUC16.1
+  :A1: -- AUC13.1
+  :A2: -- AUC13.1
 
   @enduml
   \end{plantuml}
-  \caption{AUC16: Eliminazione gestore}%
-  \label{fig:auc16}
+  \caption{AUC13: Eliminazione gestore}%
+  \label{fig:auc13}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC16;
+  \item[Codice:] AUC13;
   \item[Titolo:] Eliminazione gestore;
   \item[Attori primari:] amministratore, owner;
   \item[Precondizione:] il sistema deve rendere disponibile la pagina di eliminazione gestore;
-  \item[Postcondizione:] l'utente non è più gestore;
+  \item[Postcondizione:] l'utente non Ã¨ piÃ¹ gestore;
   \item[Scenario principale:]
   \begin{enumerate}
     \item l'amministratore, oppure l'owner, vuole eliminare i privilegi ad un'utente gestore.
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC16.1: Inserimento email gestore}%
-\label{subs:AUC16.1}
+\subsubsection{AUC13.1: Inserimento email gestore}%
+\label{subs:AUC13.1}
 \begin{description}
-  \item[Codice:] AUC16.1;
+  \item[Codice:] AUC13.1;
   \item[Titolo:] Inserimento email gestore;
   \item[Attori primari:] amministratore, owner;
   \item[Precondizione:] il sistema deve rendere disponibile il campo per l'inserimento della mail del gestore da eliminare;
