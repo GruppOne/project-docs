@@ -4,27 +4,7 @@
 
 \begin{figure}[H]
   \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :utente collegato: as A3
-
-
-  rectangle {
-    together {
-      usecase (UUC9) as "UUC9\nVisualizzazione tempo \nnell'organizzazione corrente\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta tempo trascorso\nin mancanza di rete"
-      usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
-      note right of (UUC9): implementazione opzionale
-    }
-  }
-
-  :A3: -- (UUC9)
-
-  (UUC12) .up.> (UUC9) : <<extends>>
-
-  @enduml
-  \end{plantuml}
+  \scalegraphics{visualizzazione-tempo-trascorso-nell-organizzazione-corrente.png}
   \caption{UUC9: Visualizzazione tempo trascorso nell'organizzazione corrente}%
   \label{fig:UUC9}
 \end{figure}

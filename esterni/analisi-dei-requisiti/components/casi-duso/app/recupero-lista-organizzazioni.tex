@@ -5,28 +5,7 @@
 
 \begin{figure}[H]
   \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :utente autenticato: as A
-
-  rectangle {
-    together {
-      usecase (UUC4.1) as "UUC4.1\nAggiornamento\nlista organizzazioni"
-      usecase (UUC4.2) as "UUC4.2\nSeleziona organizzazioni"
-      usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
-    }
-  }
-
-  :A: -- (UUC4.1)
-  :A: -- (UUC4.2)
-
-  (UUC12) .up.> (UUC4.1) : <<extends>>
-  (UUC12) .up.> (UUC4.2) : <<extends>>
-
-  @enduml
-  \end{plantuml}
+  \scalegraphics{recupero-lista-organizzazioni.png}
   \caption{UUC4: Recupero lista organizzazioni}%
   \label{fig:uuc4}
 \end{figure}

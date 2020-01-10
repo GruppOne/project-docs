@@ -4,25 +4,7 @@
 
 \begin{figure}[H]
   \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :utente autenticato: as A3
-
-  rectangle {
-    together {
-      usecase (UUC10) as "UUC10\nDisconnessione utente\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
-      usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
-    }
-  }
-
-  :A3: -- (UUC10)
-
-  (UUC12) .up.> (UUC10) : <<extends>>
-
-  @enduml
-  \end{plantuml}
+  \scalegraphics{disconnessione.png}
   \caption{UUC10: Disconnessione}%
   \label{fig:UUC10}
 \end{figure}

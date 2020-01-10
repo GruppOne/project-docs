@@ -4,30 +4,7 @@
 
 \begin{figure}[H]
   \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :utente non autenticato: as A
-
-  rectangle {
-    together {
-      usecase (UUC2.1) as "UUC2.1\nInserimento email\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
-      usecase (UUC2.2) as "UUC2.2\nInserimento password\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
-      usecase (UUC2.3) as "UUC2.3\nInformazioni autenticazione non valide"
-      usecase (UUC3) as "UUC3\nRecupero credenziali"
-    }
-  }
-
-  :A: -- (UUC2.1)
-  :A: -- (UUC2.2)
-
-  (UUC2.3) .up.> (UUC2.2) : <<extends>>
-  (UUC2.3) .up.> (UUC2.1) : <<extends>>
-  (UUC3) <. (UUC2.3) : <<include>>
-
-  @enduml
-  \end{plantuml}
+  \scalegraphics{autenticazione.png}
   \caption{UUC2: Autenticazione}%
   \label{fig:uuc2}
 \end{figure}
@@ -84,7 +61,7 @@
   \end{enumerate}
   \item[Estensioni:]
   \begin{enumerate}
-    \item se la password inserita non è presente nel database, si visualizzerà un errore di credenziali errate (per motivi di sicurezza non si indica qual è il campo errato) \emph{[UUC2.3]}.
+    \item se la password inserita non è presente nel database, si visualizzerà un errore di credenziali errate (per motivi di sicurezza non si indica qual è il campo errato)~\ref{subs:UUC2.3}.
   \end{enumerate}
 \end{description}
 

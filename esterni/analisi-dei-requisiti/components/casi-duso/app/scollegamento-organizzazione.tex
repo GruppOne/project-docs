@@ -2,30 +2,9 @@
 
 \begin{document}
 
-
 \begin{figure}[H]
   \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :utente collegato: as A3
-
-  rectangle {
-    together {
-      usecase (UUC4) as "UUC4\nRecupero lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\nselezionamento di un'organizzazione\n con rete mancante"
-      usecase (UUC6.1) as "UUC6.1\nFiltra organizzazioni \ncollegato"
-      usecase (UUC12) as "UUC.nd\nVisualizzazione errore\nrete mancante"
-    }
-  }
-
-  :A3: -- (UUC4)
-
-  (UUC6.1) <.up. (UUC4) : <<include>>
-  (UUC12) .up.> (UUC4) : <<extends>>
-
-  @enduml
-  \end{plantuml}
+  \scalegraphics{scollegamento-organizzazione.png}
   \caption{UUC6: Scollegamento organizzazione}%
   \label{fig:UUC12}
 \end{figure}

@@ -4,30 +4,7 @@
 
 \begin{figure}[H]
   \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :utente collegato: as A3.1
-
-  rectangle {
-    together {
-      usecase (UUC4) as "UUC4\nRecupero lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
-      usecase (UUC6.1) as "UUC6.1\nFiltra organizzazioni \ncollegato"
-      usecase (UUC7.1) as "UUC7.1\nScelta noto o incognito"
-      usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
-    }
-  }
-
-  :A3.1: -- (UUC4)
-
-  (UUC4) <.up. (UUC12) : <<extends>>
-  (UUC4) .up.> (UUC7.1) : <<include>>
-  (UUC4) .up.> (UUC6.1) : <<include>>
-
-
-  @enduml
-  \end{plantuml}
+  \scalegraphics{passaggio-noto-incognito.png}
   \caption{UUC7: Passaggio noto/incognito}%
   \label{fig:uuc7}
 \end{figure}
@@ -54,30 +31,7 @@
 
 \begin{figure}[H]
   \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :utente collegato: as A3
-
-  actor :utente noto: as A3.1
-  actor :utente incognito: as A3.2
-
-  :A3.1: -up-|> :A3:
-  :A3.2: -up-|> :A3:
-
-  rectangle {
-    together {
-      usecase (UUC7.1.1) as "UUC7.1.1\nPassaggio a incognito"
-      usecase (UUC7.1.2) as "UUC7.1.2\nPassaggio a noto"
-    }
-  }
-
-  :A3.1: -- (UUC7.1.1)
-  :A3.2: -- (UUC7.1.2)
-
-  @enduml
-  \end{plantuml}
+  \scalegraphics{scelta-noto-o-incognito.png}
   \caption{UUC7.1: Scelta noto o incognito}%
   \label{fig:uuc7_1}
 \end{figure}
