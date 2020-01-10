@@ -15,14 +15,16 @@
       usecase (UUC2.1) as "UUC2.1\nInserimento email\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
       usecase (UUC2.2) as "UUC2.2\nInserimento password\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
       usecase (UUC2.3) as "UUC2.3\nInformazioni autenticazione non valide"
+      usecase (UUC3) as "UUC3\nRecupero credenziali"
     }
   }
 
   :A: -- (UUC2.1)
   :A: -- (UUC2.2)
 
-  (UUC2.3) .up.|> (UUC2.2) : <<extends>>
-  (UUC2.3) .up.|> (UUC2.1) : <<extends>>
+  (UUC2.3) .up.> (UUC2.2) : <<extends>>
+  (UUC2.3) .up.> (UUC2.1) : <<extends>>
+  (UUC3) <. (UUC2.3) : <<include>>
 
   @enduml
   \end{plantuml}
