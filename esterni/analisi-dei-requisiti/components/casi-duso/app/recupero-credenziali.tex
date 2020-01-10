@@ -18,7 +18,7 @@
   \item[Postcondizione:] l'utente si trova nella schermata di recupero credenziali;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'utente può selezionare la voce per il recupero credenziali e avviene tramite recupero password.
+          \item l'utente può selezionare la voce per il recupero credenziali che avviene tramite recupero password.
         \end{enumerate}
 \end{description}
 
@@ -58,7 +58,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se l'email inserita non è registrata nel database, allora verrà segnalato un errore \emph{[UUC3.1.3]}.
+          \item se l'email inserita non è registrata nel database, allora verrà segnalato un errore~\ref{subs:UUC3.1.3}.
         \end{enumerate}
 \end{description}
 
@@ -80,10 +80,24 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se la nuova password non rispetta determinati vincoli, verrà visualizzato un'errore \emph{[UUC3.1.3]};
-          \item se la nuova password e la sua conferma non coincidono tra loro, verrà visualizzato un'errore \emph{[UUC3.1.3]}.
+          \item se la nuova password non rispetta determinati vincoli, verrà visualizzato un'errore~\ref{subs:UUC3.1.3};
+          \item se la nuova password e la sua conferma non coincidono tra loro, verrà visualizzato un'errore~\ref{subs:UUC3.1.3}.
         \end{enumerate}
 \end{description}
 
+\subsubsection{UUC3.1.3: Informazioni recupero non valide}%
+\label{subs:UUC3.1.3}
+
+\begin{description}
+  \item[Caso d’uso:] UUC3.1.3;
+  \item[Titolo:] Informazioni recupero non valide;
+  \item[Attori primari:] utente non autenticato;
+  \item[Precondizione:] l'utente ha provocato un errore nella procedura di recupero credenziali;
+  \item[Postcondizione:] l'applicazione mobile comunica all'utente l'errore;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente cerca di effettuare l'autenticazione con credenziali errate.
+        \end{enumerate}
+\end{description}
 
 \end{document}
