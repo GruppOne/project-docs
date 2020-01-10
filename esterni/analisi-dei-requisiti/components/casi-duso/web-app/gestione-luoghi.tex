@@ -1,0 +1,214 @@
+
+\begin{figure}[H]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+
+  actor :gestore: as G
+
+  rectangle {
+    together {
+      usecase (AUC4.1) as "AUC4.1\nAggiungi luogo"
+      usecase (AUC4.2) as "AUC4.2\nEliminazione luogo"
+      usecase (AUC4.3) as "AUC4.3\nModifica luogo"
+    }
+    usecase (AUC4.4) as "AUC4.4\nSeleziona luogo"
+  }
+
+  :G: -- AUC4.1
+  :G: -- AUC4.2
+  :G: -- AUC4.3
+
+  (AUC4.4) <.up. (AUC4.2) : <<include>>
+  (AUC4.4) <.up. (AUC4.3) : <<include>>
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC4: Gestione luoghi}%
+  \label{fig:AUC4}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC4;
+  \item[Titolo:] Gestione luoghi;
+  \item[Attori primari:] gestore;
+  \item[Precondizione:] il sistema deve rendere disponibile la pagina di gestione dei luoghi di un'organizzazione;
+  \item[Postcondizione:] vengono gestiti i luoghi di un'organizzazione;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item sorge la necessità di effettuare operazioni sul luogo di un'organizzazione, e viene offerta la possibilità di selezionarlo.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC4.1: Aggiungi luogo}%
+\label{subs:AUC4.1}
+
+\begin{figure}[H]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+
+  actor :gestore: as G
+
+  rectangle {
+    together {
+      usecase (AUC4.1.1) as "AUC4.1.1\nInserisci coordinate geografiche"
+      usecase (AUC4.1.2) as "AUC4.1.2\nInserisci indirizzo luogo"
+    }
+  }
+
+  :G: -- AUC4.1.1
+  :G: -- AUC4.1.2
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC4.1: Aggiungi luogo}%
+  \label{fig:AUC4.1}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC4.1;
+  \item[Titolo:] Aggiungi luogo;
+  \item[Attori primari:] gestore;
+  \item[Precondizione:] il \glossario{luogo} da aggiungere nell'organizzazione non deve esistere;
+  \item[Postcondizione:] il nuovo luogo viene aggiunto nell'organizzazione;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item sorge la necessità di aggiungere un luogo ad un'organizzazione.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC4.1.1: Inserisci coordinate geografiche}%
+\label{subs:AUC4.1.1}
+\begin{description}
+  \item[Codice:] AUC4.1.1;
+  \item[Titolo:] Inserisci coordinate geografiche;
+  \item[Attori primari:] gestore;
+  \item[Precondizione:] il sistema deve fornire i campi relativi alle coordinate geografiche;
+  \item[Postcondizione:] le coordinate geografiche sono inserite correttamente nei loro campi;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore inserisce le coordinate geografiche di un nuovo luogo.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC4.1.2: Inserisci indirizzo luogo}%
+\label{subs:AUC4.1.2}
+\begin{description}
+  \item[Codice:] AUC4.1.2;
+  \item[Titolo:] Inserisci indirizzo luogo;
+  \item[Attori primari:] gestore;
+  \item[Precondizione:] il sistema deve fornire il campo relativo all'indirizzo del luogo;
+  \item[Postcondizione:] l'indirizzo è inserito correttamente nei loro campi;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore inserisce l'indirizzo di un nuovo luogo.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC4.2: Eliminazione luogo}%
+\label{subs:AUC4.2}
+\begin{description}
+  \item[Codice:] AUC4.2;
+  \item[Titolo:] Eliminazione luogo;
+  \item[Attori primari:] gestore;
+  \item[Precondizione:] il luogo dell'organizzazione deve essere presente in \emph{Stalker};
+  \item[Postcondizione:] il luogo dell'organizzazione viene eliminato;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item sorge la necessità di eliminare un luogo di un'organizzazione.
+  \end{enumerate}
+  \item[Inclusioni:]
+  \begin{enumerate}
+    \item Seleziona luogo\emph{[AUC4.4]};
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC4.3: Modifica luogo}%
+\label{subs:AUC4.3}
+
+\begin{figure}[H]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+
+  actor :gestore: as G
+
+  rectangle {
+    together {
+      usecase (AUC4.3.1) as "AUC4.3.1\nModifica coordinate geografiche"
+      usecase (AUC4.3.2) as "AUC4.3.2\nModifica indirizzo luogo"
+    }
+  }
+
+  :G: -- AUC4.3.1
+  :G: -- AUC4.3.2
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC4.3: Modifica luogo}%
+  \label{fig:AUC3_3_3_3}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC4.3;
+  \item[Titolo:] Modifica luogo;
+  \item[Attori primari:] gestore;
+  \item[Precondizione:] il luogo dell'organizzazione deve essere presente in \emph{Stalker};
+  \item[Postcondizione:] il luogo dell'organizzazione viene modificato;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item sorge la necessità di modificare un luogo di un'organizzazione.
+  \end{enumerate}
+  \item[Inclusioni:]
+  \begin{enumerate}
+    \item Seleziona luogo\emph{[AUC4.4]};
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC4.3.1: Modifica coordinate geografiche}%
+\label{subs:AUC4.3.1}
+\begin{description}
+  \item[Codice:] AUC4.3.1;
+  \item[Titolo:] Modifica coordinate geografiche;
+  \item[Attori primari:] gestore;
+  \item[Precondizione:] il sistema deve fornire i campi relativi alle coordinate geografiche;
+  \item[Postcondizione:] i campi relativi alle coordinate geografiche sono modificati;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore vuole modificare le coordinate geografiche di un luogo.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC4.3.2: Modifica indirizzo luogo}%
+\label{subs:AUC4.3.2}
+\begin{description}
+  \item[Codice:] AUC4.3.2;
+  \item[Titolo:] Modifica indirizzo luogo;
+  \item[Attori primari:] gestore;
+  \item[Precondizione:] il sistema deve fornire il campo relativo all'indirizzo del luogo;
+  \item[Postcondizione:] il campo relativo all'indirizzo del luogo è modificato;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore vuole modificare l'indirizzo di un luogo.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC4.4: Seleziona luogo}%
+\label{subs:AUC4.4}
+\begin{description}
+  \item[Codice:] AUC4.4;
+  \item[Titolo:] Seleziona luogo;
+  \item[Attori primari:] gestore;
+  \item[Precondizione:] il sistema deve mostrare la lista dei luoghi all'interno di una organizzazione;
+  \item[Postcondizione:] viene scelto il luogo desiderato;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item sorge la necessità di effettuare operazioni sul luogo di un'organizzazione, e viene offerta la possibilità di selezionarlo.
+  \end{enumerate}
+\end{description}
+
+%gestione luoghi (end)

@@ -9,47 +9,45 @@
     @startuml
     !include ../../commons/style/use-cases.pu
 
-    actor :amministratore: as A1
     actor :owner: as A2
 
     rectangle {
         together {
-            usecase (AUC11.1) as "AUC11.1\nInserimento email visualizzatore"
+            usecase (AUC12.1) as "AUC12.1\nInserimento email visualizzatore"
           }
       }
 
-    :A1: -- AUC11.1
-    :A2: -- AUC11.1
+    :A2: -- AUC12.1
 
     @enduml
   \end{plantuml}
-  \caption{AUC11: Eliminazione visualizzatore}%
-  \label{fig:AUC11}
+  \caption{AUC12: Eliminazione visualizzatore}%
+  \label{fig:AUC12}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC11;
+  \item[Codice:] AUC12;
   \item[Titolo:] Eliminazione visualizzatore;
-  \item[Attori primari:] amministratore, owner;
+  \item[Attori primari:] owner;
   \item[Precondizione:] il sistema deve rendere disponibile la pagina di eliminazione visualizzatore;
   \item[Postcondizione:] l'utente non è più visualizzatore;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'amministratore, oppure l'owner, vuole eliminare i privilegi ad un'utente visualizzatore.
+          \item l'owner vuole eliminare i privilegi ad un'utente visualizzatore.
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC11.1: Inserimento email visualizzatore}%
-\label{subs:AUC11.1}
+\subsubsection{AUC12.1: Inserimento email visualizzatore}%
+\label{subs:AUC12.1}
 \begin{description}
-  \item[Codice:] AUC11.1;
+  \item[Codice:] AUC12.1;
   \item[Titolo:] Inserimento email visualizzatore;
-  \item[Attori primari:] amministratore, owner;
+  \item[Attori primari:] owner;
   \item[Precondizione:] il sistema deve rendere disponibile il campo per l'inserimento della mail del visualizzatore da eliminare;
   \item[Postcondizione:] il campo relativo al visualizzatore viene compilato;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'amministratore, oppure l'owner, inserisce l'email del visualizzatore da eliminare.
+          \item l'owner inserisce l'email del visualizzatore da eliminare.
         \end{enumerate}
 \end{description}
 

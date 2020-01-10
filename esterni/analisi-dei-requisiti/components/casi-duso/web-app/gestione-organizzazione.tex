@@ -8,7 +8,8 @@
     @startuml
     !include ../../commons/style/use-cases.pu
 
-    actor :amministratore: as A
+    actor :gestore: as G
+    actor :owner: as O
 
     rectangle {
         together {
@@ -20,9 +21,9 @@
           }
       }
 
-    :A: -- AUC3.1
-    :A: -- AUC3.2
-    :A: -- AUC3.3
+    :O: -- AUC3.1
+    :G: -- AUC3.2
+    :G: -- AUC3.3
 
     (AUC3.4) <.up. (AUC3.2) : <<include>>
     (AUC3.4) <.up. (AUC3.3) : <<include>>
@@ -39,7 +40,7 @@
 \begin{description}
   \item[Codice:] AUC3;
   \item[Titolo:] Gestione organizzazione;
-  \item[Attori primari:] amministratore, gestore;
+  \item[Attori primari:] owner, gestore;
   \item[Precondizione:] il sistema deve rendere disponibile la pagina di gestione dell'organizzazione;
   \item[Postcondizione:] viene gestita un'organizzazione;
   \item[Scenario principale:]
@@ -57,7 +58,7 @@
     @startuml
     !include ../../commons/style/use-cases.pu
 
-    actor :amministratore: as A1
+    actor :owner: as O
 
     rectangle {
         together {
@@ -67,9 +68,9 @@
           }
       }
 
-    :A1: -- AUC3.1.1
-    :A1: -- AUC3.1.2
-    :A1: -- AUC3.1.3
+    :O: -- AUC3.1.1
+    :O: -- AUC3.1.2
+    :O: -- AUC3.1.3
     @enduml
   \end{plantuml}
   \caption{AUC3.1: Creazione organizzazione}%
@@ -79,7 +80,7 @@
 \begin{description}
   \item[Codice:] AUC3.1;
   \item[Titolo:] Creazione organizzazione;
-  \item[Attori primari:] amministratore, owner;
+  \item[Attori primari:] owner;
   \item[Precondizione:] l'organizzazione non deve esistere nella lista di \emph{Stalker};
   \item[Postcondizione:] l'organizzazione viene creata;
   \item[Scenario principale:]
@@ -98,7 +99,7 @@
 \begin{description}
   \item[Codice:] AUC3.1.1;
   \item[Titolo:] Inserisci nome organizzazione;
-  \item[Attori primari:] amministratore, owner;
+  \item[Attori primari:]  owner;
   \item[Precondizione:] il sistema fornisce il campo di inserimento del nome;
   \item[Postcondizione:] il nome viene opportunamente inserito;
   \item[Scenario principale:]
@@ -113,7 +114,7 @@
 \begin{description}
   \item[Codice:] AUC3.1.2;
   \item[Titolo:] Inserisci descrizione organizzazione;
-  \item[Attori primari:] amministratore, owner;
+  \item[Attori primari:] owner;
   \item[Precondizione:] il sistema fornisce il campo di inserimento della descrizione dell'organizzazione;
   \item[Postcondizione:] il campo relativo alla descrizione viene riempito;
   \item[Scenario principale:]
@@ -127,7 +128,7 @@
 \begin{description}
   \item[Codice:] AUC3.1.3;
   \item[Titolo:] Configurazione dettagli server LDAP;
-  \item[Attori primari:] amministratore, owner;
+  \item[Attori primari:] owner;
   \item[Precondizione:] il sistema fornisce i campi per la configurazione del server LDAP;
   \item[Postcondizione:] il server LDAP è stato configurato;
   \item[Scenario principale:]
@@ -142,7 +143,7 @@
 \begin{description}
   \item[Codice:] AUC3.2;
   \item[Titolo:] Eliminazione organizzazione;
-  \item[Attori primari:] amministratore, owner;
+  \item[Attori primari:] owner;
   \item[Precondizione:] deve essere stata selezionata l'organizzazione da eliminare, presente nella lista di \emph{Stalker};
   \item[Postcondizione:] l'organizzazione viene eliminata.
   \item[Scenario principale:]
@@ -165,21 +166,22 @@
     @startuml
     !include ../../commons/style/use-cases.pu
 
-    actor :amministratore: as A
+    actor :gestore: as G
+    actor :owner: as O
 
     rectangle {
         together {
             usecase (AUC3.3.1) as "AUC3.3.1\nModifica nome organizzazione"
             usecase (AUC3.3.2) as "AUC3.3.2\nModifica descrizione organizzazione"
-            usecase (AUC3.3.3) as "AUC3.3.3\nGestione luoghi"
+            usecase (AUC4) as "AUC4\nGestione luoghi"
             usecase (AUC3.3.4) as "AUC3.3.4\nModifica configurazione dettagli server LDAP"
           }
       }
 
-    :A: -- AUC3.3.1
-    :A: -- AUC3.3.2
-    :A: -- AUC3.3.3
-    :A: -- AUC3.3.4
+    :O: -- AUC3.3.1
+    :O: -- AUC3.3.2
+    :G: -- AUC4
+    :O: -- AUC3.3.4
 
     @enduml
   \end{plantuml}
@@ -190,12 +192,12 @@
 \begin{description}
   \item[Codice:] AUC3.3;
   \item[Titolo:] Modifica organizzazione;
-  \item[Attori primari:] amministratore, gestore;
-  \item[Precondizione:] l'amministratore seleziona l'organizzazione da modificare, presente nella lista di \emph{Stalker};
+  \item[Attori primari:] owner;
+  \item[Precondizione:] l'owner seleziona l'organizzazione da modificare, presente nella lista di \emph{Stalker};
   \item[Postcondizione:] l'organizzazione viene modificata;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item sorge la necessità di modificare un'organizzazione, senza interagire con il suo owner.
+          \item sorge la necessità di modificare un'organizzazione.
         \end{enumerate}
   \item[Inclusioni:]
         \begin{enumerate}
@@ -208,7 +210,7 @@
 \begin{description}
   \item[Codice:] AUC3.3.1;
   \item[Titolo:] Modifica nome organizzazione;
-  \item[Attori primari:] amministratore, owner;
+  \item[Attori primari:] owner;
   \item[Precondizione:] il sistema fornisce il campo di modifica del nome;
   \item[Postcondizione:] il nome viene opportunamente modificato;
   \item[Scenario principale:]
@@ -222,7 +224,7 @@
 \begin{description}
   \item[Codice:] AUC3.3.2;
   \item[Titolo:] Modifica descrizione organizzazione;
-  \item[Attori primari:] amministratore, owner;
+  \item[Attori primari:] owner;
   \item[Precondizione:] il sistema fornisce il campo di modifica della descrizione dell'organizzazione;
   \item[Postcondizione:] la descrizione viene opportunamente modificata;
   \item[Scenario principale:]
@@ -231,231 +233,13 @@
         \end{enumerate}
 \end{description}
 
-%gestione luoghi (start)
-
-\subsubsection{AUC3.3.3: Gestione luoghi}%
-\label{subs:AUC3.3.3}
-
-\begin{figure}[H]
-  \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :amministratore: as A
-
-  rectangle {
-    together {
-      usecase (AUC3.3.3.1) as "AUC3.3.3.1\nAggiungi luogo"
-      usecase (AUC3.3.3.2) as "AUC3.3.3.2\nEliminazione luogo"
-      usecase (AUC3.3.3.3) as "AUC3.3.3.3\nModifica luogo"
-    }
-    usecase (AUC3.3.3.4) as "AUC3.3.3.4\nSeleziona luogo"
-  }
-
-  :A: -- AUC3.3.3.1
-  :A: -- AUC3.3.3.2
-  :A: -- AUC3.3.3.3
-
-  (AUC3.3.3.4) .up.|> (AUC3.3.3.2) : <<include>>
-  (AUC3.3.3.4) .up.|> (AUC3.3.3.3) : <<include>>
-
-  @enduml
-  \end{plantuml}
-  \caption{AUC3.3.3: Gestione luoghi}%
-  \label{fig:AUC3_3_3}
-\end{figure}
-
-\begin{description}
-  \item[Codice:] AUC3.3.3;
-  \item[Titolo:] Gestione luoghi;
-  \item[Attori primari:] amministratore, gestore;
-  \item[Precondizione:] il sistema deve rendere disponibile la pagina di gestione dei luoghi di un'organizzazione;
-  \item[Postcondizione:] vengono gestiti i luoghi di un'organizzazione;
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item sorge la necessità di effettuare operazioni sul luogo di un'organizzazione, e viene offerta la possibilità di selezionarlo.
-  \end{enumerate}
-\end{description}
-
-\subsubsection{AUC3.3.3.1: Aggiungi luogo}%
-\label{subs:AUC3.3.3.1}
-
-\begin{figure}[H]
-  \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :amministratore: as A
-
-  rectangle {
-    together {
-      usecase (AUC3.3.3.1.1) as "AUC3.3.3.1.1\nInserisci coordinate geografiche"
-      usecase (AUC3.3.3.1.2) as "AUC3.3.3.1.2\nInserisci indirizzo luogo"
-    }
-  }
-
-  :A: -- AUC3.3.3.1.1
-  :A: -- AUC3.3.3.1.2
-
-  @enduml
-  \end{plantuml}
-  \caption{AUC3.3.3.1: Aggiungi luogo}%
-  \label{fig:AUC3_3_3_1}
-\end{figure}
-
-\begin{description}
-  \item[Codice:] AUC3.3.3.1;
-  \item[Titolo:] Aggiungi luogo;
-  \item[Attori primari:] amministratore, gestore;
-  \item[Precondizione:] il \glossario{luogo} da aggiungere nell'organizzazione non deve esistere;
-  \item[Postcondizione:] il nuovo luogo viene aggiunto nell'organizzazione;
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item sorge la necessità di aggiungere un luogo ad un'organizzazione.
-  \end{enumerate}
-\end{description}
-
-\subsubsection{AUC3.3.3.1.1: Inserisci coordinate geografiche}%
-\label{subs:AUC3.3.3.1.1}
-\begin{description}
-  \item[Codice:] AUC3.3.3.1.1;
-  \item[Titolo:] Inserisci coordinate geografiche;
-  \item[Attori primari:] amministratore, gestore;
-  \item[Precondizione:] il sistema deve fornire i campi relativi alle coordinate geografiche;
-  \item[Postcondizione:] le coordinate geografiche sono inserite correttamente nei loro campi;
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item l'amministratore inserisce le coordinate geografiche di un nuovo luogo.
-  \end{enumerate}
-\end{description}
-
-\subsubsection{AUC3.3.3.1.2: Inserisci indirizzo luogo}%
-\label{subs:AUC3.3.3.1.2}
-\begin{description}
-  \item[Codice:] AUC3.3.3.1.2;
-  \item[Titolo:] Inserisci indirizzo luogo;
-  \item[Attori primari:] amministratore, gestore;
-  \item[Precondizione:] il sistema deve fornire il campo relativo all'indirizzo del luogo;
-  \item[Postcondizione:] l'indirizzo è inserito correttamente nei loro campi;
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item l'amministratore inserisce l'indirizzo di un nuovo luogo.
-  \end{enumerate}
-\end{description}
-
-\subsubsection{AUC3.3.3.2: Eliminazione luogo}%
-\label{subs:AUC3.3.3.2}
-\begin{description}
-  \item[Codice:] AUC3.3.3.2;
-  \item[Titolo:] Eliminazione luogo;
-  \item[Attori primari:] amministratore, gestore;
-  \item[Precondizione:] il luogo dell'organizzazione deve essere presente in \emph{Stalker};
-  \item[Postcondizione:] il luogo dell'organizzazione viene eliminato;
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item sorge la necessità di eliminare un luogo di un'organizzazione, senza interagire con il suo owner.
-  \end{enumerate}
-  \item[Inclusioni:]
-  \begin{enumerate}
-    \item Seleziona luogo\emph{[AUC3.3.3.4]};
-  \end{enumerate}
-\end{description}
-
-\subsubsection{AUC3.3.3.3: Modifica luogo}%
-\label{subs:AUC3.3.3.3}
-
-\begin{figure}[H]
-  \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :amministratore: as A
-
-  rectangle {
-    together {
-      usecase (AUC3.3.3.3.1) as "AUC3.3.3.3.1\nModifica coordinate geografiche"
-      usecase (AUC3.3.3.3.2) as "AUC3.3.3.3.2\nModifica indirizzo luogo"
-    }
-  }
-
-  :A: -- AUC3.3.3.3.1
-  :A: -- AUC3.3.3.3.2
-
-  @enduml
-  \end{plantuml}
-  \caption{AUC3.3.3.3: Modifica luogo}%
-  \label{fig:AUC3_3_3_3}
-\end{figure}
-
-\begin{description}
-  \item[Codice:] AUC3.3.3.3;
-  \item[Titolo:] Modifica luogo;
-  \item[Attori primari:] amministratore, gestore;
-  \item[Precondizione:] il luogo dell'organizzazione deve essere presente in \emph{Stalker};
-  \item[Postcondizione:] il luogo dell'organizzazione viene modificato;
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item sorge la necessità di modificare un luogo di un'organizzazione, senza interagire con il suo owner.
-  \end{enumerate}
-  \item[Inclusioni:]
-  \begin{enumerate}
-    \item Seleziona luogo\emph{[AUC3.3.3.4]};
-  \end{enumerate}
-\end{description}
-
-\subsubsection{AUC3.3.3.3.1: Modifica coordinate geografiche}%
-\label{subs:AUC3.3.3.3.1}
-\begin{description}
-  \item[Codice:] AUC3.3.3.3.1;
-  \item[Titolo:] Modifica coordinate geografiche;
-  \item[Attori primari:] amministratore, gestore;
-  \item[Precondizione:] il sistema deve fornire i campi relativi alle coordinate geografiche;
-  \item[Postcondizione:] i campi relativi alle coordinate geografiche sono modificati;
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item l'amministratore vuole modificare le coordinate geografiche di un luogo.
-  \end{enumerate}
-\end{description}
-
-\subsubsection{AUC3.3.3.3.2: Modifica indirizzo luogo}%
-\label{subs:AUC3.3.3.3.2}
-\begin{description}
-  \item[Codice:] AUC3.3.3.3.2;
-  \item[Titolo:] Modifica indirizzo luogo;
-  \item[Attori primari:] amministratore, gestore;
-  \item[Precondizione:] il sistema deve fornire il campo relativo all'indirizzo del luogo;
-  \item[Postcondizione:] il campo relativo all'indirizzo del luogo è modificato;
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item l'amministratore vuole modificare l'indirizzo di un luogo.
-  \end{enumerate}
-\end{description}
-
-\subsubsection{AUC3.3.3.4: Seleziona luogo}%
-\label{subs:AUC3.3.3.4}
-\begin{description}
-  \item[Codice:] AUC3.3.3.4;
-  \item[Titolo:] Seleziona luogo;
-  \item[Attori primari:] amministratore, gestore;
-  \item[Precondizione:] il sistema deve mostrare la lista dei luoghi all'interno di una organizzazione;
-  \item[Postcondizione:] viene scelto il luogo desiderato;
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item sorge la necessità di effettuare operazioni sul luogo di un'organizzazione, e viene offerta la possibilità di selezionarlo.
-  \end{enumerate}
-\end{description}
-
-%gestione luoghi (end)
 
 \subsubsection{AUC3.3.4: Modifica configurazione dettagli server LDAP}%
 \label{subs:AUC3.3.4}
 \begin{description}
   \item[Codice:] AUC3.3.4;
   \item[Titolo:] Configurazione dettagli server LDAP;
-  \item[Attori primari:] amministratore, gestore;
+  \item[Attori primari:] owner;
   \item[Precondizione:] il sistema fornisce i campi per la configurazione del server LDAP;
   \item[Postcondizione:] il server LDAP è stato configurato;
   \item[Scenario principale:]
@@ -469,7 +253,7 @@
 \begin{description}
   \item[Codice:] AUC3.4;
   \item[Titolo:] Seleziona organizzazione;
-  \item[Attori primari:] amministratore, gestore;
+  \item[Attori primari:] gestore;
   \item[Precondizione:] il sistema deve mostrare la lista di organizzazioni in \emph{Stalker};
   \item[Postcondizione:] viene scelta l'organizzazione desiderata;
   \item[Scenario principale:]
@@ -483,7 +267,7 @@
 \begin{description}
   \item[Codice:] AUC3.5;
   \item[Titolo:] Invio richiesta aggiornamento lista organizzazioni;
-  \item[Attori primari:] amministratore, gestore;
+  \item[Attori primari:] gestore;
   \item[Precondizione:] il sistema mostra la pagina di creazione o eliminazione di un'organizzazione;
   \item[Postcondizione:] la nuova lista delle organizzazioni viene inviata a tutte le applicazioni mobile;
   \item[Scenario principale:]

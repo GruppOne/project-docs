@@ -8,112 +8,45 @@
   @startuml
   !include ../../commons/style/use-cases.pu
 
-  actor :amministratore: as A
+  actor :utente autenticato: as A
 
   rectangle {
     together {
-      usecase (AUC6.1) as "AUC6.1\nRichiesta accettata"
-      usecase (AUC6.2) as "AUC6.2\nRichiesta rifiutata"
+      usecase (AUC7) as "AUC7.1\nConferma aumento privilegi ad owner"
     }
-    usecase (AUC6.3) as "AUC6.3\nInvio risposta all'utente"
   }
 
-  :A: -- AUC6.1
-  :A: -- AUC6.2
-
-  (AUC6.3) <.left. (AUC6.1) : <<include>>
-  (AUC6.3) <.up. (AUC6.2) : <<include>>
+  :A: -- AUC7
 
   @enduml
   \end{plantuml}
-  \caption{AUC6: Creazione owner}%
-  \label{fig:AUC6}
+  \caption{AUC7: Creazione owner}%
+  \label{fig:AUC7}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC6;
-  \item[Titolo:] Creazione owner;
-  \item[Attori primari:] amministratore;
-  \item[Precondizione:] il sistema deve rendere disponibile la pagina di creazione owner, che deve contenere:
-  \begin{itemize}
-    \item la possibilità di creare un owner;
-    \item le richieste effettuate da utenti autenticati da poter gestire.
-  \end{itemize}
-  \item[Postcondizione:] l'owner viene creato.
+  \item[Codice:] AUC7;
+  \item[Titolo:] Creazione ownere;
+  \item[Attori primari:] utente autenticato;
+  \item[Precondizione:] il sistema deve rendere disponibile la pagina di creazione owner;
+  \item[Postcondizione:] l'utente autenticato aumenta i suoi privilegi e diventa owner;
   \item[Scenario principale:]
   \begin{enumerate}
-    \item l'amministratore gestisce la creazione degli owner.
+    \item un utente vuole diventare owner per poter creare una propria organizzazione.
   \end{enumerate}
 \end{description}
 
-
-\subsubsection{AUC6.1: Richiesta accettata}%
-\label{subs:AUC6.1}
-
+\subsubsection{AUC7.1: Conferma aumento privilegi ad owner}%
+\label{subs:AUC7.1}
 \begin{description}
-  \item[Codice:] AUC6.1;
-  \item[Titolo:] Richiesta accettata;
-  \item[Attori primari:] amministratore;
-  \item[Precondizione:] l'amministratore verifica la richiesta;
-  \item[Postcondizione:] l'amministratore accetta la richiesta, e il nuovo owner viene creato;
+  \item[Codice:] AUC7.1;
+  \item[Titolo:] Conferma aumento privilegi ad owner;
+  \item[Attori primari:] owner;
+  \item[Precondizione:] il sistema deve rendere disponibile il pulsante per l'aumento dei privilegi;
+  \item[Postcondizione:] l'utente autenticato aumenta i suoi privilegi e diventa owner;
   \item[Scenario principale:]
   \begin{enumerate}
-    \item L'amministratore esamina la richiesta ricevuta e la accetta. L'utente che ha fatto richiesta diventa owner.
-  \end{enumerate}
-  \item[Inclusioni:]
-  \begin{enumerate}
-    \item l'accettazione della richiesta viene notificata all'utente \emph{[AUC6.3]}.
-  \end{enumerate}
-\end{description}
-
-\subsubsection{AUC6.2: Richiesta rifiutata}%
-\label{subs:AUC6.2}
-
-\begin{description}
-  \item[Codice:] AUC6.2;
-  \item[Titolo:] Richiesta rifiutata;
-  \item[Attori primari:] amministratore;
-  \item[Precondizione:] l'amministratore verifica la richiesta;
-  \item[Postcondizione:] l'amministratore rifiuta la richiesta, l'utente non diventerà owner;
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item L'amministratore esamina la richiesta ricevuta e la rifiuta. L'utente che ha fatto richiesta non può diventare owner.
-  \end{enumerate}
-  \item[Inclusioni:]
-  \begin{enumerate}
-    \item il rifiuto della richiesta viene notificata all'utente \emph{[AUC6.3]}.
-    \item
-  \end{enumerate}
-\end{description}
-
-\subsubsection{AUC6.3: Invio risposta all'utente}%
-\label{subs:AUC6.3}
-
-\begin{description}
-  \item[Codice:] AUC6.3;
-  \item[Titolo:] Invio risposta all'utente;
-  \item[Attori primari:] amministratore;
-  \item[Precondizione:] l'amministratore ha accettato, oppure rifiutato, la richiesta di un utente per diventare owner;
-  \item[Postcondizione:] l'utente che ha fatto la richiesta riceve l'esito tramite un messaggio di risposta;
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item una volta esaminata la richiesta, la risposta dell'amministratore verrà notificata all'utente.
-  \end{enumerate}
-\end{description}
-
-
-\subsubsection{AUC6.4: Creazione istantanea owner}%
-\label{subs:AUC6.4}
-
-\begin{description}
-  \item[Codice:] AUC6.4;
-  \item[Titolo:] Creazione istantanea owner;
-  \item[Attori primari:] amministratore;
-  \item[Precondizione:] il sistema deve rendere disponibile il campo di creazione istantanea;
-  \item[Postcondizione:] l'utente indicato diventa owner istantaneamente;
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item l'amministratore crea un owner, senza che abbia fatto effettivamente richiesta.
+    \item l'utente autenticato deve confermare l'aumento dei propri privilegi.
   \end{enumerate}
 \end{description}
 

@@ -9,48 +9,46 @@
   @startuml
   !include ../../commons/style/use-cases.pu
 
-  actor :amministratore: as A1
   actor :owner: as A2
 
 
   rectangle {
     together {
-      usecase (AUC10.1) as "AUC10.1\nInserimento email gestore"
+      usecase (AUC11.1) as "AUC11.1\nInserimento email gestore"
     }
   }
 
-  :A1: -- AUC10.1
-  :A2: -- AUC10.1
+  :A2: -- AUC11.1
 
   @enduml
   \end{plantuml}
-  \caption{AUC10: Eliminazione gestore}%
-  \label{fig:AUC10}
+  \caption{AUC11: Eliminazione gestore}%
+  \label{fig:AUC11}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC10;
+  \item[Codice:] AUC11;
   \item[Titolo:] Eliminazione gestore;
-  \item[Attori primari:] amministratore, owner;
+  \item[Attori primari:] owner;
   \item[Precondizione:] il sistema deve rendere disponibile la pagina di eliminazione gestore;
   \item[Postcondizione:] l'utente non Ã¨ piÃ¹ gestore;
   \item[Scenario principale:]
   \begin{enumerate}
-    \item l'amministratore, oppure l'owner, vuole eliminare i privilegi ad un'utente gestore.
+    \item l'owner vuole eliminare i privilegi ad un'utente gestore.
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC10.1: Inserimento email gestore}%
-\label{subs:AUC10.1}
+\subsubsection{AUC11.1: Inserimento email gestore}%
+\label{subs:AUC11.1}
 \begin{description}
-  \item[Codice:] AUC10.1;
+  \item[Codice:] AUC11.1;
   \item[Titolo:] Inserimento email gestore;
-  \item[Attori primari:] amministratore, owner;
+  \item[Attori primari:] owner;
   \item[Precondizione:] il sistema deve rendere disponibile il campo per l'inserimento della mail del gestore da eliminare;
   \item[Postcondizione:] il campo relativo al gestore viene compilato;
   \item[Scenario principale:]
   \begin{enumerate}
-    \item l'amministratore, oppure l'owner, inserisce l'email del gestore da eliminare.
+    \item l'owner inserisce l'email del gestore da eliminare.
   \end{enumerate}
 \end{description}
 
