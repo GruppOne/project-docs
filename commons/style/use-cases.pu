@@ -6,7 +6,10 @@ skinparam {
   monochrome true
   shadowing false
   defaultFontName Consolas
+  DefaultTextAlignment center
   noteFontName Arial
 }
+
+scale max 600 width
 
 @enduml
