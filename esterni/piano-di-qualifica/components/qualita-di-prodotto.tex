@@ -5,14 +5,59 @@
 % TODO usare https://www.praxiom.com/iso-90003.htm?
 \begin{document}
 
-% TODO scrivimi
 
-
-% sinonimo di collaudo
-\subsection{Test di Accettazione}%
-\label{sub:test_di_accettazione}
-
-
-% sub:test_di_accettazione (end)
-
+\subsection{Specifica dei test}%
+\label{sub:test}
+    Per misurare la qualità di prodotto inoltre utilizziamo dei test secondo il \glossario{Modello a \textit{V}} per il quale definiamo e sviluppiamo i test in parallelo alle attività di analisi, progettazione architetturale e di sviluppo e verifica incrementi.
+    Abbiamo definito i test dividendoli nelle seguenti categorie:
+    \begin{description}
+      \item [Test di Accettazione (TA):] vengono fatti per verificare che il prodotto soddisfi i requisiti richiesti dal proponente
+      \item [Test di Sistema (TS):] vengono effettuati quando si mettono insieme tutte le componenti del software e se ne vuole testare compatibilità e interazioni
+      \item [Test di Integrazione (TI):] questi test verificano la compatibilità e le interazioni tra diverse unità del software testate con successo solo singolarmente fino a quel momento tramite Test di Unità
+      \item [Test di Unità (TU):] svolgono un'attività mirata di analisi sulle singole unità software, vengono eseguiti con il massimo grado possibile di parallelismo e garantiscono solo il funzionamento della singola unità a cui appartengono.
+    \end{description}
+    Inoltre classifichiamo i test in base al loro stato:
+      \begin{description}
+        \item [S]: il test è stato soddisfatto
+        \item [NS]: il test non è stato ancora soddisfatto
+      \end{description}
+  \subsubsection{Test di Accettazione}
+  \label{subs:accettazione}
+      I test di accettazione hanno lo scopo di verificare che il prodotto soddisfi i requisiti richiesti dal proponente, vengono eseguiti durante la fase di verifica e collaudo finale.
+      Essendo tutti i test derivanti da un gruppo di requisiti che hanno una determinata importanza nel prodotto software abbiamo pensato di numerare i Test di Accettazione nel modo seguente:
+      \begin{center}
+          [TA][requisito][importanza][codice]
+      \end{center}
+      Dove: \textit{importanza} è un valore numerico ad indicare l'importanza del requisito che deve essere soddisfatto, \textit{codice} è un codice numerico identificativo per il test e \textit{requisito} può assumere i seguenti valori:
+      \begin{description}
+        \item [F]: requisito funzionale 
+        \item [P]: requisito prestazionale
+        \item [D]: requisito dichiarativo
+      \end{description}
+  %subs:accettazione (end)
+  \subsubsection{Test di Sistema}
+  \label{subs:sistema}
+    I test di sistema verificano il corretto funzionamento tra tutte le componenti del sistema. I test verranno identificati nel seguente modo:
+    \begin{center}
+      TS[codice]
+    \end{center}
+    Dove \textit{codice} rappresenta un numero identificativo per il Test di Sistema.
+  %subs:sistema (end)
+  \subsubsection{Test di Integrazione}
+  \label{subs:integrazione}
+    I test di sistema verificano la corretta interazione e collaborazione tra un isieme di unità. I test verranno identificati nel seguente modo:
+    \begin{center}
+      TI[codice]
+    \end{center}
+    Dove \textit{codice} rappresenta un numero identificativo per il Test di Integrazione.
+  %subs:integrazione (end)
+  \subsubsection{Test di Unità}
+  \label{subs:unita}
+    I test di sistema verificano la correttezza e il funzionamento di una singola unità del software. I test verranno identificati nel seguente modo:
+    \begin{center}
+      TU[codice]
+    \end{center}
+    Dove \textit{codice} rappresenta un numero identificativo per l'unità a cui il test appartiene.
+  %subs:unita (end)
+% sub:test (end)
 \end{document}
