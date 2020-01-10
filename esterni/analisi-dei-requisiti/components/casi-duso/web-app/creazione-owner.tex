@@ -12,26 +12,26 @@
 
   rectangle {
     together {
-      usecase (AUC4.1) as "AUC4.1\nRichiesta accettata"
-      usecase (AUC4.2) as "AUC4.2\nRichiesta rifiutata"
+      usecase (AUC6.1) as "AUC6.1\nRichiesta accettata"
+      usecase (AUC6.2) as "AUC6.2\nRichiesta rifiutata"
     }
-    usecase (AUC4.3) as "AUC4.3\nInvio risposta all'utente"
+    usecase (AUC6.3) as "AUC6.3\nInvio risposta all'utente"
   }
 
-  :A: -- AUC4.1
-  :A: -- AUC4.2
+  :A: -- AUC6.1
+  :A: -- AUC6.2
 
-  (AUC4.3) .left.|> (AUC4.1) : <<include>>
-  (AUC4.3) .up.|> (AUC4.2) : <<include>>
+  (AUC6.3) <.left. (AUC6.1) : <<include>>
+  (AUC6.3) <.up. (AUC6.2) : <<include>>
 
   @enduml
   \end{plantuml}
-  \caption{AUC4: Creazione owner}%
-  \label{fig:AUC4}
+  \caption{AUC6: Creazione owner}%
+  \label{fig:AUC6}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC4;
+  \item[Codice:] AUC6;
   \item[Titolo:] Creazione owner;
   \item[Attori primari:] amministratore;
   \item[Precondizione:] il sistema deve rendere disponibile la pagina di creazione owner, che deve contenere:
@@ -47,11 +47,11 @@
 \end{description}
 
 
-\subsubsection{AUC4.1: Richiesta accettata}%
-\label{subs:AUC4.1}
+\subsubsection{AUC6.1: Richiesta accettata}%
+\label{subs:AUC6.1}
 
 \begin{description}
-  \item[Codice:] AUC4.1;
+  \item[Codice:] AUC6.1;
   \item[Titolo:] Richiesta accettata;
   \item[Attori primari:] amministratore;
   \item[Precondizione:] l'amministratore verifica la richiesta;
@@ -62,15 +62,15 @@
   \end{enumerate}
   \item[Inclusioni:]
   \begin{enumerate}
-    \item l'accettazione della richiesta viene notificata all'utente \emph{[AUC4.3]}.
+    \item l'accettazione della richiesta viene notificata all'utente \emph{[AUC6.3]}.
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC4.2: Richiesta rifiutata}%
-\label{subs:AUC4.2}
+\subsubsection{AUC6.2: Richiesta rifiutata}%
+\label{subs:AUC6.2}
 
 \begin{description}
-  \item[Codice:] AUC4.2;
+  \item[Codice:] AUC6.2;
   \item[Titolo:] Richiesta rifiutata;
   \item[Attori primari:] amministratore;
   \item[Precondizione:] l'amministratore verifica la richiesta;
@@ -81,16 +81,16 @@
   \end{enumerate}
   \item[Inclusioni:]
   \begin{enumerate}
-    \item il rifiuto della richiesta viene notificata all'utente \emph{[AUC4.3]}.
+    \item il rifiuto della richiesta viene notificata all'utente \emph{[AUC6.3]}.
     \item
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC4.3: Invio risposta all'utente}%
-\label{subs:AUC4.3}
+\subsubsection{AUC6.3: Invio risposta all'utente}%
+\label{subs:AUC6.3}
 
 \begin{description}
-  \item[Codice:] AUC4.3;
+  \item[Codice:] AUC6.3;
   \item[Titolo:] Invio risposta all'utente;
   \item[Attori primari:] amministratore;
   \item[Precondizione:] l'amministratore ha accettato, oppure rifiutato, la richiesta di un utente per diventare owner;
@@ -102,11 +102,11 @@
 \end{description}
 
 
-\subsubsection{AUC4.4: Creazione istantanea owner}%
-\label{subs:AUC4.4}
+\subsubsection{AUC6.4: Creazione istantanea owner}%
+\label{subs:AUC6.4}
 
 \begin{description}
-  \item[Codice:] AUC4.4;
+  \item[Codice:] AUC6.4;
   \item[Titolo:] Creazione istantanea owner;
   \item[Attori primari:] amministratore;
   \item[Precondizione:] il sistema deve rendere disponibile il campo di creazione istantanea;

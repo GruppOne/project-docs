@@ -12,24 +12,24 @@
 
   rectangle {
     together {
-      usecase (AUC3.1) as "AUC3.1\nDisconnessione utente"
+      usecase (AUC2.1) as "AUC2.1\nDisconnessione utente"
     }
   }
 
-  :A: -- AUC3.1
+  :A: -- AUC2.1
 
   @enduml
   \end{plantuml}
-  \caption{AUC3: Disconnessione}%
-  \label{fig:auc3}
+  \caption{AUC2: Disconnessione}%
+  \label{fig:AUC2}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC3;
+  \item[Codice:] AUC2;
   \item[Titolo:] Disconnessione;
   \item[Attori primari:] utente autenticato;
   \item[Precondizione:] il sistema rende disponibile l'apposito campo per la disconnessione;
-  \item[Postcondizione:] l'utente non Ã¨ piÃ¹ autenticato;
+  \item[Postcondizione:] l'utente non è più autenticato;
   \item[Scenario principale:]
   \begin{enumerate}
     \item l'utente autenticato vuole effettuare la disconnessione dalla piattaforma.

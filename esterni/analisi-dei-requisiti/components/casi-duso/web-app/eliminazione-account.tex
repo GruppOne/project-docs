@@ -12,38 +12,38 @@
 
   rectangle {
     together {
-      usecase (AUC6.1) as "AUC6.1\nSeleziona account"
+      usecase (AUC12.1) as "AUC12.1\nSeleziona account"
     }
   }
 
-  :A: -- AUC6.1
+  :A: -- AUC12.1
 
   @enduml
   \end{plantuml}
-  \caption{AUC6: Eliminazione account}%
-  \label{fig:auc6}
+  \caption{AUC12: Eliminazione account}%
+  \label{fig:auc12}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC6;
+  \item[Codice:] AUC12;
   \item[Titolo:] Eliminazione account;
   \item[Attori primari:] amministratore;
   \item[Precondizione:] deve essere stato selezionato l'\glossario{account} da eliminare, che deve esistere in \emph{Stalker};
-  \item[Postcondizione:] l'account selezionato Ã¨ stato eliminato;
+  \item[Postcondizione:] l'account selezionato è stato eliminato;
   \item[Scenario principale:]
   \begin{enumerate}
-    \item sorge la necessitÃ  di eliminare un account.
+    \item sorge la necessità di eliminare un account.
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC6.1: Seleziona account}%
-\label{subs:AUC6.1}
+\subsubsection{AUC12.1: Seleziona account}%
+\label{subs:AUC12.1}
 \begin{description}
-  \item[Codice:] AUC6.1;
+  \item[Codice:] AUC12.1;
   \item[Titolo:] Seleziona account;
   \item[Attori primari:] amministratore;
   \item[Precondizione:] il sistema deve rendere disponibile la lista degli account registrati a \emph{Stalker};
-  \item[Postcondizione:] l'account Ã¨ stato selezionato;
+  \item[Postcondizione:] l'account è stato selezionato;
   \item[Scenario principale:]
   \begin{enumerate}
     \item l'amministratore seleziona l'account da eliminare.

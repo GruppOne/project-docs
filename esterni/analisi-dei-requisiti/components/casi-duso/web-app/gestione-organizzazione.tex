@@ -12,32 +12,32 @@
 
     rectangle {
         together {
-            usecase (AUC5.5) as "AUC5.5\nInvio richiesta aggiornamento\nlista organizzazioni"
-            usecase (AUC5.4) as "AUC5.4\nSeleziona organizzazione"
-            usecase (AUC5.3) as "AUC5.3\nModifica organizzazione"
-            usecase (AUC5.2) as "AUC5.2\nEliminazione organizzazione"
-            usecase (AUC5.1) as "AUC5.1\nCreazione organizzazione"
+            usecase (AUC3.5) as "AUC3.5\nInvio richiesta aggiornamento\nlista organizzazioni"
+            usecase (AUC3.4) as "AUC3.4\nSeleziona organizzazione"
+            usecase (AUC3.3) as "AUC3.3\nModifica organizzazione"
+            usecase (AUC3.2) as "AUC3.2\nEliminazione organizzazione"
+            usecase (AUC3.1) as "AUC3.1\nCreazione organizzazione"
           }
       }
 
-    :A: -- AUC5.1
-    :A: -- AUC5.2
-    :A: -- AUC5.3
+    :A: -- AUC3.1
+    :A: -- AUC3.2
+    :A: -- AUC3.3
 
-    (AUC5.4) .up.|> (AUC5.2) : <<include>>
-    (AUC5.4) .up.|> (AUC5.3) : <<include>>
+    (AUC3.4) <.up. (AUC3.2) : <<include>>
+    (AUC3.4) <.up. (AUC3.3) : <<include>>
 
-    (AUC5.5) .up.|> (AUC5.1) : <<include>>
-    (AUC5.5) .up.|> (AUC5.2) : <<include>>
+    (AUC3.5) <.up. (AUC3.1) : <<include>>
+    (AUC3.5) <.up. (AUC3.2) : <<include>>
 
     @enduml
   \end{plantuml}
-  \caption{AUC5: Gestione organizzazione}%
-  \label{fig:AUC5}
+  \caption{AUC3: Gestione organizzazione}%
+  \label{fig:AUC3}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC5;
+  \item[Codice:] AUC3;
   \item[Titolo:] Gestione organizzazione;
   \item[Attori primari:] amministratore, gestore;
   \item[Precondizione:] il sistema deve rendere disponibile la pagina di gestione dell'organizzazione;
@@ -48,8 +48,8 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.1: Creazione organizzazione}%
-\label{subs:AUC5.1}
+\subsubsection{AUC3.1: Creazione organizzazione}%
+\label{subs:AUC3.1}
 
 \begin{figure}[H]
   \centering
@@ -61,23 +61,23 @@
 
     rectangle {
         together {
-            usecase (AUC5.1.1) as "AUC5.1.1\nInserisci nome organizzazione"
-            usecase (AUC5.1.2) as "AUC5.1.2\nInserisci descrizione organizzazione"
-            usecase (AUC5.1.3) as "AUC5.1.3\nConfigurazione dettagli server LDAP"
+            usecase (AUC3.1.1) as "AUC3.1.1\nInserisci nome organizzazione"
+            usecase (AUC3.1.2) as "AUC3.1.2\nInserisci descrizione organizzazione"
+            usecase (AUC3.1.3) as "AUC3.1.3\nConfigurazione dettagli server LDAP"
           }
       }
 
-    :A1: -- AUC5.1.1
-    :A1: -- AUC5.1.2
-    :A1: -- AUC5.1.3
+    :A1: -- AUC3.1.1
+    :A1: -- AUC3.1.2
+    :A1: -- AUC3.1.3
     @enduml
   \end{plantuml}
-  \caption{AUC5.1: Creazione organizzazione}%
-  \label{fig:AUC5_1}
+  \caption{AUC3.1: Creazione organizzazione}%
+  \label{fig:AUC3_1}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC5.1;
+  \item[Codice:] AUC3.1;
   \item[Titolo:] Creazione organizzazione;
   \item[Attori primari:] amministratore, owner;
   \item[Precondizione:] l'organizzazione non deve esistere nella lista di \emph{Stalker};
@@ -89,14 +89,14 @@
   \item[Inclusioni:]
         \begin{enumerate}
           \item alla fine della procedura di creazione dell'organizzazione, tutte le applicazioni mobile riceveranno una notifica di aggiornamento
-                della lista di organizzazioni \emph{[AUC5.5]};
+                della lista di organizzazioni \emph{[AUC3.5]};
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.1.1: Inserisci nome organizzazione}%
-\label{subs:AUC5.1.1}
+\subsubsection{AUC3.1.1: Inserisci nome organizzazione}%
+\label{subs:AUC3.1.1}
 \begin{description}
-  \item[Codice:] AUC5.1.1;
+  \item[Codice:] AUC3.1.1;
   \item[Titolo:] Inserisci nome organizzazione;
   \item[Attori primari:] amministratore, owner;
   \item[Precondizione:] il sistema fornisce il campo di inserimento del nome;
@@ -108,10 +108,10 @@
 
 \end{description}
 
-\subsubsection{AUC5.1.2: Inserisci descrizione organizzazione}%
-\label{subs:AUC5.1.2}
+\subsubsection{AUC3.1.2: Inserisci descrizione organizzazione}%
+\label{subs:AUC3.1.2}
 \begin{description}
-  \item[Codice:] AUC5.1.2;
+  \item[Codice:] AUC3.1.2;
   \item[Titolo:] Inserisci descrizione organizzazione;
   \item[Attori primari:] amministratore, owner;
   \item[Precondizione:] il sistema fornisce il campo di inserimento della descrizione dell'organizzazione;
@@ -122,10 +122,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.1.3: Configurazione dettagli server LDAP}%
-\label{subs:AUC5.1.3}
+\subsubsection{AUC3.1.3: Configurazione dettagli server LDAP}%
+\label{subs:AUC3.1.3}
 \begin{description}
-  \item[Codice:] AUC5.1.3;
+  \item[Codice:] AUC3.1.3;
   \item[Titolo:] Configurazione dettagli server LDAP;
   \item[Attori primari:] amministratore, owner;
   \item[Precondizione:] il sistema fornisce i campi per la configurazione del server LDAP;
@@ -137,10 +137,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.2: Eliminazione organizzazione}%
-\label{subs:AUC5.2}
+\subsubsection{AUC3.2: Eliminazione organizzazione}%
+\label{subs:AUC3.2}
 \begin{description}
-  \item[Codice:] AUC5.2;
+  \item[Codice:] AUC3.2;
   \item[Titolo:] Eliminazione organizzazione;
   \item[Attori primari:] amministratore, owner;
   \item[Precondizione:] deve essere stata selezionata l'organizzazione da eliminare, presente nella lista di \emph{Stalker};
@@ -151,13 +151,13 @@
         \end{enumerate}
   \item[Inclusioni:]
         \begin{enumerate}
-          \item viene selezionata un'organizzazione \emph{[AUC5.4]};
-          \item alla fine della procedura di eliminazione dell'organizzazione, tutte le applicazioni mobile riceveranno una notifica di aggiornamento della lista di organizzazioni \emph{[AUC5.5]};
+          \item viene selezionata un'organizzazione \emph{[AUC3.4]};
+          \item alla fine della procedura di eliminazione dell'organizzazione, tutte le applicazioni mobile riceveranno una notifica di aggiornamento della lista di organizzazioni \emph{[AUC3.5]};
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.3: Modifica organizzazione}%
-\label{subs:AUC5.3}
+\subsubsection{AUC3.3: Modifica organizzazione}%
+\label{subs:AUC3.3}
 
 \begin{figure}[H]
   \centering
@@ -169,26 +169,26 @@
 
     rectangle {
         together {
-            usecase (AUC5.3.1) as "AUC5.3.1\nModifica nome organizzazione"
-            usecase (AUC5.3.2) as "AUC5.3.2\nModifica descrizione organizzazione"
-            usecase (AUC5.3.3) as "AUC5.3.3\nGestione luoghi"
-            usecase (AUC5.3.4) as "AUC5.3.4\nModifica configurazione dettagli server LDAP"
+            usecase (AUC3.3.1) as "AUC3.3.1\nModifica nome organizzazione"
+            usecase (AUC3.3.2) as "AUC3.3.2\nModifica descrizione organizzazione"
+            usecase (AUC3.3.3) as "AUC3.3.3\nGestione luoghi"
+            usecase (AUC3.3.4) as "AUC3.3.4\nModifica configurazione dettagli server LDAP"
           }
       }
 
-    :A: -- AUC5.3.1
-    :A: -- AUC5.3.2
-    :A: -- AUC5.3.3
-    :A: -- AUC5.3.4
+    :A: -- AUC3.3.1
+    :A: -- AUC3.3.2
+    :A: -- AUC3.3.3
+    :A: -- AUC3.3.4
 
     @enduml
   \end{plantuml}
-  \caption{AUC5.3: Modifica organizzazione}%
-  \label{fig:AUC5_3}
+  \caption{AUC3.3: Modifica organizzazione}%
+  \label{fig:AUC3_3}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC5.3;
+  \item[Codice:] AUC3.3;
   \item[Titolo:] Modifica organizzazione;
   \item[Attori primari:] amministratore, gestore;
   \item[Precondizione:] l'amministratore seleziona l'organizzazione da modificare, presente nella lista di \emph{Stalker};
@@ -199,14 +199,14 @@
         \end{enumerate}
   \item[Inclusioni:]
         \begin{enumerate}
-          \item viene scelta un'organizzazione \emph{[AUC5.4]}.
+          \item viene scelta un'organizzazione \emph{[AUC3.4]}.
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.3.1: Modifica nome organizzazione}%
-\label{subs:AUC5.3.1}
+\subsubsection{AUC3.3.1: Modifica nome organizzazione}%
+\label{subs:AUC3.3.1}
 \begin{description}
-  \item[Codice:] AUC5.3.1;
+  \item[Codice:] AUC3.3.1;
   \item[Titolo:] Modifica nome organizzazione;
   \item[Attori primari:] amministratore, owner;
   \item[Precondizione:] il sistema fornisce il campo di modifica del nome;
@@ -217,10 +217,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.3.2: Modifica descrizione organizzazione}%
-\label{subs:AUC5.3.2}
+\subsubsection{AUC3.3.2: Modifica descrizione organizzazione}%
+\label{subs:AUC3.3.2}
 \begin{description}
-  \item[Codice:] AUC5.3.2;
+  \item[Codice:] AUC3.3.2;
   \item[Titolo:] Modifica descrizione organizzazione;
   \item[Attori primari:] amministratore, owner;
   \item[Precondizione:] il sistema fornisce il campo di modifica della descrizione dell'organizzazione;
@@ -233,8 +233,8 @@
 
 %gestione luoghi (start)
 
-\subsubsection{AUC5.3.3: Gestione luoghi}%
-\label{subs:AUC5.3.3}
+\subsubsection{AUC3.3.3: Gestione luoghi}%
+\label{subs:AUC3.3.3}
 
 \begin{figure}[H]
   \centering
@@ -246,28 +246,28 @@
 
   rectangle {
     together {
-      usecase (AUC5.3.3.1) as "AUC5.3.3.1\nAggiungi luogo"
-      usecase (AUC5.3.3.2) as "AUC5.3.3.2\nEliminazione luogo"
-      usecase (AUC5.3.3.3) as "AUC5.3.3.3\nModifica luogo"
+      usecase (AUC3.3.3.1) as "AUC3.3.3.1\nAggiungi luogo"
+      usecase (AUC3.3.3.2) as "AUC3.3.3.2\nEliminazione luogo"
+      usecase (AUC3.3.3.3) as "AUC3.3.3.3\nModifica luogo"
     }
-    usecase (AUC5.3.3.4) as "AUC5.3.3.4\nSeleziona luogo"
+    usecase (AUC3.3.3.4) as "AUC3.3.3.4\nSeleziona luogo"
   }
 
-  :A: -- AUC5.3.3.1
-  :A: -- AUC5.3.3.2
-  :A: -- AUC5.3.3.3
+  :A: -- AUC3.3.3.1
+  :A: -- AUC3.3.3.2
+  :A: -- AUC3.3.3.3
 
-  (AUC5.3.3.4) .up.|> (AUC5.3.3.2) : <<include>>
-  (AUC5.3.3.4) .up.|> (AUC5.3.3.3) : <<include>>
+  (AUC3.3.3.4) .up.|> (AUC3.3.3.2) : <<include>>
+  (AUC3.3.3.4) .up.|> (AUC3.3.3.3) : <<include>>
 
   @enduml
   \end{plantuml}
-  \caption{AUC5.3.3: Gestione luoghi}%
-  \label{fig:AUC5_3_3}
+  \caption{AUC3.3.3: Gestione luoghi}%
+  \label{fig:AUC3_3_3}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC5.3.3;
+  \item[Codice:] AUC3.3.3;
   \item[Titolo:] Gestione luoghi;
   \item[Attori primari:] amministratore, gestore;
   \item[Precondizione:] il sistema deve rendere disponibile la pagina di gestione dei luoghi di un'organizzazione;
@@ -278,8 +278,8 @@
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.3.3.1: Aggiungi luogo}%
-\label{subs:AUC5.3.3.1}
+\subsubsection{AUC3.3.3.1: Aggiungi luogo}%
+\label{subs:AUC3.3.3.1}
 
 \begin{figure}[H]
   \centering
@@ -291,22 +291,22 @@
 
   rectangle {
     together {
-      usecase (AUC5.3.3.1.1) as "AUC5.3.3.1.1\nInserisci coordinate geografiche"
-      usecase (AUC5.3.3.1.2) as "AUC5.3.3.1.2\nInserisci indirizzo luogo"
+      usecase (AUC3.3.3.1.1) as "AUC3.3.3.1.1\nInserisci coordinate geografiche"
+      usecase (AUC3.3.3.1.2) as "AUC3.3.3.1.2\nInserisci indirizzo luogo"
     }
   }
 
-  :A: -- AUC5.3.3.1.1
-  :A: -- AUC5.3.3.1.2
+  :A: -- AUC3.3.3.1.1
+  :A: -- AUC3.3.3.1.2
 
   @enduml
   \end{plantuml}
-  \caption{AUC5.3.3.1: Aggiungi luogo}%
-  \label{fig:AUC5_3_3_1}
+  \caption{AUC3.3.3.1: Aggiungi luogo}%
+  \label{fig:AUC3_3_3_1}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC5.3.3.1;
+  \item[Codice:] AUC3.3.3.1;
   \item[Titolo:] Aggiungi luogo;
   \item[Attori primari:] amministratore, gestore;
   \item[Precondizione:] il \glossario{luogo} da aggiungere nell'organizzazione non deve esistere;
@@ -317,10 +317,10 @@
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.3.3.1.1: Inserisci coordinate geografiche}%
-\label{subs:AUC5.3.3.1.1}
+\subsubsection{AUC3.3.3.1.1: Inserisci coordinate geografiche}%
+\label{subs:AUC3.3.3.1.1}
 \begin{description}
-  \item[Codice:] AUC5.3.3.1.1;
+  \item[Codice:] AUC3.3.3.1.1;
   \item[Titolo:] Inserisci coordinate geografiche;
   \item[Attori primari:] amministratore, gestore;
   \item[Precondizione:] il sistema deve fornire i campi relativi alle coordinate geografiche;
@@ -331,10 +331,10 @@
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.3.3.1.2: Inserisci indirizzo luogo}%
-\label{subs:AUC5.3.3.1.2}
+\subsubsection{AUC3.3.3.1.2: Inserisci indirizzo luogo}%
+\label{subs:AUC3.3.3.1.2}
 \begin{description}
-  \item[Codice:] AUC5.3.3.1.2;
+  \item[Codice:] AUC3.3.3.1.2;
   \item[Titolo:] Inserisci indirizzo luogo;
   \item[Attori primari:] amministratore, gestore;
   \item[Precondizione:] il sistema deve fornire il campo relativo all'indirizzo del luogo;
@@ -345,10 +345,10 @@
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.3.3.2: Eliminazione luogo}%
-\label{subs:AUC5.3.3.2}
+\subsubsection{AUC3.3.3.2: Eliminazione luogo}%
+\label{subs:AUC3.3.3.2}
 \begin{description}
-  \item[Codice:] AUC5.3.3.2;
+  \item[Codice:] AUC3.3.3.2;
   \item[Titolo:] Eliminazione luogo;
   \item[Attori primari:] amministratore, gestore;
   \item[Precondizione:] il luogo dell'organizzazione deve essere presente in \emph{Stalker};
@@ -359,12 +359,12 @@
   \end{enumerate}
   \item[Inclusioni:]
   \begin{enumerate}
-    \item Seleziona luogo\emph{[AUC5.3.3.4]};
+    \item Seleziona luogo\emph{[AUC3.3.3.4]};
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.3.3.3: Modifica luogo}%
-\label{subs:AUC5.3.3.3}
+\subsubsection{AUC3.3.3.3: Modifica luogo}%
+\label{subs:AUC3.3.3.3}
 
 \begin{figure}[H]
   \centering
@@ -376,22 +376,22 @@
 
   rectangle {
     together {
-      usecase (AUC5.3.3.3.1) as "AUC5.3.3.3.1\nModifica coordinate geografiche"
-      usecase (AUC5.3.3.3.2) as "AUC5.3.3.3.2\nModifica indirizzo luogo"
+      usecase (AUC3.3.3.3.1) as "AUC3.3.3.3.1\nModifica coordinate geografiche"
+      usecase (AUC3.3.3.3.2) as "AUC3.3.3.3.2\nModifica indirizzo luogo"
     }
   }
 
-  :A: -- AUC5.3.3.3.1
-  :A: -- AUC5.3.3.3.2
+  :A: -- AUC3.3.3.3.1
+  :A: -- AUC3.3.3.3.2
 
   @enduml
   \end{plantuml}
-  \caption{AUC5.3.3.3: Modifica luogo}%
-  \label{fig:AUC5_3_3_3}
+  \caption{AUC3.3.3.3: Modifica luogo}%
+  \label{fig:AUC3_3_3_3}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC5.3.3.3;
+  \item[Codice:] AUC3.3.3.3;
   \item[Titolo:] Modifica luogo;
   \item[Attori primari:] amministratore, gestore;
   \item[Precondizione:] il luogo dell'organizzazione deve essere presente in \emph{Stalker};
@@ -402,14 +402,14 @@
   \end{enumerate}
   \item[Inclusioni:]
   \begin{enumerate}
-    \item Seleziona luogo\emph{[AUC5.3.3.4]};
+    \item Seleziona luogo\emph{[AUC3.3.3.4]};
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.3.3.3.1: Modifica coordinate geografiche}%
-\label{subs:AUC5.3.3.3.1}
+\subsubsection{AUC3.3.3.3.1: Modifica coordinate geografiche}%
+\label{subs:AUC3.3.3.3.1}
 \begin{description}
-  \item[Codice:] AUC5.3.3.3.1;
+  \item[Codice:] AUC3.3.3.3.1;
   \item[Titolo:] Modifica coordinate geografiche;
   \item[Attori primari:] amministratore, gestore;
   \item[Precondizione:] il sistema deve fornire i campi relativi alle coordinate geografiche;
@@ -420,10 +420,10 @@
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.3.3.3.2: Modifica indirizzo luogo}%
-\label{subs:AUC5.3.3.3.2}
+\subsubsection{AUC3.3.3.3.2: Modifica indirizzo luogo}%
+\label{subs:AUC3.3.3.3.2}
 \begin{description}
-  \item[Codice:] AUC5.3.3.3.2;
+  \item[Codice:] AUC3.3.3.3.2;
   \item[Titolo:] Modifica indirizzo luogo;
   \item[Attori primari:] amministratore, gestore;
   \item[Precondizione:] il sistema deve fornire il campo relativo all'indirizzo del luogo;
@@ -434,10 +434,10 @@
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.3.3.4: Seleziona luogo}%
-\label{subs:AUC5.3.3.4}
+\subsubsection{AUC3.3.3.4: Seleziona luogo}%
+\label{subs:AUC3.3.3.4}
 \begin{description}
-  \item[Codice:] AUC5.3.3.4;
+  \item[Codice:] AUC3.3.3.4;
   \item[Titolo:] Seleziona luogo;
   \item[Attori primari:] amministratore, gestore;
   \item[Precondizione:] il sistema deve mostrare la lista dei luoghi all'interno di una organizzazione;
@@ -450,10 +450,10 @@
 
 %gestione luoghi (end)
 
-\subsubsection{AUC5.3.4: Modifica configurazione dettagli server LDAP}%
-\label{subs:AUC5.3.4}
+\subsubsection{AUC3.3.4: Modifica configurazione dettagli server LDAP}%
+\label{subs:AUC3.3.4}
 \begin{description}
-  \item[Codice:] AUC5.3.4;
+  \item[Codice:] AUC3.3.4;
   \item[Titolo:] Configurazione dettagli server LDAP;
   \item[Attori primari:] amministratore, gestore;
   \item[Precondizione:] il sistema fornisce i campi per la configurazione del server LDAP;
@@ -464,10 +464,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.4: Seleziona organizzazione}%
-\label{subs:AUC5.4}
+\subsubsection{AUC3.4: Seleziona organizzazione}%
+\label{subs:AUC3.4}
 \begin{description}
-  \item[Codice:] AUC5.4;
+  \item[Codice:] AUC3.4;
   \item[Titolo:] Seleziona organizzazione;
   \item[Attori primari:] amministratore, gestore;
   \item[Precondizione:] il sistema deve mostrare la lista di organizzazioni in \emph{Stalker};
@@ -478,10 +478,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC5.5: Invio richiesta aggiornamento lista organizzazioni}%
-\label{subs:AUC5.5}
+\subsubsection{AUC3.5: Invio richiesta aggiornamento lista organizzazioni}%
+\label{subs:AUC3.5}
 \begin{description}
-  \item[Codice:] AUC5.5;
+  \item[Codice:] AUC3.5;
   \item[Titolo:] Invio richiesta aggiornamento lista organizzazioni;
   \item[Attori primari:] amministratore, gestore;
   \item[Precondizione:] il sistema mostra la pagina di creazione o eliminazione di un'organizzazione;
