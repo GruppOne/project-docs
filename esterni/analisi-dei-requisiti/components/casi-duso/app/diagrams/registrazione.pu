@@ -43,7 +43,7 @@ rectangle {
 @enduml
 
 @startuml visualizza-eula
-!include ../../commons/style/use-cases.pu
+!include ../../../../../../commons/style/use-cases.pu
 
 actor :utente non autenticato: as A
 
