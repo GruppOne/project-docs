@@ -1,0 +1,54 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :owner: as A
+
+  rectangle {
+    together {
+      usecase (AUC14.1) as "AUC14.1\nInserimento email gestore"
+    }
+  }
+
+  :A: -- AUC14.1
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC14: Aggiunta gestore}
+  \label{fig:auc14}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC14
+  \item[Titolo:] Aggiunta gestore
+  \item[Attori primari:] owner
+  \item[Precondizione:] il nuovo super utente non deve già esistere come gestore.
+  \item[Postcondizione:] viene aggiunto il gestore specificato dall'owner.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'owner vuole aggiungere un gestore alla sua organizzazione.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC14.1 - Inserimento email gestore}%
+\label{subsub:AUC14.1}
+\begin{description}
+  \item[Codice:] AUC14.1
+  \item[Titolo:] Inserimento email gestore
+  \item[Attori primari:] owner
+  \item[Precondizione:] il sistema deve rendere disponibile il campo per l'inserimento della mail del nuovo gestore.
+  \item[Postcondizione:] il campo relativo al gestore viene compilato.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'owner inserisce l'email del nuovo gestore;
+  \end{enumerate}
+\end{description}
+
+\end{document}

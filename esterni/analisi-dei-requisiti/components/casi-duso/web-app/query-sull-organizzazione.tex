@@ -1,0 +1,41 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :visualizzatore: as A
+
+  rectangle {
+    together {
+      usecase (AUC7) as "AUC7\nQuery sull'organizzazione"
+    }
+  }
+
+  :A: -- AUC7
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC7: Query sull'organizzazione}
+  \label{fig:AUC7}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC7
+  \item[Titolo:] Query sull'organizzazione
+  \item[Attori primari:] visualizzatore
+  \item[Precondizione:] il sistema risponde correttamente alle interrogazioni;
+  \item[Postcondizione:] il visualizzatore ottiene le informazioni di cui ha bisogno.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item il visualizzatore vuole ottenere delle informazioni riguardo l'organizzazione sulla quale opera;
+  \end{enumerate}
+\end{description}
+% subsub:AUC7 (end)
+
+\end{document}

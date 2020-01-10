@@ -1,0 +1,129 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :utente autenticato: as A3
+  actor :utente collegato: as A3.1
+  :A3.1: -up-|> :A3:
+
+  rectangle {
+    together {
+      usecase (UUC9.1) as "UUC9.1\nScelta noto o incognito\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
+      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+    }
+  }
+
+  :A3.1: -- (UUC9.1)
+
+  (UUC5) .up.|> (UUC9.1) : <<extends>>
+
+  @enduml
+  \end{plantuml}
+  \caption{UUC9: Passaggio noto/incognito}
+  \label{fig:uuc9}
+\end{figure}
+
+\begin{description}
+  \item[Caso d’uso:] UUC9
+  \item[Titolo:] Passaggio noto/incognito
+  \item[Attori primari:] utente autenticato, in particolare utente collegato
+  \item[Precondizione:] l'utente si trova sulla schermata specifica dell'utente collegato ad un'organizzazione.
+  \item[Postcondizione:] se l'utente era noto diventa incognito; vale anche il contrario.
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente ha la possibilità di cambiare il tipo di monitoraggio che l'organizzazione è tenuta a conoscere.
+        \end{enumerate}
+  \item[Estensioni:]
+        \begin{enumerate}
+          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore \emph{[UUC5]}.
+        \end{enumerate}
+\end{description}
+
+\subsubsection{UUC9.1 - Scelta noto o incognito}%
+\label{subsub:UUC9.1utente}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :utente collegato: as A3
+
+  actor :utente noto: as A3.1
+  actor :utente incognito: as A3.2
+
+  :A3.1: -up-|> :A3:
+  :A3.2: -up-|> :A3:
+
+  rectangle {
+    together {
+      usecase (UUC9.1.1) as "UUC9.1.1\nPassaggio a incognito"
+      usecase (UUC9.1.2) as "UUC9.1.2\nPassaggio a noto"
+    }
+  }
+
+  :A3.1: -- (UUC9.1.1)
+  :A3.2: -- (UUC9.1.2)
+
+  @enduml
+  \end{plantuml}
+  \caption{UUC9.1: Scelta noto o incognito}
+  \label{fig:uuc9_1}
+\end{figure}
+
+\begin{description}
+  \item[Caso d’uso:] UUC9.1
+  \item[Titolo:] Scelta noto o incognito
+  \item[Attori primari:] utente collegato, in particolare utente noto ed utente incognito
+  \item[Precondizione:] l'utente si trova sulla schermata specifica dell'utente collegato ad un'organizzazione.
+  \item[Postcondizione:] se l'utente era noto diventa incognito; vale anche il contrario.
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente è collegato ad un'organizzazione in cui la sua presenza è nota; l'utente ha la possibilità di passare in modalità incognito.
+          \item l'utente è collegato ad un'organizzazione in cui la sua presenza è incognita; l'utente ha la possibilità di passare in modalità nota.
+        \end{enumerate}
+  \item[Estensioni:]
+        \begin{enumerate}
+          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un'errore \emph{[UUC5]}.
+        \end{enumerate}
+\end{description}
+
+\subsubsection{UUC9.1.1 - Passaggio a incognito}%
+\label{subsub:UUC9.1.1utente}
+\begin{description}
+  \item[Caso d’uso:] UUC9.1.1
+  \item[Titolo:] Passaggio a incognito
+  \item[Attori primari:] utente collegato, in particolare utente noto
+  \item[Precondizione:] l'utente deve essere collegato e noto.
+  \item[Postcondizione:] l'utente è collegato ed incognito.
+  \item[Scenario Principale:]
+        \begin{enumerate}
+          \item l'utente è noto in un'organizzazione e vuole diventare incognito: in questo modo la sua presenza è nota, ma non lo è la sua identità.
+        \end{enumerate}
+\end{description}
+
+\subsubsection{UUC9.1.2 - Passaggio a noto}%
+\label{subsub:UUC9.1.2utente}
+\begin{description}
+  \item[Caso d’uso:] UUC9.1.2
+  \item[Titolo:] Passaggio a noto
+  \item[Attori primari:] utente collegato, in particolare utente incognito
+  \item[Precondizione:] l'utente deve essere collegato ed incognito.
+  \item[Postcondizione:] l'utente è collegato e noto.
+  \item[Scenario Principale:]
+        \begin{enumerate}
+          \item l'utente è incognito in un'organizzazione e vuole diventare noto: in questo modo, sia la sua presenza che la sua identità sono note.
+        \end{enumerate}
+\end{description}
+
+
+\end{document}

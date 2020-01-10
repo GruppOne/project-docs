@@ -1,0 +1,57 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :owner: as A
+
+  rectangle {
+    together {
+      usecase (AUC12.1) as "AUC12.1\nInserimento email nuovo owner"
+    }
+  }
+
+  :A: -- AUC12.1
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC12: Richiesta cessione proprietà organizzazione}
+  \label{fig:auc12}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC12
+  \item[Titolo:] Richiesta cessione proprietà organizzazione
+  \item[Attori primari:] owner
+  \item[Precondizione:] il futuro owner deve esistere.
+  \item[Postcondizione:] la richiesta di cedere l'organizzazione è stata posta.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'owner vuole cedere l'organizzazione ad un'altro owner;
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC12.1 - Inserimento email nuovo owner}%
+\label{subsub:AUC12.1}
+\begin{description}
+  \item[Codice:] AUC12.1
+  \item[Titolo:] Inserimento email nuovo owner
+  \item[Attori primari:] owner
+  \item[Precondizione:] il sistema deve rendere disponibile il campo per l'inserimento della email del nuovo owner.
+  \item[Postcondizione:] il campo relativo alla mail del nuovo owner è compilato.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'owner inserisce l'email del nuovo owner;
+  \end{enumerate}
+\end{description}
+
+
+
+\end{document}

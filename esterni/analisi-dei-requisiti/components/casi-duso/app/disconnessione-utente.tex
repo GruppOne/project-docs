@@ -1,0 +1,48 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :utente autenticato: as A3
+
+  rectangle {
+    together {
+      usecase (UUC12) as "UUC12\nDisconnessione utente\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
+      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+    }
+  }
+
+  :A3: -- (UUC12)
+
+  (UUC5) .up.|> (UUC12) : <<extends>>
+
+  @enduml
+  \end{plantuml}
+  \caption{UUC12: Disconnessione}
+  \label{fig:uuc12}
+\end{figure}
+
+  \begin{description}
+  \item[Caso d’uso:] UUC12
+  \item[Titolo:] Disconnessione
+  \item[Attori primari:] utente autenticato
+  \item[Precondizione:] l'utente deve poter accedere al pulsante di disconnessione.
+  \item[Postcondizione:] l'utente non è più autenticato.
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente esegue la disconnessione dal servizio.
+        \end{enumerate}
+  \item[Estensioni:]
+        \begin{enumerate}
+          \item se l'utente cerca di disconnettersi in assenza di rete, si visualizzerà un errore \emph{[UUC5]}.
+        \end{enumerate}
+\end{description}
+
+
+\end{document}

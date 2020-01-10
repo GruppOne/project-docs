@@ -1,0 +1,243 @@
+\documentclass[components/casi-duso-app]{subfiles}
+
+\begin{document}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :utente non autenticato: as A
+
+  rectangle {
+    together {
+      usecase (UUC1.1) as "UUC1.1\nVisualizzazione EULA"
+      usecase (UUC1.2) as "UUC1.2\nInserimento dati registrazione"
+      usecase (UUC1.1.1) as "UUC1.1.1\nConferma EULA"
+    }
+  }
+
+  :A: -- (UUC1.1)
+  :A: -- (UUC1.2)
+
+  (UUC1.1.1) .up.|> (UUC1.1) : <<include>>
+
+  @enduml
+  \end{plantuml}
+  \caption{UUC1: Registrazione}
+  \label{fig:uuc1}
+\end{figure}
+
+\begin{description}
+  \item[Caso d’uso:] UUC1
+  \item[Titolo:] Registrazione
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente non è registrato al servizio.
+  \item[Postcondizione:] la registrazione va a buon fine e l'utente è registrato.
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item prima di procedere con la registrazione, l'utente visualizza l'\glossario{EULA} e per continuare deve accettare i vincoli stabiliti da essa;
+          \item una volta accettata l'EULA, l'utente provvede all'inserimento dei dati personali per la registrazione.
+        \end{enumerate}
+  \item[Inclusioni:]
+        \begin{enumerate}
+          \item EULA deve essere confermata, altrimenti la registrazione non può continuare \emph{[UUC1.1.1]}.
+        \end{enumerate}
+\end{description}
+% subsub:UUC1utente (end)
+
+
+\subsubsection{UUC1.1 - Visualizzazione EULA}%
+\label{subsub:UUC1.1utente}
+\begin{description}
+  \item[Caso d’uso:] UUC1.1
+  \item[Titolo:] Visualizzazione EULA
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente è all'interno della schermata di registrazione
+  \item[Postcondizione:] l'utente visualizza l'EULA
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente visualizza una schermata con tutti i vincoli da accettare presenti nell'EULA.
+        \end{enumerate}
+  \item[Inclusioni:]
+        \begin{enumerate}
+          \item l'utente deve confermare l'EULA per continuare la registrazione \emph{[UUC1.1.1]}.
+        \end{enumerate}
+\end{description}
+% subsub:UUC1.1utente (end)
+
+%UUC1.1.1 (start)
+\subsubsection{UUC1.1.1 - Conferma EULA}%
+\label{subsub:UUC1.1.1utente}
+\begin{description}
+  \item[Caso d’uso:] UUC1.1.1
+  \item[Titolo:] Conferma EULA
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente visualizza l'EULA.
+  \item[Postcondizione:] l'utente continua la registrazione in quanto ha accettato l'EULA.
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item E' presente un'opzione per accettare l'EULA: in caso affermativo, la registrazione può andare avanti.
+        \end{enumerate}
+\end{description}
+% subsub:UUC1.1.1utente (end)
+
+%UUC1.2 (start)
+\subsubsection{UUC1.2 - Inserimento dati registrazione}%
+\label{subsub:UUC1.2utente}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :utente non autenticato: as A
+
+  rectangle {
+    together {
+      usecase (UUC1.2.1) as "UUC1.2.1\nRegistrazione email\n--\nExtension points:\nVisualizzazione errore se la mail\nnon è scritta in modo corretto"
+      usecase (UUC1.2.2) as "UUC1.2.2\nRegistrazione password\n--\nExtension points:\nVisualizzazione errore se la\npassword non rispetta i criteri"
+      usecase (UUC1.2.3) as "UUC1.2.3\nConferma password\n--\nExtension points:\nVisualizzazione errore se le\ndue password non coincidono"
+      usecase (UUC1.2.4) as "UUC1.2.4\nInserimento dati anagrafici\n--\nExtension points:\nVisualizzazione errore\ndati mancanti"
+      usecase (UUC1.2.5) as "UUC1.2.5\nInformazioni registrazione non valide"
+    }
+  }
+
+  :A: -- (UUC1.2.1)
+  :A: -- (UUC1.2.2)
+  :A: -- (UUC1.2.3)
+  :A: -- (UUC1.2.4)
+
+  (UUC1.2.5) .up.|> (UUC1.2.4) : <<extends>>
+  (UUC1.2.5) .up.|> (UUC1.2.3) : <<extends>>
+  (UUC1.2.5) .up.|> (UUC1.2.2) : <<extends>>
+  (UUC1.2.5) .up.|> (UUC1.2.1) : <<extends>>
+
+  @enduml
+  \end{plantuml}
+  \caption{UUC1.2: Inserimento dati registrazione}
+  \label{fig:uuc1_2}
+\end{figure}
+
+\begin{description}
+  \item[Caso d’uso:] UUC1.2
+  \item[Titolo:] Inserimento dati registrazione
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente ha accettato l'EULA.
+  \item[Postcondizione:] l'utente ha inserito correttamente tutti i dati necessari alla registrazione e diventa un utente registrato.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente visualizza una serie di campi da compilare.
+  \end{enumerate}
+  \item[Estensioni:]
+  \begin{enumerate}
+    \item se i dati inseriti non sono validi, l'utente visualizzerà un errore \emph{[UUC1.2.5]}.
+  \end{enumerate}
+\end{description}
+% subsub:UUC1.2utente (end)
+
+%UUC1.2.1 (start)
+\subsubsection{UUC1.2.1 - Registrazione email}%
+\label{subsub:UUC1.2.1utente}
+\begin{description}
+  \item[Caso d’uso:] UUC1.2.1
+  \item[Titolo:] Registrazione email
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente si trova nella schermata di registrazione nel campo dell'email.
+  \item[Postcondizione:] l'utente ha inserito la email in modo corretto.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente seleziona il campo della email e la inserisce.
+  \end{enumerate}
+  \item[Estensioni:]
+  \begin{enumerate}
+    \item se la mail è scritta in una forma non corretta, verrà visualizzato un'errore di email non valida \emph{[UUC1.2.5]}.
+  \end{enumerate}
+\end{description}
+% subsub:UUC1.2.1utente (end)
+
+%UUC1.2.2 (start)
+\subsubsection{UUC1.2.2 - Registrazione password}%
+\label{subsub:UUC1.2.2utente}
+\begin{description}
+  \item[Caso d’uso:] UUC1.2.2
+  \item[Titolo:] Registrazione password
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente si trova nella schermata di registrazione nel campo della password.
+  \item[Postcondizione:] l'utente ha inserito la password in modo corretto.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente seleziona il campo della password e la crea.
+  \end{enumerate}
+  \item[Estensioni:]
+  \begin{enumerate}
+    \item se la password non rispetta determinati vincoli, verrà visualizzato un'errore di password non valida \emph{[UUC1.2.5]}.
+  \end{enumerate}
+\end{description}
+% subsub:UUC1.2.2utente (end)
+
+%UUC1.2.3 (start)
+\subsubsection{UUC1.2.3 - Conferma password}%
+\label{subsub:UUC1.2.3utente}
+\begin{description}
+  \item[Caso d’uso:] UUC1.2.3
+  \item[Titolo:] Conferma password
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente si trova nella schermata di registrazione nel campo della conferma della password,
+        e la password inserita in precedenza dall'utente rispetta tutti i vincoli.
+  \item[Postcondizione:] l'utente ha inserito la conferma della password in modo corretto.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente seleziona il campo della conferma della password e la inserisce.
+  \end{enumerate}
+  \item[Estensioni:]
+  \begin{enumerate}
+    \item se la password inserita non è uguale a quella precedente, verrà visualizzato un'errore di conferma password non valida \emph{[UUC1.2.5]}.
+  \end{enumerate}
+\end{description}
+% subsub:UUC1.2.3utente (end)
+
+%UUC1.2.4 (start)
+\subsubsection{UUC1.2.4 - Inserimento dati anagrafici}%
+\label{subsub:UUC1.2.4utente}
+\begin{description}
+  \item[Caso d’uso:] UUC1.2.4
+  \item[Titolo:] Inserimento dati anagrafici
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente si trova nella schermata di registrazione nei campi dei dati anagrafici.
+  \item[Postcondizione:] l'utente ha inserito i dati anagrafici in modo corretto.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente seleziona i vari campi inerenti ai dati anagrafici e gli inserisce.
+  \end{enumerate}
+  \item[Estensioni:]
+  \begin{enumerate}
+    \item se uno o più dati anagrafici inseriti non rispettano determinati vincoli, verrà visualizzato un'errore sui campi in cui è segnalato l'errore \emph{[UUC1.2.5]}.
+  \end{enumerate}
+\end{description}
+% subsub:UUC1.2.4utente (end)
+
+%UUC1.2.5 (start)
+\subsubsection{UUC1.2.5 - Informazioni registrazione non valide}%
+\label{subsub:UUC1.2.5utente}
+\begin{description}
+  \item[Caso d’uso:] UUC1.2.5
+  \item[Titolo:] informazioni registrazione non valide
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente si trova nella schermata di registrazione e non rispetta i vincoli imposti sui campi presenti.
+  \item[Postcondizione:] l'applicazione mobile comunica all'utente l'errore.
+  \item[Scenario Principale:]
+        \begin{enumerate}
+          \item l'utente visualizza il messaggio d'errore, in quanto le informazioni inserite non sono valide.
+        \end{enumerate}
+\end{description}
+% subsub:UUC1.2.5utente (end)
+
+%UUC2 (start)
+
+
+\end{document}

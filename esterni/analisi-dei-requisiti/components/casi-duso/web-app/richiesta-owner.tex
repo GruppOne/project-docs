@@ -1,0 +1,106 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :utente autenticato: as A
+
+  rectangle {
+    together {
+      usecase (AUC2.1) as "AUC2.1\nInvio richiesta owner\n--\nExtension points:\nVisualizzazione errore nel\ncaso in cui la richiesta venga\nrifiutata dall'amministratore"
+      usecase (AUC2.2) as "AUC2.2\nVerifica tipologia utente\n--\nExtension points:\nVisualizzazione errore nel\ncaso in cui l'utente\nautenticato sia già owner"
+    }
+      usecase (AUC2.3) as "AUC2.3\nRichiesta rifiutata"
+    }
+
+  :A: -- AUC2.1
+
+  (AUC2.2) .right.|> (AUC2.1) : <<include>>
+
+  (AUC2.3) .up.|> (AUC2.1) : <<extends>>
+  (AUC2.3) .up.|> (AUC2.2) : <<extends>>
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC2: Richiesta owner}
+  \label{fig:auc2}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC2
+  \item[Titolo:] Richiesta owner
+  \item[Attori primari:] utente autenticato
+  \item[Precondizione:] l'utente autenticato non deve essere un \glossario{owner}.
+  \item[Postcondizione:] la richiesta viene accettata e l'utente autenticato diventa un owner.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente autenticato vuole iniziare ad utilizzare \emph{Stalker} creando una sua organizzazione.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC2.1 - Invio richiesta owner}%
+\label{subsub:AUC2.1}
+\begin{description}
+  \item[Codice:] AUC2.1
+  \item[Titolo:] Invio richiesta owner
+  \item[Attori primari:] utente autenticato
+  \item[Precondizione:] l'utente autenticato utilizza l'apposito form per inviare la richiesta di diventare owner.
+  \item[Postcondizione:] viene inviata la richiesta, in attesa di essere approvata da un amministratore.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente autenticato invia la richiesta per diventare owner.
+  \end{enumerate}
+  \item[Inclusioni:]
+  \begin{enumerate}
+    \item viene effettuato un controllo sulla tipologia di utente che vuole effettuare la richiesta \emph{[AUC2.2]};
+  \end{enumerate}
+  \item[Estensioni:]
+  \begin{enumerate}
+    \item la richiesta di diventare owner può essere rifiutata \emph{[AUC2.3]}.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC2.2 - Verifica tipologia utente}%
+\label{subsub:AUC2.2}
+\begin{description}
+  \item[Codice:] AUC2.2
+  \item[Titolo:] Verifica tipologia utente
+  \item[Attori primari:] utente autenticato
+  \item[Precondizione:] l'utente autenticato visualizza l'apposito form per inviare la richiesta di diventare owner.
+  \item[Postcondizione:] il form relativo alla richiesta di owner viene abilitato o disabilitato di conseguenza.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente autenticato può richiedere di diventare un owner, nel caso in cui sia:
+    \begin{description}
+      \item un \glossario{amministratore},
+      \item un \glossario{visualizzatore},
+      \item un \glossario{gestore},
+      \item oppure un utente senza alcun privilegio;
+    \end{description}
+    \item ogni tentativo di richiesta da parte di un utente che è già owner viene rifiutato;
+    \item \glossario{root} è già un owner;
+    \item l'amministratore può accettare la propria richiesta inviata.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC2.3 - Richiesta rifiutata}%
+\label{subsub:AUC2.3}
+\begin{description}
+  \item[Codice:] AUC2.3
+  \item[Titolo:] Richiesta rifiutata
+  \item[Attori primari:] utente autenticato
+  \item[Precondizione:] l'utente ha inviato la propria richiesta per diventare owner.
+  \item[Postcondizione:] l'utente autenticato non ha ottenuto l'abilitazione a diventare un owner e visualizza un messaggio d'errore.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore non ha accettato la richiesta effettuata dall'utente autenticato.
+  \end{enumerate}
+\end{description}
+
+\end{document}

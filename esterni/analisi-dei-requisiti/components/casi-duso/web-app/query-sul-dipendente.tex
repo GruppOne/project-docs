@@ -1,0 +1,41 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :visualizzatore: as A
+
+  rectangle {
+    together {
+      usecase (AUC8) as "AUC8\nQuery sul dipendente"
+    }
+  }
+
+  :A: -- AUC8
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC8: Query sul dipendente}
+  \label{fig:AUC8}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC8
+  \item[Titolo:] Query sul dipendente
+  \item[Attori primari:] visualizzatore
+  \item[Precondizione:] il sistema risponde correttamente alle interrogazioni;
+  \item[Postcondizione:] il visualizzatore ottiene le informazioni di cui ha bisogno.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item il visualizzatore vuole ottenere delle informazioni riguardo l'organizzazione sulla quale opera, in particolare riguardo gli accessi di uno specifico dipendente;
+  \end{enumerate}
+\end{description}
+
+
+\end{document}

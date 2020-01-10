@@ -1,0 +1,60 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../../../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :owner: as A
+
+  rectangle {
+    together {
+      usecase (AUC11) as "AUC11\nRichiesta creazione organizzazione"
+    }
+    together {
+      usecase (AUC5.1.3) as "AUC5.1.3\nConfigurazione dettagli server LDAP"
+      usecase (AUC5.1.2) as "AUC5.1.2\nInserisci descrizione organizzazione"
+      usecase (AUC5.1.1) as "AUC5.1.1\nInserisci nome organizzazione"
+    }
+  }
+
+  :A: -- AUC11
+
+  (AUC5.1.1) .up.|> (AUC11) : <<include>>
+  (AUC5.1.2) .up.|> (AUC11) : <<include>>
+  (AUC5.1.3) .up.|> (AUC11) : <<include>>
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC11: Richiesta creazione organizzazione}
+  \label{fig:auc11}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC11
+  \item[Titolo:] Richiesta creazione organizzazione
+  \item[Attori primari:] owner
+  \item[Precondizione:] l'organizzazione non deve già esistere.
+  \item[Postcondizione:] la richiesta di creare una nuova organizzazione è stata posta.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'owner vuole creare una nuova organizzazione.
+  \end{enumerate}
+  \item[Inclusioni:]
+  \begin{itemize}
+    \item In caso di richiesta accettata, sono permesse tutte le operazioni di modifica:
+    \begin{enumerate}
+      \item Inserimento nome organizzazione \emph{[AUC5.1.1]}.
+      \item Inserimento descrizione organizzazione \emph{[AUC5.1.2]}.
+      \item Configurazione dettagli server LDAP \emph{[AUC5.1.3]}
+    \end{enumerate}
+  \end{itemize}
+\end{description}
+
+
+\end{document}

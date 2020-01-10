@@ -1,0 +1,101 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :amministratore: as A
+
+  rectangle {
+    together {
+      usecase (AUC4.1) as "AUC4.1\nRichiesta accettata"
+      usecase (AUC4.2) as "AUC4.2\nRichiesta rifiutata"
+    }
+    usecase (AUC4.3) as "AUC4.3\nInvio risposta all'utente"
+  }
+
+  :A: -- AUC4.1
+  :A: -- AUC4.2
+
+  (AUC4.3) .left.|> (AUC4.1) : <<include>>
+  (AUC4.3) .up.|> (AUC4.2) : <<include>>
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC4: Creazione owner}
+  \label{fig:AUC4}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC4
+  \item[Titolo:] Creazione owner
+  \item[Attori primari:] amministratore
+  \item[Precondizione:] un utente ha inviato una richiesta per diventare owner.
+  \item[Postcondizione:] l'owner viene creato.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore gestisce una richiesta ricevuta da un utente che vuole diventare owner.
+  \end{enumerate}
+\end{description}
+
+
+\subsubsection{AUC4.1 - Richiesta accettata}%
+\label{subsub:AUC4.1}
+
+\begin{description}
+  \item[Codice:] AUC4.1
+  \item[Titolo:] Richiesta accettata
+  \item[Attori primari:] amministratore
+  \item[Precondizione:] l'amministratore verifica la richiesta.
+  \item[Postcondizione:] l'amministratore accetta la richiesta.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item L'amministratore esamina la richiesta ricevuta e la accetta. L'utente che ha fatto richiesta diventa owner.
+  \end{enumerate}
+  \item[Inclusioni:]
+  \begin{enumerate}
+    \item l'accettazione della richiesta viene notificata all'utente \emph{[AUC4.3]}.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC4.2 - Richiesta rifiutata}%
+\label{subsub:AUC4.2}
+
+\begin{description}
+  \item[Codice:] AUC4.2
+  \item[Titolo:] Richiesta rifiutata
+  \item[Attori primari:] amministratore
+  \item[Precondizione:] l'amministratore verifica la richiesta.
+  \item[Postcondizione:] l'amministratore rifiuta la richiesta.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item L'amministratore esamina la richiesta ricevuta e la rifiuta. L'utente che ha fatto richiesta non può diventare owner.
+  \end{enumerate}
+  \item[Inclusioni:]
+  \begin{enumerate}
+    \item il rifiuto della richiesta viene notificata all'utente \emph{[AUC4.3]}.
+    \item
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC4.3 - Invio risposta all'utente}%
+\label{subsub:AUC4.3}
+
+\begin{description}
+  \item[Codice:] AUC4.3
+  \item[Titolo:] Invio risposta all'utente
+  \item[Attori primari:] amministratore
+  \item[Precondizione:] l'amministratore ha accettato, oppure rifiutato, la richiesta di un utente per diventare owner.
+  \item[Postcondizione:] l'utente che ha fatto la richiesta riceve l'esito tramite un messaggio di risposta.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item una volta esaminata la richiesta, la risposta dell'amministratore verrà notificata all'utente.
+  \end{enumerate}
+\end{description}
+
+\end{document}

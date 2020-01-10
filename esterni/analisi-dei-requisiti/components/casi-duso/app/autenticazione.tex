@@ -1,0 +1,110 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :utente non autenticato: as A
+
+  rectangle {
+    together {
+      usecase (UUC2.1) as "UUC2.1\nInserimento email\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
+      usecase (UUC2.2) as "UUC2.2\nInserimento password\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
+      usecase (UUC2.3) as "UUC2.3\nInformazioni autenticazione non valide"
+    }
+  }
+
+  :A: -- (UUC2.1)
+  :A: -- (UUC2.2)
+
+  (UUC2.3) .up.|> (UUC2.2) : <<extends>>
+  (UUC2.3) .up.|> (UUC2.1) : <<extends>>
+
+  @enduml
+  \end{plantuml}
+  \caption{UUC2: Autenticazione}
+  \label{fig:uuc2}
+\end{figure}
+
+\begin{description}
+  \item[Caso d’uso:] UUC2
+  \item[Titolo:] Autenticazione
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente è registrato al servizio.
+  \item[Postcondizione:] l'utente è autenticato al servizio.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente visualizza la schermata per l'autenticazione e inserisce email e password sugli appositi campi.
+  \end{enumerate}
+  \item[Estensioni:]
+  \begin{enumerate}
+    \item se la coppia email-password inserite non sono presenti all'interno del database di Stalker, allora verrà visualizzato un'errore \emph{[UUC2.3]}.
+  \end{enumerate}
+\end{description}
+% subsub:UUC3utente (end)
+
+%UUC2.1 (start)
+\subsubsection{UUC2.1 - Inserimento email}%
+\label{subsub:UUC2.1utente}
+\begin{description}
+  \item[Caso d’uso:] UUC2.1
+  \item[Titolo:] Inserimento email
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente si posiziona sul campo dell'email.
+  \item[Postcondizione:] la email inserita è corretta.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente seleziona il campo dell'email e la inserisce.
+  \end{enumerate}
+  \item[Estensioni:]
+  \begin{enumerate}
+    \item se la email inserita non è presente nel database, si visualizzerà un errore di credenziali errate (per motivi di sicurezza non si indica qual è il campo errato) \emph{[UUC2.3]}.
+  \end{enumerate}
+\end{description}
+% subsub:UUC2.1utente (end)
+
+%UUC2.2 (start)
+\subsubsection{UUC2.2 - Inserimento password}%
+\label{subsub:UUC2.2utente}
+\begin{description}
+  \item[Caso d’uso:] UUC2.2
+  \item[Titolo:] Inserimento password
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente si posiziona sul campo della password.
+  \item[Postcondizione:] la password inserita è corretta.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente seleziona il campo della password e la inserisce.
+  \end{enumerate}
+  \item[Estensioni:]
+  \begin{enumerate}
+    \item se la password inserita non è presente nel database, si visualizzerà un errore di credenziali errate (per motivi di sicurezza non si indica qual è il campo errato) \emph{[UUC2.3]}.
+  \end{enumerate}
+\end{description}
+% subsub:UUC2.2utente (end)
+
+%UUC3.3 (start)
+\subsubsection{UUC2.3 - Informazioni autenticazione non valide}%
+\label{subsub:UUC2.3utente}
+\begin{description}
+  \item[Caso d’uso:] UUC2.3
+  \item[Titolo:] Informazioni autenticazione non valide
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente si trova nella schermata di autenticazione e non rispetta i vincoli imposti sui campi presenti.
+  \item[Postcondizione:] l'applicazione mobile comunica all'utente l'errore.
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente cerca di effettuare l'autenticazione con credenziali errate.
+        \end{enumerate}
+\end{description}
+% subsub:UUC2.3utente (end)
+
+%UUC3 (start)
+
+
+\end{document}

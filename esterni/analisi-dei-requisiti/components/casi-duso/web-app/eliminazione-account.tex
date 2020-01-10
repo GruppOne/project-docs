@@ -1,0 +1,55 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :amministratore: as A
+
+  rectangle {
+    together {
+      usecase (AUC6.1) as "AUC6.1\nSeleziona account"
+    }
+  }
+
+  :A: -- AUC6.1
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC6: Eliminazione account}
+  \label{fig:auc6}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC6
+  \item[Titolo:] Eliminazione account
+  \item[Attori primari:] amministratore
+  \item[Precondizione:] deve essere stato selezionato l'\glossario{account} da eliminare, che deve esistere in \emph{Stalker};
+  \item[Postcondizione:] l'account selezionato è stato eliminato.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item sorge la necessità di eliminare un account;
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC6.1 - Seleziona account}%
+\label{subsub:AUC6.1}
+\begin{description}
+  \item[Codice:] AUC6.1
+  \item[Titolo:] Seleziona account
+  \item[Attori primari:] amministratore
+  \item[Precondizione:] il sistema deve rendere disponibile la lista degli account registrati a \emph{Stalker}.
+  \item[Postcondizione:] l'account è stato selezionato.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore seleziona l'account da eliminare;
+  \end{enumerate}
+\end{description}
+
+
+\end{document}

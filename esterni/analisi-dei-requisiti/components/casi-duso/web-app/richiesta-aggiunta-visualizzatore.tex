@@ -1,0 +1,54 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :owner: as A
+
+  rectangle {
+    together {
+      usecase (AUC13.1) as "AUC13.1\nInserimento email visualizzatore"
+    }
+  }
+
+  :A: -- AUC13.1
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC13: Aggiunta visualizzatore}
+  \label{fig:auc13}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC13
+  \item[Titolo:] Aggiunta visualizzatore
+  \item[Attori primari:] owner
+  \item[Precondizione:] il nuovo super utente non deve già esistere come visualizzatore.
+  \item[Postcondizione:] viene aggiunto il visualizzatore specificato dall'owner.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'owner vuole aggiungere un visualizzatore alla sua organizzazione.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC13.1 - Inserimento email visualizzatore}%
+\label{subsub:AUC13.1}
+\begin{description}
+  \item[Codice:] AUC13.1
+  \item[Titolo:] Inserimento email visualizzatore
+  \item[Attori primari:] owner
+  \item[Precondizione:] il sistema deve rendere disponibile il campo per l'inserimento della mail del nuovo visualizzatore.
+  \item[Postcondizione:] il campo relativo al visualizzatore viene compilato.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'owner inserisce l'email del nuovo visualizzatore;
+  \end{enumerate}
+\end{description}
+
+\end{document}

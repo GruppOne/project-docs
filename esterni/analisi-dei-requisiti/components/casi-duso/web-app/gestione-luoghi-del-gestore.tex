@@ -1,0 +1,110 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :gestore: as A
+
+  rectangle {
+    together {
+      usecase (AUC9.1) as "AUC10.1\nAggiunta luogo"
+      usecase (AUC9.2) as "AUC10.2\nRimozione luogo"
+      usecase (AUC9.3) as "AUC10.3\nModifica luogo"
+    }
+    together {
+      usecase (AUC5.3.3.3.1) as "AUC5.3.3.3.1\nModifica coordinate geografiche"
+      usecase (AUC5.3.3.3.2) as "AUC5.3.3.3.2\nModifica indirizzo luogo"
+      usecase (AUC5.3.3.1.1) as "AUC5.3.3.1.1\nInserisci coordinate geografiche"
+      usecase (AUC5.3.3.1.2) as "AUC5.3.3.1.2\nInserisci indirizzo luogo"
+    }
+  }
+
+  :A: -- AUC9.1
+  :A: -- AUC9.2
+  :A: -- AUC9.3
+
+  (AUC5.3.3.3.1) .up.|> (AUC9.3) : <<include>>
+  (AUC5.3.3.3.2) .up.|> (AUC9.3) : <<include>>
+  (AUC5.3.3.1.1) .up.|> (AUC9.1) : <<include>>
+  (AUC5.3.3.1.2) .up.|> (AUC9.1) : <<include>>
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC9: Gestione luoghi del gestore}
+  \label{fig:AUC9}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC9
+  \item[Titolo:] Gestione luoghi del gestore
+  \item[Attori primari:] gestore
+  \item[Precondizione:] il sistema deve rendere disponibile la pagina della gestione dei luoghi.
+  \item[Postcondizione:] il gestore è all'interno della pagina di gestione.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item il gestore vuole gestire i luoghi dell'organizzazione su cui opera;
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC9.1 - Aggiunta luogo}%
+\label{subsub:AUC9.1}
+\begin{description}
+  \item[Codice:] AUC9.1
+  \item[Titolo:] Aggiunta luogo
+  \item[Attori primari:] gestore
+  \item[Precondizione:] il luogo da aggiungere non deve già esistere;
+  \item[Postcondizione:] viene aggiunto un nuovo luogo all'organizzazione corrente.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item il gestore vuole aggiungere un nuovo luogo all'organizzazione su cui opera;
+  \end{enumerate}
+  \item[Inclusioni:]
+  \begin{enumerate}
+    \item il gestore inserisce le coordinate geografiche da aggiungere \emph{[AUC5.3.3.1.1]};
+    \item il gestore inseriscce l'indirizzo del luogo da aggiungere \emph{[AUC5.3.3.1.2]};
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC9.2 - Rimozione luogo}%
+\label{subsub:AUC9.2}
+\begin{description}
+  \item[Codice:] AUC9.2
+  \item[Titolo:] Rimozione luogo
+  \item[Attori primari:] gestore
+  \item[Precondizione:] il luogo da eliminare deve esistere.
+  \item[Postcondizione:] il luogo selezionato è eliminato.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item il gestore vuole eliminare un luogo all'organizzazione su cui opera;
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC9.3 - Modifica luogo}%
+\label{subsub:AUC9.3}
+\begin{description}
+  \item[Codice:] AUC9.3
+  \item[Titolo:] Modifica luogo
+  \item[Attori primari:] gestore
+  \item[Precondizione:] il luogo da modificare deve esistere.
+  \item[Postcondizione:] il luogo selezionato è modificato.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item il gestore vuole modificare un luogo dell'organizzazione su cui opera;
+  \end{enumerate}
+  \item[Inclusioni:]
+  \begin{enumerate}
+    \item il gestore modifica le coordinate geografiche del luogo selezionato \emph{[AUC5.3.3.3.1]};
+    \item il gestore modifica l'indirizzo del luogo selezionato \emph{[AUC5.3.3.3.2]};
+  \end{enumerate}
+\end{description}
+
+
+
+\end{document}

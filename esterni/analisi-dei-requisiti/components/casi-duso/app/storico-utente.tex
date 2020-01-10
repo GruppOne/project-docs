@@ -1,0 +1,50 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :utente autenticato: as A
+
+  rectangle {
+    together {
+      usecase (UUC10) as "UUC10\nVisualizzazione storico accessi\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta storico\nin mancanza di rete"
+      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+      note right of (UUC10): implementazione opzionale
+    }
+  }
+
+  :A: -- (UUC10)
+
+  (UUC5) .up.|> (UUC10) : <<extends>>
+
+  @enduml
+  \end{plantuml}
+  \caption{UUC10: Storico utente}
+  \label{fig:uuc10}
+\end{figure}
+
+\begin{description}
+  \item[Caso d’uso:] UUC10
+  \item[Titolo:] Storico utente
+  \item[Attori primari:] utente autenticato
+  \plchold{chiedere a tullio la precondizione}
+  \item[Precondizione:]  l'utente deve poter accedere al pulsante dello storico.
+  \item[Postcondizione:] l'utente visualizza lo storico degli accessi.
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente accede ad una schermata per la visualizzazione dello storico personale degli accessi.
+        \end{enumerate}
+  \item[Estensioni:]
+        \begin{enumerate}
+          \item se l'utente cerca di visualizzare lo storico degli accessi in assenza di rete, si visualizzerà un errore \emph{[UUC5]}.
+        \end{enumerate}
+\end{description}
+
+
+\end{document}

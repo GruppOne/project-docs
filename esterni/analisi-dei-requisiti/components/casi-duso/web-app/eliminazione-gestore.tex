@@ -1,0 +1,58 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :amministratore: as A1
+  actor :owner: as A2
+
+
+  rectangle {
+    together {
+      usecase (AUC16.1) as "AUC16.1\nInserimento email gestore"
+    }
+  }
+
+  :A1: -- AUC16.1
+  :A2: -- AUC16.1
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC16: Eliminazione gestore}
+  \label{fig:auc16}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC16
+  \item[Titolo:] Eliminazione gestore
+  \item[Attori primari:] amministratore, owner
+  \item[Precondizione:] il gestore deve esistere.
+  \item[Postcondizione:] l'utente non è più gestore.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore, oppure l'owner, vuole eliminare i privilegi ad un'utente gestore. Le credenziali dell'utente rimangono.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC16.1 - Inserimento email gestore}%
+\label{subsub:AUC16.1}
+\begin{description}
+  \item[Codice:] AUC16.1
+  \item[Titolo:] Inserimento email gestore
+  \item[Attori primari:] amministratore, owner
+  \item[Precondizione:] il sistema deve rendere disponibile il campo per l'inserimento della mail del gestore da eliminare.
+  \item[Postcondizione:] il campo relativo al gestore viene compilato.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore, oppure l'owner, inserisce l'email del gestore da eliminare.
+  \end{enumerate}
+\end{description}
+
+\end{document}

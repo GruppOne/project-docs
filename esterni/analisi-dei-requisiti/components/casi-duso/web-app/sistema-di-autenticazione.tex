@@ -1,0 +1,134 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :utente non autenticato: as A
+
+  rectangle {
+    together {
+      usecase (AUC1.1) as "AUC1.1\nAutenticazione\n--\nExtension points:\nVisualizzazione errore se\nle credenziali inserite\n non sono corrette"
+      usecase (AUC1.2) as "AUC1.2\nVisualizzazione credenziali errate"
+    }
+  }
+
+  :A: -- AUC1.1
+
+  (AUC1.3) .up.|> (AUC1.1) : <<extends>>
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC1: Sistema di autenticazione}
+  \label{fig:auc1}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC1
+  \item[Titolo:] Sistema di autenticazione
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente non è autenticato alla piattaforma.
+  \item[Postcondizione:] l'\glossario{utente} ha effettuato correttamente l'autenticazione nel sistema.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente non è ancora autenticato e vuole eseguire l'autenticazione.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC1.1 - Autenticazione}%
+\label{subsub:AUC1.1}
+
+\begin{figure}[h!]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+  scale 3/4
+
+  actor :utente non autenticato: as A
+
+  rectangle {
+    together {
+    usecase (AUC1.1.1) as "AUC1.1.1\nInserimento email"
+    usecase (AUC1.1.2) as "AUC1.1.2\nInserimento password"
+    }
+  }
+
+  :A: -- AUC1.1.1
+  :A: -- AUC1.1.2
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC1.1: Autenticazione}
+  \label{fig:auc1_1}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC1.1
+  \item[Titolo:] Autenticazione
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] il sistema è raggiungibile e funzionante, l'utente non autenticato deve poter visualizzare la pagina di autenticazione.
+  \item[Postcondizione:] l'autenticazione è andata a buon fine e l'utente è autenticato.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item  l'utente non autenticato accede alla pagina di autenticazione, e visualizza tutti i campi che deve compilare:
+    \begin{enumerate}
+      \item inserisce l’email associata all’account \emph{[AUC1.1.1]};
+      \item inserisce la password associata all’account \emph{[AUC1.1.2]}.
+    \end{enumerate}
+    \item
+  \end{enumerate}
+  \item[Estensioni:]
+  \begin{enumerate}
+    \item se l'utente inserisce le credenziali in modo errato, verrà visualizzato un messaggio d'errore \emph{[AUC1.2]}.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC1.1.1 - Inserimento email}%
+\label{subsub:AUC1.1.1}
+\begin{description}
+  \item[Codice:] AUC1.1.1
+  \item[Titolo:] Inserimento email
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] il sistema ha reso disponibile il campo per l'inserimento della propria email.
+  \item[Postcondizione:] l'utente ha compilato il campo relativo alla propria email.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente compila il campo relativo alla propria mail di registrazione.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC1.1.2 - Inserimento password}%
+\label{subsub:AUC1.1.2}
+\begin{description}
+  \item[Codice:] AUC1.1.2
+  \item[Titolo:] Inserimento password
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] il sistema ha reso disponibile il campo per l'inserimento della password.
+  \item[Postcondizione:] l'utente ha compilato il campo relativo alla sua password.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente compila il campo relativo alla propria password di registrazione.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC1.2 - Visualizzazione credenziali errate}%
+\label{subsub:AUC1.2}
+\begin{description}
+  \item[Codice:] AUC1.2
+  \item[Titolo:] Visualizzazione credenziali errate
+  \item[Attori primari:] utente non autenticato
+  \item[Precondizione:] l'utente ha inviato al server le credenziali per effettuare l'autenticazione.
+  \item[Postcondizione:] l'utente non autenticato visualizza un messaggio di credenziali sbagliate.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'utente cerca di effettuare l'autenticazione con credenziali errate.
+  \end{enumerate}
+\end{description}
+
+\end{document}
