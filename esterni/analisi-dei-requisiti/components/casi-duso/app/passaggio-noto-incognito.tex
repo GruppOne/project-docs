@@ -8,35 +8,39 @@
   @startuml
   !include ../../commons/style/use-cases.pu
 
-  actor :utente autenticato: as A3
   actor :utente collegato: as A3.1
-  :A3.1: -up-|> :A3:
 
   rectangle {
     together {
-      usecase (UUC9.1) as "UUC9.1\nScelta noto o incognito\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
+      usecase (UUC4) as "UUC4\nRecupero lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
+      usecase (UUC6.1) as "UUC6.1\nFiltra organizzazioni \ncollegato"
+      usecase (UUC7.1) as "UUC7.1\nScelta noto o incognito"
       usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
     }
   }
 
-  :A3.1: -- (UUC9.1)
+  :A3.1: -- (UUC4)
 
-  (UUC5) .up.|> (UUC9.1) : <<extends>>
+  (UUC4) .up.> (UUC5) : <<extends>>
+  (UUC4) <.up. (UUC7.1) : <<include>>
+  (UUC4) <.up. (UUC6.1) : <<include>>
+
 
   @enduml
   \end{plantuml}
-  \caption{UUC9: Passaggio noto/incognito}%
-  \label{fig:uuc9}
+  \caption{UUC7: Passaggio noto/incognito}%
+  \label{fig:uuc7}
 \end{figure}
 
 \begin{description}
-  \item[Caso d’uso:] UUC9;
+  \item[Caso d’uso:] UUC7;
   \item[Titolo:] Passaggio noto/incognito;
-  \item[Attori primari:] utente autenticato, in particolare utente collegato;
-  \item[Precondizione:] l'utente si trova sulla schermata specifica dell'utente collegato ad un'organizzazione;
+  \item[Attori primari:] utente collegato;
+  \item[Precondizione:] il sistema rende disponibile la pagina di passaggio noto/incognito;
   \item[Postcondizione:] se l'utente era noto diventa incognito; vale anche il contrario;
   \item[Scenario principale:]
         \begin{enumerate}
+          \item l'utente deve selezionare la/le organizzazioni su cui è collegato;
           \item l'utente ha la possibilità di cambiare il tipo di monitoraggio che l'organizzazione è tenuta a conoscere.
         \end{enumerate}
   \item[Estensioni:]
@@ -45,8 +49,8 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC9.1: Scelta noto o incognito}%
-\label{subs:UUC9.1}
+\subsubsection{UUC7.1: Scelta noto o incognito}%
+\label{subs:UUC7.1}
 
 \begin{figure}[H]
   \centering
@@ -64,25 +68,25 @@
 
   rectangle {
     together {
-      usecase (UUC9.1.1) as "UUC9.1.1\nPassaggio a incognito"
-      usecase (UUC9.1.2) as "UUC9.1.2\nPassaggio a noto"
+      usecase (UUC7.1.1) as "UUC7.1.1\nPassaggio a incognito"
+      usecase (UUC7.1.2) as "UUC7.1.2\nPassaggio a noto"
     }
   }
 
-  :A3.1: -- (UUC9.1.1)
-  :A3.2: -- (UUC9.1.2)
+  :A3.1: -- (UUC7.1.1)
+  :A3.2: -- (UUC7.1.2)
 
   @enduml
   \end{plantuml}
-  \caption{UUC9.1: Scelta noto o incognito}%
-  \label{fig:uuc9_1}
+  \caption{UUC7.1: Scelta noto o incognito}%
+  \label{fig:uuc7_1}
 \end{figure}
 
 \begin{description}
-  \item[Caso d’uso:] UUC9.1;
+  \item[Caso d’uso:] UUC7.1;
   \item[Titolo:] Scelta noto o incognito;
   \item[Attori primari:] utente collegato, in particolare utente noto ed utente incognito;
-  \item[Precondizione:] l'utente si trova sulla schermata specifica dell'utente collegato ad un'organizzazione;
+  \item[Precondizione:] l'utente seleziona una o più organizzazioni da cui cambiare tipologia di presenza;
   \item[Postcondizione:] se l'utente era noto diventa incognito; vale anche il contrario;
   \item[Scenario principale:]
         \begin{enumerate}
@@ -95,10 +99,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC9.1.1: Passaggio a incognito}%
-\label{subs:UUC9.1.1}
+\subsubsection{UUC7.1.1: Passaggio a incognito}%
+\label{subs:UUC7.1.1}
 \begin{description}
-  \item[Caso d’uso:] UUC9.1.1;
+  \item[Caso d’uso:] UUC7.1.1;
   \item[Titolo:] Passaggio a incognito;
   \item[Attori primari:] utente collegato, in particolare utente noto;
   \item[Precondizione:] l'utente deve essere collegato e noto;
@@ -109,10 +113,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC9.1.2: Passaggio a noto}%
-\label{subs:UUC9.1.2}
+\subsubsection{UUC7.1.2: Passaggio a noto}%
+\label{subs:UUC7.1.2}
 \begin{description}
-  \item[Caso d’uso:] UUC9.1.2;
+  \item[Caso d’uso:] UUC7.1.2;
   \item[Titolo:] Passaggio a noto;
   \item[Attori primari:] utente collegato, in particolare utente incognito;
   \item[Precondizione:] l'utente deve essere collegato ed incognito;
