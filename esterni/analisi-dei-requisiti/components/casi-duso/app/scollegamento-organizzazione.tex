@@ -2,48 +2,62 @@
 
 \begin{document}
 
+
 \begin{figure}[H]
   \centering
   \begin{plantuml}
   @startuml
   !include ../../commons/style/use-cases.pu
 
-  actor :utente autenticato: as A3
-  actor :utente collegato: as A3.1
-  :A3.1: -up-|> :A3:
+  actor :utente collegato: as A3
 
   rectangle {
     together {
-      usecase (UUC7) as "UUC7\nScollegamento organizzazione\n--\nExtension points:\nVisualizzazione errore in caso di\nscollegamento dall'organizzazione\n con rete mancante"
-      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+      usecase (UUC4) as "UUC4\nRecupero lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\nselezionamento di un'organizzazione\n con rete mancante"
+      usecase (UUC6.1) as "UUC6.1\nFiltra organizzazioni \ncollegato"
+      usecase (UUC5) as "UUC.nd\nVisualizzazione errore\nrete mancante"
     }
   }
 
-  :A3.1: -- (UUC7)
+  :A3: -- (UUC4)
 
-  (UUC5) .up.|> (UUC7) : <<extends>>
+  (UUC6.1) <.up. (UUC4) : <<include>>
+  (UUC5) .up.> (UUC4) : <<extends>>
 
   @enduml
-    \end{plantuml}
-  \caption{UUC7: Scollegamento organizzazione}%
-  \label{fig:uuc7}
+  \end{plantuml}
+  \caption{UUC6: Scollegamento organizzazione}%
+  \label{fig:uuc5}
 \end{figure}
 
 \begin{description}
-  \item[Caso d’uso:] UUC7;
+  \item[Caso d’uso:] UUC6;
   \item[Titolo:] Scollegamento organizzazione;
-  \item[Attori primari:] utente autenticato, in particolare utente collegato;
-  \item[Precondizione:] l'utente si trova sulla schermata specifica dell'organizzazione a cui è collegato;
-  \item[Postcondizione:] l'utente non è più collegato all'organizzazione;
+  \item[Attori primari:] utente collegato;
+  \item[Precondizione:] l'utente si trova sulla lista delle organizzazioni;
+  \item[Postcondizione:] l'utente si scollega da una o più organizzazioni;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'utente vuole scollegarsi da una organizzazione a cui è collegato, e lo fa dalla schermata dell'organizzazione.
+          \item l'utente sceglie una o più organizzazioni dalle quali scollegarsi.
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se l'utente cerca di scollegarsi da un'organizzazione in caso di rete mancante, si visualizzerà un errore \emph{[UUC5]}.
+          \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione \emph{[UUC5]}.
         \end{enumerate}
 \end{description}
 
+
+\subsubsection{UUC6.1: Filtra organizzazioni collegato}%
+\begin{description}
+  \item[Caso d’uso:] UUC6.1;
+  \item[Titolo:] Filtra organizzazioni collegato;
+  \item[Attori primari:] utente non collegato;
+  \item[Precondizione:] l'utente si trova sulla lista delle organizzazioni;
+  \item[Postcondizione:] l'utente visualizza solo le organizzazioni su cui è collegato;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente visualizza la lista delle organizzazioni su cui è collegato.
+        \end{enumerate}
+\end{description}
 
 \end{document}

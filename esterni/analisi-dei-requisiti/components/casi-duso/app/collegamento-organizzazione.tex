@@ -9,37 +9,36 @@
   @startuml
   !include ../../commons/style/use-cases.pu
 
-  actor :utente autenticato: as A3
-  actor :utente non collegato: as A3.1
-
-  :A3.1: -up-|> :A3:
+  actor :utente non collegato: as A3
 
   rectangle {
     together {
-      usecase (UUC6.1) as "UUC6.1\nSelezionamento di un'organizzazione\n--\nExtension points:\nVisualizzazione errore in caso di\nselezionamento di un'organizzazione\n con rete mancante"
-      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
+      usecase (UUC4) as "UUC4\nRecupero lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\nselezionamento di un'organizzazione\n con rete mancante"
+      usecase (UUC5.1) as "UUC5.1\nFiltra organizzazioni \nnon collegato"
+      usecase (UUC5) as "UUC.nd\nVisualizzazione errore\nrete mancante"
     }
   }
 
-  :A3.1: -- (UUC6.1)
+  :A3: -- (UUC4)
 
-  (UUC5) .up.|> (UUC6.1) : <<extends>>
+  (UUC5.1) <.up. (UUC4) : <<include>>
+  (UUC5) .up.> (UUC4) : <<extends>>
 
   @enduml
   \end{plantuml}
-  \caption{UUC6: Collegamento organizzazione}%
-  \label{fig:uuc6}
+  \caption{UUC5: Collegamento organizzazione}%
+  \label{fig:uuc5}
 \end{figure}
 
 \begin{description}
-  \item[Caso d’uso:] UUC6;
+  \item[Caso d’uso:] UUC5;
   \item[Titolo:] Collegamento organizzazione;
-  \item[Attori primari:] utente autenticato, in particolare utente non collegato;
+  \item[Attori primari:] utente non collegato;
   \item[Precondizione:] l'utente si trova sulla lista delle organizzazioni;
-  \item[Postcondizione:] l'utente ha selezionato un'organizzazione ed è collegato ad essa;
+  \item[Postcondizione:] l'utente si collega a una o più organizzazioni;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'utente sceglie un'organizzazione alla quale collegarsi.
+          \item l'utente sceglie una o più organizzazioni alla quale collegarsi.
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
@@ -47,23 +46,18 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC6.1: Selezione di un'organizzazione}%
-\label{subs:UUC6.1}
+
+\subsubsection{UUC5.1: Filtra organizzazioni non collegato}%
 \begin{description}
-  \item[Caso d’uso:] UUC6.1;
-  \item[Titolo:] Selezione di un'organizzazione;
-  \item[Attori primari:] utente autenticato, in particolare utente non collegato;
-  \item[Precondizione:] l'utente visualizza la lista delle organizzazioni;
-  \item[Postcondizione:] l'utente è collegato ad un'organizzazione;
+  \item[Caso d’uso:] UUC5.1;
+  \item[Titolo:] Filtra organizzazioni non collegato;
+  \item[Attori primari:] utente non collegato;
+  \item[Precondizione:] l'utente si trova sulla lista delle organizzazioni;
+  \item[Postcondizione:] l'utente visualizza solo le organizzazioni su cui non è collegato;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'utente seleziona un'organizzazione dalla lista.
-        \end{enumerate}
-  \item[Estensioni:]
-        \begin{enumerate}
-          \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione \emph{[UUC5]}.
+          \item l'utente visualizza la lista delle organizzazioni su cui non è collegato.
         \end{enumerate}
 \end{description}
-
 
 \end{document}
