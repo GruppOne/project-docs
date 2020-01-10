@@ -14,14 +14,11 @@
     together {
       usecase (UUC1.1) as "UUC1.1\nVisualizzazione EULA"
       usecase (UUC1.2) as "UUC1.2\nInserimento dati registrazione"
-      usecase (UUC1.1.1) as "UUC1.1.1\nConferma EULA"
     }
   }
 
   :A: -- (UUC1.1)
   :A: -- (UUC1.2)
-
-  (UUC1.1.1) .up.|> (UUC1.1) : <<include>>
 
   @enduml
   \end{plantuml}
@@ -40,12 +37,7 @@
           \item prima di procedere con la registrazione, l'utente visualizza l'\glossario{EULA} e per continuare deve accettare i vincoli stabiliti da essa;
           \item una volta accettata l'EULA, l'utente provvede all'inserimento dei dati personali per la registrazione.
         \end{enumerate}
-  \item[Inclusioni:]
-        \begin{enumerate}
-          \item EULA deve essere confermata, altrimenti la registrazione non può continuare \emph{[UUC1.1.1]}.
-        \end{enumerate}
 \end{description}
-
 
 
 \subsubsection{UUC1.1: Visualizzazione EULA}%
@@ -60,16 +52,36 @@
         \begin{enumerate}
           \item l'utente visualizza una schermata con tutti i vincoli da accettare presenti nell'EULA.
         \end{enumerate}
-  \item[Inclusioni:]
-        \begin{enumerate}
-          \item l'utente deve confermare l'EULA per continuare la registrazione \emph{[UUC1.1.1]}.
-        \end{enumerate}
 \end{description}
 
 
 
 \subsubsection{UUC1.1.1: Conferma EULA}%
 \label{subs:UUC1.1.1}
+
+\begin{figure}[H]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+
+  actor :utente non autenticato: as A
+
+  rectangle {
+    together {
+      usecase (UUC1.1.1) as "UUC1.1.1\nConferma EULA"
+    }
+  }
+
+  :A: -- (UUC1.1.1)
+
+  @enduml
+  \end{plantuml}
+  \caption{UUC1.1: Visualizza EULA}%
+  \label{fig:uuc1.1}
+\end{figure}
+
+
 \begin{description}
   \item[Caso d’uso:] UUC1.1.1;
   \item[Titolo:] Conferma EULA;
@@ -233,9 +245,5 @@
           \item l'utente visualizza il messaggio d'errore, in quanto le informazioni inserite non sono valide.
         \end{enumerate}
 \end{description}
-
-
-
-
 
 \end{document}
