@@ -8,31 +8,29 @@
   @startuml
   !include ../../commons/style/use-cases.pu
 
-  actor :utente autenticato: as A3
-  actor :utente collegato: as A3.1
+  actor :utente collegato: as A3
 
-  :A3.1: -up-|> :A3:
 
   rectangle {
     together {
-      usecase (UUC11) as "UUC11\nVisualizzazione tempo \nnell'organizzazione corrente\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta tempo trascorso\nin mancanza di rete"
-      usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
-      note right of (UUC11): implementazione opzionale
+      usecase (UUC9) as "UUC9\nVisualizzazione tempo \nnell'organizzazione corrente\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta tempo trascorso\nin mancanza di rete"
+      usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
+      note right of (UUC9): implementazione opzionale
     }
   }
 
-  :A3.1: -- (UUC11)
+  :A3: -- (UU9)
 
-  (UUC5) .up.|> (UUC11) : <<extends>>
+  (UUC12) .up.|> (UUC9) : <<extends>>
 
   @enduml
   \end{plantuml}
-  \caption{UUC11: Visualizzazione tempo trascorso nell'organizzazione corrente}%
-  \label{fig:uuc11}
+  \caption{UUC9: Visualizzazione tempo trascorso nell'organizzazione corrente}%
+  \label{fig:UUC9}
 \end{figure}
 
 \begin{description}
-  \item[Caso d’uso:] UUC11;
+  \item[Caso d’uso:] UUC9;
   \item[Titolo:] Visualizzazione tempo trascorso nell'organizzazione corrente;
   \item[Attori primari:] utente autenticato, in particolare utente collegato;
   \item[Precondizione:] l'utente deve poter accedere al pulsante del tempo;
@@ -43,7 +41,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se l'utente accede ad una schermata per la visualizzazione del tempo trascorso nell'organizzazione in assenza di rete, si visualizzerà un errore \emph{[UUC5]}.
+          \item se l'utente accede ad una schermata per la visualizzazione del tempo trascorso nell'organizzazione in assenza di rete, si visualizzerà un errore \emph{[UUC12]}.
         \end{enumerate}
 \end{description}
 
