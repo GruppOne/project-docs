@@ -10,6 +10,6 @@ skinparam {
   noteFontName Arial
 }
 
-scale max 600 width
+scale max 1024 width
 
 @enduml
