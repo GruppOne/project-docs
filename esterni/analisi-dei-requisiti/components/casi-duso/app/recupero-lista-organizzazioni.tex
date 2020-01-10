@@ -13,16 +13,17 @@
 
   rectangle {
     together {
-      usecase (UUC4.1) as "UUC4.1\nVisualizzazione\nlista organizzazioni\n--\nExtension points:\nVisualizzazione errore causa\n-richiesta di visualizzazione della lista con rete mancante\n-aggiornamento della lista con rete mancante"
-      usecase (UUC4.1.1) as "UUC4.1.1\nAggiornamento\nlista organizzazioni"
+      usecase (UUC4.1) as "UUC4.1\nAggiornamento\nlista organizzazioni"
+      usecase (UUC4.2) as "UUC4.2\nSeleziona organizzazioni"
       usecase (UUC5) as "UUC5\nVisualizzazione errore\nrete mancante"
     }
   }
 
   :A: -- (UUC4.1)
+  :A: -- (UUC4.2)
 
-  (UUC4.1.1) .up.|> (UUC4.1) : <<include>>
-  (UUC5) .up.|> (UUC4.1) : <<extends>>
+  (UUC5) .up.> (UUC4.1) : <<extends>>
+  (UUC5) .up.> (UUC4.2) : <<extends>>
 
   @enduml
   \end{plantuml}
@@ -40,43 +41,17 @@
         \begin{enumerate}
           \item l'utente ha la possibilità di recuperare una lista di organizzazioni alla quale si può collegare.
         \end{enumerate}
-  \item[Inclusioni:]
-        \begin{enumerate}
-          \item la lista delle organizzazioni si può aggiornare \emph{[UUC4.1.1]}.
-        \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
           \item in caso di rete mancante, non possono essere eseguite queste operazioni e quindi verrà notificato un errore \emph{[UUC5]}.
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC4.1: Visualizzazione lista organizzazioni}%
+
+\subsubsection{UUC4.1: Aggiornamento lista organizzazioni}%
 \label{subs:UUC4.1}
 \begin{description}
   \item[Caso d’uso:] UUC4.1;
-  \item[Titolo:] Visualizzazione lista organizzazioni;
-  \item[Attori primari:] utente autenticato;
-  \item[Precondizione:] l'utente si trova nella schermata post-autenticazione;
-  \item[Postcondizione:] l'utente visualizza la lista di tutte le organizzazioni;
-  \item[Scenario principale:]
-        \begin{enumerate}
-          \item l'utente visualizza, tramite un'apposita operazione, la lista di tutte le organizzazioni autorizzate a monitorare l'utente autenticato.
-        \end{enumerate}
-  \item[Inclusioni:]
-        \begin{enumerate}
-          \item la lista delle organizzazioni può essere aggiornata \emph{[UUC4.1]}.
-        \end{enumerate}
-  \item[Estensioni:]
-        \begin{enumerate}
-          \item in caso di rete mancante, si visualizzerà un errore in caso di richiesta di visualizzazione della lista delle organizzazioni
-                oppure di aggiornamento della lista delle organizzazioni \emph{[UUC5]}.
-        \end{enumerate}
-\end{description}
-
-\subsubsection{UUC4.1.1: Aggiornamento lista organizzazioni}%
-\label{subs:UUC4.1.1}
-\begin{description}
-  \item[Caso d’uso:] UUC4.1.1;
   \item[Titolo:] Aggiornamento lista organizzazioni;
   \item[Attori primari:] utente autenticato;
   \item[Precondizione:] l'utente visualizza la lista delle organizzazioni;
@@ -87,5 +62,20 @@
         \end{enumerate}
 \end{description}
 
+
+
+\subsubsection{UUC4.2: Seleziona organizzazioni}%
+\label{subs:UUC4.1}
+\begin{description}
+  \item[Caso d’uso:] UUC4.2;
+  \item[Titolo:] Seleziona organizzazioni;
+  \item[Attori primari:] utente autenticato;
+  \item[Precondizione:] l'utente visualizza la lista delle organizzazioni;
+  \item[Postcondizione:] l'utente ha selezionato una o più organizzazioni;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente ha la possibilità di selezionare una o più organizzazioni.
+        \end{enumerate}
+\end{description}
 
 \end{document}
