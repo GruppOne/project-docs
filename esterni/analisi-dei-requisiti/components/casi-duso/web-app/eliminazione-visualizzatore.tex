@@ -6,51 +6,51 @@
 \begin{figure}[H]
   \centering
   \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
+    @startuml
+    !include ../../commons/style/use-cases.pu
 
-  actor :amministratore: as A1
-  actor :owner: as A2
+    actor :amministratore: as A1
+    actor :owner: as A2
 
-  rectangle {
-    together {
-      usecase (AUC17.1) as "AUC17.1\nInserimento email visualizzatore"
-    }
-  }
+    rectangle {
+        together {
+            usecase (AUC17.1) as "AUC17.1\nInserimento email visualizzatore"
+          }
+      }
 
-  :A1: -- AUC17.1
-  :A2: -- AUC17.1
+    :A1: -- AUC17.1
+    :A2: -- AUC17.1
 
-  @enduml
+    @enduml
   \end{plantuml}
   \caption{AUC17: Eliminazione visualizzatore}%
   \label{fig:auc17}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC17
-  \item[Titolo:] Eliminazione visualizzatore
-  \item[Attori primari:] amministratore, owner
-  \item[Precondizione:] il visualizzatore deve esistere.
-  \item[Postcondizione:] l'utente non è più visualizzatore.
+  \item[Codice:] AUC17;
+  \item[Titolo:] Eliminazione visualizzatore;
+  \item[Attori primari:] amministratore, owner;
+  \item[Precondizione:] il sistema deve rendere disponibile la pagina di eliminazione visualizzatore;
+  \item[Postcondizione:] l'utente non è più visualizzatore;
   \item[Scenario principale:]
-  \begin{enumerate}
-    \item l'amministratore, oppure l'owner, vuole eliminare i privilegi ad un'utente visualizzatore. Le credenziali dell'utente rimangono.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'amministratore, oppure l'owner, vuole eliminare i privilegi ad un'utente visualizzatore.
+        \end{enumerate}
 \end{description}
 
 \subsubsection{AUC17.1: Inserimento email visualizzatore}%
 \label{subs:AUC17.1}
 \begin{description}
-  \item[Codice:] AUC17.1
-  \item[Titolo:] Inserimento email visualizzatore
-  \item[Attori primari:] amministratore, owner
-  \item[Precondizione:] il sistema deve rendere disponibile il campo per l'inserimento della mail del visualizzatore da eliminare.
-  \item[Postcondizione:] il campo relativo al visualizzatore viene compilato.
+  \item[Codice:] AUC17.1;
+  \item[Titolo:] Inserimento email visualizzatore;
+  \item[Attori primari:] amministratore, owner;
+  \item[Precondizione:] il sistema deve rendere disponibile il campo per l'inserimento della mail del visualizzatore da eliminare;
+  \item[Postcondizione:] il campo relativo al visualizzatore viene compilato;
   \item[Scenario principale:]
-  \begin{enumerate}
-    \item l'amministratore, oppure l'owner, inserisce l'email del visualizzatore da eliminare.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'amministratore, oppure l'owner, inserisce l'email del visualizzatore da eliminare.
+        \end{enumerate}
 \end{description}
 
 \end{document}

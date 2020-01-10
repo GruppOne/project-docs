@@ -1,0 +1,215 @@
+
+\subsubsection{AUC5.3.3: Gestione luoghi}%
+\label{subs:AUC5.3.3}
+
+\begin{figure}[H]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+
+  actor :amministratore: as A
+
+  rectangle {
+    together {
+      usecase (AUC5.3.3.1) as "AUC5.3.3.1\nAggiungi luogo"
+      usecase (AUC5.3.3.2) as "AUC5.3.3.2\nEliminazione luogo"
+      usecase (AUC5.3.3.3) as "AUC5.3.3.3\nModifica luogo"
+    }
+    usecase (AUC5.3.3.4) as "AUC5.3.3.4\nSeleziona luogo"
+  }
+
+  :A: -- AUC5.3.3.1
+  :A: -- AUC5.3.3.2
+  :A: -- AUC5.3.3.3
+
+  (AUC5.3.3.4) .up.|> (AUC5.3.3.2) : <<include>>
+  (AUC5.3.3.4) .up.|> (AUC5.3.3.3) : <<include>>
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC5.3.3: Gestione luoghi}%
+  \label{fig:AUC5_3_3}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC5.3.3;
+  \item[Titolo:] Gestione luoghi;
+  \item[Attori primari:] amministratore, gestore;
+  \item[Precondizione:] il sistema deve rendere disponibile la pagina di gestione dei luoghi di un'organizzazione;
+  \item[Postcondizione:] vengono gestiti i luoghi di un'organizzazione;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item sorge la necessità di effettuare operazioni sul luogo di un'organizzazione, e viene offerta la possibilità di selezionarlo.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC5.3.3.1: Aggiungi luogo}%
+\label{subs:AUC5.3.3.1}
+
+\begin{figure}[H]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+
+  actor :amministratore: as A
+
+  rectangle {
+    together {
+      usecase (AUC5.3.3.1.1) as "AUC5.3.3.1.1\nInserisci coordinate geografiche"
+      usecase (AUC5.3.3.1.2) as "AUC5.3.3.1.2\nInserisci indirizzo luogo"
+    }
+  }
+
+  :A: -- AUC5.3.3.1.1
+  :A: -- AUC5.3.3.1.2
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC5.3.3.1: Aggiungi luogo}%
+  \label{fig:AUC5_3_3_1}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC5.3.3.1;
+  \item[Titolo:] Aggiungi luogo;
+  \item[Attori primari:] amministratore, gestore;
+  \item[Precondizione:] il \glossario{luogo} da aggiungere nell'organizzazione non deve esistere;
+  \item[Postcondizione:] il nuovo luogo viene aggiunto nell'organizzazione;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item sorge la necessità di aggiungere un luogo ad un'organizzazione.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC5.3.3.1.1: Inserisci coordinate geografiche}%
+\label{subs:AUC5.3.3.1.1}
+\begin{description}
+  \item[Codice:] AUC5.3.3.1.1;
+  \item[Titolo:] Inserisci coordinate geografiche;
+  \item[Attori primari:] amministratore, gestore;
+  \item[Precondizione:] il sistema deve fornire i campi relativi alle coordinate geografiche;
+  \item[Postcondizione:] le coordinate geografiche sono inserite correttamente nei loro campi;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore inserisce le coordinate geografiche di un nuovo luogo.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC5.3.3.1.2: Inserisci indirizzo luogo}%
+\label{subs:AUC5.3.3.1.2}
+\begin{description}
+  \item[Codice:] AUC5.3.3.1.2;
+  \item[Titolo:] Inserisci indirizzo luogo;
+  \item[Attori primari:] amministratore, gestore;
+  \item[Precondizione:] il sistema deve fornire il campo relativo all'indirizzo del luogo;
+  \item[Postcondizione:] l'indirizzo è inserito correttamente nei loro campi;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore inserisce l'indirizzo di un nuovo luogo.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC5.3.3.2: Eliminazione luogo}%
+\label{subs:AUC5.3.3.2}
+\begin{description}
+  \item[Codice:] AUC5.3.3.2;
+  \item[Titolo:] Eliminazione luogo;
+  \item[Attori primari:] amministratore, gestore;
+  \item[Precondizione:] il luogo dell'organizzazione deve essere presente in \emph{Stalker};
+  \item[Postcondizione:] il luogo dell'organizzazione viene eliminato;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item sorge la necessità di eliminare un luogo di un'organizzazione, senza interagire con il suo owner.
+  \end{enumerate}
+  \item[Inclusioni:]
+  \begin{enumerate}
+    \item Seleziona luogo\emph{[AUC5.3.3.4]};
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC5.3.3.3: Modifica luogo}%
+\label{subs:AUC5.3.3.3}
+
+\begin{figure}[H]
+  \centering
+  \begin{plantuml}
+  @startuml
+  !include ../../commons/style/use-cases.pu
+
+  actor :amministratore: as A
+
+  rectangle {
+    together {
+      usecase (AUC5.3.3.3.1) as "AUC5.3.3.3.1\nModifica coordinate geografiche"
+      usecase (AUC5.3.3.3.2) as "AUC5.3.3.3.2\nModifica indirizzo luogo"
+    }
+  }
+
+  :A: -- AUC5.3.3.3.1
+  :A: -- AUC5.3.3.3.2
+
+  @enduml
+  \end{plantuml}
+  \caption{AUC5.3.3.3: Modifica luogo}%
+  \label{fig:AUC5_3_3_3}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC5.3.3.3;
+  \item[Titolo:] Modifica luogo;
+  \item[Attori primari:] amministratore, gestore;
+  \item[Precondizione:] il luogo dell'organizzazione deve essere presente in \emph{Stalker};
+  \item[Postcondizione:] il luogo dell'organizzazione viene modificato;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item sorge la necessità di modificare un luogo di un'organizzazione, senza interagire con il suo owner.
+  \end{enumerate}
+  \item[Inclusioni:]
+  \begin{enumerate}
+    \item Seleziona luogo\emph{[AUC5.3.3.4]};
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC5.3.3.3.1: Modifica coordinate geografiche}%
+\label{subs:AUC5.3.3.3.1}
+\begin{description}
+  \item[Codice:] AUC5.3.3.3.1;
+  \item[Titolo:] Modifica coordinate geografiche;
+  \item[Attori primari:] amministratore, gestore;
+  \item[Precondizione:] il sistema deve fornire i campi relativi alle coordinate geografiche;
+  \item[Postcondizione:] i campi relativi alle coordinate geografiche sono modificati;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore vuole modificare le coordinate geografiche di un luogo.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC5.3.3.3.2: Modifica indirizzo luogo}%
+\label{subs:AUC5.3.3.3.2}
+\begin{description}
+  \item[Codice:] AUC5.3.3.3.2;
+  \item[Titolo:] Modifica indirizzo luogo;
+  \item[Attori primari:] amministratore, gestore;
+  \item[Precondizione:] il sistema deve fornire il campo relativo all'indirizzo del luogo;
+  \item[Postcondizione:] il campo relativo all'indirizzo del luogo è modificato;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore vuole modificare l'indirizzo di un luogo.
+  \end{enumerate}
+\end{description}
+
+\subsubsection{AUC5.3.3.4: Seleziona luogo}%
+\label{subs:AUC5.3.3.4}
+\begin{description}
+  \item[Codice:] AUC5.3.3.4;
+  \item[Titolo:] Seleziona luogo;
+  \item[Attori primari:] amministratore, gestore;
+  \item[Precondizione:] il sistema deve mostrare la lista dei luoghi all'interno di una organizzazione;
+  \item[Postcondizione:] viene scelto il luogo desiderato;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item sorge la necessità di effettuare operazioni sul luogo di un'organizzazione, e viene offerta la possibilità di selezionarlo.
+  \end{enumerate}
+\end{description}

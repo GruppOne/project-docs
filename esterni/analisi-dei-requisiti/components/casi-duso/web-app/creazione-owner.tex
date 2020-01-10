@@ -31,14 +31,18 @@
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC4
-  \item[Titolo:] Creazione owner
-  \item[Attori primari:] amministratore
-  \item[Precondizione:] un utente ha inviato una richiesta per diventare owner.
+  \item[Codice:] AUC4;
+  \item[Titolo:] Creazione owner;
+  \item[Attori primari:] amministratore;
+  \item[Precondizione:] il sistema deve rendere disponibile la pagina di creazione owner, che deve contenere:
+  \begin{itemize}
+    \item la possibilità di creare un owner;
+    \item le richieste effettuate da utenti autenticati da poter gestire.
+  \end{itemize}
   \item[Postcondizione:] l'owner viene creato.
   \item[Scenario principale:]
   \begin{enumerate}
-    \item l'amministratore gestisce una richiesta ricevuta da un utente che vuole diventare owner.
+    \item l'amministratore gestisce la creazione degli owner.
   \end{enumerate}
 \end{description}
 
@@ -47,11 +51,11 @@
 \label{subs:AUC4.1}
 
 \begin{description}
-  \item[Codice:] AUC4.1
-  \item[Titolo:] Richiesta accettata
-  \item[Attori primari:] amministratore
-  \item[Precondizione:] l'amministratore verifica la richiesta.
-  \item[Postcondizione:] l'amministratore accetta la richiesta.
+  \item[Codice:] AUC4.1;
+  \item[Titolo:] Richiesta accettata;
+  \item[Attori primari:] amministratore;
+  \item[Precondizione:] l'amministratore verifica la richiesta;
+  \item[Postcondizione:] l'amministratore accetta la richiesta, e il nuovo owner viene creato;
   \item[Scenario principale:]
   \begin{enumerate}
     \item L'amministratore esamina la richiesta ricevuta e la accetta. L'utente che ha fatto richiesta diventa owner.
@@ -66,11 +70,11 @@
 \label{subs:AUC4.2}
 
 \begin{description}
-  \item[Codice:] AUC4.2
-  \item[Titolo:] Richiesta rifiutata
-  \item[Attori primari:] amministratore
-  \item[Precondizione:] l'amministratore verifica la richiesta.
-  \item[Postcondizione:] l'amministratore rifiuta la richiesta.
+  \item[Codice:] AUC4.2;
+  \item[Titolo:] Richiesta rifiutata;
+  \item[Attori primari:] amministratore;
+  \item[Precondizione:] l'amministratore verifica la richiesta;
+  \item[Postcondizione:] l'amministratore rifiuta la richiesta, l'utente non diventerà owner;
   \item[Scenario principale:]
   \begin{enumerate}
     \item L'amministratore esamina la richiesta ricevuta e la rifiuta. L'utente che ha fatto richiesta non può diventare owner.
@@ -86,14 +90,30 @@
 \label{subs:AUC4.3}
 
 \begin{description}
-  \item[Codice:] AUC4.3
-  \item[Titolo:] Invio risposta all'utente
-  \item[Attori primari:] amministratore
-  \item[Precondizione:] l'amministratore ha accettato, oppure rifiutato, la richiesta di un utente per diventare owner.
-  \item[Postcondizione:] l'utente che ha fatto la richiesta riceve l'esito tramite un messaggio di risposta.
+  \item[Codice:] AUC4.3;
+  \item[Titolo:] Invio risposta all'utente;
+  \item[Attori primari:] amministratore;
+  \item[Precondizione:] l'amministratore ha accettato, oppure rifiutato, la richiesta di un utente per diventare owner;
+  \item[Postcondizione:] l'utente che ha fatto la richiesta riceve l'esito tramite un messaggio di risposta;
   \item[Scenario principale:]
   \begin{enumerate}
     \item una volta esaminata la richiesta, la risposta dell'amministratore verrà notificata all'utente.
+  \end{enumerate}
+\end{description}
+
+
+\subsubsection{AUC4.4: Creazione istantanea owner}%
+\label{subs:AUC4.4}
+
+\begin{description}
+  \item[Codice:] AUC4.4;
+  \item[Titolo:] Creazione istantanea owner;
+  \item[Attori primari:] amministratore;
+  \item[Precondizione:] il sistema deve rendere disponibile il campo di creazione istantanea;
+  \item[Postcondizione:] l'utente indicato diventa owner istantaneamente;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore crea un owner, senza che abbia fatto effettivamente richiesta.
   \end{enumerate}
 \end{description}
 

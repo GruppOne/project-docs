@@ -25,28 +25,32 @@
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC14
-  \item[Titolo:] Aggiunta gestore
-  \item[Attori primari:] owner
-  \item[Precondizione:] il nuovo super utente non deve già esistere come gestore.
-  \item[Postcondizione:] viene aggiunto il gestore specificato dall'owner.
+  \item[Codice:] AUC14;
+  \item[Titolo:] Aggiunta gestore;
+  \item[Attori primari:] amministratore, owner;
+  \item[Precondizione:] il sistema deve rendere disponibile la pagina per l'aggiunta del gestore, l'utente deve avere i requisiti per diventare gestore:
+  \begin{enumerate}
+    \item l'utente deve essere collegato o essersi collegato all'organizzazione nella quale svolgere il ruolo di gestore;
+    \item l'utente deve essere un utente senza privilegi o un visualizzatore.
+  \end{enumerate}
+  \item[Postcondizione:] viene aggiunto il gestore specificato dall'owner o dall'amministratore;
   \item[Scenario principale:]
   \begin{enumerate}
-    \item l'owner vuole aggiungere un gestore alla sua organizzazione.
+    \item l'owner vuole aggiungere un gestore ad una delle sue organizzazioni.
   \end{enumerate}
 \end{description}
 
 \subsubsection{AUC14.1: Inserimento email gestore}%
 \label{subs:AUC14.1}
 \begin{description}
-  \item[Codice:] AUC14.1
-  \item[Titolo:] Inserimento email gestore
-  \item[Attori primari:] owner
-  \item[Precondizione:] il sistema deve rendere disponibile il campo per l'inserimento della mail del nuovo gestore.
-  \item[Postcondizione:] il campo relativo al gestore viene compilato.
+  \item[Codice:] AUC14.1;
+  \item[Titolo:] Inserimento email gestore;
+  \item[Attori primari:] amministratore, owner;
+  \item[Precondizione:] il sistema deve rendere disponibile il campo per l'inserimento della mail del nuovo gestore;
+  \item[Postcondizione:] il campo relativo al gestore viene compilato;
   \item[Scenario principale:]
   \begin{enumerate}
-    \item l'owner inserisce l'email del nuovo gestore;
+    \item l'amministratore o l'owner inserisce l'email del nuovo gestore.
   \end{enumerate}
 \end{description}
 

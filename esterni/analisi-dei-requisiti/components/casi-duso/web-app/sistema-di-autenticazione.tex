@@ -2,6 +2,10 @@
 
 \begin{document}
 
+
+\subsubsection{AUC1: Autenticazione}%
+\label{subs:AUC1}
+
 \begin{figure}[H]
   \centering
   \begin{plantuml}
@@ -12,65 +16,25 @@
 
   rectangle {
     together {
-      usecase (AUC1.1) as "AUC1.1\nAutenticazione\n--\nExtension points:\nVisualizzazione errore se\nle credenziali inserite\n non sono corrette"
-      usecase (AUC1.2) as "AUC1.2\nVisualizzazione credenziali errate"
+    usecase (AUC1.1) as "AUC1.1\nInserimento email"
+    usecase (AUC1.2) as "AUC1.2\nInserimento password"
     }
   }
 
   :A: -- AUC1.1
-
-  (AUC1.3) .up.|> (AUC1.1) : <<extends>>
+  :A: -- AUC1.2
 
   @enduml
   \end{plantuml}
-  \caption{AUC1: Sistema di autenticazione}%
+  \caption{AUC1: Autenticazione}%
   \label{fig:auc1}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC1
-  \item[Titolo:] Sistema di autenticazione
-  \item[Attori primari:] utente non autenticato
-  \item[Precondizione:] l'utente non è autenticato alla piattaforma.
-  \item[Postcondizione:] l'\glossario{utente} ha effettuato correttamente l'autenticazione nel sistema.
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item l'utente non è ancora autenticato e vuole eseguire l'autenticazione.
-  \end{enumerate}
-\end{description}
-
-\subsubsection{AUC1.1: Autenticazione}%
-\label{subs:AUC1.1}
-
-\begin{figure}[H]
-  \centering
-  \begin{plantuml}
-  @startuml
-  !include ../../commons/style/use-cases.pu
-
-  actor :utente non autenticato: as A
-
-  rectangle {
-    together {
-    usecase (AUC1.1.1) as "AUC1.1.1\nInserimento email"
-    usecase (AUC1.1.2) as "AUC1.1.2\nInserimento password"
-    }
-  }
-
-  :A: -- AUC1.1.1
-  :A: -- AUC1.1.2
-
-  @enduml
-  \end{plantuml}
-  \caption{AUC1.1: Autenticazione}%
-  \label{fig:auc1_1}
-\end{figure}
-
-\begin{description}
-  \item[Codice:] AUC1.1
-  \item[Titolo:] Autenticazione
-  \item[Attori primari:] utente non autenticato
-  \item[Precondizione:] il sistema è raggiungibile e funzionante, l'utente non autenticato deve poter visualizzare la pagina di autenticazione.
+  \item[Codice:] AUC1;
+  \item[Titolo:] Autenticazione;
+  \item[Attori primari:] utente non autenticato;
+  \item[Precondizione:] il sistema è raggiungibile e funzionante, l'utente non autenticato deve poter visualizzare la pagina di autenticazione;
   \item[Postcondizione:] l'autenticazione è andata a buon fine e l'utente è autenticato.
   \item[Scenario principale:]
   \begin{enumerate}
@@ -87,28 +51,28 @@
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC1.1.1: Inserimento email}%
-\label{subs:AUC1.1.1}
+\subsubsection{AUC1.1: Inserimento email}%
+\label{subs:AUC1.1}
 \begin{description}
-  \item[Codice:] AUC1.1.1
-  \item[Titolo:] Inserimento email
-  \item[Attori primari:] utente non autenticato
-  \item[Precondizione:] il sistema ha reso disponibile il campo per l'inserimento della propria email.
-  \item[Postcondizione:] l'utente ha compilato il campo relativo alla propria email.
+  \item[Codice:] AUC1.1;
+  \item[Titolo:] Inserimento email;
+  \item[Attori primari:] utente non autenticato;
+  \item[Precondizione:] il sistema ha reso disponibile il campo per l'inserimento della propria email;
+  \item[Postcondizione:] l'utente ha compilato il campo relativo alla propria email;
   \item[Scenario principale:]
   \begin{enumerate}
     \item l'utente compila il campo relativo alla propria mail di registrazione.
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC1.1.2: Inserimento password}%
-\label{subs:AUC1.1.2}
+\subsubsection{AUC1.2: Inserimento password}%
+\label{subs:AUC1.2}
 \begin{description}
-  \item[Codice:] AUC1.1.2
-  \item[Titolo:] Inserimento password
-  \item[Attori primari:] utente non autenticato
-  \item[Precondizione:] il sistema ha reso disponibile il campo per l'inserimento della password.
-  \item[Postcondizione:] l'utente ha compilato il campo relativo alla sua password.
+  \item[Codice:] AUC1.2;
+  \item[Titolo:] Inserimento password;
+  \item[Attori primari:] utente non autenticato;
+  \item[Precondizione:] il sistema ha reso disponibile il campo per l'inserimento della password;
+  \item[Postcondizione:] l'utente ha compilato il campo relativo alla sua password;
   \item[Scenario principale:]
   \begin{enumerate}
     \item l'utente compila il campo relativo alla propria password di registrazione.
@@ -118,11 +82,11 @@
 \subsubsection{AUC1.2: Visualizzazione credenziali errate}%
 \label{subs:AUC1.2}
 \begin{description}
-  \item[Codice:] AUC1.2
-  \item[Titolo:] Visualizzazione credenziali errate
-  \item[Attori primari:] utente non autenticato
-  \item[Precondizione:] l'utente ha inviato al server le credenziali per effettuare l'autenticazione.
-  \item[Postcondizione:] l'utente non autenticato visualizza un messaggio di credenziali sbagliate.
+  \item[Codice:] AUC1.2;
+  \item[Titolo:] Visualizzazione credenziali errate;
+  \item[Attori primari:] utente non autenticato;
+  \item[Precondizione:] l'utente ha inviato al server le credenziali per effettuare l'autenticazione;
+  \item[Postcondizione:] l'utente non autenticato visualizza un messaggio di credenziali sbagliate;
   \item[Scenario principale:]
   \begin{enumerate}
     \item l'utente cerca di effettuare l'autenticazione con credenziali errate.
