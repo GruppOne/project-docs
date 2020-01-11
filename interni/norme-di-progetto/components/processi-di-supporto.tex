@@ -195,6 +195,7 @@ Si elencano una serie di sigle che possono essere utilizzate nei documenti. Si a
           \item [Pgt] progettista
           \item [Pgr] programmatore
           \item [Ve] verificatore.
+        \end{description}
 \end{itemize}
 
 \subparagraph{Convenzioni_comuni}%
@@ -472,6 +473,72 @@ I test di regressione servono per accertare che modifiche apportate non comporti
 \subparagraph{Test di accettazione}%
 \label{test_di_accettazione}
 I test di accettazione verificano il completo soddisfacimento dei requisiti utente. Sono eseguiti in collaborazione con il committente.
+
+\paragraph{Metriche}%
+\label{par:metriche}
+
+\subparagraph{Denominazione}%
+\label{subp:denominazione}
+Le metriche sono essenziali per avere una misura oggettiva di qualità del nostro prodotto.
+Per tale ragione per la definizione delle metriche di qualità è necessario identificare una denominazione comune.
+Ogni metrica avrà la seguente struttura:
+\begin{center}
+          \textbf{M[Tipo][Codice]}
+\end{center}
+\begin{description}
+  \item [Tipo] indica il tipo di metrica. Può essere:
+  \begin{itemize}
+      \item PS- metrica di processo.
+      \item PR- metrica di prodotto.
+  \end{itemize}
+  \item [Codice] un codice identificativo univoco a tre cifre che rappresenta la metrica.
+\end{description}
+
+
+\subparagraph{MPS001-Indice di Gulpease}%
+\label{subp:MPS001-indice_di_Gulpease}
+
+L'indice di Gulpease è un indice che valuta la leggibilità di un testo scritto in lingua italiana. Ha il vantaggio principale di utilizzare la lunghezza delle parole in lettere invece che sillabe. La formula per il calcolo è la seguente:
+\[
+    89 +\frac{300\cdot nf-10\cdot nl}{np}
+\]
+dove:
+\begin{description}
+  \item [nf] indica il numero delle frasi.
+  \item [nl] indica il numero delle lettere.
+  \item [np] indica il numero di parole.
+\end{description}
+I risultati sono compresi tra 0 e 100 dove 0 indica la leggibilità minima mentre 100 quella massima. In genere l'indica dice che:
+\begin{itemize}
+  \item Un testo con indice inferiore a 80 è difficile per chi ha la licenza elementare.
+  \item Un testo con indice inferiore a 60 è difficile per chi la licenza media.
+  \item Un testo con indice inferiore a 40 è difficile per chi ha il diploma di scuola superiore.
+
+\subparagraph{MPS002-Indice di Gunning Fog}%
+\label{subp:MPS002-indice_di_Gunning_Fog}
+
+L'indice di Gunning Fog è un indice progettato per misurare la facilità di lettura e la comprensione del testo. La formula per il calcolo è la seguente:
+\[
+    0.4\cdot((\frac{np}{nf})+100\cdot(\frac{npc}{np}))
+\]
+dove:
+\begin{description}
+  \item [np] indica il numero di parole.
+  \item [nf] indica il numero di frasi.
+  \item [npc] indica il numero di parole complesse, dove per complesse si intendono le parole con più di tre sillabe escluse:
+  \begin{itemize}
+    \item Parole composte da due parole di una o due sillabe.
+    \item Nomi propri.
+    \item Verbi di due sillabe che coniugati diventato di tre sillabe o più
+    \item Avverbi in -ente di parole di due sillabe.
+  \end{itemize}
+ \end{description}
+  Il numero risultante indica il numero di anni minimi di educazione formale necessari a comprendere il testo. Ad esempio se l'indice vale 17 vuol dire che il testo potrà essere letto facilmente da una persona con licenza di scuola media.
+
+\subparagraph{MPS003-Correttezza ortografica}%
+\label{subp:MPS003-correttezza_ortografica}
+
+L'indice di correttezza ortografica indica la correttezza del testo. Esso misura il numero di errori ortografici presenti. Ogni componente del gruppo ha un estensione per il proprio IDE (e.g vscode fa uso di spell right).
 
 % TODO parlare delle GitHub action?
 \paragraph{Strumenti}%
