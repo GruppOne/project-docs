@@ -134,7 +134,9 @@
   "T": {
       "Telegram": "servizio di messaggistica istantanea e broadcasting basato sul cloud.",
       "TimescaleDB": "database open source creato per analizzare dati di serie temporali che utilizza l'SQL standard.",
-      "Typescript": "linguaggio di programmazione open source sviluppato da Microsoft che estende la sintassi di JavaScript."
+      "Tracciatura": "rilevamento della presenza di un'utente autenticato all’interno di un luogo. Può essere anonima quando l'utente non è autenticato nell’organizzazione di riferimento, oppure autenticata quando l'utente è autenticato nell’organizzazione di riferimento.",
+      "Typescript": "linguaggio di programmazione open source sviluppato da Microsoft che estende la sintassi di JavaScript.",
+      "tracciatura": "toDelete"
   },
   "U": {
       "UML": "acronimo di Unified Modeling Language, rappresenta un linguaggio visuale che si basa su un insieme di regole, vincoli e teorie utilizzate per la modellazione di una classe di problemi. Serve a supportare la descrizione dei sistemi software",
