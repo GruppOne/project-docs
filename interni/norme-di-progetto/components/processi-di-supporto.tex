@@ -293,8 +293,24 @@ I verbali sono così costituiti:
 
 \paragraph{\LaTeX}%
 \label{par:LaTeX}
-\LaTeX{} è lo strumento utilizzato da GruppOne per la stesura: si è preferito non utilizzare dei tool online per la scrittura dei documenti.
-Ogni componente del gruppo ha scaricato, invece, un'estensione per il proprio IDE preferito (Sublime Text o Visual Studio Code) che consentisse l'installazione dei principali package di \LaTeX{} e che garantisse correttamente l'esecuzione del processo di compilazione dei file *.tex.
+\LaTeX{} è lo strumento utilizzato da GruppOne per la stesura dei documenti. Si è preferito non utilizzare dei tool online per la scrittura dei documenti, dato che avevano dei vincoli di costo non sostenibili.
+Ogni componente del gruppo ha installato, invece, una distribuzione di \TeX{}\LaTeX{} a piacere che includesse Lua\TeX{} e ne esponesse sul \verb|PATH| di sistema l'eseguibile.
+
+Ognuno ha inoltre aggiunto un'estensione per il proprio Code Editor preferito (Sublime Text o Visual Studio Code) che consentisse di facilitare la corretta esecuzione del processo di build dei file *.tex.
+
+Questa avviene attraverso il comando:
+
+\begin{minted}{bash}
+  lualatex `
+    --interaction=nonstopmode `
+    --c-style-errors `
+    --shell-escape `
+    <file-to-build>
+\end{minted}
+
+Da eseguire due volte per permettere a \LaTeX{} di recuperare i riferimenti corretti e ad es\@. il numero totale di pagine.
+
+È inoltre necessario avere disponibile sul proprio sistema \href{https://pygments.org/}{Pygments}, un package di python richiesto dal package di \LaTeX{} \href{https://ctan.org/pkg/minted?lang=en}{minted}, che permette di evidenziare la sintassi degli \glossario{snippet} di codice presenti nel documento.
 
 \subsection{Gestione della configurazione}%
 \label{sub:gestione_della_configurazione}
