@@ -1,37 +1,29 @@
 \documentclass[../analisi-dei-requisiti.tex]{subfiles}
 
 \begin{document}
-La presente sezione ha lo scopo di descrivere in maniera dettagliata, attraverso il linguaggio \glossario{UML}, le funzionalità offerte da \glossario{Stalker}.
+La presente sezione ha lo scopo di descrivere in maniera dettagliata, attraverso il linguaggio \glossario{UML}, le funzionalità  offerte da \glossario{Stalker}.
 
 \subsection{Attori dei casi d'uso}%
 \label{sub:attori_casi_duso}
 
-\subsubsection{Mobile app}%
+\subsubsection{Applicazione mobile}%
 \label{subs:mobile_app}
 
-\begin{description}
-  \item[\glossario{Utente non autenticato}:] Si riferisce ad un \glossario{utente generico} che non ha ancora effettuato l'autenticazione alla piattaforma
-  \item[\glossario{Utente autenticato}:] Si riferisce ad un \glossario{utente non autenticato} che ha effettuato l'autenticazione alla piattaforma
-  \item[\glossario{Utente non collegato}:] Si riferisce ad un \glossario{utente autenticato} che ha non ha effettuato il collegamento ad un'organizzazione
-  \item[\glossario{Utente collegato}:] Si riferisce ad un \glossario{utente autenticato} che ha effettuato il collegamento ad un'organizzazione
-  \item[\glossario{Utente collegato incognito}:] Si riferisce ad un \glossario{utente collegato} che ha deciso di rimanere in modalità incognito all'interno di un'organizzazione
-  \item[\glossario{Utente collegato noto}:] Si riferisce ad un \glossario{utente collegato} che ha deciso di essere noto all'interno di un'organizzazione
-\end{description}
-
+\begin{figure}[H]
+  \centering
+  \scalegraphics{diagrams/users-diagrams/app_users.png}
+  \caption{Utenti applicazione mobile}%
+  \label{fig:usersapp}
+\end{figure}
 
 \subsubsection{Web application}%
 \label{subs:web_application}
 
-\begin{description}
-  \item[\glossario{Utente non autenticato}:] si riferisce ad un \glossario{utente} che non ha ancora effettuato l'accesso alla web app
-  \item[\glossario{Utente autenticato}:] si riferisce ad un \glossario{utente non autenticato} che ha affettuato l'accesso alla web app
-  \item[\glossario{Amministratore}:] Si riferisce ad un \glossario{utente} con privilegi avanzati su tutto il sistema, che gestisce le richieste
-  \item[\glossario{Owner}:] Si riferisce ad un \glossario{gestore} con privilegi di gestione utenti e organizzazione. È il proprietario di un'organizzazione
-  \item[\glossario{Gestore}:] Si riferisce ad un \glossario{visualizzatore} con privilegi di gestione dei luoghi dell'organizzazione
-  \item[\glossario{Visualizzatore}:] Si riferisce ad un \glossario{utente} con privilegi di visualizzazione sugli utenti e organizzazione
-\end{description}
-
-
-
+\begin{figure}[H]
+  \centering
+  \scalegraphics{diagrams/users-diagrams/web_users.png}
+  \caption{Utenti web application}%
+  \label{fig:usersweb}
+\end{figure}
 
 \end{document}
