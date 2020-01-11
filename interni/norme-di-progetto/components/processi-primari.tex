@@ -204,7 +204,7 @@ Essa si pone i seguenti obiettivi:
 
 \subparagraph{Technology Baseline}%
 \label{subp:technology_baseline}
-La \glossario{Technology Baseline} è un documento parte integrante della RP.\@ Essa presenta:
+La \glossario{Technology Baseline} è un documento tecnico parte integrante della RP.\@ Essa presenta:
 
 \begin{itemize}
   \item Le tecnologie
@@ -215,7 +215,7 @@ Deve contenere inoltre una \glossario{Proof of Concept} che ha lo scopo di evide
 
 \subparagraph{Product Baseline}%
 \label{subp:product_baseline}
-La \glossario{Product Baseline} è un documento parte integrante della RQ.\@ Ha il compito di mostrare l'architettura del prodotto attraverso la creazione di:
+La \glossario{Product Baseline} è un documento tecnico parte integrante della RQ.\@ Ha il compito di mostrare l'architettura del prodotto attraverso la creazione di:
 
 \begin{itemize}
   \item Diagrammi delle classi
@@ -229,7 +229,7 @@ La \glossario{Product Baseline} è un documento parte integrante della RQ.\@ Ha 
 
 \paragraph{PlantUML}%
 \label{par:plantuml}
-Per la costruzione dei diagrammi dei casi d'uso il team ha deciso di utilizzare \glossario{PlantUML}.\@
+Per la costruzione dei diagrammi dei casi d'uso il team ha deciso di utilizzare \glossario{PlantUML}\@.
 È un software open source che permette la costruzione di diagrammi UML a partire dalla scrittura di codice.
 PlantUML fa uso di \glossario{Graphviz} per la traduzione del plain text in elementi grafici. GruppOne ha valutato positivamente tale strumento in quanto:
 
@@ -246,25 +246,26 @@ PlantUML fa uso di \glossario{Graphviz} per la traduzione del plain text in elem
   \caption{diagramma dei casi d'uso realizzato con PlantUml}
 \end{figure}
 
-N.B.: la figura~\ref{fig:esempio_caso_duso} è un'immagine, non codice PlantUML.\@ Per vedere un'applicazione pratica di quanto detto, si vedano ad es.\ i diagrammi inclusi nel documento \textit{Analisi dei requisiti}
+N.B.: la figura~\ref{fig:esempio_caso_duso} è un'immagine, non codice PlantUML.\@ Per vedere un'applicazione pratica di quanto detto, si vedano ad es.\ i diagrammi inclusi nel documento \textit{Analisi dei requisiti}.
 
-\subparagraph{Configurazione}%
-\label{subp:plantuml/configurazione}
+In seguito a difficoltà nell'utilizzo del package apposito di \LaTeX{}, abbiamo deciso di pre-compilare separatamente i diagrammi utilizzando le funzionalità esposte dalla \glossario{Command Line Interface} di PlantUML\@.
 
-Per permettere l'inclusione dei diagrammi nei documenti, abbiamo aggiunto un package di \LaTeX{} (compatibile solo con la distribuzione Lua\TeX). Questo package richiede l'impostazione di due variabili d'ambiente nel proprio sistema:
+Eseguendo nella radice del repository il comando
 
-\begin{description}
-  \item [GRAPHVIZ\_DOT] percorso completo dell'eseguibile \verb|dot.exe|, incluso in Graphviz
-  \item [PLANTUML\_JAR] percorso completo del file \verb|plantuml.jar|.
-\end{description}
-e l'utilizzo di un parametro aggiuntivo per la corretta compilazione dei documenti:
+\begin{minted}{bash}
+  java \
+    -jar \
+    $PLANTUML_JAR \
+    -checkmetadata \
+    -charset UTF-8 \
+    -x **/commons/style/*.pu \
+    -o img \
+    **/**.pu
+\end{minted}
 
-\verb|lualatex --shell-escape file.tex|.
-
-Il parametro è necessario perché l'inclusione del diagramma grafico avviene attraverso chiamate di sistema da parte del package responsabile.
-Abbiamo considerato il rischio alla sicurezza introdotto dall'utilizzo di questo parametro, e abbiamo valutato che è reso accettabile dalla natura open source di tutti gli strumenti coinvolti e del nostro lavoro.
-
-% subp:plantuml/configurazione (end)
+vengono generate le immagini dei diagrammi che sono incluse nei documenti.
+La corretta esecuzione del comando richiede di aver impostato la variabile d'ambiente \verb|PLANTUML\_JAR| al percorso completo del file \verb|plantuml.jar| reperito dal sito del progetto.
 
 % TODO mancano altri strumenti in questa sezione?
+
 \end{document}
