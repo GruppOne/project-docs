@@ -5,10 +5,30 @@ actor :visualizzatore: as A
 
 rectangle {
   together {
-    usecase (AUC5) as "AUC5\nQuery sull'organizzazione"
+    usecase (AUC5) as "AUC5\nMonitoraggio organizzazione"
+    usecase (AUC3.4) as "AUC3.4\nSeleziona organizzazione"
   }
 }
 
 :A: -- AUC5
+(AUC3.4) <.up. (AUC5) : <<include>>
+
+@enduml
+
+
+@startuml monitora-numero-dipendenti
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :visualizzatore: as A
+
+rectangle {
+  together {
+    usecase (AUC5.1) as "AUC5.1\n Monitora il numero di \ndipendenti in tutta l'organizzazione"
+    usecase (AUC5.2) as "AUC5.2\nMonitora il numero di \ndipendenti in un luogo"
+  }
+}
+
+:A: -- AUC5.1
+:A: -- AUC5.2
 
 @enduml
