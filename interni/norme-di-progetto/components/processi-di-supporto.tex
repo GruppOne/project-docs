@@ -7,7 +7,7 @@
 
 I processi di supporto operano a sostegno degli altri processi con lo scopo di garantire il successo e fornire qualità al progetto.
 Essi non esistono autonomamente ma hanno la necessità di appoggiarsi ad altri processi.
-ISO 11207--1995 ne distingue otto:
+ISO 11207:1995 ne distingue otto:
 
 \begin{itemize}
   \item Documentazione
@@ -17,6 +17,7 @@ ISO 11207--1995 ne distingue otto:
   \item Validazione
   \item Revisioni congiunte
   \item Verifiche interne
+  % TODO questo manca?
   \item Risoluzione dei problemi.
 \end{itemize}
 
@@ -275,7 +276,7 @@ I verbali contengono un riassunto degli incontri di GruppOne.
 Se qualche componente del gruppo non fosse presente a un incontro verbale, è necessario che prenda visione del relativo verbale in modo da informarsi sugli argomenti discussi alla riunione in cui era assente.
 I verbali si distinguono in interni ed esterni. Ogni verbale è contraddistinto da un nome così strutturato:
 \begin{center}
-  \textbf{verbaleyyyy-mm-dd.tex}
+  \textbf{verbaleYYYY-MM-DD.tex}
 \end{center}
 I verbali sono così costituiti:
 
@@ -306,11 +307,12 @@ GruppOne istanzia il processo di gestione della configurazione per:
   \item Assicurare completezza e correttezza del prodotto.
   \item Gestire al meglio il lavoro di gruppo.
   \item Identificare procedure per l'organizzazione, gestione e rilascio del prodotto.
-  \item Conservare documentazione e software in un luogo a tutti accessibile.
+  \item Conservare documentazione e software in un luogo accessibile e compatibile con la licenza richiesta dal prodotto.
 \end{itemize}
 
-\subsubsection{Gestione versionamento}%
-\label{subs:gestione_versionamento}
+% TODO scrivere questa sezione?
+\subsubsection{Gestione del versionamento}%
+\label{subs:gestione_del_versionamento}
 
 \paragraph{Repository}%
 \label{par:repository}
@@ -547,13 +549,18 @@ L'indice di correttezza ortografica indica la correttezza del testo. Esso misura
 \subparagraph{Linter}%
 \label{subp:linter}
 
-Per la verifica del codice ogni componente ha installato sulla propria macchina un \glossario{linter}. Il gruppo ha scelto di utilizzare \href{https://www.nongnu.org/chktex/}{Chk\TeX}, che è incluso nella maggior parte delle distribuzioni \LaTeX{} ed è facilmente configurabile per le nostre necessità.
-
+% Un linter è uno strumento che analizza il codice sorgente per determinare errori di programmazione o costrutti sintattici ritenuti non corretti
+Per la verifica del codice ogni componente ha installato sulla propria macchina un \glossario{linter}.
+Abbiamo deciso di utilizzare \href{https://www.nongnu.org/chktex/}{Chk\TeX}, che è incluso nella maggior parte delle distribuzioni \LaTeX{} così come nell'estensione di Visual Studio Code che utilizziamo, ed è facilmente configurabile per le nostre necessità.
 
 \subparagraph{Code owners}%
 \label{subp:code_owners}
 
-Per la gestione delle pull request GruppOne ha optato per l'utilizzo di Code Owners. Code Owners è uno strumento che permette di attribuire responsabilità all'interno di un team: ad ogni documento di progetto corrisponde un Code Owner il quale verrà notificato ogniqualvolta un verificatore del team aprirà una pull request su un file di cui è responsabile. Ogni pull request sarà quindi approvata quando il corrispettivo code owner ne avrà preso visione e avrà accettato le modifiche proposte.
+Abbiamo adattato alle nostre necessità la feature \href{https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners}{Code Owners} offerta da GitHub.
+All'interno del file \verb|CODEOWNERS| posizionato nella cartella \verb|.github| nella radice del repository, abbiamo definito due code owner per ogni documento di progetto.
+Ogni volta che viene aperta una \glossario{Pull Request} che modifica alcuni file, i rispettivi code owner vengono notificati automaticamente e viene loro richiesta una verifica dei cambiamenti effettuati.
+
+L'integrazione delle modifiche nella branch di default del repository è condizionata al superamento di queste verifiche.
 
 \subsection{Validazione}%
 \label{sub:validazione}
