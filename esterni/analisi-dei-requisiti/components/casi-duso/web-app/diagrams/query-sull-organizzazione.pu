@@ -25,10 +25,12 @@ rectangle {
   together {
     usecase (AUC5.1) as "AUC5.1\n Monitora il numero di \ndipendenti in tutta l'organizzazione"
     usecase (AUC5.2) as "AUC5.2\nMonitora il numero di \ndipendenti in un luogo"
+    usecase (AUC5.3) as "AUC5.3\nVisualizza report"
   }
 }
 
 :A: -- AUC5.1
 :A: -- AUC5.2
+:A: -- AUC5.3
 
 @enduml
