@@ -23,6 +23,8 @@ milestone inline label node/.append style={font=\scriptsize}%
     \gantttitlecalendar*{13/1/2020}{26/1/2020}{month=italy,week=1}\\
     \gantttitlecalendar*[title label font=\tiny]{13/1/2020}{26/1/2020}{day}\\
 
-    \ganttbar{Preparazione presentazione}{14/1/2020}{21/1/2020}
+    \ganttbar[name=bar1]{Preparazione presentazione}{14/1/2020}{21/1/2020}\\
+  \ganttmilestone[name=mile1]{RR}{21/1/2020}\\
+  \ganttlink{bar1}{mile1}
   \end{ganttchart}
 \end{document}
