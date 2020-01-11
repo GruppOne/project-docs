@@ -212,8 +212,6 @@ UserWarn
 ###
 
     ChkTeX
-    github
-    Github
     \commons
     \quotes
 }
@@ -229,6 +227,8 @@ UserWarn
   \url
   \plchold
   grupp0ne
+  Ã
+  ã
 ]
 
 
@@ -263,6 +263,8 @@ UserWarnRegex
   (?!#1:Capitalize! before! references)POSIX:([^[:alnum:]]|^)(chapter|(sub)?section|theorem|lemma|proposition|corollary|appendix)~\\ref
 
   (?!#2:! Includere! immagini! usando! solo! il! nome! del! file! e! il! comando! \graphicspath)\\includegraphics(\[.*\])?\{.*\/.*\}
+  (?!#3:! Utilizziamo! lo! spelling! email,! non! e-mail)e-mail
+  (?!#4:! Lo! spelling! corretto! è! GitHub)[Gg]ithub
 }
 
 
