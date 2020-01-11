@@ -1,4 +1,4 @@
-@startuml eliminazione-account
+@startuml eliminazione-account-wa
 !include ../../../../../../commons/style/use-cases.pu
 
 actor :amministratore: as A
