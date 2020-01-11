@@ -22,7 +22,8 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item in caso di rete mancante, non possono essere eseguite queste operazioni e quindi verrà notificato un errore~\ref{subs:UUC12}.
+          \item in caso di rete mancante, non possono essere eseguite queste operazioni e quindi verrà notificato un errore~\ref{subs:UUC12};
+          \item in caso l'organizzazione sia privata, è richiesta l'autenticazione da parte dell'utente~\ref{subs:UUC4.3}.
         \end{enumerate}
 \end{description}
 
@@ -39,8 +40,11 @@
         \begin{enumerate}
           \item l'utente ha la possibilità di aggiornare la lista delle organizzazioni, e viene avvisato mediante \glossario{notifica} dell'applicazione mobile.
         \end{enumerate}
+  \item[Estensioni:]
+        \begin{enumerate}
+          \item in caso di rete mancante, non può essere eseguito l'aggiornamento della lista di organizzazioni e quindi verrà notificato un errore~\ref{subs:UUC12}.
+        \end{enumerate}
 \end{description}
-
 
 
 \subsubsection{UUC4.2: Seleziona organizzazioni}%
@@ -54,6 +58,26 @@
   \item[Scenario principale:]
         \begin{enumerate}
           \item l'utente ha la possibilità di selezionare una o più organizzazioni.
+        \end{enumerate}
+  \item[Estensioni:]
+        \begin{enumerate}
+          \item in caso di rete mancante, non possono essere selezionate organizzazioni e quindi verrà notificato un errore~\ref{subs:UUC12};
+          \item in caso l'organizzazione alla quale l'utente vuole autenticarsi sia privata, è richiesta l'autenticazione~\ref{subs:UUC4.3}.
+        \end{enumerate}
+\end{description}
+
+\subsubsection{UUC4.3: Autenticazione organizzazione}%
+\label{subs:UUC4.3}
+\begin{description}
+  \item[Caso d’uso:] UUC4.3;
+  \item[Titolo:] Autenticazione organizzazione;
+  \item[Attori primari:] utente autenticato;
+  \item[Precondizione:] l'utente ha selezionato un'organizzazione privata;
+  \item[Postcondizione:] l'utente è autenticato;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente ha selezionato un'organizzazione privata, in quanto la tracciatura prevista è nota.
+          \item l'utente visualizza un form per l'autenticazione, con i relativi campi da inserire. Le credenziali non sono le stesse per l'autenticazione al servizio di Stalker, ma sono decise dall'owner dell'organizzazione.
         \end{enumerate}
 \end{description}
 

@@ -5,8 +5,11 @@ actor :utente autenticato: as A
 
 rectangle {
   together {
-    usecase (UUC4.1) as "UUC4.1\nAggiornamento\nlista organizzazioni"
-    usecase (UUC4.2) as "UUC4.2\nSeleziona organizzazioni"
+    usecase (UUC4.1) as "UUC4.1\nAggiornamento\nlista organizzazioni\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
+    usecase (UUC4.2) as "UUC4.2\nSeleziona organizzazioni\n--\nExtension points:\n-Visualizzazione errore in\ncaso di disconnessione\nin mancanza di rete\n-Visualizzazione form autenticazione\nin caso di collegamento a\norganizzazione privata"
+  }
+  together {
+    usecase (UUC4.3) as "UUC4.3\nAutenticazione organizzazione"
     usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
   }
 }
@@ -16,5 +19,7 @@ rectangle {
 
 (UUC12) .up.> (UUC4.1) : <<extends>>
 (UUC12) .up.> (UUC4.2) : <<extends>>
+
+(UUC4.3) .up.> (UUC4.2) : <<extends>>
 
 @enduml
