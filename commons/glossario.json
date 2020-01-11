@@ -1,108 +1,166 @@
 {
-    "A": {
-        "Amministratore": "utente con privilegi avanzati su tutto il sistema di Stalker, esegue operazioni amministrative e gestisce le richieste che provengono da utenti con permessi limitati.",
-        "Account": "il complesso dei dati identificativi di un utente, che gli consentono l'accesso all'applicazione mobile oppure alla web application",
-        "amministratore": "toDelete",
-        "Applicazione mobile": "applicazione software dedicata ai dispositivi di tipo mobile, quali smartphone o tablet. ",
-        "aree d'interesse": "toDelete",
-        "attività": ""
-    },
-    "B": {
-        "Back-end": "parte di un software con il quale l’utente interagisce indirettamente, ma che è essenziale per il funzionamento del sistema."
-    },
-    "C": {
-        "Capitolato": "documento tecnico redatto dall'azienda committente, contenente tutte le specifiche tecniche del prodotto software che devono essere rispettate ed eseguite dall'azienda fornitrice per effetto di un contratto d'appalto.",
-        "Caso d'uso": "insieme di scenari, ovvero sequenze di azioni, che hanno in comune uno scopo finale per un attore, ovvero un utente. Descrivono l’insieme di funzionalità del sistema percepite dall'utente.",
-        "Client": "componente che accede ai servizi o alle risorse di un'altra componente detta server."
-    },
-    "D": {
-        "Dato": "valore privo di significato, che lo assume se associato in determinati contesti significativi",
-        "Documento": "entità fisica o digitale atta a registrare informazioni significative."
-    },
-    "E": {
-        "EULA": "acronimo di End-User License Agreement, è il contratto tra il fornitore di un programma software e l'utente finale. Se l'utente accetta tale contratto, gli verrà assegnata la licenza d'uso del programma nei termini stabiliti dal contratto stesso."
-    },
-    "F": {
-        "Fase": "segmento temporale delimitato da un inizio e una fine, nel quale avvengono delle transazioni coerenti tra stati.",
-        "fasi di incremento": "",
-        "Front-end": "parte di un software visibile all'utente e con cui egli può interagire tramite un interfaccia utente."
-    },
-    "G": {
-        "Gestore": "utente appartenente ad un'organizzazione abilitato a gestire i luoghi dell'organizzazione. Un singolo utente può essere gestore di più organizzazioni distinte.",
-        "gestore": "toDelete"
-    },
-    "H": {
-        "Hangouts": "web application di Google utilizzata da GruppOne per la messaggistica istantanea e videoconferenza."
-    },
-    "I": {
-        "Imola Informatica": "proponente del capitolato per il progetto Stalker."
-    },
-    "J": {},
-    "K": {},
-    "L": {
-        "Link": "collegamento ad un'altra pagina.",
-        "Luogo": "spazio fisico indentificato da un insieme di coordinate geografiche. Ciascun luogo è riconducibile ad un'organizzazione."
-    },
-    "M": {
-        "Modello incrementale": "modello di sviluppo del software atto a procedere per incrementi continui del sistema, con la caratteristica che il software sviluppato prima di un incremento è valido ciò che è stato aggiunto. L’incremento deve essere di qualità per attenersi ai requisiti del prodotto finale",
-        "Modello client/server": "modello architetturale di sistemi distribuiti, organizzato come un insieme di servizi associati a uno o più server, e di client che accedono e utilizzano tali servizi."
-    },
-    "N": {
-        "Notifica": "messaggio che viene spedito all'utente direttamente dal server, a causa del verificarsi di un evento indipendente dalle richieste dell'utente."
-    },
-    "O": {
-        "Owner": "utente proprietario di una o più organizzazioni, ha privilegi di gestione dell'organizzazione su cui opera e dei suoi gestori e visualizzatori. Un singolo utente può essere owner di più organizzazioni distinte.",
-        "Organizzazione": "soggetto che ha interesse a tracciare le presenze delle persone all’interno dei propri luoghi, in maniera anonima o autenticata.",
-        "owner": "toDelete"
-    },
-    "P": {
-        "periodi": "",
-        "Postcondizione": "condizione che deve essere sempre vera immediatamente dopo l'uscita dallo scenario di un caso d'uso specifico.",
-        "Precondizione": "condizione che deve essere sempre vera prima di accedere allo scenario di un caso d'uso specifico.",
-        "Prodotto": "entità software progettata per essere rilasciata all'utente.",
-        "Progetto": "insieme di processi, attività e compiti progettato e svolto dal fornitore, per raggiungere gli obiettivi prestabiliti dai requisiti obbligatori, in un arco temporale fissato nel contratto stipulato con il proponente e con risorse limitate che si esauriscono con l'avanzare del tempo.",
-        "Proponente": "azienda che presenta una proposta di contratto."
-    },
-    "Q": {
-        "Query": "interrogazione da parte di un utente di un database, per estrarre o aggiornare i dati che soddisfano un certo criterio di ricerca."
-    },
-    "R": {
-        "Report": "insieme di dati opportunamente estrapolati e/o elaborati, organizzati sotto forma tabellare.",
-        "Requisiti": "necessità del committente, legate al prodotto software da realizzare, che devono essere oblligatoriamente soddisfatte dal fornitore."
-    },
-    "S": {
-        "Stalker": "nome del progetto proposto dall'azienda Imola Informatica.",
-        "Server": "componente o sistema informatico di elaborazione e gestione del traffico di informazioni che fornisce servizi ad altre componenti dette client.",
-        "Server LDAP": "Server che utilizza il protocollo standard LDAP, acronimo di Lightweight Directory Access Protocol. LDAP è un protocollo d'accesso, basato sul modello client-server, a servizi di directory che opera su TCP/IP o su altre connessioni orientate al servizio.",
-        "Smartphone": "apparecchio elettronico che combina le funzioni di un telefono cellulare e di un computer palmare.",
-        "Software": "insieme delle procedure e delle istruzioni in un sistema di elaborazione dati.",
-        "stima": ""
-    },
-    "T": {},
-    "U": {
-        "UML": "acronimo di Unified Modeling Language, rappresenta un linguaggio visuale che si basa su un insieme di regole, vincoli e teorie utilizzate per la modellazione di una classe di problemi. Serve a supportare la descrizione dei sistemi software",
-        "Utente autenticato": "utente non autenticato che ha effettuato l'autenticazione alla piattaforma dall'applicazione mobile oppure alla web application.",
-        "Utente collegato": "utente autenticato che è collegato ad almeno un'organizzazione;",
-        "Utente collegato incognito": "utente collegato ad un'organizzazione in modalità incognito, in quanto la sua identità non è conosciuta.",
-        "Utente collegato noto": "utente collegato ad un'organizzazione in modalità noto, in quanto la sua identità è conosciuta.",
-        "Utente non autenticato": "utente che non ha ancora effettuato l'autenticazione all'applicazione mobile oppure alla web application.",
-        "Utente non collegato": "utente autenticato che non ha effettuato alcun collegamento ad un'organizzazione.",
-        "Utente": "soggetto che ha interesse ad utilizzare il software prodotto da GruppOne.",
-        "utente autenticato": "toDelete",
-        "utente collegato": "toDelete",
-        "utente generico": "toDelete",
-        "utente non autenticato": "toDelete",
-        "utenti anonimi": "toDelete",
-        "utenti autenticati": "toDelete"
-    },
-    "V": {
-        "Visualizzatore": "utente appartenente ad un'organizzazione abilitato esclusivamente a visualizzare i luoghi dell'organizzazione. Un singolo utente può essere visualizzatore di più organizzazioni distinte.",
-        "visualizzatore": "toDelete"
-    },
-    "W": {
-        "Web application": "applicazione distribuita accessibile in una rete Internet per mezzo di un'architettura client/server."
-    },
-    "X": {},
-    "Y": {},
-    "Z": {}
+  "A": {
+      "Account": "il complesso dei dati identificativi di un utente, che gli consentono l'accesso all'applicazione mobile oppure alla web application.",
+      "Amazon Web Services": "piattaforma di Amazon che offre servizi in cloud computing su richiesta.",
+      "Amministratore": "utente con privilegi avanzati su tutto il sistema di Stalker, esegue operazioni amministrative e gestisce le richieste che provengono da utenti con permessi limitati.",
+      "Apache Kafka": "piattaforma open source per il data streaming che permette di archiviare, pubblicare ed elaborare flussi di dati in tempo reale.",
+      "Applicazione mobile": "applicazione software dedicata ai dispositivi di tipo mobile, quali smartphone o tablet. ",
+      "Attività": "parte di un processo che indica l'insieme di compiti da realizzare per realizzare il prodotto finale e soddisfarne i requisiti.",
+      "amministratore": "toDelete",
+      "applicazione mobile": "toDelete",
+      "aree d'interesse": "toDelete",
+      "attività": "toDelete"
+  },
+  "B": {
+      "Back-end": "parte di un software con il quale l'utente interagisce indirettamente, ma che risulta essenziale per il funzionamento del sistema.",
+      "Bootstrap": "toolkit open source per la creazione e lo sviluppo di siti e application web, che contiene modelli di progettazione basati su HTML, CSS e JavaScript."
+  },
+  "C": {
+      "CSV": "acronimo di Comma-Separated Values,è un formato file utilizzato per lo scambio di dati fra fogli di calcolo o database.",
+      "Capitolato": "documento tecnico redatto dall'azienda committente, contenente tutte le specifiche tecniche del prodotto software che devono essere rispettate ed eseguite dall'azienda fornitrice per effetto di un contratto d'appalto.",
+      "Caso d'uso": "insieme di scenari, ovvero sequenze di azioni, che hanno in comune uno scopo finale per un attore, ovvero un utente. Descrivono l'insieme di funzionalità del sistema percepite dall'utente.",
+      "ClickHouse": "DBMS column-oriented open source che consente di generare report di dati analitici in tempo reale.",
+      "Client": "componente che accede ai servizi o alle risorse di un'altra componente detta server.",
+      "Copertura": "nelle telecomunicazioni, è la zona geografica servita da una rete di telefonia cellulare o stazione radio.",
+      "client": "toDelete",
+      "copertura": "toDelete"
+  },
+  "D": {
+      "Dato": "valore privo di significato, che lo assume se associato in determinati contesti significativi.",
+      "Docker": "piattaforma software open source che permette di automatizzare la distribuzione di un'applicazione.",
+      "Documento": "entità fisica o digitale atta a registrare informazioni significative.",
+      "dati": "toDelete"
+  },
+  "E": {
+      "ESlint": "strumento di analisi statica del codice per identificare modelli problematici trovati nel codice JavaScript.",
+      "EULA": "acronimo di End-User License Agreement, è il contratto tra il fornitore di un programma software e l'utente finale. Se l'utente accetta tale contratto, gli verrà assegnata la licenza d'uso del programma nei termini stabiliti dal contratto stesso.",
+      "Ethereum": "piattaforma open source globale per applicazioni decentralizzate, nella quale è possibile scrivere codice che controlla il valore digitale."
+  },
+  "F": {
+      "Fase": "segmento temporale delimitato da un inizio e una fine, nel quale avvengono delle transazioni coerenti tra stati.",
+      "Fase di incremento": "fase nella quale la parte da integrare nel software da aggiungere viene verificata e, solo in caso di accettazione, questa viene integrata nel software, rispettando la logica del modello incrementale.",
+      "Front-end": "parte di un software visibile all'utente e con cui egli può interagire tramite un interfaccia utente.",
+      "fasi": "toDelete",
+      "fasi di incremento": "toDelete"
+  },
+  "G": {
+      "GPS": "acronimo di Global Positioning System, è un sistema di posizionamento satellitare che permette in ogni istante di localizzare la latitudine e la longitudine di un oggetto, grazie all'utilizzo di satelliti che stazionano nell'orbita terrestre.",
+      "Gestore": "utente appartenente ad un'organizzazione abilitato a gestire i luoghi dell'organizzazione. Un singolo utente può essere gestore di più organizzazioni distinte.",
+      "Gherkin": "linguaggio che descrive collettivamente i casi d'uso relativi a un sistema software con l'utilizzo di un linguaggio non tecnico.",
+      "Grafana": "software open source di analisi dei dati che consente di generare grafici e dashboard per il monitoraggio di ambienti e di sistemi.",
+      "gestore": "toDelete"
+  },
+  "H": {
+      "Hangouts": "web application di Google utilizzata da GruppOne per la messaggistica istantanea e videoconferenza."
+  },
+  "I": {
+      "Imola Informatica": "proponente del capitolato per il progetto Stalker.",
+      "Internet of Things": "tradotto come Internet delle cose, è l'insieme di tecnologie che permettono di collegare a Internet qualunque tipo di apparato."
+  },
+  "J": {
+      "Javascript": "linguaggio di scripting orientato agli oggetti e agli eventi, comunemente utilizzato nella programmazione web lato client per gestire gli effetti dinamici interattivi.",
+      "javascript": "toDelete"
+  },
+  "K": {
+      "Kubernetes": "piattaforma open source per automatizzare la distribuzione, la scalabilità e la gestione di applicazioni containerizzate."
+  },
+  "L": {
+      "LDAP": "acronimo di Lightweight Directory Access Protocol, LDAP è un protocollo d'accesso a servizi di directory, basato sul modello client-server, che opera su TCP/IP o su altre connessioni orientate al servizio.",
+      "Link": "collegamento ad un'altra pagina.",
+      "Luogo": "spazio fisico indentificato da un insieme di coordinate geografiche. Ciascun luogo è riconducibile ad un'organizzazione."
+  },
+  "M": {
+      "Modello a V": "modello di sviluppo del software che dimostra la relazione tra ogni fase del ciclo di vita dello sviluppo del software e la sua fase di testing.",
+      "Modello client/server": "modello architetturale di sistemi distribuiti, organizzato come un insieme di servizi associati a uno o più server, e di client che accedono e utilizzano tali servizi.",
+      "Modello incrementale": "modello di sviluppo del software atto a procedere per incrementi continui del sistema, con la caratteristica che tutto il software sviluppato prima di un incremento è valido. L'incremento deve essere di qualità per attenersi ai requisiti del prodotto finale.",
+      "modello incrementale": "toDelete",
+      "modello server/client": "toDelete"
+  },
+  "N": {
+      "NodeJS": "ambiente di runtime JavaScript open source multipiattaforma orientato agli eventi per l'esecuzione di codice JavaScript.",
+      "Notifica": "messaggio che viene spedito all'utente direttamente dal server, a causa del verificarsi di un evento indipendente dalle richieste dell'utente.",
+      "Npm": "gestore di pacchetti per il linguaggio di programmazione JavaScript."
+  },
+  "O": {
+      "Orange Canvas": "software open-source di programmazione visiva che offre un front-end grafico per l'analisi dei dati.",
+      "Organizzazione": "soggetto che ha interesse a tracciare le presenze delle persone all'interno dei propri luoghi, in maniera anonima o autenticata.",
+      "Owner": "utente proprietario di una o più organizzazioni, ha privilegi di gestione dell'organizzazione su cui opera e dei suoi gestori e visualizzatori. Un singolo utente può essere owner di più organizzazioni distinte.",
+      "organizzazioni": "toDelete",
+      "owner": "toDelete"
+  },
+  "P": {
+      "Periodo": "Spazio di tempo caratterizzato da particolari condizioni o avvenimenti.",
+      "Postcondizione": "condizione che deve essere sempre vera immediatamente dopo l'uscita dallo scenario di un caso d'uso specifico.",
+      "PostgreSQL": "DBMS (Database Management System) ad oggetti rilasciato con licenza libera.",
+      "Precondizione": "condizione che deve essere sempre vera prima di accedere allo scenario di un caso d'uso specifico.",
+      "Prodotto": "entità software progettata per essere rilasciata all'utente.",
+      "Progetto": "insieme di processi, attività e compiti progettato e svolto dal fornitore, per raggiungere gli obiettivi prestabiliti dai requisiti obbligatori, in un arco temporale fissato nel contratto stipulato con il proponente e con risorse limitate che si esauriscono con l'avanzare del tempo.",
+      "Proof of concept": "realizzazione incompleta di un determinato progetto, allo scopo di provare il funzionamento base dell'applicativo software e il conseguimento di alcuni requisiti.",
+      "Proponente": "azienda che presenta una proposta di contratto.",
+      "Python": "linguaggio di programmazione dinamico orientato agli oggetti utilizzabile per molti tipi di sviluppo software. Offre un forte supporto all'integrazione con altri linguaggi e programmi.",
+      "periodi": "toDelete",
+      "postcondizioni": "toDelete",
+      "precondizioni": "toDelete",
+      "progetto": "toDelete",
+      "proof of concept": "toDelete"
+  },
+  "Q": {
+      "Query": "interrogazione da parte di un utente di un database, per estrarre o aggiornare i dati che soddisfano un certo criterio di ricerca.",
+      "query": "toDelete"
+  },
+  "R": {
+      "Report": "insieme di dati opportunamente estrapolati e/o elaborati, organizzati sotto forma tabellare.",
+      "Requisiti": "necessità del committente, legate al prodotto software da realizzare, che devono essere obbligatoriamente soddisfatte dal fornitore.",
+      "regressione lineare": "metodo classico di previsione di un valore numerico, che sottende ad una formula di previsione determinata da una linea retta.",
+      "report": "toDelete"
+  },
+  "S": {
+      "Sage Maker": "servizio offerto da Amazon che permette di sviluppare e formare in modo semplice e rapido modelli di Machine Learning.",
+      "Scalabilità": "parametro di qualità, che indica la capacità di un sistema di aumentare o diminuire in modo dinamico le risorse a sua disposizione in funzione delle necessità e disponibilità. Ai fini di questo progetto si parla di scalabilità di carico, ovvero la capacità di un sistema di incrementare le proprie prestazioni, e può essere di due tipi: verticale, che consiste in una scalabilità hardware in cui si aumentano le risorse fisiche a disposizione, e orizzontale, che consiste nell’aggiunta di più istanze dell’applicazione.",
+      "Server": "componente o sistema informatico di elaborazione e gestione del traffico di informazioni che fornisce servizi ad altre componenti dette client.",
+      "Server LDAP": "server che utilizza il protocollo standard LDAP per l'autenticazione degli utenti ad un'organizzazione, se questa la prevede.",
+      "Serverless Framework": "è un framework web gratuito e open source sviluppato per la creazione di applicazioni su AWS Lambda, una piattaforma di elaborazione senza server fornita da Amazon come parte di Amazon Web Services.",
+      "Smartphone": "apparecchio elettronico che combina le funzioni di un telefono cellulare e di un computer palmare.",
+      "Software": "insieme delle procedure e delle istruzioni in un sistema di elaborazione dati.",
+      "Stalker": "nome del progetto proposto dall'azienda Imola Informatica.",
+      "Stima": "previsione e valutazione del valore economico e del tempo da impiegare nell'ambito di un progetto.",
+      "Support Vector Machine": "modello di apprendimento automatico, mirato a istruire un sistema informatico con algoritmi per la regressione e la classificazione.",
+      "scalabilità": "toDelete",
+      "server": "toDelete",
+      "smartphone": "toDelete",
+      "software": "toDelete",
+      "stima": "toDelele"
+  },
+  "T": {
+      "Telegram": "servizio di messaggistica istantanea e broadcasting basato sul cloud.",
+      "TimescaleDB": "database open source creato per analizzare dati di serie temporali che utilizza l'SQL standard.",
+      "Typescript": "linguaggio di programmazione open source sviluppato da Microsoft che estende la sintassi di JavaScript."
+  },
+  "U": {
+      "UML": "acronimo di Unified Modeling Language, rappresenta un linguaggio visuale che si basa su un insieme di regole, vincoli e teorie utilizzate per la modellazione di una classe di problemi. Serve a supportare la descrizione dei sistemi software",
+      "Utente": "soggetto che ha interesse ad utilizzare il software prodotto da GruppOne.",
+      "Utente autenticato": "utente non autenticato che ha effettuato l'autenticazione alla piattaforma dall'applicazione mobile oppure alla web application.",
+      "Utente collegato": "utente autenticato che è collegato ad almeno un'organizzazione;",
+      "Utente collegato incognito": "utente collegato ad un'organizzazione in modalità incognito, in quanto la sua identità non è conosciuta.",
+      "Utente collegato noto": "utente collegato ad un'organizzazione in modalità noto, in quanto la sua identità è conosciuta.",
+      "Utente non autenticato": "utente che non ha ancora effettuato l'autenticazione all'applicazione mobile oppure alla web application.",
+      "Utente non collegato": "utente autenticato che non ha effettuato alcun collegamento ad un'organizzazione.",
+      "utente": "toDelete",
+      "utente autenticato": "toDelete",
+      "utente collegato": "toDelete",
+      "utente generico": "toDelete",
+      "utente non autenticato": "toDelete",
+      "utenti anonimi": "toDelete",
+      "utenti autenticati": "toDelete"
+  },
+  "V": {
+      "Visualizzatore": "utente appartenente ad un'organizzazione abilitato esclusivamente a visualizzare i luoghi dell'organizzazione. Un singolo utente può essere visualizzatore di più organizzazioni distinte.",
+      "visualizzatore": "toDelete"
+  },
+  "W": {
+      "Web application": "applicazione distribuita accessibile in una rete Internet per mezzo di un'architettura client/server."
+  },
+  "X": {},
+  "Y": {},
+  "Z": {}
 }
