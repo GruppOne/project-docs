@@ -1,0 +1,11 @@
+# comando per ottenere tutti gli autori:
+# git shortlog -e -s -n --all
+
+Riccardo Agatea <riccardo.agatea@gmail.com>
+# Tobia Apolloni ?
+Riccardo Cestaro <riccardo.cestaro@outlook.it>
+Alberto Cocco <albertococco98@gmail.com>
+Luca Ercole <30255227+erclu@users.noreply.github.com>
+Alberto Gobbo <47864124+AlbertoGobbo@users.noreply.github.com>
+Alessandro Rizzo <alex.rizzo1998@gmail.com>
+Fabio Scettro <fabioscettro@gmail.com>
