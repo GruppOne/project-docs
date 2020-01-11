@@ -28,12 +28,31 @@
   \item[Titolo:] Seleziona account;
   \item[Attori primari:] amministratore;
   \item[Precondizione:] il sistema deve rendere disponibile la lista degli account registrati a \emph{Stalker};
-  \item[Postcondizione:] l'account è stato selezionato;
+  \item[Postcondizione:] l'account è stato selezionato ed eliminato;
   \item[Scenario principale:]
   \begin{enumerate}
-    \item l'amministratore seleziona l'account da eliminare.
+    \item l'amministratore elimina un account.
   \end{enumerate}
 \end{description}
 
+\begin{figure}[H]
+  \centering
+  \scalegraphics{eliminazione-account-wa-conferma.png}
+  \caption{AUC13.1: Seleziona account}%
+  \label{fig:AUC13.1}
+\end{figure}
 
+\subsubsection{AUC13.1.1: Conferma eliminazione account}%
+\label{subs:AUC13.1.1}
+\begin{description}
+  \item[Codice:] AUC13.1.1;
+  \item[Titolo:] Conferma eliminazione account;
+  \item[Attori primari:] amministratore;
+  \item[Precondizione:] l'utente deve aver selezionato l'account;
+  \item[Postcondizione:] l'account viene eliminato;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item l'amministratore conferma l'eliminazione di un account.
+  \end{enumerate}
+\end{description}
 \end{document}
