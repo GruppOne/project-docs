@@ -99,7 +99,7 @@
   \item[Titolo:] Eliminazione organizzazione;
   \item[Attori primari:] owner;
   \item[Precondizione:] deve essere stata selezionata l'organizzazione da eliminare, presente nella lista di \emph{Stalker};
-  \item[Postcondizione:] l'organizzazione viene eliminata.
+  \item[Postcondizione:] l'organizzazione viene eliminata;
   \item[Scenario principale:]
         \begin{enumerate}
           \item sorge la necessità di eliminare un'organizzazione;
@@ -108,6 +108,27 @@
         \begin{enumerate}
           \item viene selezionata un'organizzazione~\ref{subs:AUC3.4};
           \item alla fine della procedura di eliminazione dell'organizzazione, tutte le applicazioni mobile riceveranno una notifica di aggiornamento della lista di organizzazioni~\ref{subs:AUC3.5};
+        \end{enumerate}
+\end{description}
+
+\begin{figure}[H]
+  \centering
+  \scalegraphics{eliminazione-organizzazione.png}
+  \caption{AUC3.2: Eliminazione organizzazione}%
+  \label{fig:AUC3.2}
+\end{figure}
+
+\subsubsection{AUC3.2.1: Conferma eliminazione organizzazione}%
+\label{subs:AUC3.2.1}
+\begin{description}
+  \item[Codice:] AUC3.2.1;
+  \item[Titolo:] Conferma eliminazione organizzazione;
+  \item[Attori primari:] owner;
+  \item[Precondizione:] deve essere stata selezionata l'organizzazione da eliminare;
+  \item[Postcondizione:] viene confermata l'eliminazione dell'organizzazione;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'owner visualizza la conferma di eliminazione di un'organizzazione;
         \end{enumerate}
 \end{description}
 
