@@ -37,16 +37,162 @@
       \begin{centering}
       \rowcolors{2}{lightgray}{white!80!lightgray!100}
       \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
-      \begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{\centering}m{10cm} >{\centering\arraybackslash}m{3cm}}
+      \begin{longtable}[H]{>{\centering\bfseries}p{3cm} >{}p{10cm} >{\centering\arraybackslash}m{3cm}}
         \rowcolor{darkgray!90!}
         \color{white}
-        {\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                                                                                & \color{white}{\textbf{Fonte}} \\
+        {\textbf{ID test}} & \color{white}{\textbf{Descrizione}} & \color{white}{\textbf{Esito}} \\
         \endhead
         \rowcolor{white}
         \multicolumn{3}{r}{\textit{Continua alla pagina seguente}}
         \endfoot
         \endlastfoot
-        
+        TAAFO001      & Al nuovo utente deve essere permesso di registrarsi. \newline 
+                        L’utente deve: 
+                        \begin{itemize} 
+                          \item visualizzare e confermare l’\glossario{EULA};
+                          \item inserire password;
+                          \item confermare la password;
+                          \item inserire i propri dati anagrafici;
+                          \item inserire la proria email;
+                          \item confermare la registrazione.
+                        \end{itemize}
+                      & NS \\   
+        TAAFO002      & Il sistema deve rifiutare la richiesta di registrazione se i dati inseriti non rispettano i vincoli imposti o se l’email è già presente nel database. \newline 
+                        L’utente deve:  
+                        \begin{itemize} 
+                          \item inserire dati di accesso non validi;
+                          \item verificare l'impossibilità di proseguire con la registrazione.
+                        \end{itemize}
+                      & NS \\ 
+        TAAFO003      & Il sistema deve permettere all’utente registrato di autenticarsi. \newline 
+                        L’utente deve: 
+                        \begin{itemize} 
+                          \item inserire la propria email;
+                          \item inserire la propria password;
+                          \item confermare l'autenticazione.
+                        \end{itemize}
+                      & NS \\   
+        TAAFO004      & Il sistema deve rifiutare la richiesta di autenticazione se i dati inseriti non rispettano i vincoli imposti, o se la combinazione di email e password non è presente nel database. \newline 
+                        L’utente deve:  
+                        \begin{itemize} 
+                          \item inserire dati di accesso non validi;
+                          \item verificare l'impossibilità di proseguire con l'autenticazione.
+                        \end{itemize}
+                      & NS \\ 
+        TAAFO005      & Il sistema deve permettere all’utente di recuperare la sua password. \newline 
+                        L’utente deve: 
+                        \begin{itemize} 
+                          \item avviare la procedura di recupero password;
+                          \item inserire la propria email;
+                          \item confermare la procedura;
+                          \item verificare che la password venga ricevuta correttamente;
+                        \end{itemize}
+                      & NS \\   
+        TAAFO006      & Il sistema deve permettere all’utente di reimpostare la sua password. \newline 
+                        L’utente deve:  
+                        \begin{itemize} 
+                          \item avviare la procedura di reimpostazione password;
+                          \item inserire la propria email;
+                          \item inserire la vecchia password;
+                          \item inserire una nuova password;
+                          \item confermare la nuova password;
+                          \item confermare la procedura;
+                          \item verificare che la password sia stata cambiata correttamente;
+                        \end{itemize}
+                      & NS \\ 
+          TAAFO007    & Il sistema deve rifiutare la richiesta di reimpostazione password se la password scelta non rispetta i vincoli imposti. \newline 
+                        L’utente deve: 
+                        \begin{itemize} 
+                          \item avviare la procedura di reimpostazione password;
+                          \item inserire la propria email;
+                          \item inserire la vecchia password;
+                          \item inserire una nuova password non valida;
+                          \item confermare la nuova password;
+                          \item confermare la procedura;
+                          \item visualizzare un messaggio di errore;
+                        \end{itemize}
+                      & NS \\   
+        TAAFO008      & Il sistema deve permettere all’utente autenticato di recuperare dal server una lista di organizzazioni a cui può collegarsi e di aggiornarla. \newline 
+                        L’utente deve:  
+                        \begin{itemize} 
+                          \item autenticarsi;
+                          \item visualizzare la lista di organizzazioni;
+                          \item aggiornare la lista;
+                          \item visualizzare la lista aggiornata.
+                        \end{itemize}
+                      & NS \\ 
+        TAAFO009      & Il sistema deve permettere all’utente autenticato di selezionare una o più organizzazioni dalla lista e collegarsi alle organizzazioni selezionate. \newline 
+                        L’utente deve: 
+                        \begin{itemize} 
+                          \item selezionare una o più organizzazioni dalla lista;
+                          \item avviare la procedura di collegamento.
+                        \end{itemize}
+                      & NS \\   
+        TAAFO010      & Il sistema deve permettere all’utente autenticato e collegato ad una o più organizzazioni di scollegarsi da una o più organizzazioni. \newline 
+                        L’utente deve:  
+                        \begin{itemize} 
+                          \item selezionare una o più organizzazioni a cui è collegato;
+                          \item avviare la procedura di scollegamento.
+                        \end{itemize}
+                      & NS \\ 
+        TAAFO011      & Il sistema deve permettere all’utente autenticato di visualizzare tramite un filtro la lista delle organizzazioni a cui è collegato oppure quella delle organizzazioni da cui è scollegato. \newline 
+                      L’utente deve:  
+                      \begin{itemize} 
+                        \item impostare il filtro;
+                        \item visualizzare la lista richiesta.
+                      \end{itemize}
+                      & NS \\ 
+        TAAFO012      & Il sistema deve permettere all’utente autenticato il passaggio da noto ad incognito e viceversa. \newline 
+                      L’utente deve:  
+                      \begin{itemize} 
+                        \item avviare la procedura di cambio di stato;
+                        \item verificare l'effettivo cambio di stato.
+                      \end{itemize}
+                      & NS \\ 
+        TAAFO013      & Il sistema deve permettere all’utente autenticato di visualizzare il proprio storico. \newline 
+                      L’utente deve:  
+                      \begin{itemize} 
+                        \item visualizzare il proprio storico degli accessi;
+                        \item visualizzare il proprio tempo trascorso all'interno di ogni organizzazione.
+                      \end{itemize}
+                      & NS \\ 
+        TAAFO014      & Il sistema deve permettere all’utente autenticato di disconnettersi dall’applicazione. \newline 
+                      L’utente deve:  
+                      \begin{itemize} 
+                        \item avviare la procedura di disconnessione;
+                        \item confermare la procedura.
+                      \end{itemize}
+                      & NS \\ 
+        TAAFO015      & Il sistema deve permettere all’utente di eliminare il suo account. \newline 
+                      L’utente deve:  
+                      \begin{itemize} 
+                        \item avviare la procedura di eliminazione;
+                        \item confermare la procedura.
+                      \end{itemize}
+                      & NS \\ 
+        TAAFO016      & Il sistema deve mostrare un messaggio d’errore e rifiutare le richieste da parte dell’app nel caso mancasse una connessione a internet. \newline 
+                      L’utente deve:  
+                      \begin{itemize} 
+                        \item disconnettere il dispositivo da internet;
+                        \item effettuare un'azione che richieda la connessione ad internet;
+                        \item visualizzare il messaggio di errore corrispondente.
+                      \end{itemize}
+                      & NS \\ 
+        TAAFO017      & L’interfaccia web deve permettere all’utente non autenticato di autenticarsi. \newline 
+                      L’utente deve:  
+                      \begin{itemize} 
+                        \item compilare il campo email;
+                        \item compilare il campo password;
+                        \item confermare l'autenticazione.
+                      \end{itemize}
+                      & NS \\ 
+        TAAFO018      & L’interfaccia web deve rifiutare la richiesta di autenticazione se i dati inseriti non rispettano i vincoli imposti, o se la combinazione di email e password non è presente nel database. \newline 
+                      L’utente deve:  
+                      \begin{itemize} 
+                        \item inserire una combinazione di dati non validi;
+                        \item verificare la possibilità di proseguire l'autenticazione.
+                      \end{itemize}
+                      & NS \\ 
       \end{longtable}
       %subs:accettazione (end)
     \end{centering}
