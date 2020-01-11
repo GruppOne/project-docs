@@ -102,7 +102,7 @@ Il registro delle modifiche è la seconda pagina di ogni documento. Ha lo scopo 
 
 \paragraph{Indice}%
 \label{par:indice}
-L'indice inizia nella terza pagine del documento e presenta tutti gli argomenti trattati.
+L'indice presenta presenta l'elenco, accompagnato dal numero di pagina, delle sezioni e dei paragrafi di cui è composto il documento.
 GruppOne ha deciso di utilizzare la tipica suddivisione del testo offerta da \LaTeX{} che distingue cinque diversi blocchi testuali:
 \begin{itemize}
   \item Sezioni
@@ -112,18 +112,18 @@ GruppOne ha deciso di utilizzare la tipica suddivisione del testo offerta da \La
   \item Sottoparagrafi.
 \end{itemize}
 
-Ogni blocco testuale ha un numero identificativo univoco la cui lunghezza dipende dal grado di annidamento del blocco che è predefinita da \LaTeX{} (e.g.:\ la sezione Introduzione è indicata con 1, la relativa sottosezione quattro è indicata con 1.4 e i capitoli contenuti in quella sottosezione sono indicati con 1.4.1 e 1.4.2).
-Ogni blocco testuale si identifica mediante una label univoca, utile a creare riferimenti interni al documento.
+Ogni blocco testuale ha un numero identificativo univoco la cui lunghezza dipende dal grado di annidamento del blocco ed è predefinita in \LaTeX{} (e.g.:\ la sezione Introduzione è indicata con 1, la relativa sottosezione quattro è indicata con 1.4 e i capitoli contenuti in quella sottosezione sono indicati con 1.4.1 e 1.4.2).
+Ogni blocco testuale si identifica mediante una \glossario{label} univoca, utile a creare riferimenti interni al documento.
 
-Ogni riga dell'indice contiene il numero di pagina in cui il blocco di testo è riferito e cliccando sopra il nome del blocco è possibile raggiungerlo direttamente attraverso un link.
+Ogni riga dell'indice contiene il numero di pagina in cui si trova la sezione o il paragrafo a cui si riferisce e, cliccando sul nome del blocco, è possibile raggiungerlo direttamente.
 
 \paragraph{Contenuto}%
 \label{par:contenuto}
 Le pagine di contenuto sono suddivise in tre parti:
 \begin{description}
-  \item [Header] contiene in alto a sinistra il logo del gruppo, mentre in alto a destra il nome del documento.
+  \item [Header] contiene sinistra il logo del gruppo, a destra il nome del documento.
   \item [Contenuto] contiene il testo del documento.
-  \item [Footer] contiene l'indicazione della pagina attuale rispetto il totale (e.g 1/6).
+  \item [Footer] contiene l'indicazione della pagina attuale rispetto il totale (e.g 1 di 6).
 \end{description}
 
 \paragraph{Norme per la redazione dei documenti}%
@@ -143,10 +143,10 @@ In questo paragrafo GruppOne definisce le norme che uniformano lo stile di scrit
 
 \subparagraph{Elenchi }%
 \label{subp:elenchi}
-Gli elenchi sono un mezzo ottimo per la scrittura di documentazione. Essi permettono di riordinare il testo e di organizzare una serie di elementi correlati. Pertanto, in questo paragrafo, si stabiliscono le norme per il loro corretto uso:
+Gli elenchi sono un ottimo mezzo per la scrittura di documentazione. Essi permettono di riordinare il testo e di organizzare una serie di elementi correlati, pertanto, in questo paragrafo, si stabiliscono le norme per il loro corretto uso:
 
 \begin{enumerate}
-  \item Per indicare gli elementi di un elenco puntato non innestato utilizzare il simbolo •. Gli elementi innestati vengono preceduti da -.
+  \item Per indicare gli elementi di un elenco puntato non innestato utilizziamo il simbolo •. Gli elementi innestati sono preceduti da -.
   \item Ogni elemento di elenco puntato inizia con una lettera maiuscola.
   \item Se un elenco ha elementi composti da etichetta e descrizione, l'etichetta deve essere scritta in grassetto e la descrizione va inserita dopo i due punti.
   \item Gli elenchi puntati semplici non hanno bisogno di punti fermi per terminare la frase. Gli elenchi puntati complessi cioè che possono essere formati da lunghi periodi necessitano di un punto al termine della frase.
@@ -158,7 +158,7 @@ Gli elenchi sono un mezzo ottimo per la scrittura di documentazione. Essi permet
 Per identificare i file memorizzati nel repository si seguono le seguenti convenzioni:
 
 \begin{itemize}
-  \item I nomi dei file devono essere in minuscolo.
+  \item I nomi dei file devono essere in minuscolo e ignorare eventuali accenti o apostrofi.
   \item Le parole contenute nei nomi di file composti devono essere separate da -.
 \end{itemize}
 
@@ -198,7 +198,7 @@ Si elencano una serie di sigle che possono essere utilizzate nei documenti. Si a
         \end{description}
 \end{itemize}
 
-\subparagraph{Convenzioni_comuni}%
+\subparagraph{Convenzioni comuni}%
 \label{subp:convenzioni_comuni}
 Per la scrittura delle date si fa uso della seguente convenzione:
 \begin{center}
@@ -272,7 +272,7 @@ I documenti esterni sono destinati al committente. Appartengono a tale categoria
 \subparagraph{Verbali}%
 \label{subp:verbali}
 I verbali contengono un riassunto degli incontri di GruppOne.
-Se qualche componente del gruppo non fosse presente a un incontro è necessario che prenda visione del relativo verbale in modo che possa informarsi su cosa è stato discusso alla riunione in cui era assente.
+Se qualche componente del gruppo non fosse presente a un incontro verbale, è necessario che prenda visione del relativo verbale in modo da informarsi sugli argomenti discussi alla riunione in cui era assente.
 I verbali si distinguono in interni ed esterni. Ogni verbale è contraddistinto da un nome così strutturato:
 \begin{center}
   \textbf{verbaleyyyy-mm-dd.tex}
@@ -282,7 +282,7 @@ I verbali sono così costituiti:
 \begin{description}
   \item [Titolo] il titolo indica che il documento in questione è un verbale e mostra la data di redazione.
   \item [Schema] lo schema contiene le informazioni basilari relative al documento. È identico allo schema degli altri documenti, spiegato nella sezione~\ref{par:frontespizio}.
-  \item [Registro delle modifiche] il registro delle modifiche ha la struttura si quello presentato in~\ref{par:registro_delle_modifiche}.
+  \item [Registro delle modifiche] il registro delle modifiche ha la struttura di quello presentato in~\ref{par:registro_delle_modifiche}.
   \item [Ordine del giorno] l'ordine del giorno consiste in un elenco puntato degli argomenti che saranno trattati nel verbale.
   \item [Sezioni] Ogni sezione del documento sviluppa un elemento dell'ordine del giorno.
   \item [Registro delle decisioni] il registro delle decisioni indica le decisioni prese sulla base degli argomenti discussi nell'ordine del giorno.
@@ -293,7 +293,7 @@ I verbali sono così costituiti:
 \paragraph{\LaTeX}%
 \label{par:LaTeX}
 \LaTeX{} è lo strumento utilizzato da GruppOne per la stesura: si è preferito non utilizzare dei tool online per la scrittura dei documenti.
-Ogni componente del gruppo ha scaricato, invece, un'estensione per il proprio IDE preferito (Sublime Text o Visual Studio Code) che consentisse l'installazione dei principali package di \LaTeX{} e che garantisse correttamente l'esecuzione del processo di build dei file *.tex.
+Ogni componente del gruppo ha scaricato, invece, un'estensione per il proprio IDE preferito (Sublime Text o Visual Studio Code) che consentisse l'installazione dei principali package di \LaTeX{} e che garantisse correttamente l'esecuzione del processo di compilazione dei file *.tex.
 
 \subsection{Gestione della configurazione}%
 \label{sub:gestione_della_configurazione}
@@ -303,9 +303,9 @@ Ogni componente del gruppo ha scaricato, invece, un'estensione per il proprio ID
 
 GruppOne istanzia il processo di gestione della configurazione per:
 \begin{itemize}
-  \item Assicurare completezza e correttezza del prodotto
-  \item Gestire al meglio il lavoro di gruppo
-  \item Identificare procedure per l'organizzazione,gestione e rilascio del prodotto
+  \item Assicurare completezza e correttezza del prodotto.
+  \item Gestire al meglio il lavoro di gruppo.
+  \item Identificare procedure per l'organizzazione, gestione e rilascio del prodotto.
   \item Conservare documentazione e software in un luogo a tutti accessibile.
 \end{itemize}
 
@@ -328,12 +328,12 @@ GruppOne istanzia il processo di gestione della configurazione per:
 \label{subs:accertamento_della_qualita/finalita}
 
 GruppOne istanzia il processo di accertamento della qualità per garantire qualità di processo e di prodotto.
-Gli esiti dei processi di verifica e validazione saranno indispensabili al buon svolgimento del processo di accertamento della qualità.
+Gli esiti dei processi di verifica e validazione saranno indispensabili nello svolgimento del processo di accertamento della qualità.
 
 \subsubsection{Descrizione}%
 \label{subs:accertamento_della_qualita/descrizione}
 
-Il processo di accertamento della qualità garantisce che i prodotti e i processi del ciclo di vita del software rispettino i requisiti prestabiliti e che aderiscano ai piani esecutivi prestabiliti. Le metriche e gli strumenti per valutare la qualità sono presentati nel \glossario{piano di qualifica}.
+Il processo di accertamento della qualità garantisce che i prodotti e i processi del ciclo di vita del software rispettino i requisiti prestabiliti e che aderiscano ai piani esecutivi prefissati. Le metriche e gli strumenti per valutare la qualità sono presentati nel \glossario{piano di qualifica}.
 
 \subsubsection{Attività}%
 \label{subs:accertamento_della_qualita/attivita}
@@ -341,23 +341,23 @@ Il processo di accertamento della qualità garantisce che i prodotti e i process
 Le principali attività coinvolte nel processo di accertamento della qualità sono:
 
 \begin{description}
-  \item [Pianificazione] si cercano le metodologie, le procedure, gli strumenti e anche le attività offerte da altri processi di supporto per organizzare le pianificazione della qualità.
-  \item [Implementazione] si utilizza ciò che si è individuato al passo 1 per effettuare controlli di qualità sui processo in atto e sui prodotti in atto.
+  \item [Pianificazione] si cercano le metodologie, le procedure, gli strumenti le attività offerte da altri processi di supporto per organizzare le pianificazione della qualità.
+  \item [Implementazione] si utilizza ciò che si è individuato al passo precedente per effettuare controlli di qualità sui processi e sui prodotti in atto.
   \item [Documentazione dei risultati] i risultati dei controlli di qualità dovrebbero essere poi documentati.
 \end{description}
 
 \paragraph{Accertamento qualità di prodotto}%
 \label{par:accertamento_qualita_di_prodotto}
-L'attività di accertamento della qualità di prodotto vigila sulla qualità dei prodotti realizzati. Essa promuove controlli continui che possano prevenire danni irreparabili al termine del progetto. È fortemente dipendente dalla qualità di processo: da processi privi di qualità, infatti, non è possibile ottenere buoni prodotti.
+L'attività di accertamento della qualità di prodotto assicura la qualità dei prodotti realizzati e promuove controlli continui che possano prevenire danni irreparabili al termine del progetto. È fortemente dipendente dalla qualità di processo: da processi privi di qualità, infatti, non è possibile ottenere buoni prodotti.
 
 \paragraph{Accertamento qualità di processo}%
 \label{par:accertamento_qualita_di_processo}
 L'attività di accertamento della qualità di processo monitora i processi istanziati. Per avere un sistema di accertamento della qualità di processo che funzioni è necessario che:
 
 \begin{itemize}
-  \item Si individuino i processi da controllare
-  \item Si stabiliscano le metriche di valutazione del processo
-  \item Si eseguano accertamenti continui sui processi scelti
+  \item Si individuino i processi da controllare.
+  \item Si stabiliscano le metriche di valutazione del processo.
+  \item Si eseguano accertamenti continui sui processi scelti.
   \item In base ai risultati ottenuti, si ricerchi un miglioramento dei processi.
 \end{itemize}
 
@@ -384,17 +384,17 @@ Il ciclo di Deming o ciclo PDCA è un processo iterativo per il monitoraggio e i
 \label{subs:verifica/finalita}
 
 GruppOne istanzia il processo di verifica per certificare che il susseguirsi di attività diverse non comporti l'introduzione di errori nei prodotti intermedi.
-Si deve verificare qualsiasi prodotti intermedio, pertanto sia documentazione che codice sono soggetti a verifica.
+Si deve verificare qualsiasi prodotto intermedio, pertanto sia documentazione che codice sono soggetti a verifica.
 
 \subsubsection{Descrizione}%
 \label{subs:verifica/descrizione}
 
 
-Il processo di verifica è il processo che controlla e garantisce che i prodotti di una determinata attività soddisfino i requisiti e le condizioni che quel prodotto deve avere. Il processo di verifica si integra in toto con gli altri processi, in particolare con quello di sviluppo e offre attività di revisione, analisi e test. È composto da due attività:
+Il processo di verifica è il processo che controlla e garantisce che i prodotti di una determinata attività soddisfino i requisiti e le condizioni che quel prodotto deve avere. Il processo di verifica si integra in toto con gli altri processi, in particolare con quello di sviluppo, e offre attività di revisione, analisi e test. È composto da due attività:
 
 \begin{itemize}
   \item Implementazione di processo
-  \item Verifica
+  \item Verifica.
 \end{itemize}
 
 \paragraph{Analisi statica}%
@@ -423,10 +423,10 @@ GruppOne predilige la tecnica inspection pertanto si impegna a fornire una check
 Di seguito si riporta una checklist da seguire per effettuare l'analisi statica dei documenti:
 
 \begin{description}
-  \item [Errori di ortografia] si devono individuare errori di punteggiatura.
+  \item [Errori di ortografia] si devono individuare errori di punteggiatura e ortografia.
   \item [Errori nei verbi] si deve controllare che tutti i verbi siano in forma attiva.
   \item [Errori di sintassi] si deve verificare che non ci siano paragrafi di lunghezza eccessiva e che le frasi siano il più brevi possibile.
-  \item [Errori negli elenchi puntati] si deve controllare che ogni elemento di elenco puntato inizi con la lettera maiuscola e che vengano rispettate le regole definite in~\ref{subp:elenchi}.
+  \item [Errori negli elenchi puntati] si deve controllare che ogni elemento degli elenchi puntati inizi con la lettera maiuscola e che vengano rispettate le regole definite in~\ref{subp:elenchi}.
   \item [Errori nella strutturazione del documento] si deve verificare che tutti i paragrafi si trovino nella sezione corretta, che le sezioni siano ben strutturate e che i titoli siano significativi.
 \end{description}
 
@@ -439,7 +439,7 @@ Essa cerca di dimostrare che il programma svolge i compiti per il quale è stato
 Si realizza attraverso la creazione e l'esecuzione di test che producono deterministicamente un risultato da confrontare con un valore atteso.
 Il numero di test è chiaramente finito e quindi non sarà possibile provare tutte le esecuzioni possibili.
 Per questo motivo bisogna produrre dei test sensati.
-Un test affinché sia definito come tale deve avere delle precise caratteristiche:
+Un test, affinché sia definito come tale, deve avere delle precise caratteristiche:
 
 \begin{itemize}
   \item Velocità
@@ -452,23 +452,23 @@ Un test affinché sia definito come tale deve avere delle precise caratteristich
 Per ogni tipo di test è necessario fornire la sua copertura.
 Essa è un valore percentuale e indica quante linee di codice i test hanno esercitato sul totale.
 Più la copertura è alta meglio è, tuttavia una copertura del 100 \% non dà in alcun modo la certezza di essere in assenza di difetti.
-Il capitolato di Stalker richiede una copertura dei test pari almeno all' 80 \% corredata da report.
+Il capitolato di Stalker richiede una copertura dei test pari almeno all' 80 \%, correlata da report.
 
 \subparagraph{Test di unità}%
 \label{subp:test_di_unita}
-Il software è un insieme di componenti. Per effettuare verifica del software è necessario adottare un approccio \glossario{bottom-up} che deve necessariamente occuparsi di controllare prima che le unità su cui è costruito il software siano corrette. I test di unità, quindi, servono proprio a testare i moduli elementari del software.
+Il software è un insieme di componenti. Per effettuare verifica del software è necessario adottare un approccio \glossario{bottom-up} che deve necessariamente occuparsi di controllare anzitutto che le unità su cui è costruito il software siano corrette. I test di unità, quindi, servono a testare i moduli elementari del software.
 
 \subparagraph{Test di integrazione}%
 \label{subp:test_di_integrazione}
-I test di integrazione si occupano di verificare l'interazione tra le sottocomponenti del sistema. Essi suppongono che i test di unità siano già stati eseguiti e abbiano dato esito positivo. Lo scopo dei test di integrazione è, pertanto quello di dimostrare che le interfacce delle componenti del software si comportino conformemente alle specifiche richieste.
+I test di integrazione si occupano di verificare l'interazione tra le sottocomponenti del sistema. Essi suppongono che i test di unità siano già stati eseguiti e abbiano dato esito positivo. Lo scopo dei test di integrazione è quello di dimostrare che le interfacce delle componenti del software si comportino conformemente alle specifiche richieste.
 
 \subparagraph{Test di sistema}%
-\label{test_di_sistemaa}
-I test di sistema si possono iniziare solo nel momento in cui i test di integrazione abbiano dato esito positivo. Essi verificano il comportamento generale del software rispetto ai requisiti. Durante i test di sistema si esercitano quelle funzionalità di alcune componenti del software che sono fortemente dipendenti da altri moduli del sistema.
+\label{test_di_sistema}
+I test di sistema si possono iniziare solo nel momento in cui i test di integrazione abbiano dato esito positivo. Essi verificano il comportamento generale del software rispetto ai requisiti. Durante i test di sistema si esercitano le funzionalità di alcune componenti del software che sono fortemente dipendenti da altri moduli del sistema.
 
 \subparagraph{Test di regressione}%
 \label{test_di_regressione}
-I test di regressione servono per accertare che modifiche apportate non comportino altri errori nel software: consiste nella ripetizione selettiva di test di unità, test di integrazione, test di sistema.
+I test di regressione servono per accertare che le modifiche apportate non comportino altri errori nel software: consistono nella ripetizione selettiva di test di unità, integrazione, test di sistema.
 
 \subparagraph{Test di accettazione}%
 \label{test_di_accettazione}
@@ -553,7 +553,7 @@ Per la verifica del codice ogni componente ha installato sulla propria macchina 
 \subparagraph{Code owners}%
 \label{subp:code_owners}
 
-Per la gestione delle pull request GruppOne ha optato per l'utilizzo di Code Owners. Code Owners è uno strumento che permette di attribuire responsabilità all'interno di un team: ad ogni documento di progetto corrisponde un Code Owner il quale verrà notificato ogniqualvolta un verificatore del team aprirà una pull request su un file di cui è responsabile. Ogni pull request sarà quindi approvata solo se il corrispettivo code owner ne prende visione e concorda con le modifiche proposte.
+Per la gestione delle pull request GruppOne ha optato per l'utilizzo di Code Owners. Code Owners è uno strumento che permette di attribuire responsabilità all'interno di un team: ad ogni documento di progetto corrisponde un Code Owner il quale verrà notificato ogniqualvolta un verificatore del team aprirà una pull request su un file di cui è responsabile. Ogni pull request sarà quindi approvata quando il corrispettivo code owner ne avrà preso visione e avrà accettato le modifiche proposte.
 
 \subsection{Validazione}%
 \label{sub:validazione}
@@ -561,7 +561,7 @@ Per la gestione delle pull request GruppOne ha optato per l'utilizzo di Code Own
 \subsubsection{Finalità}%
 \label{subs:validazione/finalita}
 
-GruppOne istanzia il processo di validazione per assicurarsi che il prodotto finale realizzato abbia pienamente soddisfatto le attese del committente.
+GruppOne istanzia il processo di validazione per assicurarsi che il prodotto finale realizzato soddisfi pienamente le attese del committente.
 
 \subsubsection{Descrizione}%
 \label{subs:validazione/descrizione}
