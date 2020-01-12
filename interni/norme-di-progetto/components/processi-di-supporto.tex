@@ -32,8 +32,7 @@ GruppOne istanzia il processo di documentazione per illustrare in maniera chiara
 \subsubsection{Descrizione}%
 \label{subs:documentazione/descrizione}
 
-La documentazione è essenziale durante ogni attività del ciclo di vita del software.
-Essa costituisce un importante mezzo di comunicazione per i membri del team che per il committente.
+La documentazione è essenziale durante ogni attività del ciclo di vita del software, essa costituisce un importante mezzo di comunicazione per i membri del team che per il committente.
 Si vogliono quindi definire delle norme che possano standardizzare il processo di documentazione e renderlo più accessibile a tutti i componenti del gruppo.
 
 \subsubsection{Implementazione}%
@@ -92,7 +91,7 @@ Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: ne
 
 \paragraph{Registro delle modifiche}%
 \label{par:registro_delle_modifiche}
-Il registro delle modifiche è la seconda pagina di ogni documento. Ha lo scopo di presentare quali cambiamenti sono stati effettuati e da parte di quale componente del gruppo. Consiste di cinque colonne ed è così articolato:
+Il registro delle modifiche ha lo scopo di presentare quali cambiamenti sono stati effettuati e da parte di quale componente del gruppo. Consiste di cinque colonne ed è così articolato:
 \begin{description}
   \item [Versione] indica la versione del documento in cui viene realizzata la modifica.
   \item [Data] indica la data di modifica del documento con formato yyyy/mm/dd.
@@ -120,7 +119,7 @@ Ogni riga dell'indice contiene il numero di pagina in cui si trova la sezione o 
 
 \paragraph{Contenuto}%
 \label{par:contenuto}
-Le pagine di contenuto sono suddivise in tre parti:
+Le pagine di contenuto sono suddivise in tre parti, dall'alto verso il basso:
 \begin{description}
   \item [Header] contiene sinistra il logo del gruppo, a destra il nome del documento.
   \item [Contenuto] contiene il testo del documento.
@@ -150,7 +149,7 @@ Gli elenchi sono un ottimo mezzo per la scrittura di documentazione. Essi permet
   \item Per indicare gli elementi di un elenco puntato non innestato utilizziamo il simbolo •. Gli elementi innestati sono preceduti da -.
   \item Ogni elemento di elenco puntato inizia con una lettera maiuscola.
   \item Se un elenco ha elementi composti da etichetta e descrizione, l'etichetta deve essere scritta in grassetto e la descrizione va inserita dopo i due punti.
-  \item Gli elenchi puntati semplici non hanno bisogno di punti fermi per terminare la frase. Gli elenchi puntati complessi cioè che possono essere formati da lunghi periodi necessitano di un punto al termine della frase.
+  \item Gli elenchi puntati semplici non hanno bisogno di punti fermi per terminare la frase. Gli elenchi puntati complessi, che possono essere formati da lunghi periodi, necessitano di un punto al termine della frase.
   \item L'ultimo elemento dell'elenco deve comunque avere obbligatoriamente un punto al termine della frase.
 \end{enumerate}
 
@@ -219,7 +218,7 @@ dove x indica la numerazione delle immagini (e.g.:\ figura 1, figura 2, figura 3
 
 \subparagraph{Tabelle}%
 \label{subp:tabelle}
-L'uso di tabelle è consigliato solo quando strettamente necessario. La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento in cui risulti molto difficile organizzare informazioni aventi una struttura complessa. È obbligatorio l'uso di colori che abbiano un elevato contrasto al fine di promuovere la leggibilità. Inoltre, non devono essere eccessivamente lunghe (massimo 2 pagine), altrimenti risultano dispersive.
+L'uso di tabelle è consigliato solo quando strettamente necessario. La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento in cui risulti molto difficile organizzare informazioni aventi una struttura complessa. È obbligatorio l'uso di colori che abbiano un elevato contrasto al fine di promuovere la leggibilità. Inoltre, non devono essere eccessivamente lunghe altrimenti risultano dispersive.
 
 \subsubsection{Produzione}%
 \label{subs:produzione}
@@ -273,7 +272,7 @@ I documenti esterni sono destinati al committente. Appartengono a tale categoria
 \subparagraph{Verbali}%
 \label{subp:verbali}
 I verbali contengono un riassunto degli incontri di GruppOne.
-Se qualche componente del gruppo non fosse presente a un incontro verbale, è necessario che prenda visione del relativo verbale in modo da informarsi sugli argomenti discussi alla riunione in cui era assente.
+Se qualche componente del gruppo non fosse presente ad un incontro verbale, è necessario che prenda visione del relativo verbale, in modo da informarsi sugli argomenti discussi alla riunione in cui era assente.
 I verbali si distinguono in interni ed esterni. Ogni verbale è contraddistinto da un nome così strutturato:
 \begin{center}
   \textbf{verbaleYYYY-MM-DD.tex}
@@ -296,7 +295,7 @@ I verbali sono così costituiti:
 \LaTeX{} è lo strumento utilizzato da GruppOne per la stesura dei documenti. Si è preferito non utilizzare dei tool online per la scrittura dei documenti, dato che avevano dei vincoli di costo non sostenibili.
 Ogni componente del gruppo ha installato, invece, una distribuzione di \TeX{}\LaTeX{} a piacere che includesse Lua\TeX{} e ne esponesse sul \verb|PATH| di sistema l'eseguibile.
 
-Ognuno ha inoltre aggiunto un'estensione per il proprio Code Editor preferito (Sublime Text o Visual Studio Code) che consentisse di facilitare la corretta esecuzione del processo di build dei file *.tex.
+Ognuno ha inoltre aggiunto un'estensione per il proprio Code Editor preferito (Sublime Text o Visual Studio Code) che consentisse di facilitare la corretta esecuzione del processo di compilazione dei file *.tex.
 
 Questa avviene attraverso il comando:
 
@@ -360,7 +359,7 @@ Le principali attività coinvolte nel processo di accertamento della qualità so
 
 \begin{description}
   \item [Pianificazione] si cercano le metodologie, le procedure, gli strumenti le attività offerte da altri processi di supporto per organizzare le pianificazione della qualità.
-  \item [Implementazione] si utilizza ciò che si è individuato al passo precedente per effettuare controlli di qualità sui processi e sui prodotti in atto.
+  \item [Implementazione] si utilizza ciò che si è individuato al punto precedente per effettuare controlli di qualità sui processi e sui prodotti in atto.
   \item [Documentazione dei risultati] i risultati dei controlli di qualità dovrebbero essere poi documentati.
 \end{description}
 
@@ -470,7 +469,7 @@ Un test, affinché sia definito come tale, deve avere delle precise caratteristi
 Per ogni tipo di test è necessario fornire la sua copertura.
 Essa è un valore percentuale e indica quante linee di codice i test hanno esercitato sul totale.
 Più la copertura è alta meglio è, tuttavia una copertura del 100 \% non dà in alcun modo la certezza di essere in assenza di difetti.
-Il capitolato di Stalker richiede una copertura dei test pari almeno all' 80 \%, correlata da report.
+Il capitolato di Stalker richiede una copertura dei test pari almeno all' 80 \%, correlata di report.
 
 \subparagraph{Test di unità}%
 \label{subp:test_di_unita}
@@ -641,9 +640,9 @@ Dovendo verificare se il prodotto finale soddisfa i requisiti, anche il processo
 Il piano di validazione comprende tutte le attività del processo di validazione:
 
 \begin{itemize}
-  \item Scelta dell'oggetto di validazione
-  \item Decisione dei compiti da eseguire per realizzare la validazione
-  \item Determinazione delle risorse e delle responsabilità
+  \item Scelta dell'oggetto di validazione.
+  \item Decisione dei compiti da eseguire per realizzare la validazione.
+  \item Determinazione delle risorse e delle responsabilità.
   \item Procedure per fornire al cliente i report di validazione.
 \end{itemize}
 
