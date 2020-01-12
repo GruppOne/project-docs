@@ -5,6 +5,127 @@
 % TODO usare https://www.praxiom.com/iso-90003.htm?
 \begin{document}
 
+Per valutare la qualità di prodotto il gruppo ha deciso di fare riferimento allo standard \glossario{ISO/IEC 25010}, che indica le caratteristiche di qualità del prodotto software e della qualità in uso. Le caratteristiche che il gruppo ha ritenuto rilevanti per il prodotto vengono elencate qui sotto, accompagnate dai valori desiderabili delle metriche definite nelle \textit{Norme di Progetto} per misurare il grado di raggiungimento della qualità di prodotto.
+
+\subsection{Appropriatezza funzionale}%
+\label{sub:appropriatezza_funzionale}
+  Rappresenta il grado a cui un prodotto software fornisce funzionalità che rispettano requisiti espliciti o impliciti se usato in specifiche condizioni.
+  \subsubsection{Obiettivi}
+  \label{subs:obiettivi}
+      \begin{description}
+        \item [Correttezza]: Grado con cui il prodotto fornisce risultati corretti con il livello di precisione richiesto.
+        \item [Completezza]: Grado con cui le funzionalità offerte dal prodotto coprono tutti i compiti specificati e gli obiettivi dell'utente
+        \item [Appropriatezza]: Grado con cui le funzionalità del prodotto agevolano il raggiungimento di determinati obiettivi.
+      \end{description}
+  % subs:obiettivi (end)
+
+  \subsubsection{Metriche}%
+  \label{subs:metriche}
+  
+  % subs:metriche (end)
+
+% sub:appropriatezza_funzionale (end)
+
+\subsection{Performance}%
+\label{sub:performance}
+ Questa caratteristica rappresenta la performance del prodotto relativamente alle risorse utilizzate in specifiche condizioni.
+  \subsubsection{Obiettivi}
+  \label{subs:obiettivi}
+      \begin{description}
+        \item[Risposta nel tempo]: Grado con cui i tempi di risposta e di elaborazione del prodotto rispettano i requisiti.
+        \item[Utilizzo delle risorse]: Grado con cui la quantità e il tipo di risorse usate dal prodotto rispettano i requisiti.
+        \item[Capacità]: Grado con cui il massimo limite di un parametro del prodotto rispetta i requisiti.
+      \end{description}
+  % subs:obiettivi (end)
+
+  \subsubsection{Metriche}%
+  \label{subs:metriche}
+
+  % subs:metriche (end)
+
+% sub:performance (end)
+
+\subsection{Sicurezza}%
+\label{sub:sicurezza}
+ Questa caratteristica indica il grado con cui il prodotto protegge e limita l'accesso a dati e informazioni in modo da rispettare i livelli di autorizzazione definiti.
+  \subsubsection{Obiettivi}
+  \label{subs:obiettivi}
+      \begin{description}
+        \item [Riservatezza]: Grado con cui il prodotto garantisce che i dati siano accessibili solamente a entità autorizzate.
+        \item [Integrità]: Grado con cui il prodotto previene utilizzo e modifica non autorizzati di computer, programmi e dati.
+        \item [Non-ripudiazione]: Grado con cui azioni o eventi che è provato siano avvenute non possano essere ripudiate successivamente
+        \item [Autenticazione]: Grado con cui le azioni di un'entità possono essere collegate univocamente all'entità.
+        \item [Autenticità]: Grado con cui l'identità di un soggetto o risorsa può essere confermata.
+      \end{description}
+  % subs:obiettivi (end)
+
+  \subsubsection{Metriche}%
+  \label{subs:metriche}
+
+  % subs:metriche (end)
+
+% sub:sicurezza (end)
+
+\subsection{Mantenibilità}%
+\label{sub:mantenibilita}
+Questa caratteristica rappresenta il grado di efficacia e efficienza con cui il prodotto può essere migliorato, corretto o adattato a nuovi requisiti.
+\subsubsection{Obiettivi}
+\label{subs:obiettivi}
+      \begin{description}
+        \item [Modularità]: Grado con cui il prodotto è composto da parti indipendenti in modo che una modifica a una componente abbia un impatto minimo su tutte le altre.
+        \item [Riusabilità]: Grado con cui una risorsa può essere utilizzata in più di un sistema.
+        \item [Analizzabilità]: Grado di efficacia e di efficienza con cui è possibile identificare le cause di errori nel prodotto e le parti da modificare.
+        \item [Modificabilità]: Grado con cui il prodotto può essere efficacemente ed efficientemente modificato senza introdurre regressioni.
+        \item [Testabilità]: Grado di efficacia e di efficienza con cui possono essere stabiliti i criteri di test e con cui quei test possono essere eseguiti per verificare quei criteri.
+      \end{description}
+% subs:obiettivi (end)
+
+\subsubsection{Metriche}%
+\label{subs:metriche}
+
+% subs:metriche (end)
+
+% sub:mantenibilita (end)
+
+\subsection{Usabilità}%
+\label{sub:usabilita}
+Questa caratteristica rappresenta il grado con cui il prodotto può essere usato da un determinato utente per raggiungere obiettivi specifici con efficienza, efficacia e soddisfazione in un determinato contesto d'uso.
+\subsubsection{Obiettivi}
+\label{subs:obiettivi}
+      \begin{description}
+        \item [Apprendibilità]: Grado con cui il prodotto consente a un determinato utente di apprendere ad utilizzare il prodotto con efficienza, efficacia, libertà dai rischi, e soddisfazione.
+        \item [Operabilità]: Grado con un il prodotto presenta delle caratteristiche che lo rendono di semplice utilizzo.
+        \item [Protezione dagli errori]: Grado con cui il prodotto protegge l'utente dal commettere errori.
+        \item [Accessibilità]: Grado con cui il prodotto risulta utilizzabile da persone con caratteristiche e capacità varie per raggiungere un determinato obiettivo.
+      \end{description}
+% subs:obiettivi (end)
+
+\subsubsection{Metriche}%
+\label{subs:metriche}
+
+% subs:metriche (end)
+
+% sub:usabilita (end)
+
+\subsection{Affidabilità}%
+\label{sub:affidabilita}
+ Questa caratteristica rappresenta il grado con cui il prodotto effettua specifici compiti sotto determinate condizioni per un periodo di tempo fissato.
+\subsubsection{Obiettivi}
+\label{subs:obiettivi}
+      \begin{description}
+        \item [Maturità]: Grado con cui il prodotto rispetta i requisiti di affidabilità in condizioni normali.
+        \item [Disponibilità]: Grado con cui il prodotto risulta operativo e accessibile quando ne è richiesto l'uso.
+        \item [Tolleranza agli errori]: Grado con cui il prodotto continua ad operare in maniera corretta nonostanze la presenza di errori software e hardware.
+        \item [Recuperabilità]: Grado con cui il prodotto, in caso di un'interruzione o di un errore, riesce a recuperare i dati coinvolti e ristabilire il corretto funzionamento del sistema.
+      \end{description}
+% subs:obiettivi (end)
+
+\subsubsection{Metriche}%
+\label{subs:metriche}
+
+% subs:metriche (end)
+
+% sub:affidabilita (end)
 
 \subsection{Specifica dei test}%
 \label{sub:test}
