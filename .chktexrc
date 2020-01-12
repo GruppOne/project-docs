@@ -264,7 +264,9 @@ UserWarnRegex
 
   (?!#2:! Includere! immagini! usando! solo! il! nome! del! file! e! il! comando! \graphicspath)\\includegraphics(\[.*\])?\{.*\/.*\}
   (?!#3:! Utilizziamo! lo! spelling! email,! non! e-mail)e-mail
-  (?!#4:! Lo! spelling! corretto! è! GitHub)[Gg]ithub
+  (?!#4:! Lo! spelling! corretto! e'! GitHub)[Gg]ithub
+  (?!#5:! Lo! spelling! corretto! e'! PlantUML! o! plantuml)Plant[uU]ml|plantU[mM][lL]
+  (?!#6:! \@! va! prima! del! punto)\.\\@
 }
 
 
