@@ -18,8 +18,8 @@
   \item[Postcondizione:] la registrazione va a buon fine e l'utente è registrato;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item prima di procedere con la registrazione, l'utente visualizza l'\glossario{EULA} e per continuare deve accettare i vincoli stabiliti da essa;
-          \item una volta accettata l'EULA, l'utente provvede all'inserimento dei dati personali per la registrazione.
+          \item prima di procedere con la registrazione, l'utente visualizza il \glossario{EULA} e per continuare deve accettare i vincoli stabiliti da essa;
+          \item una volta accettato il EULA, l'utente provvede all'inserimento dei dati personali per la registrazione.
         \end{enumerate}
 \end{description}
 
@@ -31,10 +31,10 @@
   \item[Titolo:] Visualizzazione EULA;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] l'utente è all'interno della schermata di registrazione;
-  \item[Postcondizione:] l'utente visualizza l'EULA;
+  \item[Postcondizione:] l'utente visualizza il EULA;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'utente visualizza una schermata con tutti i vincoli da accettare presenti nell'EULA.
+          \item l'utente visualizza una schermata con tutti i vincoli da accettare presenti nel EULA.
         \end{enumerate}
 \end{description}
 
@@ -55,11 +55,11 @@
   \item[Caso d’uso:] UUC1.1.1;
   \item[Titolo:] Conferma EULA;
   \item[Attori primari:] utente non autenticato;
-  \item[Precondizione:] l'utente visualizza l'EULA;
-  \item[Postcondizione:] l'utente continua la registrazione in quanto ha accettato l'EULA;
+  \item[Precondizione:] l'utente visualizza il EULA;
+  \item[Postcondizione:] l'utente continua la registrazione in quanto ha accettato il EULA;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item E' presente un'opzione per accettare l'EULA: in caso affermativo, la registrazione può andare avanti.
+          \item E' presente un'opzione per accettare il EULA: in caso affermativo, la registrazione può andare avanti.
         \end{enumerate}
 \end{description}
 
@@ -77,7 +77,7 @@
   \item[Caso d’uso:] UUC1.2;
   \item[Titolo:] Inserimento dati registrazione;
   \item[Attori primari:] utente non autenticato;
-  \item[Precondizione:] l'utente ha accettato l'EULA;
+  \item[Precondizione:] l'utente ha accettato il EULA;
   \item[Postcondizione:] l'utente ha inserito correttamente tutti i dati necessari alla registrazione e diventa un utente registrato;
   \item[Scenario principale:]
   \begin{enumerate}
@@ -162,11 +162,11 @@
   \item[Postcondizione:] l'utente ha inserito i dati anagrafici in modo corretto;
   \item[Scenario principale:]
   \begin{enumerate}
-    \item l'utente seleziona i vari campi inerenti ai dati anagrafici e gli inserisce.
+    \item l'utente seleziona i vari campi inerenti ai dati anagrafici e li inserisce.
   \end{enumerate}
   \item[Estensioni:]
   \begin{enumerate}
-    \item se uno o più dati anagrafici inseriti non rispettano determinati vincoli, verrà visualizzato un'errore sui campi in cui è segnalato l'errore~\ref{subs:UUC1.2.5}.
+    \item se uno o più dati anagrafici inseriti non rispettano determinati vincoli, verrà visualizzato un errore sui campi in cui è segnalato l'errore~\ref{subs:UUC1.2.5}.
   \end{enumerate}
 \end{description}
 
