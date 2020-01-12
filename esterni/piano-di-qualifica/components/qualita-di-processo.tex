@@ -16,7 +16,7 @@ Dato il legame stretto tra processi e prodotti (essendo il prodotto l`output di 
 Il way of working dei processi software che GruppOne ha deciso di istanziare è definito all'interno delle norme di progetto insieme alle rispettive metriche di valutazione, mentre nei prossimi paragrafi si cercherà di strutturare l'organizzazione del sistema di qualità.
 Nel complesso la qualità di processo si occupa di:
 \begin{itemize}
-  \item Presentare i processi instanziati e le ragioni di tali scelte.
+  \item Presentare i processi istanziati e le ragioni di tali scelte.
   \item Controllare il processo e migliorarlo.
   \item Definire dei valori soglia delle metriche per avere una quantificazione oggettiva della qualità del processo in esame.
 \end{itemize}
@@ -31,8 +31,29 @@ Il processo di sviluppo è sicuramente uno dei più articolati. Per tale ragione
 \paragraph{Analisi dei requisiti}%
 \label{par:analisi_dei_requisiti}
 
-\paragraph{Progettazione architetturale}%
-\label{par:progettazione_architetturale}
+\subparagraph{Obiettivi}%
+\label{par:obiettivi}
+L'obiettivo dell'attività di analisi dei requisiti è di trasformare i requisiti dello stakeholder in requisiti tecnici che possano guidare il team alla progettazione del software.
+
+\subparagraph{Esiti}
+\label{par:esiti}
+I risultati di un'analisi dei requisiti di qualità sono:
+\begin{itemize}
+	\item La definizione di una serie di requisiti che possano descrivere il problema.
+	\item Una classificazione dei requisiti in modo da poterne tracciare i cambiamenti.
+	\item La realizzazione dei diagrammi dei casi d'uso per iniziare la progettazione.
+	\item La valutazione delle richieste degli stakeholder per negoziare modifiche, se necessarie.
+\end{itemize}
+
+\subparagraph{metriche}
+\label{par:metriche}
+
+\textbf{MPS004}: la metrica che individua i requisiti obbligatori soddisfatti è definita nelle \textit{Norme di progetto} alla sezione \plchold{3.5.2.3.5}.
+\begin{itemize}
+	\item Risultato : percentuale di requisiti obbligatori soddisfatti al momento di calcolo nell'indice.
+	\item valore ottimale : 100 \%.
+	\item valore minimale : 100 \%.
+\end{itemize}
 
 \subsection{Processi di supporto}%
 \label{sub:processi_di_supporto}
@@ -40,16 +61,80 @@ Il processo di sviluppo è sicuramente uno dei più articolati. Per tale ragione
 \subsubsection{Processo di documentazione}%
 \label{subs:processo_di_documentazione}
 
+\paragraph{Obiettivi}
+\label{par:obiettivi}
+Lo scopo del processo di documentazione è di tracciare e mantenere registrate informazioni e prodotti relativi ai processi.
+
+\paragraph{Esiti}
+\label{par:esiti}
+L'istanziazione del processo di documentazione di qualità implica la produzione di documentazione:
+\begin{itemize}
+	\item Completa
+	\item Leggibile
+	\item Corretta
+	\item Coerente
+	\item Fatta di parti
+	\item Accessibile a tutti i componenti del gruppo.
+\end{itemize}
+
+\paragraph{Metriche}
+\label{par:metriche}
+
+\textbf{MPS001}: l'indice di Gulpease è definito nelle \textit{Norme di progetto} alla sezione 	\plchold{3.5.2.3.2}.
+\begin{itemize}
+	\item Risultato: indice compreso tra 0 e 100 che stabilisce la leggibilità del testo in base ala lunghezza delle parole.
+	\item Valore ottimale: compreso tra 80 e 100.
+	\item Valore minimale: non inferiore a 50.
+\end{itemize}
+
+\textbf{MPS002}: l'indice di Gunning Fog è definito nelle \textit{Norme di progetto} alla sezione \plchold{3.5.2.3.3}.
+\begin{itemize}
+	\item Risultato: numero intero che indica il numero di anni minimi di educazione formale necessari a comprendere il testo.
+	\item Valore ottimale: compreso tra 15 e 17.
+	\item Valore minimale: inferiore a 20.
+\end{itemize}
+
+\textbf{MPS003}: l'indice di correttezza ortografica è definito nelle \textit{Norme di progetto} alla sezione \plchold{3.5.2.3.4}.
+\begin{itemize}
+	\item Risultato : numero intero che rappresenta il numero di errori ortografici presenti nel testo.
+	\item Valore ottimale: 0.
+	\item Valore minimale: 0.
+\end{itemize}
+
+
 \subsubsection{Processo di verifica}%
 \label{subs:processo_di_verifica}
 
 \subsection{Processi organizzativi}%
 \label{sub:processi_organizzativi}
 
-\subsubsection{Processo di gestione del personale}%
-\label{sub:processo_di_gestione_del_personale}
-
 \subsubsection{Processo di gestione dei rischi}%
 \label{sub:processo_di_gestione_dei_rischi}
+
+\paragraph{obiettivi}
+\label{par:obiettivi}
+
+L'obiettivo del processo di gestione dei rischi è di identificare, analizzare, monitorare e prevenire i rischi che possono verificarsi nel corso del ciclo di vita del software.
+
+\paragraph{Esiti}
+\label{par:esiti}
+
+I risultati di un processo di gestione dei rischi di qualità sono:
+\begin{itemize}
+	\item La definizione dei rischi che si incontrano nello svolgimento del progetto.
+	\item La classificazione dei rischi in modo da determinarne la probabilità di verificarsi e la pericolosità.
+    \item La determinazione di strategie, soluzioni e metodi per prevenirli.
+    \item L'applicazione di procedure per frenare l'impatto negativo che potrebbero avere nel caso in cui si verificassero. 
+\end{itemize}
+
+\paragraph{metriche}
+\label{par:metriche}
+
+\textbf{MPS007}: l'indice dei rischi incontrati ma non preventivati è definito nelle \textit{Norme di progetto} alla sezione \plchold{3.5.2.3.8}.
+\begin{itemize}
+	\item Risultato :numero intero che rappresenta il numero di rischi incontrati durante il progetto che non erano stati previsti.
+	\item Valore ottimale: 0.
+	\item Valore minimale: 0.
+\end{itemize}
 
 \end{document}
