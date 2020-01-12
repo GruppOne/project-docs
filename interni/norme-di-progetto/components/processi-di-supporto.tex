@@ -531,7 +531,7 @@ dove:
   \begin{itemize}
     \item Parole composte da due parole di una o due sillabe.
     \item Nomi propri.
-    \item Verbi di due sillabe che coniugati diventato di tre sillabe o più
+    \item Verbi di due sillabe che coniugati diventato di tre sillabe o più.
     \item Avverbi in -ente di parole di due sillabe.
   \end{itemize}
  \end{description}
@@ -540,8 +540,52 @@ dove:
 \subparagraph{MPS003-Correttezza ortografica}%
 \label{subp:MPS003-correttezza_ortografica}
 
-L'indice di correttezza ortografica indica la correttezza del testo. Esso misura il numero di errori ortografici presenti. Ogni componente del gruppo ha un estensione per il proprio IDE (e.g vscode fa uso di spell right).
+L'indice di correttezza ortografica indica la correttezza del testo. Esso misura il numero di errori ortografici presenti. Ogni componente del gruppo ha un estensione per il proprio code editor (e.g vscode fa uso di spell right).
 
+\subparagraph{MPS004-Requisiti obbligatori soddisfatti}%
+\label{subp:MPS004-requisiti_obbligatori_soddisfatti}
+
+La metrica indica la percentuale di requisiti obbligatori soddisfatti sul numero totale di requisiti obbligatori. Si calcola così:
+\[
+\frac{requisiti\ obbligatori\ soddisfatti}{requisiti\ obbligatori\ totali}\cdot 100
+\]
+
+\subparagraph{MPS005-Varianza dei costi}%
+\label{subp:MPS005-varianza_dei_costi}
+
+La metrica misura se il costo effettivamente maturato al calcolo dell'indice sia in linea con quanto pianificato. Si calcola:
+\[
+   BCWP-ACWP
+\]
+dove:
+\begin{description}
+  \item [BCWP] misura il costo del lavoro svolto alla data attuale.
+  \item [ACWP] indica il costo sostenuto alla data corrente.
+ \end{description}
+
+\subparagraph{MPS006-Varianza rispetto allo schedule}%
+\label{subp:MPS006-varianza_rispetto_allo_schedule}
+
+La metrica misura se si è in anticipo o in ritardo rispetto rispetto alla schedulazione delle attività di progetto pianificate nella baseline. Si calcola:
+\[
+    BCWP - BCWS
+\]
+dove:
+\begin{description}
+  \item [BCWP] misura il costo del lavoro svolto alla data attuale.
+  \item [BCWS] indica il budget previsto per la realizzazione dell'intero progetto.
+\end{description}
+Il numero risultante indica:
+\begin{itemize}
+  \item Una varianza di schedule pari a 0 indica che si sta rispettando la pianificazione.
+  \item Una varianza di schedule inferiore a 0 indica che si è in ritardo rispetto alla pianificazione.
+  \item Una varianza di schedule superiore a 0 indica che si è in anticipo rispetto alla pianificazione.
+\end{itemize}
+
+\subparagraph{MPSOO7-Rischi incontrati e non preventivati}%
+\label{subp:MPS007-rischi_incontrati_e_non_preventivati}
+
+La metrica misura il numero di rischi incontrati che non sono stati preventivati nell'analisi dei rischi del \textit{Piano di progetto}. Un valore maggiore di 0 indica una analisi dei rischi effettuata in maniera non ottimale.
 % TODO parlare delle GitHub action?
 \paragraph{Strumenti}%
 \label{par:verifica/descrizione/strumenti}
