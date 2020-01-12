@@ -19,27 +19,29 @@ Per semplificare i problemi relativi a encoding dei file, utilizziamo LuaLaTeX c
 I documenti possono essere generati utilizzando il comando:
 
 ```bash
-lualatex --synctex=1 \
-         --interaction=nonstopmode \
-         --c-style-errors \
-         --shell-escape \
-         file.tex
+lualatex \
+  --interaction=nonstopmode \
+  --c-style-errors \
+  --shell-escape \
+  file.tex
 ```
 
 ### UML
 
-Per includere i diagrammi UML utilizziamo un package che richiede la presenza di tool esterni facilmente reperibili:
+I diagrammi PlantUML sono inclusi dopo uno step di pre-compilazione che trasforma il sorgente PlantUML in immagini.
 
-- Graphviz (in particolare l'eseguibile dot)
-- PlantUML
+Dopo aver scaricato l'archivio jar di PlantUML, impostare sul proprio sistema la variabile d'ambiente `PLANTUML_JAR=/path/to/plantuml.jar` ed eseguire il comando:
 
-Una volta installati, bisogna impostare due variabili d'ambiente nel proprio sistema operativo:
+```bash
+java \
+  -jar $PLANTUML_JAR \
+  -checkmetadata \
+  -charset UTF-8 \
+  -x **/commons/style/*.pu \
+  -o img \
+  **/**.pu
+```
 
-- `GRAPHVIZ_DOT=/path/to/dot.exe`
-- `PLANTUML_JAR=/path/to/plantuml.jar`
+### Syntax Highlighting
 
----
-
-Prestare attenzione al fatto che dentro ai file plantuml, se si vuole includere un altro file affinché venga compilato correttamente da LaTeX il path del file da includere deve essere relativo al percorso in cui si trova IL ROOT FILE del documento, e NON relativo al percorso in cui si trova il diagramma
-
----
+Utilizziamo il package minted, che richiede di avere nel proprio sistema la libreria python [Pygments](https://pygments.org/).
