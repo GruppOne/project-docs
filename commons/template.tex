@@ -22,8 +22,8 @@
       \textbf{Uso}                        & \uso{}                  \\
       \textbf{Destinato a}
                                           & GruppOne                \\
-                                          & prof.\ Tullio Vardanega \\
-                                          & prof.\ Riccardo Cardin  \\
+                                          & prof.\ Vardanega Tullio \\
+                                          & prof.\ Cardin Riccardo  \\
       \ifthenelse{\equal{\uso}{Esterno}}{ & Imola Informatica       \\ }{}
     \end{tabular}
   \end{table}
@@ -55,10 +55,15 @@
 
 % section registro_delle_modifiche (end)
 \newpage
-
+\renewcommand{\listfigurename}{Elenco delle figure}
+\renewcommand{\listfigurename}{Elenco delle tabelle}
 \thispagestyle{nopage}
 \pagenumbering{roman}
 \tableofcontents
+
+\listoffigures
+
+\listoftables
 
 \newpage
 
