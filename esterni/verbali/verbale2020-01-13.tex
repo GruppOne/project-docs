@@ -1,0 +1,75 @@
+\documentclass{article}
+
+\input{../../commons/config}
+
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale --- 03/01/2020}
+
+\setVersione{\plchold{versione}}
+\setResponsabile{Alessandro Rizzo}
+\setRedattori{Alberto Cocco}
+\setVerificatori{}
+\setStato{WIP}
+\setUso{Esterno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 09/01/2020}
+\setModifiche{}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Introduzione}
+\label{sec:introduzione}
+
+In data 13/01/2020 presso il Dipartimento di Matematica ``Tullio Levi-Civita'' GruppOne si è collegato tramite una chiamata Hangouts al proponente. La riunione si è svolta sotto forma di discussione: ogni componente del gruppo ha inserito in un file Google Docs condiviso le domande che sono state poi sottoposte al proponente e sulle quali si è discusso. Segue una descrizione degli argomenti trattati.
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item Modello incrementale.
+  \item Configurazione del Server LDAP.
+  \item Chiarimenti sulle modalità di autenticazione alle organizzazioni con tracciamento non anonimo.
+  \item Metriche per la qualità di prodotto.
+\end{itemize}
+
+\section{Modello incrementale}%
+\label{sec:modello_incrementale}
+
+Abbiamo esposto al proponente la pianificazione del modello incrementale da noi adottato e gli abbiamo chiesto dei consigli su come strutturare la pianificazione di incrementi in un progetto così complesso. Il proponente ci ha consigliato, data la natura del prodotto, di identificare una prima fase in cui si definiscono i protocolli delle richieste tra la componente app e il server. In seguito ci ha consigliato di dividere il lavoro in flussi, ossia serie di azioni (traducibili in requisiti) che gli utenti possono effettuare, e dividere questi flussi tra gli incrementi di lunghezza fissa che abbiamo fissato, anche andando ad occupare più di un incremento per la realizzazione di un flusso.
+
+\section{Cconfigurazione del Server LDAP}%
+\label{sec:obiettivi_in_uscita_alla_RQ}
+
+Abbiamo chiesto al proponente specifiche maggiori sulla configurazione che l'owner di una organizzazione deve effettuare all'atto della creazione di una organizzazione. Il proponente ha chiarito che il server LDAP viene configurato per contenere le credenziali di accesso che in seguito gli utenti utilizzeranno per autenticarsi all'interno dell'organizzazione
+
+\section{Charimenti sulle modalità di autenticazione alle organizzazioni con tracciamento non anonimo}%
+\label{sec:chiarimenti_su_verifica}
+
+Abbiamo presentato al proponente i nostri dubbi riguardo all modalità di autenticazione degli utenti all'interno delle organizzazioni che la richiedessero. Il proponente ha ribadito che le credenziali vengono configurate dall'owner nel server LDAP e dunque è con quelle credenziali che gli utenti possono autenticarsi all'interno dell'organizzazione, sarà cura dell'owner fornire quelle credenziali alle persone autorizzate ad autenticarsi e il server LDAP garantirà loro l'accesso alle informazioni se le credenziali sono corrette.
+
+\section{Metriche}%
+\label{sec:metriche}
+
+Abbiamo chiesto al proponente consigli su come decidere le metriche per la qualità di prodotto da inserire nelle norme di progetto. Il proponente ha accolto la nostra richiesta di chiarimenti ma ha rimandato a un secondo momento la sua risposta per fornirci indicazioni più specifiche al riguardo, contiamo di tenere in considerazione i suoi consigli e aggiornare di conseguenza le metriche per la qualità di prodotto.
+
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c b{13cm}}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Codice}} & \color{white}{\textbf{Decisione}}\\
+    1 & abbiamo deciso di continuare con lo sviluppo del modello incrementale come già iniziato apportando delle modifiche per correlare ogni incremento con i flussi implementati. \\
+    2 & abbiamo perso la decisione di aggiornare il caso d'uso e i requisiti relativi all'autenticazione nelle organizzazioni per riflettere quanto richiesto dal proponente.\\
+    3 & terremo in considerazione i consigli che ci verranno forniti dal proponente e aggiorneremo di conseguenza le metriche per la qualità di prodotto. \\
+
+  \end{tabular}
+  \caption{registro delle decisioni}%
+~~\label{tab:registro delle decisioni}
+  \end{table}
+% sec:registro_delle_decisioni (end)
+\end{document}
