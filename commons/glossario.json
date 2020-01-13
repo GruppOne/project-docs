@@ -16,7 +16,7 @@
       "Bootstrap": "toolkit open source per la creazione e lo sviluppo di siti e application web, che contiene modelli di progettazione basati su HTML, CSS e JavaScript."
   },
   "C": {
-      "CSV": "acronimo di Comma-Separated Values,è un formato file utilizzato per lo scambio di dati fra fogli di calcolo o database.",
+      "CSV": "acronimo di Comma-Separated Values, è un formato file utilizzato per lo scambio di dati fra fogli di calcolo o database.",
       "Capitolato": "documento tecnico redatto dall'azienda committente, contenente tutte le specifiche tecniche del prodotto software che devono essere rispettate ed eseguite dall'azienda fornitrice per effetto di un contratto d'appalto.",
       "Caso d'uso": "insieme di scenari, ovvero sequenze di azioni, che hanno in comune uno scopo finale per un attore, ovvero un utente. Descrivono l'insieme di funzionalità del sistema percepite dall'utente.",
       "ClickHouse": "DBMS column-oriented open source che consente di generare report di dati analitici in tempo reale.",
@@ -109,9 +109,9 @@
       "query": "toDelete"
   },
   "R": {
+      "Regressione lineare": "metodo classico di previsione di un valore numerico, che sottende ad una formula di previsione determinata da una linea retta.",
       "Report": "insieme di dati opportunamente estrapolati e/o elaborati, organizzati sotto forma tabellare.",
       "Requisiti": "necessità del committente, legate al prodotto software da realizzare, che devono essere obbligatoriamente soddisfatte dal fornitore.",
-      "regressione lineare": "metodo classico di previsione di un valore numerico, che sottende ad una formula di previsione determinata da una linea retta.",
       "report": "toDelete"
   },
   "S": {
