@@ -13,7 +13,7 @@ Considerate le scadenze scelte in sottosezione~\ref{sub:scadenze_fissate} ed il 
   \item Preparazione in entrata alla RA
 \end{itemize}
 Ciascuna fase è caratterizzata da delle \glossario{precondizioni} e \glossario{postcondizioni} e divisa in \glossario{periodi}.
-Per ciascun periodo sono fissate le \glossario{attività} da svolgervisi.
+Per ciascun periodo sono fissate le \glossario{attività} da svolgervisi. Le fasi di incremento sono associate ai flussi individuati nell'\textit{Analisi dei requisiti}.
 \subsection[Analisi preliminare]{Analisi preliminare {\normalsize\normalfont\itshape(14/11/2019 \symbol{8594} 14/01/2020)}}%
 \label{sub:analisi_preliminare}
 Nella fase di analisi preliminare il gruppo si forma (scegliendo, ad esempio, nome e logo) e si prepara alla Revisione dei Requisiti studiando i capitolati proposti e svolgendo l'analisi preliminare dei requisiti e la pianificazione globale del lavoro da svolgere.
@@ -356,10 +356,10 @@ Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
 ~~\label{fig:gantt_preparazione_rp}
 \end{figure}
 % sub:preparazione_in_entrata_alla_rp (end)
-\subsection{Incrementi}%
-\label{sub:incrementi}
-Durante le fasi di incremento, il gruppo progetta i dettagli del prodotto, li implementa e verifica che siano coerenti con il resto del sistema e che soddisfino i requisiti considerati.
-Data la natura ciclica del modello di sviluppo incrementale, le fasi di incremento hanno tutte la stessa struttura. Per ciascuna fase di incremento i ruoli coinvolti sono:
+\subsection[Incremento 1]{Incremento 1 {\normalsize\normalfont\itshape(17/03/2020 \symbol{8594} 23/03/2020)}}%
+\label{sub:incremento_1}
+Durante questa fase il gruppo progetta, implementa e verifica le componenti del sistema atte a completare i flussi \textit{registrazione}, \textit{login}, \textit{(setup root)}, \textit{root elimina account}.
+I ruoli coinvolti sono:
 \begin{itemize}
   \item Responsabile
   \item Amministratore
@@ -373,10 +373,9 @@ Le precondizioni sono:
 \end{itemize}
 Le postcondizioni sono:
 \begin{itemize}
-  \item Il prodotto soddisfa tutti i requisiti associati con questa fase di incremento
+  \item Il prodotto soddisfa tutti i requisiti associati con i flussi indicati
   \item Il gruppo ha raccolto le considerazioni della progettazione nella \textit{Product baseline}
 \end{itemize}
-L'associazione fra requisiti e fasi di incremento verrà presentata in seguito.\par
 Questa fase è composta di un unico periodo, che coincide con la fase stessa.
 Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
 \begin{itemize}
@@ -402,90 +401,332 @@ Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
     \item Verifica della \textit{Product baseline}
   \end{itemize}
 \end{itemize}
-% subs:verifica (end)
-\subsubsection{Dettagli degli incrementi}%
-\label{subs:dettagli_degli_incrementi}
-Per ogni fase di incremento vengono presentate le date di inizio e fine ed i requisiti associati.
-\begin{description}
-  \item[Incremento 1] 17/03/2020 \symbol{8594} 23/03/2020
+\begin{figure}[H]
+  \centering
+  \subfile{diagrams/gantt-incremento-1}
+  \caption{diagramma di Gantt per l'Incremento 1}%
+~~\label{fig:gantt_incremento_1}
+\end{figure}
+% sub:incremento_1 (end)
+\subsection[Incremento 2]{Incremento 2 {\normalsize\normalfont\itshape(24/03/2020 \symbol{8594} 30/03/2020)}}%
+\label{sub:incremento_2}
+Durante questa fase il gruppo progetta, implementa e verifica le componenti del sistema atte a completare i flussi \textit{creazione admin}, \textit{richiesta ownering}, \textit{gestione richieste(ownering)}.
+I ruoli coinvolti sono:
+\begin{itemize}
+  \item Responsabile
+  \item Amministratore
+  \item Progettista
+  \item Programmatore
+  \item Verificatore
+\end{itemize}
+Le precondizioni sono:
+\begin{itemize}
+  \item Tutte le postcondizioni della fase precedente sono state soddisfatte
+\end{itemize}
+Le postcondizioni sono:
+\begin{itemize}
+  \item Il prodotto soddisfa tutti i requisiti associati con i flussi indicati
+  \item Il gruppo ha raccolto le considerazioni della progettazione nella \textit{Product baseline}
+\end{itemize}
+Questa fase è composta di un unico periodo, che coincide con la fase stessa.
+Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
+\begin{itemize}
+  \item Progettazione
   \begin{itemize}
-    \item \plchold{Registrazione, login, (setup root), root elimina account}
+    \item Definizione delle classi e delle loro interrelazioni
   \end{itemize}
-  \item[Incremento 2] 24/03/2020 \symbol{8594} 30/03/2020
+  \item Produzione documentazione
   \begin{itemize}
-    \item \plchold{Creazione admin, richiesta ownering, gestione richieste (ownering)}
+    \item Stesura \textit{Product baseline}
   \end{itemize}
-  \item[Incremento 3] 31/03/2020 \symbol{8594} 06/04/2020
+  \item Implementazione
   \begin{itemize}
-    \item \plchold{richiesta creazione organizzazione, gestione richieste (creazione organizzazione), root crea organizzazione, richiesta modifica organizzazione, gestione richieste (modifica organizzazione), root modifica organizzazione, root elimina organizzazione}
+    \item Codifica delle classi
   \end{itemize}
-  \item[Incremento 4] 07/04/2020 \symbol{8594} 13/04/2020
+  \item Verifica codice
   \begin{itemize}
-    \item \plchold{visualizza lista organizzazioni, collegamento a (lista) organizzazione/i, richiesta interrogazioni, richiesta dipendenti, anonimato}
+    \item Test del codice
+    \item Collaudo delle funzionalità
   \end{itemize}
-  \item[Incremento 5] 21/04/2020 \symbol{8594} 27/04/2020
+  \item Verifica documentazione
   \begin{itemize}
-    \item \plchold{richiesta creazione gestore, richiesta creazione visualizzatore}
+    \item Verifica della \textit{Product baseline}
   \end{itemize}
-  \item[Incremento 6] 28/04/2020 \symbol{8594} 04/05/2020
+\end{itemize}
+\begin{figure}[H]
+  \centering
+  \subfile{diagrams/gantt-incremento-2}
+  \caption{diagramma di Gantt per l'Incremento 2}%
+~~\label{fig:gantt_incremento_2}
+\end{figure}
+% sub:incremento_2 (end)
+\subsection[Incremento 3]{Incremento 3 {\normalsize\normalfont\itshape(31/03/2020 \symbol{8594} 06/04/2020)}}%
+\label{sub:incremento_3}
+Durante questa fase il gruppo progetta, implementa e verifica le componenti del sistema atte a completare i flussi\textit {richiesta creazione organizzazione}, \textit{gestione richieste (creazione organizzazione)},\textit{root crea organizzazione}, \textit{richiesta modifica organizzazione},\textit{gestione richieste (modifica organizzazione)}, \textit{root modifica organizzazione}, \textit{root elimina organizzazione}.
+I ruoli coinvolti sono:
+\begin{itemize}
+  \item Responsabile
+  \item Amministratore
+  \item Progettista
+  \item Programmatore
+  \item Verificatore
+\end{itemize}
+Le precondizioni sono:
+\begin{itemize}
+  \item Tutte le postcondizioni della fase precedente sono state soddisfatte
+\end{itemize}
+Le postcondizioni sono:
+\begin{itemize}
+  \item Il prodotto soddisfa tutti i requisiti associati con i flussi indicati
+  \item Il gruppo ha raccolto le considerazioni della progettazione nella \textit{Product baseline}
+\end{itemize}
+Questa fase è composta di un unico periodo, che coincide con la fase stessa.
+Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
+\begin{itemize}
+  \item Progettazione
   \begin{itemize}
-    \item \plchold{richiesta gestione luogo, gestione richieste (creazione luogo), gestione richieste (modifica luogo), root gestione luoghi}
+    \item Definizione delle classi e delle loro interrelazioni
   \end{itemize}
-  \item[Incremento 7] 05/05/2020 \symbol{8594} 11/05/2020
+  \item Produzione documentazione
   \begin{itemize}
-    \item \plchold{recupero credenziali, storico accessi utente, richiesta trasferimento proprietà, gestione richieste (trasferimento proprietà)}
+    \item Stesura \textit{Product baseline}
   \end{itemize}
-\end{description}
-% subs:dettagli_degli_incrementi (end)
-\plchold{Gantt degli incrementi in attesa di info più certe}
-% \begin{figure}[H]
-%   \centering
-%   \subfile{diagrams/gantt-incremento-1}
-%   \caption{diagramma di Gantt per l'Incremento 1}%
-% ~~\label{fig:gantt_incremento_1}
-% \end{figure}
-% \begin{figure}[H]
-%   \centering
-%   \subfile{diagrams/gantt-incremento-2}
-%   \caption{diagramma di Gantt per l'Incremento 2}%
-% ~~\label{fig:gantt_incremento_2}
-% \end{figure}
-% \begin{figure}[H]
-%   \centering
-%   \subfile{diagrams/gantt-incremento-3}
-%   \caption{diagramma di Gantt per l'Incremento 3}%
-% ~~\label{fig:gantt_incremento_3}
-% \end{figure}
-% \begin{figure}[H]
-%   \centering
-%   \subfile{diagrams/gantt-incremento-4}
-%   \caption{diagramma di Gantt per l'Incremento 4}%
-% ~~\label{fig:gantt_incremento_4}
-% \end{figure}
-% \begin{figure}[H]
-%   \centering
-%   \subfile{diagrams/gantt-incremento-5}
-%   \caption{diagramma di Gantt per l'Incremento 5}%
-% ~~\label{fig:gantt_incremento_5}
-% \end{figure}
-% \begin{figure}[H]
-%   \centering
-%   \subfile{diagrams/gantt-incremento-6}
-%   \caption{diagramma di Gantt per l'Incremento 6}%
-% ~~\label{fig:gantt_incremento_6}
-% \end{figure}
-% \begin{figure}[H]
-%   \centering
-%   \subfile{diagrams/gantt-incremento-7}
-%   \caption{diagramma di Gantt per l'Incremento 7}%
-% ~~\label{fig:gantt_incremento_7}
-% \end{figure}
-% sub:incrementi (end)
-\subsection[Preparazione in entrata alla RQ]{Preparazione in entrata alla RQ {\normalsize\normalfont\itshape(14/04/2020 \symbol{8594} 20/04/2020)}}%
-\label{sub:preparazione_in_entrata_alla_rq}
-\plchold{help}
-% sub:preparazione_in_entrata_alla_rq (end)
-\subsection[Verifica e collaudo finali]{Verifica e collaudo finali {\normalsize\normalfont\itshape(DD/04/2020 \symbol{8594} DD/05/2020)}}%
+  \item Implementazione
+  \begin{itemize}
+    \item Codifica delle classi
+  \end{itemize}
+  \item Verifica codice
+  \begin{itemize}
+    \item Test del codice
+    \item Collaudo delle funzionalità
+  \end{itemize}
+  \item Verifica documentazione
+  \begin{itemize}
+    \item Verifica della \textit{Product baseline}
+  \end{itemize}
+\end{itemize}
+\begin{figure}[H]
+  \centering
+  \subfile{diagrams/gantt-incremento-3}
+  \caption{diagramma di Gantt per l'Incremento 3}%
+~~\label{fig:gantt_incremento_3}
+\end{figure}
+% sub:incremento_3 (end)
+\subsection[Incremento 4]{Incremento 4 {\normalsize\normalfont\itshape(07/04/2020 \symbol{8594} 13/04/2020)}}%
+\label{sub:incremento_4}
+Durante questa fase il gruppo progetta, implementa e verifica le componenti del sistema atte a completare i flussi \textit{visualizza lista organizzazioni}, \textit{collegamento a (lista) organizzazione/i},\textit{richiesta interrogazioni}, \textit{richiesta dipendenti}, \textit{anonimato}.
+I ruoli coinvolti sono:
+\begin{itemize}
+  \item Responsabile
+  \item Amministratore
+  \item Progettista
+  \item Programmatore
+  \item Verificatore
+\end{itemize}
+Le precondizioni sono:
+\begin{itemize}
+  \item Tutte le postcondizioni della fase precedente sono state soddisfatte
+\end{itemize}
+Le postcondizioni sono:
+\begin{itemize}
+  \item Il prodotto soddisfa tutti i requisiti associati con i flussi indicati
+  \item Il gruppo ha raccolto le considerazioni della progettazione nella \textit{Product baseline}
+\end{itemize}
+Questa fase è composta di un unico periodo, che coincide con la fase stessa.
+Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
+\begin{itemize}
+  \item Progettazione
+  \begin{itemize}
+    \item Definizione delle classi e delle loro interrelazioni
+  \end{itemize}
+  \item Produzione documentazione
+  \begin{itemize}
+    \item Stesura \textit{Product baseline}
+  \end{itemize}
+  \item Implementazione
+  \begin{itemize}
+    \item Codifica delle classi
+  \end{itemize}
+  \item Verifica codice
+  \begin{itemize}
+    \item Test del codice
+    \item Collaudo delle funzionalità
+  \end{itemize}
+  \item Verifica documentazione
+  \begin{itemize}
+    \item Verifica della \textit{Product baseline}
+  \end{itemize}
+\end{itemize}
+\begin{figure}[H]
+  \centering
+  \subfile{diagrams/gantt-incremento-4}
+  \caption{diagramma di Gantt per l'Incremento 4}%
+~~\label{fig:gantt_incremento_4}
+\end{figure}
+% sub:incremento_4 (end)
+\subsection[Incremento 5]{Incremento 5 {\normalsize\normalfont\itshape(14/04/2020 \symbol{8594} 20/04/2020)}}%
+\label{sub:incremento_5}
+Durante questa fase il gruppo progetta, implementa e verifica le componenti del sistema atte a completare i flussi \textit{richiesta creazione gestore}, \textit{richiesta creazione visualizzatore}. Inoltre, si prepara alla propria presentazione in sede di Revisione di qualifica.
+I ruoli coinvolti sono:
+\begin{itemize}
+  \item Responsabile
+  \item Amministratore
+  \item Progettista
+  \item Programmatore
+  \item Verificatore
+\end{itemize}
+Le precondizioni sono:
+\begin{itemize}
+  \item Tutte le postcondizioni della fase precedente sono state soddisfatte
+\end{itemize}
+Le postcondizioni sono:
+\begin{itemize}
+  \item Il prodotto soddisfa tutti i requisiti associati con i flussi indicati
+  \item Il gruppo ha raccolto le considerazioni della progettazione nella \textit{Product baseline}
+  \item Il gruppo ha preparato la propria presentazione da esporre in sede di Revisione di qualifica
+\end{itemize}
+Questa fase è composta di un unico periodo, che coincide con la fase stessa.
+Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
+\begin{itemize}
+  \item Progettazione
+  \begin{itemize}
+    \item Definizione delle classi e delle loro interrelazioni
+  \end{itemize}
+  \item Produzione documentazione
+  \begin{itemize}
+    \item Stesura \textit{Product baseline}
+  \end{itemize}
+  \item Implementazione
+  \begin{itemize}
+    \item Codifica delle classi
+  \end{itemize}
+  \item Verifica codice
+  \begin{itemize}
+    \item Test del codice
+    \item Collaudo delle funzionalità
+  \end{itemize}
+  \item Verifica documentazione
+  \begin{itemize}
+    \item Verifica della \textit{Product baseline}
+  \end{itemize}
+  \item Preparazione presentazione
+  \begin{itemize}
+    \item Ripartizione delle parti da esporre
+    \item Preparazione delle diapositive
+  \end{itemize}
+\end{itemize}
+\begin{figure}[H]
+  \centering
+  \subfile{diagrams/gantt-incremento-5}
+  \caption{diagramma di Gantt per l'Incremento 5}%
+~~\label{fig:gantt_incremento_5}
+\end{figure}
+% sub:incremento_5 (end)
+\subsection[Incremento 6]{Incremento 6 {\normalsize\normalfont\itshape(21/04/2020 \symbol{8594} 27/04/2020)}}%
+\label{sub:incremento_6}
+Durante questa fase il gruppo progetta, implementa e verifica le componenti del sistema atte a completare i flussi \textit{richiesta gestione luogo}, \textit{gestione richieste (creazione luogo)}, \textit{gestione richieste (modifica luogo)}, \textit{root gestione luoghi}.
+I ruoli coinvolti sono:
+\begin{itemize}
+  \item Responsabile
+  \item Amministratore
+  \item Progettista
+  \item Programmatore
+  \item Verificatore
+\end{itemize}
+Le precondizioni sono:
+\begin{itemize}
+  \item Tutte le postcondizioni della fase precedente sono state soddisfatte
+\end{itemize}
+Le postcondizioni sono:
+\begin{itemize}
+  \item Il prodotto soddisfa tutti i requisiti associati con i flussi indicati
+  \item Il gruppo ha raccolto le considerazioni della progettazione nella \textit{Product baseline}
+\end{itemize}
+Questa fase è composta di un unico periodo, che coincide con la fase stessa.
+Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
+\begin{itemize}
+  \item Progettazione
+  \begin{itemize}
+    \item Definizione delle classi e delle loro interrelazioni
+  \end{itemize}
+  \item Produzione documentazione
+  \begin{itemize}
+    \item Stesura \textit{Product baseline}
+  \end{itemize}
+  \item Implementazione
+  \begin{itemize}
+    \item Codifica delle classi
+  \end{itemize}
+  \item Verifica codice
+  \begin{itemize}
+    \item Test del codice
+    \item Collaudo delle funzionalità
+  \end{itemize}
+  \item Verifica documentazione
+  \begin{itemize}
+    \item Verifica della \textit{Product baseline}
+  \end{itemize}
+\end{itemize}
+\begin{figure}[H]
+  \centering
+  \subfile{diagrams/gantt-incremento-6}
+  \caption{diagramma di Gantt per l'Incremento 6}%
+~~\label{fig:gantt_incremento_6}
+\end{figure}
+% sub:incremento_6 (end)
+\subsection[Incremento 7]{Incremento 7 {\normalsize\normalfont\itshape(28/04/2020 \symbol{8594} 03/05/2020)}}%
+\label{sub:incremento_7}
+Durante questa fase il gruppo progetta, implementa e verifica le componenti del sistema atte a completare i flussi \textit{recupero credenziali}, \textit{storico accessi utente}, \textit{richiesta trasferimento proprietà}, \textit{gestione richieste (trasferimento proprietà)}.
+I ruoli coinvolti sono:
+\begin{itemize}
+  \item Responsabile
+  \item Amministratore
+  \item Progettista
+  \item Programmatore
+  \item Verificatore
+\end{itemize}
+Le precondizioni sono:
+\begin{itemize}
+  \item Tutte le postcondizioni della fase precedente sono state soddisfatte
+\end{itemize}
+Le postcondizioni sono:
+\begin{itemize}
+  \item Il prodotto soddisfa tutti i requisiti associati con i flussi indicati
+  \item Il gruppo ha raccolto le considerazioni della progettazione nella \textit{Product baseline}
+\end{itemize}
+Questa fase è composta di un unico periodo, che coincide con la fase stessa.
+Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
+\begin{itemize}
+  \item Progettazione
+  \begin{itemize}
+    \item Definizione delle classi e delle loro interrelazioni
+  \end{itemize}
+  \item Produzione documentazione
+  \begin{itemize}
+    \item Stesura \textit{Product baseline}
+  \end{itemize}
+  \item Implementazione
+  \begin{itemize}
+    \item Codifica delle classi
+  \end{itemize}
+  \item Verifica codice
+  \begin{itemize}
+    \item Test del codice
+    \item Collaudo delle funzionalità
+  \end{itemize}
+  \item Verifica documentazione
+  \begin{itemize}
+    \item Verifica della \textit{Product baseline}
+  \end{itemize}
+\end{itemize}
+\begin{figure}[H]
+  \centering
+  \subfile{diagrams/gantt-incremento-7}
+  \caption{diagramma di Gantt per l'Incremento 7}%
+~~\label{fig:gantt_incremento_7}
+\end{figure}
+% sub:incremento_7 (end)
+\subsection[Verifica e collaudo finali]{Verifica e collaudo finali {\normalsize\normalfont\itshape(04/05/2020 \symbol{8594} 11/05/2020)}}%
 \label{sub:verifica_e_collaudo_finali}
 \plchold{help}
 % sub:verifica_e_collaudo_finali (end)
