@@ -10,7 +10,7 @@ Per valutare la qualità di prodotto il gruppo ha deciso di fare riferimento all
 \subsection{Appropriatezza funzionale}%
 \label{sub:appropriatezza_funzionale}
   Rappresenta il grado a cui un prodotto software fornisce funzionalità che rispettano requisiti espliciti o impliciti se usato in specifiche condizioni.
-  \subsubsection{Obiettivi}
+  \subsubsection{Obiettivi}%
   \label{subs:obiettivi}
       \begin{description}
         \item [Correttezza]: Grado con cui il prodotto fornisce risultati corretti con il livello di precisione richiesto.
@@ -25,7 +25,7 @@ Per valutare la qualità di prodotto il gruppo ha deciso di fare riferimento all
     \item [Percentuale di requisiti soddisfatti]: La completezza C del prodotto in relazione al numeri di requisiti soddisfatti verrà calcolata come \begin{equation} C = \frac{N_s}{N_{tot}}\\*100 \end{equation} con \(N_s\) numero di requisiti implementati e \(N_{tot}\) il numero di requisiti totali.
     \begin{itemize} \item Valore ammissibile: 100\% \item Valore ottimale: 100\% \end{itemize}
       \end{description}
-  
+
   % subs:metriche (end)
 
 % sub:appropriatezza_funzionale (end)
@@ -33,7 +33,7 @@ Per valutare la qualità di prodotto il gruppo ha deciso di fare riferimento all
 \subsection{Performance}%
 \label{sub:performance}
  Questa caratteristica rappresenta la performance del prodotto relativamente alle risorse utilizzate in specifiche condizioni.
-  \subsubsection{Obiettivi}
+  \subsubsection{Obiettivi}%
   \label{subs:obiettivi}
       \begin{description}
         \item[Risposta nel tempo]: Grado con cui i tempi di risposta e di elaborazione del prodotto rispettano i requisiti.
@@ -55,7 +55,7 @@ Per valutare la qualità di prodotto il gruppo ha deciso di fare riferimento all
 \subsection{Sicurezza}%
 \label{sub:sicurezza}
  Questa caratteristica indica il grado con cui il prodotto protegge e limita l'accesso a dati e informazioni in modo da rispettare i livelli di autorizzazione definiti.
-  \subsubsection{Obiettivi}
+  \subsubsection{Obiettivi}%
   \label{subs:obiettivi}
       \begin{description}
         \item [Riservatezza]: Grado con cui il prodotto garantisce che i dati siano accessibili solamente a entità autorizzate.
@@ -76,7 +76,8 @@ Per valutare la qualità di prodotto il gruppo ha deciso di fare riferimento all
 \subsection{Mantenibilità}%
 \label{sub:mantenibilita}
 Questa caratteristica rappresenta il grado di efficacia e efficienza con cui il prodotto può essere migliorato, corretto o adattato a nuovi requisiti.
-\subsubsection{Obiettivi}
+
+\subsubsection{Obiettivi}%
 \label{subs:obiettivi}
       \begin{description}
         \item [Modularità]: Grado con cui il prodotto è composto da parti indipendenti in modo che una modifica a una componente abbia un impatto minimo su tutte le altre.
@@ -102,7 +103,7 @@ Questa caratteristica rappresenta il grado di efficacia e efficienza con cui il 
 \subsection{Usabilità}%
 \label{sub:usabilita}
 Questa caratteristica rappresenta il grado con cui il prodotto può essere usato da un determinato utente per raggiungere obiettivi specifici con efficienza, efficacia e soddisfazione in un determinato contesto d'uso.
-\subsubsection{Obiettivi}
+\subsubsection{Obiettivi}%
 \label{subs:obiettivi}
       \begin{description}
         \item [Apprendibilità]: Grado con cui il prodotto consente a un determinato utente di apprendere ad utilizzare il prodotto con efficienza, efficacia, libertà dai rischi, e soddisfazione.
@@ -123,12 +124,12 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
 \subsection{Affidabilità}%
 \label{sub:affidabilita}
  Questa caratteristica rappresenta il grado con cui il prodotto effettua specifici compiti sotto determinate condizioni per un periodo di tempo fissato.
-\subsubsection{Obiettivi}
+\subsubsection{Obiettivi}%
 \label{subs:obiettivi}
       \begin{description}
         \item [Maturità]: Grado con cui il prodotto rispetta i requisiti di affidabilità in condizioni normali.
         \item [Disponibilità]: Grado con cui il prodotto risulta operativo e accessibile quando ne è richiesto l'uso.
-        \item [Tolleranza agli errori]: Grado con cui il prodotto continua ad operare in maniera corretta nonostanze la presenza di errori software e hardware.
+        \item [Tolleranza agli errori]: Grado con cui il prodotto continua ad operare in maniera corretta nonostante la presenza di errori software e hardware.
         \item [Recuperabilità]: Grado con cui il prodotto, in caso di un'interruzione o di un errore, riesce a recuperare i dati coinvolti e ristabilire il corretto funzionamento del sistema.
       \end{description}
 % subs:obiettivi (end)
@@ -156,7 +157,7 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
         \item [S]: il test è stato soddisfatto
         \item [NS]: il test non è stato ancora soddisfatto
       \end{description}
-  \subsubsection{Test di Accettazione}
+  \subsubsection{Test di Accettazione}%
   \label{subs:accettazione}
       I test di accettazione hanno lo scopo di verificare che il prodotto soddisfi i requisiti richiesti dal proponente, vengono eseguiti durante la fase di verifica e collaudo finale.
       Essendo tutti i test derivanti da un gruppo di requisiti che hanno una determinata importanza nel prodotto software abbiamo pensato di numerare i Test di Accettazione nel modo seguente:
@@ -165,7 +166,7 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
       \end{center}
       Dove: \textit{importanza} è un valore numerico ad indicare l'importanza del requisito che deve essere soddisfatto, \textit{codice} è un codice numerico identificativo per il test e \textit{requisito} può assumere i seguenti valori:
       \begin{description}
-        \item [F]: requisito funzionale 
+        \item [F]: requisito funzionale
         \item [P]: requisito prestazionale
         \item [D]: requisito dichiarativo
       \end{description}
@@ -473,8 +474,8 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
         \end{itemize}
         & NS \\
         TAWFO37      & Il sistema deve permettere all’amministratore di eliminare un account dal sistema. \newline
-        L'amministratore deve: 
-        \begin{itemize} 
+        L'amministratore deve:
+        \begin{itemize}
          \item avviare la procedura di rimozione utente;
          \item selezionare l'account da rimuovere;
          \item confermare la rimozione dell'account.
@@ -485,7 +486,7 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
       \end{longtable}
       %subs:accettazione (end)
     \end{centering}
-    \subsubsection{Test di Sistema}
+    \subsubsection{Test di Sistema}%
   \label{subs:sistema}
     I test di sistema verificano il corretto funzionamento tra tutte le componenti del sistema. I test verranno identificati nel seguente modo:
     \begin{center}
@@ -501,7 +502,7 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
     \end{center}
     Dove \textit{codice} rappresenta un numero identificativo per il Test di Integrazione.
   %subs:integrazione (end)
-  \subsubsection{Test di Unità}
+  \subsubsection{Test di Unità}%
   \label{subs:unita}
     I test di sistema verificano la correttezza e il funzionamento di una singola unità del software. I test verranno identificati nel seguente modo:
     \begin{center}
