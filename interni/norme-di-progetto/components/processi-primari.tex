@@ -264,7 +264,48 @@ Eseguendo nella radice del repository il comando
 \end{minted}
 
 vengono generate le immagini dei diagrammi che sono incluse nei documenti.
-La corretta esecuzione del comando richiede di aver impostato la variabile d'ambiente \verb|PLANTUML\_JAR| al percorso completo del file \verb|plantuml.jar| reperito dal sito del progetto.
+
+La corretta esecuzione del comando richiede di aver impostato la variabile d'ambiente \verb|PLANTUML_JAR| al percorso completo del file \verb|plantuml.jar| reperito dal sito del progetto.
+
+\subparagraph{Esempio diagramma PlantUML}%
+\label{subp:esempio_diagramma_plantuml}
+
+\begin{minted}{text}
+  @startuml
+  left to right direction
+  skinparam packageStyle rectangle
+  actor customer
+  actor clerk
+  rectangle checkout {
+    customer -- (checkout)
+    (checkout) .> (payment) : include
+    (help) .> (checkout) : extends
+    (checkout) -- clerk
+  }
+  @enduml
+\end{minted}
+
+Il risultato grafico del codice è presentato in~\ref{fig:esempio_caso_duso}
+
+\begin{figure}[H]%
+  \label{fig:esempio_caso_duso}
+  \includegraphics[width=8cm]{use-case-example.png}
+  \centering
+  \caption{diagramma dei casi d'uso realizzato con PlantUML}
+\end{figure}
+
+% subp:esempio_diagramma_plantuml (end)
+
+\paragraph{pgfgantt}%
+\label{par:pgfgantt}
+
+Per i diagrammi di Gantt il gruppo ha scelto di utilizzare \glossario{pgfgantt}, un package disponibile per \latex{} che sfrutta il linguaggio \glossario{PGF} e il rispettivo omonimo interprete.
+PGF è in grado di produrre rappresentazioni grafiche vettoriali, e pgfgantt fornisce dei comandi \tex{} che fungono da astrazioni per le direttive di basso livello.
+Un diagramma di Gantt viene quindi costruito attraverso uno o più comandi di titolo, seguiti da una combinazione di comandi specifici per inserire gruppi, ``barre'' (cioè attività) o milestone, oppure per collegare due elementi.
+
+L'integrazione dei diagrammi nel documento avviene
+
+% par:pgfgantt (end)
 
 % TODO mancano altri strumenti in questa sezione?
 
