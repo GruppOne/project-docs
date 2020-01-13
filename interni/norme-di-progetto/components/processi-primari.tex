@@ -71,6 +71,20 @@ Gli obiettivi degli incontri sono:
 \end{description}
 Gli esiti degli argomenti discussi durante gli incontri saranno poi riportati nei verbali.
 
+\subsubsection{Incontri con il committente}
+
+GruppOne intende fare riferimento al committente del progetto anche al di fuori delle revisioni obbligatorie.
+Compatibilmente con la disponibilità del committente, chiederemo di fissare degli incontri per discutere eventuali aspetti che non ci sono chiari.
+
+Ciò che emerge da questi incontri verrà messo a verbale e reso disponibile nella cartella \verb|esterni/verbali/| della documentazione di progetto.
+
+\subsubsection{Metriche}%
+\label{subs:fornitura/metriche}
+
+% TODO scrivi metriche
+
+% subs:metriche (end)
+
 \subsection{Sviluppo}%
 \label{sub:sviluppo}
 
@@ -229,28 +243,18 @@ La \glossario{Product Baseline} è un documento tecnico parte integrante della r
 
 \paragraph{PlantUML}%
 \label{par:plantuml}
-Per la costruzione dei diagrammi dei casi d'uso il team ha deciso di utilizzare \glossario{PlantUML}\@.
-È un software open source che permette la costruzione di diagrammi UML a partire dalla scrittura di codice.
-PlantUML fa uso di \glossario{Graphviz} per la traduzione del plain text in elementi grafici. GruppOne ha valutato positivamente tale strumento in quanto:
+Per la costruzione dei diagrammi UML il team ha deciso di utilizzare \glossario{PlantUML}\@.
+È un software open source che permette la costruzione di diagrammi UML a partire dalla scrittura di codice in un linguaggio di markup dedicato. GruppOne ha valutato positivamente tale strumento in quanto:
 
 \begin{itemize}
-  \item Permette di scrivere i diagrammi dei casi d'uso in forma di codice, mentre il ruolo di costruzione dei diagrammi è demandato al software sottostante.
+  \item Gli aspetti grafici di costruzione dei diagrammi sono demandati al software sottostante.
   \item La sua natura testuale e dichiarativa permette di attuare un versionamento efficace dei diagrammi attraverso strumenti che già utilizziamo.
-  \item Permette di scrivere agevolmente non solo i diagrammi dei casi d'uso, ma anche diagrammi delle classi, di sequenza e di package.
+  \item Permette di scrivere agevolmente i diagrammi dei casi d'uso, delle classi, di sequenza e di package.
 \end{itemize}
-
-\begin{figure}[H]%
-  \label{fig:esempio_caso_duso}
-  \includegraphics[width=8cm]{use-case-example.png}
-  \centering
-  \caption{diagramma dei casi d'uso realizzato con PlantUml}
-\end{figure}
-
-N.B.: la figura~\ref{fig:esempio_caso_duso} è un'immagine, non codice PlantUML.\@ Per vedere un'applicazione pratica di quanto detto, si vedano ad es.\ i diagrammi inclusi nel documento \textit{Analisi dei requisiti}.
 
 In seguito a difficoltà nell'utilizzo del package apposito di \LaTeX{}, abbiamo deciso di pre-compilare separatamente i diagrammi utilizzando le funzionalità esposte dalla \glossario{Command Line Interface} di PlantUML\@.
 
-Eseguendo nella radice del repository il comando
+Posizionarsi nella cartella contenente la documentazione di progetto ed eseguire il comando:
 
 \begin{minted}{bash}
   java \
@@ -263,8 +267,7 @@ Eseguendo nella radice del repository il comando
     **/**.pu
 \end{minted}
 
-vengono generate le immagini dei diagrammi che sono incluse nei documenti.
-
+In questo modo vengono generate le immagini che sono effettivamente incluse nei documenti.
 La corretta esecuzione del comando richiede di aver impostato la variabile d'ambiente \verb|PLANTUML_JAR| al percorso completo del file \verb|plantuml.jar| reperito dal sito del progetto.
 
 \subparagraph{Esempio diagramma PlantUML}%
@@ -299,14 +302,20 @@ Il risultato grafico del codice è presentato in~\ref{fig:esempio_caso_duso}
 \paragraph{pgfgantt}%
 \label{par:pgfgantt}
 
-Per i diagrammi di Gantt il gruppo ha scelto di utilizzare \glossario{pgfgantt}, un package disponibile per \latex{} che sfrutta il linguaggio \glossario{PGF} e il rispettivo omonimo interprete.
-PGF è in grado di produrre rappresentazioni grafiche vettoriali, e pgfgantt fornisce dei comandi \tex{} che fungono da astrazioni per le direttive di basso livello.
+Per i diagrammi di Gantt il gruppo ha scelto di utilizzare \glossario{pgfgantt}, un package disponibile per \LaTeX{} che sfrutta il linguaggio \glossario{PGF} e il rispettivo omonimo interprete.
+PGF è in grado di produrre rappresentazioni grafiche vettoriali, e pgfgantt fornisce dei comandi \TeX{} che fungono da astrazioni per le direttive di basso livello.
 Un diagramma di Gantt viene quindi costruito attraverso uno o più comandi di titolo, seguiti da una combinazione di comandi specifici per inserire gruppi, ``barre'' (cioè attività) o milestone, oppure per collegare due elementi.
 
+% TODO finire di scrivere
 L'integrazione dei diagrammi nel documento avviene
 
 % par:pgfgantt (end)
 
 % TODO mancano altri strumenti in questa sezione?
+
+\subsubsection{Metriche}%
+\label{subs:sviluppo/metriche}
+
+% TODO scrivi metriche di sviluppo (grosso)
 
 \end{document}
