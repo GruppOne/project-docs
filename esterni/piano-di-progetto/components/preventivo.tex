@@ -521,6 +521,8 @@ Per aumentare la leggibilità delle tabelle, le celle che indicano un numero nul
 % sub:fase_di_preparazione_in_entrata_alla_ra (end)
 \subsection{Totali}%
 \label{sub:totali}
+\subsubsection{Totali complessivi}%
+\label{subs:totali_complessivi}
 \begin{table}[H]
   \centering
   \rowcolors{2}{lightgray}{white!80!lightgray!100}
@@ -537,8 +539,8 @@ Per aumentare la leggibilità delle tabelle, le celle che indicano un numero nul
     Scettro Fabio&&&&&&&\\
     Totali per ruolo&&&&&&&\\
   \end{tabular}
-  \caption{prospetto orario dei totali}%
-~~\label{tab:prospetto_orario_totali}
+  \caption{prospetto orario dei totali complessivi}%
+~~\label{tab:prospetto_orario_totali_complessivi}
 \end{table}
 \begin{table}[H]
   \centering
@@ -554,8 +556,48 @@ Per aumentare la leggibilità delle tabelle, le celle che indicano un numero nul
     Ve&&\\
     \textbf{Totale}&&\\
   \end{tabular}
-  \caption{prospetto economico dei totali}%
-~~\label{tab:prospetto_economico_totali}
+  \caption{prospetto economico dei totali complessivi}%
+~~\label{tab:prospetto_economico_totali_complessivi}
 \end{table}
+% subs:totali_complessivi (end)
+\subsubsection{Totali rendicontati}%
+\label{subs:totali_rendicontati}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&&&&&&&\\
+    Apolloni Tobia&&&&&&&\\
+    Cestaro Riccardo&&&&&&&\\
+    Cocco Alberto&&&&&&&\\
+    Ercole Luca&&&&&&&\\
+    Gobbo Alberto&&&&&&&\\
+    Rizzo Alessandro&&&&&&&\\
+    Scettro Fabio&&&&&&&\\
+    Totali per ruolo&&&&&&&\\
+  \end{tabular}
+  \caption{prospetto orario dei totali rendicontati}%
+~~\label{tab:prospetto_orario_totali_rendicontati}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&&\\
+    Am&&\\
+    An&&\\
+    Pt&&\\
+    Pr&&\\
+    Ve&&\\
+    \textbf{Totale}&&\\
+  \end{tabular}
+  \caption{prospetto economico dei totali rendicontati}%
+~~\label{tab:prospetto_economico_totali_rendicontati}
+\end{table}
+% subs:totali_rendicontati (end)
 % sub:totali (end)
 \end{document}
