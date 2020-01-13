@@ -71,20 +71,6 @@ Gli obiettivi degli incontri sono:
 \end{description}
 Gli esiti degli argomenti discussi durante gli incontri saranno poi riportati nei verbali.
 
-\subsubsection{Incontri con il committente}
-
-GruppOne intende fare riferimento al committente del progetto anche al di fuori delle revisioni obbligatorie.
-Compatibilmente con la disponibilità del committente, chiederemo di fissare degli incontri per discutere eventuali aspetti che non ci sono chiari.
-
-Ciò che emerge da questi incontri verrà messo a verbale e reso disponibile nella cartella \verb|esterni/verbali/| della documentazione di progetto.
-
-\subsubsection{Metriche}%
-\label{subs:fornitura/metriche}
-
-% TODO scrivi metriche
-
-% subs:metriche (end)
-
 \subsection{Sviluppo}%
 \label{sub:sviluppo}
 
@@ -243,11 +229,8 @@ La \glossario{Product Baseline} è un documento tecnico parte integrante della r
 
 \paragraph{PlantUML}%
 \label{par:plantuml}
-
-Per la costruzione dei diagrammi UML il team ha deciso di utilizzare \glossario{PlantUML}\@.
-È un software open source che permette la costruzione di diagrammi UML a partire dalla scrittura di codice in un linguaggio di markup dedicato.
-Ciò permette di versionare efficacemente i diagrammi generati.
-
+Per la costruzione dei diagrammi dei casi d'uso il team ha deciso di utilizzare \glossario{PlantUML}\@.
+È un software open source che permette la costruzione di diagrammi UML a partire dalla scrittura di codice.
 PlantUML fa uso di \glossario{Graphviz} per la traduzione del plain text in elementi grafici. GruppOne ha valutato positivamente tale strumento in quanto:
 
 \begin{itemize}
@@ -256,9 +239,18 @@ PlantUML fa uso di \glossario{Graphviz} per la traduzione del plain text in elem
   \item Permette di scrivere agevolmente non solo i diagrammi dei casi d'uso, ma anche diagrammi delle classi, di sequenza e di package.
 \end{itemize}
 
+\begin{figure}[H]%
+  \label{fig:esempio_caso_duso}
+  \includegraphics[width=8cm]{use-case-example.png}
+  \centering
+  \caption{diagramma dei casi d'uso realizzato con PlantUml}
+\end{figure}
+
+N.B.: la figura~\ref{fig:esempio_caso_duso} è un'immagine, non codice PlantUML.\@ Per vedere un'applicazione pratica di quanto detto, si vedano ad es.\ i diagrammi inclusi nel documento \textit{Analisi dei requisiti}.
+
 In seguito a difficoltà nell'utilizzo del package apposito di \LaTeX{}, abbiamo deciso di pre-compilare separatamente i diagrammi utilizzando le funzionalità esposte dalla \glossario{Command Line Interface} di PlantUML\@.
 
-Eseguendo mentre si è posizionati nella radice della documentazione di progetto il comando
+Eseguendo nella radice del repository il comando
 
 \begin{minted}{bash}
   java \
@@ -272,49 +264,8 @@ Eseguendo mentre si è posizionati nella radice della documentazione di progetto
 \end{minted}
 
 vengono generate le immagini dei diagrammi che sono incluse nei documenti.
-La corretta esecuzione del comando richiede di aver impostato la variabile d'ambiente \verb|PLANTUML_JAR| al percorso completo del file \verb|plantuml.jar| reperito dal sito del progetto.
-
-\subparagraph{Esempio diagramma PlantUML}%
-\label{subp:esempio_diagramma_plantuml}
-
-\begin{minted}{text}
-  @startuml
-  left to right direction
-  skinparam packageStyle rectangle
-  actor customer
-  actor clerk
-  rectangle checkout {
-    customer -- (checkout)
-    (checkout) .> (payment) : include
-    (help) .> (checkout) : extends
-    (checkout) -- clerk
-  }
-  @enduml
-\end{minted}
-
-Il risultato grafico del codice è presentato in~\ref{fig:esempio_caso_duso}
-
-\begin{figure}[H]%
-  \label{fig:esempio_caso_duso}
-  \includegraphics[width=8cm]{use-case-example.png}
-  \centering
-  \caption{diagramma dei casi d'uso realizzato con PlantUML}
-\end{figure}
-
-% subp:esempio_diagramma_plantuml (end)
-
-\paragraph{pgfgantt}%
-\label{par:pgfgantt}
-
-% TODO descrivere utilizzo pgfgantt
-
-% par:pgfgantt (end)
+La corretta esecuzione del comando richiede di aver impostato la variabile d'ambiente \verb|PLANTUML\_JAR| al percorso completo del file \verb|plantuml.jar| reperito dal sito del progetto.
 
 % TODO mancano altri strumenti in questa sezione?
-
-\subsubsection{Metriche}%
-\label{subs:sviluppo/metriche}
-
-% TODO scrivi metriche
 
 \end{document}
