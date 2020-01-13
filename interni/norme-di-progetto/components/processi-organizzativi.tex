@@ -78,7 +78,9 @@ Gli scopi del processo di gestione del personale sono:
 
 \subparagraph{Piano di progetto}%
 \label{subp:piano_di_progetto}
-Il piano di progetto è redatto dal responsabile e contiene l'organizzazione dell'attività allo scopo di raggiungere l'economicità. Esso rappresenta, anche mediante l'utilizzo di diagrammi, le risorse fondamentali a disposizione e come andrebbero impiegate per organizzare un efficiente pianificazione delle attività. Il documento è così strutturato:
+Il piano di progetto è redatto dal responsabile e contiene l'organizzazione dell'attività allo scopo di raggiungere l'economicità.
+Esso rappresenta, anche mediante l'utilizzo di diagrammi, le risorse fondamentali a disposizione e come andrebbero impiegate per organizzare un efficiente pianificazione delle attività.
+Il documento è così strutturato:
 \begin{description}
   \item [Introduzione] si presentano lo scopo e la struttura del documento.
   \item [Analisi dei rischi] si realizza un'indagine per scoprire quali sono i maggiori rischi con cui il gruppo deve confrontarsi nel corso della realizzazione del progetto. Si illustra la gravità di ogni rischio, i danni che ognuno potrebbe arrecare, ed eventuali contromisure per riuscire a contrastarli.
@@ -86,9 +88,26 @@ Il piano di progetto è redatto dal responsabile e contiene l'organizzazione del
   \item [Preventivo e consuntivo] Il preventivo presenta una stima dei costi totali di progetto, mentre il consuntivo illustra un bilancio totale delle attività di processo compiute in un determinato periodo di tempo.
 \end{description}
 
-% TODO piano di qualifica
 \subparagraph{Piano di qualifica}%
 \label{subp:piano_di_qualifica}
+Il \textit{Piano di qualifica} è redatto dai progettisti nella sua parte programmatica e dai verificatori nella parte che illustra le verifiche effettuate.
+I suoi scopi principali sono:
+
+\begin{itemize}
+  \item Definire gli attributi di qualità che il nostro prodotto deve avere, e dettagliare le specifiche dei test di accettazione, sistema, integrazione e unità.
+  \item Definire quali sono i valori minimi e quelli ottimali delle metriche riportate nelle \textit{Norme di progetto} per ciascuno dei processi istanziati da GruppOne che sono soggetti al sistema di \glossario{qualità}.
+  \item Documentare le strategie e procedure attraverso cui intendiamo perseguire gli obiettivi definiti nei punti precedenti.
+  \item Analizzare in retrospettiva i risultati delle prove e verifiche effettuate in accordo con quanto definito.
+\end{itemize}
+
+La struttura del documento vuole riflettere le due visioni perpendicolari del sistema qualità.
+
+\begin{description}
+\item [Introduzione] esplora più in dettaglio lo scopo del documento.
+\item [Qualità di prodotto] riguarda la visione verticale e specifica a ciò che stiamo realizzando.
+\item [Qualità di processo] esplicita la visione orizzontale trasversale a processi, attività e compiti istanziati dal team.
+% \item [Report su attività di verifica] contiene brevi riassunti delle attività di verifica
+\end{description}
 
 Il \textit{Piano di qualifica} è redatto dai progettisti nella sua parte programmatica e dai verificatori nella parte che illustra le verifiche effettuate. Esso descrive la strategia complessiva di verifica e validazione adottata da GruppOne per garantire qualità ai processi e ai prodotti. Il documento è così strutturato:
 \begin{description}
@@ -100,10 +119,11 @@ Il \textit{Piano di qualifica} è redatto dai progettisti nella sua parte progra
 \subsubsection{Ruoli di progetto}%
 \label{subs:ruoli_di_progetto}
 
-% FIXME questo qui non va bene
-GruppOne ha deciso che ogni membro del team deve svolgere ogni ruolo a turno.
-La rotazione che verrà effettuata ogni due settimane.
-Per tale motivo si realizza un file \glossario{Google docs} per poter rendicontare il numero di ore svolte da ciascun membro del team in ogni ruolo.
+Il committente ha fissato per i membri del team dei ruoli attraverso cui si svolgono le attività di progetto. Ciascun ruolo ha un costo orario correlato alle responsabilità che comporta, e rappresentativo del fatto che ogni processo consuma risorse.
+
+GruppOne si impegna a far sì che i ruoli vengano distribuiti tra i membri del team secondo quanto definito nella pianificazione di progetto, assicurandosi che ogni membro ricopra ciascun ruolo in proporzioni eque.
+
+Oltre che nella pianificazione, terremo traccia delle risorse consumate per ogni ruolo attraverso un foglio di lavoro su \href{https://www.google.it/intl/it/sheets/about/}{Google Sheets}, i cui totali verranno riportati nel consuntivo di periodo da consegnare al committente.
 
 \paragraph{Responsabile}%
 \label{par:responsabile}
@@ -119,8 +139,7 @@ Le sue attività principali sono:
   \item Approvare l'offerta e i relativi allegati.
 \end{itemize}
 
-% TODO sistemare questi qui
-\textbf{costo orario in euro: 30}
+Consuma risorse pari a 30 €/h.
 
 \paragraph{Amministratore}%
 \label{par:amministratore}
@@ -134,7 +153,7 @@ L'amministratore di progetto ha il controllo diretto sull'ambiente di lavoro. È
   \item Organizzare o configurare l'archivio di documentazione.
 \end{itemize}
 
-\textbf{costo orario in euro: 30}
+Consuma risorse pari a 30 €/h.
 
 \paragraph{Analista}%
 \label{par:analista}
@@ -148,7 +167,7 @@ Redige l`\textit{Analisi dei requisiti} e lo \textit{Studio di fattibilità}. Le
   \item Interagire con gli \glossario{stakeholder} attraverso interviste.
 \end{itemize}
 
-\textbf{costo orario in euro: 25}
+Consuma risorse pari a 25 €/h.
 
 \paragraph{Progettista}%
 \label{par:progettista}
@@ -163,7 +182,7 @@ Le sue attività principali sono:
   \item Selezionare i principali componenti coinvolti nella realizzazione del prodotto.
 \end{itemize}
 
-\textbf{costo orario in euro: 20}
+Consuma risorse pari a 20 €/h.
 
 \paragraph{Programmatore}%
 \label{par:programmatore}
@@ -171,7 +190,7 @@ Il programmatore svolge l'attività di codifica al fine di implementare il prodo
 Partecipa concretamente alla produzione del software e ha la responsabilità di realizzare i moduli per effettuare i test di unità sulle singole componenti.
 Possiede competenze tecnologiche mirate ma settoriali.
 
-\textbf{costo orario in euro: 15}
+Consuma risorse pari a 15 €/h.
 
 \paragraph{Verificatore}%
 \label{par:verificatore}
@@ -179,7 +198,7 @@ Il verificatore svolge l'attività di verifica per l'intera durata del progetto,
 Ha competenze tecniche, esperienza professionale e conoscenza delle norme. Redige una parte del \textit{piano di qualifica}.
 Svolge un ruolo fondamentale nella fase di revisione del prodotto, dove va a cercare eventuali errori nel documento che sta visionando.
 
-\textbf{costo orario in euro: 15}
+Consuma risorse pari a 15 €/h.
 
 \subsubsection{Coordinazione del personale}%
 \label{subs:coordinazione_del_personale}
