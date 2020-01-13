@@ -14,9 +14,9 @@ rectangle {
 
 :A: -- (UUC2.1)
 :A: -- (UUC2.2)
+:A: -- (UUC3)
 
 (UUC2.3) .up.> (UUC2.2) : <<extends>>
 (UUC2.3) .up.> (UUC2.1) : <<extends>>
-(UUC3) <. (UUC2.3) : <<include>>
 
 @enduml

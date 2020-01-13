@@ -5,8 +5,10 @@ actor :utente collegato: as A3.1
 
 rectangle {
   together {
-    usecase (UUC4) as "UUC4\nRecupero lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
-    usecase (UUC6.1) as "UUC6.1\nFiltra organizzazioni \ncollegato"
+    usecase (UUC4) as "UUC4\nGestione lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
+  }
+  together {
+    usecase (UUC6.1) as "UUC6.1\nFiltra organizzazioni\ncollegato"
     usecase (UUC7.1) as "UUC7.1\nScelta noto o incognito"
     usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
   }
@@ -14,11 +16,12 @@ rectangle {
 
 :A3.1: -- (UUC4)
 
-(UUC4) <.up. (UUC12) : <<extends>>
-(UUC4) .up.> (UUC7.1) : <<include>>
 (UUC4) .up.> (UUC6.1) : <<include>>
+(UUC4) ..> (UUC7.1) : <<include>>
+(UUC4) <.down. (UUC12) : <<extends>>
 
 @enduml
+
 
 @startuml scelta-noto-o-incognito
 !include ../../../../../../commons/style/use-cases.pu

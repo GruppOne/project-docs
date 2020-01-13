@@ -5,15 +5,13 @@ actor :utente non collegato: as A3
 
 rectangle {
   together {
-    usecase (UUC4) as "UUC4\nRecupero lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\nselezionamento di un'organizzazione\n con rete mancante"
+    usecase (UUC4) as "UUC4\nGestione lista organizzazioni"
     usecase (UUC5.1) as "UUC5.1\nFiltra organizzazioni\nnon collegato"
-    usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
   }
 }
 
 :A3: -- (UUC4)
 
 (UUC5.1) <.up. (UUC4) : <<include>>
-(UUC12) .up.> (UUC4) : <<extends>>
 
 @enduml

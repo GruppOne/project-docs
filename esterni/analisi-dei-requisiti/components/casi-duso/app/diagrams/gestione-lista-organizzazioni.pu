@@ -6,10 +6,10 @@ actor :utente autenticato: as A
 rectangle {
   together {
     usecase (UUC4.1) as "UUC4.1\nAggiornamento\nlista organizzazioni\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
-    usecase (UUC4.2) as "UUC4.2\nSeleziona organizzazioni\n--\nExtension points:\n-Visualizzazione errore in\ncaso di disconnessione\nin mancanza di rete\n-Visualizzazione form autenticazione\nin caso di collegamento a\norganizzazione privata"
+    usecase (UUC4.2) as "UUC4.2\nSeleziona organizzazioni\n--\nExtension points:\n-Visualizzazione errore in\ncaso di disconnessione\nin mancanza di rete\n-Visualizzazione schermata\nautenticazione in caso di\ncollegamento a organizzazione privata"
   }
   together {
-    usecase (UUC4.3) as "UUC4.3\nAutenticazione organizzazione"
+    usecase (UUC4.3) as "UUC4.3\nAutenticazione LDAP\norganizzazione"
     usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
   }
 }
