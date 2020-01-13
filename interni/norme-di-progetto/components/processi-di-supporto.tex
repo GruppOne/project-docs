@@ -314,6 +314,53 @@ Da eseguire due volte per permettere a \LaTeX{} di recuperare i riferimenti corr
 \label{subs:documentazione/metriche}
 
 % TODO sposta metriche qui
+  \subparagraph{MPSIDG-Indice di Gulpease}%
+\label{subp:MPSIDG-indice_di_Gulpease}
+
+L'indice di Gulpease è un indice che valuta la leggibilità di un testo scritto in lingua italiana. Ha il vantaggio principale di utilizzare la lunghezza delle parole in lettere invece che sillabe. La formula per il calcolo è la seguente:
+\[
+  89 +\frac{300\cdot nf-10\cdot nl}{np}
+\]
+dove:
+\begin{description}
+  \item [nf] indica il numero delle frasi.
+  \item [nl] indica il numero delle lettere.
+  \item [np] indica il numero di parole.
+\end{description}
+I risultati sono compresi tra 0 e 100 dove 0 indica la leggibilità minima mentre 100 quella massima. In genere l'indice dice che:
+\begin{itemize}
+  \item Un testo con indice inferiore a 80 è difficile per chi ha la licenza elementare.
+  \item Un testo con indice inferiore a 60 è difficile per chi la licenza media.
+  \item Un testo con indice inferiore a 40 è difficile per chi ha il diploma di scuola superiore.
+\end{itemize}
+\subparagraph{MPSIGF-Indice di Gunning Fog}%
+\label{subp:MPSIGF-indice_di_Gunning_Fog}
+
+L'indice di Gunning Fog è un indice progettato per misurare la facilità di lettura e la comprensione del testo. La formula per il calcolo è la seguente:
+\[
+  0.4\cdot((\frac{np}{nf})+100\cdot(\frac{npc}{np}))
+\]
+dove:
+\begin{description}
+  \item [np] indica il numero di parole.
+  \item [nf] indica il numero di frasi.
+  \item [npc] indica il numero di parole complesse, dove per complesse si intendono le parole con più di tre sillabe escluse:
+        \begin{itemize}
+          \item Parole composte da due parole di una o due sillabe.
+          \item Nomi propri.
+          \item Verbi di due sillabe che coniugati diventano di tre sillabe o più.
+          \item Avverbi in -ente di parole di due sillabe.
+        \end{itemize}
+\end{description}
+Il numero risultante indica il numero di anni minimi di educazione formale necessari a comprendere il testo. Ad esempio se l'indice vale 17 vuol dire che il testo potrà essere letto facilmente da una persona con licenza di scuola media.
+
+\subparagraph{MPSCOO-Correttezza ortografica}%
+\label{subp:MPSCOO-correttezza_ortografica}
+
+L'indice di correttezza ortografica indica la correttezza del testo.
+Esso misura il numero di errori ortografici presenti.
+Ogni componente del gruppo ha un estensione per il proprio code editor (per vscode consigliamo l'estensione \href{https://marketplace.visualstudio.com/items?itemName=ban.spellright}{Spell Right}, che si basa sul dizionario di sistema).
+
 
 % subs:metriche (end)
 
@@ -532,101 +579,8 @@ Ogni metrica avrà la seguente struttura:
           \item PS -metrica di processo.
           \item PR -metrica di prodotto.
         \end{itemize}
-  \item [Codice] un codice identificativo univoco a tre cifre che rappresenta la metrica.
+  \item [Sigla] indica una sigla che abbrevia la metrica.
 \end{description}
-
-
-\subparagraph{MPS001-Indice di Gulpease}%
-\label{subp:MPS001-indice_di_Gulpease}
-
-L'indice di Gulpease è un indice che valuta la leggibilità di un testo scritto in lingua italiana. Ha il vantaggio principale di utilizzare la lunghezza delle parole in lettere invece che sillabe. La formula per il calcolo è la seguente:
-\[
-  89 +\frac{300\cdot nf-10\cdot nl}{np}
-\]
-dove:
-\begin{description}
-  \item [nf] indica il numero delle frasi.
-  \item [nl] indica il numero delle lettere.
-  \item [np] indica il numero di parole.
-\end{description}
-I risultati sono compresi tra 0 e 100 dove 0 indica la leggibilità minima mentre 100 quella massima. In genere l'indice dice che:
-\begin{itemize}
-  \item Un testo con indice inferiore a 80 è difficile per chi ha la licenza elementare.
-  \item Un testo con indice inferiore a 60 è difficile per chi la licenza media.
-  \item Un testo con indice inferiore a 40 è difficile per chi ha il diploma di scuola superiore.
-\end{itemize}
-\subparagraph{MPS002-Indice di Gunning Fog}%
-\label{subp:MPS002-indice_di_Gunning_Fog}
-
-L'indice di Gunning Fog è un indice progettato per misurare la facilità di lettura e la comprensione del testo. La formula per il calcolo è la seguente:
-\[
-  0.4\cdot((\frac{np}{nf})+100\cdot(\frac{npc}{np}))
-\]
-dove:
-\begin{description}
-  \item [np] indica il numero di parole.
-  \item [nf] indica il numero di frasi.
-  \item [npc] indica il numero di parole complesse, dove per complesse si intendono le parole con più di tre sillabe escluse:
-        \begin{itemize}
-          \item Parole composte da due parole di una o due sillabe.
-          \item Nomi propri.
-          \item Verbi di due sillabe che coniugati diventano di tre sillabe o più.
-          \item Avverbi in -ente di parole di due sillabe.
-        \end{itemize}
-\end{description}
-Il numero risultante indica il numero di anni minimi di educazione formale necessari a comprendere il testo. Ad esempio se l'indice vale 17 vuol dire che il testo potrà essere letto facilmente da una persona con licenza di scuola media.
-
-\subparagraph{MPS003-Correttezza ortografica}%
-\label{subp:MPS003-correttezza_ortografica}
-
-L'indice di correttezza ortografica indica la correttezza del testo.
-Esso misura il numero di errori ortografici presenti.
-Ogni componente del gruppo ha un estensione per il proprio code editor (per vscode consigliamo l'estensione \href{https://marketplace.visualstudio.com/items?itemName=ban.spellright}{Spell Right}, che si basa sul dizionario di sistema).
-
-\subparagraph{MPS004-Requisiti obbligatori soddisfatti}%
-\label{subp:MPS004-requisiti_obbligatori_soddisfatti}
-
-La metrica MPS004 indica la percentuale di requisiti obbligatori soddisfatti sul numero totale di requisiti obbligatori. La formula è la seguente:
-\[
-  \frac{requisiti\ obbligatori\ soddisfatti}{requisiti\ obbligatori\ totali}\cdot 100
-\]
-
-\subparagraph{MPS005-Varianza dei costi}%
-\label{subp:MPS005-varianza_dei_costi}
-
-La metrica MPS005 misura se il costo effettivamente maturato al momento del calcolo dell'indice sia in linea con quanto pianificato. Si calcola:
-\[
-  BCWP-ACWP
-\]
-dove:
-\begin{description}
-  \item [BCWP] misura il costo del lavoro svolto alla data attuale.
-  \item [ACWP] indica il costo sostenuto alla data corrente.
-\end{description}
-
-\subparagraph{MPS006-Varianza rispetto allo schedule}%
-\label{subp:MPS006-varianza_rispetto_allo_schedule}
-
-La metrica misura se si è in anticipo o in ritardo rispetto rispetto allo schedule delle attività di progetto pianificate nella baseline. Si calcola:
-\[
-  BCWP - BCWS
-\]
-dove:
-\begin{description}
-  \item [BCWP] misura il costo del lavoro svolto alla data attuale.
-  \item [BCWS] indica il budget previsto per la realizzazione dell'intero progetto.
-\end{description}
-Il numero risultante indica:
-\begin{itemize}
-  \item Una varianza di schedule pari a 0 indica che si sta rispettando la pianificazione.
-  \item Una varianza di schedule inferiore a 0 indica che si è in ritardo rispetto alla pianificazione.
-  \item Una varianza di schedule superiore a 0 indica che si è in anticipo rispetto alla pianificazione.
-\end{itemize}
-
-\subparagraph{MPS007-Rischi incontrati e non preventivati}%
-\label{subp:MPS007-rischi_incontrati_e_non_preventivati}
-
-La metrica misura il numero di rischi incontrati che non sono stati preventivati nell'analisi dei rischi del \textit{Piano di progetto}. Un valore maggiore di 0 indica una analisi dei rischi effettuata in maniera non ottimale.
 
 % TODO parlare delle GitHub action?
 \paragraph{Strumenti}%
