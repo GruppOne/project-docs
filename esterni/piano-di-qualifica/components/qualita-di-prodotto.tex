@@ -1,8 +1,6 @@
 \documentclass[../piano-di-qualifica.tex]{subfiles}
 \appendToGraphicspath{../../../commons/img/}
 
-% TODO usare https://en.wikipedia.org/wiki/ISO/IEC_9126?
-% TODO usare https://www.praxiom.com/iso-90003.htm?
 \begin{document}
 
 Le caratteristiche dello standard ISO/IEC 25010:2011 che il gruppo ha ritenuto rilevanti per il prodotto vengono elencate qui sotto, accompagnate dai valori desiderabili delle metriche definite nelle \textit{Norme di Progetto} per misurare il grado di raggiungimento della qualità di prodotto.
@@ -99,7 +97,7 @@ Questa caratteristica rappresenta il grado di efficacia e efficienza con cui il 
       \begin{itemize}   \item Valore ammissibile: \leq{}  6 \item Valore ottimale: \leq{}  3 \end{itemize}
     \item [[MPR-SOC \textasciitilde] Semplicità delle classi]: Possiamo monitorare la modularità, analizzabilità e testabilità del prodotto valutando il numero di metodi per ogni classe, meno saranno più lo scopo di quella classe sarà specifico.
       \begin{itemize} \item Valore ammissibile: \leq{}  10 \item Valore ottimale: \leq{}  5 \end{itemize}
-    \item [[MPR-CC \textasciitilde] Complessità ciclomatica]: Monitoriamo la Analizzabilità, Modificabilità e Testabilità del prodotto calcolando la complessità ciclomatica (\(CC\)) secondo la seguente formula: \begin{equation} CC = e - n + p \end{equation}. Dove \(e\) è il numero di archi del grafo formato da tutti i possibili esiti del programma, \(n\) è il numero di nodi del grafo e \(p\) è il numero di \glossario{componenti connesse} del grafo. 
+    \item [[MPR-CC \textasciitilde] Complessità ciclomatica]: Monitoriamo la Analizzabilità, Modificabilità e Testabilità del prodotto calcolando la complessità ciclomatica (\(CC\)) secondo la seguente formula: \begin{equation} CC = e - n + p \end{equation}. Dove \(e\) è il numero di archi del grafo formato da tutti i possibili esiti del programma, \(n\) è il numero di nodi del grafo e \(p\) è il numero di \glossario{componenti connesse} del grafo.
       \begin{itemize} \item Valore ammissibile: \leq{}  7 \item Valore ottimale: \leq{}  3 \end{itemize}
   \end{description}
 % subs:metriche (end)
@@ -122,7 +120,7 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
 \subsubsection{Metriche}%
 \label{subs:metriche}
 \begin{description}
-\item [[MPR-IS \textasciitilde] Percentuale di interazioni sbagliate]: possiamo monitorare la protezione dagli errori del prodotto tramite le interazioni il cui esito si è discostato dall'obiettivo dell'utente rispetto a quelle totali. L'indice \(R_s\) si calcola come \begin{equation} R_s = \frac{I_fail}{I_tot} \times 100 \end{equation}. Dove \(I_fail\) sono le interazioni fallite mentre \(I_tot\) sono le interazioni totali.
+\item [[MPR-IS \textasciitilde] Percentuale di interazioni sbagliate]: possiamo monitorare la protezione dagli errori del prodotto tramite le interazioni il cui esito si è discostato dall'obiettivo dell'utente rispetto a quelle totali. L'indice \(R_s\) si calcola come \(R_s = \frac{I_{fail}}{I_{tot}} \times 100 \). Dove \(I_{fail}\) sono le interazioni fallite mentre \(I_{tot}\) sono le interazioni totali.
   \begin{itemize} \item Valore ammissibile: \leq{}  10 \%  \item Valore ottimale: \leq{}  2 \% \end{itemize}
 \end{description}
 % subs:metriche (end)
@@ -145,7 +143,7 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
 \subsubsection{Metriche}%
 \label{subs:metriche}
 \begin{description}
-\item [[MPR-RS \textasciitilde] Percentuale Richieste soddisfatte]: possiamo monitorare la disponibilità e la maturità del prodotto tramite il numero di richieste fatte al software che hanno avuto successo rispetto al totale di richieste effettuate: \begin{equation} \frac{R_succ}{R_tot} \end{equation}. Dove \(R_succ\) sono le richieste effettuate con successo mentre \(R_tot\) sono le richieste totali.
+\item [[MPR-RS \textasciitilde] Percentuale Richieste soddisfatte]: possiamo monitorare la disponibilità e la maturità del prodotto tramite il numero di richieste fatte al software che hanno avuto successo rispetto al totale di richieste effettuate: \(\frac{R_{succ}}{R_{tot}} \). Dove \(R_{succ}\) sono le richieste effettuate con successo mentre \(R_{tot}\) sono le richieste totali.
   \begin{itemize} \item Valore ammissibile: \le{}  90 \%  \item Valore ottimale: \le{}  98 \% \end{itemize}
 \end{description}
 % subs:metriche (end)
@@ -158,8 +156,8 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
     Abbiamo definito i test dividendoli nelle seguenti categorie:
     \begin{description}
       \item [Test di Accettazione (TA)]
-      \item [Test di Sistema (TS)] 
-      \item [Test di Integrazione (TI)] 
+      \item [Test di Sistema (TS)]
+      \item [Test di Integrazione (TI)]
       \item [Test di Unità (TU)]
     \end{description}
     Inoltre classifichiamo i test in base al loro stato:
@@ -187,11 +185,11 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
         \rowcolor{darkgray!90!}
         \color{white}
         {\textbf{ID test}} & \color{white}{\textbf{Descrizione}} & \color{white}{\textbf{Esito}} \\
-        \endhead
+        \endhead{}
         \rowcolor{white}
         \multicolumn{3}{r}{\textit{Continua alla pagina seguente}}
-        \endfoot
-        \endlastfoot
+        \endfoot{}
+        \endlastfoot{}
         TAAFO001      & Al nuovo utente deve essere permesso di registrarsi. \newline
                         L’utente deve:
                         \begin{itemize}
@@ -445,7 +443,7 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
         \begin{itemize}
          \item selezionare un'organizzazione di cui è owner;
          \item avviare la procedura di aggiunta di un gestore;
-         \item inserire e-mail dell'utente da promuovere.
+         \item inserire email dell'utente da promuovere.
         \end{itemize}
         & NS \\
         TAWFO34      & Il sistema deve permettere all’owner di aggiungere un nuovo visualizzatore dell’organizzazione.    \newline
@@ -453,7 +451,7 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
         \begin{itemize}
          \item selezionare un'organizzazione di cui è owner;
          \item avviare la procedura di aggiunta di un visualizzatore;
-         \item inserire e-mail dell'utente da promuovere.
+         \item inserire email dell'utente da promuovere.
         \end{itemize}
         & NS \\
         TAWFO34      & Il sistema deve permettere all’amministratore di togliere i privilegi di owner ad un utente che ne sia in possesso.    \newline
@@ -461,7 +459,7 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
         \begin{itemize}
          \item selezionare un'organizzazione;
          \item avviare la procedura di rimozione owner;
-         \item inserire e-mail dell'owner da rimuovere;
+         \item inserire email dell'owner da rimuovere;
          \item confermare la rimozione dell'owner.
         \end{itemize}
         & NS \\
@@ -470,7 +468,7 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
         \begin{itemize}
          \item selezionare un'organizzazione;
          \item avviare la procedura di rimozione dei gestori;
-         \item inserire e-mail del gestore da rimuovere;
+         \item inserire email del gestore da rimuovere;
          \item confermare la rimozione del gestore.
         \end{itemize}
         & NS \\
@@ -479,7 +477,7 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
         \begin{itemize}
          \item selezionare un'organizzazione;
          \item avviare la procedura di rimozione dei visualizzatori;
-         \item inserire e-mail del visualizzatore da rimuovere;
+         \item inserire email del visualizzatore da rimuovere;
          \item confermare la rimozione del visualizzatore.
         \end{itemize}
         & NS \\
