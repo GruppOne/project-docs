@@ -15,10 +15,18 @@
 \usepackage{titling}
 \usepackage{lastpage}
 \usepackage{ifthen}
-\usepackage{plantuml}
+\usepackage{calc}
 \usepackage{minted}
 \usepackage{pgfgantt}
 \usepackage{subfiles}
+
+\newlength{\imgwidth}
+
+\newcommand\scalegraphics[1]{%
+    \settowidth{\imgwidth}{\includegraphics{#1}}%
+    \setlength{\imgwidth}{\minof{\imgwidth}{\textwidth}}%
+    \includegraphics[width=\imgwidth]{#1}%
+}
 
 % XXX definizione dei percorsi in cui cercare immagini
 \graphicspath{ {./}
@@ -75,7 +83,7 @@
 \newcommand{\plchold}[1]{\textit{\{#1\}}} % chktex 20
 
 % hook per lo script che genera il glossario
-\newcommand{\glossario}[1]{\textsc{#1}\textsubscript{g}}
+\newcommand{\glossario}[1]{\underline{#1}\textsubscript{g}}
 
 % definizione dei comandi \uso e \stato
 \makeatletter
