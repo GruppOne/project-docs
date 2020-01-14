@@ -3,6 +3,8 @@
 % questi package non sono necessari in lualatex; ref https://tex.stackexchange.com/a/413046
 % \usepackage[utf8]{inputenc}
 % \usepackage[T1]{fontenc}
+% package per modificare l'aspetto grafico delle description; temporaneamente rimosso
+% \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{soulutf8}
@@ -40,6 +42,13 @@
   \g@addto@macro\Ginput@path{{#1}}%
 }
 \makeatother
+
+% setup delle description
+
+% \newcommand{\textitplusdash}[1]{\textendash\hspace{1mm}{#1}}
+% \setlist[description,1]{font=\textbullet\hspace{1.5mm}, leftmargin=*,labelindent=12.5mm}
+% \setlist[description,2]{format=\normalfont\textitplusdash, leftmargin=*,labelindent=12.5mm}
+% \setlist[itemize,2]{format=\normalfont\textitplusdash, leftmargin=*,labelindent=12.5mm}
 
 % setup della sottolineatura
 \setuldepth{Flat}

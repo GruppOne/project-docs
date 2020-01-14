@@ -2,26 +2,74 @@
 
 \input{../../commons/config}
 \appendToGraphicspath{../../commons/img/}
+\appendToGraphicspath{../../../commons/img/}
+\appendToGraphicspath{./components/img/}
 
 \title{Norme di progetto}
 
-% \setVersione{\plchold{versione}}
+\setVersione{0.0.8}
 \setResponsabile{Alessandro Rizzo}
 \setRedattori{
   Alberto Cocco \\ &
-  Luca Ercole
+  Luca Ercole \\ &
+  Alberto Gobbo
 }
 \setVerificatori{
   Alessandro Rizzo \\ &
   Fabio Scettro
 }
-\setStato{WIP}
+\setStato{Approvato}
 \setUso{Interno}
-% \setDescrizione{\plchold{descrizione}}
-\setModifiche{}
+\setDescrizione{Questo documento descrive il nostro Way of Working}
+\setModifiche{%
+0.0.5 & Alessandro Rizzo & 2019--12--30 & approva documento \\%
+0.0.4 & Alessandro Rizzo, Fabio Scettro & 2019--12--30 & verifica documento completo \\%
+0.0.4 & Luca Ercole & 2019--12--29 & sistema alcuni dettagli e aggiungi metriche \\%
+0.0.4 & Alberto Cocco,Luca Ercole & 2019--11--28 & correggi errori trovati durante la verifica \\%
+0.0.4 & Fabio Scettro & 2019--12--28 & revisiona il documento \\%
+0.0.4 & Luca Ercole & 2019--12--27 & modifica sistema di numerazione dei requisiti \\%
+0.0.4 & Alberto Cocco, Luca Ercole & 2019--12--27 & risolvi alcuni errori \\%
+0.0.4 & Alessandro Rizzo & 2019--12--26 & revisiona il documento \\%
+0.0.4 & Alberto Cocco & 2019--12--26 & aggiungi processi di verifica e validazione \\%
+0.0.4 & Luca Ercole & 2019--12--26 & aggiungi classificazione dei rischi \\%
+0.0.4 & Alberto Gobbo & 2019--12--24 & aggiungi processo di documentazione \\%
+0.0.4 & Luca Ercole & 2019--12--23 & risolvi errori \\%
+0.0.4 & Alberto Gobbo & 2019--12--23 & completa processi primari \\%
+0.0.4 & Luca Ercole & 2019--12--22 & aggiungi processo di sviluppo \\%
+0.0.4 & Alberto Gobbo & 2019--12--22 & aggiungi processi organizzativi \\%
+0.0.4 & Alberto Gobbo & 2019--12--21 & inizia i processi primari \\%
+0.0.4 & Luca Ercole & 2019--12--21 & aggiungi label a sottosezioni, paragrafi, sottoparagrafi \\%
+0.0.4 & Alberto Cocco & 2019--12--21 & completa struttura dei processi \\%
+0.0.4 & Alberto Gobbo & 2019--12--21 & inizia l'introduzione. Aggiungi scopi, glossario e alcuni riferimenti \\%
+0.0.2 & Riccardo Agatea & 2019--11--19 & approva bozza \\%
+0.0.1 & Alberto Cocco & 2019--11--18 & aggiungi prima bozza processo di documentazione \\%
+0.0.1 & Alberto Cocco & 2019--11--16 & aggiungi struttura dei processi organizzativi, primari e di supporto \\%
+0.0.1 & Luca Ercole & 2019--11--16 & aggiungi redattori e verificatori \\%
+0.0.1 & Luca Ercole & 2019--11--15 & crea documenti vuoti con template %
+}
 
 \begin{document}
 
 \input{../../commons/template}
+
+\section{Introduzione}%
+\label{sec:introduzione}
+
+\subfile{components/introduzione}
+
+\section{Processi primari}%
+\label{sec:processi_primari}
+
+\subfile{components/processi-primari}
+
+\section{Processi di supporto}%
+\label{sec:processi_di_supporto}
+
+\subfile{components/processi-di-supporto}
+
+\section{Processi organizzativi}%
+\label{sec:processi_organizzativi}
+
+\subfile{components/processi-organizzativi}
 
 \end{document}
