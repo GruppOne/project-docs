@@ -1,4 +1,4 @@
-@startuml recupero-lista-organizzazioni
+@startuml gestione-lista-organizzazioni
 !include ../../../../../../commons/style/use-cases.pu
 
 actor :utente autenticato: as A
