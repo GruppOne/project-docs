@@ -1,0 +1,61 @@
+\documentclass[../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+\subsection{Obiettivo del prodotto}%
+\label{sub:obiettivo_del_prodotto}
+Il prodotto richiesto da capitolato si pone l'obiettivo di tracciare il numero di persone presenti all’interno di una data organizzazione.\\
+Per soddisfare la richiesta, sarà implementata una \glossario{web application} per la gestione delle organizzazioni e il monitoraggio degli utenti, e
+di un'\glossario{applicazione mobile} per l'utente finale che gli permetta di essere monitorato dalla specifica organizzazione scelta.
+
+
+\subsection{Funzionalità del prodotto}%
+\label{sub:funzionalita_del_prodotto}
+Le funzionalità che sono offerte dall'applicazione mobile sono:
+\begin{itemize}
+  \item collegamento ad un’organizzazione;
+  \item recupero della lista delle organizzazioni;
+  \item predisposizione di un pulsante “anonimo” che permetta, all’interno di una organizzazione, di risultare presente in maniera anonima;
+  \item storico degli accessi;
+  \item visualizzazione in tempo reale della propria presenza o meno all’interno di un luogo monitorato e cronometro del tempo trascorso al suo interno.
+\end{itemize}
+
+Le funzionalità che, invece, sono offerte dal server sono:
+\begin{itemize}
+  \item creare e gestire più organizzazioni;
+  \item definire se prevedere una \glossario{tracciatura} nota oppure incognita;
+  \item solo in presenza di autorizzazione specifica, effettuare query di monitoraggio per singolo utente all’interno delle organizzazioni.
+\end{itemize}
+Le comunicazioni tra applicazione mobile e server avvengono solo al momento d'ingresso ed uscita dai luoghi designati dalle organizzazioni, al fine di garantire
+la privacy dell'utente.
+
+
+\subsection{Caratteristiche degli utenti}%
+\label{sub:caratteristiche_degli_utenti}
+Nell'ambito di questo progetto, sono presenti due tipologie generiche di utenti, con caratteristiche diverse dovute all'utilizzo del prodotto:
+\begin{description}
+  \item[Super utente:] è l'utente che detiene dei privilegi avanzati per l'uso della web application, diversi per ogni sottocategoria di super utente;
+  \item[Utente generico:] è l'utente utilizzatore dell'applicazione mobile. Può essere un dipendente di un'azienda che monitora la sua presenza, oppure
+  un visitatore di un evento pubblico.
+\end{description}
+Le due tipologie di utenti sono descritte nel dettaglio al capitolo 3, sezione~\ref{sub:attori_casi_duso}.
+
+
+\subsection{Macroarchitetture del progetto}%
+\label{sub:macroarchitetture_del_progetto}
+\subparagraph*{Back-end}%
+\label{par:back-end}
+E' richiesto lo sviluppo \glossario{back-end} del server, dove è richiesto l'utilizzo di protocolli asincroni per le comunicazioni tra applicazione mobile e server.\\
+Sarà necessario lo sviluppo di un database che contenga tutti i dati d'interesse per il prodotto, dai dati appartenenti ai vari utenti fino ai dati che appartengono ai
+luoghi delle organizzazioni.
+
+\subparagraph*{Front-end}%
+\label{par:front-end}
+Lo sviluppo \glossario{front-end} sarà costituito:
+\begin{itemize}
+  \item dalla web application, raggiungibile da qualunque utente (anche generico), per eseguire determinate operazioni in base al tipo di privilegi;
+  \item dall'applicazione mobile, scaricabile da ogni utente interessato all'utilizzo del prodotto, che consente di visualizzare le informazioni d'interesse ed eseguire determinate
+  operazioni in presenza di rete.
+\end{itemize}
+
+
+\end{document}

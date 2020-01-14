@@ -1,0 +1,15 @@
+@startuml stylesheet
+left to right direction
+
+skinparam {
+  linetype polyline
+  monochrome true
+  shadowing false
+  defaultFontName Consolas
+  DefaultTextAlignment center
+  noteFontName Arial
+}
+
+scale max 1024 width
+
+@enduml

@@ -1,0 +1,29 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[H]
+  \centering
+  \scalegraphics{disconnessione.png}
+  \caption{UUC10: Disconnessione}%
+  \label{fig:UUC10}
+\end{figure}
+
+  \begin{description}
+  \item[Caso d’uso:] UUC10;
+  \item[Titolo:] Disconnessione;
+  \item[Attori primari:] utente autenticato;
+  \item[Precondizione:] il sistema deve rendere disponibile la possibilità di effettuare la disconnessione;
+  \item[Postcondizione:] l'utente non è più autenticato;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente esegue la disconnessione dal servizio.
+        \end{enumerate}
+  \item[Estensioni:]
+        \begin{enumerate}
+          \item se l'utente cerca di disconnettersi in assenza di rete, si visualizzerà un errore~\ref{subs:UUC12}.
+        \end{enumerate}
+\end{description}
+
+
+\end{document}

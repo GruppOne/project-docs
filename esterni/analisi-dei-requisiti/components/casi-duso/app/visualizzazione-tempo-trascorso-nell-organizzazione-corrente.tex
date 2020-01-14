@@ -1,0 +1,29 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[H]
+  \centering
+  \scalegraphics{visualizzazione-tempo-trascorso-nell-organizzazione-corrente.png}
+  \caption{UUC9: Visualizzazione tempo trascorso nell'organizzazione corrente}%
+  \label{fig:UUC9}
+\end{figure}
+
+\begin{description}
+  \item[Caso dâuso:] UUC9;
+  \item[Titolo:] Visualizzazione tempo trascorso nell'organizzazione corrente;
+  \item[Attori primari:] utente autenticato, in particolare utente collegato;
+  \item[Precondizione:] il sistema deve rendere disponibile la pagina di tempo trascorso nell'organizzazione corrente;
+  \item[Postcondizione:] l'utente visualizza il tempo trascorso nell'organizzazione;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente visualizza in tempo reale il tempo trascorso all'interno di un'organizzazione.
+        \end{enumerate}
+  \item[Estensioni:]
+        \begin{enumerate}
+          \item se l'utente accede ad una schermata per la visualizzazione del tempo trascorso nell'organizzazione in assenza di rete, si visualizzerà un errore~\ref{subs:UUC12}.
+        \end{enumerate}
+\end{description}
+
+
+\end{document}

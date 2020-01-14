@@ -1,0 +1,18 @@
+@startuml storico-utente
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :utente autenticato: as A
+
+rectangle {
+  together {
+    usecase (UUC8) as "UUC8\nVisualizzazione storico accessi\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta storico\nin mancanza di rete"
+    usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
+    note right of (UUC8): implementazione opzionale
+  }
+}
+
+:A: -- (UUC8)
+
+(UUC12) .up.> (UUC8) : <<extends>>
+
+@enduml

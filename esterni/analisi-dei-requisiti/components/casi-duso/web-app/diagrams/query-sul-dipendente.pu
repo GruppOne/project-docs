@@ -1,0 +1,16 @@
+@startuml query-sul-dipendente
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :visualizzatore: as A
+
+rectangle {
+  together {
+    usecase (AUC6.1) as "AUC6.1\nVisualizza organizzazione dipendente"
+    usecase (AUC6.2) as "AUC6.2\nVisualizza luogo dipendente"
+  }
+}
+
+:A: -- AUC6.1
+(AUC6.2) .up.> (AUC6.1) : <<extends>>
+
+@enduml

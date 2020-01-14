@@ -1,0 +1,39 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{eliminazione-visualizzatore.png}
+  \caption{AUC12: Eliminazione visualizzatore}%
+  \label{fig:AUC12}
+\end{figure}
+
+\begin{description}
+  \item[Codice:] AUC12;
+  \item[Titolo:] Eliminazione visualizzatore;
+  \item[Attori primari:] owner;
+  \item[Precondizione:] il sistema deve rendere disponibile la pagina di eliminazione visualizzatore;
+  \item[Postcondizione:] l'utente non è più visualizzatore;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'owner vuole eliminare i privilegi ad un utente visualizzatore.
+        \end{enumerate}
+\end{description}
+
+\subsubsection{AUC12.1: Inserimento email visualizzatore}%
+\label{subs:AUC12.1}
+\begin{description}
+  \item[Codice:] AUC12.1;
+  \item[Titolo:] Inserimento email visualizzatore;
+  \item[Attori primari:] owner;
+  \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire l'email del visualizzatore da eliminare;
+  \item[Postcondizione:] l'email viene opportunemente inserita;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'owner inserisce l'email del visualizzatore da eliminare.
+        \end{enumerate}
+\end{description}
+
+\end{document}

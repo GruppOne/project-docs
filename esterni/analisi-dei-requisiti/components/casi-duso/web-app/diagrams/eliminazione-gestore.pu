@@ -1,0 +1,15 @@
+@startuml eliminazione-gestore
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :owner: as A2
+
+
+rectangle {
+  together {
+    usecase (AUC11.1) as "AUC11.1\nInserimento email gestore"
+  }
+}
+
+:A2: -- AUC11.1
+
+@enduml

@@ -1,0 +1,17 @@
+@startuml collegamento-organizzazione
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :utente non collegato: as A3
+
+rectangle {
+  together {
+    usecase (UUC4) as "UUC4\nGestione lista organizzazioni"
+    usecase (UUC5.1) as "UUC5.1\nFiltra organizzazioni\nnon collegato"
+  }
+}
+
+:A3: -- (UUC4)
+
+(UUC5.1) <.up. (UUC4) : <<include>>
+
+@enduml

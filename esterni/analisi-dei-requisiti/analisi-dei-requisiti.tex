@@ -2,10 +2,13 @@
 
 \input{../../commons/config}
 \appendToGraphicspath{../../commons/img/}
+\appendToGraphicspath{components/casi-duso/app/diagrams/img/}
+\appendToGraphicspath{components/casi-duso/web-app/diagrams/img/}
+\appendToGraphicspath{components/img/}
 
 \title{Analisi dei requisiti}
 
-% \setVersione{\plchold{versione}}
+\setVersione{0.0.8}
 \setResponsabile{Alessandro Rizzo}
 \setRedattori{
   Riccardo Cestaro \\ &
@@ -19,11 +22,65 @@
 }
 \setStato{WIP}
 \setUso{Esterno}
-% \setDescrizione{\plchold{descrizione}}
-\setModifiche{}
+\setDescrizione{Analisi dei requisiti del gruppo \emph{GruppOne} per la realizzazione del progetto \emph{Stalker}}
+\setModifiche{%
+0.0.6 & Alessandro Rizzo & 2020--01--03 & approva documento \\%
+0.0.5 & Tobia Apolloni, Luca Ercole & 2020--01--03 & verifica documento completo \\%
+0.0.5 & Riccardo Cestaro & 2020--01--03 & correggi errori segnalati \\%
+0.0.5 & Tobia Apolloni & 2020--01--02 & revisione del documento \\%
+0.0.5 & Fabio Scettro & 2020--01--02 & correggi errori vari \\%
+0.0.5 & Tobia Apolloni & 2020--01--01 & verifica dei requisiti \\%
+0.0.5 & Fabio Scettro & 2020--01--01 & aggiungi requisiti prestazionali e dichiarativi \\%
+0.0.5 & Alberto Gobbo, Riccardo Cestaro & 2019--12--31 & applica modifiche chieste dai verificatori \\%
+0.0.5 & Verificatori & 2019--12--31 & revisione dei casi d'uso \\%
+0.0.5 & Alberto Gobbo & 2019--12--30 & aggiungi e modifica casi d'uso \\%
+0.0.5 & Fabio Scettro & 2019--12--30 & inserisci requisiti funzionali \\%
+0.0.5 & Alberto Gobbo & 2019--12--30 & aggiungi i diagrammi per i casi d'uso utente \\%
+0.0.5 & Alberto Gobbo & 2019--12--29 & aggiungi tutti i sottocasi d'uso per i casi d'uso utente \\%
+0.0.5 & Alberto Gobbo & 2019--12--29 & aggiungi tutti i casi d'uso utente \\%
+0.0.5 & Riccardo Cestaro & 2019--12--29 & aggiungi diagrammi da UC1 UC25 superutente \\%
+0.0.5 & Riccardo Cestaro & 2019--12--28 & aggiungi sotto casi d'uso da UC1 UC25 superutente \\%
+0.0.5 & Riccardo Cestaro & 2019--12--28 & aggiungi caso d'uso da UC1 a UC25 superutente \\%
+0.0.5 & Alberto Gobbo & 2019--12--28 & aggiungi sottofile casi d'uso \\%
+0.0.5 & Riccardo Cestaro & 2019--12--28 & aggiungi introduzione e descrizione attori casi d'uso \\%
+0.0.5 & Luca Ercole & 2019--12--27 & aggiungi redattori e verificatori sui documenti \\%
+0.0.5 & Luca Ercole & 2019--12--27 & crea documenti vuoti con template %
+}
 
 \begin{document}
 
 \input{../../commons/template}
+
+\section{Introduzione}%
+\label{sec:introduzione}
+\subfile{components/introduzione}
+
+\newpage
+\section{Descrizione generale}%
+\label{sec:descrizione_generale}
+
+\subfile{components/descrizione-generale}
+
+\newpage
+\section{Casi d'uso}%
+\label{sec:casi_duso}
+
+\subfile{components/casi-duso}
+
+\subsection{Elenco casi d'uso applicazione mobile}%
+\label{sub:casi_duso_app}
+
+\subfile{components/casi-duso-app.tex}
+
+\subsection{Elenco casi d'uso web application}%
+\label{sub:casi_duso_web_app}
+
+\subfile{components/casi-duso-web-app.tex}
+
+\newpage
+\section{Requisiti}%
+\label{sec:requisiti}
+
+\subfile{components/requisiti}
 
 \end{document}

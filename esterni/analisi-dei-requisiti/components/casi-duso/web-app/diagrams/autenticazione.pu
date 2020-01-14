@@ -1,0 +1,20 @@
+@startuml autenticazione-admin
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :utente non autenticato: as A
+
+rectangle {
+  together {
+  usecase (AUC1.1) as "AUC1.1\nInserimento email"
+  usecase (AUC1.2) as "AUC1.2\nInserimento password"
+  }
+  usecase (AUC1.3) as "AUC1.3\nVisualizzazione credenziali errate"
+}
+
+:A: -- AUC1.1
+:A: -- AUC1.2
+
+(AUC1.3) .left.> (AUC1.1) : <<extends>>
+(AUC1.3) .up.> (AUC1.2) : <<extends>>
+
+@enduml

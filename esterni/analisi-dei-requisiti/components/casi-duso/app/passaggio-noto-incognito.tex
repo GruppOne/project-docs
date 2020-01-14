@@ -1,0 +1,85 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{passaggio-noto-incognito.png}
+  \caption{UUC7: Passaggio noto/incognito}%
+  \label{fig:uuc7}
+\end{figure}
+
+\begin{description}
+  \item[Caso d’uso:] UUC7;
+  \item[Titolo:] Passaggio noto/incognito;
+  \item[Attori primari:] utente collegato;
+  \item[Precondizione:] il sistema rende disponibile la pagina di passaggio noto/incognito;
+  \item[Postcondizione:] se l'utente era noto diventa incognito; vale anche il contrario;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente deve selezionare la/le organizzazioni su cui è collegato;
+          \item l'utente ha la possibilità di cambiare il tipo di monitoraggio che l'organizzazione è tenuta a conoscere.
+        \end{enumerate}
+  \item[Estensioni:]
+        \begin{enumerate}
+          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un errore~\ref{subs:UUC12}.
+        \end{enumerate}
+\end{description}
+
+\subsubsection{UUC7.1: Scelta noto o incognito}%
+\label{subs:UUC7.1}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=150mm]{scelta-noto-o-incognito.png}
+  \caption{UUC7.1: Scelta noto o incognito}%
+  \label{fig:uuc7_1}
+\end{figure}
+
+\begin{description}
+  \item[Caso d’uso:] UUC7.1;
+  \item[Titolo:] Scelta noto o incognito;
+  \item[Attori primari:] utente collegato, in particolare utente noto ed utente incognito;
+  \item[Precondizione:] l'utente seleziona una o più organizzazioni da cui cambiare tipologia di presenza;
+  \item[Postcondizione:] se l'utente era noto diventa incognito; vale anche il contrario;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente è collegato ad un'organizzazione in cui la sua presenza è nota; l'utente ha la possibilità di passare in modalità incognito;
+          \item l'utente è collegato ad un'organizzazione in cui la sua presenza è incognita; l'utente ha la possibilità di passare in modalità nota.
+        \end{enumerate}
+  \item[Estensioni:]
+        \begin{enumerate}
+          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un errore~\ref{subs:UUC12}.
+        \end{enumerate}
+\end{description}
+
+\subsubsection{UUC7.1.1: Passaggio a incognito}%
+\label{subs:UUC7.1.1}
+\begin{description}
+  \item[Caso d’uso:] UUC7.1.1;
+  \item[Titolo:] Passaggio a incognito;
+  \item[Attori primari:] utente collegato, in particolare utente noto;
+  \item[Precondizione:] l'utente deve essere collegato e noto;
+  \item[Postcondizione:] l'utente è collegato ed incognito;
+  \item[Scenario Principale:]
+        \begin{enumerate}
+          \item l'utente è noto in un'organizzazione e vuole diventare incognito: in questo modo la sua presenza è nota, ma non lo è la sua identità.
+        \end{enumerate}
+\end{description}
+
+\subsubsection{UUC7.1.2: Passaggio a noto}%
+\label{subs:UUC7.1.2}
+\begin{description}
+  \item[Caso d’uso:] UUC7.1.2;
+  \item[Titolo:] Passaggio a noto;
+  \item[Attori primari:] utente collegato, in particolare utente incognito;
+  \item[Precondizione:] l'utente deve essere collegato ed incognito;
+  \item[Postcondizione:] l'utente è collegato e noto;
+  \item[Scenario Principale:]
+        \begin{enumerate}
+          \item l'utente è incognito in un'organizzazione e vuole diventare noto: in questo modo, sia la sua presenza che la sua identità sono note.
+        \end{enumerate}
+\end{description}
+
+
+\end{document}

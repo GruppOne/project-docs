@@ -1,0 +1,44 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[H]
+  \centering
+  \scalegraphics{eliminazione-account.png}
+  \caption{UUC11: Eliminazione account}%
+  \label{fig:UUC11}
+\end{figure}
+
+\begin{description}
+  \item[Caso dâ€™uso:] UUC11;
+  \item[Titolo:] Eliminazione account;
+  \item[Attori primari:] utente autenticato;
+  \item[Precondizione:] il sistema deve rendere disponibile la pagina di eliminazione account;
+  \item[Postcondizione:] l'utente cancella il suo account;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente vuole cancellare il suo account.
+        \end{enumerate}
+        \item[Estensioni:]
+        \begin{enumerate}
+          \item se l'utente cerca di cancellare il suo account in assenza di rete, si visualizzerà un errore~\ref{subs:UUC12}.
+        \end{enumerate}
+\end{description}
+
+\subsubsection{UUC11.1: Conferma eliminazione account}%
+\label{subs:UUC11.1}
+
+\begin{description}
+  \item[Caso dâ€™uso:] UUC11.1;
+  \item[Titolo:] Conferma eliminazione account;
+  \item[Attori primari:] utente autenticato;
+  \item[Precondizione:] l'utente autenticato tenta di eliminare il suo account;
+  \item[Postcondizione:] l'utente conferma la cancellazione del suo account;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente deve confermare la cancellazione del suo account.
+        \end{enumerate}
+\end{description}
+
+
+\end{document}

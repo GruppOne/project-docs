@@ -1,0 +1,56 @@
+@startuml gestione-luoghi
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :gestore: as G
+
+rectangle {
+  together {
+    usecase (AUC4.1) as "AUC4.1\nAggiungi luogo"
+    usecase (AUC4.2) as "AUC4.2\nEliminazione luogo"
+    usecase (AUC4.3) as "AUC4.3\nModifica luogo"
+  }
+  usecase (AUC4.4) as "AUC4.4\nSeleziona luogo"
+}
+
+:G: -- AUC4.1
+:G: -- AUC4.2
+:G: -- AUC4.3
+
+(AUC4.4) <.up. (AUC4.2) : <<include>>
+(AUC4.4) <.up. (AUC4.3) : <<include>>
+
+@enduml
+
+@startuml aggiungi-luogo
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :gestore: as G
+
+rectangle {
+  together {
+    usecase (AUC4.1.1) as "AUC4.1.1\nInserisci coordinate geografiche"
+    usecase (AUC4.1.2) as "AUC4.1.2\nInserisci indirizzo luogo"
+  }
+}
+
+:G: -- AUC4.1.1
+:G: -- AUC4.1.2
+
+@enduml
+
+@startuml modifica-luogo
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :gestore: as G
+
+rectangle {
+  together {
+    usecase (AUC4.3.1) as "AUC4.3.1\nModifica coordinate geografiche"
+    usecase (AUC4.3.2) as "AUC4.3.2\nModifica indirizzo luogo"
+  }
+}
+
+:G: -- AUC4.3.1
+:G: -- AUC4.3.2
+
+@enduml

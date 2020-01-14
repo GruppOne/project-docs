@@ -1,0 +1,29 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[H]
+  \centering
+  \scalegraphics{storico-utente.png}
+  \caption{UUC8: Storico utente}%
+  \label{fig:uuc8}
+\end{figure}
+
+\begin{description}
+  \item[Caso dâ€™uso:] UUC8;
+  \item[Titolo:] Storico utente;
+  \item[Attori primari:] utente autenticato;
+  \item[Precondizione:]  il sistema deve rendere disponibile la schermata di storico utente;
+  \item[Postcondizione:] l'utente visualizza lo storico degli accessi;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente accede ad una schermata per la visualizzazione dello storico personale degli accessi.
+        \end{enumerate}
+  \item[Estensioni:]
+        \begin{enumerate}
+          \item se l'utente cerca di visualizzare lo storico degli accessi in assenza di rete, si visualizzerà un errore~\ref{subs:UUC12}.
+        \end{enumerate}
+\end{description}
+
+
+\end{document}

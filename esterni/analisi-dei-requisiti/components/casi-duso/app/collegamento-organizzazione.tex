@@ -1,0 +1,38 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\begin{figure}[H]
+  \centering
+  \scalegraphics{collegamento-organizzazione.png}
+  \caption{UUC5: Collegamento organizzazione}%
+  \label{fig:uuc5}
+\end{figure}
+
+\begin{description}
+  \item[Caso d’uso:] UUC5;
+  \item[Titolo:] Collegamento organizzazione;
+  \item[Attori primari:] utente non collegato;
+  \item[Precondizione:] l'utente si trova sulla lista delle organizzazioni;
+  \item[Postcondizione:] l'utente si collega a una o più organizzazioni;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente sceglie una o più organizzazioni alla quale collegarsi.
+        \end{enumerate}
+\end{description}
+
+
+\subsubsection{UUC5.1: Filtra organizzazioni non collegato}%
+\begin{description}
+  \item[Caso d’uso:] UUC5.1;
+  \item[Titolo:] Filtra organizzazioni non collegato;
+  \item[Attori primari:] utente non collegato;
+  \item[Precondizione:] l'utente si trova sulla lista delle organizzazioni;
+  \item[Postcondizione:] l'utente visualizza solo le organizzazioni su cui non è collegato;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente visualizza la lista delle organizzazioni su cui non è collegato.
+        \end{enumerate}
+\end{description}
+
+\end{document}

@@ -1,0 +1,14 @@
+@startuml cessione-proprieta-organizzazione
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :owner: as A
+
+rectangle {
+  together {
+    usecase (AUC9.1) as "AUC9.1\nInserimento email nuovo owner"
+  }
+}
+
+:A: -- AUC9.1
+
+@enduml
