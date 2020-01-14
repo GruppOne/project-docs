@@ -1,0 +1,67 @@
+\documentclass[../studio-di-fattibilita.tex]{subfiles}
+\appendToGraphicspath{../../commons/img/}
+
+\begin{document}
+  \pagenumbering{arabic}
+  \subsection{Informazioni generali}%
+  \label{subsec:informazioni_generali}
+  \begin{description}
+    \item[Nome] NaturalAPI
+    \item[Proponente] Teal Blue
+    \item[Committente] prof. Vardanega Tullio, prof. Cardin Riccardo
+  \end{description}
+  % subsection informazioni_generali (end)
+
+
+  \subsection{Descrizione}%
+  \label{subsec:descrizione}
+  \textit{NaturalAPI} mira allo sviluppo del \glossario{proof of concept} per un toolkit per ridurre il divario tra le specifiche di progetto e le API, consentendo ai futuri sviluppatori di scrivere API che siano più coerenti, più prevedibili e più mantenibili, permettendo ai programmatori di concentrarsi sullo sviluppo di funzionalità piuttosto che cercare di replicare il modello aziendale.
+  % subsection descrizione (end)
+
+
+  \subsection{Finalità del progetto}%
+  \label{subsec:finalita_del_progetto}
+  Il toolkit deve generare API complete e test automatizzati sfruttando l'elaborazione del linguaggio naturale.
+  Grazie al suo linguaggio specifico di dominio altamente specializzato, \textit{NaturalAPI} deve essere in grado di produrre interfacce di programmazione complete e facilmente gestibili, con la relativa integrazione e i relativi test unitari, riguardanti frameworks e linguaggi di programmazione popolari.
+  Piuttosto che fare affidamento su espressioni regolari o tecniche di analisi delle stringhe simili, \textit{NaturalAPI} deve affidarsi a tecniche e attività avanzate di elaborazione del linguaggio naturale (NLP) e conoscenza del dominio aziendale per:
+    \begin{enumerate}
+      \item trovare combinazioni di verbi, sostantivi e, più in generale, predicati nel linguaggio naturale Gherkin
+      \item normalizzare e convertire i predicati in funzioni libere oppure metodi con i loro relativi argomenti
+      \item determinare gli oggetti e le proprietà corrispondenti, partendo dalle funzioni ricorrenti individuate nel testo e dai loro argomenti.
+    \end{enumerate}
+  % subsection finalità_del_progetto (end)
+
+
+  \subsection{Tecnologie e Metodologie di sviluppo interessate}%
+  \label{subsec:tecnologie_interessate}
+  \begin{description}
+    \item[Natural Language Processing]: il toolkit utilizza tecniche e attività avanzate di elaborazione del linguaggio naturale
+    \item[Comma Separated Values]: è richiesto l'output dei vocaboli trovati in formato CSV
+    \item[OpenApi JSON]: sono necessarie per l'output di NaturalAPI Design.
+  \end{description}
+  % subsection tecnologie_interessate (end)
+
+
+  \subsection{Aspetti positivi}%
+  \label{subsec:aspetti_positivi}
+  \begin{itemize}
+    \item Il capitolato è molto dettagliato e in particolare fornisce esplicitamente dei requisiti facilmente traducibili (attraverso Gherkin) in test di accettazione. Questo rende più semplice misurare e documentare la conformità del prodotto.
+    \item Considerato che non è richiesto fornire un'interfaccia grafica, possiamo permetterci di utilizzare più risorse per sviluppare le funzionalità richieste.
+  \end{itemize}
+  % subsection aspetti_positivi (end)
+
+
+  \subsection{Criticità e fattori di rischio}%
+  \label{subsec:criticita_e_fattori_di_rischio}
+  \begin{itemize}
+    \item Il gruppo reputa complesso l'argomento trattato, in quanto richiede molto autoapprendimento da parte dei partecipanti.
+  \end{itemize}
+  % subsection criticità_e_fattori_di_rischio (end)
+
+
+  \subsection{Conclusioni}%
+  \label{subsec:conclusioni}
+  Il progetto richiede un oneroso carico di lavoro in termini di ore di apprendimento e sviluppo per il soddisfacimento dei requisiti obbligatori; ciò nonostante, questo capitolato è riuscito a stimolare l'interesse del gruppo, che lo ha preso in considerazione come seconda scelta.
+  % subsection conclusioni (end)
+
+\end{document}
