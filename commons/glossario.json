@@ -16,6 +16,9 @@
       "Capitolato": "documento tecnico redatto dall'azienda committente, contenente tutte le specifiche tecniche del prodotto software che devono essere rispettate ed eseguite dall'azienda fornitrice per effetto di un contratto d'appalto.",
       "Caso d'uso": "insieme di scenari, ovvero sequenze di azioni, che hanno in comune uno scopo finale per un attore, ovvero un utente. Descrivono l'insieme di funzionalità del sistema percepite dall'utente.",
       "Client": "componente che accede ai servizi o alle risorse di un'altra componente detta server.",
+      "Commit": "comando di Git utilizzato per salvare i propri cambiamenti nella repository locale del progetto.",
+      "Commitizen": "strumento da riga di comando che consente di formattare i messaggi di commit con una serie di prompt utilizzati per generare un messaggio di commit.",
+      "Commitizen adapter": "meccanismo attraverso cui la utility Commitizen permette di applicare specifiche diverse, caso per caso, ai messaggi di commit",
       "Copertura": "nelle telecomunicazioni, è la zona geografica servita da una rete di telefonia cellulare o stazione radio.",
       "client": "toDelete",
       "copertura": "toDelete"
@@ -39,6 +42,7 @@
   "G": {
       "GPS": "acronimo di Global Positioning System, è un sistema di posizionamento satellitare che permette in ogni istante di localizzare la latitudine e la longitudine di un oggetto, grazie all'utilizzo di satelliti che stazionano nell'orbita terrestre.",
       "Gestore": "utente appartenente ad un'organizzazione abilitato a gestire i luoghi dell'organizzazione. Un singolo utente può essere gestore di più organizzazioni distinte.",
+      "Git": "sistema di controllo versione distribuito, in inglese DVCS (acronimo di Distributed Version Control System), utilizzabile da interfaccia a riga di comando. Utile per gestire progetti che siano tracciabili sia in locale che in remoto.",
       "gestore": "toDelete"
   },
   "H": {
