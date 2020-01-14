@@ -1,4 +1,4 @@
-﻿@startuml autenticazione-ldap-organizzazione
+@startuml autenticazione-ldap-organizzazione
 !include ../../../../../../commons/style/use-cases.pu
 
 actor :utente autenticato: as A
