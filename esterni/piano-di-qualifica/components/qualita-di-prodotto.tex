@@ -178,6 +178,8 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
         \item [P]: requisito prestazionale
         \item [D]: requisito dichiarativo
       \end{description}
+
+      \newpage
       \begin{centering}
       \rowcolors{2}{lightgray}{white!80!lightgray!100}
       \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
@@ -185,8 +187,7 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
         \rowcolor{darkgray!90!}
         \color{white}
         {\textbf{ID test}} & \color{white}{\textbf{Descrizione}} & \color{white}{\textbf{Esito}} \\
-        \endhead%
-        \rowcolor{white}
+        \endhead\rowcolor{white}%
         \multicolumn{3}{r}{\textit{Continua alla pagina seguente}}
         \endfoot{}%
         \endlastfoot{}
@@ -364,7 +365,7 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
         L’owner deve:
         \begin{itemize}
          \item avviare la procedura di modifica di una organizzazione;
-         \item modificare uno o più dati dell'organizzazione (nome, descrizione, configurazione del server LDAP).
+         \item modificare i dati dell'organizzazione (nome, descrizione, configurazione del server LDAP).
         \end{itemize}
         & NS \\
         TAWFO023      & L’interfaccia web deve permettere all’owner e al gestore di visualizzare una lista delle organizzazioni di cui fanno parte. \newline
@@ -489,8 +490,8 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
          \item confermare la rimozione dell'account.
         \end{itemize}
         & NS \\
-
-
+        \caption{Tabella dei test di accettazione}%
+        \label{tab:test_accettazione}
       \end{longtable}
       %subs:accettazione (end)
     \end{centering}
