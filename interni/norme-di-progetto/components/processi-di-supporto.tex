@@ -420,12 +420,37 @@ Eventi non previsti dalla pianificazione si manifesteranno con appropriate richi
 
 Eventuali discordanze tra la cifra MAJOR delle parti e la cifra X del prodotto verranno sanate con la massima priorità, a manifestare l'aderenza del prodotto all'API rilasciata pubblicamente.
 
+\subparagraph{Eventuale aderenza ai principi delle twelve-factor app}%
+\label{subp:eventuale_aderenza_ai_principi_delle_twelve-factor_app}
+
+Qualora in fase di progettazione decidessimo che è sostenibile sviluppare il prodotto in aderenza ai principi delineati in \href{https://12factor.net/codebase}{12-factor app}, con riferimento al primo fattore consideriamo il nostro prodotto come un \glossario{sistema distribuito}, in cui ricerchiamo la conformità di quanti più componenti possibili.
+
+\subparagraph{Identità di prodotto}%
+\label{subp:identita_di_prodotto}
+
+Ci riserviamo la possibilità di modificare opportunamente la gestione del versionamento del prodotto in seguito a eventuale feedback negativo del committente, semplificandolo ove necessario.
+
+Valuteremo inoltre la convenienza manutentiva di fornire al committente in corrispondenza delle prossime revisioni di progetto un repository impostato per tracciare sia le parti del sistema che la documentazione di progetto attraverso il meccanismo dei \href{https://git-scm.com/book/en/v2/Git-Tools-Submodules}{Submodule}.
+
+% subp:identita_di_prodotto (end)
+
 \paragraph{Struttura dei messaggi di commit}%
 \label{par:struttura_dei_messaggi_di_commit}
 
 In tutti i repository gestiti dall'organizzazione GruppOne ci impegniamo a rispettare la specifica \href{https://www.conventionalcommits.org/en/v1.0.0/}{Conventional Commits 1.0.0}. Il vantaggio principale di questa convenzione risiede nella sua stretta correlazione con la specifica semver e gli avanzamenti di versione interna.
 
 Sebbene l'utilità di seguire questa convenzione nel repository di documentazione sia limitata, abbiamo deciso di imporla comunque per entrare fin da subito nell'ottica necessaria e uniformare il flusso di lavoro.
+
+\paragraph{Baseline}%
+\label{par:baseline}
+
+Stante quanto detto ai paragrafi precedenti, emerge in maniera naturale un concetto di \glossario{baseline} per il nostro progetto.
+
+Considerati tutti i repository di progetto creati dall'organizzazione, la baseline corrispondente ad ogni milestone di progetto è definita univocamente dal numero di versione di prodotto e dai numeri di versione interni, e consiste concretamente nel contenuto delle branch di default di ciascun repository, opportunamente marcato da una \glossario{tag} e da una \href{https://help.github.com/en/github/administering-a-repository/about-releases}{release} di GitHub.
+
+Nel caso del repository di documentazione di progetto, ci impegniamo anche ad allegare una copia dei documenti compilati in formato PDF\@.
+
+% par:baseline (end)
 
 \subsubsection{Strumenti}%
 \label{subs:gestione_della_configurazione/strumenti}
@@ -630,14 +655,15 @@ Sono eseguiti in collaborazione con il committente.
 \subsubsection{Strumenti}%
 \label{subs:verifica/strumenti}
 
-% TODO scrivere pr review di github
+\paragraph{Code Review}%
+\label{par:code_review}
 
-% subs:verifica/strumenti (end)
+Il processo di verifica avviene principalmente attraverso il meccanismo delle \href{https://github.com/features/code-review/}{Code Review} offerto da GitHub.
+Lo stretto collegamento con lo strumento di versionamento permette di svolgere incrementalmente la verifica, di pari passo con l'aggiunta di contenuto sia ai documenti che in futuro al codice sorgente.
 
-\subsubsection{Metriche}%
-\label{subs:metriche}
+Resta inteso che all'avvicinarsi dell'approvazione di un documento è appropriato effettuare una lettura anche del documento nel suo insieme.
 
-% TODO scrivi metriche
+% par:code_review (end)
 
 \subparagraph{Code owners}%
 \label{subp:code_owners}
@@ -648,6 +674,20 @@ Ogni volta che viene aperta una \glossario{Pull Request} che modifica alcuni fil
 
 L'integrazione delle modifiche nella branch di default del repository è condizionata al superamento di queste verifiche.
 
+\paragraph{GitHub Actions}%
+\label{par:github_actions}
+
+GruppOne utilizzerà ove possibile la feature \href{https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-github-actions}{GitHub Actions} al fine di automatizzare quanti più processi di verifica possibile.
+
+È infatti possibile definire o riutilizzare delle action per rendere meno onerose sia l'analisi statica che dinamica del codice, e contemporaneamente facilitare molte delle attività e dei compiti svolti dai membri del team.
+
+La configurazione delle action si trova in file \glossario{YAML} posizionati nella cartella \verb|.github/workflows| del repository a cui vengono applicate.
+
+Un primo esempio di utilizzo si può trovare nella action \href{https://github.com/marketplace/actions/commitsar-action}{Commitsar Action}, uno strumento a configurazione pressoché nulla che garantisce la conformità con la specifica dei commit convenzionali.
+
+% par:github_actions (end)
+
+% subs:verifica/strumenti (end)
 
 \subsection{Validazione}%
 \label{sub:validazione}
@@ -677,7 +717,7 @@ Il piano di validazione comprende tutte le attività del processo di validazione
 \subsubsection{Metriche}%
 \label{subs:validazione/metriche}
 
-% TODO scrivi metriche
+% TODO scrivi metriche (copertura dei requisiti?)
 
 % subs:metriche (end)
 
