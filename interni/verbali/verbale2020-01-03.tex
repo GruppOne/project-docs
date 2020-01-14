@@ -1,0 +1,105 @@
+\documentclass{article}
+
+\input{../../commons/config}
+
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale --- 03/01/2020}
+
+\setVersione{0.0.8}
+\setResponsabile{Alessandro Rizzo}
+\setRedattori{Luca Ercole}
+\setVerificatori{
+  Tobia Apolloni \\ &
+  Riccardo Cestaro
+}
+\setStato{Approvato}
+\setUso{Interno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 03/01/2020}
+\setModifiche{%
+- & Alessandro Rizzo & 2020--01--04 & approva documento \\%
+- & Tobia Apolloni, Riccardo Cestaro & 2020--01--04 & verifica verbale \\%
+- & Fabio Scettro & 2020--01--03 & stendi verbale%
+}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item Decidere strumenti da utilizzare per le presentazioni del nostro lavoro
+  \item Scegliere un modello di sviluppo
+  \item Abbozzare pianificazione con il modello scelto
+  \item Fare il punto della situazione sui vari documenti
+\end{itemize}
+
+\section{Decidere strumenti da utilizzare per le presentazioni}%
+\label{sec:decidere_strumenti_da_utilizzare_per_le_presentazioni}
+
+Abbiamo scelto di utilizzare Google Slides. La presentazione verrà scritta tra il 14/01 e il 19/01.
+
+\section{Scelta modello di sviluppo}%
+\label{sec:scelta_modello_di_sviluppo}
+
+Abbiamo discusso principalmente i modelli incrementale ed evolutivo.
+Quest'ultimo si presta molto bene a un approccio con integrazione continua, simile a quello che abbiamo scelto di adottare per il processo di documentazione.
+Risulterebbe forse difficile adattarlo allo scaglionamento imposto dalle revisioni di progresso.
+
+Invece il modello incrementale, secondo quanto detto a lezione, può venir applicato in maniera trasparente ai nostri vincoli, in particolare facendo riferimento allo schema secondo ISO 12207:1995.
+
+\section{Abbozzare pianificazione con il modello scelto}%
+\label{sec:abbozzare_pianificazione_con_il_modello_scelto}
+
+Abbiamo quindi deciso di adottare il modello incrementale, evidenziando gruppi di requisiti correlati strategicamente su cui fissare i vari incrementi.
+
+\section{Call con il proponente}%
+\label{sec:call_con_il_proponente}
+
+Abbiamo deciso di fissare un'ulteriore call con il referente di Imola Informatica per presentargli alcuni aspetti della nostra analisi dei requisiti e ottenere del feedback in tempo utile.
+
+\section{Fare il punto della situazione sui documenti}%
+\label{sec:fare_il_punto_della_situazione_sui_documenti}
+
+\begin{itemize}
+  \item In generale: bisogna scrivere i registri delle modifiche.
+  \item Verbali: vanno verificati e integrati nella branch di default.
+  \item Studio di fattibilità: completo. Va integrato nella branch di default.
+  \item Norme di progetto: Manca la parte sul piano di qualifica.
+  \item Analisi dei requisiti: mancano alcuni casi d'uso e metà della tabella dei requisiti. Va fatta la verifica.
+  \item Piano di progetto: da fare analisi dei rischi, pianificazione sviluppo e incrementi, Gantt e preventivo/consuntivo (?)
+  \item Piano di qualifica: da iniziare.
+  \item Glossario: formalizzare le definizioni discusse in precedenza.
+\end{itemize}
+
+\section{Decidere date delle revisioni}%
+\label{sec:decidere_date_delle_revisioni}
+
+Abbiamo deciso di ritardare la terza revisione, in modo da avere più margine in caso sorgessero difficoltà tecniche non previste.
+
+\begin{itemize}
+  \item RR 21/01
+  \item RP 16/03
+  \item RQ 18/05
+  \item RA 18/06
+\end{itemize}
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c b{13cm}}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Codice}} & \color{white}{\textbf{Decisione}}\\
+    D011I2020--01--03&Scelto strumento per le slide\\
+    D012I2020--01--03&Scelto modello di sviluppo\\
+    D013I2020--01--03&Scelte date delle revisioni di avanzamento a cui (puntare a) partecipare\\
+  \end{tabular}
+  \caption{registro delle decisioni}%
+~~\label{tab:registro delle decisioni}
+\end{table}
+% sec:registro_delle_decisioni (end)
+\end{document}

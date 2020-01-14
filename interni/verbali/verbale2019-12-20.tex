@@ -1,0 +1,95 @@
+\documentclass{article}
+
+\input{../../commons/config}
+
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale --- 20/12/2019}
+
+\setVersione{0.0.8}
+\setResponsabile{Alessandro Rizzo}
+\setRedattori{Riccardo Agatea}
+\setVerificatori{
+  Tobia Apolloni \\ &
+  Riccardo Cestaro
+}
+\setStato{Approvato}
+\setUso{Interno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 20/12/2019}
+\setModifiche{%
+- & Alessandro Rizzo & 2019--12--21 & approva documento \\%
+- & Tobia Apolloni, Riccardo Cestaro & 2019--12--21 & verifica verbale \\%
+- & Luca Ercole & 2019--12--20 & stendi verbale%
+}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item Strumenti di comunicazione
+  \item Divisione documenti da scrivere
+  \item Definizione milestone
+\end{itemize}
+% section Ordine_del_giorno (end)
+
+\section{Strumenti di comunicazione}%
+\label{sec:strumenti_di_comunicazione}
+
+Abbiamo scelto di utilizzare \href{Slack}{slack.com} come canale di comunicazione principale.
+
+% sec:strumenti_di_comunicazione (end)
+\section{Divisione documenti da scrivere}%
+\label{sec:divisione_documenti_da_scrivere}
+
+\subsection{Norme di progetto}%
+\label{sub:norme_di_progetto}
+
+Alberto Cocco finisce di scrivere i processi primari, Luca Ercole scrive i processi secondari e i processi organizzativi.
+
+% sub:norme_di_progetto (end)
+\subsection{Analisi dei requisiti}%
+\label{sub:analisi_dei_requisiti}
+
+Dopo aver individuato i casi d'uso, Riccardo Cestaro e Alberto Gobbo li scrivono, Fabio Scettro raccoglie i requisiti nella rispettiva tabella.
+
+% sub:analisi_dei_requisiti (end)
+\subsection{Piano di progetto}%
+\label{sub:piano_di_progetto}
+
+Alessandro Rizzo scrive l'introduzione e l'analisi dei rischi, Riccardo Agatea scrive la pianificazione e il preventivo. Rimandiamo il consuntivo al termine del periodo di investimento.
+
+% sub:piano_di_progetto (end)
+\subsection{Piano di qualifica}%
+\label{sub:piano_di_qualifica}
+Luca Ercole scrive l'introduzione e le sezioni sulla qualità di processo e di prodotto, Tobia Apolloni scrive i test di accettazione. Rimandiamo il calcolo dei risultati delle verifiche all'accettazione dei documenti.
+
+% sub:piano_di_qualifica (end)
+% sec:divisione_documenti_da_scrivere (end)
+\section{Definizione milestone}%
+\label{sec:definizione_milestone}
+
+Abbiamo fissato come termine ultimo per la stesura delle \textit{Norme di Progetto} la data del 30/12/19, per l'analisi dei requisiti il 03/01/20, per il piano di progetto e il piano di qualifica il 07/01/20.
+
+% sec:definizione_milestone (end)
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c b{13cm}}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Codice}} & \color{white}{\textbf{Decisione}}\\
+    D008I2019--12--20&Scelto canale di comunicazione principale\\
+    D009I2019--12--20&Scelto come dividere la stesura dei documenti\\
+    D010I2019--12--20&Scelte deadline per la stesura dei documenti\\
+  \end{tabular}
+  \caption{registro delle decisioni}%
+~~\label{tab:registro delle decisioni}
+\end{table}
+% sec:registro_delle_decisioni (end)
+\end{document}

@@ -1,0 +1,87 @@
+\documentclass{article}
+
+\input{../../commons/config}
+
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale --- 16/12/2019}
+
+\setVersione{0.0.8}
+\setResponsabile{Alessandro Rizzo}
+\setRedattori{Riccardo Agatea}
+\setVerificatori{
+  Tobia Apolloni \\ &
+  Riccardo Cestaro
+}
+\setStato{Approvato}
+\setUso{Esterno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 16/12/2019}
+\setModifiche{%
+-&Alessandro Rizzo & 2019--12--16 & approva documento \\%
+-&Tobia Apolloni, Riccardo Cestaro & 2019--12--16 & verifica verbale \\%
+-&Alberto Gobbo & 2019--12--16 & stendi verbale %
+}
+
+\begin{document}
+
+\input{../../commons/template}
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item GDPR
+  \item Server LDAP
+  \item Varie ed eventuali
+\end{itemize}
+\section{GDPR}%
+\label{sec:gdpr}
+Il sistema deve rispettare la normativa GDPR\@.
+In fase di progettazione architetturale, dovremo scegliere accuratamente le minime informazioni relative agli utenti necessarie per la registrazione di utenti e organizzazioni, e per il tracking.
+Dovremo successivamente strutturare il database in modo che i dati siano separati (ad esempio, in un database relazionale devono essere in tabelle diverse), per evitare problemi di sicurezza.
+Per verificare se l'architettura decisa rispetta la normativa, il proponente ha consigliato di utilizzare delle checklist facilmente reperibili on-line.
+Abbiamo comunque rimandato la discussione al periodo successivo alla Revisione dei requisiti.
+% sec:gdpr (end)
+\section{Server LDAP}%
+\label{sec:server_ldap}
+Il sistema da sviluppare non deve necessariamente implementare un server LDAP, deve solo permettere alle organizzazioni di utilizzare il proprio per autenticare gli utenti.
+D'altro canto, per la fase di test e collaudo ci sarà necessario avere a disposizione un server LDAP, che quindi dovremo implementare per lo meno parzialmente.
+Inoltre, LDAP può essere utilizzato per l'autenticazione degli utenti di Stalker.
+% sec:server_ldap (end)
+\section{Varie ed eventuali}%
+\label{sec:varie_ed_eventuali}
+\subsection{Definizione dei luoghi}%
+\label{sub:definizione_dei_luoghi}
+La definizione dei luoghi deve essere di responsabilità delle organizzazioni, con dei limiti imposti.
+I limiti sono necessari per evitare che un'organizzazione occupi uno spazio eccessivo nel server definendo molti luoghi, e al contempo per evitare che un'organizzazione monitori luoghi di cui non dovrebbe interessarsi (come luoghi pubblici o edifici privati non di sua proprietà).\par
+È sufficiente che la definizione dei luoghi sia tramite approssimazioni a quadrilatero.
+In fase di progettazione dovremo decidere (e documentare) il livello di approssimazione. Non è necessario che il tracking consideri l'altitudine.
+% sub:definizione_dei_luoghi (end)
+\subsection{Sicurezza}%
+\label{sub:sicurezza}
+Il database potrà essere non criptato, ma la scelta dovrà essere documentata e riportata all'utente.\par
+Bisogna decidere se associare un account con gli utenti anonimi.
+% sub:sicurezza (end)
+\subsection{Cloud}%
+\label{sub:cloud}
+Il proponente sconsiglia vivamente, ma non proibisce, di utilizzare tecnologie cloud, per motivi principalmente didattici ed economici. In particolare, Imola Informatica non si prende a carico alcun costo di questo tipo.
+% sub:cloud (end)
+\subsection{Broker}%
+\label{sub:broker}
+Per lo smistamento di messaggi fra le componenti del sistema è possibile, ma non indispensabile, utilizzare un broker come \textit{Kafka} (che è open source e gratuito).
+% sub:broker (end)
+% sec:varie_ed_eventuali (end)
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c b{13cm}}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Codice}} & \color{white}{\textbf{Decisione}}\\
+  \end{tabular}
+  \caption{registro delle decisioni}%
+~~\label{tab:registro delle decisioni}
+\end{table}
+% sec:registro_delle_decisioni (end)
+\end{document}
