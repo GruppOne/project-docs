@@ -4,6 +4,7 @@
   },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "editor.detectIndentation": false,
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
