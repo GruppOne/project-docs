@@ -34,12 +34,12 @@ In questa sezione esaminiamo i servizi che il sistema dovrebbe fornire.
 \begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{\centering}m{10cm} >{\centering\arraybackslash}m{3cm}}
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                                                                                                     & \color{white}{\textbf{Fonte}} \\
-  \endhead
+  \endhead%
   \rowcolor{white}
   \multicolumn{3}{c}{\textit{Continua alla pagina seguente}}
-  \endfoot
-  \endlastfoot
-  % registazione, login, recupero password
+  \endfoot%
+  \endlastfoot%
+  % registrazione, login, recupero password
   R001F1                               & L'applicazione deve permettere ad un nuovo utente di registrarsi                                                                                                                                        & UUC1 Interno                  \\
   R002F1                               & L'applicazione deve permettere al nuovo utente di visualizzare l'EULA                                                                                                                                   & UUC1.1 Interno                \\
   R003F1                               & È necessario che il nuovo utente confermi l'EULA                                                                                                                                                        & UUC1.1.1 Interno              \\
@@ -154,14 +154,14 @@ In questa sezione indichiamo le prestazioni che il sistema deve fornire: velocit
 \begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{\centering}m{10cm} >{\centering\arraybackslash}m{3cm}}
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                          & \color{white}{\textbf{Fonte}} \\
-  \endhead
+  \endhead%
   \rowcolor{white}
   \multicolumn{3}{c}{\textit{Continua alla pagina seguente}}
-  \endfoot
-  \endlastfoot
+  \endfoot%
+  \endlastfoot%
   R091P1                               & Il server deve essere in grado di scalare in modo dinamico in base al numero di utilizzatori                                 & Capitolato                    \\
   R092P1                               & È necessario permettere il proseguimento dei servizio anche nei casi di richieste che vanno oltre le capacità a pieno regime & Capitolato                    \\
-  R093P1                               & È necessario utilizzare la scalabiità orizzontale                                                                            & Capitolato                    \\
+  R093P1                               & È necessario utilizzare la scalabilità orizzontale                                                                            & Capitolato                    \\
 \end{longtable}
 
 \newpage
@@ -174,11 +174,11 @@ In questa sezione indichiamo i requisiti definiti dall'esterno, ad esempio requi
 \begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{\centering}m{10cm} >{\centering\arraybackslash}m{3cm}}
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                                                                                                                                                    & \color{white}{\textbf{Fonte}} \\
-  \endhead
+  \endhead%
   \rowcolor{white}
   \multicolumn{3}{c}{\textit{Continua alla pagina seguente}}
-  \endfoot
-  \endlastfoot
+  \endfoot%
+  \endlastfoot%
   R094D1                               & È necessario sviluppare un server backend                                                                                                                                                                                                              & Capitolato                    \\
   R095D1                               & È necessario che il server sia dotato di un'interfaccia grafica tramite cui gli utenti possano interagire                                                                                                                                              & Capitolato                    \\
   R096D1                               & È necessario sviluppare un'applicazione mobile (Android o iOS)                                                                                                                                                                                         & Capitolato                    \\
@@ -207,7 +207,7 @@ In questa sezione indichiamo i requisiti definiti dall'esterno, ad esempio requi
 \subsection{Tracciamento}%
 \label{sub:tracciamento}
 
-\subsubsection{Tracciamento fonte-requisito}
+\subsubsection{Tracciamento fonte-requisito}%
 \label{sub:tracciamento_fonte-requisito}
 
 \centering
@@ -215,11 +215,11 @@ In questa sezione indichiamo i requisiti definiti dall'esterno, ad esempio requi
 \begin{longtable}[H]{ p{3cm} | p{4cm} }
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{Fonte}} & \color{white}{\textbf{ID requisito}} \\
-  \endhead
+  \endhead%
   \rowcolor{white}
   \multicolumn{2}{c}{\textit{Continua alla pagina seguente}}
-  \endfoot
-  \endlastfoot
+  \endfoot%
+  \endlastfoot%
   Interno                       & R001F1                               \\
   Interno                       & R002F1                               \\
   Interno                       & R003F1                               \\
@@ -275,11 +275,11 @@ In questa sezione indichiamo i requisiti definiti dall'esterno, ad esempio requi
 \begin{longtable}[H]{ p{3cm} | p{4cm} }
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{Fonte}} & \color{white}{\textbf{ID requisito}} \\
-  \endhead
+  \endhead%
   \rowcolor{white}
   \multicolumn{2}{c}{\textit{Continua alla pagina seguente}}
-  \endfoot
-  \endlastfoot
+  \endfoot%
+  \endlastfoot%
   Capitolato                    & R019F1                               \\
   Capitolato                    & R020F1                               \\
   Capitolato                    & R022F1                               \\
@@ -350,7 +350,7 @@ In questa sezione indichiamo i requisiti definiti dall'esterno, ad esempio requi
 \end{longtable}
 
 \newpage
-\subsubsection{Tracciamento requisito-fonte}
+\subsubsection{Tracciamento requisito-fonte}%
 \label{sub:tracciamento_requisito-fonte}
 
 \centering
@@ -358,11 +358,11 @@ In questa sezione indichiamo i requisiti definiti dall'esterno, ad esempio requi
 \begin{longtable}[H]{ p{3cm} | p{4cm} }
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Fonte}} \\
-  \endhead
+  \endhead%
   \rowcolor{white}
   \multicolumn{2}{c}{\textit{Continua alla pagina seguente}}
-  \endfoot
-  \endlastfoot
+  \endfoot%
+  \endlastfoot%
   R001F1                               & UUC1 Interno                  \\
   R002F1                               & UUC1.1 Interno                \\
   R003F1                               & UUC1.1.1 Interno              \\
@@ -480,7 +480,7 @@ In questa sezione indichiamo i requisiti definiti dall'esterno, ad esempio requi
   R115D1                               & Interno                       \\
 \end{longtable}
 
-\subsubsection{Riepilogo}
+\subsubsection{Riepilogo}%
 \label{sub:riepilogo}
 
 \centering
@@ -488,7 +488,7 @@ In questa sezione indichiamo i requisiti definiti dall'esterno, ad esempio requi
 \begin{longtable}[H]{c|c|c|c}
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{Tipologia}} & \color{white}{\textbf{Obbligatori}} & \color{white}{\textbf{Desiderabili}} & \color{white}{\textbf{Opzionali}} \\
-  \endhead
+  \endhead%
   Funzionali                        & 81                                  & 7                                    & 2                                 \\
   Prestazionali                     & 3                                   & 0                                    & 0                                 \\
   Dichiarativi                      & 15                                  & 6                                    & 0                                 \\
