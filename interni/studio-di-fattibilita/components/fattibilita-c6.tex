@@ -22,8 +22,8 @@
   Per ogni tipologia di informazioni rilevate, dovrà essere possibile assegnare il monitoraggio ad un particolare ente.
   La web-application deve essere suddivisa in tre macro-sezioni:
   \begin{itemize}
-    \item censimento dei sensori e dei relativi dati;
-    \item modulo di analisi di correlazione;
+    \item censimento dei sensori e dei relativi dati
+    \item modulo di analisi di correlazione
     \item modulo di monitoraggio per ente.
   \end{itemize}
   % subsection finalità_del_progetto (end)
@@ -33,15 +33,15 @@
   \label{subsec:tecnologie_interessate}
   I vincoli indicati dal proponente riguardo alle tecnologie da utilizzare sono:
   \begin{description}
-    \item[\glossario{Telegram}] come servizio di dispatching, per inoltrare in modo tempestivo le informazioni utili in caso di emergenza;
-    \item[Apache Kafka] come cluster che fa da tramite per l'interazione tra sensori e database;
+    \item[\glossario{Telegram}] come servizio di dispatching, per inoltrare in modo tempestivo le informazioni utili in caso di emergenza
+    \item[Apache Kafka] come cluster che fa da tramite per l'interazione tra sensori e database
     \item[Java] per realizzare i componenti custom \textit{Kafka} e lo sviluppo della business logic.
   \end{description}
   Le implementazioni database suggerite sono PostgreSQL, TimescaleDB e ClickHouse.
   Non è necessario che misurazioni e metadati risiedano nello stesso database.
   Altre tecnologie consigliate sono:
   \begin{description}
-    \item[Bootstrap] per lo styling del front-end;
+    \item[Bootstrap] per lo styling del front-end
     \item[Docker] per l'istanziazione di tutti i componenti.
   \end{description}
   % subsection tecnologie_interessate (end)
