@@ -69,13 +69,16 @@ Le caratteristiche dello standard ISO/IEC 25010:2011 che il gruppo ha ritenuto r
 
   \subsubsection{Metriche}%
   \label{subs:metriche}
-
+  \begin{description}
+  \item [Superficie d'attacco]: possiamo monitorare la sicurezza del nostro prodotto e in particolare la riservatezza e l'integrità tramite il calcolo della superficie d'attacco, ossia i punti in cui una entità può provare a estorcere o inserire dati nel sistema.
+    \begin{itemize} \item Valore ammissibile: \leq{}  6  \item Valore ottimale: \leq{}  3 \end{itemize}
+  \end{description}
   % subs:metriche (end)
 
 % sub:sicurezza (end)
 
-\subsection{Mantenibilità}%
-\label{sub:mantenibilita}
+\subsection{Manutenibilità}%
+\label{sub:manutenibilita}
 Questa caratteristica rappresenta il grado di efficacia e efficienza con cui il prodotto può essere migliorato, corretto o adattato a nuovi requisiti.
 
 \subsubsection{Obiettivi}%
@@ -92,14 +95,16 @@ Questa caratteristica rappresenta il grado di efficacia e efficienza con cui il 
 \subsubsection{Metriche}%
 \label{subs:metriche}
   \begin{description}
-    \item [Semplicità delle funzioni]
-      \begin{itemize} \item Valore ammissibile: 0.6 \item Valore ottimale: 0.9 \end{itemize}
-    \item [Semplicità delle classi]
-      \begin{itemize} \item Valore ammissibile: 0.6 \item Valore ottimale: 0.9 \end{itemize}
+    \item [Semplicità delle funzioni]: Possiamo monitorare la modularità, analizzabilità e testabilità del prodotto valutando il numero di parametri per ogni funzione, meno saranno più il suo compito sarà specifico.
+      \begin{itemize} \item Valore ammissibile: \leq{}  6 \item Valore ottimale: \leq{}  3 \end{itemize}
+    \item [Semplicità delle classi]: Possiamo monitorare la modularità, analizzabilità e testabilità del prodotto valutando il numero di metodi per ogni classe, meno saranno più lo scopo di quella classe sarà specifico.
+      \begin{itemize} \item Valore ammissibile: \leq{}  10 \item Valore ottimale: \leq{}  5 \end{itemize}
+    \item [Complessità ciclomatica]: Monitoriamo la Analizzabilità, Modificabilità e Testabilità del prodotto calcolando la complessità ciclomatica (\(CC\)) secondo la seguente formula: \begin{equation} CC = e - n + p \end{equation}. Dove \(e\) è il numero di archi del grafo formato da tutti i possibili esiti del programma, \(n\) è il numero di nodi del grafo e \(p\) è il numero di \glossario{componenti connesse} del grafo. 
+      \begin{itemize} \item Valore ammissibile: \leq{}  7 \item Valore ottimale: \leq{}  3 \end{itemize}
   \end{description}
 % subs:metriche (end)
 
-% sub:mantenibilita (end)
+% sub:manutenibilita (end)
 
 \subsection{Usabilità}%
 \label{sub:usabilita}
@@ -116,7 +121,10 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
 
 \subsubsection{Metriche}%
 \label{subs:metriche}
-
+\begin{description}
+\item [Percentuale di interazioni sbagliate]: possiamo monitorare la protezione dagli errori del prodotto tramite le interazioni il cui esito si è discostato dall'obiettivo dell'utente rispetto a quelle totali. L'indice \(R_s\) si calcola come \begin{equation} R_s = \frac{I_fail}{I_tot} \times 100 \end{equation}. Dove \(I_fail\) sono le interazioni fallite mentre \(I_tot\) sono le interazioni totali.
+  \begin{itemize} \item Valore ammissibile: \leq{}  10 \%  \item Valore ottimale: \leq{}  2 \% \end{itemize}
+\end{description}
 % subs:metriche (end)
 
 % sub:usabilita (end)
@@ -136,6 +144,10 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
 
 \subsubsection{Metriche}%
 \label{subs:metriche}
+\begin{description}
+\item [Percentuale Richieste soddisfatte]: possiamo monitorare la disponibilità e la maturità del prodotto tramite il numero di richieste fatte al software che hanno avuto successo rispetto al totale di richieste effettuate: \begin{equation} \frac{R_succ}{R_tot} \end{equation}. Dove \(R_succ\) sono le richieste effettuate con successo mentre \(R_tot\) sono le richieste totali.
+  \begin{itemize} \item Valore ammissibile: \le{}  90 \%  \item Valore ottimale: \le{}  98 \% \end{itemize}
+\end{description}
 % subs:metriche (end)
 
 % sub:affidabilita (end)
@@ -145,10 +157,10 @@ Questa caratteristica rappresenta il grado con cui il prodotto può essere usato
     Per misurare la qualità di prodotto inoltre utilizziamo dei test secondo il \glossario{Modello a \textit{V}} per il quale definiamo e sviluppiamo i test in parallelo alle attività di analisi, progettazione architetturale e di sviluppo e verifica incrementi.
     Abbiamo definito i test dividendoli nelle seguenti categorie:
     \begin{description}
-      \item [Test di Accettazione (TA):] vengono fatti per verificare che il prodotto soddisfi i requisiti richiesti dal proponente
-      \item [Test di Sistema (TS):] vengono effettuati quando si mettono insieme tutte le componenti del software e se ne vuole testare compatibilità e interazioni
-      \item [Test di Integrazione (TI):] questi test verificano la compatibilità e le interazioni tra diverse unità del software testate con successo solo singolarmente fino a quel momento tramite Test di Unità
-      \item [Test di Unità (TU):] svolgono un'attività mirata di analisi sulle singole unità software, vengono eseguiti con il massimo grado possibile di parallelismo e garantiscono solo il funzionamento della singola unità a cui appartengono.
+      \item [Test di Accettazione (TA)]
+      \item [Test di Sistema (TS)] 
+      \item [Test di Integrazione (TI)] 
+      \item [Test di Unità (TU)]
     \end{description}
     Inoltre classifichiamo i test in base al loro stato:
       \begin{description}
