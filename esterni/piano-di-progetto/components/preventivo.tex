@@ -1,0 +1,604 @@
+\documentclass[../piano-di-progetto.tex]{subfiles}
+
+\begin{document}
+Per ogni fase, il gruppo presenta un prospetto orario che raccoglie le ore da svolgere per ruolo per persona e i rispettivi totali, seguito da un prospetto economico che riassume i costi per ruolo e il totale. Per concludere, presenta il totale delle ore di lavoro pianificate e di quelle rendicontate, assieme ai rispettivi costi.
+
+Per aumentare la leggibilità delle tabelle, le celle che indicano un numero nullo di ore sono indicate con ``-'' invece di ``0'' e i nomi dei ruoli sono sostituiti dalle abbreviazioni seguenti:
+\begin{description}
+  \item[Re] Responsabile
+  \item[Am] Amministratore
+  \item[An] Analista
+  \item[Pt] Progettista
+  \item[Pr] Programmatore
+  \item[Ve] Verificatore
+\end{description}
+\subsection{Fase di analisi preliminare}%
+\label{sub:fase_di_analisi_preliminare}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&14&-&13&-&-&7&34\\
+    Apolloni Tobia&-&-&13&14&-&7&34\\
+    Cestaro Riccardo&14&-&13&-&-&7&34\\
+    Cocco Alberto&-&14&13&-&-&7&34\\
+    Ercole Luca&-&14&13&7&-&-&34\\
+    Gobbo Alberto&-&14&13&-&-&7&34\\
+    Rizzo Alessandro&14&-&13&-&-&7&34\\
+    Scettro Fabio&-&14&13&-&-&7&34\\
+    \textbf{Totali per ruolo}&42&56&104&21&-&49&272\\
+  \end{tabular}
+  \caption{prospetto orario per l'Analisi preliminare}%
+~~\label{tab:prospetto_orario_analisi_preliminare}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&42&1 260,00€\\
+    Am&56&1 120,00€\\
+    An&104&2 600,00€\\
+    Pt&21&462,00€\\
+    Pr&-&-\\
+    Ve&49&735,00€\\
+    \textbf{Totale}&272&6 177,00€\\
+  \end{tabular}
+  \caption{prospetto economico per l'Analisi preliminare}%
+~~\label{tab:prospetto_economico_analisi_preliminare}
+\end{table}
+% sub:fase_di_analisi_preliminare (end)
+\subsection{Fase di preparazione in entrata alla RR}%
+\label{sub:fase_di_preparazione_in_entrata_alla_rr}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&-&3&-&-&-&2&5\\
+    Apolloni Tobia&-&3&-&-&-&2&5\\
+    Cestaro Riccardo&-&3&-&-&-&2&5\\
+    Cocco Alberto&-&3&-&-&-&2&5\\
+    Ercole Luca&-&3&-&-&-&2&5\\
+    Gobbo Alberto&-&3&-&-&-&2&5\\
+    Rizzo Alessandro&-&3&-&-&-&2&5\\
+    Scettro Fabio&-&3&-&-&-&2&5\\
+    Totali per ruolo&-&24&-&-&-&16&40\\
+  \end{tabular}
+  \caption{prospetto orario per la preparazione in entrata alla rr}%
+~~\label{tab:prospetto_orario_preparazione_in_entrata_alla_rr}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&-&-\\
+    Am&24&480,00€\\
+    An&-&-\\
+    Pt&-&-\\
+    Pr&-&-\\
+    Ve&16&240,00€\\
+    \textbf{Totale}&40&720,00€\\
+  \end{tabular}
+  \caption{prospetto economico per la preparazione in entrata alla rr}%
+~~\label{tab:prospetto_economico_preparazione_in_entrata_alla_rr}
+\end{table}
+% sub:fase_di_preparazione_in_entrata_alla_rr (end)
+\subsection{Fase di progettazione architetturale}%
+\label{sub:fase_di_progettazione_architetturale}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&4&-&-&10&8&5&27\\
+    Apolloni Tobia&-&-&-&8&10&9&27\\
+    Cestaro Riccardo&-&-&4&8&10&5&27\\
+    Cocco Alberto&-&4&-&10&8&5&27\\
+    Ercole Luca&-&4&-&10&8&5&27\\
+    Gobbo Alberto&-&-&4&8&10&5&27\\
+    Rizzo Alessandro&4&-&-&10&8&5&27\\
+    Scettro Fabio&-&-&-&8&10&9&27\\
+    Totali per ruolo&8&8&8&72&72&48&216\\
+  \end{tabular}
+  \caption{prospetto orario per la progettazione architetturale}%
+~~\label{tab:prospetto_orario_progettazione_architetturale}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&8&240,00€\\
+    Am&8&160,00€\\
+    An&8&200,00€\\
+    Pt&72&1 584,00€\\
+    Pr&72&1 080,00€\\
+    Ve&48&720,00€\\
+    \textbf{Totale}&216&3 984,00€\\
+  \end{tabular}
+  \caption{prospetto economico per la progettazione architetturale}%
+~~\label{tab:prospetto_economico_progettazione_architetturale}
+\end{table}
+% sub:fase_di_progettazione_architetturale (end)
+\subsection{Fase di preparazione in entrata alla RP}%
+\label{sub:fase_di_preparazione_in_entrata_alla_rp}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&-&3&-&-&-&2&5\\
+    Apolloni Tobia&-&3&-&-&-&2&5\\
+    Cestaro Riccardo&-&3&-&-&-&2&5\\
+    Cocco Alberto&-&3&-&-&-&2&5\\
+    Ercole Luca&-&3&-&-&-&2&5\\
+    Gobbo Alberto&-&3&-&-&-&2&5\\
+    Rizzo Alessandro&-&3&-&-&-&2&5\\
+    Scettro Fabio&-&3&-&-&-&2&5\\
+    Totali per ruolo&-&24&-&-&-&16&40\\
+  \end{tabular}
+  \caption{prospetto orario per la preparazione in entrata alla RP}%
+~~\label{tab:prospetto_orario_preparazione_in_entrata_alla_rp}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&-&-\\
+    Am&24&480,00€\\
+    An&-&-\\
+    Pt&-&-\\
+    Pr&-&-\\
+    Ve&16&240,00€\\
+    \textbf{Totale}&40&720,00€\\
+  \end{tabular}
+  \caption{prospetto economico per la preparazione in entrata alla RP}%
+~~\label{tab:prospetto_economico_preparazione_in_entrata_alla_rp}
+\end{table}
+% sub:fase_di_preparazione_in_entrata_alla_rp (end)
+\subsection{Fase di incremento 1}%
+\label{sub:fase_di_incremento_1}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&4&-&-&2&-&2&8\\
+    Apolloni Tobia&-&4&-&2&-&2&8\\
+    Cestaro Riccardo&-&-&-&4&2&2&8\\
+    Cocco Alberto&-&-&-&4&2&2&8\\
+    Ercole Luca&-&-&-&4&2&2&8\\
+    Gobbo Alberto&-&-&-&4&2&2&8\\
+    Rizzo Alessandro&2&-&-&-&4&2&8\\
+    Scettro Fabio&-&2&-&-&4&2&8\\
+    Totali per ruolo&6&6&-&20&16&16&64\\
+  \end{tabular}
+  \caption{prospetto orario per l'incremento 1}%
+~~\label{tab:prospetto_orario_incremento_1}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&6&180,00€\\
+    Am&6&120,00€\\
+    An&-&-\\
+    Pt&20&440,00€\\
+    Pr&16&240,00€\\
+    Ve&16&240,00€\\
+    \textbf{Totale}&72&1 220,00€\\
+  \end{tabular}
+  \caption{prospetto economico per l'incremento 1}%
+~~\label{tab:prospetto_economico_incremento_1}
+\end{table}
+% sub:fase_di_incremento_1 (end)
+\subsection{Fase di incremento 2}%
+\label{sub:fase_di_incremento_2}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&2&-&-&-&4&2&8\\
+    Apolloni Tobia&-&2&-&-&4&2&8\\
+    Cestaro Riccardo&4&-&-&2&-&2&8\\
+    Cocco Alberto&-&4&-&2&-&2&8\\
+    Ercole Luca&-&-&-&4&2&2&8\\
+    Gobbo Alberto&-&-&-&4&2&2&8\\
+    Rizzo Alessandro&-&-&-&4&2&2&8\\
+    Scettro Fabio&-&-&-&4&2&2&8\\
+    Totali per ruolo&6&6&-&20&16&16&64\\
+  \end{tabular}
+  \caption{prospetto orario per l'incremento 2}%
+~~\label{tab:prospetto_orario_incremento_2}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&6&180,00€\\
+    Am&6&120,00€\\
+    An&-&-\\
+    Pt&20&440,00€\\
+    Pr&16&240,00€\\
+    Ve&16&240,00€\\
+    \textbf{Totale}&72&1 220,00€\\
+  \end{tabular}
+  \caption{prospetto economico per l'incremento 2}%
+~~\label{tab:prospetto_economico_incremento_2}
+\end{table}
+% sub:fase_di_incremento_2 (end)
+\subsection{Fase di incremento 3}%
+\label{sub:fase_di_incremento_3}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&-&-&-&4&2&2&8\\
+    Apolloni Tobia&2&-&-&-&4&2&8\\
+    Cestaro Riccardo&-&2&-&-&4&2&8\\
+    Cocco Alberto&4&-&-&2&-&2&8\\
+    Ercole Luca&-&4&-&2&-&2&8\\
+    Gobbo Alberto&-&-&-&4&2&2&8\\
+    Rizzo Alessandro&-&-&-&4&2&2&8\\
+    Scettro Fabio&-&-&-&4&2&2&8\\
+    Totali per ruolo&6&6&-&20&16&16&64\\
+  \end{tabular}
+  \caption{prospetto orario per l'incremento 3}%
+~~\label{tab:prospetto_orario_incremento_3}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&6&180,00€\\
+    Am&6&120,00€\\
+    An&-&-\\
+    Pt&20&440,00€\\
+    Pr&16&240,00€\\
+    Ve&16&240,00€\\
+    \textbf{Totale}&72&1 220,00€\\
+  \end{tabular}
+  \caption{prospetto economico per l'incremento 3}%
+~~\label{tab:prospetto_economico_incremento_3}
+\end{table}
+% sub:fase_di_incremento_3 (end)
+\subsection{Fase di incremento 4}%
+\label{sub:fase_di_incremento_4}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&-&-&-&4&2&2&8\\
+    Apolloni Tobia&-&-&-&4&2&2&8\\
+    Cestaro Riccardo&2&-&-&-&4&2&8\\
+    Cocco Alberto&-&2&-&-&4&2&8\\
+    Ercole Luca&4&-&-&2&-&2&8\\
+    Gobbo Alberto&-&4&-&2&-&2&8\\
+    Rizzo Alessandro&-&-&-&4&2&2&8\\
+    Scettro Fabio&-&-&-&4&2&2&8\\
+    Totali per ruolo&6&6&-&20&16&16&64\\
+  \end{tabular}
+  \caption{prospetto orario per l'incremento 4}%
+~~\label{tab:prospetto_orario_incremento_4}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&6&180,00€\\
+    Am&6&120,00€\\
+    An&-&-\\
+    Pt&20&440,00€\\
+    Pr&16&240,00€\\
+    Ve&16&240,00€\\
+    \textbf{Totale}&72&1 220,00€\\
+  \end{tabular}
+  \caption{prospetto economico per l'incremento 4}%
+~~\label{tab:prospetto_economico_incremento_4}
+\end{table}
+% sub:fase_di_incremento_4 (end)
+\subsection{Fase di incremento 5}%
+\label{sub:fase_di_incremento_5}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&-&-&-&4&2&2&8\\
+    Apolloni Tobia&-&-&-&4&2&2&8\\
+    Cestaro Riccardo&-&-&-&4&2&2&8\\
+    Cocco Alberto&2&-&-&-&4&2&8\\
+    Ercole Luca&-&2&-&-&4&2&8\\
+    Gobbo Alberto&4&-&-&2&-&2&8\\
+    Rizzo Alessandro&-&4&-&2&-&2&8\\
+    Scettro Fabio&-&-&-&4&2&2&8\\
+    Totali per ruolo&6&6&-&20&16&16&64\\
+  \end{tabular}
+  \caption{prospetto orario per l'incremento 5}%
+~~\label{tab:prospetto_orario_incremento_5}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&6&180,00€\\
+    Am&6&120,00€\\
+    An&-&-\\
+    Pt&20&440,00€\\
+    Pr&16&240,00€\\
+    Ve&16&240,00€\\
+    \textbf{Totale}&72&1 220,00€\\
+  \end{tabular}
+  \caption{prospetto economico per l'incremento 5}%
+~~\label{tab:prospetto_economico_incremento_5}
+\end{table}
+% sub:fase_di_incremento_5 (end)
+\subsection{Fase di incremento 6}%
+\label{sub:fase_di_incremento_6}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&-&-&-&4&2&2&8\\
+    Apolloni Tobia&-&-&-&4&2&2&8\\
+    Cestaro Riccardo&-&-&-&4&2&2&8\\
+    Cocco Alberto&-&-&-&4&2&2&8\\
+    Ercole Luca&2&-&-&-&4&2&8\\
+    Gobbo Alberto&-&2&-&-&4&2&8\\
+    Rizzo Alessandro&4&-&-&2&-&2&8\\
+    Scettro Fabio&-&4&-&2&-&2&8\\
+    Totali per ruolo&6&6&-&20&16&16&64\\
+  \end{tabular}
+  \caption{prospetto orario per l'incremento 6}%
+~~\label{tab:prospetto_orario_incremento_6}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&6&180,00€\\
+    Am&6&120,00€\\
+    An&-&-\\
+    Pt&20&440,00€\\
+    Pr&16&240,00€\\
+    Ve&16&240,00€\\
+    \textbf{Totale}&72&1 220,00€\\
+  \end{tabular}
+  \caption{prospetto economico per l'incremento 6}%
+~~\label{tab:prospetto_economico_incremento_6}
+\end{table}
+% sub:fase_di_incremento_6 (end)
+\subsection{Fase di incremento 7}%
+\label{sub:fase_di_incremento_7}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&-&4&-&2&-&2&8\\
+    Apolloni Tobia&-&-&-&4&2&2&8\\
+    Cestaro Riccardo&-&-&-&4&2&2&8\\
+    Cocco Alberto&-&-&-&4&2&2&8\\
+    Ercole Luca&-&-&-&4&2&2&8\\
+    Gobbo Alberto&2&-&-&-&4&2&8\\
+    Rizzo Alessandro&-&2&-&-&4&2&8\\
+    Scettro Fabio&4&-&-&2&-&2&8\\
+    Totali per ruolo&6&6&-&20&16&16&64\\
+  \end{tabular}
+  \caption{prospetto orario per l'incremento 7}%
+~~\label{tab:prospetto_orario_incremento_7}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&6&180,00€\\
+    Am&6&120,00€\\
+    An&-&-\\
+    Pt&20&440,00€\\
+    Pr&16&240,00€\\
+    Ve&16&240,00€\\
+    \textbf{Totale}&72&1 220,00€\\
+  \end{tabular}
+  \caption{prospetto economico per l'incremento 7}%
+~~\label{tab:prospetto_economico_incremento_7}
+\end{table}
+% sub:fase_di_incremento_7 (end)
+\subsection{Fase di verifica e collaudo finali}%
+\label{sub:fase_di_verifica_e_collaudo_finali}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&-&2&-&-&-&3&5\\
+    Apolloni Tobia&2&-&-&-&-&3&5\\
+    Cestaro Riccardo&-&2&-&-&-&3&5\\
+    Cocco Alberto&2&-&-&-&-&3&5\\
+    Ercole Luca&-&2&-&-&-&3&5\\
+    Gobbo Alberto&2&-&-&-&-&3&5\\
+    Rizzo Alessandro&-&2&-&-&-&3&5\\
+    Scettro Fabio&2&-&-&-&-&3&5\\
+    Totali per ruolo&8&8&-&-&-&24&40\\
+  \end{tabular}
+  \caption{prospetto orario per la verifica e collaudo finali}%
+~~\label{tab:prospetto_orario_verifica_e_collaudo_finali}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&12&360,00€\\
+    Am&12&240,00€\\
+    An&-&-\\
+    Pt&-&-\\
+    Pr&-&-\\
+    Ve&40&600,00€\\
+    \textbf{Totale}&64&1 200,00€\\
+  \end{tabular}
+  \caption{prospetto economico per la verifica e collaudo finali}%
+~~\label{tab:prospetto_economico_verifica_e_collaudo_finali}
+\end{table}
+% sub:fase_di_verifica_e_collaudo_finali (end)
+\subsection{Fase di preparazione in entrata alla RA}%
+\label{sub:fase_di_preparazione_in_entrata_alla_ra}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&-&3&-&-&-&2&5\\
+    Apolloni Tobia&-&3&-&-&-&2&5\\
+    Cestaro Riccardo&-&3&-&-&-&2&5\\
+    Cocco Alberto&-&3&-&-&-&2&5\\
+    Ercole Luca&-&3&-&-&-&2&5\\
+    Gobbo Alberto&-&3&-&-&-&2&5\\
+    Rizzo Alessandro&-&3&-&-&-&2&5\\
+    Scettro Fabio&-&3&-&-&-&2&5\\
+    Totali per ruolo&-&24&-&-&-&16&40\\
+  \end{tabular}
+  \caption{prospetto orario per la preparazione in entrata alla ra}%
+~~\label{tab:prospetto_orario_preparazione_in_entrata_alla_ra}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&-&-\\
+    Am&24&480,00€\\
+    An&-&-\\
+    Pt&-&-\\
+    Pr&-&-\\
+    Ve&16&240,00€\\
+    \textbf{Totale}&40&720,00€\\
+  \end{tabular}
+  \caption{prospetto economico per la preparazione in entrata alla ra}%
+~~\label{tab:prospetto_economico_preparazione_in_entrata_alla_ra}
+\end{table}
+% sub:fase_di_preparazione_in_entrata_alla_ra (end)
+\subsection{Totali}%
+\label{sub:totali}
+\subsubsection{Totali complessivi}%
+\label{subs:totali_complessivi}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&24&15&13&30&20&35&137\\
+    Apolloni Tobia&4&15&13&40&26&39&137\\
+    Cestaro Riccardo&20&13&17&26&26&35&137\\
+    Cocco Alberto&8&19&27&26&22&35&137\\
+    Ercole Luca&6&35&13&33&22&28&137\\
+    Gobbo Alberto&8&29&17&24&24&35&137\\
+    Rizzo Alessandro&24&17&13&26&22&35&137\\
+    Scettro Fabio&6&29&13&28&22&39&137\\
+    Totali per ruolo&100&186&112&233&184&281&1096\\
+  \end{tabular}
+  \caption{prospetto orario dei totali complessivi}%
+~~\label{tab:prospetto_orario_totali_complessivi}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&100&3 000,00€\\
+    Am&186&3 720,00€\\
+    An&112&2 800,00€\\
+    Pt&233&5 126,00€\\
+    Pr&184&2 760,00€\\
+    Ve&281&4 215,00€\\
+    \textbf{Totale}&1096&21 621,00€\\
+  \end{tabular}
+  \caption{prospetto economico dei totali complessivi}%
+~~\label{tab:prospetto_economico_totali_complessivi}
+\end{table}
+% subs:totali_complessivi (end)
+\subsubsection{Totali rendicontati}%
+\label{subs:totali_rendicontati}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c c c c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Componente}} & \color{white}{\textbf{Re}} & \color{white}{\textbf{Am}} & \color{white}{\textbf{An}} & \color{white}{\textbf{Pt}} & \color{white}{\textbf{Pr}} & \color{white}{\textbf{Ve}} & \color{white}{\textbf{Totali per persona}} \\
+    Agatea Riccardo&10&12&-&30&20&26&98\\
+    Apolloni Tobia&4&12&-&26&26&30&98\\
+    Cestaro Riccardo&6&10&4&26&26&26&98\\
+    Cocco Alberto&8&16&-&26&22&26&98\\
+    Ercole Luca&6&18&-&26&22&26&98\\
+    Gobbo Alberto&8&12&4&24&24&26&98\\
+    Rizzo Alessandro&10&14&-&26&22&26&98\\
+    Scettro Fabio&6&12&-&28&22&30&98\\
+    Totali per ruolo&58&106&8&212&184&216&784\\
+  \end{tabular}
+  \caption{prospetto orario dei totali rendicontati}%
+~~\label{tab:prospetto_orario_totali_rendicontati}
+\end{table}
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c c c}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Ruolo}} & \color{white}{\textbf{Totale ore}} & \color{white}{\textbf{Costo}} \\
+    Re&58&1 740,00€\\
+    Am&106&2 120,00€\\
+    An&8&200,00€\\
+    Pt&212&4 664,00€\\
+    Pr&184&2 760,00€\\
+    Ve&216&3 240,00€\\
+    \textbf{Totale}&784&14 721,00€\\
+  \end{tabular}
+  \caption{prospetto economico dei totali rendicontati}%
+~~\label{tab:prospetto_economico_totali_rendicontati}
+\end{table}
+Il costo totale a preventivo del progetto è 14~721,00€.
+% subs:totali_rendicontati (end)
+% sub:totali (end)
+\end{document}
