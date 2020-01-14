@@ -1,0 +1,201 @@
+\documentclass[../piano-di-qualifica.tex]{subfiles}
+\appendToGraphicspath{../../../commons/img/}
+
+\begin{document}
+
+In questa sezione ci occupiamo di definire gli obiettivi di qualità dei processi da noi istanziati nel corso del progetto.
+Prevediamo di mantenere il documento in continuo aggiornamento, espandendo progressivamente le sezioni interessate durante lo svolgimento delle diverse attività che non abbiamo ancora affrontato.
+
+\subsection{Descrizione}%
+\label{sub:descrizione}
+
+La qualità di processo viene perseguita attraverso metriche e strumenti di valutazione per stabilire la bontà dei processi.
+Dato il legame stretto tra processi e prodotti (essendo il prodotto l`output di un processo), il team sente l'esigenza di definire un buon sistema di qualità: migliorare un processo, infatti, significa anche migliorare la qualità del prodotto software risultante.
+Il way of working dei processi software che GruppOne ha deciso di istanziare è definito all'interno delle \textit{Norme di progetto} insieme alle rispettive metriche di valutazione, mentre nei prossimi paragrafi si cercherà di strutturare l'organizzazione del sistema di qualità.
+Nel complesso la qualità di processo si occupa di:
+\begin{itemize}
+  \item Presentare i processi istanziati e le ragioni di tali scelte.
+  \item Controllare il processo e migliorarlo.
+  \item Definire dei valori soglia delle metriche per avere una quantificazione oggettiva della qualità del processo in esame.
+\end{itemize}
+
+\subsection{Processi primari}%
+\label{sub:processi_primari}
+
+\subsubsection{Processo di sviluppo}%
+\label{subs:processo_di_sviluppo}
+Il processo di sviluppo è sicuramente uno dei più articolati. Per tale ragione ogni attività del processo di sviluppo (e.g.\ analisi dei requisiti, progettazione architetturale) ha un paragrafo dedicato.
+
+\paragraph{Analisi dei requisiti}%
+\label{par:analisi_dei_requisiti}
+
+\subparagraph{Obiettivi}%
+\label{par:obiettivi}
+L'obiettivo dell'attività di analisi dei requisiti è di trasformare i requisiti dello stakeholder in requisiti tecnici che possano guidare il team alla progettazione del software.
+
+\subparagraph{Esiti}%
+\label{par:esiti}
+I risultati di un'analisi dei requisiti di qualità sono:
+\begin{itemize}
+  \item La definizione di una serie di requisiti che possano descrivere il problema.
+  \item Una classificazione dei requisiti in modo da poterne tracciare i cambiamenti.
+  \item La realizzazione dei diagrammi dei casi d'uso per iniziare la progettazione.
+  \item La valutazione delle richieste degli stakeholders per negoziare modifiche, se necessarie.
+\end{itemize}
+
+\subparagraph{metriche}%
+\label{par:metriche}
+
+\textbf{MPS-ROS}: la metrica che individua i requisiti obbligatori soddisfatti è definita nelle \textit{Norme di progetto} alla sezione 2.3.5.1.
+\begin{itemize}
+  \item Risultato: percentuale di requisiti obbligatori soddisfatti al momento di calcolo nell'indice.
+  \item valore ottimale: 100 \%.
+  \item valore minimale: 100 \%.
+\end{itemize}
+
+\subsection{Processi di supporto}%
+\label{sub:processi_di_supporto}
+
+\subsubsection{Processo di documentazione}%
+\label{subs:processo_di_documentazione}
+
+\paragraph{Obiettivi}%
+\label{par:obiettivi}
+Lo scopo del processo di documentazione è di tracciare e mantenere registrate informazioni e prodotti relativi ai processi.
+
+\paragraph{Esiti}%
+\label{par:esiti}
+L'istanziazione del processo di documentazione di qualità implica la produzione di documentazione:
+\begin{itemize}
+  \item Completa
+  \item Leggibile
+  \item Corretta
+  \item Coerente
+  \item Fatta di parti
+  \item Accessibile a tutti i componenti del gruppo.
+\end{itemize}
+
+\paragraph{Metriche}%
+\label{par:metriche}
+
+\textbf{MPS-IDG}: l'indice di Gulpease è definito nelle \textit{Norme di progetto} alla sezione 3.2.7.1.
+\begin{itemize}
+  \item Risultato: indice compreso tra 0 e 100 che stabilisce la leggibilità del testo in base ala lunghezza delle parole.
+  \item Valore ottimale: compreso tra 80 e 100.
+  \item Valore minimale: non inferiore a 50.
+\end{itemize}
+
+\textbf{MPS-IGF}: l'indice di Gunning Fog è definito nelle \textit{Norme di progetto} alla sezione 3.2.7.2.
+\begin{itemize}
+  \item Risultato: numero intero che indica il numero di anni minimi di educazione formale necessari a comprendere il testo.
+  \item Valore ottimale: compreso tra 9 e 10.
+  \item Valore minimale: inferiore a 12.
+\end{itemize}
+
+\textbf{MPS-CO}: l'indice di correttezza ortografica è definito nelle \textit{Norme di progetto} alla sezione 3.2.7.3.
+\begin{itemize}
+  \item Risultato: numero intero che rappresenta il numero di errori ortografici presenti nel testo.
+  \item Valore ottimale: 0.
+  \item Valore minimale: 0.
+\end{itemize}
+
+\subsubsection{Processo di risoluzione dei problemi}%
+\label{subs:processo_di_risoluzione_dei_problemi}
+
+\paragraph{Obiettivi}%
+\label{par:obiettivi}
+
+Lo scopo del processo di risoluzione dei problemi è di mantenere traccia delle problematiche riscontrate durante lo svolgimento del progetto e di offrire soluzioni.
+
+% \paragraph{Esiti}%
+% \label{par:esiti}
+
+\paragraph{Metriche}%
+\label{par:metriche}
+
+I risultati di un processo di risoluzione dei problemi di qualità sono:
+\begin{itemize}
+
+  \item L'identificazione e l'analisi di problemi riscontrati durante lo svolgimento del progetto.
+  \item La definizione di strategie e procedure per risolverli.
+\end{itemize}
+
+\textbf{MPS-RDP}: l'indice di velocità di risoluzione dei problemi è definito nelle \textit{Norme di progetto} alla sezione 3.7.3.1.
+\begin{itemize}
+  \item Risultato: numero intero che rappresenta la quantità di giorni trascorsi tra l'apertura della issue e la sua chiusura.
+  \item Valore ottimale: 1.
+  \item Valore minimale: 7.
+\end{itemize}
+
+
+\subsection{Processi organizzativi}%
+\label{sub:processi_organizzativi}
+
+\subsubsection{Processo di gestione dei rischi}%
+\label{sub:processo_di_gestione_dei_rischi}
+
+\paragraph{Obiettivi}%
+\label{par:obiettivi}
+
+L'obiettivo del processo di gestione dei rischi è di identificare, analizzare, monitorare e prevenire i rischi che possono verificarsi nel corso del ciclo di vita del software.
+
+\paragraph{Esiti}%
+\label{par:esiti}
+
+I risultati di un processo di gestione dei rischi di qualità sono:
+\begin{itemize}
+  \item La definizione dei rischi che si incontrano nello svolgimento del progetto.
+  \item La classificazione dei rischi in modo da determinarne la probabilità di verificarsi e la pericolosità.
+  \item La determinazione di strategie, soluzioni e metodi per prevenirli.
+  \item L'applicazione di procedure per frenare l'impatto negativo che potrebbero avere nel caso in cui si verificassero.
+\end{itemize}
+
+\paragraph{metriche}%
+\label{par:metriche}
+
+\textbf{MPS-RNP}: l'indice dei rischi incontrati ma non preventivati è definito nelle \textit{Norme di progetto} alla sezione 4.2.2.1.
+\begin{itemize}
+  \item Risultato: numero intero che rappresenta il numero di rischi incontrati durante il progetto che non erano stati previsti.
+  \item Valore ottimale: 0.
+  \item Valore minimale: 0.
+\end{itemize}
+
+\subsubsection{Processo di gestione del personale}%
+\label{subs:processo_di_gestione_del_personale}
+
+\paragraph{Pianificazione}%
+\label{par:pianificazione}
+
+\subparagraph{Obiettivi}%
+\label{subp:obiettivi}
+L'obiettivo dell'attività di pianificazione è di stabilire e organizzare le principali attività e compiti di progetto.
+
+\subparagraph{Esiti}%
+\label{subp:esiti}
+I risultati di un'attività di pianificazione di qualità sono:
+\begin{itemize}
+  \item L'individuazione dello scopo del progetto.
+  \item L'identificazione delle risorse umani e temporali a disposizione e delle attività da svolgere.
+  \item La pianificazione di quanto stimato al punto precedente.
+  \item La definizione di un preventivo e di un consuntivo.
+  \item La stesura di un \textit{Piano di progetto}.
+\end{itemize}
+
+\paragraph{Metriche}%
+\label{par:metriche}
+
+\textbf{MPS-VDC}: l'indice di varianza dei costi è definito nelle \textit{Norme di progetto} alla sezione 4.3.5.1.
+\begin{itemize}
+  \item Risultato: numero che rappresenta l'efficienza e la produttività.
+  \item Valore ottimale: maggiore di 0.
+  \item Valore minimale: maggiore o uguale a 0.
+\end{itemize}
+
+\textbf{MPS-VDS}: l'indice di varianza rispetto allo schedule è definito nelle \textit{Norme di progetto} alla sezione 4.3.5.2.
+\begin{itemize}
+  \item Risultato: numero che indica se si è in anticipo o in ritardo nella schedulazione rispetto a quanto pianificato.
+  \item Valore ottimale: maggiore di 0.
+  \item Valore minimale: maggiore o uguale a 0.
+\end{itemize}
+
+\end{document}

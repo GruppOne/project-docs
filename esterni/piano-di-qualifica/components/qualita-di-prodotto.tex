@@ -1,0 +1,523 @@
+\documentclass[../piano-di-qualifica.tex]{subfiles}
+\appendToGraphicspath{../../../commons/img/}
+
+\begin{document}
+
+Le caratteristiche dello standard ISO/IEC 25010:2011 che il gruppo ha ritenuto rilevanti per il prodotto vengono elencate qui sotto, accompagnate dai valori desiderabili delle metriche definite nelle \textit{Norme di Progetto} per misurare il grado di raggiungimento della qualità di prodotto.
+
+
+\subsection{Appropriatezza funzionale}%
+\label{sub:appropriatezza_funzionale}
+  Rappresenta il grado a cui un prodotto software fornisce funzionalità che rispettano requisiti espliciti o impliciti se usato in specifiche condizioni.
+  \subsubsection{Obiettivi}%
+  \label{subs:obiettivi}
+      \begin{description}
+        \item [Correttezza]: Grado con cui il prodotto fornisce risultati corretti con il livello di precisione richiesto.
+        \item [Completezza]: Grado con cui le funzionalità offerte dal prodotto coprono tutti i compiti specificati e gli obiettivi dell'utente
+        \item [Appropriatezza]: Grado con cui le funzionalità del prodotto agevolano il raggiungimento di determinati obiettivi.
+      \end{description}
+  % subs:obiettivi (end)
+
+  \subsubsection{Metriche}%
+  \label{subs:metriche}
+      \begin{description}
+        \item [[MPR-RS \textasciitilde] Percentuale di requisiti soddisfatti]: La completezza C del prodotto in relazione al numeri di requisiti soddisfatti verrà calcolata come \begin{equation} C = \frac{N_s}{N_{tot}}\\*100 \end{equation} con \(N_s\) numero di requisiti implementati e \(N_{tot}\) il numero di requisiti totali.
+        \begin{itemize} \item Valore ammissibile: 100\% \item Valore ottimale: 100\% \end{itemize}
+      \end{description}
+
+  % subs:metriche (end)
+
+% sub:appropriatezza_funzionale (end)
+
+\subsection{Performance}%
+\label{sub:performance}
+ Questa caratteristica rappresenta la performance del prodotto relativamente alle risorse utilizzate in specifiche condizioni.
+  \subsubsection{Obiettivi}%
+  \label{subs:obiettivi}
+      \begin{description}
+        \item [Risposta nel tempo]: Grado con cui i tempi di risposta e di elaborazione del prodotto rispettano i requisiti.
+        \item [Utilizzo delle risorse]: Grado con cui la quantità e il tipo di risorse usate dal prodotto rispettano i requisiti.
+        \item [Capacità]: Grado con cui il massimo limite di un parametro del prodotto rispetta i requisiti.
+      \end{description}
+  % subs:obiettivi (end)
+
+  \subsubsection{Metriche}%
+  \label{subs:metriche}
+    \begin{description}
+      \item [[MPR-IS \textasciitilde] apdex]: Apdex è una misura numerica della soddisfazione utente in relazione ai tempi di risposta del prodotto in vari casi. L'indice \(A_t\) si calcola come \begin{equation} A_t = \frac{C_s + \frac{C_a}{2}}{C_{tot}} \\ \end{equation} Con t tempo soglia della misura, \(C_s\) numero di casi misurati con tempo inferiore a t, \(C_a\) il numero di casi misurati con tempo compreso tra t e 4t ed \(C_{tot}\) numero di casi totali misurati.
+      \begin{itemize} \item Valore ammissibile: 0.6 \item Valore ottimale: 0.9 \end{itemize}
+    \end{description}
+  % subs:metriche (end)
+
+% sub:performance (end)
+
+\subsection{Sicurezza}%
+\label{sub:sicurezza}
+ Questa caratteristica indica il grado con cui il prodotto protegge e limita l'accesso a dati e informazioni in modo da rispettare i livelli di autorizzazione definiti.
+  \subsubsection{Obiettivi}%
+  \label{subs:obiettivi}
+      \begin{description}
+        \item [Riservatezza]: Grado con cui il prodotto garantisce che i dati siano accessibili solamente a entità autorizzate.
+        \item [Integrità]: Grado con cui il prodotto previene utilizzi e modifiche non autorizzate di computer, programmi e dati.
+        \item [Non-ripudiazione]: Grado con cui azioni o eventi che è provato siano avvenute non possano essere ripudiate successivamente.
+        \item [Autenticazione]: Grado con cui le azioni di un'entità possono essere collegate univocamente all'entità.
+        \item [Autenticità]: Grado con cui l'identità di un soggetto o risorsa può essere confermata.
+      \end{description}
+  % subs:obiettivi (end)
+
+  \subsubsection{Metriche}%
+  \label{subs:metriche}
+  \begin{description}
+  \item [[MPR-AS \textasciitilde] Superficie d'attacco]: possiamo monitorare la sicurezza del nostro prodotto e in particolare la riservatezza e l'integrità tramite il calcolo della superficie d'attacco, ossia i punti in cui una entità può provare a estorcere o inserire dati nel sistema.
+    \begin{itemize} \item Valore ammissibile: \leq{}  6  \item Valore ottimale: \leq{}  3 \end{itemize}
+  \end{description}
+  % subs:metriche (end)
+
+% sub:sicurezza (end)
+
+\subsection{Manutenibilità}%
+\label{sub:manutenibilita}
+Questa caratteristica rappresenta il grado di efficacia e efficienza con cui il prodotto può essere migliorato, corretto o adattato a nuovi requisiti.
+
+\subsubsection{Obiettivi}%
+\label{subs:obiettivi}
+      \begin{description}
+        \item [Modularità]: Grado con cui il prodotto è composto da parti indipendenti in modo che una modifica a una componente abbia un impatto minimo su tutte le altre.
+        \item [Riusabilità]: Grado con cui una risorsa può essere utilizzata in più di un sistema.
+        \item [Analizzabilità]: Grado di efficacia e di efficienza con cui è possibile identificare le cause di errori nel prodotto e le parti da modificare.
+        \item [Modificabilità]: Grado con cui il prodotto può essere efficacemente ed efficientemente modificato senza introdurre regressioni.
+        \item [Testabilità]: Grado di efficacia e di efficienza con cui possono essere stabiliti i criteri di test e con cui quei test possono essere eseguiti per verificare quei criteri.
+      \end{description}
+% subs:obiettivi (end)
+
+\subsubsection{Metriche}%
+\label{subs:metriche}
+  \begin{description}
+    \item [[MPR-SOF \textasciitilde] Semplicità delle funzioni]: Possiamo monitorare la modularità, analizzabilità e testabilità del prodotto valutando il numero di parametri per ogni funzione, meno saranno più il suo compito sarà specifico.
+      \begin{itemize}   \item Valore ammissibile: \leq{}  6 \item Valore ottimale: \leq{}  3 \end{itemize}
+    \item [[MPR-SOC \textasciitilde] Semplicità delle classi]: Possiamo monitorare la modularità, analizzabilità e testabilità del prodotto valutando il numero di metodi per ogni classe, meno saranno più lo scopo di quella classe sarà specifico.
+      \begin{itemize} \item Valore ammissibile: \leq{}  10 \item Valore ottimale: \leq{}  5 \end{itemize}
+    \item [[MPR-CC \textasciitilde] Complessità ciclomatica]: Monitoriamo la Analizzabilità, Modificabilità e Testabilità del prodotto calcolando la complessità ciclomatica (\(CC\)) secondo la seguente formula: \begin{equation} CC = e - n + p \end{equation}. Dove \(e\) è il numero di archi del grafo formato da tutti i possibili esiti del programma, \(n\) è il numero di nodi del grafo e \(p\) è il numero di \glossario{componenti connesse} del grafo.
+      \begin{itemize} \item Valore ammissibile: \leq{}  7 \item Valore ottimale: \leq{}  3 \end{itemize}
+  \end{description}
+% subs:metriche (end)
+
+% sub:manutenibilita (end)
+
+\subsection{Usabilità}%
+\label{sub:usabilita}
+Questa caratteristica rappresenta il grado con cui il prodotto può essere usato da un determinato utente per raggiungere obiettivi specifici con efficienza, efficacia e soddisfazione in un determinato contesto d'uso.
+\subsubsection{Obiettivi}%
+\label{subs:obiettivi}
+      \begin{description}
+        \item [Apprendibilità]: Grado con cui il prodotto consente a un determinato utente di apprendere ad utilizzare il prodotto con efficienza, efficacia, libertà dai rischi, e soddisfazione.
+        \item [Operabilità]: Grado con un il prodotto presenta delle caratteristiche che lo rendono di semplice utilizzo.
+        \item [Protezione dagli errori]: Grado con cui il prodotto protegge l'utente dal commettere errori.
+        \item [Accessibilità]: Grado con cui il prodotto risulta utilizzabile da persone con caratteristiche e capacità varie per raggiungere un determinato obiettivo.
+      \end{description}
+% subs:obiettivi (end)
+
+\subsubsection{Metriche}%
+\label{subs:metriche}
+\begin{description}
+\item [[MPR-IS \textasciitilde] Percentuale di interazioni sbagliate]: possiamo monitorare la protezione dagli errori del prodotto tramite le interazioni il cui esito si è discostato dall'obiettivo dell'utente rispetto a quelle totali. L'indice \(R_s\) si calcola come \(R_s = \frac{I_{fail}}{I_{tot}} \times 100 \). Dove \(I_{fail}\) sono le interazioni fallite mentre \(I_{tot}\) sono le interazioni totali.
+  \begin{itemize} \item Valore ammissibile: \leq{}  10 \%  \item Valore ottimale: \leq{}  2 \% \end{itemize}
+\end{description}
+% subs:metriche (end)
+
+% sub:usabilita (end)
+
+\subsection{Affidabilità}%
+\label{sub:affidabilita}
+ Questa caratteristica rappresenta il grado con cui il prodotto effettua specifici compiti sotto determinate condizioni per un periodo di tempo fissato.
+\subsubsection{Obiettivi}%
+\label{subs:obiettivi}
+      \begin{description}
+        \item [Maturità]: Grado con cui il prodotto rispetta i requisiti di affidabilità in condizioni normali.
+        \item [Disponibilità]: Grado con cui il prodotto risulta operativo e accessibile quando ne è richiesto l'uso.
+        \item [Tolleranza agli errori]: Grado con cui il prodotto continua ad operare in maniera corretta nonostante la presenza di errori software e hardware.
+        \item [Recuperabilità]: Grado con cui il prodotto, in caso di un'interruzione o di un errore, riesce a recuperare i dati coinvolti e ristabilire il corretto funzionamento del sistema.
+      \end{description}
+% subs:obiettivi (end)
+
+\subsubsection{Metriche}%
+\label{subs:metriche}
+\begin{description}
+\item [[MPR-RS \textasciitilde] Percentuale Richieste soddisfatte]: possiamo monitorare la disponibilità e la maturità del prodotto tramite il numero di richieste fatte al software che hanno avuto successo rispetto al totale di richieste effettuate: \(\frac{R_{succ}}{R_{tot}} \). Dove \(R_{succ}\) sono le richieste effettuate con successo mentre \(R_{tot}\) sono le richieste totali.
+  \begin{itemize} \item Valore ammissibile: \le{}  90 \%  \item Valore ottimale: \le{}  98 \% \end{itemize}
+\end{description}
+% subs:metriche (end)
+
+% sub:affidabilita (end)
+
+\subsection{Specifica dei test}%
+\label{sub:test}
+    Per misurare la qualità di prodotto inoltre utilizziamo dei test secondo il \glossario{Modello a \textit{V}} per il quale definiamo e sviluppiamo i test in parallelo alle attività di analisi, progettazione architetturale e di sviluppo e verifica incrementi.
+    Abbiamo definito i test dividendoli nelle seguenti categorie:
+    \begin{description}
+      \item [Test di Accettazione (TA)]
+      \item [Test di Sistema (TS)]
+      \item [Test di Integrazione (TI)]
+      \item [Test di Unità (TU)]
+    \end{description}
+    Inoltre classifichiamo i test in base al loro stato:
+      \begin{description}
+        \item [S]: il test è stato soddisfatto
+        \item [NS]: il test non è stato ancora soddisfatto
+      \end{description}
+  \subsubsection{Test di Accettazione}%
+  \label{subs:accettazione}
+      I test di accettazione hanno lo scopo di verificare che il prodotto soddisfi i requisiti richiesti dal proponente, vengono eseguiti durante la fase di verifica e collaudo finale.
+      Essendo tutti i test derivanti da un gruppo di requisiti che hanno una determinata importanza nel prodotto software abbiamo pensato di numerare i Test di Accettazione nel modo seguente:
+      \begin{center}
+          [TA][requisito][importanza][codice]
+      \end{center}
+      Dove: \textit{importanza} è un valore numerico ad indicare l'importanza del requisito che deve essere soddisfatto, \textit{codice} è un codice numerico identificativo per il test e \textit{requisito} può assumere i seguenti valori:
+      \begin{description}
+        \item [F]: requisito funzionale
+        \item [P]: requisito prestazionale
+        \item [D]: requisito dichiarativo
+      \end{description}
+
+      \newpage
+      \begin{centering}
+      \rowcolors{2}{lightgray}{white!80!lightgray!100}
+      \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+      \begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{}p{10cm} >{\centering\arraybackslash}m{3cm}}
+        \rowcolor{darkgray!90!}
+        \color{white}
+        {\textbf{ID test}} & \color{white}{\textbf{Descrizione}} & \color{white}{\textbf{Esito}} \\
+        \endhead\rowcolor{white}%
+        \multicolumn{3}{r}{\textit{Continua alla pagina seguente}}
+        \endfoot{}%
+        \endlastfoot{}
+        TAAFO001      & Al nuovo utente deve essere permesso di registrarsi. \newline
+                        L’utente deve:
+                        \begin{itemize}
+                          \item visualizzare e confermare l’\glossario{EULA};
+                          \item inserire password;
+                          \item confermare la password;
+                          \item inserire i propri dati anagrafici;
+                          \item inserire la propria email;
+                          \item confermare la registrazione.
+                        \end{itemize}
+                      & NS \\
+        TAAFO002      & Il sistema deve rifiutare la richiesta di registrazione se i dati inseriti non rispettano i vincoli imposti o se l’email è già presente nel database. \newline
+                        L’utente deve:
+                        \begin{itemize}
+                          \item inserire dati di accesso non validi;
+                          \item verificare l'impossibilità di proseguire con la registrazione.
+                        \end{itemize}
+                      & NS \\
+        TAAFO003      & Il sistema deve permettere all’utente registrato di autenticarsi. \newline
+                        L’utente deve:
+                        \begin{itemize}
+                          \item inserire la propria email;
+                          \item inserire la propria password;
+                          \item confermare l'autenticazione.
+                        \end{itemize}
+                      & NS \\
+        TAAFO004      & Il sistema deve rifiutare la richiesta di autenticazione se i dati inseriti non rispettano i vincoli imposti, o se la combinazione di email e password non è presente nel database. \newline
+                        L’utente deve:
+                        \begin{itemize}
+                          \item inserire dati di accesso non validi;
+                          \item verificare l'impossibilità di proseguire con l'autenticazione.
+                        \end{itemize}
+                      & NS \\
+        TAAFO005      & Il sistema deve permettere all’utente di recuperare la sua password. \newline
+                        L’utente deve:
+                        \begin{itemize}
+                          \item avviare la procedura di recupero password;
+                          \item inserire la propria email;
+                          \item confermare la procedura;
+                          \item verificare che la password venga ricevuta correttamente;
+                        \end{itemize}
+                      & NS \\
+        TAAFO006      & Il sistema deve permettere all’utente di reimpostare la sua password. \newline
+                        L’utente deve:
+                        \begin{itemize}
+                          \item avviare la procedura di reimpostazione password;
+                          \item inserire la propria email;
+                          \item inserire la vecchia password;
+                          \item inserire una nuova password;
+                          \item confermare la nuova password;
+                          \item confermare la procedura;
+                          \item verificare che la password sia stata cambiata correttamente;
+                        \end{itemize}
+                      & NS \\
+          TAAFO007    & Il sistema deve rifiutare la richiesta di reimpostazione password se la password scelta non rispetta i vincoli imposti. \newline
+                        L’utente deve:
+                        \begin{itemize}
+                          \item avviare la procedura di reimpostazione password;
+                          \item inserire la propria email;
+                          \item inserire la vecchia password;
+                          \item inserire una nuova password non valida;
+                          \item confermare la nuova password;
+                          \item confermare la procedura;
+                          \item visualizzare un messaggio di errore;
+                        \end{itemize}
+                      & NS \\
+        TAAFO008      & Il sistema deve permettere all’utente autenticato di recuperare dal server una lista di organizzazioni a cui può collegarsi e di aggiornarla. \newline
+                        L’utente deve:
+                        \begin{itemize}
+                          \item autenticarsi;
+                          \item visualizzare la lista di organizzazioni;
+                          \item aggiornare la lista;
+                          \item visualizzare la lista aggiornata.
+                        \end{itemize}
+                      & NS \\
+        TAAFO009      & Il sistema deve permettere all’utente autenticato di selezionare una o più organizzazioni dalla lista e collegarsi alle organizzazioni selezionate. \newline
+                        L’utente deve:
+                        \begin{itemize}
+                          \item selezionare una o più organizzazioni dalla lista;
+                          \item avviare la procedura di collegamento.
+                        \end{itemize}
+                      & NS \\
+        TAAFO010      & Il sistema deve permettere all’utente autenticato e collegato ad una o più organizzazioni di scollegarsi da una o più organizzazioni. \newline
+                        L’utente deve:
+                        \begin{itemize}
+                          \item selezionare una o più organizzazioni a cui è collegato;
+                          \item avviare la procedura di scollegamento.
+                        \end{itemize}
+                      & NS \\
+        TAAFO011      & Il sistema deve permettere all’utente autenticato di visualizzare tramite un filtro la lista delle organizzazioni a cui è collegato oppure quella delle organizzazioni da cui è scollegato. \newline
+                      L’utente deve:
+                      \begin{itemize}
+                        \item impostare il filtro;
+                        \item visualizzare la lista richiesta.
+                      \end{itemize}
+                      & NS \\
+        TAAFO012      & Il sistema deve permettere all’utente autenticato il passaggio da noto ad incognito e viceversa. \newline
+                      L’utente deve:
+                      \begin{itemize}
+                        \item avviare la procedura di cambio di stato;
+                        \item verificare l'effettivo cambio di stato.
+                      \end{itemize}
+                      & NS \\
+        TAAFO013      & Il sistema deve permettere all’utente autenticato di visualizzare il proprio storico. \newline
+                      L’utente deve:
+                      \begin{itemize}
+                        \item visualizzare il proprio storico degli accessi;
+                        \item visualizzare il proprio tempo trascorso all'interno di ogni organizzazione.
+                      \end{itemize}
+                      & NS \\
+        TAAFO014      & Il sistema deve permettere all’utente autenticato di disconnettersi dall’applicazione. \newline
+                      L’utente deve:
+                      \begin{itemize}
+                        \item avviare la procedura di disconnessione;
+                        \item confermare la procedura.
+                      \end{itemize}
+                      & NS \\
+        TAAFO015      & Il sistema deve permettere all’utente di eliminare il suo account. \newline
+                      L’utente deve:
+                      \begin{itemize}
+                        \item avviare la procedura di eliminazione;
+                        \item confermare la procedura.
+                      \end{itemize}
+                      & NS \\
+        TAAFO016      & Il sistema deve mostrare un messaggio d’errore e rifiutare le richieste da parte dell’app nel caso mancasse una connessione a internet. \newline
+                      L’utente deve:
+                      \begin{itemize}
+                        \item disconnettere il dispositivo da internet;
+                        \item effettuare un'azione che richieda la connessione ad internet;
+                        \item visualizzare il messaggio di errore corrispondente.
+                      \end{itemize}
+                      & NS \\
+        TAAFO017      & L’interfaccia web deve permettere all’utente non autenticato di autenticarsi. \newline
+                      L’utente deve:
+                      \begin{itemize}
+                        \item compilare il campo email;
+                        \item compilare il campo password;
+                        \item confermare l'autenticazione.
+                      \end{itemize}
+                      & NS \\
+        TAAFO018      & L’interfaccia web deve rifiutare la richiesta di autenticazione se i dati inseriti non rispettano i vincoli imposti, o se la combinazione di email e password non è presente nel database. \newline
+                      L’utente deve:
+                      \begin{itemize}
+                        \item inserire una combinazione di dati non validi;
+                        \item verificare la possibilità di proseguire l'autenticazione.
+                      \end{itemize}
+                      & NS \\
+        TAWFO019      & L’interfaccia web deve permettere all’utente autenticato di effettuare la disconnessione. \newline
+        L’utente deve:
+        \begin{itemize}
+         \item avviare la procedura di disconnessione.
+        \end{itemize}
+        & NS \\
+        TAWFO020      & L’interfaccia web deve permettere all’owner di creare un’organizzazione. \newline
+        L’owner deve:
+        \begin{itemize}
+         \item avviare la procedura di creazione di una organizzazione;
+         \item inserire il nome dell'organizzazione;
+         \item inserire la descrizione dell'organizzazione;
+         \item specificare i dettagli del server \glossario{LDAP}
+         \item verificare l'avvenuta creazione dell'organizzazione
+        \end{itemize}
+        & NS \\
+        TAWFO021      & L’interfaccia web deve permettere all’owner di eliminare un’organizzazione in suo possesso. \newline
+        L’owner deve:
+        \begin{itemize}
+         \item avviare la procedura di eliminazione di una organizzazione;
+         \item confermare la procedura di eliminazione
+        \end{itemize}
+        & NS \\
+        TAWFO022      & L’interfaccia web deve permettere all’owner di modificare l’organizzazione. \newline
+        L’owner deve:
+        \begin{itemize}
+         \item avviare la procedura di modifica di una organizzazione;
+         \item modificare i dati dell'organizzazione (nome, descrizione, configurazione del server LDAP).
+        \end{itemize}
+        & NS \\
+        TAWFO023      & L’interfaccia web deve permettere all’owner e al gestore di visualizzare una lista delle organizzazioni di cui fanno parte. \newline
+        L’owner e il gestore devono:
+        \begin{itemize}
+         \item visualizzare la lista delle organizzazioni di cui fanno parte.
+        \end{itemize}
+        & NS \\
+        TAAFO024      & Il sistema deve inviare una richiesta di aggiornamento della lista delle organizzazioni a tutte le applicazioni mobile.         \newline
+        L’utente deve:
+        \begin{itemize}
+         \item visualizzare una notifica con la richiesta di aggiornamento qualora una delle organizzazioni venga modificata.
+        \end{itemize}
+        & NS \\
+        TAWFO025      & L’interfaccia web deve permettere all’owner e al gestore di gestire i luoghi dell’organizzazione.         \newline
+        L’utente deve:
+        \begin{itemize}
+         \item avviare la procedura di inserimento di un nuovo luogo;
+         \item inserire le coordinate geografiche;
+         \item inserire l'indirizzo.
+        \end{itemize}
+        & NS \\
+        TAWFF026      & L’interfaccia web può opzionalmente permettere all’owner e al
+        gestore di aggiungere un luogo all’organizzazione evidenziandone
+        l’area sulla mappa. \newline
+        L’owner e il gestore devono:
+        \begin{itemize}
+         \item avviare la procedura di inserimento di un nuovo luogo;
+         \item selezionare l'area sulla mappa.
+        \end{itemize}
+        & NS \\
+        TAWFO027      & L’interfaccia web deve permettere all’owner e al gestore di eliminare luoghi dall’organizzazione. \newline
+        L’owner e il gestore devono:
+        \begin{itemize}
+         \item avviare la procedura di eliminazione di un nuovo luogo;
+         \item confermare l'eliminazione.
+        \end{itemize}
+        & NS \\
+        TAWFO028      & L’interfaccia web deve permettere all’owner e al gestore di modificare i luoghi dell’organizzazione. \newline
+        L’owner e il gestore devono:
+        \begin{itemize}
+         \item avviare la procedura di modifica di un nuovo luogo;
+         \item modificare i dati del luogo (indirizzo e coordinate o area sulla mappa).
+        \end{itemize}
+        & NS \\
+        TAWFO029      & L’interfaccia web deve permettere all’owner e al gestore di visualizzare una lista dei luoghi dell’organizzazione. \newline
+        L’owner e il gestore devono:
+        \begin{itemize}
+         \item selezionare la lista dei luoghi dell'organizzazione;
+         \item visualizzare la lista dei luoghi.
+        \end{itemize}
+        & NS \\
+        TAWFO30      & L’interfaccia web deve permettere agli amministratori di un’organizzazione di visualizzare le informazioni sull’organizzazione. \newline
+        L’owner e il gestore devono:
+        \begin{itemize}
+         \item selezionare un'organizzazione dalla lista;
+         \item visualizzare le informazioni dell'organizzazione.
+        \end{itemize}
+        & NS \\
+        TAWFO31      & L’interfaccia web deve permettere agli amministratori di un’organizzazione di visualizzare gli accessi di un dipendente. \newline
+        Gli amministratori dell'organizzazione devono:
+        \begin{itemize}
+         \item selezionare il dipendente dall'elenco della propria organizzazione;
+         \item visualizzare i dati di accesso del dipendente selezionato.
+        \end{itemize}
+        & NS \\
+        TAWFO32      & L’interfaccia web deve permettere all’utente autenticato di diventare owner e ottenere la possibilità di creare una sua organizzazione. \newline
+        L'utente deve:
+        \begin{itemize}
+         \item avviare la procedura per diventare owner;
+         \item confermare la richiesta di diventare owner.
+        \end{itemize}
+        & NS \\
+        TAWFO33      & Il sistema deve permettere all’owner di aggiungere un nuovo gestore dell’organizzazione.    \newline
+        L'owner deve:
+        \begin{itemize}
+         \item selezionare un'organizzazione di cui è owner;
+         \item avviare la procedura di aggiunta di un gestore;
+         \item inserire email dell'utente da promuovere.
+        \end{itemize}
+        & NS \\
+        TAWFO34      & Il sistema deve permettere all’owner di aggiungere un nuovo visualizzatore dell’organizzazione.    \newline
+        L'owner deve:
+        \begin{itemize}
+         \item selezionare un'organizzazione di cui è owner;
+         \item avviare la procedura di aggiunta di un visualizzatore;
+         \item inserire email dell'utente da promuovere.
+        \end{itemize}
+        & NS \\
+        TAWFO34      & Il sistema deve permettere all’amministratore di togliere i privilegi di owner ad un utente che ne sia in possesso.    \newline
+        L'amministratore deve:
+        \begin{itemize}
+         \item selezionare un'organizzazione;
+         \item avviare la procedura di rimozione owner;
+         \item inserire email dell'owner da rimuovere;
+         \item confermare la rimozione dell'owner.
+        \end{itemize}
+        & NS \\
+        TAWFO35      & Il sistema deve permettere all’owner di togliere i privilegi di gestore ad un utente che ne sia in possesso. \newline
+        L'owner deve:
+        \begin{itemize}
+         \item selezionare un'organizzazione;
+         \item avviare la procedura di rimozione dei gestori;
+         \item inserire email del gestore da rimuovere;
+         \item confermare la rimozione del gestore.
+        \end{itemize}
+        & NS \\
+        TAWFO36      & Il sistema deve permettere all’owner di togliere i privilegi di visualizzatore ad un utente che ne sia in possesso. \newline
+        L'owner deve:
+        \begin{itemize}
+         \item selezionare un'organizzazione;
+         \item avviare la procedura di rimozione dei visualizzatori;
+         \item inserire email del visualizzatore da rimuovere;
+         \item confermare la rimozione del visualizzatore.
+        \end{itemize}
+        & NS \\
+        TAWFO37      & Il sistema deve permettere all’amministratore di eliminare un account dal sistema. \newline
+        L'amministratore deve:
+        \begin{itemize}
+         \item avviare la procedura di rimozione utente;
+         \item selezionare l'account da rimuovere;
+         \item confermare la rimozione dell'account.
+        \end{itemize}
+        & NS \\
+        \caption{Tabella dei test di accettazione}%
+        \label{tab:test_accettazione}
+      \end{longtable}
+      %subs:accettazione (end)
+    \end{centering}
+    \subsubsection{Test di Sistema}%
+  \label{subs:sistema}
+    I test di sistema verificano il corretto funzionamento tra tutte le componenti del sistema. I test verranno identificati nel seguente modo:
+    \begin{center}
+      TS[codice]
+    \end{center}
+    Dove \textit{codice} rappresenta un numero identificativo per il Test di Sistema.
+  %subs:sistema (end)
+  \subsubsection{Test di Integrazione}%
+  \label{subs:integrazione}
+    I test di sistema verificano la corretta interazione e collaborazione tra un insieme di unità. I test verranno identificati nel seguente modo:
+    \begin{center}
+      TI[codice]
+    \end{center}
+    Dove \textit{codice} rappresenta un numero identificativo per il Test di Integrazione.
+  %subs:integrazione (end)
+  \subsubsection{Test di Unità}%
+  \label{subs:unita}
+    I test di sistema verificano la correttezza e il funzionamento di una singola unità del software. I test verranno identificati nel seguente modo:
+    \begin{center}
+      TU[codice]
+    \end{center}
+    Dove \textit{codice} rappresenta un numero identificativo per l'unità a cui il test appartiene.
+  %subs:unita (end)
+% sub:test (end)
+\end{document}
