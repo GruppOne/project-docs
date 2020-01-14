@@ -267,8 +267,9 @@ Posizionarsi nella cartella contenente la documentazione di progetto ed eseguire
     **/**.pu
 \end{minted}
 
-In questo modo vengono generate le immagini che sono effettivamente incluse nei documenti.
 La corretta esecuzione del comando richiede di aver impostato la variabile d'ambiente \verb|PLANTUML_JAR| al percorso completo del file \verb|plantuml.jar| reperito dal sito del progetto.
+
+In questo modo vengono generate le immagini che sono effettivamente incluse nei documenti dal comando dato in~\ref{par:LaTeX}.
 
 \subparagraph{Esempio diagramma PlantUML}%
 \label{subp:esempio_diagramma_plantuml}
@@ -299,30 +300,28 @@ Il risultato grafico del codice è presentato in~\ref{fig:esempio_caso_duso}
 
 % subp:esempio_diagramma_plantuml (end)
 
-\paragraph{pgfgantt}%
+\paragraph{Package pgfgantt}%
 \label{par:pgfgantt}
 
-Per i diagrammi di Gantt il gruppo ha scelto di utilizzare \glossario{pgfgantt}, un package disponibile per \LaTeX{} che sfrutta il linguaggio \glossario{PGF} e il rispettivo omonimo interprete.
+Per i diagrammi di Gantt il gruppo ha scelto di utilizzare pgfgantt, un package disponibile per \LaTeX{} che sfrutta il linguaggio \glossario{PGF} e il rispettivo omonimo interprete.
 PGF è in grado di produrre rappresentazioni grafiche vettoriali, e pgfgantt fornisce dei comandi \TeX{} che fungono da astrazioni per le direttive di basso livello.
 Un diagramma di Gantt viene quindi costruito attraverso uno o più comandi di titolo, seguiti da una combinazione di comandi specifici per inserire gruppi, ``barre'' (cioè attività) o milestone, oppure per collegare due elementi.
 
-% TODO finire di scrivere
-L'integrazione dei diagrammi nel documento avviene
+L'integrazione dei diagrammi nel documento avviene durante la compilazione del documento effettuata attraverso il comando dato in~\ref{par:LaTeX}.
 
 % par:pgfgantt (end)
-
-% TODO mancano altri strumenti in questa sezione?
 
 \subsubsection{Metriche}%
 \label{subs:sviluppo/metriche}
 
-\subparagraph{MPSROS-Requisiti obbligatori soddisfatti}%
-\label{subp:MPSROS-requisiti_obbligatori_soddisfatti}
+\paragraph{MPS-ROS\@: Requisiti obbligatori soddisfatti}%
+\label{par:MPS-ROS_requisiti_obbligatori_soddisfatti}
 
 La metrica requisiti obbligatori soddisfatti indica la percentuale di requisiti obbligatori soddisfatti sul numero totale di requisiti obbligatori. La formula è la seguente:
 \[
   \frac{requisiti\ obbligatori\ soddisfatti}{requisiti\ obbligatori\ totali}\cdot 100
 \]
-% TODO scrivi metriche di sviluppo (grosso)
+% TODO scrivi metriche di codifica (grosso)
+% TODO basta scrivere statement/branch/decision coverage per ora?
 
 \end{document}
