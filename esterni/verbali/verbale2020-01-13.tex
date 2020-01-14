@@ -6,24 +6,27 @@
 
 \title{Verbale --- 03/01/2020}
 
-\setVersione{\plchold{versione}}
+\setVersione{0.0.8}
 \setResponsabile{Alessandro Rizzo}
 \setRedattori{Alberto Cocco}
-\setVerificatori{}
-\setStato{WIP}
+\setVerificatori{
+  Tobia Apolloni \\ &
+  Riccardo Cestaro
+}
+\setStato{Approvato}
 \setUso{Esterno}
 \setDescrizione{Verbale dell'incontro di GruppOne del 09/01/2020}
 \setModifiche{%
-Alessandro Rizzo & 2020--01--13 & approva documento \\%
-Tobia Apolloni, Riccardo Cestaro & 2020--01--13 & verifica verbale \\%
-Luca Ercole & 2020--01--13 & stendi verbale \\%
+-&Alessandro Rizzo & 2020--01--13 & approva documento \\%
+-&Tobia Apolloni, Riccardo Cestaro & 2020--01--13 & verifica verbale \\%
+-&Luca Ercole & 2020--01--13 & stendi verbale %
 }
 
 \begin{document}
 
 \input{../../commons/template}
 
-\section{Introduzione}
+\section{Introduzione}%
 \label{sec:introduzione}
 
 In data 13/01/2020 presso il Dipartimento di Matematica ``Tullio Levi-Civita'' GruppOne si è collegato tramite una chiamata Hangouts al proponente. La riunione si è svolta sotto forma di discussione: ogni componente del gruppo ha inserito in un file Google Docs condiviso le domande che sono state poi sottoposte al proponente e sulle quali si è discusso. Segue una descrizione degli argomenti trattati.
@@ -33,7 +36,7 @@ In data 13/01/2020 presso il Dipartimento di Matematica ``Tullio Levi-Civita'' G
 
 \begin{itemize}
   \item Modello incrementale.
-  \item Configurazione del Server LDAP.
+  \item Configurazione del Server LDAP\@.
   \item Chiarimenti sulle modalità di autenticazione alle organizzazioni con tracciamento non anonimo.
   \item Metriche per la qualità di prodotto.
 \end{itemize}
@@ -43,12 +46,12 @@ In data 13/01/2020 presso il Dipartimento di Matematica ``Tullio Levi-Civita'' G
 
 Abbiamo esposto al proponente la pianificazione del modello incrementale da noi adottato e gli abbiamo chiesto dei consigli su come strutturare la pianificazione di incrementi in un progetto così complesso. Il proponente ci ha consigliato, data la natura del prodotto, di identificare una prima fase in cui si definiscono i protocolli delle richieste tra la componente app e il server. In seguito ci ha consigliato di dividere il lavoro in flussi, ossia serie di azioni (traducibili in requisiti) che gli utenti possono effettuare, e dividere questi flussi tra gli incrementi di lunghezza fissa che abbiamo fissato, anche andando ad occupare più di un incremento per la realizzazione di un flusso.
 
-\section{Cconfigurazione del Server LDAP}%
+\section{Configurazione del Server LDAP}%
 \label{sec:obiettivi_in_uscita_alla_RQ}
 
 Abbiamo chiesto al proponente specifiche maggiori sulla configurazione che l'owner di una organizzazione deve effettuare all'atto della creazione di una organizzazione. Il proponente ha chiarito che il server LDAP viene configurato per contenere le credenziali di accesso che in seguito gli utenti utilizzeranno per autenticarsi all'interno dell'organizzazione
 
-\section{Charimenti sulle modalità di autenticazione alle organizzazioni con tracciamento non anonimo}%
+\section{Chiarimenti sulle modalità di autenticazione alle organizzazioni con tracciamento non anonimo}%
 \label{sec:chiarimenti_su_verifica}
 
 Abbiamo presentato al proponente i nostri dubbi riguardo all modalità di autenticazione degli utenti all'interno delle organizzazioni che la richiedessero. Il proponente ha ribadito che le credenziali vengono configurate dall'owner nel server LDAP e dunque è con quelle credenziali che gli utenti possono autenticarsi all'interno dell'organizzazione, sarà cura dell'owner fornire quelle credenziali alle persone autorizzate ad autenticarsi e il server LDAP garantirà loro l'accesso alle informazioni se le credenziali sono corrette.

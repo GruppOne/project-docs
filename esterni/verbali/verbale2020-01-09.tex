@@ -6,24 +6,27 @@
 
 \title{Verbale --- 03/01/2020}
 
-\setVersione{\plchold{versione}}
+\setVersione{0.0.8}
 \setResponsabile{Alessandro Rizzo}
 \setRedattori{Alberto Cocco}
-\setVerificatori{}
-\setStato{WIP}
+\setVerificatori{
+  Tobia Apolloni \\ &
+  Riccardo Cestaro
+}
+\setStato{Approvato}
 \setUso{Esterno}
 \setDescrizione{Verbale dell'incontro di GruppOne del 09/01/2020}
 \setModifiche{%
-Alessandro Rizzo & 2020--01--10 & approva documento \\%
-Tobia Apolloni, Riccardo Cestaro & 2020--01--10 & verifica verbale \\%
-Alberto Cocco & 2020--01--09 & stendi verbale \\%
+-&Alessandro Rizzo & 2020--01--10 & approva documento \\%
+-&Tobia Apolloni, Riccardo Cestaro & 2020--01--10 & verifica verbale \\%
+-&Alberto Cocco & 2020--01--09 & stendi verbale %
 }
 
 \begin{document}
 
 \input{../../commons/template}
 
-\section{Introduzione}
+\section{Introduzione}%
 \label{sec:introduzione}
 
 In data 09/01/2020 presso il Dipartimento di Matematica ``Tullio Levi-Civita'' GruppOne ha incontrato il committente professore Tullio Vardanega. La riunione si è svolta sotto forma di discussione: ogni componente del gruppo ha inserito in un file Google docs condiviso le domande a cui il committente ha successivamente risposto. Segue una descrizione degli argomenti trattati.
@@ -32,18 +35,18 @@ In data 09/01/2020 presso il Dipartimento di Matematica ``Tullio Levi-Civita'' G
 \label{sec:ordine_del_giorno}
 
 \begin{itemize}
-  \item Strumenti di progettazione:Plantuml.
+  \item Strumenti di progettazione: Plantuml.
   \item Numerazione delle versioni.
   \item Registro delle modifiche.
   \item Modello incrementale.
-  \item Obiettivi in uscita alla RQ.
+  \item Obiettivi in uscita alla RQ\@.
   \item Verifica.
   \item Metriche.
   \item Pianificazione.
   \item Rischi.
 \end{itemize}
 
-\section{Strumenti di progettazione:Plantuml}%
+\section{Strumenti di progettazione: Plantuml}%
 \label{sec:strumenti_di_progettazione:Plantuml}
 
 Abbiamo chiesto al committente se avesse qualche preferenza relativa all'utilizzo di un particolare software per la realizzazione dei diagrammi dei casi d'uso. Il committente non ha dato alcuna preferenza ma ha esplicitamente richiesto che lo strumento scelto supporti almeno UML 2.0. Ci ha fatto notare che negli anni passati molti gruppi hanno valutato l'idea di utilizzare una particolare estensione di eclipse. Infine ha sottolineato l'importanza del legame tra diagrammi e codice: gli strumenti per i quali optiamo devono essere in grado di produrre codice in un linguaggio che sia familiare e comprensibile a tutti noi.
@@ -56,7 +59,7 @@ Abbiamo chiesto al committente informazioni riguardo alla numerazione delle vers
 \section{Registro delle modifiche}%
 \label{sec:registro_delle_modifiche}
 
-Abbiamo spiegato al committente che facciamo uso dei conventional commits per il versionamento. Abbiamo poi presentato la nostra intenzione di mantenere come registro delle modifiche un changelog con informazioni generali (e.g nome e data) e una lista dei commit per ogni documento che hanno prodotto degli incrementi nel processo di documentazione. Il committente si è dimostrato un po' scettico riguardo a questa scelta e ci ha detto di essere troppo sintattici. Ci ha esposto la necessità di concentrarci sul destinatario del nostro registro: bisogna, infatti, porre attenzione a non riportare informazioni inutili che potrebbero annoiare i destinatari d'uso (esempio: il registro delle modifiche è principalmente rivolto ai verificatori e deve contenere solo informazioni che possa aiutarli nelle loro attività di verifica). In sostanza, la sintassi e lo stile dei commmit dipende dal nostro destinatario.
+Abbiamo spiegato al committente che facciamo uso dei conventional commits per il versionamento. Abbiamo poi presentato la nostra intenzione di mantenere come registro delle modifiche un changelog con informazioni generali (e.g nome e data) e una lista dei commit per ogni documento che hanno prodotto degli incrementi nel processo di documentazione. Il committente si è dimostrato un po' scettico riguardo a questa scelta e ci ha detto di essere troppo sintattici. Ci ha esposto la necessità di concentrarci sul destinatario del nostro registro: bisogna, infatti, porre attenzione a non riportare informazioni inutili che potrebbero annoiare i destinatari d'uso (esempio: il registro delle modifiche è principalmente rivolto ai verificatori e deve contenere solo informazioni che possa aiutarli nelle loro attività di verifica). In sostanza, la sintassi e lo stile dei commit dipende dal nostro destinatario.
 
 
 \section{Modello incrementale}%
@@ -66,10 +69,9 @@ Abbiamo chiesto al committente se ritenga corretto distinguere e pianificare qui
 
 \section{Obiettivi in uscita alla RQ}%
 \label{sec:obiettivi_in_uscita_alla_RQ}
+Abbiamo esposto al committente dubbi sugli incrementi da effettuare tra RQ ed RA.Egli ci ha fatto osservare l'importanza della pianificazione all'indietro: la RQ che è una revisione di avanzamento andrebbe quindi fissata in una data ragionevolmente vicina a quella della RA\@. La RQ dovrebbe essere una sorta di termometro di readiness che indica che il tempo residuo rimasto è poco e per questo motivo non andrebbe affrontata ad eccessiva distanza dalla RA.Inoltre, all'interno del PdP, non potendo predire il futuro è necessario stabilire una pianificazione basata su obiettivi e non su desideri. Bisognerebbe, quindi, imparare a conoscersi a fondo e pianificare in base alle nostre realistiche possibilità. Essendo una pianificazione, il PdP è naturalmente soggetto a modifiche :i costi pattuiti con il committente ovviamente non posso modificarli ma la pianificazione temporale può essere soggetta a modifiche. % chktex 26
 
-Abbiamo esposto al committente dubbi sugli incrementi da effettuare tra RQ ed RA.Egli ci ha fatto osservare l'importanza della pianificazione all'indietro: la RQ che è una revisione di avanzamento andrebbe quindi fissata in una data ragionevolmente vicina a quella della RA. La RQ dovrebbe essere una sorta di termometro di readiness che indica che il tempo residuo rimasto è poco e per questo motivo non andrebbe affrontata ad eccessiva distanza dalla RA.Inoltre, all'interno del PdP, non potendo predire il futuro è necessario stabilire una pianificazione basata su obiettivi e non su desideri. Bisognerebbe, quindi, imparare a conoscersi a fondo e pianificare in base alle nostre realistiche possibilità. Essendo una pianificazione, il PdP è naturalmente soggetto a modifiche :i costi pattuiti con il committente ovviamente non posso modificarli ma la pianificazione temporale può essere soggetta a modifiche.
-
-\section{Charimenti su verifica}%
+\section{Chiarimenti su verifica}%
 \label{sec:chiarimenti_su_verifica}
 
 Abbiamo presentato al committente i nostri dubbi riguardo alla necessità di avere una fase finale di verifica e collaudo al termine del processo di sviluppo. Il Professore ha chiarito che fissare una fase di verifica complessiva prima del collaudo finale è fortemente sbagliato nel modello incrementale. Il modello incrementale, infatti, dovrebbe aggiungere nuovi requisiti ad ogni incremento e verificarli prima dell'inizio del successivo. L'ultima verifica prima del collaudo dovrebbe andare quindi a verificare solo i requisiti aggiunti nell'ultimo incremento.
@@ -77,7 +79,7 @@ Abbiamo presentato al committente i nostri dubbi riguardo alla necessità di ave
 \section{Metriche}%
 \label{sec:metriche}
 
-Abbiamo chiesto al committente consigli su come decidere le metriche per la qualità da inserire nelle norme di progetto. Il committente ci ha consigliato di focalizzarci sull'usabilità del prodotto. Le metriche ovviamente andrebbero aggiornate man mano e non fissate a priori prima della RR perchè si rischia di sbagliare. Esse andrebbero discusse con il proponente.
+Abbiamo chiesto al committente consigli su come decidere le metriche per la qualità da inserire nelle norme di progetto. Il committente ci ha consigliato di focalizzarci sull'usabilità del prodotto. Le metriche ovviamente andrebbero aggiornate man mano e non fissate a priori prima della RR perché si rischia di sbagliare. Esse andrebbero discusse con il proponente.
 
 \section{Pianificazione}%
 \label{sec:pianificazione}
@@ -87,7 +89,7 @@ Dopo aver discusso delle metriche il committente ci ha ribadito l'importanza di 
 \section{Rischi}%
 \label{sec:rischi}
 
-Abbiamo espresso la nostra preoccupazione sull'attività di analisi dei rischi. Il committente ha ribadito l'importanza del processo di gestione dei rischi(risk management) e di come i rischi non vadano assolutamente ignorati. Come gruppo dobbiamo essere consci e pienamente consapevoli dei rischi a cui andiamo incontro e dobbiamo attuare delle contromisure per prevenirli ed eventualmente contrastarli.
+Abbiamo espresso la nostra preoccupazione sull'attività di analisi dei rischi. Il committente ha ribadito l'importanza del processo di gestione dei rischi (risk management) e di come i rischi non vadano assolutamente ignorati. Come gruppo dobbiamo essere consci e pienamente consapevoli dei rischi a cui andiamo incontro e dobbiamo attuare delle contromisure per prevenirli ed eventualmente contrastarli.
 \newpage
 \section{Registro delle decisioni}%
 \label{sec:registro_delle_decisioni}
