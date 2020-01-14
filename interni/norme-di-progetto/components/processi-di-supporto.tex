@@ -364,7 +364,6 @@ Ogni componente del gruppo ha un estensione per il proprio code editor (per vsco
 
 % subs:metriche (end)
 
-% TODO finire di scrivere gestione della config
 \subsection{Gestione della configurazione}%
 \label{sub:gestione_della_configurazione}
 
@@ -376,20 +375,64 @@ GruppOne istanzia il processo di gestione della configurazione per:
   \item Assicurare completezza e correttezza del prodotto.
   \item Gestire al meglio il lavoro di gruppo.
   \item Identificare procedure per l'organizzazione, gestione e rilascio del prodotto.
-  \item Conservare documentazione e software in un luogo accessibile e compatibile con la licenza richiesta dal prodotto.
+  \item Conservare documentazione e software in un luogo accessibile e compatibile con la licenza richiesta dal committente.
 \end{itemize}
 
 \subsubsection{Gestione del versionamento}%
 \label{subs:gestione_del_versionamento}
 
+La gestione delle versioni del prodotto avviene tramite Git, utilizzando il \href{https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/github-flow}{GitHub flow} nel periodo iniziale e possibilmente transizionando verso il \href{https://trunkbaseddevelopment.com/}{Trunk Based Development} quando i membri del gruppo avranno più familiarità con Git e con le tecnologie necessarie allo svolgimento delle attività di Testing.
+
 \paragraph{Repository}%
 \label{par:repository}
 
-\paragraph{Struttura dei commit}%
-\label{par:struttura_dei_commit}
+Abbiamo deciso di distribuire il prodotto software su più repository corrispondenti alle parti principali di cui è costituito, che verranno creati in corrispondenza dell'approvazione di un'\glossario{API} stabile per il prodotto software che stiamo sviluppando.
+
+Ciascuno di questi repository sarà versionato in conformità alla specifica \href{https://semver.org/spec/v2.0.0.html}{Semantic Versioning 2.0.0} (semver), utilizzando degli strumenti per automatizzare il più possibile l'attività.
+
+Ci aspettiamo che questi numeri di versione raggiungano cifre elevate e ci impegniamo a darne una previsione per ogni repository basata sul numero di requisiti concordati con il committente in seguito alla prima revisione di progetto.
+
+Lo scopo primario di questa previsione sarà di manifestare sinteticamente ai membri del gruppo la differenza tra preventivo e consuntivo di periodo in occasione delle successive revisioni, contenendo essa informazioni sia sull'implementazione graduale delle funzionalità richieste che sul numero di modifiche implementate e problemi risolti per ogni componente del prodotto.
+
+Consideriamo quindi questi numeri di versione dei componenti individuali come numeri di versione \textbf{interni}.
+
+\paragraph{Versione di prodotto}%
+\label{par:versione_di_prodotto}
+
+A espressione del nostro rapporto con il committente e con il proponente, ci impegniamo a mantenere un numero di versione rappresentativo del prodotto complessivo, anch'esso organizzato su 3 livelli (X.Y.Z) ma con significato non conforme alla specifica semver.
+
+In particolare:
+
+\begin{itemize}
+  \item Un aumento di Z corrisponde all'approvazione interna di un documento, che implica necessariamente la verifica da parte di minimo 2 membri del team.
+  \item Un aumento di Y corrisponde al raggiungimento di una milestone come definita nel \textit{Piano di progetto}. Le milestone comprendono sia le revisioni di progetto con il committente che gli incrementi.
+  \item Un aumento di X corrisponde al rilascio pubblico di una nuova versione \textit{non retro-compatibile} dell'API pubblica del prodotto C5-Stalker
+\end{itemize}
+
+Ogni componente software sviluppata dipenderà esplicitamente in ogni momento da una versione di prodotto (e quindi di documentazione).
+
+Eventi non previsti dalla pianificazione si manifesteranno con appropriate richieste di modifiche alla documentazione di progetto, riflettute in modifiche locali ai componenti espresse attraverso il cambiamento del numero di versione di prodotto riferito dal componente stesso.
+
+Valuteremo la convenienza manutentiva di fornire al committente in corrispondenza delle revisioni di progetto un repository impostato per tracciare le parti del sistema attraverso il meccanismo dei \href{https://git-scm.com/book/en/v2/Git-Tools-Submodules}{Submodule} al repository \textit{project-docs} in cui sono mantenuti e versionati i prodotti documentali gestionali e di relazione con il committente.
+
+\paragraph{Struttura dei messaggi di commit}%
+\label{par:struttura_dei_messaggi_di_commit}
+
+In tutti i repository gestiti dall'organizzazione GruppOne ci impegniamo a rispettare la specifica \href{https://www.conventionalcommits.org/en/v1.0.0/}{Conventional Commits 1.0.0}. Il vantaggio principale di questa convenzione risiede nella sua stretta correlazione con la specifica semver e gli avanzamenti di versione interna.
+
+Sebbene l'utilità di seguire questa convenzione nel repository di documentazione sia limitata, abbiamo deciso di imporla comunque per entrare fin da subito nell'ottica necessaria e uniformare il flusso di lavoro.
 
 \subsubsection{Strumenti}%
 \label{subs:gestione_della_configurazione/strumenti}
+
+La gestione del numero di versione avverrà attraverso uno strumento la cui scelta verrà effettuata in base alle necessità specifiche che emergeranno durante la fase di analisi. Alcune opzioni che stiamo considerando sono:
+
+\begin{itemize}
+  \item \href{https://github.com/conventional-changelog/standard-version}{conventional changelog - Standard Version}
+  \item \href{https://semantic-release.gitbook.io/semantic-release/}{semantic-release}
+\end{itemize}
+
+Invece per facilitare l'adozione dei commit convenzionali, abbiamo iniziato da subito a utilizzare lo strumento \href{https://commitizen.github.io/cz-cli/}{Commitizen}, configurato con il \glossario{commitizen adapter} \href{https://www.npmjs.com/package/cz-conventional-changelog/v/3.0.1}{cz-conventional-changelog@3.0.1}
 
 \subsection{Accertamento della qualità}%
 \label{subs:accertamento_della_qualita}
@@ -470,7 +513,6 @@ Si deve verificare qualsiasi prodotto intermedio, pertanto sia documentazione ch
 
 \subsubsection{Descrizione}%
 \label{subs:verifica/descrizione}
-
 
 Il processo di verifica è il processo che controlla e garantisce che i prodotti di una determinata attività soddisfino i requisiti e le condizioni che quel prodotto deve avere. Il processo di verifica si integra in toto con gli altri processi, in particolare con quello di sviluppo, e offre attività di revisione, analisi e test. È composto da due attività:
 
@@ -562,9 +604,19 @@ I test di regressione servono per accertare che le modifiche apportate non compo
 I test di accettazione verificano il completo soddisfacimento dei requisiti utente.
 Sono eseguiti in collaborazione con il committente.
 
-\paragraph{Metriche}%
-\label{par:metriche}
+\subsubsection{Strumenti}%
+\label{subs:verifica/strumenti}
 
+% TODO scrivere pr review di github
+
+% subs:verifica/strumenti (end)
+
+\subsubsection{Metriche}%
+\label{subs:metriche}
+
+% TODO scrivi metriche
+
+% FIXME livello di indentazione sbagliato
 \subparagraph{Denominazione}%
 \label{subp:denominazione}
 Le metriche sono essenziali per avere una misura oggettiva di qualità del nostro prodotto.
