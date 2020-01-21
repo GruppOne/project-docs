@@ -1,6 +1,18 @@
-# ------------------------------ #
-# Responsabile: Alessandro Rizzo #
-# ------------------------------ #
+# ------------------------------------------ #
+# Verificatori assegnati alla configurazione #
+# ------------------------------------------ #
+
+# default reviewer
+* @erclu
+
+# configurazioni di varie feature di github
+/.github/ @erclu
+
+# configurazione del workspace di visual studio code
+/.vscode/ @erclu
+
+# template, configurazione e file comuni di documenti LaTex
+/commons/ @RiccardoAgatea
 
 # ----------------------------------------------- #
 # Verificatori e Redattori assegnati ai documenti #
@@ -33,19 +45,3 @@
 /interni/verbali/ @TobiaApolloni @RiccardoCestaro
 # Redattori:
 # Riccardo Agatea, Luca Ercole
-
-# ------------------------------------------ #
-# Verificatori assegnati alla configurazione #
-# ------------------------------------------ #
-
-# default reviewer
-* @erclu
-
-# configurazioni di varie feature di github
-/.github/ @erclu
-
-# configurazione del workspace di visual studio code
-/.vscode/ @erclu
-
-# template, configurazione e file comuni di documenti LaTex
-/commons/ @RiccardoAgatea
