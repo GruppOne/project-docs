@@ -14,7 +14,9 @@
     \end{description}
     Il gruppo ha classificato i rischi nelle seguenti tipologie:
     \begin{itemize}
-      \item Rischi del Personale.
+      \item Rischi per il prodotto.
+      \item Rischio per il progetto.
+      \item Rischi del personale.
       \item Rischi dei requisiti.
       \item Rischi tecnologici.
       \item Rischi degli strumenti.
@@ -24,6 +26,11 @@
   \subsection{Elenco dei rischi}%
   \label{sub:elenco_dei_rischi}
   Di seguito saranno indicati i principali rischi individuati, una loro descrizione, la pianificazione messa in atto dal gruppo per monitorare o evitare i rischi, la probabilità che il rischio si verifichi e il suo impatto sul progetto:
+  I rischi saranno identificati da un codice univoco:
+  \begin{center}
+    \textbf{R[tipo][numero]}
+  \end{center}
+  Dove [tipo] correla il rischio alla sua tipologia mentre il numero identifica in maniera univoca il rischio all'interno della tipologia a cui appartiene.
   \rowcolors{2}{lightgray}{white!80!lightgray!100}
       \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
       \begin{longtable}[H]{|p{10em}|p{13em}|p{13em}|p{10em}|}
@@ -34,28 +41,28 @@
       Rischio & Descrizione & Pianificazione & Indicatori\\
       \hline % chktex 44
   \endhead{}
-  Scarse conoscenze tecnologiche [Rischio tecnologico] & Inesperienza del gruppo riguardo alle tecnologie utilizzate, per la maggior parte nuove. & L'amministratore ha redatto le norme di progetto con velocità e ponendo particolare attenzione alle tecnologie utilizzate nel progetto così da consentire ai membri del gruppo un apprendimento più veloce e completo dei nuovi strumenti utilizzati. & \textbf{Probabilità:} Alta \textbf{Impatto:} Tollerabile \\
+  Scarse conoscenze tecnologiche \textbf{RTEC001} & Inesperienza del gruppo riguardo alle tecnologie utilizzate, per la maggior parte nuove. & L'amministratore ha redatto le norme di progetto con velocità e ponendo particolare attenzione alle tecnologie utilizzate nel progetto così da consentire ai membri del gruppo un apprendimento più veloce e completo dei nuovi strumenti utilizzati. & \textbf{Probabilità:} Alta \textbf{Impatto:} Tollerabile \\
   Monitoraggio: & \multicolumn{3}{p{38.5em}|}{In caso vengano aggiunte nuove tecnologie i membri del gruppo verranno invitati ad aggiornarsi sulle nuove tecnologie.}\\
   \hline % chktex 44
-  Ritardo nella consegna del progetto [Rischio per il progetto] & La nostra inesperienza nella gestione di un progetto software unita alle conoscenze limitate sulle tecnologie coinvolte potrebbero portare ad un ritardo nella consegna del prodotto. & Il piano di progetto terrà conto dell'inesperienza del gruppo nella valutazione delle tempistiche e i membri del gruppo sono invitati a aggiornarsi preventivamente sulle aree in cui hanno minor competenza. & \textbf{Probabilità:}   Bassa \textbf{Impatto: }  Significativo  \\
+  Ritardo nella consegna del progetto \textbf{RPRG001} & La nostra inesperienza nella gestione di un progetto software unita alle conoscenze limitate sulle tecnologie coinvolte potrebbero portare ad un ritardo nella consegna del prodotto. & Il piano di progetto terrà conto dell'inesperienza del gruppo nella valutazione delle tempistiche e i membri del gruppo sono invitati a aggiornarsi preventivamente sulle aree in cui hanno minor competenza. & \textbf{Probabilità:}   Bassa \textbf{Impatto: }  Significativo  \\
   Monitoraggio: & \multicolumn{3}{p{38.5em}|}{Il responsabile monitorerà spesso lo stato del progetto per eventualmente riassegnare le risorse disponibili e limitare il ritardo.}\\
   \hline % chktex 44
-  Problemi Accademici[Rischio del personale] & La quasi totalità dei membri del gruppo porta avanti altre attività accademiche oltre a questo progetto e dunque possono sovrapporsi gli impegni dei vari membri. & Il team ha approvato sin dal primo periodo un calendario condiviso di impegni per cui era richiesta la partecipazione di tutti i componenti. & \textbf{Probabilità: }   Alta \textbf{Impatto: }    Basso\\
+  Problemi Accademici \textbf{RPER001} & La quasi totalità dei membri del gruppo porta avanti altre attività accademiche oltre a questo progetto e dunque possono sovrapporsi gli impegni dei vari membri. & Il team ha approvato sin dal primo periodo un calendario condiviso di impegni per cui era richiesta la partecipazione di tutti i componenti. & \textbf{Probabilità: }   Alta \textbf{Impatto: }    Basso\\
   Monitoraggio: & \multicolumn{3}{p{38.5em}|}{I membri del gruppo sono sempre invitati a comunicare preventivamente gli impegni accademici così da poter gestire al meglio gli impegni del gruppo.}\\
   \hline % chktex 44
-  Problemi Personali[Rischio del personale] & Possono intercorrere nel corso del progetto impegni personali che costringano alcuni membri del gruppo a sospendere le attività e risultare irreperibili. & Questi eventi, se non saranno compatibili con gli impegni già determinati per il progetto, andranno comunicati appena possibile al responsabile che se necessario provvederà a ridistribuire le risorse disponibili. & \textbf{Probabilità:}  Alta \textbf{Impatto: }    Molto Basso\\
+  Problemi Personali \textbf{RPER002} & Possono intercorrere nel corso del progetto impegni personali che costringano alcuni membri del gruppo a sospendere le attività e risultare irreperibili. & Questi eventi, se non saranno compatibili con gli impegni già determinati per il progetto, andranno comunicati appena possibile al responsabile che se necessario provvederà a ridistribuire le risorse disponibili. & \textbf{Probabilità:}  Alta \textbf{Impatto: }    Molto Basso\\
   Monitoraggio: & \multicolumn{3}{p{38.5em}|}{In caso sopraggiungano impegni personali tutti i membri sono tenuti a comunicarli al responsabile il prima possibile.}\\
   \hline % chktex 44
-  Comunicazioni esterne[Rischio del personale] & Il proponente ha la sede lontana da Padova e dunque le comunicazioni faccia a faccia risultano complicate & Se sono necessari incontri col proponente in tempi brevi vengono preferite chiamate \glossario{Hangouts} a incontri fisici. & \textbf{Probabilità: }   Alta \textbf{Impatto: }   Basso\\
+  Comunicazioni esterne \textbf{RPER003} & Il proponente ha la sede lontana da Padova e dunque le comunicazioni faccia a faccia risultano complicate & Se sono necessari incontri col proponente in tempi brevi vengono preferite chiamate \glossario{Hangouts} a incontri fisici. & \textbf{Probabilità: }   Alta \textbf{Impatto: }   Basso\\
   Monitoraggio: & \multicolumn{3}{p{38.5em}|}{Il responsabile se possibile organizzerà con largo anticipo incontri e chiamate con il proponente.}\\
   \hline % chktex 44
-  Calcolo costi del progetto[Rischio per il progetto] & La poca esperienza del gruppo potrebbe portare ad un calcolo dei costi differente da quello che sarà invece necessario per il progetto. & Le stime sui costi sono state discusse con tutti i membri del gruppo. Se la stima si rivelerà essere al ribasso si cercherà di ridurre al massimo i cambiamenti nei costi che verranno comunicati tempestivamente al committente. & \textbf{Probabilità: }  Media \textbf{Impatto: } Tollerabile\\
+  Calcolo costi del progetto \textbf{RPRG002} & La poca esperienza del gruppo potrebbe portare ad un calcolo dei costi differente da quello che sarà invece necessario per il progetto. & Le stime sui costi sono state discusse con tutti i membri del gruppo. Se la stima si rivelerà essere al ribasso si cercherà di ridurre al massimo i cambiamenti nei costi che verranno comunicati tempestivamente al committente. & \textbf{Probabilità: }  Media \textbf{Impatto: } Tollerabile\\
   Monitoraggio: & \multicolumn{3}{p{38.5em}|}{Per gestire al meglio eventuali problemi legati ai costi i membri del gruppo aggiornano costantemente le proprie ore di lavoro in modo che il responsabile e gli altri membri del gruppo possano controllare la situazione attuale in relazione alle previsioni fatte.}\\
   \hline % chktex 44
-  Ridefinizione dei requisiti[Rischio dei requisiti] & I requisiti decisi in fase di analisi potrebbero essere modificati in seguito ad esigenze del proponente o del gruppo. & I membri del gruppo hanno discusso le stime sui costi e le hanno proposte al proponente per trovare soluzioni comuni, nel caso sia necessario ridefinire i requisiti si parlerà approfonditamente con proponente e committente e si cercherà di gravare il meno possibile sul prospetto orario del progetto. & \textbf{Probabilità: }  Bassa \textbf{Impatto: }  Significativo\\
+  Ridefinizione dei requisiti \textbf{RREQ001} & I requisiti decisi in fase di analisi potrebbero essere modificati in seguito ad esigenze del proponente o del gruppo. & I membri del gruppo hanno discusso le stime sui costi e le hanno proposte al proponente per trovare soluzioni comuni, nel caso sia necessario ridefinire i requisiti si parlerà approfonditamente con proponente e committente e si cercherà di gravare il meno possibile sul prospetto orario del progetto. & \textbf{Probabilità: }  Bassa \textbf{Impatto: }  Significativo\\
   Monitoraggio: & \multicolumn{3}{p{38.5em}|}{I requisiti verranno discussi attentamente e se ne parlerà con il proponente prima di consegnarli in revisione.}\\
   \hline % chktex 44
-  Problema al \glossario{server} di \glossario{Imola Informatica}[Rischio degli strumenti] & Il proponente mette a disposizione del gruppo un server dell'azienda che tuttavia potrebbe subire problematiche o essere spento per un certo periodo di tempo per motivazioni interne all'azienda. & Il gruppo provvederà a produrre più copie dell'applicazione e in particolare verranno fatte diverse copie del \glossario{software} definitivo così da non dipendere necessariamente dall'hardware fornito da Imola Informatica. & \textbf{Probabilità: }  Bassa \textbf{Impatto: } Tollerabile\\
+  Problema al \glossario{server} di \glossario{Imola Informatica} \textbf{RSTR001} & Il proponente mette a disposizione del gruppo un server dell'azienda che tuttavia potrebbe subire problematiche o essere spento per un certo periodo di tempo per motivazioni interne all'azienda. & Il gruppo provvederà a produrre più copie dell'applicazione e in particolare verranno fatte diverse copie del \glossario{software} definitivo così da non dipendere necessariamente dall'hardware fornito da Imola Informatica. & \textbf{Probabilità: }  Bassa \textbf{Impatto: } Tollerabile\\
   Monitoraggio: & \multicolumn{3}{p{38.5em}|}{Il proponente notificherà il gruppo in caso di problemi se possibile e in ogni caso la copia dell'applicazione sul server non sarà l'unica copia disponibile.}\\
   \hline % chktex 44
   \hline % chktex 44
