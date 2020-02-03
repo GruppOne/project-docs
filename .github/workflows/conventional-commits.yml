@@ -10,11 +10,15 @@ env:
 
 jobs:
   commitsar:
-    name: Check conformity to spec
+    name: Check all commits
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v1
+      # la v2 di checkout non funziona
+      # - uses: actions/checkout@v2
+      #   with:
+      #     fetch-depth: 0
 
-      - name: run commitsar
+      - name: Run commitsar
         uses: outillage/commitsar@v0.9.0

@@ -3,6 +3,7 @@
   "tasks": [
     {
       "label": "commitizen",
+      "detail": "Commit using commitizen CLI",
       "type": "shell",
       "command": "git cz",
       "presentation": {

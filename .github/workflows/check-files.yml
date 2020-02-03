@@ -7,21 +7,21 @@ on:
 
 jobs:
   check-bom:
-    name: no BOMs found
+    name: No BOMs
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: check for BOMs
+      - name: Check for BOMs
         uses: arma-actions/bom-check@v1.0
 
   check-crlf:
-    name: no CRLF endings found
+    name: No CRLF endings
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: check for CRLF endings
+      - name: Check for CRLF endings
         uses: erclu/check-crlf@v1
