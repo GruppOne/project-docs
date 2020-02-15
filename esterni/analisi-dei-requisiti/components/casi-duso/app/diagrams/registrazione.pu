@@ -5,7 +5,7 @@ actor :utente non autenticato: as A
 
 rectangle {
   together {
-    usecase (UUC1.1) as "UUC1.1\nVisualizzazione EULA"
+    usecase (UUC1.1) as "UUC1.1\nConferma EULA"
     usecase (UUC1.2) as "UUC1.2\nInserimento dati registrazione"
   }
 }
@@ -39,20 +39,5 @@ rectangle {
 (UUC1.2.5) .up.> (UUC1.2.3) : <<extends>>
 (UUC1.2.5) .up.> (UUC1.2.2) : <<extends>>
 (UUC1.2.5) .up.> (UUC1.2.1) : <<extends>>
-
-@enduml
-
-@startuml visualizza-eula
-!include ../../../../../../commons/style/use-cases.pu
-
-actor :utente non autenticato: as A
-
-rectangle {
-  together {
-    usecase (UUC1.1.1) as "UUC1.1.1\nConferma EULA"
-  }
-}
-
-:A: -- (UUC1.1.1)
 
 @enduml
