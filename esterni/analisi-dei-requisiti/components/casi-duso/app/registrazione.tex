@@ -23,43 +23,18 @@
         \end{enumerate}
 \end{description}
 
-
-\subsubsection{UUC1.1: Visualizzazione EULA}%
+\subsubsection{UUC1.1: Conferma EULA}%
 \label{subs:UUC1.1}
 \begin{description}
   \item[Caso d’uso:] UUC1.1;
-  \item[Titolo:] Visualizzazione EULA\@;
-  \item[Attori primari:] utente non autenticato;
-  \item[Precondizione:] l'utente è all'interno della schermata di registrazione;
-  \item[Postcondizione:] l'utente visualizza il EULA\@;
-  \item[Scenario principale:]
-        \begin{enumerate}
-          \item l'utente visualizza una schermata con tutti i vincoli da accettare presenti nel EULA\@.
-        \end{enumerate}
-\end{description}
-
-
-
-\subsubsection{UUC1.1.1: Conferma EULA}%
-\label{subs:UUC1.1.1}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=100mm]{visualizza-eula.png}
-  \caption{UUC1.1: Visualizza EULA}%
-  \label{fig:uuc1.1}
-\end{figure}
-
-
-\begin{description}
-  \item[Caso d’uso:] UUC1.1.1;
   \item[Titolo:] Conferma EULA\@;
   \item[Attori primari:] utente non autenticato;
-  \item[Precondizione:] l'utente visualizza il EULA\@;
+  \item[Precondizione:] l'utente è all'interno della schermata di registrazione;
   \item[Postcondizione:] l'utente continua la registrazione in quanto ha accettato il EULA\@;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item E' presente un'opzione per accettare il EULA\@: in caso affermativo, la registrazione può andare avanti.
+          \item l'utente visualizza una schermata con tutti i vincoli da accettare presenti nel EULA\@.
+          \item è presente un'opzione per accettare il EULA\@: in caso affermativo, si può continuare con la registrazione.
         \end{enumerate}
 \end{description}
 
@@ -80,13 +55,13 @@
   \item[Precondizione:] il sistema deve rendere disponibile la pagina di registrazione;
   \item[Postcondizione:] l'utente ha inserito correttamente tutti i dati necessari alla registrazione;
   \item[Scenario principale:]
-  \begin{enumerate}
-    \item l'utente compila tutti i dati necessari alla registrazione.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente compila tutti i dati necessari alla registrazione.
+        \end{enumerate}
   \item[Estensioni:]
-  \begin{enumerate}
-    \item se i dati inseriti non sono validi, l'utente visualizzerà un errore~\ref{subs:UUC1.2.5}.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se i dati inseriti non sono validi, l'utente visualizzerà un errore~\ref{subs:UUC1.2.5}.
+        \end{enumerate}
 \end{description}
 
 
@@ -100,13 +75,13 @@
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire la email per la registrazione;
   \item[Postcondizione:] l'utente ha inserito la email in modo corretto;
   \item[Scenario principale:]
-  \begin{enumerate}
-    \item l'utente inserisce la propria email.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente inserisce la propria email.
+        \end{enumerate}
   \item[Estensioni:]
-  \begin{enumerate}
-    \item se la mail è scritta in una forma non corretta, verrà visualizzato un errore di email non valida~\ref{subs:UUC1.2.5}.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se la mail è scritta in una forma non corretta, verrà visualizzato un errore di email non valida~\ref{subs:UUC1.2.5}.
+        \end{enumerate}
 \end{description}
 
 
@@ -120,13 +95,13 @@
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire la password per la registrazione;
   \item[Postcondizione:] l'utente ha inserito la password in modo corretto;
   \item[Scenario principale:]
-  \begin{enumerate}
-    \item l'utente inserisce la propria password.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente inserisce la propria password.
+        \end{enumerate}
   \item[Estensioni:]
-  \begin{enumerate}
-    \item se la password non rispetta determinati vincoli, verrà visualizzato un errore di password non valida~\ref{subs:UUC1.2.5}.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se la password non rispetta determinati vincoli, verrà visualizzato un errore di password non valida~\ref{subs:UUC1.2.5}.
+        \end{enumerate}
 \end{description}
 
 
@@ -140,13 +115,13 @@
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire la password nuovamente per una conferma;
   \item[Postcondizione:] l'utente ha inserito la conferma della password in modo corretto;
   \item[Scenario principale:]
-  \begin{enumerate}
-    \item l'utente inserisce la password nuovamente per la conferma.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente inserisce la password nuovamente per la conferma.
+        \end{enumerate}
   \item[Estensioni:]
-  \begin{enumerate}
-    \item se la password inserita non è uguale a quella precedente, verrà visualizzato un errore di conferma password non valida~\ref{subs:UUC1.2.5}.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se la password inserita non è uguale a quella precedente, verrà visualizzato un errore di conferma password non valida~\ref{subs:UUC1.2.5}.
+        \end{enumerate}
 \end{description}
 
 
@@ -160,13 +135,13 @@
   \item[Precondizione:] il sistema deve rendere disponibile la schermata di registrazione riguardante i dati anagrafici;
   \item[Postcondizione:] l'utente ha inserito i dati anagrafici in modo corretto;
   \item[Scenario principale:]
-  \begin{enumerate}
-    \item l'utente inserisce i propri dati anagrafici.
-  \end{enumerate}
+        \begin{enumerate}
+          \item l'utente inserisce i propri dati anagrafici.
+        \end{enumerate}
   \item[Estensioni:]
-  \begin{enumerate}
-    \item se uno o più dati anagrafici inseriti non rispettano determinati vincoli, verrà visualizzato un errore~\ref{subs:UUC1.2.5}.
-  \end{enumerate}
+        \begin{enumerate}
+          \item se uno o più dati anagrafici inseriti non rispettano determinati vincoli, verrà visualizzato un errore~\ref{subs:UUC1.2.5}.
+        \end{enumerate}
 \end{description}
 
 
