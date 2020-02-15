@@ -5,12 +5,12 @@
 \begin{figure}[H]
   \centering
   \includegraphics[width=150mm]{gestione-lista-organizzazioni.png}
-  \caption{UUC4: Gestione lista organizzazioni}%
-  \label{fig:uuc4}
+  \caption{UUC3: Gestione lista organizzazioni}%
+  \label{fig:UUC3}
 \end{figure}
 
 \begin{description}
-  \item[Caso d’uso:] UUC4;
+  \item[Caso d’uso:] UUC3;
   \item[Titolo:] Gestione lista organizzazioni;
   \item[Attori primari:] utente autenticato;
   \item[Attori secondari:] server LDAP\@;
@@ -22,16 +22,16 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item in caso di rete mancante, non possono essere eseguite queste operazioni e quindi verrà notificato un errore~\ref{subs:UUC12};
-          \item in caso l'organizzazione sia privata, è richiesta l'autenticazione da parte dell'utente~\ref{subs:UUC4.3}.
+          \item in caso di rete mancante, non possono essere eseguite queste operazioni e quindi verrà notificato un errore~\ref{subs:UUC11};
+          \item in caso l'organizzazione sia privata, è richiesta l'autenticazione da parte dell'utente~\ref{subs:UUC3.3}.
         \end{enumerate}
 \end{description}
 
 
-\subsubsection{UUC4.1: Aggiornamento lista organizzazioni}%
-\label{subs:UUC4.1}
+\subsubsection{UUC3.1: Aggiornamento lista organizzazioni}%
+\label{subs:UUC3.1}
 \begin{description}
-  \item[Caso d’uso:] UUC4.1;
+  \item[Caso d’uso:] UUC3.1;
   \item[Titolo:] Aggiornamento lista organizzazioni;
   \item[Attori primari:] utente autenticato;
   \item[Precondizione:] l'utente visualizza la lista delle organizzazioni;
@@ -42,15 +42,15 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item in caso di rete mancante, non può essere eseguito l'aggiornamento della lista di organizzazioni e quindi verrà notificato un errore~\ref{subs:UUC12}.
+          \item in caso di rete mancante, non può essere eseguito l'aggiornamento della lista di organizzazioni e quindi verrà notificato un errore~\ref{subs:UUC11}.
         \end{enumerate}
 \end{description}
 
 
-\subsubsection{UUC4.2: Seleziona organizzazioni}%
-\label{subs:UUC4.2}
+\subsubsection{UUC3.2: Seleziona organizzazioni}%
+\label{subs:UUC3.2}
 \begin{description}
-  \item[Caso d’uso:] UUC4.2;
+  \item[Caso d’uso:] UUC3.2;
   \item[Titolo:] Seleziona organizzazioni;
   \item[Attori primari:] utente autenticato;
   \item[Precondizione:] l'utente visualizza la lista delle organizzazioni;
@@ -61,23 +61,23 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item in caso di rete mancante, non possono essere selezionate organizzazioni e quindi verrà notificato un errore~\ref{subs:UUC12};
-          \item in caso l'organizzazione alla quale l'utente vuole autenticarsi sia privata, è richiesta l'autenticazione~\ref{subs:UUC4.3}.
+          \item in caso di rete mancante, non possono essere selezionate organizzazioni e quindi verrà notificato un errore~\ref{subs:UUC11};
+          \item in caso l'organizzazione alla quale l'utente vuole autenticarsi sia privata, è richiesta l'autenticazione~\ref{subs:UUC3.3}.
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC4.3: Autenticazione LDAP organizzazione}%
-\label{subs:UUC4.3}
+\subsubsection{UUC3.3: Autenticazione LDAP organizzazione}%
+\label{subs:UUC3.3}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=150mm]{autenticazione-ldap-organizzazione.png}
-  \caption{UUC4.3: Autenticazione LDAP organizzazione}%
-  \label{fig:uuc4.3}
+  \caption{UUC3.3: Autenticazione LDAP organizzazione}%
+  \label{fig:UUC3.3}
 \end{figure}
 
 \begin{description}
-  \item[Caso d’uso:] UUC4.3;
+  \item[Caso d’uso:] UUC3.3;
   \item[Titolo:] Autenticazione organizzazione;
   \item[Attori primari:] utente autenticato;
   \item[Attori secondari:] server LDAP\@;
@@ -90,14 +90,14 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se le credenziali inserite dall'utente non corrispondono a quelle dell'organizzazione, allora visualizzerà un errore~\ref{subs:UUC4.3.3}.
+          \item se le credenziali inserite dall'utente non corrispondono a quelle dell'organizzazione, allora visualizzerà un errore~\ref{subs:UUC3.3.3}.
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC4.3.1: Inserimento username organizzazione}%
-\label{subs:UUC4.3.1}
+\subsubsection{UUC3.3.1: Inserimento username organizzazione}%
+\label{subs:UUC3.3.1}
 \begin{description}
-  \item[Caso d’uso:] UUC4.3.1;
+  \item[Caso d’uso:] UUC3.3.1;
   \item[Titolo:] Inserimento username organizzazione;
   \item[Attori primari:] utente autenticato;
   \item[Precondizione:] l'utente non ha ancora inserito lo username dell'organizzazione;
@@ -108,14 +108,14 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se lo username inserito dall'utente non corrisponde a quello dell'organizzazione, allora visualizzerà un errore~\ref{subs:UUC4.3.3}.
+          \item se lo username inserito dall'utente non corrisponde a quello dell'organizzazione, allora visualizzerà un errore~\ref{subs:UUC3.3.3}.
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC4.3.2: Inserimento password organizzazione}%
-\label{subs:UUC4.3.2}
+\subsubsection{UUC3.3.2: Inserimento password organizzazione}%
+\label{subs:UUC3.3.2}
 \begin{description}
-  \item[Caso d’uso:] UUC4.3.2;
+  \item[Caso d’uso:] UUC3.3.2;
   \item[Titolo:] Inserimento password organizzazione;
   \item[Attori primari:] utente autenticato;
   \item[Precondizione:] l'utente non ha ancora inserito la password dell'organizzazione;
@@ -126,14 +126,14 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se la password inserita dall'utente non corrisponde a quella dell'organizzazione, allora visualizzerà un errore~\ref{subs:UUC4.3.3}.
+          \item se la password inserita dall'utente non corrisponde a quella dell'organizzazione, allora visualizzerà un errore~\ref{subs:UUC3.3.3}.
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC4.3.3: Visualizzazione errore autenticazione LDAP}%
-\label{subs:UUC4.3.3}
+\subsubsection{UUC3.3.3: Visualizzazione errore autenticazione LDAP}%
+\label{subs:UUC3.3.3}
 \begin{description}
-  \item[Caso d’uso:] UUC4.3.3;
+  \item[Caso d’uso:] UUC3.3.3;
   \item[Titolo:] Visualizzazione errore autenticazione LDAP\@;
   \item[Attori primari:] utente autenticato;
   \item[Precondizione:] i dati forniti dall'utente non corrispondono a credenziali valide;

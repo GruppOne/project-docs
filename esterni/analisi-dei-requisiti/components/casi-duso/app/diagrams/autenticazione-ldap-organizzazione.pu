@@ -5,16 +5,16 @@ actor :utente autenticato: as A
 
 rectangle {
   together {
-    usecase (UUC4.3.1) as "UUC4.3.1\nInserimento username\norganizzazione\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
-    usecase (UUC4.3.2) as "UUC4.3.2\nInserimento password\norganizzazione\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
-    usecase (UUC4.3.3) as "UUC4.3.3\nInformazioni autenticazione non valide"
+    usecase (UUC3.3.1) as "UUC3.3.1\nInserimento username\norganizzazione\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
+    usecase (UUC3.3.2) as "UUC3.3.2\nInserimento password\norganizzazione\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
+    usecase (UUC3.3.3) as "UUC3.3.3\nInformazioni autenticazione non valide"
   }
 }
 
-:A: -- (UUC4.3.1)
-:A: -- (UUC4.3.2)
+:A: -- (UUC3.3.1)
+:A: -- (UUC3.3.2)
 
-(UUC4.3.1) <.left. (UUC4.3.3) : <<extends>>
-(UUC4.3.3) .left.> (UUC4.3.2) : <<extends>>
+(UUC3.3.1) <.left. (UUC3.3.3) : <<extends>>
+(UUC3.3.3) .left.> (UUC3.3.2) : <<extends>>
 
 @enduml
