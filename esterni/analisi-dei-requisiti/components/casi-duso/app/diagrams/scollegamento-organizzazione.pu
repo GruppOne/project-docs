@@ -1,12 +1,12 @@
 @startuml scollegamento-organizzazione
 !include ../../../../../../commons/style/use-cases.pu
 
-actor :utente collegato: as A3
+actor :utente autenticato: as A3
 
 rectangle {
   together {
-    usecase (UUC4) as "UUC4\nRecupero lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\nselezionamento di un'organizzazione\n con rete mancante"
-    usecase (UUC6.1) as "UUC6.1\nFiltra organizzazioni \ncollegato"
+    usecase (UUC4) as "UUC4\nGestione lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\nselezionamento di un'organizzazione\n con rete mancante"
+    usecase (UUC6.1) as "UUC6.1\nFiltra organizzazioni \ncollegate"
     usecase (UUC12) as "UUC.nd\nVisualizzazione errore\nrete mancante"
   }
 }
