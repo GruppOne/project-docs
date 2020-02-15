@@ -2,7 +2,6 @@
 !include ../../../../../../commons/style/use-cases.pu
 
 actor :utente autenticato: as A
-actor :server LDAP: as B
 
 rectangle {
   together {
@@ -14,11 +13,8 @@ rectangle {
 
 :A: -- (UUC4.3.1)
 :A: -- (UUC4.3.2)
-(UUC4.3.1) -- :B:
-(UUC4.3.2) -- :B:
 
 (UUC4.3.1) <.left. (UUC4.3.3) : <<extends>>
 (UUC4.3.3) .left.> (UUC4.3.2) : <<extends>>
-
 
 @enduml

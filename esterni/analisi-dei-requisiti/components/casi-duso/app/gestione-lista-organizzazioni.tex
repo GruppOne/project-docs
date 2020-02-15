@@ -13,6 +13,7 @@
   \item[Caso d’uso:] UUC4;
   \item[Titolo:] Gestione lista organizzazioni;
   \item[Attori primari:] utente autenticato;
+  \item[Attori secondari:] server LDAP\@;
   \item[Precondizione:] l'utente visualizza la pagina relativa al recupero delle organizzazioni;
   \item[Postcondizione:] l'utente seleziona una o più organizzazioni;
   \item[Scenario principale:]
@@ -65,6 +66,9 @@
         \end{enumerate}
 \end{description}
 
+\subsubsection{UUC4.3: Autenticazione LDAP organizzazione}%
+\label{subs:UUC4.3}
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=150mm]{autenticazione-ldap-organizzazione.png}
@@ -72,8 +76,6 @@
   \label{fig:uuc4.3}
 \end{figure}
 
-\subsubsection{UUC4.3: Autenticazione LDAP organizzazione}%
-\label{subs:UUC4.3}
 \begin{description}
   \item[Caso d’uso:] UUC4.3;
   \item[Titolo:] Autenticazione organizzazione;
@@ -98,7 +100,6 @@
   \item[Caso d’uso:] UUC4.3.1;
   \item[Titolo:] Inserimento username organizzazione;
   \item[Attori primari:] utente autenticato;
-  \item[Attori secondari:] server LDAP\@;
   \item[Precondizione:] l'utente non ha ancora inserito lo username dell'organizzazione;
   \item[Postcondizione:] l'utente ha inserito lo username dell'organizzazione;
   \item[Scenario principale:]
@@ -117,7 +118,6 @@
   \item[Caso d’uso:] UUC4.3.2;
   \item[Titolo:] Inserimento password organizzazione;
   \item[Attori primari:] utente autenticato;
-  \item[Attori secondari:] server LDAP\@;
   \item[Precondizione:] l'utente non ha ancora inserito la password dell'organizzazione;
   \item[Postcondizione:] l'utente ha inserito la password dell'organizzazione;
   \item[Scenario principale:]
@@ -136,7 +136,6 @@
   \item[Caso d’uso:] UUC4.3.3;
   \item[Titolo:] Visualizzazione errore autenticazione LDAP\@;
   \item[Attori primari:] utente autenticato;
-  \item[Attori secondari:] server LDAP\@;
   \item[Precondizione:] i dati forniti dall'utente non corrispondono a credenziali valide;
   \item[Postcondizione:] l'applicazione mobile comunica all'utente il fallimento dell'autenticazione;
   \item[Scenario principale:]
