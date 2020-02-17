@@ -16,6 +16,11 @@ La presente sezione ha lo scopo di descrivere in maniera dettagliata, attraverso
   \label{fig:usersapp}
 \end{figure}
 
+Un utente che accede per la prima volta all'applicazione mobile non è autenticato, quindi per accedere al sistema di Stalker inserisce le
+credenziali per diventare un utente autenticato.
+Successivamente a questo passaggio, l'utente può essere non collegato se non ha provveduto a collegarsi ad alcuna organizzazione, in caso contrario
+è un utente autenticato che, in base all'organizzazione alla quale è collegato, può essere noto (con annessa autenticazione LDAP) oppure incognito.
+
 \subsubsection{Web application}%
 \label{subs:web_application}
 
@@ -25,5 +30,15 @@ La presente sezione ha lo scopo di descrivere in maniera dettagliata, attraverso
   \caption{Utenti web application}%
   \label{fig:usersweb}
 \end{figure}
+
+Un utente che accede per la prima volta alla web application non è autenticato, quindi per accedere alla zona amministrativa di Stalker inserisce le
+credenziali per diventare un utente autenticato.
+Successivamente a questo passaggio, in base al tipo di privilegi l'utente può essere:
+\begin{description}
+  \item[visualizzatore]: visualizza determinate organizzazioni e i relativi luoghi, non ha permessi di modifica;
+  \item[gestore]: gestisce i luoghi di una o più organizzazioni;
+  \item[owner]: crea una o più organizzazioni, identificando i suoi gestori e visualizzatori.
+\end{description}
+L'amministratore assume tutti i privilegi che il sistema può offrire, gestendo tutte le organizzazioni e i relativi owner, gestori e visualizzatori.
 
 \end{document}
