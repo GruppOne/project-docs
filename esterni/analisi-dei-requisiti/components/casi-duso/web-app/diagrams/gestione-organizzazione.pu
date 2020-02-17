@@ -6,7 +6,6 @@ actor :owner: as O
 
 rectangle {
     together {
-        usecase (AUC3.5) as "AUC3.5\nInvio richiesta aggiornamento\nlista organizzazioni"
         usecase (AUC3.4) as "AUC3.4\nSeleziona organizzazione"
         usecase (AUC3.3) as "AUC3.3\nModifica organizzazione"
         usecase (AUC3.2) as "AUC3.2\nEliminazione organizzazione"
@@ -15,14 +14,10 @@ rectangle {
   }
 
 :O: -- AUC3.1
-:G: -- AUC3.2
-:G: -- AUC3.3
+:G: -- AUC3.4
 
-(AUC3.4) <.up. (AUC3.2) : <<include>>
-(AUC3.4) <.up. (AUC3.3) : <<include>>
-
-(AUC3.5) <.up. (AUC3.1) : <<include>>
-(AUC3.5) <.up. (AUC3.2) : <<include>>
+(AUC3.2) .up.> (AUC3.4) : <<extends>>
+(AUC3.3) .up.> (AUC3.4) : <<extends>>
 
 @enduml
 

@@ -40,12 +40,7 @@
   \item[Postcondizione:] l'organizzazione viene creata;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item sorge la necessità di creare un'organizzazione;
-        \end{enumerate}
-  \item[Inclusioni:]
-        \begin{enumerate}
-          \item alla fine della procedura di creazione dell'organizzazione, tutte le applicazioni mobile riceveranno una notifica di aggiornamento
-                della lista di organizzazioni~\ref{subs:AUC3.5};
+          \item sorge la necessità di creare un'organizzazione.
         \end{enumerate}
 \end{description}
 
@@ -106,11 +101,6 @@
         \begin{enumerate}
           \item sorge la necessità di eliminare un'organizzazione;
         \end{enumerate}
-  \item[Inclusioni:]
-        \begin{enumerate}
-          \item viene selezionata un'organizzazione~\ref{subs:AUC3.4};
-          \item alla fine della procedura di eliminazione dell'organizzazione, tutte le applicazioni mobile riceveranno una notifica di aggiornamento della lista di organizzazioni~\ref{subs:AUC3.5};
-        \end{enumerate}
 \end{description}
 
 \begin{figure}[H]
@@ -154,10 +144,6 @@
   \item[Scenario principale:]
         \begin{enumerate}
           \item sorge la necessità di modificare un'organizzazione.
-        \end{enumerate}
-  \item[Inclusioni:]
-        \begin{enumerate}
-          \item viene scelta un'organizzazione~\ref{subs:AUC3.4}.
         \end{enumerate}
 \end{description}
 
@@ -217,19 +203,10 @@
         \begin{enumerate}
           \item sorge la necessità di effettuare operazioni su un'organizzazione, e viene offerta la possibilità di selezionarla.
         \end{enumerate}
-\end{description}
-
-\subsubsection{AUC3.5: Invio richiesta aggiornamento lista organizzazioni}%
-\label{subs:AUC3.5}
-\begin{description}
-  \item[Codice:] AUC3.5;
-  \item[Titolo:] Invio richiesta aggiornamento lista organizzazioni;
-  \item[Attori primari:] gestore;
-  \item[Precondizione:] il sistema mostra la pagina di creazione o eliminazione di un'organizzazione;
-  \item[Postcondizione:] la richiesta di aggiornamento della lista delle organizzazioni viene inviata a tutte le applicazioni mobile;
-  \item[Scenario principale:]
+  \item[Estensioni:]
         \begin{enumerate}
-          \item una volta creata o eliminata un'organizzazione, la lista delle organizzazioni viene aggiornata e inviata a tutti gli utenti che hanno installato l'applicazione mobile.
+          \item elimina un'organizzazione~\ref{subs:AUC3.2};
+          \item modifica un'organizzazione~\ref{subs:AUC3.3};
         \end{enumerate}
 \end{description}
 
