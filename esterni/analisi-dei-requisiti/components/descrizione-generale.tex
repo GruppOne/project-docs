@@ -10,23 +10,28 @@ di un'\glossario{applicazione mobile} per l'utente finale che gli permetta di es
 
 \subsection{Funzionalità del prodotto}%
 \label{sub:funzionalita_del_prodotto}
-Le funzionalità che sono offerte dall'applicazione mobile sono:
+Il sistema di Stalker deve tracciare tutti gli utenti che sono all'interno di specifici luoghi definiti dalle organizzazioni registrate in Stalker.
+Affinchè questo venga garantito, deve essere presente un server che offra la possibilità di:
 \begin{itemize}
-  \item collegamento ad un’organizzazione;
-  \item recupero della lista delle organizzazioni;
-  \item predisposizione di un pulsante “anonimo” che permetta, all’interno di una organizzazione, di risultare presente in maniera anonima;
-  \item storico degli accessi;
-  \item visualizzazione in tempo reale della propria presenza o meno all’interno di un luogo monitorato e cronometro del tempo trascorso al suo interno.
-\end{itemize}
-
-Le funzionalità che, invece, sono offerte dal server sono:
-\begin{itemize}
-  \item creare e gestire più organizzazioni;
-  \item definire se prevedere una \glossario{tracciatura} nota oppure incognita;
+  \item creare e gestire più organizzazioni, privilegio concesso ad un sottoinsieme degli utenti utilizzatori della web application;
+  \item definire se prevedere una \glossario{tracciatura} nota oppure incognita, al momento della creazione dell'organizzazione;
   \item solo in presenza di autorizzazione specifica, effettuare query di monitoraggio per singolo utente all’interno delle organizzazioni.
 \end{itemize}
+
+Per gli utenti che vogliono usufruire del servizio messo a disposizione dal sistema di Stalker, gli utenti devono installare l'applicazione mobile
+e, una volta effettuata la registrazione, hanno la possibilità di:
+\begin{itemize}
+  \item recuperare la lista delle organizzazioni registrate in Stalker;
+  \item collegarsi ad un'organizzazione;
+  \item utilizzare un pulsante “anonimo” che permetta, all’interno di una organizzazione privata, di risultare presente in maniera anonima;
+  \item visualizzare il proprio storico degli accessi;
+  \item visualizzare in tempo reale la propria presenza o meno all’interno di un luogo monitorato e il cronometro del tempo trascorso al suo interno.
+\end{itemize}
+Al momento della registrazione, l'utente deve accettare le condizioni del sistema di Stalker, che prevedono il consenso di tracciare
+ogni singolo utente registrato al momento del collegamento ad un'organizzazione.
 Le comunicazioni tra applicazione mobile e server avvengono solo al momento d'ingresso ed uscita dai luoghi designati dalle organizzazioni, al fine di garantire
 la privacy dell'utente.
+
 
 
 \subsection{Caratteristiche degli utenti}%
@@ -35,7 +40,7 @@ Nell'ambito di questo progetto, sono presenti due tipologie generiche di utenti,
 \begin{description}
   \item[Super utente:] è l'utente che detiene dei privilegi avanzati per l'uso della web application, diversi per ogni sottocategoria di super utente;
   \item[Utente generico:] è l'utente utilizzatore dell'applicazione mobile. Può essere un dipendente di un'azienda che monitora la sua presenza, oppure
-  un visitatore di un evento pubblico.
+        un visitatore di un evento pubblico.
 \end{description}
 Le due tipologie di utenti sono descritte nel dettaglio al capitolo 3, sezione~\ref{sub:attori_casi_duso}.
 
@@ -54,7 +59,7 @@ Lo sviluppo \glossario{front-end} sarà costituito:
 \begin{itemize}
   \item dalla web application, raggiungibile da qualunque utente (anche generico), per eseguire determinate operazioni in base al tipo di privilegi;
   \item dall'applicazione mobile, scaricabile da ogni utente interessato all'utilizzo del prodotto, che consente di visualizzare le informazioni d'interesse ed eseguire determinate
-  operazioni in presenza di rete.
+        operazioni in presenza di rete.
 \end{itemize}
 
 
