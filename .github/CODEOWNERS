@@ -1,3 +1,5 @@
+# in caso di glob sovrapposti, ha precedenza quello definito per ultimo (più in basso nel file)
+
 # ------------------------------------------ #
 # Verificatori assegnati alla configurazione #
 # ------------------------------------------ #
@@ -14,9 +16,9 @@
 # template, configurazione e file comuni di documenti LaTex
 /commons/ @RiccardoAgatea
 
-# ----------------------------------------------- #
-# Verificatori e Redattori assegnati ai documenti #
-# ----------------------------------------------- #
+# ------------------------------------------------------ #
+# Verificatori e Redattori assegnati ai documenti pre RR #
+# ------------------------------------------------------ #
 
 /esterni/analisi-dei-requisiti/ @TobiaApolloni @erclu
 # Redattori:
@@ -38,10 +40,14 @@
 # Redattori:
 # Alberto Cocco, Luca Ercole
 
-/interni/studio-di-fattibilita/ @RiccardoAgatea @erclu
+/esterni/verbali/ @TobiaApolloni @erclu
+/interni/verbali/ @TobiaApolloni @erclu
 # Redattori:
-# Riccardo Agatea, Tobia Apolloni, Riccardo Cestaro, Alberto Cocco, Alberto Gobbo, Alessandro Rizzo, Fabio Scettro
+# indicati nel rispettivo verbale
 
-/interni/verbali/ @TobiaApolloni @RiccardoCestaro
-# Redattori:
-# Riccardo Agatea, Luca Ercole
+# ------------------------------------------------------ #
+# Verificatori e Redattori assegnati ai documenti pre RP #
+# ------------------------------------------------------ #
+
+/interni/ @TobiaApolloni @fabioscettro
+/esterni/ @TobiaApolloni @fabioscettro
