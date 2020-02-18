@@ -1,18 +1,3 @@
-@startuml eliminazione-account-wa
-!include ../../../../../../commons/style/use-cases.pu
-
-actor :amministratore: as A
-
-rectangle {
-  together {
-    usecase (AUC13.1) as "AUC13.1\nSeleziona account"
-  }
-}
-
-:A: -- AUC13.1
-
-@enduml
-
 
 @startuml eliminazione-account-wa-conferma
 !include ../../../../../../commons/style/use-cases.pu
@@ -21,10 +6,10 @@ actor :amministratore: as A
 
 rectangle {
   together {
-    usecase (AUC13.1.1) as "AUC13.1.1\nConferma eliminazione account"
+    usecase (AUC13.1) as "AUC13.1\nConferma eliminazione account"
   }
 }
 
-:A: -- AUC13.1.1
+:A: -- AUC13.1
 
 @enduml
