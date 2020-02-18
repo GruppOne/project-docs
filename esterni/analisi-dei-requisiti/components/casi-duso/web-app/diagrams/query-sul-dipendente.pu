@@ -11,6 +11,6 @@ rectangle {
 }
 
 :A: -- AUC6.1
-(AUC6.2) .up.> (AUC6.1) : <<extends>>
+:A: -- AUC6.2
 
 @enduml
