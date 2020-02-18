@@ -25,9 +25,9 @@
 \newlength{\imgwidth}
 
 \newcommand\scalegraphics[1]{%
-    \settowidth{\imgwidth}{\includegraphics{#1}}%
-    \setlength{\imgwidth}{\minof{\imgwidth}{\textwidth}}%
-    \includegraphics[width=\imgwidth]{#1}%
+  \settowidth{\imgwidth}{\includegraphics{#1}}%
+  \setlength{\imgwidth}{\minof{\imgwidth}{\textwidth}}%
+  \includegraphics[width=\imgwidth]{#1}%
 }
 
 % XXX definizione dei percorsi in cui cercare immagini
@@ -100,11 +100,6 @@
   \newcommand{\@uso}{#1}%
 }
 \newcommand{\uso}{\@uso}
-
-\newcommand{\setStato}[1]{%
-  \newcommand{\@stato}{#1}%
-}
-\newcommand{\stato}{\@stato}
 
 \newcommand{\setVersione}[1]{%
   \newcommand{\@versione}{#1}%
