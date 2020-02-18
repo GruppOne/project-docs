@@ -4,8 +4,8 @@
 actor :gestore: as G
 
 rectangle {
+  usecase (AUC4.1) as "AUC4.1\nAggiungi luogo"
   together {
-    usecase (AUC4.1) as "AUC4.1\nAggiungi luogo"
     usecase (AUC4.2) as "AUC4.2\nEliminazione luogo"
     usecase (AUC4.3) as "AUC4.3\nModifica luogo"
   }
@@ -13,11 +13,10 @@ rectangle {
 }
 
 :G: -- AUC4.1
-:G: -- AUC4.2
-:G: -- AUC4.3
+:G: -- AUC4.4
 
-(AUC4.4) <.up. (AUC4.2) : <<include>>
-(AUC4.4) <.up. (AUC4.3) : <<include>>
+(AUC4.2) .up.> (AUC4.4) : <<extends>>
+(AUC4.3) .up.> (AUC4.4) : <<extends>>
 
 @enduml
 
