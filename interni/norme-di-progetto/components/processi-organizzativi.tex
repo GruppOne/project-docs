@@ -9,7 +9,7 @@ I processi organizzativi stabiliscono le attività interne che il team deve svol
 Rivestono un ruolo fondamentale in quanto permettono di gestire la suddivisione dei ruoli e coordinare i membri del gruppo.
 Essi sono trasversali rispetto ai singoli progetti.
 
-Le attività coinvolte dai processi organizzativi sono:
+I principali processi organizzativi sono:
 
 \begin{itemize}
   \item Gestione dei processi
@@ -22,22 +22,31 @@ Le attività coinvolte dai processi organizzativi sono:
 \subsection{Gestione dei rischi}%
 \label{sub:gestione_dei_rischi}
 
-\subsubsection{Classificazione dei rischi}%
-\label{subs:classificazione_dei_rischi}
+\subsubsection{Finalità}%
+\label{subs:gestione_dei_rischi/finalita}
+Lo scopo del processo di gestione dei rischi è
+\begin{itemize}
+	\item Individuare i principali rischi associati alle attività degli altri processi
+	\item Classificare i rischi individuati per attribuire loro una priorità
+	\item Identificare dei metodi di prevenzione dei rischi
+	\item Effettuare continui monitoraggi sui processi durante l'andamento del progetto 
+	\item Stabilire, per ciascun rischio, delle strategie di contenimento che possano ridurre gli effetti negativi provocati dall'eventuale verificarsi del rischio.
+\end{itemize}
+
+\subsubsection{Attività}%
+\label{subs:attivita}
 La gestione dei rischi consiste nel prevedere i rischi che potrebbero influire negativamente su alcune attività del ciclo di vita del software, danneggiando i risultati o la qualità del prodotto intermedio.
-Questo paragrafo ha lo scopo di presentare i potenziali rischi all'interno di un progetto, mentre l'attività di analisi dei rischi è descritta dettagliatamente nel \glossario{Piano di progetto}.
-Si parla di attività di analisi dei rischi dato che la gestione dei rischi potrebbe essere intesa come un vero e proprio processo, in quanto racchiude molteplici attività. La gestione dei rischi si divide in diverse fasi:
+La gestione dei rischi raggruppa diverse attività:
 
 \begin{description}
-  \item [Identificazione dei rischi] si identificano i rischi per il progetto e il prodotto.
+  \item [Classificazione dei rischi] si identificano e si classificano i rischi per il progetto e il prodotto.
   \item [Analisi dei rischi] si valutano le probabilità che si verifichino i rischi e si descrivono le conseguenze.
   \item [Pianificazione dei rischi] si presentano i piani per evitare i rischi e i rimedi per minimizzare gli effetti.
   \item [Monitoraggio dei rischi] si monitorano i rischi e si aggiornano incrementalmente i piani.
 \end{description}
 
-Analisi dei rischi e pianificazione dei rischi saranno trattate nel \textit{Piano di progetto} mentre in questo paragrafo ci si occuperà dell'attività di identificazione dei rischi.
-Una prima classificazione dei rischi distingue:
-
+\paragraph{Classificazione dei rischi}%
+\label{par:classificazione_dei_rischi}
 \begin{description}
   \item [Rischi per il progetto] influiscono sui tempi di realizzazione del progetto. L'assenza di un componente del gruppo per un lungo periodo di tempo potrebbe condizionare la pianificazione di progetto e potrebbe allungare i tempi di consegna.
   \item [Rischi per il prodotto] influiscono sulla qualità del prodotto. L'utilizzo di algoritmi e procedure non ottimizzate potrebbe peggiorare le prestazioni del sistema e influire negativamente sulla qualità del prodotto.
@@ -49,6 +58,57 @@ Essendo la classificazione soprastante troppo generica, GruppOne ha individuato 
   \item [Rischi tecnologici] riguardano i software e l'hardware utilizzato per sviluppare il sistema. Un esempio potrebbe essere la mancanza di alcune feature nei software scelti per lo sviluppo del prodotto.
   \item [Rischi degli strumenti] riguardano i software di supporto impiegati. Un esempio potrebbe essere la presenza di un bug in uno strumento e la necessità di risolverlo.
 \end{description}
+
+\paragraph{Analisi e pianificazione dei rischi}%
+\label{par:analisi_e_pianificazione_dei_rischi}
+
+L'attività di analisi dei rischi descrive e valuta i rischi individuati durante un progetto software per facilitarne il successivo monitoraggio. Per ogni rischio si individuano:
+\begin{description}
+	\item[Nome del rischio]: è il nome del rischio che si sta descrivendo.
+	\item[Codice del rischio]: è un codice univoco che ha lo scopo di identificare precisamente il rischio che si sta esaminando.
+	\item[Descrizione del rischio]: fornisce una breve descrizione delle condizioni nelle quali il rischio potrebbe verificarsi e di quali siano le probabili conseguenze.
+	\item[Monitoraggio]: propone tecniche di prevenzione dei rischi o di contenimento dei loro effetti negativi.
+	\item[Probabilità]: è un indicatore che misura la probabilità di verificarsi di un rischio.
+	\item[Impatto]: è un indicatore che quantifica l'impatto di un rischio sull'andamento del progetto.
+\end{description}
+
+\subsubsection{Metodi di classificazione dei rischi}%
+\label{subs:metodi_di_classificazione_dei_rischi}
+
+\paragraph{Codifica dei rischi}%
+\label{par:codifica_dei_rischi}
+
+Per identificare i rischi senza alcun fraintendimento, il team ha deciso di introdurre dei codici che possano identificarli univocamente.
+Ogni rischio ha un codice così costituito:
+\begin{center}
+	\textbf{RI[Tipo][Codice]}
+\end{center}
+dove il tipo può essere uno tra i seguenti:
+\begin{description}
+	\item [PRG]: identifica un rischio di progetto.
+	\item [PRD]: identifica un rischio di prodotto.
+	\item [REQ]: identifica un rischio dei requisiti.
+	\item [PER]: identifica un rischio del personale.
+	\item [TEC]: identifica un rischio tecnologico.
+	\item [STR]: identifica un rischio di strumento.
+\end{description}
+mentre il codice è un numero progressivo a tre cifre. Ad esempio il primo rischio di prodotto si identifica con \textit{RIPRD001}.
+
+\paragraph{Indicatori}%
+\label{par:indicatori}
+
+Gli indicatori sono utili per quantificare la pericolosità e i danni che un rischio può potenzialmente arrecare. Per l'analisi dei rischi si utilizzano probabilità e impatto. La probabilità, che misura il grado di possibilità di verificarsi di un rischio può assumere i seguenti valori:
+\begin{itemize}
+	\item Bassa
+	\item Media
+	\item Alta
+\end{itemize}
+L'impatto, invece, indica il tipo di effetto che l'attuarsi del rischio può avere sull'andamento del progetto. Può essere:
+\begin{itemize}
+	\item Basso
+	\item Tollerabile
+	\item Significativo
+\end{itemize}
 
 \subsubsection{Metriche}%
 \label{subs:gestione_dei_rischi/metriche}
