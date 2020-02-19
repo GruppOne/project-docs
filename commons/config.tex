@@ -67,15 +67,15 @@
 }
 
 % setup di header e footer
-\pagestyle{fancy}
-
-\fancyhf{}
-\fancyhead[L]{\includegraphics[width=1cm]{logo.png}}
-\fancyhead[R]{\thetitle}
-\fancyfoot[R]{\thepage\ di~\pageref{LastPage}}
+\fancypagestyle{usual}{%
+  \fancyhf{}%
+  \fancyhead[L]{\includegraphics[width=1cm]{logo.png}}%
+  \fancyfoot[R]{\thepage\ di~\pageref{LastPage}}%
+}
 
 \fancypagestyle{nopage}{%
-  \fancyfoot{}%
+\fancyhf{}%
+\fancyhead[L]{\includegraphics[width=1cm]{logo.png}}%
 }
 
 \setlength{\headheight}{1.2cm}
