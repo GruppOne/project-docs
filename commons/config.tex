@@ -131,5 +131,23 @@
 }
 
 \newcommand{\modifiche}{\@modifiche}
-
 \makeatother
+
+% comandi per rendere opzionale gli elenchi di figure e tabelle
+\newcommand{\elencoFigure}{}
+
+\newcommand{\figureSi}{%
+  \renewcommand{\elencoFigure}{%
+    \renewcommand{\listfigurename}{Elenco delle figure}%
+    \listoffigures%
+  }%
+}
+
+\newcommand{\elencoTabelle}{}
+
+\newcommand{\tabelleSi}{%
+  \renewcommand{\elencoTabelle}{%
+    \renewcommand{\listtablename}{Elenco delle tabelle}%
+    \listoftables%
+  }%
+}
