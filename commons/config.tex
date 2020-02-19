@@ -74,8 +74,8 @@
 }
 
 \fancypagestyle{nopage}{%
-\fancyhf{}%
-\fancyhead[L]{\includegraphics[width=1cm]{logo.png}}%
+  \fancyhf{}%
+  \fancyhead[L]{\includegraphics[width=1cm]{logo.png}}%
 }
 
 \setlength{\headheight}{1.2cm}
@@ -134,20 +134,20 @@
 \makeatother
 
 % comandi per rendere opzionale gli elenchi di figure e tabelle
-\newcommand{\elencoFigure}{}
-
-\newcommand{\figureSi}{%
-  \renewcommand{\elencoFigure}{%
-    \renewcommand{\listfigurename}{Elenco delle figure}%
-    \listoffigures%
-  }%
+\newcommand{\elencoFigure}{%
+  \renewcommand{\listfigurename}{Elenco delle figure}%
+  \listoffigures%
 }
 
-\newcommand{\elencoTabelle}{}
+\newcommand{\disabilitaElencoFigure}{%
+  \renewcommand{\elencoFigure}{}%
+}
 
-\newcommand{\tabelleSi}{%
-  \renewcommand{\elencoTabelle}{%
-    \renewcommand{\listtablename}{Elenco delle tabelle}%
-    \listoftables%
-  }%
+\newcommand{\elencoTabelle}{%
+  \renewcommand{\listtablename}{Elenco delle tabelle}%
+  \listoftables%
+}
+
+\newcommand{\disabilitaElencoTabelle}{%
+  \renewcommand{\elencoTabelle}{}%
 }

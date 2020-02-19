@@ -53,7 +53,7 @@
     "-c",
     "%DIR%/",
     "%TMPFILE%",
-    "-y=defaultIndent: '2'"
+    "-y=defaultIndent: '  '"
   ],
   "spellright.documentTypes": [
     "diagram",
