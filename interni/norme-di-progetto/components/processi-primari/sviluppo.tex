@@ -211,16 +211,78 @@ Una classe, in UML, ha la sottostante rappresentazione:
           \item [\textasciitilde]: visibilità a livello di package
         \end{description}
   \item[Altre convenzioni]:
-        \begin{itemize}
-          \item I campi dati e i metodi statici devono essere sottolineati.
-          \item Utilizzare \textit{{abstract}} per indicare classi astratte.
-          \item Fare uso di \textit{<<interface>>} per indicare interfacce.
-          \item Il tipo delle variabili e il tipo di ritorno va posto dopo il nome della variabile o del metodo in questione. Ad esempio:
-                \begin{center}
-                  \textit{-field1: String} \\\textit{+method1: int}
-                \end{center}
-        \end{itemize}
+  \begin{itemize}
+    \item I campi dati e i metodi statici devono essere sottolineati.
+    \item Utilizzare \textit{{abstract}} per indicare classi astratte.
+    \item Fare uso di \textit{<<interface>>} per indicare interfacce.
+    \item Il tipo delle variabili e il tipo di ritorno va posto dopo il nome della variabile o del metodo in questione. Ad esempio:
+    \begin{center}
+        \textit{-field1: String} \\\textit{+method1: int}
+    \end{center}
+  \end{itemize}
+  \item [Relazioni]: una relazione di dipendenza indica una dipendenza logica presente tra due elementi del diagramma e si ha quando la modifica di un oggetto implica il cambiamento di un altro oggetto. Esistono molteplici tipi di dipendenze e ognuna induce differenti gradi di dipendenza tra gli oggetti.Compito del progettista sarà quello di minimizzare il numero di dipendenze, utilizzandole solo ove necessario al fine di attribuire un valore aggiunto al significato del proprio diagramma. Di seguito verranno elencate i tipi di relazioni di dipendenza possibili, ordinati per grado di dipendenza crescente.
+  \begin{description}
+    \item [Dipendenza]: la dipendenza può verificarsi in due casi:
+      \begin{itemize}
+        \item Una classe A ha un metodo che riceve in input un'istanza di B.
+        \item Una classe A crea un oggetto di tipo B.
+      \end{itemize}
+      Inoltre, per indicare il tipo di dipendenza useremo principalmente due parole chiave:
+      \begin{description}
+        \item [\textit{<<call>>}]: A invoca operazioni di B.
+        \item [\textit{<<create}]: A crea istanze di B.
+      \end{description}
+      La dipendenza si indica con una freccia tratteggiata come illustrato nell'immagine sottostante.
+      \begin{center}
+        \begin{minted} {text}
+          @startuml
+          left to right direction
+          class1 ..> class2
+          @enduml
+        \end{minted}
+      \end{center}
+    \item [Assocazione]: l'associazione si verifica quando un oggetto di classe A ha un campo dati di tipo B. L'associazione si indica con una linea continua come nell'immagine sottostante:
+    \begin{center}
+        \begin{minted} {text}
+          @startuml
+          left to right direction
+          class1 -- class2
+          @enduml
+        \end{minted}
+    \end{center}
+    \item [Aggregazione]: l'aggregazione prevede che una classe di tipo A crei esplicitamente tramite il proprio costruttore degli oggetti di tipo B. L'aggregazione si rappresenta tramite una linea continua e un diamante che sta graficamente dalla parte di chi crea la dipendenza. Ad esempio:
+    \begin{center}
+        \begin{minted} {text}
+          @startuml
+          left to right direction
+          class1 o-- class2
+          @enduml
+        \end{minted}
+    \end{center}
+    \item [Composizione]: la composizione è una forma di aggregazione più forte e si ha quando un oggetto di classe A gestisce completamente gli oggetti di tipo B. La composizione si rappresenta allo stesso modo dell'aggregazione, ma a differenza di quest`ultima il diamante è colorato di nero.
+    \begin{center}
+        \begin{minted} {text}
+          @startuml
+          left to right direction
+          class1 *-- class2
+          @enduml
+        \end{minted}
+    \end{center}
+    \item [Ereditarietà]: l'ereditarietà si ha quando un classe B deriva da una classe di tipo A. Ovviamente è preferibile ereditare da classi astratte o interfacce, mentre l'ereditarietà da tipi concreti sarebbe in ogni caso da evitare. Si rappresenta così:
+    \begin{center}
+        \begin{minted} {text}
+          @startuml
+          class1 <|-- class2
+          @enduml
+        \end{minted}
+    \end{center}
 \end{description}
+
+\subparagraph{diagrammi di package}%
+\label{subp:diagrammi_di_package}
+
+I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno stesso namespace.
+
 \subsubsection{Strumenti}%
 \label{subs:strumenti}
 
