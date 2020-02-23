@@ -276,13 +276,157 @@ Una classe, in UML, ha la sottostante rappresentazione:
           @enduml
         \end{minted}
     \end{center}
+  \end{description}
+  \item [Molteplicità]: la molteplicità è uno strumento che permette di specificare quanti oggetti posso fare parte dell'associazione. Ogni molteplicità è una sigla costituita da numeri e simboli. Elenchiamo quelle di cui i progettisti dovranno fare uso:
+  \begin{description}
+    \item [1]: una classe A ha una e una sola istanza di classe di B associata.
+    \item [0..1]: una classe A può avere zero o una istanze di classe B associata.
+    \item [0..*]: una classe A può avere zero o più istanza di classe B associata.
+    \item [*]: una classe A deve avere più istanze di B associate.
+  \end{description}
 \end{description}
 
 \subparagraph{diagrammi di package}%
 \label{subp:diagrammi_di_package}
 
-I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno stesso namespace.
+I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno stesso namespace. Hanno un'etichetta che identifica il nome, il quale deve essere in minuscolo e in inglese e possono contenere al loro interno altri sottopackage o classi. Inoltre le dipendenze tra package si indicano con frecce tratteggiate e dovrebbero tutte seguire la medesima direzione.
+\begin{center}
+  \begin{minted}{text}
+    @startuml
+    left to right direction
+    package package1 {
+      card class1
+      card class2
+    }
+    package package2 {
+      card class3
+      card class4
+    }
+    package1 ..> package2
+    @enduml
+ \end{minted}
+ \end{center}
+ \subparagraph{diagrammi delle attività}%
+ \label{diagrammi_delle_attivita}%
+ I diagrammi delle attività rappresentano l'insieme delle azioni che ne costituiscono il funzionamento. Un tipico diagramma delle attività in PlantUML è:
+ \begin{center}
+  \begin{minted}{text}
+    @startuml
+    (*) --> "Initialization"
 
+    if "Some Test" then
+      -->[true] "Some Activity"
+      --> "Another activity"
+      -right-> (*)
+    else
+      ->[false] "Something else"
+      -->[Ending process] (*)
+    endif
+    @enduml
+    \end{minted}
+  \end{center}
+  Gli elementi essenziali che li compongono sono:
+  \begin{itemize}
+    \item Nodo iniziale
+    \item Nodo finale
+    \item Nodi di Branching
+    \item Fork e join.
+  \end{itemize}
+  I diagrammi di attività si basano sulla produzione e consumo di token. Ogniqualvolta inizia il flusso di esecuzione e quindi ci trova nel nodo iniziale si genera un token. La fork produce un token per ogni processo in parallelo in esecuzione mentre la join li consuma tutti e ne genera uno. Infine il nodo finale consuma tutti i token.
+  Altri elementi che possono essere utilizzati per realizzare diagrammi di attività più precisi sono:
+  \begin{itemize}
+    \item Swimlanes
+    \item Segnali
+  \end{itemize}
+  \begin{description}
+    \item[Nodo iniziale]: il nodo iniziale è presente in ogni diagramma e delinea il punto di inizio di ogni diagramma delle attività. In PlantUML lo si rappresenta mediante un cerchio colorato di nero come nella figura:
+    \begin{center}
+      \begin{minted}{text}
+        @startuml
+         (*) --> "Inizialitation"
+        @enduml
+      \end{minted}
+    \end{center}
+    \item[Nodo finale]: il nodo finale è presente in ogni diagramma e rappresenta il termine del flusso di esecuzione. In plantuml lo si raffigura come un cerchio contenente un altro cerchio colorato di nero :
+    \begin{center}
+      \begin{minted}{text}
+        @startuml
+         "Inizialitation" --> (*)
+        @enduml
+      \end{minted}
+    \end{center}
+    \item[Nodi di branching]: i nodi di branching modellano delle decisioni. Non consumano ne generano token in quanto il flusso di esecuzione rimane sempre unico. Si raffigurano mediante rombi vuoti e generalmente distinguono due branch:
+    \begin{center}
+      \begin{minted}{text}
+       @startuml
+       (*) --> "Initialization"
+
+       if "Some Test" then
+      -->[true] "Some Activity"
+      --> "Another activity"
+      -right-> (*)
+      else
+      ->[false] "Something else"
+      -->[Ending process] (*)
+      endif
+      @enduml
+     \end{minted}
+     \end{center}
+     \item[Fork e join]: Fork e join sono necessari a rappresentare l'esecuzione parallela e concorrente. Ogniqualvolta il flusso di esecuzione incontra una fork il flusso di esecuzione diventa pari al numero di frecce uscenti dalla fork. Non è possibile terminare il flusso con più linee di esecuzione contemporaneamente attive ma è necessario che ci sia successivamente una join che ripristini l'unico flusso iniziale. Fork e join si rappresentano allo stesso modo, tramite una barra orizzontale colorata di nero. Ad esempio:
+     \begin{center}
+      \begin{minted}{text}
+        @startuml
+        (*) --> ===B1=== 
+        --> "Activity 1"
+        --> ===B2===
+
+        ===B1=== --> "Activity 2"
+        --> ===B2===
+
+        --> (*)
+        @enduml
+      \end{minted}
+    \end{center}
+    \item[Swimlanes]: Le Swimlanes sono strutture da poco introdotte in PlantUML che rendono esplicito di chi è la responsabilità nell'esecuzione. Si rappresentano così:
+    \begin{center}
+      \begin{minted}{text}
+        @startuml
+        |Person1|
+        start
+        :activity1;
+        |#AntiqueWhite|Person2|
+        :activity2;
+        :activity3;
+        |Swimlane1|
+        :activity4;
+        |Swimlane2|
+        :activity5;
+        stop
+       @enduml
+     \end{minted}
+   \end{center}
+   \item[Segnali]: I segnali servono per gestire eventi. PlantUML non ha un buon supporto per i segnali e ne offre una versione in beta. Ne esistono di due tipi:
+   \begin{itemize}
+    \item Segnali di input
+    \item Segnali di output.
+   \end{itemize}
+   \item [Input]: i segnali di input aspettano una risposta proveniente dall'esterno.Possono essere la prima azione del diagramma. Si rappresentano così:
+   \begin{center}
+    \begin{minted}{text}
+      @startuml
+      :wait for input<
+      @enduml
+    \end{minted}
+   \end{center}
+   \item [Output]: i segnali di output chiedono che venga inserito un input dall'esterno. Inoltre non possono essere la prima azione del diagramma. La loro rappresentazione è la seguente:
+   \begin{center}
+    \begin{minted}{text}
+      @startuml
+      :some output>
+      @enduml
+    \end{minted}
+   \end{center}
+\end{description}
 \subsubsection{Strumenti}%
 \label{subs:strumenti}
 
