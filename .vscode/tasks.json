@@ -2,20 +2,6 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "commitizen",
-      "detail": "Commit using commitizen CLI",
-      "type": "shell",
-      "command": "git cz",
-      "presentation": {
-        "reveal": "always",
-        "focus": true,
-        "panel": "dedicated",
-        "showReuseMessage": false,
-        "clear": true
-      },
-      "problemMatcher": []
-    },
-    {
       "label": "build plantuml images",
       "type": "shell",
       "command": "java",

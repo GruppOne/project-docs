@@ -1,7 +1,7 @@
 {
-  "[latex]": {
-    "editor.formatOnSave": true,
-  },
+  // "[latex]": {
+  //   "editor.formatOnSave": true,
+  // },
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
@@ -46,9 +46,15 @@
     }
   ],
   "latex-workshop.chktex.enabled": true,
-  "latex-workshop.chktex.run": "onType",
+  "latex-workshop.chktex.run": "onSave",
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.clean.subfolder.enabled": true,
+  "latex-workshop.latexindent.args": [
+    "-c",
+    "%DIR%/",
+    "%TMPFILE%",
+    "-y=defaultIndent: '  '"
+  ],
   "spellright.documentTypes": [
     "diagram",
     "latex",
@@ -58,10 +64,5 @@
   "spellright.language": [
     "en",
     "it"
-  ],
-  "spellright.ignoreRegExpsByClass": {
-    "latex": [
-      "/\\\\begin{plantuml}[^]*?\\\\end{plantuml}/gm"
-    ]
-  }
+  ]
 }

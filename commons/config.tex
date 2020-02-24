@@ -25,9 +25,9 @@
 \newlength{\imgwidth}
 
 \newcommand\scalegraphics[1]{%
-    \settowidth{\imgwidth}{\includegraphics{#1}}%
-    \setlength{\imgwidth}{\minof{\imgwidth}{\textwidth}}%
-    \includegraphics[width=\imgwidth]{#1}%
+  \settowidth{\imgwidth}{\includegraphics{#1}}%
+  \setlength{\imgwidth}{\minof{\imgwidth}{\textwidth}}%
+  \includegraphics[width=\imgwidth]{#1}%
 }
 
 % XXX definizione dei percorsi in cui cercare immagini
@@ -67,15 +67,15 @@
 }
 
 % setup di header e footer
-\pagestyle{fancy}
-
-\fancyhf{}
-\fancyhead[L]{\includegraphics[width=1cm]{logo.png}}
-\fancyhead[R]{\thetitle}
-\fancyfoot[R]{\thepage\ di~\pageref{LastPage}}
+\fancypagestyle{usual}{%
+  \fancyhf{}%
+  \fancyhead[L]{\includegraphics[width=1cm]{logo.png}}%
+  \fancyfoot[R]{\thepage\ di~\pageref{LastPage}}%
+}
 
 \fancypagestyle{nopage}{%
-  \fancyfoot{}%
+  \fancyhf{}%
+  \fancyhead[L]{\includegraphics[width=1cm]{logo.png}}%
 }
 
 \setlength{\headheight}{1.2cm}
@@ -100,11 +100,6 @@
   \newcommand{\@uso}{#1}%
 }
 \newcommand{\uso}{\@uso}
-
-\newcommand{\setStato}[1]{%
-  \newcommand{\@stato}{#1}%
-}
-\newcommand{\stato}{\@stato}
 
 \newcommand{\setVersione}[1]{%
   \newcommand{\@versione}{#1}%
@@ -136,5 +131,23 @@
 }
 
 \newcommand{\modifiche}{\@modifiche}
-
 \makeatother
+
+% comandi per rendere opzionale gli elenchi di figure e tabelle
+\newcommand{\elencoFigure}{%
+  \renewcommand{\listfigurename}{Elenco delle figure}%
+  \listoffigures%
+}
+
+\newcommand{\disabilitaElencoFigure}{%
+  \renewcommand{\elencoFigure}{}%
+}
+
+\newcommand{\elencoTabelle}{%
+  \renewcommand{\listtablename}{Elenco delle tabelle}%
+  \listoftables%
+}
+
+\newcommand{\disabilitaElencoTabelle}{%
+  \renewcommand{\elencoTabelle}{}%
+}

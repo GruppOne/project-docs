@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "mhutchie.git-graph",
+    "james-yu.latex-workshop",
+    "github.vscode-pull-request-github",
+    "eamodio.gitlens",
+    "jebbs.plantuml",
+    "ms-vscode.powershell",
+    "ban.spellright"
+  ]
+}

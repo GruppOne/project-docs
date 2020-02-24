@@ -1,3 +1,5 @@
+\setVersione{0.2.0}
+
 \thispagestyle{empty}
 \pagenumbering{gobble}
 
@@ -18,7 +20,6 @@
       \textbf{Approvazione}               & \responsabile{}         \\
       \textbf{Redazione}                  & \redattori{}            \\
       \textbf{Verifica}                   & \verificatori{}         \\
-      \textbf{Stato}                      & \stato{}                \\
       \textbf{Uso}                        & \uso{}                  \\
       \textbf{Destinato a}
                                           & GruppOne                \\
@@ -35,7 +36,7 @@
 \end{center}
 
 \newpage
-\thispagestyle{nopage}
+\pagestyle{nopage}
 
 \section*{Registro delle modifiche}%
 \label{sec:registro_delle_modifiche}
@@ -53,16 +54,15 @@
 
 % section registro_delle_modifiche (end)
 \newpage
-\renewcommand{\listfigurename}{Elenco delle figure}
-\renewcommand{\listtablename}{Elenco delle tabelle}
 \thispagestyle{nopage}
 \pagenumbering{roman}
 \tableofcontents
 
-\listoffigures
+\elencoFigure{}
 
-\listoftables
+\elencoTabelle{}
 
 \newpage
 
+\pagestyle{usual}
 \pagenumbering{arabic}
