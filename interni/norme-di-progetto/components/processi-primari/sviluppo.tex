@@ -392,7 +392,7 @@ I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno
      \begin{center}
       \begin{minted}{text}
         @startuml
-        (*) --> ===B1=== 
+        (*) --> ===B1===
         --> "Activity 1"
         --> ===B2===
 
@@ -453,7 +453,7 @@ I diagrammi di sequenza rappresentano dettagliamente come gli oggetti interagisc
   \item [Messaggio di ritorno]: corrisponde ad un messaggio contenente il valore ritornato dalla chiamata di un metodo. Lo si indica con una freccia tratteggiata nera non piena accompagnata da un'etichetta contenente il tipo di valore ritornato.
   \item [Messaggio di creazione]: rappresenta un messaggio che chiede la creazione di un nuovo oggetto. Lo si indica con una freccia tratteggiata non piena seguita da un rettangolo contenente l'oggetto creato e accompagnata da un'etichetta contenente la parola \textit{<<create>>}.
   \item [Messaggio di distruzione]: rappresenta un messaggio che chiede la distruzione di un oggetto. Lo si indica con con una linea nera  seguita da una X e accompagnata da un'etichetta contenente la parola \textit{<<destroy>>}.
-\end{description} 
+\end{description}
 Un esempio di diagramma di sequenza corretto realizzato con PlantUML è il seguente:
 \begin{center}
   \begin{minted}{text}
@@ -466,6 +466,45 @@ Un esempio di diagramma di sequenza corretto realizzato con PlantUML è il segue
     @enduml
  \end{minted}
 \end{center}
+
+\paragraph{Codifica}%
+\label{par:codifica}
+L'attività di codifica consiste nell'implementazione delle specifiche del prodotto definite nelle attività precedenti.
+Questa sezione ha lo scopo di evitare qualsiasi tipo di inconsistenza e rendere il codice più omogeneo possibile.
+Questa attività viene svolta dal ruolo del programmatore, in quanto dispone delle conoscenze tecniche per eseguire le scelte effettuate nell'attività di progettazione e quindi sviluppare il prodotto di Stalker.
+
+\subparagraph{Nomi dei file e delle variabili}%
+\label{subp:nomi_file_e_variabili}
+I nomi dei file:
+\begin{itemize}
+    \item Devono essere univoci e significativi.
+    \item Devono rispettare le condizioni del linguaggio che contengono, se presenti.
+\end{itemize}
+I nomi delle variabili:
+\begin{itemize}
+    \item Devono essere chiari, descrittivi e possibilmente brevi.
+    \item Devono essere significativi, relativi al contesto e alla loro utilità.
+    \item Non devono somigliare tra loro, per evitare confusione a chi scrive il codice e a chi lo legge.
+    \item Devono rispettare le condizioni del linguaggio in cui vengono usate, se presenti.
+\end{itemize}
+
+\subparagraph{Commenti}%
+\label{subp:commenti}
+Il programmatore è tenuto ad inserire commenti dove ritiene che questo possa migliorare la leggibilità del codice.
+In questo caso, i commenti devono essere chiari e nello stesso tempo sintetici, per non distrarre dal contesto.
+Per contro, i commenti vanno omessi dove il codice è auto esplicatorio.
+
+\subparagraph{Complessità ciclomatica}%
+\label{subp:complessita_ciclomatica}
+Va evitato il più possibile l’annidamento di più strutture di controllo.
+Una buona prassi da rispettare è non andare oltre i tre livelli di annidamento, in quanto semplifica la leggibilità e il tempo di debugging.
+
+\subparagraph{Ereditarietà}%
+\label{subp:ereditarieta}
+Una cattiva prassi è utilizzare l’ereditarietà tra classi concrete, ovvero che hanno stato, a causa del riuso del codice e dei problemi "a cascata" che si possono generare da una classe base alle sue classi derivate.
+L'ottima prassi da applicare è utilizzare l'ereditarietà di interfacce, in modo da riutilizzare il comportamento dei metodi astratti definiti nelle interfacce.
+Ergo, è da preferire la composizione sopra l'ereditarietà, adottando il principio di “Composition over inheritance”.
+
 \subsubsection{Strumenti}%
 \label{subs:strumenti}
 
