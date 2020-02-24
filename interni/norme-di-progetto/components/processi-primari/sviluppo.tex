@@ -330,9 +330,10 @@ I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno
     \item Nodo iniziale
     \item Nodo finale
     \item Nodi di Branching
+    \item Nodi di merge
     \item Fork e join.
   \end{itemize}
-  I diagrammi di attività si basano sulla produzione e consumo di token. Ogniqualvolta inizia il flusso di esecuzione e quindi ci trova nel nodo iniziale si genera un token. La fork produce un token per ogni processo in parallelo in esecuzione mentre la join li consuma tutti e ne genera uno. Infine il nodo finale consuma tutti i token.
+  I diagrammi di attività si basano sulla produzione e consumo di token. Ogniqualvolta inizia il flusso di esecuzione e quindi ci trova nel nodo iniziale si genera un token. Branching e merging consumano e producono un token, la fork produce un token per ogni processo in parallelo in esecuzione mentre la join li consuma tutti e ne genera uno. Infine il nodo finale consuma tutti i token.
   Altri elementi che possono essere utilizzati per realizzare diagrammi di attività più precisi sono:
   \begin{itemize}
     \item Swimlanes
@@ -347,7 +348,7 @@ I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno
         @enduml
       \end{minted}
     \end{center}
-    \item[Nodo finale]: il nodo finale è presente in ogni diagramma e rappresenta il termine del flusso di esecuzione. In plantuml lo si raffigura come un cerchio contenente un altro cerchio colorato di nero :
+    \item[Nodo finale]: il nodo finale è presente in ogni diagramma e rappresenta il termine del flusso di esecuzione. In plantuml lo si raffigura come un cerchio contenente un altro cerchio colorato di nero:
     \begin{center}
       \begin{minted}{text}
         @startuml
@@ -355,7 +356,7 @@ I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno
         @enduml
       \end{minted}
     \end{center}
-    \item[Nodi di branching]: i nodi di branching modellano delle decisioni. Non consumano ne generano token in quanto il flusso di esecuzione rimane sempre unico. Si raffigurano mediante rombi vuoti e generalmente distinguono due branch:
+    \item[Nodi di branching]: i nodi di branching modellano delle decisioni. Hanno una guardia che indica quale test deve essere soddisfatto che si indica tramite un etichetta da affiancare al nodo di branching. Tali nodi si raffigurano mediante rombi vuoti e generalmente distinguono due branch:
     \begin{center}
       \begin{minted}{text}
        @startuml
@@ -372,6 +373,21 @@ I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno
       @enduml
      \end{minted}
      \end{center}
+     \item[Nodi di merge]: i nodi di merge sono il punto in cui i rami generati da un nodo di branching tornano ad unirsi. Hanno la stessa rappresentazione dei nodi di branching.
+     \begin{center}
+      \begin{minted}{text}
+        @startuml
+        start;
+        if (test) then
+          :activity2;
+          :activity3;
+        else
+          :activity4;
+        endif
+        stop;
+       @enduml
+     \end{minted}
+    \end{center}
      \item[Fork e join]: Fork e join sono necessari a rappresentare l'esecuzione parallela e concorrente. Ogniqualvolta il flusso di esecuzione incontra una fork il flusso di esecuzione diventa pari al numero di frecce uscenti dalla fork. Non è possibile terminare il flusso con più linee di esecuzione contemporaneamente attive ma è necessario che ci sia successivamente una join che ripristini l'unico flusso iniziale. Fork e join si rappresentano allo stesso modo, tramite una barra orizzontale colorata di nero. Ad esempio:
      \begin{center}
       \begin{minted}{text}
@@ -405,7 +421,7 @@ I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno
        @enduml
      \end{minted}
    \end{center}
-   \item[Segnali]: I segnali servono per gestire eventi. PlantUML non ha un buon supporto per i segnali e ne offre una versione in beta. Ne esistono di due tipi:
+   \item[Segnali]: I segnali servono per gestire eventi. PlantUML non offre un buon supporto per i segnali e ne offre una versione in beta. Ne esistono di due tipi:
    \begin{itemize}
     \item Segnali di input
     \item Segnali di output.
@@ -427,6 +443,29 @@ I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno
     \end{minted}
    \end{center}
 \end{description}
+\subparagraph{Diagrammi di sequenza}%
+\label{subp:diagrammi_di_sequenza}
+
+I diagrammi di sequenza rappresentano dettagliamente come gli oggetti interagiscono tra di loro mediante messaggi. Ogni entità del diagramma è collegata mediante una linea tratteggiata verticale ad un'altra entità con lo stesso contenuto. Tale linea indica il passare del tempo. Le entità del diagramma si scambiano messaggi sotto forma di frecce che assumono una diversa struttura a seconda del tipo di messaggio che si sta inviando. Segue un elenco delle tipologie di messaggi che due entità possono scambiarsi:
+\begin{description}
+  \item [Messaggio sincrono]: corrisponde alla chiamata di un metodo dal quale si attende un valore di ritorno. Lo si indica con una freccia continua nera piena accompagnata da un'etichetta contenente il tipo di metodo chiamato nella forma \textit{nomeMetodo (listaParametri)} dove la firma del metodo deve essere in lingua inglese e la lista di parametri deve essere nella forma \textit{nomeParametro1:tipo1, nomeParametro2:tipo2,\ldots}.
+  \item [Messaggio asincrono]: corrisponde alla chiamata di un metodo dal quale non si attende nulla. Lo si indica con una freccia nera non piena accompagnata da un'etichetta identica a quella utilizzata per messaggi sincroni.
+  \item [Messaggio di ritorno]: corrisponde ad un messaggio contenente il valore ritornato dalla chiamata di un metodo. Lo si indica con una freccia tratteggiata nera non piena accompagnata da un'etichetta contenente il tipo di valore ritornato.
+  \item [Messaggio di creazione]: rappresenta un messaggio che chiede la creazione di un nuovo oggetto. Lo si indica con una freccia tratteggiata non piena seguita da un rettangolo contenente l'oggetto creato e accompagnata da un'etichetta contenente la parola \textit{<<create>>}.
+  \item [Messaggio di distruzione]: rappresenta un messaggio che chiede la distruzione di un oggetto. Lo si indica con con una linea nera  seguita da una X e accompagnata da un'etichetta contenente la parola \textit{<<destroy>>}.
+\end{description} 
+Un esempio di diagramma di sequenza corretto realizzato con PlantUML è il seguente:
+\begin{center}
+  \begin{minted}{text}
+    @startuml
+    class1 -> class2: Method1(param)
+    class2 ->> class1: Method2(param)
+    class2 -->> class1: returnType
+    class2 --> class3: <<create>>
+    class1 ->x class3: <<destroy>>
+    @enduml
+ \end{minted}
+\end{center}
 \subsubsection{Strumenti}%
 \label{subs:strumenti}
 
