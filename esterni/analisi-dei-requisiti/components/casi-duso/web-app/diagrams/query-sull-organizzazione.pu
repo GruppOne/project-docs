@@ -1,21 +1,3 @@
-@startuml query-sull-organizzazione
-!include ../../../../../../commons/style/use-cases.pu
-
-actor :visualizzatore: as A
-
-rectangle {
-  together {
-    usecase (AUC5) as "AUC5\nMonitoraggio organizzazione"
-    usecase (AUC3.4) as "AUC3.4\nSeleziona organizzazione"
-  }
-}
-
-:A: -- AUC5
-(AUC3.4) <.up. (AUC5) : <<include>>
-
-@enduml
-
-
 @startuml monitora-numero-dipendenti
 !include ../../../../../../commons/style/use-cases.pu
 
