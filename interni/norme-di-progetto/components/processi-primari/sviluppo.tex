@@ -589,6 +589,43 @@ La metrica requisiti obbligatori soddisfatti indica la percentuale di requisiti 
   \frac{requisiti\ obbligatori\ soddisfatti}{requisiti\ obbligatori\ totali}\cdot 100
 \]
 % TODO scrivi metriche di codifica (grosso)
+\paragraph{MPS-NFV: Nomi di file e variabili non normati}
+\label{par:MPS-NFV_nomi_file_variabili_non_normati}
+
+I nomi dei file o delle variabili devono seguire delle specifiche regole per essere più chiare possibile.
+\textbf{Metrica:} numero di nomi di variabili o di titoli di metodi o classi che non rispettano le norme stabilite.
+
+\paragraph{MPS-CNN: Commenti non normati}
+\label{par:MPS-CNN_commenti_non_normati}
+
+I commenti devono essere scritti seguendo le norme indicate per essere comprensibili.
+\textbf{Metrica:} numero di commenti che non rispettano le norme indicate.
+
+\paragraph{MPS-CCE: Complessità ciclomatica eccessiva}
+\label{par:MPS-CCE_complessita_ciclomatica_eccessiva}
+una sezione di codice è il numero di cammini linearmente indipendenti attraverso il codice sorgente
+
+Il grado di difficoltà di testare un metodo è proporzionale al numero di cammini linearmente indipendenti: più è alto il numero di cammini, più è alto il grado di complessità.
+Ne deriva inoltre un'esecuzione più lenta del metodo. E' quindi buona norma limitare il numero massimo di cammini.
+La formula che calcola la complessità ciclomatica è la seguente:
+\[
+  v(G) = e - n + p
+\]
+dove:
+\begin{description}
+  \item[v(G):] complessità ciclomatica del grafo G.
+  \item[e:] numero di archi del grafo.
+  \item[n:] numero di nodi del grafo.
+  \item[p:] numero di componenti connesse.
+\end{description}
+\textbf{Metrica:} numero di metodi che hanno \[v(G) > 3\].
+
+%Metrica ereditarietà da implementare
+%MPS014 Classi che implementano classi concrete
+%L’ereditarietà tra classi deve essere evitata perché la presenza di dipendenze tra più componenti
+%ne ostacola la modifica e la verifica.
+%Metrica: numero di classi che ereditano un’altra classe concreta.
+
 % TODO basta scrivere statement/branch/decision coverage per ora?
 % Per il momento le lasciamo perdere le rimandiamo alla progettazione architetturale
 
