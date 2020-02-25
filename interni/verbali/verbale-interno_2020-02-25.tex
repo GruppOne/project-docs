@@ -1,0 +1,95 @@
+\documentclass{article}
+
+\input{../../commons/config}
+\usepackage{multirow}
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale interno --- 25/02/2020}
+
+\setResponsabile{Alessandro Rizzo}
+\setRedattori{Alessandro Rizzo}
+\setVerificatori{
+  Alberto Cocco
+}
+\setUso{Interno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 26/02/2020}
+\setModifiche{%
+\multirow{3}{*}{dio} & Alessandro Rizzo & 2020--02--27 & approva documento \\%
+& Alberto Cocco & 2020--02--26 & verifica verbale \\%
+& Alessandro Rizzo & 2020--02--25 & stendi verbale %
+}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Informazioni logistiche}%
+\label{sec:informazioni_logistiche}
+
+\begin{description}
+  \item [Luogo] chiamata Hangouts
+  \item [Data] 26/02/2020
+  \item [Ora] 13:00 \symbol{8594} 14:00
+\end{description}
+
+\subsection{Membri del gruppo presenti}%
+\label{sub:membri_del_gruppo_presenti}
+
+\begin{enumerate}
+  \item Riccardo Agatea
+  \item Alberto Cocco
+  \item Luca Ercole
+  \item Alberto Gobbo
+  \item Alessandro Rizzo
+  \item Fabio Scettro
+\end{enumerate}
+% sub:membri_del_gruppo_presenti (end)
+% sec:informazioni_logistiche (end)
+
+\section{Introduzione}%
+\label{sec:introduzione}
+
+Abbiamo discusso delle tecnologie del PoC per allinearci e stabilire i compiti per i giorni a seguire, inoltre ci siamo confrontati sul registro delle modifiche per raggiungere un sistema di versionamento più comprensibile.
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item Discussione sulle tecnologie PoC
+  \item Registro delle modifiche.
+\end{itemize}
+% sec:ordine_del_giorno (end)
+\section{Discussione sulle Tecnologie del PoC}%
+\label{sec:discussione_tecnologie_poc}
+I membri del gruppo hanno discusso le tecnologie apprese per ora singolarmente per scegliere quelle più idonee al progetto.
+Per la web-app e l'applicazione mobile sono emersi i framework \glossario{Nativescript} e \glossario{Angular} che insieme permettono di riutilizzare buona parte del codice tra le due interfacce, per la geolocalizzazione mobile l'opzione migliore sembrano essere i servizi di \glossario{geofencing} offerti da Google mentre per selezionare posizioni sulle mappe l'opzione dominante è \glossario{OpenStreetMap}
+Per quanto riguarda il server le tecnologie più interessanti sono \glossario{Kubernetes} per la gestione della scalabilità del server, mentre per implementare il server si pensava a due layer, uno per accogliere dati permanenti come utenti e organizzazioni e uno per contenere dati più leggeri e non permanenti nel tempo come le posizioni degli utenti.
+Per il primo tipo di dati verrà usato un database MySQL mentre per il secondo verrà utilizzato un database time series, specializzato in gestire grandi flussi di dati di questo tipo.
+La linea guida per ora è raccogliere tutte le chiamate di rete possibili tra server e applicazione in una API che rispetta la specifica REST utilizzando \glossario{Swagger} e continuare ad approfondire le tecnologie che sono risultate più convincenti.
+% sec:discussione_tecnologie_poc (end)
+
+\section{Registro delle modifiche}%
+\label{sec:registro_modifiche}
+L'elemento che generava confusione nel registro delle modifiche era la presenza ripetuta dello stesso numero di versione in più righe diverse e lo scatto di versione solamente all'approvazione del documento, così facendo si perdeva la correlazione tra azione e approvazione.
+Abbiamo quindi deciso di associare un unico numero all'intero processo di azione, verifica e approvazione che consisterà in un unica versione.
+% sec:registro_modifiche (end)
+
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c b{13cm}}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Codice}} & \color{white}{\textbf{Decisione}}\\
+    1 & Abbiamo deciso di iniziare a scrivere le chiamate di rete per andare a definire una API REST da cui poi sviluppare il nostro PoC.\\
+    2 & Modificheremo il registro delle modifiche come sopra per riflettere azione, verifica e approvazione come parti di una unica versione che si concretizza al momento della approvazione delle modifiche.\\
+  \end{tabular}
+  \caption{registro delle decisioni}%
+  \label{tab:registro delle decisioni}
+\end{table}
+% sec:registro_delle_decisioni (end)
+
+\end{document}
