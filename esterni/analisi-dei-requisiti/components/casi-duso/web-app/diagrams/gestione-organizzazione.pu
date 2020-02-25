@@ -1,23 +1,20 @@
 @startuml gestione-organizzazione
 !include ../../../../../../commons/style/use-cases.pu
 
-actor :gestore: as G
 actor :owner: as O
+actor :gestore: as G
 
 rectangle {
     together {
-        usecase (AUC3.4) as "AUC3.4\nSeleziona organizzazione"
-        usecase (AUC3.3) as "AUC3.3\nModifica organizzazione"
-        usecase (AUC3.2) as "AUC3.2\nEliminazione organizzazione"
         usecase (AUC3.1) as "AUC3.1\nCreazione organizzazione"
+        usecase (AUC3.2) as "AUC3.2\nEliminazione organizzazione"
+        usecase (AUC3.3) as "AUC3.3\nModifica organizzazione"
       }
   }
 
+:G: -- AUC3.3
+:G: -- AUC3.2
 :O: -- AUC3.1
-:G: -- AUC3.4
-
-(AUC3.2) .up.> (AUC3.4) : <<extends>>
-(AUC3.3) .up.> (AUC3.4) : <<extends>>
 
 @enduml
 
@@ -47,7 +44,7 @@ AUC3.1.3 -- :S:
 @startuml eliminazione-organizzazione
 !include ../../../../../../commons/style/use-cases.pu
 
-actor :owner: as O
+actor :gestore: as G
 
 rectangle {
     together {
@@ -55,7 +52,7 @@ rectangle {
       }
   }
 
-:O: -- AUC3.2.1
+:G: -- AUC3.2.1
 @enduml
 
 @startuml modifica-organizzazione

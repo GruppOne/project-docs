@@ -15,7 +15,7 @@
 \begin{description}
   \item[Codice:] AUC3;
   \item[Titolo:] Gestione organizzazione;
-  \item[Attori primari:] owner;
+  \item[Attori primari:] owner, gestore;
   \item[Precondizione:] il sistema deve rendere disponibile la pagina di gestione dell'organizzazione;
   \item[Postcondizione:] viene gestita un'organizzazione;
   \item[Scenario principale:]
@@ -96,7 +96,7 @@
 \begin{description}
   \item[Codice:] AUC3.2;
   \item[Titolo:] Eliminazione organizzazione;
-  \item[Attori primari:] owner;
+  \item[Attori primari:] gestore;
   \item[Precondizione:] deve essere stata selezionata l'organizzazione da eliminare, presente nella lista di \emph{Stalker};
   \item[Postcondizione:] l'organizzazione viene eliminata;
   \item[Scenario principale:]
@@ -117,7 +117,7 @@
 \begin{description}
   \item[Codice:] AUC3.2.1;
   \item[Titolo:] Conferma eliminazione organizzazione;
-  \item[Attori primari:] owner;
+  \item[Attori primari:] gestore;
   \item[Precondizione:] deve essere stata selezionata l'organizzazione da eliminare;
   \item[Postcondizione:] viene confermata l'eliminazione dell'organizzazione;
   \item[Scenario principale:]
@@ -190,25 +190,6 @@
   \item[Scenario principale:]
         \begin{enumerate}
           \item si vuole modificare l'indirizzo IP del server LDAP\@.
-        \end{enumerate}
-\end{description}
-
-\subsubsection{AUC3.4: Seleziona organizzazione}%
-\label{subs:AUC3.4}
-\begin{description}
-  \item[Codice:] AUC3.4;
-  \item[Titolo:] Seleziona organizzazione;
-  \item[Attori primari:] gestore;
-  \item[Precondizione:] il sistema deve mostrare la lista di organizzazioni in \emph{Stalker};
-  \item[Postcondizione:] viene scelta l'organizzazione desiderata;
-  \item[Scenario principale:]
-        \begin{enumerate}
-          \item sorge la necessità di effettuare operazioni su un'organizzazione, e viene offerta la possibilità di selezionarla.
-        \end{enumerate}
-  \item[Estensioni:]
-        \begin{enumerate}
-          \item elimina un'organizzazione~\ref{subs:AUC3.2};
-          \item modifica un'organizzazione~\ref{subs:AUC3.3};
         \end{enumerate}
 \end{description}
 
