@@ -1,5 +1,4 @@
-\documentclass{article}
-
+\documentclass{article}\usepackage{multirow}
 \input{../../commons/config}
 \appendToGraphicspath{../../commons/img/}
 
@@ -17,40 +16,42 @@
 \setUso{Esterno}
 \setDescrizione{Documento che raccoglie l'analisi dei rischi e la pianificazione (compresi preventivo, consuntivi di periodo e preventivi a finire) del progetto ``Stalker''}
 \setModifiche{%
-0.2.1 & Alessandro Rizzo & 2020--01--05 & approva documento \\%
-0.2.0 & Alberto Cocco, Luca Ercole & 2020--01--03 & verifica documento completo \\%
-0.2.0 & Alessandro Rizzo & 2020--01--31 & scrivi §~\ref{sec:attualizzazione_dei_rischi} \\
-0.2.0 & Alessandro Rizzo & 2020--01--31 & correggi §~\ref{sec:analisi_dei_rischi} aggiungendo codice identificativo \\
-0.2.0 & Riccardo Agatea & 2020--01--29 & correggi §~\ref{sec:consuntivo_di_periodo} e §~\ref{sec:preventivo_a_finire} \\
-0.2.0 & Riccardo Agatea & 2020--01--29 & correggi figura~\ref{fig:gantt_incremento_1}, figura~\ref{fig:gantt_incremento_2}, figura~\ref{fig:gantt_incremento_3}, figura~\ref{fig:gantt_incremento_4}, figura~\ref{fig:gantt_incremento_5}, figura~\ref{fig:gantt_incremento_6}, figura~\ref{fig:gantt_incremento_7} \\
-0.2.0 & Riccardo Agatea & 2020--01--29 & correggi §~\ref{sub:riferimenti} \\
-0.2.0 & Riccardo Agatea & 2020--01--29 & rimuovi sezione modello di sviluppo perché ridondante \\
-0.2.0 & Riccardo Agatea & 2020--01--28 & correggi difformità in §~\ref{sec:preventivo} relativa al totale troppo basso \\
-0.0.7 & Alessandro Rizzo & 2020--01--13 & approva documento \\%
-0.0.6 & Alberto Cocco, Riccardo Cestaro & 2020--01--13 & verifica documento completo \\%
-0.0.6 & Riccardo Agatea & 2020--01--12 & compila tabella~\ref{tab:prospetto_economico_analisi_preliminare}, tabella~\ref{tab:prospetto_orario_analisi_preliminare}, tabella~\ref{tab:prospetto_economico_progettazione_architetturale}, tabella~\ref{tab:prospetto_orario_progettazione_architetturale} \\%
-0.0.6 & Riccardo Agatea & 2020--01--12 & aggiorna struttura §~\ref{sec:preventivo} e scrivi introduzione \\%
-0.0.6 & Riccardo Agatea & 2020--01--12 & scrivi sezione modello di sviluppo \\%
-0.0.6 & Riccardo Agatea & 2020--01--11 & aggiungi §~\ref{sub:incremento_1}, §~\ref{sub:incremento_2}, §~\ref{sub:incremento_3}, §~\ref{sub:incremento_4}, §~\ref{sub:incremento_5}, §~\ref{sub:incremento_6}, §~\ref{sub:incremento_7} \\%
-0.0.6 & Riccardo Agatea & 2020--01--10 & correggi errori segnalati durante la verifica  \\%
-0.0.6 &  Verificatori & 2020--01--10 & verifica del documento e segnalazione degli errori \\%
-0.0.6 & Riccardo Agatea & 2020--01--09 & aggiungi figura~\ref{fig:gantt_analisi_preliminare}, figura~\ref{fig:gantt_preparazione_rr}, figura~\ref{fig:gantt_progettazione_architetturale} e figura~\ref{fig:gantt_preparazione_rp} \\%
-0.0.6 & Riccardo Agatea & 2020--01--09 & correggi distribuzione attività in §~\ref{sec:pianificazione} \\%
-0.0.6 & Riccardo Agatea & 2020--01--08 & scrivi bozza §~\ref{sub:incremento_1}, §~\ref{sub:incremento_2}, §~\ref{sub:incremento_3}, §~\ref{sub:incremento_4}, §~\ref{sub:incremento_5}, §~\ref{sub:incremento_6}, §~\ref{sub:incremento_7} \\%
-0.0.6 & Riccardo Agatea & 2020--01--07 & aggiorna §~\ref{sec:pianificazione} \\%
-0.0.6 & Alessandro Rizzo & 2020--01--07 & aggiungi §~\ref{sub:scadenze_fissate} \\%
-0.0.6 & Riccardo Agatea & 2020--01--06 & aggiungi struttura §~\ref{sub:incremento_1}, §~\ref{sub:incremento_2}, §~\ref{sub:incremento_3}, §~\ref{sub:incremento_4}, §~\ref{sub:incremento_5}, §~\ref{sub:incremento_6}, §~\ref{sub:incremento_7} \\%
-0.0.6 & Alessandro Rizzo & 2020--01--05 & aggiungi §~\ref{sec:analisi_dei_rischi} \\%
-0.0.6 & Alessandro Rizzo & 2020--01--04 & aggiungi §~\ref{sub:riferimenti} e §~\ref{sub:glossario} \\%
-0.0.6 & Riccardo Agatea & 2020--01--04 & scrivi §~\ref{sub:analisi_preliminare}, §~\ref{sub:preparazione_in_entrata_alla_rr}, §~\ref{sub:progettazione_architetturale} e §~\ref{sub:preparazione_in_entrata_alla_rp} \\%
-0.0.6 & Riccardo Agatea & 2020--01--04 & inizia §~\ref{sec:pianificazione} \\%
-0.0.6 & Riccardo Agatea & 2020--01--04 & scrivi struttura §~\ref{sec:pianificazione} \\%
-0.0.6 & Alessandro Rizzo & 2020--01--04 & aggiungi §~\ref{sec:introduzione} \\%
-0.0.3 & Riccardo Agatea & 2019--11--25 & approva §~\ref{sub:analisi_preliminare} \\%
-0.0.2 & Riccardo Cestaro & 2019--11--23 & aggiungi §~\ref{sub:analisi_preliminare} \\%
-0.0.2 & Riccardo Agatea & 2019--11--20 & stendi struttura e aggiungi i sottofile del piano di progetto \\%
-0.0.2 & Luca Ercole & 2019--11--20 & aggiungi redattori e verificatori sui documenti  \\%
-0.0.2 & Luca Ercole & 2019--11--20 & crea documenti vuoti con template %
+\cellcolor{lightgray} & Alessandro Rizzo & 2020--02--26 & approva documento \\%
+\cellcolor{lightgray} & Alberto Cocco, Luca Ercole & 2020--02--13 & verifica documento completo \\%
+\cellcolor{lightgray} & Alessandro Rizzo & 2020--02--06 & scrivi §~\ref{sec:attualizzazione_dei_rischi} \\
+\cellcolor{lightgray} & Alessandro Rizzo & 2020--02--02 & correggi §~\ref{sec:analisi_dei_rischi} aggiungendo codice identificativo \\
+\cellcolor{lightgray} & Riccardo Agatea & 2020--01--29 & correggi §~\ref{sec:consuntivo_di_periodo} e §~\ref{sec:preventivo_a_finire} \\
+\cellcolor{lightgray} & Riccardo Agatea & 2020--01--29 & correggi figura~\ref{fig:gantt_incremento_1}, figura~\ref{fig:gantt_incremento_2}, figura~\ref{fig:gantt_incremento_3}, figura~\ref{fig:gantt_incremento_4}, figura~\ref{fig:gantt_incremento_5}, figura~\ref{fig:gantt_incremento_6}, figura~\ref{fig:gantt_incremento_7} \\
+\cellcolor{lightgray} & Riccardo Agatea & 2020--01--29 & correggi §~\ref{sub:riferimenti} \\
+\cellcolor{lightgray} & Riccardo Agatea & 2020--01--29 & rimuovi sezione modello di sviluppo perché ridondante \\
+\multirow{-9}{*}{0.1.1}\cellcolor{lightgray} & Riccardo Agatea & 2020--01--28 & correggi difformità in §~\ref{sec:preventivo} relativa al totale troppo basso \\
+\cellcolor{white!80!lightgray!100} & Alessandro Rizzo & 2020--01--13 & approva documento \\%
+\cellcolor{white!80!lightgray!100} & Alberto Cocco, Riccardo Cestaro & 2020--01--13 & verifica documento completo \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--01--12 & compila tabella~\ref{tab:prospetto_economico_analisi_preliminare}, tabella~\ref{tab:prospetto_orario_analisi_preliminare}, tabella~\ref{tab:prospetto_economico_progettazione_architetturale}, tabella~\ref{tab:prospetto_orario_progettazione_architetturale} \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--01--12 & aggiorna struttura §~\ref{sec:preventivo} e scrivi introduzione \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--01--12 & scrivi sezione modello di sviluppo \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--01--11 & aggiungi §~\ref{sub:incremento_1}, §~\ref{sub:incremento_2}, §~\ref{sub:incremento_3}, §~\ref{sub:incremento_4}, §~\ref{sub:incremento_5}, §~\ref{sub:incremento_6}, §~\ref{sub:incremento_7} \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--01--10 & correggi errori segnalati durante la verifica  \\%
+\cellcolor{white!80!lightgray!100} &  Verificatori & 2020--01--10 & verifica del documento e segnalazione degli errori \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--01--09 & aggiungi figura~\ref{fig:gantt_analisi_preliminare}, figura~\ref{fig:gantt_preparazione_rr}, figura~\ref{fig:gantt_progettazione_architetturale} e figura~\ref{fig:gantt_preparazione_rp} \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--01--09 & correggi distribuzione attività in §~\ref{sec:pianificazione} \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--01--08 & scrivi bozza §~\ref{sub:incremento_1}, §~\ref{sub:incremento_2}, §~\ref{sub:incremento_3}, §~\ref{sub:incremento_4}, §~\ref{sub:incremento_5}, §~\ref{sub:incremento_6}, §~\ref{sub:incremento_7} \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--01--07 & aggiorna §~\ref{sec:pianificazione} \\%
+\cellcolor{white!80!lightgray!100} & Alessandro Rizzo & 2020--01--07 & aggiungi §~\ref{sub:scadenze_fissate} \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--01--06 & aggiungi struttura §~\ref{sub:incremento_1}, §~\ref{sub:incremento_2}, §~\ref{sub:incremento_3}, §~\ref{sub:incremento_4}, §~\ref{sub:incremento_5}, §~\ref{sub:incremento_6}, §~\ref{sub:incremento_7} \\%
+\cellcolor{white!80!lightgray!100} & Alessandro Rizzo & 2020--01--05 & aggiungi §~\ref{sec:analisi_dei_rischi} \\%
+\cellcolor{white!80!lightgray!100} & Alessandro Rizzo & 2020--01--04 & aggiungi §~\ref{sub:riferimenti} e §~\ref{sub:glossario} \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--01--04 & scrivi §~\ref{sub:analisi_preliminare}, §~\ref{sub:preparazione_in_entrata_alla_rr}, §~\ref{sub:progettazione_architetturale} e §~\ref{sub:preparazione_in_entrata_alla_rp} \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--01--04 & inizia §~\ref{sec:pianificazione} \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--01--04 & scrivi struttura §~\ref{sec:pianificazione} \\%
+\cellcolor{white!80!lightgray!100} & Alessandro Rizzo & 2020--01--04 & aggiungi §~\ref{sec:introduzione} \\%
+\cellcolor{white!80!lightgray!100} & \multicolumn{3}{c}{0.0.6} \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2019--11--25 & approva §~\ref{sub:analisi_preliminare} \\%
+\cellcolor{white!80!lightgray!100} & \multicolumn{3}{c}{0.0.3} \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Cestaro & 2019--11--23 & aggiungi §~\ref{sub:analisi_preliminare} \\%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2019--11--20 & stendi struttura e aggiungi i sottofile del piano di progetto \\%
+\cellcolor{white!80!lightgray!100} & Luca Ercole & 2019--11--20 & aggiungi redattori e verificatori sui documenti  \\%
+\multirow{-26}{*}{0.0.7} \cellcolor{white!80!lightgray!100} & Luca Ercole & 2019--11--20 & crea documenti vuoti con template %
 }
 
 \begin{document}
