@@ -241,7 +241,7 @@ Una classe, in UML, ha la sottostante rappresentazione:
           @enduml
         \end{minted}
       \end{center}
-    \item [Assocazione]: l'associazione si verifica quando un oggetto di classe A ha un campo dati di tipo B. L'associazione si indica con una linea continua come nell'immagine sottostante:
+    \item [Associazione]: l'associazione si verifica quando un oggetto di classe A ha un campo dati di tipo B. L'associazione si indica con una linea continua come nell'immagine sottostante:
     \begin{center}
         \begin{minted} {text}
           @startuml
@@ -446,7 +446,7 @@ I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno
 \subparagraph{Diagrammi di sequenza}%
 \label{subp:diagrammi_di_sequenza}
 
-I diagrammi di sequenza rappresentano dettagliamente come gli oggetti interagiscono tra di loro mediante messaggi. Ogni entità del diagramma è collegata mediante una linea tratteggiata verticale ad un'altra entità con lo stesso contenuto. Tale linea indica il passare del tempo. Le entità del diagramma si scambiano messaggi sotto forma di frecce che assumono una diversa struttura a seconda del tipo di messaggio che si sta inviando. Segue un elenco delle tipologie di messaggi che due entità possono scambiarsi:
+I diagrammi di sequenza rappresentano dettagliatamente come gli oggetti interagiscono tra di loro mediante messaggi. Ogni entità del diagramma è collegata mediante una linea tratteggiata verticale ad un'altra entità con lo stesso contenuto. Tale linea indica il passare del tempo. Le entità del diagramma si scambiano messaggi sotto forma di frecce che assumono una diversa struttura a seconda del tipo di messaggio che si sta inviando. Segue un elenco delle tipologie di messaggi che due entità possono scambiarsi:
 \begin{description}
   \item [Messaggio sincrono]: corrisponde alla chiamata di un metodo dal quale si attende un valore di ritorno. Lo si indica con una freccia continua nera piena accompagnata da un'etichetta contenente il tipo di metodo chiamato nella forma \textit{nomeMetodo (listaParametri)} dove la firma del metodo deve essere in lingua inglese e la lista di parametri deve essere nella forma \textit{nomeParametro1:tipo1, nomeParametro2:tipo2,\ldots}.
   \item [Messaggio asincrono]: corrisponde alla chiamata di un metodo dal quale non si attende nulla. Lo si indica con una freccia nera non piena accompagnata da un'etichetta identica a quella utilizzata per messaggi sincroni.
@@ -542,7 +542,7 @@ Le varabili andrebbero inizializzate il prima possibile: ad ogni definizione and
 
 \subparagraph{Ricorsione}%
 \label{subp:ricorsione}
-La ricorsione come paradigma di programmazione va usata con moderazione poichè un uso sconsiderato può portare a una maggiore occupazione di memoria rispetto alla controparte iterativa.
+La ricorsione come paradigma di programmazione va usata con moderazione poiché un uso sconsiderato può portare a una maggiore occupazione di memoria rispetto alla controparte iterativa.
 L'uso della ricorsione andrebbe motivato con appositi commenti.
 % subp:ricorsione (end)
 % subp:indentazione (end)
@@ -630,19 +630,19 @@ La metrica requisiti obbligatori soddisfatti indica la percentuale di requisiti 
   \frac{requisiti\ obbligatori\ soddisfatti}{requisiti\ obbligatori\ totali}\cdot 100
 \]
 % TODO scrivi metriche di codifica (grosso)
-\paragraph{MPS-NFV: Nomi di file e variabili non normati}
+\paragraph{MPS-NFV: Nomi di file e variabili non normati}% in questo caso NON ci va il "\@". chktex 13
 \label{par:MPS-NFV_nomi_file_variabili_non_normati}
 
 I nomi dei file o delle variabili devono seguire delle specifiche regole per essere più chiare possibile.
 \textbf{Metrica:} numero di nomi di variabili o di titoli di metodi o classi che non rispettano le norme stabilite.
 
-\paragraph{MPS-CNN: Commenti non normati}
+\paragraph{MPS-CNN: Commenti non normati}% in questo caso NON ci va il "\@". chktex 13
 \label{par:MPS-CNN_commenti_non_normati}
 
 I commenti devono essere scritti seguendo le norme indicate per essere comprensibili.
 \textbf{Metrica:} numero di commenti che non rispettano le norme indicate.
 
-\paragraph{MPS-CCE: Complessità ciclomatica eccessiva}
+\paragraph{MPS-CCE: Complessità ciclomatica eccessiva}% in questo caso NON ci va il "\@". chktex 13
 \label{par:MPS-CCE_complessita_ciclomatica_eccessiva}
 una sezione di codice è il numero di cammini linearmente indipendenti attraverso il codice sorgente
 
@@ -654,7 +654,7 @@ La formula che calcola la complessità ciclomatica è la seguente:
 \]
 dove:
 \begin{description}
-  \item[v(G):] complessità ciclomatica del grafo G.
+  \item[v(G):] complessità ciclomatica del grafo G. % chktex 36
   \item[e:] numero di archi del grafo.
   \item[n:] numero di nodi del grafo.
   \item[p:] numero di componenti connesse.
@@ -663,7 +663,7 @@ dove:
 
 \paragraph{MPS-014: Classi che implementano classi concrete}%
 \label{par:MPS-014_classi_implementano_concrete}
-L'ereditarietà tra classi andrebbe evitata poichè la presenza di dipendenze tra più componenti ne ostacola la modifica e la verifica.
+L'ereditarietà tra classi andrebbe evitata poiché la presenza di dipendenze tra più componenti ne ostacola la modifica e la verifica.
 
 \textbf{Metrica:} numero di classi che ereditano un'altra classe concreta.
 
