@@ -18,7 +18,7 @@
   \item[Attori primari:] utente autenticato;
   \item[Attori secondari:] server LDAP\@;
   \item[Precondizione:] l'utente visualizza la pagina relativa al recupero delle organizzazioni;
-  \item[Postcondizione:] l'utente seleziona una o più organizzazioni ed è quindi collegato;
+  \item[Postcondizione:] l'utente sceglie una o più organizzazioni ed è quindi collegato;
   \item[Scenario principale:]
         \begin{enumerate}
           \item l'utente ha la possibilità di recuperare una lista di organizzazioni alla quale si può collegare;
@@ -50,31 +50,31 @@
 \end{description}
 
 
-\subsubsection{UUC3.2: Seleziona organizzazioni}%
+\subsubsection{UUC3.2: Scelta organizzazioni}%
 \label{subs:UUC3.2}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=150mm]{autenticazione-ldap-organizzazione.png}
-  \caption{UUC3.2: Seleziona organizzazioni}%
+  \caption{UUC3.2: Scelta organizzazioni}%
   \label{fig:UUC3.2}
 \end{figure}
 
 \begin{description}
   \item[Caso d’uso:] UUC3.2;
-  \item[Titolo:] Seleziona organizzazioni;
+  \item[Titolo:] Scelta organizzazioni;
   \item[Attori primari:] utente autenticato;
-  \item[Attori secondari:] server LDAP;
+  \item[Attori secondari:] server LDAP\@;
   \item[Precondizione:] l'utente visualizza la lista delle organizzazioni alla quale si può collegare;
-  \item[Postcondizione:] l'utente ha selezionato una o più organizzazioni ed è quindi collegato;
+  \item[Postcondizione:] l'utente ha scelto una o più organizzazioni ed è quindi collegato;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'utente ha la possibilità di selezionare una o più organizzazioni;
+          \item l'utente ha la possibilità di scegliere una o più organizzazioni;
           \item in caso l'organizzazione alla quale l'utente vuole autenticarsi sia privata, è richiesta l'autenticazione tramite il server LDAP, inserendo le credenziali rilasciate dall'organizzazione e univoche per tutti gli utenti interessati ad essere monitorati. In caso contrario, non è richiesta alcuna autenticazione e l'utente si collega direttamente all'organizzazione.
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item in caso di rete mancante, non possono essere selezionate organizzazioni e quindi verrà notificato un errore~\ref{subs:UUC11};
+          \item in caso di rete mancante, non possono essere scelte organizzazioni e quindi verrà notificato un errore~\ref{subs:UUC11};
           \item se l'utente si vuole collegare ad un'organizzazione privata e le credenziali inserite dall'utente non corrispondono a quelle dell'organizzazione, allora visualizzerà un errore~\ref{subs:UUC3.2.3}.
         \end{enumerate}
 \end{description}
@@ -85,7 +85,7 @@
   \item[Caso d’uso:] UUC3.2.1;
   \item[Titolo:] Inserimento username organizzazione;
   \item[Attori primari:] utente autenticato;
-  \item[Precondizione:] l'utente ha selezionato un'organizzazione privata e non ha ancora inserito lo username dell'organizzazione;
+  \item[Precondizione:] l'utente ha scelto un'organizzazione privata e non ha ancora inserito lo username dell'organizzazione;
   \item[Postcondizione:] l'utente ha inserito lo username dell'organizzazione privata;
   \item[Scenario principale:]
         \begin{enumerate}
@@ -103,7 +103,7 @@
   \item[Caso d’uso:] UUC3.2.2;
   \item[Titolo:] Inserimento password organizzazione;
   \item[Attori primari:] utente autenticato;
-  \item[Precondizione:] l'utente ha selezionato un'organizzazione privata e non ha ancora inserito la password dell'organizzazione;
+  \item[Precondizione:] l'utente ha scelto un'organizzazione privata e non ha ancora inserito la password dell'organizzazione;
   \item[Postcondizione:] l'utente ha inserito la password dell'organizzazione privata;
   \item[Scenario principale:]
         \begin{enumerate}
