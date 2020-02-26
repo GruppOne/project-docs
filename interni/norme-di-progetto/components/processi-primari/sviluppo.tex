@@ -505,6 +505,15 @@ Una cattiva prassi è utilizzare l’ereditarietà tra classi concrete, ovvero c
 L'ottima prassi da applicare è utilizzare l'ereditarietà di interfacce, in modo da riutilizzare il comportamento dei metodi astratti definiti nelle interfacce.
 Ergo, è da preferire la composizione sopra l'ereditarietà, adottando il principio di “Composition over inheritance”.
 
+\subparagraph{Indentazione}%
+\label{subp:indentazione}
+Le indentazioni devono rispettare le seguenti sepcifiche:
+\begin{itemize}
+  \item I blocchi annidati devono essere indentati con quattro (4) spazi
+  \item Non è possibile utilizzare tabulazioni per l'indentatura, è obbligatorio utilizzare il numero di spazi appropriato.
+\end{itemize}
+
+% subp:indentazione (end)
 \subsubsection{Strumenti}%
 \label{subs:strumenti}
 
@@ -620,6 +629,13 @@ dove:
 \end{description}
 \textbf{Metrica:} numero di metodi che hanno \[v(G) > 3\].
 
+\paragraph{MPS-014: Classi che implementano classi concrete}%
+\label{par:MPS-014_classi_implementano_concrete}
+L'ereditarietà tra classi andrebbe evitata poichè la presenza di dipendenze tra più componenti ne ostacola la modifica e la verifica.
+
+\textbf{Metrica:} numero di classi che ereditano un'altra classe concreta.
+
+% par:MPS-014_classi_implementano_concrete (end)
 %Metrica ereditarietà da implementare
 %MPS014 Classi che implementano classi concrete
 %L’ereditarietà tra classi deve essere evitata perché la presenza di dipendenze tra più componenti
