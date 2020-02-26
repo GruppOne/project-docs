@@ -8,6 +8,8 @@
       "args": [
         "-jar",
         "${env:PLANTUML_JAR}",
+        "-progress",
+        "-failfast",
         "-checkmetadata",
         "-charset",
         "UTF-8",

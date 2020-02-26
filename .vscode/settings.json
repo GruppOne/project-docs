@@ -3,6 +3,7 @@
   //   "editor.formatOnSave": true,
   // },
   "files.eol": "\n",
+  "files.encoding": "utf8",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "editor.detectIndentation": false,
@@ -46,7 +47,7 @@
     }
   ],
   "latex-workshop.chktex.enabled": true,
-  "latex-workshop.chktex.run": "onSave",
+  "latex-workshop.chktex.run": "onType",
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.clean.subfolder.enabled": true,
   "latex-workshop.latexindent.args": [
@@ -54,6 +55,13 @@
     "%DIR%/",
     "%TMPFILE%",
     "-y=defaultIndent: '  '"
+  ],
+  "latex-workshop.view.outline.sections": [
+    "section",
+    "subsection",
+    "subsubsection",
+    "paragraph",
+    "subparagraph"
   ],
   "spellright.documentTypes": [
     "diagram",
