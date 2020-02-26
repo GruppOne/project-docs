@@ -121,7 +121,7 @@ Possono essere di quattro differenti tipi:
 \label{par:progettazione}
 L'attività di progettazione precede la codifica e si occupa di organizzare le componenti del sistema cercando una soluzione che possa soddisfare tutti gli stakeholders e che adempia alle necessità e hai bisogni definiti nell'\textit{Analisi dei requisiti}.
 
-Essa procede inversamente rispetto a quest`ultima la quale adotta un approccio investigativo, di studio del dominio applicativo e di scomposizione dei requisiti.
+Essa procede inversamente rispetto a quest'ultima la quale adotta un approccio investigativo, di studio del dominio applicativo e di scomposizione dei requisiti.
 La progettazione cerca, invece, di fissare l'\glossario{architettura} del prodotto adottando un approccio di tipo sistematico.
 
 Essa si pone i seguenti obiettivi:
@@ -259,7 +259,7 @@ Una classe, in UML, ha la sottostante rappresentazione:
           @enduml
         \end{minted}
     \end{center}
-    \item [Composizione]: la composizione è una forma di aggregazione più forte e si ha quando un oggetto di classe A gestisce completamente gli oggetti di tipo B. La composizione si rappresenta allo stesso modo dell'aggregazione, ma a differenza di quest`ultima il diamante è colorato di nero.
+    \item [Composizione]: la composizione è una forma di aggregazione più forte e si ha quando un oggetto di classe A gestisce completamente gli oggetti di tipo B. La composizione si rappresenta allo stesso modo dell'aggregazione, ma a differenza di quest'ultima il diamante è colorato di nero.
     \begin{center}
         \begin{minted} {text}
           @startuml
@@ -634,12 +634,14 @@ La metrica requisiti obbligatori soddisfatti indica la percentuale di requisiti 
 \label{par:MPS-NFV_nomi_file_variabili_non_normati}
 
 I nomi dei file o delle variabili devono seguire delle specifiche regole per essere più chiare possibile.
+
 \textbf{Metrica:} numero di nomi di variabili o di titoli di metodi o classi che non rispettano le norme stabilite.
 
 \paragraph{MPS-CNN: Commenti non normati}% in questo caso NON ci va il "\@". chktex 13
 \label{par:MPS-CNN_commenti_non_normati}
 
 I commenti devono essere scritti seguendo le norme indicate per essere comprensibili.
+
 \textbf{Metrica:} numero di commenti che non rispettano le norme indicate.
 
 \paragraph{MPS-CCE: Complessità ciclomatica eccessiva}% in questo caso NON ci va il "\@". chktex 13
@@ -661,18 +663,13 @@ dove:
 \end{description}
 \textbf{Metrica:} numero di metodi che hanno \[v(G) > 3.\]
 
-\paragraph{MPS-014: Classi che implementano classi concrete}%
-\label{par:MPS-014_classi_implementano_concrete}
+\paragraph{MPS-ICC: Classi che implementano classi concrete}%
+\label{par:MPS-ICC_classi_implementano_concrete}
 L'ereditarietà tra classi andrebbe evitata poiché la presenza di dipendenze tra più componenti ne ostacola la modifica e la verifica.
 
 \textbf{Metrica:} numero di classi che ereditano un'altra classe concreta.
 
 % par:MPS-014_classi_implementano_concrete (end)
-%Metrica ereditarietà da implementare
-%MPS014 Classi che implementano classi concrete
-%L’ereditarietà tra classi deve essere evitata perché la presenza di dipendenze tra più componenti
-%ne ostacola la modifica e la verifica.
-%Metrica: numero di classi che ereditano un’altra classe concreta.
 
 % TODO basta scrivere statement/branch/decision coverage per ora?
 % Per il momento le lasciamo perdere le rimandiamo alla progettazione architetturale
