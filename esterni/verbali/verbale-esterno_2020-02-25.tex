@@ -1,15 +1,16 @@
 \documentclass{article}
+
 \input{../../commons/config}
-
 \appendToGraphicspath{../../commons/img/}
+\setDataVerbale{25/02/2020}
 
-\title{Verbale esterno --- 25/02/2020}
+\title{Verbale esterno --- \dataVerbale{}}
 
 \setResponsabile{Alessandro Rizzo}
 \setRedattori{Alessandro Rizzo}
 \setVerificatori{ Alberto Cocco }
 \setUso{Esterno}
-\setDescrizione{Verbale dell'incontro di GruppOne del 25/02/2020}
+\setDescrizione{Verbale dell'incontro di GruppOne del \dataVerbale{}}
 \setModifiche{%
 \cellcolor{white!80!lightgray!100}& Alessandro Rizzo & 2020--02--27 & approva documento \\%
 \cellcolor{white!80!lightgray!100}& Alberto Cocco & 2020--02--26 & verifica verbale \\%
@@ -25,7 +26,7 @@
 
 \begin{description}
   \item [Luogo] chiamata Hangouts
-  \item [Data] 25/02/2020
+  \item [Data] \dataVerbale{}
   \item [Ora] 12:30 \symbol{8594} 12:55
 \end{description}
 
@@ -77,7 +78,7 @@ In caso il modo corretto di modellare un caso d'uso di questo tipo sarebbe preve
 \label{sec:discussione_auc3}
 \textbf{Domanda:} \textit{AUC3: le inclusioni non sono (\ldots) AUC4: inclusioni non corrette.} Non ci è chiaro il motivo per il quale le inclusioni nei seguenti casi d'uso non sono corrette.
 
-\textbf{Risposta:} Analogamente a quanto scritto prima la funzionalità di selezione di organizzazione non esiste di fatto e in questo caso nemmeno l'invio di richiesta di aggiornamento delle organizzazioni è una funzionalità esprimibile nei casi d'uso poichè è una azione automatica del sistema.
+\textbf{Risposta:} Analogamente a quanto scritto prima la funzionalità di selezione di organizzazione non esiste di fatto e in questo caso nemmeno l'invio di richiesta di aggiornamento delle organizzazioni è una funzionalità esprimibile nei casi d'uso poiché è una azione automatica del sistema.
 Il professore ha compreso l'intento del gruppo di fornire la possibilità di collegarsi, eliminare e modificare più organizzazioni insieme e ha suggerito se si desidera implementare queste funzionalità di definirle in casi d'uso appositi (e.g. Eliminazione di più organizzazioni).
 % sec:discussione_auc3 (end)
 
@@ -86,13 +87,13 @@ Il professore ha compreso l'intento del gruppo di fornire la possibilità di col
 \textbf{Domanda:} \textit{Manca il tracciamento tra casi d’uso e requisiti}. Anche qui non ci è chiaro esattamente che modifiche dovremmo attuare.
 
 \textbf{Risposta:} Nel documento \textit{Analisi dei Requisiti v0.0.8} è presente solamente la tabella che correla i requisiti ai casi d'uso e non viceversa.
-La prima correlazione ci permette di appurare che tutti i requisiti siano necessari perchè derivano da un caso d'uso, la seconda che tutti i casi d'uso siano necessari perchè si concretizzano in un requisito.
+La prima correlazione ci permette di appurare che tutti i requisiti siano necessari perché derivano da un caso d'uso, la seconda che tutti i casi d'uso siano necessari perché si concretizzano in un requisito.
 Inoltre la tabella che collega le fonti con i casi d'uso e poco indicativa e non fornisce informazioni utili.
 % sec:discussione_tracciamento_casi_requisiti (end)
 
 \section{Domanda sul PoC}%
 \label{sec:domanda_poc}
-\textbf{Domanda:} Qual'è il nostro obiettivo con il PoC?\@ Che grado di comprensione delle tecnologie dobbiamo dimostrare di aver raggiunto?
+\textbf{Domanda:} Qual è il nostro obiettivo con il PoC?\@ Che grado di comprensione delle tecnologie dobbiamo dimostrare di aver raggiunto?
 
 \textbf{Risposta:} Il professore ci ha consigliato di raggiungere il massimo grado di integrazione tra il maggior numero di tecnologie possibili nel PoC con lo scopo di dimostrare la piena padronanza delle suddette.
 % sec:domanda_poc (end)
