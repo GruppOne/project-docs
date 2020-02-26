@@ -155,8 +155,11 @@ Ha il compito di mostrare l'architettura del prodotto attraverso la creazione di
 
 \subparagraph{Qualità di una buona architettura}%
 \label{subp:qualita_di_una_buona_architettura}
-
-Durante il periodo di progettazione architetturale i progettisti effettuano una progettazione ``ad alto livello'' e si impegnano ad individuare le principali componenti del sistema e a definirne le relazioni. Il prodotto della progettazione architetturale è un modello che descrive come le parti interagiscano tra di loro. Nel periodo di progettazione in dettaglio, invece, si definiscono con maggiore precisione le singole unità del sistema che devono essere coese, rapide e verificabili in modo da agevolare i programmatori nella codifica. Essendo l'architettura a garantire l'organizzazione e la coesione dei componenti si intuisce come rivesta un ruolo fondamentale per ottenere un prodotto di qualità. A tal proposito essa dovrà avere le seguenti caratteristiche:
+Durante il periodo di progettazione architetturale i progettisti effettuano una progettazione ``ad alto livello'' e si impegnano ad individuare le principali componenti del sistema e a definirne le relazioni. 
+Il prodotto della progettazione architetturale è un modello che descrive come le parti interagiscano tra di loro. 
+Nel periodo di progettazione in dettaglio, invece, si definiscono con maggiore precisione le singole unità del sistema che devono essere coese, rapide e verificabili in modo da agevolare i programmatori nella codifica.
+Essendo l'architettura a garantire l'organizzazione e la coesione dei componenti si intuisce come rivesta un ruolo fondamentale per ottenere un prodotto di qualità. 
+A tal proposito essa dovrà avere le seguenti caratteristiche:
 \begin{description}
   \item [Sufficienza]: deve soddisfare tutti i requisiti definiti nel documento di \textit{Analisi dei requisiti}.
   \item [Comprensibilità]: deve essere comprensibile a tutti gli stakeholders.
@@ -186,6 +189,7 @@ Tali diagrammi includono:
   \item Diagrammi di sequenza: definiscono come gli oggetti collaborano tra di loro per riprodurre un comportamento comune.
 \end{itemize}
 Nei prossimi paragrafi verranno presentate le norme a cui i progettisti dovranno attenersi nella produzione dei diagrammi.
+
 \subparagraph{Diagrammi delle classi}%
 \label{subp:diagrammi_delle_classi}
 Una classe, in UML, ha la sottostante rappresentazione:
@@ -196,7 +200,8 @@ Una classe, in UML, ha la sottostante rappresentazione:
   \caption{diagramma delle classi realizzato con PlantUML}
 \end{figure}
 \begin{description}
-  \item [Nomi e visibilità]: i nomi di classi, campi dati e metodi andranno indicati in minuscolo e scritti in lingua inglese. Inoltre, come in un vero e proprio linguaggio di programmazione in UML è possibile indicare la visibilità di una variabile o di un metodo:
+  \item [Nomi e visibilità]: i nomi di classi, campi dati e metodi andranno indicati in minuscolo e scritti in lingua inglese.
+   Inoltre, come in un vero e proprio linguaggio di programmazione in UML è possibile indicare la visibilità di una variabile o di un metodo:
         \begin{description}
           \item [-]: visibilità privata
           \item [\#]: visibilità protetta
@@ -213,7 +218,10 @@ Una classe, in UML, ha la sottostante rappresentazione:
         \textit{-field1: String} \\\textit{+method1: int}
     \end{center}
   \end{itemize}
-  \item [Relazioni]: una relazione di dipendenza indica una dipendenza logica presente tra due elementi del diagramma e si ha quando la modifica di un oggetto implica il cambiamento di un altro oggetto. Esistono molteplici tipi di dipendenze e ognuna induce differenti gradi di dipendenza tra gli oggetti.Compito del progettista sarà quello di minimizzare il numero di dipendenze, utilizzandole solo ove necessario al fine di attribuire un valore aggiunto al significato del proprio diagramma. Di seguito verranno elencate i tipi di relazioni di dipendenza possibili, ordinati per grado di dipendenza crescente.
+  \item [Relazioni]: una relazione di dipendenza indica una dipendenza logica presente tra due elementi del diagramma e si ha quando la modifica di un oggetto implica il cambiamento di un altro oggetto.
+  Esistono molteplici tipi di dipendenze e ognuna induce differenti gradi di dipendenza tra gli oggetti.
+  Compito del progettista sarà quello di minimizzare il numero di dipendenze, utilizzandole solo ove necessario al fine di attribuire un valore aggiunto al significato del proprio diagramma. 
+  Di seguito verranno elencate i tipi di relazioni di dipendenza possibili, ordinati per grado di dipendenza crescente.
   \begin{description}
     \item [Dipendenza]: la dipendenza può verificarsi in due casi:
       \begin{itemize}
@@ -232,28 +240,32 @@ Una classe, in UML, ha la sottostante rappresentazione:
         \centering
         \caption{Esempio di relazione di dipendenza}
       \end{figure}
-    \item [Assocazione]: l'associazione si verifica quando un oggetto di classe A ha un campo dati di tipo B. L'associazione si indica con una linea continua come nell'immagine sottostante:
+    \item [Assocazione]: l'associazione si verifica quando un oggetto di classe A ha un campo dati di tipo B.
+     L'associazione si indica con una linea continua come nell'immagine sottostante:
     \begin{figure}[H]%
       \label{fig:associazione}
       \includegraphics[width=5cm]{associazione.png}
       \centering
       \caption{Esempio di relazione di associazione}
     \end{figure}
-    \item [Aggregazione]: l'aggregazione prevede che una classe di tipo A crei esplicitamente tramite il proprio costruttore degli oggetti di tipo B. L'aggregazione si rappresenta tramite una linea continua e un diamante che sta graficamente dalla parte di chi crea la dipendenza. Ad esempio:
+    \item [Aggregazione]: l'aggregazione prevede che una classe di tipo A crei esplicitamente tramite il proprio costruttore degli oggetti di tipo B. 
+    L'aggregazione si rappresenta tramite una linea continua e un diamante che sta graficamente dalla parte di chi crea la dipendenza. Ad esempio:
     \begin{figure}[H]%
       \label{fig:aggregazione}
       \includegraphics[width=5cm]{aggregazione.png}
       \centering
       \caption{Esempio di relazione di aggregazione}
     \end{figure}
-    \item [Composizione]: la composizione è una forma di aggregazione più forte e si ha quando un oggetto di classe A gestisce completamente gli oggetti di tipo B. La composizione si rappresenta allo stesso modo dell'aggregazione, ma a differenza di quest`ultima il diamante è colorato di nero.
+    \item [Composizione]: la composizione è una forma di aggregazione più forte e si ha quando un oggetto di classe A gestisce completamente gli oggetti di tipo B. 
+    La composizione si rappresenta allo stesso modo dell'aggregazione, ma a differenza di quest`ultima il diamante è colorato di nero.
     \begin{figure}[H]%
       \label{fig:composizione}
       \includegraphics[width=5cm]{composizione.png}
       \centering
       \caption{Esempio di relazione di composizione}
     \end{figure}
-    \item [Ereditarietà]: l'ereditarietà si ha quando un classe B deriva da una classe di tipo A. Ovviamente è preferibile ereditare da classi astratte o interfacce, mentre l'ereditarietà da tipi concreti sarebbe in ogni caso da evitare. Si rappresenta così:
+    \item [Ereditarietà]: l'ereditarietà si ha quando un classe B deriva da una classe di tipo A. 
+    Ovviamente è preferibile ereditare da classi astratte o interfacce, mentre l'ereditarietà da tipi concreti sarebbe in ogni caso da evitare. Si rappresenta così:
     \begin{figure}[H]%
       \label{fig:ereditarieta}
       \includegraphics[width=2.1cm]{ereditarietà.png}
@@ -261,7 +273,9 @@ Una classe, in UML, ha la sottostante rappresentazione:
       \caption{Esempio di relazione di ereditarietà}
     \end{figure}
   \end{description}
-  \item [Molteplicità]: la molteplicità è uno strumento che permette di specificare quanti oggetti posso fare parte dell'associazione. Ogni molteplicità è una sigla costituita da numeri e simboli. Elenchiamo quelle di cui i progettisti dovranno fare uso:
+  \item [Molteplicità]: la molteplicità è uno strumento che permette di specificare quanti oggetti posso fare parte dell'associazione.
+   Ogni molteplicità è una sigla costituita da numeri e simboli. 
+   Elenchiamo quelle di cui i progettisti dovranno fare uso:
   \begin{description}
     \item [1]: una classe A ha una e una sola istanza di classe di B associata.
     \item [0..1]: una classe A può avere zero o una istanze di classe B associata.
@@ -272,14 +286,16 @@ Una classe, in UML, ha la sottostante rappresentazione:
 
 \subparagraph{diagrammi di package}%
 \label{subp:diagrammi_di_package}
-
-I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno stesso namespace. Hanno un'etichetta che identifica il nome, il quale deve essere in minuscolo e in inglese e possono contenere al loro interno altri sottopackage o classi. Inoltre le dipendenze tra package si indicano con frecce tratteggiate e dovrebbero tutte seguire la medesima direzione.
+I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno stesso namespace. 
+Hanno un'etichetta che identifica il nome, il quale deve essere in minuscolo e in inglese e possono contenere al loro interno altri sottopackage o classi.
+Inoltre le dipendenze tra package si indicano con frecce tratteggiate e dovrebbero tutte seguire la medesima direzione.
  \begin{figure}[H]%
     \label{fig:package}
     \includegraphics[width=5cm]{package.png}
     \centering
     \caption{diagramma dei package realizzato con PlantUML}
   \end{figure}
+
  \subparagraph{diagrammi delle attività}%
  \label{diagrammi_delle_attivita}%
  I diagrammi delle attività rappresentano l'insieme delle azioni che ne costituiscono il funzionamento. Un tipico diagramma delle attività in PlantUML è:
@@ -297,7 +313,10 @@ I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno
     \item Nodi di merge
     \item Fork e join.
   \end{itemize}
-  I diagrammi di attività si basano sulla produzione e consumo di token. Ogniqualvolta inizia il flusso di esecuzione e quindi ci trova nel nodo iniziale si genera un token. Branching e merging consumano e producono un token, la fork produce un token per ogni processo in parallelo in esecuzione mentre la join li consuma tutti e ne genera uno. Infine il nodo finale consuma tutti i token.
+  I diagrammi di attività si basano sulla produzione e consumo di token. 
+  Ogniqualvolta inizia il flusso di esecuzione e quindi ci trova nel nodo iniziale si genera un token. 
+  Branching e merging consumano e producono un token, la fork produce un token per ogni processo in parallelo in esecuzione mentre la join li consuma tutti e ne genera uno.
+  Infine il nodo finale consuma tutti i token.
   Altri elementi che possono essere utilizzati per realizzare diagrammi di attività più precisi sono:
   \begin{itemize}
     \item Swimlanes
@@ -311,28 +330,35 @@ I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno
       \centering
       \caption{Esempio di nodo iniziale}
     \end{figure}
-    \item[Nodo finale]: il nodo finale è presente in ogni diagramma e rappresenta il termine del flusso di esecuzione. In plantuml lo si raffigura come un cerchio contenente un altro cerchio colorato di nero:
+    \item[Nodo finale]: il nodo finale è presente in ogni diagramma e rappresenta il termine del flusso di esecuzione.
+    In plantuml lo si raffigura come un cerchio contenente un altro cerchio colorato di nero:
     \begin{figure}[H]%
       \label{fig:nodo_finale}
       \includegraphics[width=3cm]{nodo-finale.png}
       \centering
       \caption{Esempio di nodo finale}
     \end{figure}
-    \item[Nodi di branching]: i nodi di branching modellano delle decisioni. Hanno una guardia che indica quale test deve essere soddisfatto che si indica tramite un etichetta da affiancare al nodo di branching. Tali nodi si raffigurano mediante rombi vuoti e generalmente distinguono due branch:
+    \item[Nodi di branching]: i nodi di branching modellano delle decisioni. 
+    Hanno una guardia che indica quale test deve essere soddisfatto che si indica tramite un etichetta da affiancare al nodo di branching. 
+    Tali nodi si raffigurano mediante rombi vuoti e generalmente distinguono due branch:
     \begin{figure}[H]%
       \label{fig:nodo_di_branch}
       \includegraphics[width=5cm]{nodo-di-branch.png}
       \centering
       \caption{Esempio nodo di branching}
     \end{figure}
-     \item[Nodi di merge]: i nodi di merge sono il punto in cui i rami generati da un nodo di branching tornano ad unirsi. Hanno la stessa rappresentazione dei nodi di branching.
+     \item[Nodi di merge]: i nodi di merge sono il punto in cui i rami generati da un nodo di branching tornano ad unirsi.
+     Hanno la stessa rappresentazione dei nodi di branching.
     \begin{figure}[H]%
       \label{fig:nodo_di_merge}
       \includegraphics[width=5cm]{nodo-di-merge.png}
       \centering
       \caption{Esempio di nodo di merge}
     \end{figure}
-     \item[Fork e join]: Fork e join sono necessari a rappresentare l'esecuzione parallela e concorrente. Ogniqualvolta il flusso di esecuzione incontra una fork il flusso di esecuzione diventa pari al numero di frecce uscenti dalla fork. Non è possibile terminare il flusso con più linee di esecuzione contemporaneamente attive ma è necessario che ci sia successivamente una join che ripristini l'unico flusso iniziale. Fork e join si rappresentano allo stesso modo, tramite una barra orizzontale colorata di nero. Ad esempio:
+     \item[Fork e join]: Fork e join sono necessari a rappresentare l'esecuzione parallela e concorrente. 
+     Ogniqualvolta il flusso di esecuzione incontra una fork il flusso di esecuzione diventa pari al numero di frecce uscenti dalla fork.
+     Non è possibile terminare il flusso con più linee di esecuzione contemporaneamente attive ma è necessario che ci sia successivamente una join che ripristini l'unico flusso iniziale.
+     Fork e join si rappresentano allo stesso modo, tramite una barra orizzontale colorata di nero. Ad esempio:
     \begin{figure}[H]%
       \label{fig:fork_e_join}
       \includegraphics[width=5cm]{fork-e-join.png}
@@ -346,19 +372,25 @@ I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno
       \centering
       \caption{Esempio di swimlanes}
     \end{figure}
-   \item[Segnali]: I segnali servono per gestire eventi. PlantUML non offre un buon supporto per i segnali e ne offre una versione in beta. Ne esistono di due tipi:
+   \item[Segnali]: I segnali servono per gestire eventi.
+   PlantUML non offre un buon supporto per i segnali e ne offre una versione in beta.
+   Ne esistono di due tipi:
    \begin{itemize}
     \item Segnali di input
     \item Segnali di output.
    \end{itemize}
-   \item [Input]: i segnali di input aspettano una risposta proveniente dall'esterno.Possono essere la prima azione del diagramma. Si rappresentano così:
+   \item [Input]: i segnali di input aspettano una risposta proveniente dall'esterno.
+   Possono essere la prima azione del diagramma.
+   Si rappresentano così:
    \begin{figure}[H]%
       \label{fig:input}
       \includegraphics[width=5cm]{input.png}
       \centering
       \caption{Esempio segnale di input}
     \end{figure}
-   \item [Output]: i segnali di output chiedono che venga inserito un input dall'esterno. Inoltre non possono essere la prima azione del diagramma. La loro rappresentazione è la seguente:
+   \item [Output]: i segnali di output chiedono che venga inserito un input dall'esterno.
+   Inoltre non possono essere la prima azione del diagramma.
+   La loro rappresentazione è la seguente:
    \begin{figure}[H]%
     \label{fig:segnale_di_output}
     \includegraphics[width=5cm]{output.png}
@@ -366,16 +398,25 @@ I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno
     \caption{Esempio segnale di output}
   \end{figure}
 \end{description}
+
 \subparagraph{Diagrammi di sequenza}%
 \label{subp:diagrammi_di_sequenza}
-
-I diagrammi di sequenza rappresentano dettagliatamente come gli oggetti interagiscono tra di loro mediante messaggi. Ogni entità del diagramma è collegata mediante una linea tratteggiata verticale ad un'altra entità con lo stesso contenuto. Tale linea indica il passare del tempo. Le entità del diagramma si scambiano messaggi sotto forma di frecce che assumono una diversa struttura a seconda del tipo di messaggio che si sta inviando. Segue un elenco delle tipologie di messaggi che due entità possono scambiarsi:
+I diagrammi di sequenza rappresentano dettagliatamente come gli oggetti interagiscono tra di loro mediante messaggi.
+Ogni entità del diagramma è collegata mediante una linea tratteggiata verticale ad un'altra entità con lo stesso contenuto.
+Tale linea indica il passare del tempo.
+Le entità del diagramma si scambiano messaggi sotto forma di frecce che assumono una diversa struttura a seconda del tipo di messaggio che si sta inviando.
+Segue un elenco delle tipologie di messaggi che due entità possono scambiarsi:
 \begin{description}
-  \item [Messaggio sincrono]: corrisponde alla chiamata di un metodo dal quale si attende un valore di ritorno. Lo si indica con una freccia continua nera piena accompagnata da un'etichetta contenente il tipo di metodo chiamato nella forma \textit{nomeMetodo (listaParametri)} dove la firma del metodo deve essere in lingua inglese e la lista di parametri deve essere nella forma \textit{nomeParametro1:tipo1, nomeParametro2:tipo2,\ldots}.
-  \item [Messaggio asincrono]: corrisponde alla chiamata di un metodo dal quale non si attende nulla. Lo si indica con una freccia nera non piena accompagnata da un'etichetta identica a quella utilizzata per messaggi sincroni.
-  \item [Messaggio di ritorno]: corrisponde ad un messaggio contenente il valore ritornato dalla chiamata di un metodo. Lo si indica con una freccia tratteggiata nera non piena accompagnata da un'etichetta contenente il tipo di valore ritornato.
-  \item [Messaggio di creazione]: rappresenta un messaggio che chiede la creazione di un nuovo oggetto. Lo si indica con una freccia tratteggiata non piena seguita da un rettangolo contenente l'oggetto creato e accompagnata da un'etichetta contenente la parola \textit{<<create>>}.
-  \item [Messaggio di distruzione]: rappresenta un messaggio che chiede la distruzione di un oggetto. Lo si indica con con una linea nera  seguita da una X e accompagnata da un'etichetta contenente la parola \textit{<<destroy>>}.
+  \item [Messaggio sincrono]: corrisponde alla chiamata di un metodo dal quale si attende un valore di ritorno.
+  Lo si indica con una freccia continua nera piena accompagnata da un'etichetta contenente il tipo di metodo chiamato nella forma \textit{nomeMetodo (listaParametri)} dove la firma del metodo deve essere in lingua inglese e la lista di parametri deve essere nella forma \textit{nomeParametro1:tipo1, nomeParametro2:tipo2,\ldots}.
+  \item [Messaggio asincrono]: corrisponde alla chiamata di un metodo dal quale non si attende nulla.
+  Lo si indica con una freccia nera non piena accompagnata da un'etichetta identica a quella utilizzata per messaggi sincroni.
+  \item [Messaggio di ritorno]: corrisponde ad un messaggio contenente il valore ritornato dalla chiamata di un metodo.
+  Lo si indica con una freccia tratteggiata nera non piena accompagnata da un'etichetta contenente il tipo di valore ritornato.
+  \item [Messaggio di creazione]: rappresenta un messaggio che chiede la creazione di un nuovo oggetto.
+  Lo si indica con una freccia tratteggiata non piena seguita da un rettangolo contenente l'oggetto creato e accompagnata da un'etichetta contenente la parola \textit{<<create>>}.
+  \item [Messaggio di distruzione]: rappresenta un messaggio che chiede la distruzione di un oggetto.
+  Lo si indica con con una linea nera  seguita da una X e accompagnata da un'etichetta contenente la parola \textit{<<destroy>>}.
 \end{description}
 Un esempio di diagramma di sequenza corretto realizzato con PlantUML è il seguente:
 \begin{figure}[H]%
@@ -384,14 +425,18 @@ Un esempio di diagramma di sequenza corretto realizzato con PlantUML è il segue
   \centering
   \caption{diagramma di sequenza realizzato con PlantUML}
 \end{figure}
-È possibile inoltre utilizzare delle cosiddette barre di attivazione per rendere immediatamente visibile a chi osserva il diagramma quando un'entità è attiva. L`uso delle barre di attivazione non è obbligatorio ma è fortemente consigliato.Il diagramma di prima con le barre di attivazione apparirebbe così:
+È possibile inoltre utilizzare delle cosiddette barre di attivazione per rendere immediatamente visibile a chi osserva il diagramma quando un'entità è attiva. 
+L`uso delle barre di attivazione non è obbligatorio ma è fortemente consigliato.
+Il diagramma di prima con le barre di attivazione apparirebbe così:
 \begin{figure}[H]%
   \label{fig:barre_attivazione}
   \includegraphics[width=7cm]{barre-attivazione.png}
   \centering
   \caption{Esempio barre di attivazione}
 \end{figure}
-Per modellare in maniera approfondita le interazioni fra oggetti è consigliato ai progettisti l'uso dei frame d'interazione introdotti in UML 2. Tali frame si rappresentano come dei rettangoli a cui viene associata un'etichetta che indica il tipo di frame d'interazione. Un esempio di diagramma di sequenza con i frame d'interazione è il seguente:
+Per modellare in maniera approfondita le interazioni fra oggetti è consigliato ai progettisti l'uso dei frame d'interazione introdotti in UML 2. 
+Tali frame si rappresentano come dei rettangoli a cui viene associata un'etichetta che indica il tipo di frame d'interazione.
+Un esempio di diagramma di sequenza con i frame d'interazione è il seguente:
 \begin{figure}[H]%
   \label{fig:frame_di_interazione}
   \includegraphics[width=7cm]{frame-interazione.png}
