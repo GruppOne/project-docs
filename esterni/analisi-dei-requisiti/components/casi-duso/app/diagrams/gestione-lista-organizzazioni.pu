@@ -7,7 +7,7 @@ actor :server LDAP: as B
 rectangle {
   together {
     usecase (UUC3.1) as "UUC3.1\nAggiornamento\nlista organizzazioni\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
-    usecase (UUC3.2) as "UUC3.2\nSeleziona organizzazioni\n--\nExtension points:\n-Visualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
+    usecase (UUC3.2) as "UUC3.2\nScelta organizzazioni\n--\nExtension points:\n-Visualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
     usecase (UUC11) as "UUC11\nVisualizzazione errore\nrete mancante"
   }
 
