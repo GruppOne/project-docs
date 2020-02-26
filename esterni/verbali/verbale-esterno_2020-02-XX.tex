@@ -1,0 +1,133 @@
+\documentclass{article}
+
+\input{../../commons/config}
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale esterno --- \placeholder{data incontro}}
+
+\setResponsabile{\placeholder{responsabile}}
+\setRedattori{Luca Ercole}
+\setVerificatori{
+  \placeholder{verificatori}
+}
+\setUso{Esterno}
+\setDescrizione{Verbale dell'incontro di GruppOne del \placeholder{data incontro}}
+\setModifiche{%
+}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Informazioni logistiche}%
+\label{sec:informazioni_logistiche}
+
+\begin{description}
+  \item [Luogo] chiamata Hangouts
+  \item [Data] \placeholder{data incontro}
+  \item [Ora] \placeholder{ora inizio} \symbol{8594} \placeholder{ora fine}
+\end{description}
+
+\subsection{Membri del gruppo presenti}%
+\label{sub:membri_del_gruppo_presenti}
+
+\placeholder{elencare membri presenti}
+% \begin{enumerate}
+  % \item Riccardo Agatea
+  % \item Tobia Apolloni
+  % \item Riccardo Cestaro
+  % \item Alberto Cocco
+  % \item Luca Ercole
+  % \item Alberto Gobbo
+  % \item Alessandro Rizzo
+  % \item Fabio Scettro
+% \end{enumerate}
+
+% sub:membri_del_gruppo_presenti (end)
+
+\subsection{Altri partecipanti}%
+\label{sub:altri_partecipanti}
+
+\begin{enumerate}
+  \item Davide Zanetti (Imola Informatica, proponente del capitolato)
+\end{enumerate}
+
+% sub:altri_partecipanti (end)
+% sec:informazioni_logistiche (end)
+
+\section{Introduzione}%
+\label{sec:introduzione}
+
+L'incontro è avvenuto tramite chiamata Hangouts.
+Lo scopo principale era di discutere e finalizzare le nostre scelte tecnologiche per il progetto.
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item Conversazione Telegram
+  \item Tecnologie backend
+  \item Tecnologie frontend
+  \item Metriche di qualità di prodotto.
+\end{itemize}
+
+\section{Conversazione Telegram}%
+\label{sec:conversazione_telegram}
+
+Riportiamo per completezza la conversazione avvenuta su telegram:
+
+\begin{enumerate}
+  \item Siamo convinti di partire da una specifica dell'API utilizzando OpenAPI v3 + i tool Swagger.
+        Hai consigli per il framework Java da utilizzare? Stiamo guardando Quarkus e Spring Boot o Spring Data, ma non avendo esperienza facciamo fatica a valutare quale sia più adatto e/o semplice da utilizzare.
+  \item Secondo te è una scelta valida utilizzare i framework NativeScript/angular per riutilizzare codice tra l'applicazione mobile e la web app?
+\end{enumerate}
+
+A cui Davide Zanetti ha risposto:
+
+\begin{enumerate}
+  \item Personalmente conosco bene spring boot e spring data (molto più diffusi negli ambienti dove lavoro), sono un po' più carente per quanto riguarda Quarkus (che comunque mi sembra interessante come framework).
+        Quindi, validi entrambi, sul primo posso aiutarvi più facilmente ed è abbastanza facile da usare, sul secondo non sono molto esperto ma se volete provarlo mi documento con voi.
+  \item Non sono molto pratico di questo ad essere onesto, provo ad informarmi con qualche collega più esperto e vedo di trovarvi una risposta sensata.
+\end{enumerate}
+
+% sec:conversazione_telegram (end)
+
+\section{Tecnologie backend}%
+\label{sec:tecnologie_lato_server}
+
+\placeholder{\dots}
+
+% sec:tecnologie_lato_server (end)
+
+\section{Tecnologie frontend}%
+\label{sec:tecnologie_frontend}
+
+% sec:tecnologie_frontend (end)
+
+\placeholder{\dots}
+
+\section{Metriche di qualità di prodotto}%
+\label{sec:metriche_di_qualita_di_prodotto}
+
+\placeholder{\dots}
+
+% sec:metriche_di_qualità_di_prodotto (end)
+
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+
+\begin{table}[H]
+  \centering
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \renewcommand{\arraystretch}{2}
+  \begin{tabular}{c b{13cm}}
+    \rowcolor{darkgray!90!}\color{white}{\textbf{Codice}} & \color{white}{\textbf{Decisione}} \\
+    \placeholder{\dots}
+  \end{tabular}
+  \caption{registro delle decisioni}%
+  \label{tab:registro delle decisioni}
+\end{table}
+% sec:registro_delle_decisioni (end)
+
+\end{document}
