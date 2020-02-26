@@ -189,19 +189,12 @@ Nei prossimi paragrafi verranno presentate le norme a cui i progettisti dovranno
 \subparagraph{Diagrammi delle classi}%
 \label{subp:diagrammi_delle_classi}
 Una classe, in UML, ha la sottostante rappresentazione:
-\begin{minted}{text}
-  @startuml
-  skinparam classAttributeIconSize 0
-  class dummy {
-    {static}-field1
-    #field2
-
-    ~method1()
-    +method2()
-  }
-@enduml
-\end{minted}
-
+\begin{figure}[H]%
+  \label{fig:classe_uml}
+  \includegraphics[width=3cm]{class-example.png}
+  \centering
+  \caption{diagramma delle classi realizzato con PlantUML}
+\end{figure}
 \begin{description}
   \item [Nomi e visibilità]: i nomi di classi, campi dati e metodi andranno indicati in minuscolo e scritti in lingua inglese. Inoltre, come in un vero e proprio linguaggio di programmazione in UML è possibile indicare la visibilità di una variabile o di un metodo:
         \begin{description}
@@ -233,49 +226,40 @@ Una classe, in UML, ha la sottostante rappresentazione:
         \item [\textit{<<create}]: A crea istanze di B.
       \end{description}
       La dipendenza si indica con una freccia tratteggiata come illustrato nell'immagine sottostante.
-      \begin{center}
-        \begin{minted} {text}
-          @startuml
-          left to right direction
-          class1 ..> class2
-          @enduml
-        \end{minted}
-      \end{center}
-    \item [Associazione]: l'associazione si verifica quando un oggetto di classe A ha un campo dati di tipo B. L'associazione si indica con una linea continua come nell'immagine sottostante:
-    \begin{center}
-        \begin{minted} {text}
-          @startuml
-          left to right direction
-          class1 -- class2
-          @enduml
-        \end{minted}
-    \end{center}
+      \begin{figure}[H]%
+        \label{fig:dipendenza}
+        \includegraphics[width=5cm]{dipendenza.png}
+        \centering
+        \caption{Esempio di relazione di dipendenza}
+      \end{figure}
+    \item [Assocazione]: l'associazione si verifica quando un oggetto di classe A ha un campo dati di tipo B. L'associazione si indica con una linea continua come nell'immagine sottostante:
+    \begin{figure}[H]%
+      \label{fig:associazione}
+      \includegraphics[width=5cm]{associazione.png}
+      \centering
+      \caption{Esempio di relazione di associazione}
+    \end{figure}
     \item [Aggregazione]: l'aggregazione prevede che una classe di tipo A crei esplicitamente tramite il proprio costruttore degli oggetti di tipo B. L'aggregazione si rappresenta tramite una linea continua e un diamante che sta graficamente dalla parte di chi crea la dipendenza. Ad esempio:
-    \begin{center}
-        \begin{minted} {text}
-          @startuml
-          left to right direction
-          class1 o-- class2
-          @enduml
-        \end{minted}
-    \end{center}
-    \item [Composizione]: la composizione è una forma di aggregazione più forte e si ha quando un oggetto di classe A gestisce completamente gli oggetti di tipo B. La composizione si rappresenta allo stesso modo dell'aggregazione, ma a differenza di quest'ultima il diamante è colorato di nero.
-    \begin{center}
-        \begin{minted} {text}
-          @startuml
-          left to right direction
-          class1 *-- class2
-          @enduml
-        \end{minted}
-    \end{center}
+    \begin{figure}[H]%
+      \label{fig:aggregazione}
+      \includegraphics[width=5cm]{aggregazione.png}
+      \centering
+      \caption{Esempio di relazione di aggregazione}
+    \end{figure}
+    \item [Composizione]: la composizione è una forma di aggregazione più forte e si ha quando un oggetto di classe A gestisce completamente gli oggetti di tipo B. La composizione si rappresenta allo stesso modo dell'aggregazione, ma a differenza di quest`ultima il diamante è colorato di nero.
+    \begin{figure}[H]%
+      \label{fig:composizione}
+      \includegraphics[width=5cm]{composizione.png}
+      \centering
+      \caption{Esempio di relazione di composizione}
+    \end{figure}
     \item [Ereditarietà]: l'ereditarietà si ha quando un classe B deriva da una classe di tipo A. Ovviamente è preferibile ereditare da classi astratte o interfacce, mentre l'ereditarietà da tipi concreti sarebbe in ogni caso da evitare. Si rappresenta così:
-    \begin{center}
-        \begin{minted} {text}
-          @startuml
-          class1 <|-- class2
-          @enduml
-        \end{minted}
-    \end{center}
+    \begin{figure}[H]%
+      \label{fig:ereditarieta}
+      \includegraphics[width=2.1cm]{ereditarietà.png}
+      \centering
+      \caption{Esempio di relazione di ereditarietà}
+    \end{figure}
   \end{description}
   \item [Molteplicità]: la molteplicità è uno strumento che permette di specificare quanti oggetti posso fare parte dell'associazione. Ogni molteplicità è una sigla costituita da numeri e simboli. Elenchiamo quelle di cui i progettisti dovranno fare uso:
   \begin{description}
@@ -290,41 +274,21 @@ Una classe, in UML, ha la sottostante rappresentazione:
 \label{subp:diagrammi_di_package}
 
 I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno stesso namespace. Hanno un'etichetta che identifica il nome, il quale deve essere in minuscolo e in inglese e possono contenere al loro interno altri sottopackage o classi. Inoltre le dipendenze tra package si indicano con frecce tratteggiate e dovrebbero tutte seguire la medesima direzione.
-\begin{center}
-  \begin{minted}{text}
-    @startuml
-    left to right direction
-    package package1 {
-      card class1
-      card class2
-    }
-    package package2 {
-      card class3
-      card class4
-    }
-    package1 ..> package2
-    @enduml
- \end{minted}
- \end{center}
+ \begin{figure}[H]%
+    \label{fig:package}
+    \includegraphics[width=5cm]{package.png}
+    \centering
+    \caption{diagramma dei package realizzato con PlantUML}
+  \end{figure}
  \subparagraph{diagrammi delle attività}%
  \label{diagrammi_delle_attivita}%
  I diagrammi delle attività rappresentano l'insieme delle azioni che ne costituiscono il funzionamento. Un tipico diagramma delle attività in PlantUML è:
- \begin{center}
-  \begin{minted}{text}
-    @startuml
-    (*) --> "Initialization"
-
-    if "Some Test" then
-      -->[true] "Some Activity"
-      --> "Another activity"
-      -right-> (*)
-    else
-      ->[false] "Something else"
-      -->[Ending process] (*)
-    endif
-    @enduml
-    \end{minted}
-  \end{center}
+  \begin{figure}[H]%
+    \label{fig:attività}
+    \includegraphics[width=5cm]{attività.png}
+    \centering
+    \caption{diagramma delle attività realizzato con PlantUML}
+  \end{figure}
   Gli elementi essenziali che li compongono sono:
   \begin{itemize}
     \item Nodo iniziale
@@ -341,107 +305,66 @@ I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno
   \end{itemize}
   \begin{description}
     \item[Nodo iniziale]: il nodo iniziale è presente in ogni diagramma e delinea il punto di inizio di ogni diagramma delle attività. In PlantUML lo si rappresenta mediante un cerchio colorato di nero come nella figura:
-    \begin{center}
-      \begin{minted}{text}
-        @startuml
-         (*) --> "Inizialitation"
-        @enduml
-      \end{minted}
-    \end{center}
+    \begin{figure}[H]%
+      \label{fig:nodo_iniziale}
+      \includegraphics[width=3cm]{nodo-iniziale.png}
+      \centering
+      \caption{Esempio di nodo iniziale}
+    \end{figure}
     \item[Nodo finale]: il nodo finale è presente in ogni diagramma e rappresenta il termine del flusso di esecuzione. In plantuml lo si raffigura come un cerchio contenente un altro cerchio colorato di nero:
-    \begin{center}
-      \begin{minted}{text}
-        @startuml
-         "Inizialitation" --> (*)
-        @enduml
-      \end{minted}
-    \end{center}
+    \begin{figure}[H]%
+      \label{fig:nodo_finale}
+      \includegraphics[width=3cm]{nodo-finale.png}
+      \centering
+      \caption{Esempio di nodo finale}
+    \end{figure}
     \item[Nodi di branching]: i nodi di branching modellano delle decisioni. Hanno una guardia che indica quale test deve essere soddisfatto che si indica tramite un etichetta da affiancare al nodo di branching. Tali nodi si raffigurano mediante rombi vuoti e generalmente distinguono due branch:
-    \begin{center}
-      \begin{minted}{text}
-       @startuml
-       (*) --> "Initialization"
-
-       if "Some Test" then
-      -->[true] "Some Activity"
-      --> "Another activity"
-      -right-> (*)
-      else
-      ->[false] "Something else"
-      -->[Ending process] (*)
-      endif
-      @enduml
-     \end{minted}
-     \end{center}
+    \begin{figure}[H]%
+      \label{fig:nodo_di_branch}
+      \includegraphics[width=5cm]{nodo-di-branch.png}
+      \centering
+      \caption{Esempio nodo di branching}
+    \end{figure}
      \item[Nodi di merge]: i nodi di merge sono il punto in cui i rami generati da un nodo di branching tornano ad unirsi. Hanno la stessa rappresentazione dei nodi di branching.
-     \begin{center}
-      \begin{minted}{text}
-        @startuml
-        start;
-        if (test) then
-          :activity2;
-          :activity3;
-        else
-          :activity4;
-        endif
-        stop;
-       @enduml
-     \end{minted}
-    \end{center}
+    \begin{figure}[H]%
+      \label{fig:nodo_di_merge}
+      \includegraphics[width=5cm]{nodo-di-merge.png}
+      \centering
+      \caption{Esempio di nodo di merge}
+    \end{figure}
      \item[Fork e join]: Fork e join sono necessari a rappresentare l'esecuzione parallela e concorrente. Ogniqualvolta il flusso di esecuzione incontra una fork il flusso di esecuzione diventa pari al numero di frecce uscenti dalla fork. Non è possibile terminare il flusso con più linee di esecuzione contemporaneamente attive ma è necessario che ci sia successivamente una join che ripristini l'unico flusso iniziale. Fork e join si rappresentano allo stesso modo, tramite una barra orizzontale colorata di nero. Ad esempio:
-     \begin{center}
-      \begin{minted}{text}
-        @startuml
-        (*) --> ===B1===
-        --> "Activity 1"
-        --> ===B2===
-
-        ===B1=== --> "Activity 2"
-        --> ===B2===
-
-        --> (*)
-        @enduml
-      \end{minted}
-    \end{center}
+    \begin{figure}[H]%
+      \label{fig:fork_e_join}
+      \includegraphics[width=5cm]{fork-e-join.png}
+      \centering
+      \caption{Esempio di fork e join}
+    \end{figure}
     \item[Swimlanes]: Le Swimlanes sono strutture da poco introdotte in PlantUML che rendono esplicito di chi è la responsabilità nell'esecuzione. Si rappresentano così:
-    \begin{center}
-      \begin{minted}{text}
-        @startuml
-        |Person1|
-        start
-        :activity1;
-        |#AntiqueWhite|Person2|
-        :activity2;
-        :activity3;
-        |Swimlane1|
-        :activity4;
-        |Swimlane2|
-        :activity5;
-        stop
-       @enduml
-     \end{minted}
-   \end{center}
+   \begin{figure}[H]%
+      \label{fig:swimlanes}
+      \includegraphics[width=5cm]{swimlanes.png}
+      \centering
+      \caption{Esempio di swimlanes}
+    \end{figure}
    \item[Segnali]: I segnali servono per gestire eventi. PlantUML non offre un buon supporto per i segnali e ne offre una versione in beta. Ne esistono di due tipi:
    \begin{itemize}
     \item Segnali di input
     \item Segnali di output.
    \end{itemize}
    \item [Input]: i segnali di input aspettano una risposta proveniente dall'esterno.Possono essere la prima azione del diagramma. Si rappresentano così:
-   \begin{center}
-    \begin{minted}{text}
-      @startuml
-      :wait for input<
-      @enduml
-    \end{minted}
-   \end{center}
+   \begin{figure}[H]%
+      \label{fig:input}
+      \includegraphics[width=5cm]{input.png}
+      \centering
+      \caption{Esempio segnale di input}
+    \end{figure}
    \item [Output]: i segnali di output chiedono che venga inserito un input dall'esterno. Inoltre non possono essere la prima azione del diagramma. La loro rappresentazione è la seguente:
-   \begin{center}
-    \begin{minted}{text}
-      @startuml
-      :some output>
-      @enduml
-    \end{minted}
-   \end{center}
+   \begin{figure}[H]%
+    \label{fig:segnale_di_output}
+    \includegraphics[width=5cm]{output.png}
+    \centering
+    \caption{Esempio segnale di output}
+  \end{figure}
 \end{description}
 \subparagraph{Diagrammi di sequenza}%
 \label{subp:diagrammi_di_sequenza}
@@ -455,17 +378,37 @@ I diagrammi di sequenza rappresentano dettagliatamente come gli oggetti interagi
   \item [Messaggio di distruzione]: rappresenta un messaggio che chiede la distruzione di un oggetto. Lo si indica con con una linea nera  seguita da una X e accompagnata da un'etichetta contenente la parola \textit{<<destroy>>}.
 \end{description}
 Un esempio di diagramma di sequenza corretto realizzato con PlantUML è il seguente:
-\begin{center}
-  \begin{minted}{text}
-    @startuml
-    class1 -> class2: Method1(param)
-    class2 ->> class1: Method2(param)
-    class2 -->> class1: returnType
-    class2 --> class3: <<create>>
-    class1 ->x class3: <<destroy>>
-    @enduml
- \end{minted}
-\end{center}
+\begin{figure}[H]%
+  \label{fig:sequenza}
+  \includegraphics[width=7cm]{sequenza.png}
+  \centering
+  \caption{diagramma di sequenza realizzato con PlantUML}
+\end{figure}
+È possibile inoltre utilizzare delle cosiddette barre di attivazione per rendere immediatamente visibile a chi osserva il diagramma quando un'entità è attiva. L`uso delle barre di attivazione non è obbligatorio ma è fortemente consigliato.Il diagramma di prima con le barre di attivazione apparirebbe così:
+\begin{figure}[H]%
+  \label{fig:barre_attivazione}
+  \includegraphics[width=7cm]{barre-attivazione.png}
+  \centering
+  \caption{Esempio barre di attivazione}
+\end{figure}
+Per modellare in maniera approfondita le interazioni fra oggetti è consigliato ai progettisti l'uso dei frame d'interazione introdotti in UML 2. Tali frame si rappresentano come dei rettangoli a cui viene associata un'etichetta che indica il tipo di frame d'interazione. Un esempio di diagramma di sequenza con i frame d'interazione è il seguente:
+\begin{figure}[H]%
+  \label{fig:frame_di_interazione}
+  \includegraphics[width=7cm]{frame-interazione.png}
+  \centering
+  \caption{Esempio frame di interazione}
+\end{figure}
+Esistono diverse etichette per identificare i frame d'interazione. I progettisti dovranno attenersi alle seguenti:
+\begin{description}
+  \item [Alt]: indica frammenti alternativi che verranno eseguiti solo se la guardia è verificata.
+  \item [Opt]: indica un frammento che viene eseguito solo se la condizione specificata è verificata.
+  \item [Par]: indica frammenti da eseguire in parallelo.
+  \item [Loop]: indica che il frammento può essere eseguito più volte, la base dell'iterazione è indicata dalla guardia.
+  \item [Region]: indica una sezione critica. Il frammento può essere eseguito da un solo thread.
+  \item [Neg]: indica un'interazione non valida.
+  \item [Ref]: si riferisce ad un'interazione definita in una diagramma.
+  \item [Ad]: si utilizza per racchiudere un intero diagramma di sequenza.
+\end{description}
 
 \paragraph{Codifica}%
 \label{par:codifica}
