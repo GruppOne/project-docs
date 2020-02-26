@@ -486,6 +486,7 @@ I nomi delle variabili:
     \item Devono essere significativi, relativi al contesto e alla loro utilità.
     \item Non devono somigliare tra loro, per evitare confusione a chi scrive il codice e a chi lo legge.
     \item Devono rispettare le condizioni del linguaggio in cui vengono usate, se presenti.
+    \item Devono essere necessariamente scritti in lingua inglese.
 \end{itemize}
 
 \subparagraph{Commenti}%
@@ -507,12 +508,43 @@ Ergo, è da preferire la composizione sopra l'ereditarietà, adottando il princi
 
 \subparagraph{Indentazione}%
 \label{subp:indentazione}
-Le indentazioni devono rispettare le seguenti sepcifiche:
+Le indentazioni devono rispettare le seguenti specifiche:
 \begin{itemize}
   \item I blocchi annidati devono essere indentati con quattro (4) spazi
-  \item Non è possibile utilizzare tabulazioni per l'indentatura, è obbligatorio utilizzare il numero di spazi appropriato.
+  \item Non è possibile utilizzare tabulazioni per l'indentatura, è obbligatorio utilizzare il numero di spazi appropriato
+  \item Tutto il codice facente parte di un blocco deve essere indentato a livello di quel blocco.
 \end{itemize}
 
+\subparagraph{Parentesizzazione}%
+\label{subp:parentesizzazione}
+La parentesizzazione deve rispettare le seguenti norme:
+\begin{itemize}
+  \item I blocchi di codice devono essere necessariamente racchiusi tra parentesi graffe
+  \item Le parentesi graffe iniziano sempre nella stessa riga del codice che le precede.
+\end{itemize}
+% subp:parentesizzazione (end)
+
+\subparagraph{Lunghezza dei metodi}%
+\label{subp:lunghezza_metodi}
+Quando possibile è auspicabile limitare la lunghezza dei metodi per circoscrivere lo scopo del metodo e aumentarne la leggibilità.
+% subp:lunghezza_metodi (end)
+
+\subparagraph{TODO}%
+\label{subp:TODO}
+Gli sviluppatori sono invitati a usare il commento "TODO" per il codice temporaneo e per il codice ancora da implementare così da facilitare la comprensione del compito ancora da svolgere.
+Se i "TODO" hanno una data di scadenza essa va indicata nel commento.
+% subp:TODO (end)
+
+\subparagraph{Inizializzazione variabili}%
+\label{subp:inizializzazione_variabili}
+Le varabili andrebbero inizializzate il prima possibile: ad ogni definizione andrebbe affiancata l'inizializzazione della variabile, se ciò non è possibile va fatto quanto prima.
+% subp:inizializzazione_variabili (end)
+
+\subparagraph{Ricorsione}%
+\label{subp:ricorsione}
+La ricorsione come paradigma di programmazione va usata con moderazione poichè un uso sconsiderato può portare a una maggiore occupazione di memoria rispetto alla controparte iterativa.
+L'uso della ricorsione andrebbe motivato con appositi commenti.
+% subp:ricorsione (end)
 % subp:indentazione (end)
 \subsubsection{Strumenti}%
 \label{subs:strumenti}
