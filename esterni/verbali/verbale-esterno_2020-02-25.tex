@@ -59,23 +59,24 @@ L'incontro, avvenuto tramite chiamata Hangouts, ci è servito per chiarire i dub
 \label{sec:ordine_del_giorno}
 
 \begin{itemize}
-  \item Discussione UUC 4.3
-  \item Discussione AUC 3
+  \item Discussione UUC4.3
+  \item Discussione AUC3
   \item Discussione sul tracciamento di casi d'uso e requisiti
   \item Struttura del PoC
   \item Tecnologie da usare nel PoC.
 \end{itemize}
 % sec:registro_delle_decisioni (end)
-\section{Discussione UUC 4.3}%
+\section{Discussione UUC4.3}%
 \label{sec:discussione_uuc_4.3}
-\textbf{Domanda:} Il motivo per il quale vediamo UUC4.3 come un'estensione di UUC4.2, è il fatto che l'utente può selezionare una o più organizzazioni e, nel momento in cui una di queste sia privata e quindi richieda l'autenticazione LDAP, allora si scateni il caso d'uso UUC4.3. Quindi se UUC4.3 non fosse un'estensione UUC4.2 ma una sua pre-condizione, l'autenticazione LDAP verrebbe effettuata a priori su tutte le organizzazioni selezionate, il che sarebbe vero solo se tutte le organizzazioni lo richiedano (sia private che pubbliche), cosa che non è richiesta da capitolato (solo private), in che modo è sbagliata questa visione del caso d'uso?
+\textbf{Domanda:} Il motivo per il quale vediamo UUC4.3 come un'estensione di UUC4.2, è il fatto che l'utente può selezionare una o più organizzazioni e, nel momento in cui una di queste sia privata e quindi richieda l'autenticazione LDAP, allora si scateni il caso d'uso UUC4.3.
+Quindi se UUC4.3 non fosse un'estensione di UUC4.2 ma una sua pre-condizione, l'autenticazione LDAP verrebbe effettuata a priori su tutte le organizzazioni selezionate, il che sarebbe vero solo se tutte le organizzazioni lo richiedano (sia private che pubbliche), cosa che non è richiesta da capitolato (solo private), in che modo è sbagliata questa visione del caso d'uso?
 
 \textbf{Risposta:} Bisogna innanzitutto capire come UML può essere utilizzato per modellare i casi d'uso, questi ultimi infatti definiscono solamente le funzionalità del nostro software. Il professore ha ribadito questo fatto per dire che la selezione di una organizzazione è un dettaglio implementativo non una funzionalità, la funzionalità offerta invece è il collegamento ad una organizzazione dunque l'estensione non ha motivo di esserci così come il caso d'uso relativo alla selezione.
-In caso il modo corretto di modellare un caso d'uso di questo tipo sarebbe prevedere 4.2 come precondizione di 4.3.
+In caso il modo corretto di modellare un caso d'uso di questo tipo sarebbe prevedere 4.3 come precondizione di 4.2.
 % sec:discussione_uuc_4.3 (end)
 \section{Discussione AUC3}%
 \label{sec:discussione_auc3}
-\textbf{Domanda:} \textit{AUC3: le inclusioni non sono (\ldots) AUC4: inclusioni non corrette.} Non ci è chiaro il motivo per il quale le inclusioni nei seguenti casi d'uso non sono corrette.
+\textbf{Domanda:} \textit{AUC3: le inclusioni non sono corrette (\ldots) AUC4: inclusioni non corrette.} Non ci è chiaro il motivo per il quale le inclusioni nei seguenti casi d'uso non sono corrette.
 
 \textbf{Risposta:} Analogamente a quanto scritto prima la funzionalità di selezione di organizzazione non esiste di fatto e in questo caso nemmeno l'invio di richiesta di aggiornamento delle organizzazioni è una funzionalità esprimibile nei casi d'uso poiché è una azione automatica del sistema.
 Il professore ha compreso l'intento del gruppo di fornire la possibilità di collegarsi, eliminare e modificare più organizzazioni insieme e ha suggerito se si desidera implementare queste funzionalità di definirle in casi d'uso appositi (e.g. Eliminazione di più organizzazioni).
@@ -86,8 +87,8 @@ Il professore ha compreso l'intento del gruppo di fornire la possibilità di col
 \textbf{Domanda:} \textit{Manca il tracciamento tra casi d’uso e requisiti}. Anche qui non ci è chiaro esattamente che modifiche dovremmo attuare.
 
 \textbf{Risposta:} Nel documento \textit{Analisi dei Requisiti v0.0.8} è presente solamente la tabella che correla i requisiti ai casi d'uso e non viceversa.
-La prima correlazione ci permette di appurare che tutti i requisiti siano necessari perché derivano da un caso d'uso, la seconda che tutti i casi d'uso siano necessari perché si concretizzano in un requisito.
-Inoltre la tabella che collega le fonti con i casi d'uso e poco indicativa e non fornisce informazioni utili.
+La prima correlazione ci permette di appurare che tutti i requisiti siano necessari poiché derivano da un caso d'uso, la seconda che tutti i casi d'uso siano necessari poiché si concretizzano in un requisito.
+Inoltre la tabella che collega le fonti con i casi d'uso è poco indicativa e non fornisce informazioni utili.
 % sec:discussione_tracciamento_casi_requisiti (end)
 
 \section{Domanda sul PoC}%
@@ -113,7 +114,7 @@ Inoltre la tabella che collega le fonti con i casi d'uso e poco indicativa e non
   \begin{tabular}{c b{13cm}}
     \rowcolor{darkgray!90!}\color{white}{\textbf{Codice}} & \color{white}{\textbf{Decisione}}\\
     1 & Correggere i casi d'uso AUC3, UUC4.3 e UUC4.2 in concordanza con quanto discusso con il Professore durante la chiamata.\\
-    2 & Rivalutare la struttura e le componenti principali del PoC alla luca di quanto ci ha detto il Professore. \\
+    2 & Rivalutare la struttura e le componenti principali del PoC in base a quanto ci ha detto il Professore. \\
     3 & Scrivere la tabella che correla casi d'uso e requisiti al posto di quella con fonte e casi d'uso.\\
   \end{tabular}
   \caption{registro delle decisioni}%
