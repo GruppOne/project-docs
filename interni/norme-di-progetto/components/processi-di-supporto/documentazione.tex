@@ -208,6 +208,31 @@ dove x indica la numerazione delle immagini (e.g.:\ figura 1, figura 2, figura 3
 \label{subp:tabelle}
 L'uso di tabelle è consigliato solo quando strettamente necessario. La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento in cui risulti molto difficile organizzare informazioni aventi una struttura complessa. È obbligatorio l'uso di colori che abbiano un elevato contrasto al fine di promuovere la leggibilità. Inoltre, non devono essere eccessivamente lunghe altrimenti risultano dispersive.
 
+\subparagraph{Metriche}%
+\label{subp:metriche}
+
+\begin{description}
+  \item [MPS-IDG]:L'indice di Gulpease è un indice che valuta la leggibilità di un testo scritto in lingua italiana. Ha il vantaggio principale di utilizzare la lunghezza delle parole in lettere invece che sillabe. La formula per il calcolo è la seguente:
+  \[
+    89 +\frac{300\cdot nf-10\cdot nl}{np}
+  \]
+  dove:
+  \begin{description}
+    \item [nf] indica il numero delle frasi.
+    \item [nl] indica il numero delle lettere.
+    \item [np] indica il numero di parole.
+  \end{description}
+  I risultati sono compresi tra 0 e 100 dove 0 indica la leggibilità minima mentre 100 quella massima. In genere l'indice dice che:
+  \begin{itemize}
+    \item Un testo con indice inferiore a 80 è difficile per chi ha la licenza elementare.
+    \item Un testo con indice inferiore a 60 è difficile per chi la licenza media.
+    \item Un testo con indice inferiore a 40 è difficile per chi ha il diploma di scuola superiore.
+  \end{itemize}
+  \item [MPS-CO]: L'indice di correttezza ortografica indica la correttezza del testo.
+  Esso misura il numero di errori ortografici presenti.
+  Ogni componente del gruppo ha un estensione per il proprio code editor (per vscode consigliamo l'estensione \href{https://marketplace.visualstudio.com/items?itemName=ban.spellright}{Spell Right}, che si basa sul dizionario di sistema).
+\end{description}
+
 \subsubsection{Produzione}%
 \label{subs:produzione}
 
@@ -308,57 +333,5 @@ Da eseguire due volte per permettere a \LaTeX{} di recuperare i riferimenti corr
 % Un linter è uno strumento che analizza il codice sorgente per determinare errori di programmazione o costrutti sintattici ritenuti non corretti
 Per la verifica del codice ogni componente ha installato sulla propria macchina un \glossario{linter}.
 Abbiamo deciso di utilizzare \href{https://www.nongnu.org/chktex/}{Chk\TeX}, che è incluso nella maggior parte delle distribuzioni \LaTeX{} così come nell'estensione di vscode che utilizziamo, ed è facilmente configurabile per le nostre necessità.
-
-\subsubsection{Metriche di processo}%
-\label{subs:documentazione/metriche_di_processo}
-
-\paragraph{MPS-IDG: Indice di Gulpease}% in questo caso NON ci va il "\@". chktex 13
-\label{par:MPS-IDG_indice_di_Gulpease}
-
-L'indice di Gulpease è un indice che valuta la leggibilità di un testo scritto in lingua italiana. Ha il vantaggio principale di utilizzare la lunghezza delle parole in lettere invece che sillabe. La formula per il calcolo è la seguente:
-\[
-  89 +\frac{300\cdot nf-10\cdot nl}{np}
-\]
-dove:
-\begin{description}
-  \item [nf] indica il numero delle frasi.
-  \item [nl] indica il numero delle lettere.
-  \item [np] indica il numero di parole.
-\end{description}
-I risultati sono compresi tra 0 e 100 dove 0 indica la leggibilità minima mentre 100 quella massima. In genere l'indice dice che:
-\begin{itemize}
-  \item Un testo con indice inferiore a 80 è difficile per chi ha la licenza elementare.
-  \item Un testo con indice inferiore a 60 è difficile per chi la licenza media.
-  \item Un testo con indice inferiore a 40 è difficile per chi ha il diploma di scuola superiore.
-\end{itemize}
-\paragraph{MPS-IGF: Indice di Gunning Fog}% in questo caso NON ci va il "\@". chktex 13
-\label{par:MPS-IGF_indice_di_Gunning_Fog}
-
-L'indice di Gunning Fog è un indice progettato per misurare la facilità di lettura e la comprensione del testo. La formula per il calcolo è la seguente:
-\[
-  0.4\cdot((\frac{np}{nf})+100\cdot(\frac{npc}{np}))
-\]
-dove:
-\begin{description}
-  \item [np] indica il numero di parole.
-  \item [nf] indica il numero di frasi.
-  \item [npc] indica il numero di parole complesse, dove per complesse si intendono le parole con più di tre sillabe escluse:
-        \begin{itemize}
-          \item Parole composte da due parole di una o due sillabe.
-          \item Nomi propri.
-          \item Verbi di due sillabe che coniugati diventano di tre sillabe o più.
-          \item Avverbi in -ente di parole di due sillabe.
-        \end{itemize}
-\end{description}
-Il numero risultante indica il numero di anni minimi di educazione formale necessari a comprendere il testo. Ad esempio se l'indice vale 8 vuol dire che il testo potrà essere letto facilmente da una persona con licenza di scuola media.
-
-\paragraph{MPS-CO: Correttezza ortografica}% in questo caso NON ci va il "\@". chktex 13
-\label{par:MPS-CO_correttezza_ortografica}
-
-L'indice di correttezza ortografica indica la correttezza del testo.
-Esso misura il numero di errori ortografici presenti.
-Ogni componente del gruppo ha un estensione per il proprio code editor (per vscode consigliamo l'estensione \href{https://marketplace.visualstudio.com/items?itemName=ban.spellright}{Spell Right}, che si basa sul dizionario di sistema).
-
-% subs:metriche (end)
 
 \end{document}
