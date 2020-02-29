@@ -17,7 +17,8 @@
         "**/commons/style/*.pu",
         "-o",
         "img",
-        "**/**.pu",
+        // compila solo file contenuti in cartelle "diagrams"
+        "**/diagrams/*.pu"
       ],
       "presentation": {
         "echo": true,

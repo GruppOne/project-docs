@@ -1,7 +1,9 @@
 {
-  // "[latex]": {
-  //   "editor.formatOnSave": true,
-  // },
+  "[latex]": {
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false
+  },
   "files.eol": "\n",
   "files.encoding": "utf8",
   "files.insertFinalNewline": true,
@@ -14,7 +16,6 @@
   "git.fetchOnPull": false,
   "git.rebaseWhenSync": true,
   "git.useForcePushWithLease": true,
-  // questi due setting sono per chi utilizza direttamente vs code per scrivere i commit
   "git.inputValidationSubjectLength": 72,
   "git.inputValidationLength": 100,
   "git-graph.dialog.rebase.launchInteractiveRebase": false,
@@ -28,10 +29,7 @@
         "--synctex=1",
         "--interaction=nonstopmode",
         "--c-style-errors",
-        // XXX N.B.: --shell-escape costituisce un rischio alla sicurezza perché consente a LaTeX di eseguire snippet di codice potenzialmente dannoso. Per noi la flag è necessaria per poter compilare correttamente i diagrammi plantuml
         "--shell-escape",
-        // XXX opzione rimossa perché entra in conflitto con il package plantuml
-        // "--output-directory=%OUTDIR%",
         "%DOC%"
       ],
       "env": {}
