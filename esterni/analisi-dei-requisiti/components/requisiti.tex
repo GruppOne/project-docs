@@ -9,12 +9,13 @@ Ogni requisito è caratterizzato da un codice alfanumerico così formato:
 \end{center}
 in cui ogni elemento ha un diverso significato:
 \begin{description}
-  \item [numero] indica quale numero di caso d’uso si sta esaminando. È un numero di tre cifre progressivo a partire da 1, con eventuali 0 di riempimento a partire dalla cifra più significativa.
+  \item [numero] indica quale numero di caso d'uso si sta esaminando. È un numero di tre cifre progressivo a partire da 1, con eventuali 0 di riempimento a partire dalla cifra più significativa.
   \item [tipo] individua la tipologia di requisito. Esso può essere:
         \begin{description}
           \item [F (funzionale)] indica i servizi che il sistema dovrebbe fornire.
           \item [P (prestazionale)] indica le prestazioni che il programma deve fornire: velocità in esecuzione e memoria occupata.
-          \item [D (dichiarativo)] indica i requisiti definiti dall'esterno, ad esempio requisiti di vincolo esposti nel capitolato.
+          \item [V (vincolo)] indica i requisiti di vincolo esposti nel capitolato.
+          \item [Q (qualità)] indica i requisiti di qualità esposti nel capitolato.
         \end{description}
   \item [priorità] determina la priorità del requisito con un numero da 1 a 3:
         \begin{enumerate}
@@ -28,10 +29,14 @@ in cui ogni elemento ha un diverso significato:
 \label{sub:requisiti_funzionali}
 In questa sezione esaminiamo i servizi che il sistema dovrebbe fornire.
 
-\begin{center}
 \rowcolors{2}{lightgray}{white!80!lightgray!100}
 \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
 \begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{\centering}m{10cm} >{\centering\arraybackslash}m{3cm}}
+  \caption{Tabella dei requisiti funzionali}
+  \label{tab:tabella_requisiti_funzionali}                                                                                                                                                                                                                                       \\
+  \rowcolor{darkgray!90!}
+  \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                                                                                                     & \color{white}{\textbf{Fonte}} \\
+  \endfirsthead%
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                                                                                                     & \color{white}{\textbf{Fonte}} \\
   \endhead%
@@ -41,119 +46,123 @@ In questa sezione esaminiamo i servizi che il sistema dovrebbe fornire.
   \endlastfoot%
   % registrazione, login, recupero password
   R001F1                               & L'applicazione deve permettere ad un nuovo utente di registrarsi                                                                                                                                        & UUC1 Interno                  \\
-  R002F1                               & L'applicazione deve permettere al nuovo utente di visualizzare l'EULA                                                                                                                                   & UUC1.1 Interno                \\
-  R003F1                               & È necessario che il nuovo utente confermi l'EULA                                                                                                                                                        & UUC1.1.1 Interno              \\
-  R004F1                               & L'applicazione deve permettere al nuovo utente di inserire i dati di registrazione                                                                                                                      & UUC1.2 Interno                \\
-  R005F1                               & È necessario che il nuovo utente compili il campo \textit{email} nel form di registrazione                                                                                                              & UUC1.2.1 Interno              \\
-  R006F1                               & È necessario che il nuovo utente compili il campo \textit{password} nel form di registrazione                                                                                                           & UUC1.2.2 Interno              \\
-  R007F1                               & È necessario che il nuovo utente compili il campo \textit{conferma password} nel form di registrazione                                                                                                  & UUC1.2.3 Interno              \\
-  R008F1                               & È necessario che il nuovo utente compili il campo \textit{dati anagrafici} nel form di registrazione                                                                                                    & UUC1.2.4 Interno              \\
-  R009F1                               & Il server deve rifiutare la richiesta di registrazione se i dati inseriti non rispettano i vincoli imposti, o se l'email è già presente nel database                                                    & UUC1.2.5 Interno              \\
-  R010F1                               & L'applicazione deve permettere all'utente registrato di autenticarsi                                                                                                                                    & UUC2 Interno                  \\
-  R011F1                               & È necessario che l'utente registrato compili il campo \textit{email} nel form di autenticazione                                                                                                         & UUC2.1 Interno                \\
-  R012F1                               & È necessario che l'utente registrato compili il campo \textit{password} nel form di autenticazione                                                                                                      & UUC2.2 Interno                \\
-  R013F1                               & Il server deve rifiutare la richiesta di autenticazione se i dati inseriti non rispettano i vincoli imposti, o se la combinazione di email e password non è presente nel database                       & UUC2.3 Interno                \\
-  R014F1                               & L'applicazione deve permettere all'utente di recuperare le sue credenziali di accesso                                                                                                                   & UUC3 Interno                  \\
-  R015F1                               & L'applicazione deve permettere all'utente di reimpostare la sua password                                                                                                                                & UUC3.1 Interno                \\
-  R016F1                               & È necessario che l'utente registrato compili il campo \textit{email} nel form di recupero password                                                                                                      & UUC3.1.1 Interno              \\
-  R017F1                               & È necessario che l'utente registrato compili il campo \textit{nuova password} e \textit{conferma password} nel form di reimpostazione password                                                          & UUC3.1.2 Interno              \\
-  R018F1                               & Il server deve rifiutare la richiesta di reimpostazione password se la password scelta non rispetta i vincoli imposti                                                                                   & UUC3.1.3 Interno              \\
+  R002F1                               & È necessario che il nuovo utente visualizzi e confermi l'EULA                                                                                                                                           & UUC1.1 Interno                \\
+  R003F1                               & L'applicazione deve permettere al nuovo utente di inserire i dati di registrazione                                                                                                                      & UUC1.2 Interno                \\
+  R004F1                               & È necessario che il nuovo utente compili il campo \textit{email} nel form di registrazione                                                                                                              & UUC1.2.1 Interno              \\
+  R005F1                               & È necessario che il nuovo utente compili il campo \textit{password} nel form di registrazione                                                                                                           & UUC1.2.2 Interno              \\
+  R006F1                               & È necessario che il nuovo utente compili il campo \textit{conferma password} nel form di registrazione                                                                                                  & UUC1.2.3 Interno              \\
+  R007F1                               & È necessario che il nuovo utente compili il campo \textit{dati anagrafici} nel form di registrazione                                                                                                    & UUC1.2.4 Interno              \\
+  R008F1                               & Il server deve rifiutare la richiesta di registrazione se la mail inserita non rispetta i vincoli imposti                                                                                               & UUC1.2.5 Interno              \\
+  R009F1                               & Il server deve rifiutare la richiesta di registrazione se la password inserita non rispetta i vincoli imposti                                                                                           & UUC1.2.6 Interno              \\
+  R010F1                               & Il server deve rifiutare la richiesta di registrazione se la conferma della password inserita non rispetta i vincoli imposti                                                                            & UUC1.2.7 Interno              \\
+  R011F1                               & Il server deve rifiutare la richiesta di registrazione se la i dati anagrafici inseriti non rispettano i vincoli imposti                                                                                & UUC1.2.8 Interno              \\
+  R012F1                               & L'applicazione deve permettere all'utente registrato di autenticarsi                                                                                                                                    & UUC2 Interno                  \\
+  R013F1                               & È necessario che l'utente registrato compili il campo \textit{email} nel form di autenticazione                                                                                                         & UUC2.1 Interno                \\
+  R014F1                               & È necessario che l'utente registrato compili il campo \textit{password} nel form di autenticazione                                                                                                      & UUC2.2 Interno                \\
+  R015F1                               & L'applicazione deve permettere all'utente di recuperare le sue credenziali di accesso                                                                                                                   & UUC2.3 Interno                \\
+  R016F1                               & L'applicazione deve permettere all'utente di recuperare la sua password                                                                                                                                 & UUC2.3.1 Interno              \\
+  R017F1                               & È necessario che l'utente registrato compili il campo \textit{email} nel form di recupero password                                                                                                      & UUC2.3.1.1 Interno            \\
+  R018F1                               & L'applicazione deve permettere all'utente di reimpostare la sua password tramite il link ricevuta dall'utente sulla sua casella email personale                                                         & UUC2.3.1.2 Interno            \\
+  R019F1                               & È necessario che l'utente registrato compili il campo \textit{nuova password} nel form di reimpostazione password                                                                                       & UUC2.3.1.2.1 Interno          \\
+  R020F1                               & È necessario che l'utente registrato compili il campo \textit{conferma password} nel form di reimpostazione password                                                                                    & UUC2.3.1.2.2 Interno          \\
+  R021F1                               & Il server deve rifiutare la richiesta di reimpostazione password se la password inserita non rispetta i vincoli imposti                                                                                 & UUC2.3.1.2.3 Interno          \\
+  R022F1                               & Il server deve rifiutare la richiesta di reimpostazione password se la conferma della password inserita non rispetta i vincoli imposti                                                                  & UUC2.3.1.2.4 Interno          \\
+  R023F1                               & Il server deve rifiutare la richiesta di reimpostazione password se la mail inserita non rispetta i vincoli imposti                                                                                     & UUC2.3.1.3 Interno            \\
+  R024F1                               & Il server deve rifiutare la richiesta di autenticazione se la combinazione di email e password non è presente nel database                                                                              & UUC2.4 Interno                \\
 
   % gestione organizzazioni
-  R019F1                               & L'applicazione deve permettere all'utente autenticato di recuperare dal server una lista di organizzazioni a cui può collegarsi                                                                         & UUC4 Capitolato               \\
-  R020F1                               & L'applicazione deve permettere all'utente autenticato di aggiornare la lista di organizzazioni                                                                                                          & UUC4.1 Capitolato             \\
-  R021F1                               & L'applicazione deve permettere all'utente autenticato di selezionare una o più organizzazioni dalla lista                                                                                               & UUC4.2 Interno                \\
-  R022F1                               & L'applicazione deve permettere all'utente autenticato di collegarsi ad un'organizzazione privata utilizzando delle credenziali di accesso                                                               & UUC4.3 Capitolato             \\
-  R023F1                               & È necessario che l'utente autenticato compili il campo \textit{username} nel form di accesso all'organizzazione privata                                                                                 & UUC4.3.1 Interno              \\
-  R024F1                               & È necessario che l'utente autenticato compili il campo \textit{password} nel form di accesso all'organizzazione privata                                                                                 & UUC4.3.2 Interno              \\
-  R025F1                               & Il server deve rifiutare la richiesta di collegamento all'organizzazione privata nel caso in cui i dati di accesso non siano validi                                                                     & UUC4.3.3 Interno              \\
-  R026F1                               & L'applicazione deve permettere all'utente autenticato di collegarsi ad una o più organizzazioni                                                                                                         & UUC5 Capitolato               \\
-  R027F1                               & L'applicazione deve permettere all'utente autenticato, tramite un filtro, di visualizzare la lista delle organizzazioni a cui non è collegato                                                           & UUC5.1 Interno                \\
-  R028F1                               & L'applicazione deve permettere all'utente autenticato di scollegarsi da una o più organizzazioni                                                                                                        & UUC6 Capitolato               \\
-  R029F1                               & L'applicazione deve permettere all'utente autenticato, tramite un filtro, di visualizzare la lista delle organizzazioni a cui è collegato                                                               & UUC6.1 Interno                \\
+  R025F1                               & L'applicazione deve permettere all'utente autenticato di recuperare dal server una lista di organizzazioni a cui può collegarsi                                                                         & UUC3 Capitolato               \\
+  R026F1                               & L'applicazione deve permettere all'utente autenticato di aggiornare la lista di organizzazioni                                                                                                          & UUC3.1 Capitolato             \\
+  R027F1                               & L'applicazione deve permettere all'utente autenticato di scegliere una o più organizzazioni dalla lista                                                                                                 & UUC3.2 Interno                \\
+  R028F1                               & È necessario che l'utente autenticato compili il campo \textit{username} nel form di accesso all'organizzazione privata                                                                                 & UUC3.2.1 Interno              \\
+  R029F1                               & È necessario che l'utente autenticato compili il campo \textit{password} nel form di accesso all'organizzazione privata                                                                                 & UUC3.2.2 Interno              \\
+  R030F1                               & Il server deve rifiutare la richiesta di collegamento all'organizzazione privata nel caso in cui i dati di accesso LDAP non siano validi                                                                & UUC3.2.3 Interno              \\
+  R031F1                               & L'applicazione deve permettere all'utente autenticato di collegarsi ad una o più organizzazioni                                                                                                         & UUC4 Capitolato               \\
+  R032F1                               & L'applicazione deve permettere all'utente autenticato, tramite un filtro, di visualizzare la lista delle organizzazioni a cui non è collegato                                                           & UUC4.1 Interno                \\
+  R033F1                               & L'applicazione deve permettere all'utente autenticato di scollegarsi da una o più organizzazioni                                                                                                        & UUC5 Capitolato               \\
+  R034F1                               & L'applicazione deve permettere all'utente autenticato, tramite un filtro, di visualizzare la lista delle organizzazioni a cui è collegato                                                               & UUC5.1 Interno                \\
 
   % funzioni varie utente
-  R030F1                               & L'applicazione deve permettere all'utente autenticato il passaggio da noto ad incognito e viceversa                                                                                                     & UUC7 Capitolato               \\
-  R031F1                               & L'applicazione deve permettere all'utente autenticato di scegliere di cambiare stato (noto o incognito)                                                                                                 & UUC7.1 Capitolato             \\
-  R032F1                               & L'applicazione deve permettere all'utente autenticato di passare ad incognito                                                                                                                           & UUC7.1.1 Capitolato           \\
-  R033F1                               & L'applicazione deve permettere all'utente autenticato di passare a noto                                                                                                                                 & UUC7.1.2 Capitolato           \\
-  R034F2                               & L'applicazione deve permettere all'utente autenticato di visualizzare uno storico degli accessi                                                                                                         & UUC8 Capitolato               \\
-  R035F2                               & L'applicazione deve permettere all'utente autenticato di visualizzare il tempo trascorso all'interno di un'organizzazione                                                                               & UUC9 Capitolato               \\
-  R036F1                               & L'applicazione deve permettere all'utente autenticato di disconnettersi dall'applicazione                                                                                                               & UUC10 Interno                 \\
-  R037F1                               & L'applicazione deve permettere all'utente di eliminare il suo account                                                                                                                                   & UUC11 Interno                 \\
-  R038F1                               & L'applicazione deve permettere all'utente di confermare l'eliminazione del suo account                                                                                                                  & UUC11.1 Interno               \\
-  R039F1                               & L'applicazione deve mostrare un messaggio d'errore e rifiutare le richieste da parte dell'app nel caso mancasse una connessione a internet                                                              & UUC12 Interno                 \\
+  R035F1                               & L'applicazione deve permettere all'utente autenticato il passaggio da noto ad incognito e viceversa                                                                                                     & UUC6 Capitolato               \\
+  R036F1                               & L'applicazione deve permettere all'utente autenticato di scegliere di cambiare stato (noto o incognito)                                                                                                 & UUC6.1 Capitolato             \\
+  R037F1                               & L'applicazione deve permettere all'utente autenticato di passare ad incognito                                                                                                                           & UUC6.1.1 Capitolato           \\
+  R038F1                               & L'applicazione deve permettere all'utente autenticato di passare a noto                                                                                                                                 & UUC6.1.2 Capitolato           \\
+  R039F2                               & L'applicazione deve permettere all'utente autenticato di visualizzare uno storico degli accessi                                                                                                         & UUC7 Capitolato               \\
+  R040F2                               & L'applicazione deve permettere all'utente autenticato di visualizzare il tempo trascorso all'interno di un'organizzazione                                                                               & UUC8 Capitolato               \\
+  R041F1                               & L'applicazione deve permettere all'utente autenticato di disconnettersi dall'applicazione                                                                                                               & UUC9 Interno                  \\
+  R042F1                               & L'applicazione deve permettere all'utente di eliminare il suo account                                                                                                                                   & UUC10 Interno                 \\
+  R043F1                               & L'applicazione deve permettere all'utente di confermare l'eliminazione del suo account                                                                                                                  & UUC10.1 Interno               \\
+  R044F1                               & L'applicazione deve mostrare un messaggio d'errore e rifiutare le richieste da parte dell'app nel caso mancasse una connessione a internet                                                              & UUC11 Interno                 \\
 
   % login e logout web app
-  R040F1                               & L'interfaccia web deve permettere all'utente non autenticato di autenticarsi                                                                                                                            & AUC1 Capitolato               \\
-  R041F1                               & È necessario che l'utente non autenticato compili il campo \textit{email} nel form di autenticazione                                                                                                    & AUC1.1 Interno                \\
-  R042F1                               & È necessario che l'utente non autenticato compili il campo \textit{password} nel form di autenticazione                                                                                                 & AUC1.2 Interno                \\
-  R043F1                               & Il server deve rifiutare la richiesta di autenticazione se i dati inseriti non rispettano i vincoli imposti, o se la combinazione di email e password non è presente nel database                       & AUC1.3 Interno                \\
-  R044F1                               & L'interfaccia web deve permettere all'utente autenticato di effettuare la disconnessione dal server                                                                                                     & AUC2 Interno                  \\
+  R045F1                               & L'interfaccia web deve permettere all'utente non autenticato di autenticarsi                                                                                                                            & AUC1 Capitolato               \\
+  R046F1                               & È necessario che l'utente non autenticato compili il campo \textit{email} nel form di autenticazione                                                                                                    & AUC1.1 Interno                \\
+  R047F1                               & È necessario che l'utente non autenticato compili il campo \textit{password} nel form di autenticazione                                                                                                 & AUC1.2 Interno                \\
+  R048F1                               & Il server deve rifiutare la richiesta di autenticazione se i dati inseriti non rispettano i vincoli imposti, o se la combinazione di email e password non è presente nel database                       & AUC1.3 Interno                \\
+  R049F1                               & L'interfaccia web deve permettere all'utente autenticato di effettuare la disconnessione dal server                                                                                                     & AUC2 Interno                  \\
 
   % owner e gestore - creare, modificare, eliminare organizzazioni
-  R045F1                               & L'interfaccia web deve permettere al gestore di gestire l'organizzazione                                                                                                                                & AUC3 Capitolato               \\
-  R046F1                               & L'interfaccia web deve permettere all'owner di creare un'organizzazione                                                                                                                                 & AUC3.1 Capitolato             \\
-  R047F1                               & È necessario che l'owner inserisca il nome dell'organizzazione                                                                                                                                          & AUC3.1.1 Interno              \\
-  R048F1                               & È necessario che l'owner inserisca la descrizione dell'organizzazione                                                                                                                                   & AUC3.1.2 Interno              \\
-  R049F1                               & È necessario che l'owner configuri i dettagli del server LDAP dell'organizzazione                                                                                                                       & AUC3.1.3 Capitolato           \\
-  R050F1                               & L'interfaccia web deve permettere all'owner di eliminare un'organizzazione in suo possesso                                                                                                              & AUC3.2 Capitolato             \\
-  R051F1                               & È necessario che l'owner confermi di voler procedere con l'eliminazione dell'organizzazione                                                                                                             & AUC3.2.1 Interno              \\
-  R052F1                               & L'interfaccia web deve permettere all'owner di modificare l'organizzazione                                                                                                                              & AUC3.3 Capitolato             \\
-  R053F1                               & L'interfaccia web deve permettere all'owner di modificare il nome dell'organizzazione                                                                                                                   & AUC3.3.1 Capitolato           \\
-  R054F1                               & L'interfaccia web deve permettere all'owner di modificare la descrizione dell'organizzazione                                                                                                            & AUC3.3.2 Capitolato           \\
-  R055F1                               & L'interfaccia web deve permettere all'owner di modificare la configurazione del server LDAP dell'organizzazione                                                                                         & AUC3.3.3 Capitolato           \\
-  R056F1                               & L'interfaccia web deve permettere al gestore di selezionare un'organizzazione dalla lista delle organizzazioni di cui fa parte                                                                          & AUC3.4 Capitolato             \\
-  R057F1                               & Si deve inviare una richiesta di aggiornamento della lista delle organizzazioni a tutte le applicazioni mobile                                                                                          & AUC3.5 Capitolato             \\
+  R050F1                               & L'interfaccia web deve permettere al gestore di gestire l'organizzazione                                                                                                                                & AUC3 Capitolato               \\
+  R051F1                               & L'interfaccia web deve permettere all'owner di creare un'organizzazione                                                                                                                                 & AUC3.1 Capitolato             \\
+  R052F1                               & È necessario che l'owner inserisca il nome dell'organizzazione                                                                                                                                          & AUC3.1.1 Interno              \\
+  R053F1                               & È necessario che l'owner inserisca la descrizione dell'organizzazione                                                                                                                                   & AUC3.1.2 Interno              \\
+  R054F1                               & È necessario che l'owner configuri i dettagli del server LDAP dell'organizzazione                                                                                                                       & AUC3.1.3 Capitolato           \\
+  R055F1                               & L'interfaccia web deve permettere all'owner di eliminare un'organizzazione in suo possesso                                                                                                              & AUC3.2 Capitolato             \\
+  R056F1                               & È necessario che l'owner confermi di voler procedere con l'eliminazione dell'organizzazione                                                                                                             & AUC3.2.1 Interno              \\
+  R057F1                               & L'interfaccia web deve permettere all'owner di modificare l'organizzazione                                                                                                                              & AUC3.3 Capitolato             \\
+  R058F1                               & L'interfaccia web deve permettere all'owner di modificare il nome dell'organizzazione                                                                                                                   & AUC3.3.1 Capitolato           \\
+  R059F1                               & L'interfaccia web deve permettere all'owner di modificare la descrizione dell'organizzazione                                                                                                            & AUC3.3.2 Capitolato           \\
+  R060F1                               & L'interfaccia web deve permettere all'owner di modificare la configurazione del server LDAP dell'organizzazione                                                                                         & AUC3.3.3 Capitolato           \\
 
   % gestione luoghi e viste
-  R058F1                               & L'interfaccia web deve permettere al gestore di gestire i luoghi dell'organizzazione                                                                                                                    & AUC4 Capitolato               \\
-  R059F1                               & L'interfaccia web deve permettere al gestore di aggiungere un luogo all'organizzazione                                                                                                                  & AUC4.1 Capitolato             \\
-  R060F1                               & È necessario che il gestore inserisca le coordinate geografiche del luogo da aggiungere all'organizzazione                                                                                              & AUC4.1.1 Capitolato           \\
-  R061F3                               & L'interfaccia web può opzionalmente permettere al gestore di aggiungere un luogo all'organizzazione evidenziandone l'area sulla mappa                                                                   & Capitolato                    \\
-  R062F1                               & È necessario che il gestore inserisca l'indirizzo del luogo da aggiungere all'organizzazione                                                                                                            & AUC4.1.2 Capitolato           \\
-  R063F1                               & L'interfaccia web deve permettere al gestore di eliminare luoghi dall'organizzazione                                                                                                                    & AUC4.2 Capitolato             \\
-  R064F1                               & L'interfaccia web deve permettere al gestore di modificare i luoghi dell'organizzazione                                                                                                                 & AUC4.3 Capitolato             \\
-  R065F1                               & È necessario che il gestore inserisca le coordinate geografiche del luogo da modificare                                                                                                                 & AUC4.3.1 Capitolato           \\
-  R066F3                               & L'interfaccia web può opzionalmente permettere al gestore di modificare un luogo dell'organizzazione evidenziandone l'area sulla mappa                                                                  & Capitolato                    \\
-  R067F1                               & È necessario che il gestore inserisca l'indirizzo del luogo da modificare                                                                                                                               & AUC4.3.2 Capitolato           \\
-  R068F1                               & L'interfaccia web deve permettere al gestore di selezionare un luogo dalla lista dei luoghi dell'organizzazione                                                                                         & AUC4.4 Interno                \\
-  R069F1                               & L'interfaccia web deve permettere al visualizzatore di un'organizzazione di visualizzare le informazioni sull'organizzazione                                                                            & AUC5 Capitolato               \\
-  R070F1                               & L'interfaccia web deve permettere al visualizzatore di un'organizzazione di monitorare il numero dei dipendenti in tutta l'organizzazione                                                               & AUC5.1 Capitolato             \\
-  R071F1                               & L'interfaccia web deve permettere al visualizzatore di un'organizzazione di monitorare il numero dei dipendenti in un luogo dell'organizzazione                                                         & AUC5.2 Capitolato             \\
-  R072F2                               & L'interfaccia web deve permettere al visualizzatore di un'organizzazione di visualizzare un report degli accessi, delle ore trascorse nei vari luoghi, e dei luoghi più frequentati dell'organizzazione & AUC5.3 Capitolato             \\
-  R073F1                               & L'interfaccia web deve permettere al visualizzatore di un'organizzazione di visualizzare le informazioni riguardo un dipendente                                                                         & AUC6 Capitolato               \\
-  R074F1                               & L'interfaccia web deve permettere al visualizzatore di un'organizzazione di sapere se un dipendente si trova all'interno di un'organizzazione in cui opera                                              & AUC6.1 Interno                \\
-  R075F1                               & L'interfaccia web deve permettere al visualizzatore di un'organizzazione di sapere il luogo in cui si trova un dipendente                                                                               & AUC6.2 Interno                \\
+  R061F1                               & L'interfaccia web deve permettere al gestore di gestire i luoghi dell'organizzazione                                                                                                                    & AUC4 Capitolato               \\
+  R062F1                               & L'interfaccia web deve permettere al gestore di aggiungere un luogo all'organizzazione                                                                                                                  & AUC4.1 Capitolato             \\
+  R063F1                               & È necessario che il gestore inserisca le coordinate geografiche del luogo da aggiungere all'organizzazione                                                                                              & AUC4.1.1 Capitolato           \\
+  R064F3                               & L'interfaccia web può opzionalmente permettere al gestore di aggiungere un luogo all'organizzazione evidenziandone l'area sulla mappa                                                                   & Capitolato                    \\
+  R065F1                               & È necessario che il gestore inserisca l'indirizzo del luogo da aggiungere all'organizzazione                                                                                                            & AUC4.1.2 Capitolato           \\
+  R066F1                               & L'interfaccia web deve permettere al gestore di eliminare luoghi dall'organizzazione                                                                                                                    & AUC4.2 Capitolato             \\
+  R067F1                               & L'interfaccia web deve permettere al gestore di modificare i luoghi dell'organizzazione                                                                                                                 & AUC4.3 Capitolato             \\
+  R068F1                               & È necessario che il gestore inserisca le coordinate geografiche del luogo da modificare                                                                                                                 & AUC4.3.1 Capitolato           \\
+  R069F3                               & L'interfaccia web può opzionalmente permettere al gestore di modificare un luogo dell'organizzazione evidenziandone l'area sulla mappa                                                                  & Capitolato                    \\
+  R070F1                               & È necessario che il gestore inserisca l'indirizzo del luogo da modificare                                                                                                                               & AUC4.3.2 Capitolato           \\
+  R071F1                               & L'interfaccia web deve permettere al visualizzatore di un'organizzazione di visualizzare le informazioni sull'organizzazione                                                                            & AUC5 Capitolato               \\
+  R072F1                               & L'interfaccia web deve permettere al visualizzatore di un'organizzazione di monitorare il numero dei dipendenti in tutta l'organizzazione                                                               & AUC5.1 Capitolato             \\
+  R073F1                               & L'interfaccia web deve permettere al visualizzatore di un'organizzazione di monitorare il numero dei dipendenti in un luogo dell'organizzazione                                                         & AUC5.2 Capitolato             \\
+  R074F2                               & L'interfaccia web deve permettere al visualizzatore di un'organizzazione di visualizzare un report degli accessi, delle ore trascorse nei vari luoghi, e dei luoghi più frequentati dell'organizzazione & AUC5.3 Capitolato             \\
+  R075F1                               & L'interfaccia web deve permettere al visualizzatore di un'organizzazione di visualizzare le informazioni riguardo un dipendente                                                                         & AUC6 Capitolato               \\
+  R076F1                               & L'interfaccia web deve permettere al visualizzatore di un'organizzazione di sapere se un dipendente si trova all'interno di un'organizzazione in cui opera                                              & AUC6.1 Interno                \\
+  R077F1                               & L'interfaccia web deve permettere al visualizzatore di un'organizzazione di sapere il luogo in cui si trova un dipendente                                                                               & AUC6.2 Interno                \\
 
   % ottenere e revocare privilegi
-  R076F1                               & L'interfaccia web deve permettere all'utente autenticato di diventare owner e ottenere la possibilità di creare una sua organizzazione                                                                  & AUC7 Capitolato               \\
-  R077F1                               & È necessario che l'utente autenticato confermi la sua scelta di diventare owner                                                                                                                         & AUC7.1 Interno                \\
-  R078F2                               & L'interfaccia web deve permettere all'owner di aggiungere un nuovo gestore dell'organizzazione                                                                                                          & AUC8 Capitolato               \\
-  R079F1                               & È necessario che l'owner inserisca la mail del nuovo gestore                                                                                                                                            & AUC8.1 Interno                \\
-  R080F2                               & L'interfaccia web deve permettere all'owner di aggiungere un nuovo visualizzatore dell'organizzazione                                                                                                   & AUC9 Capitolato               \\
-  R081F1                               & È necessario che l'owner inserisca la mail del nuovo visualizzatore                                                                                                                                     & AUC9.1 Interno                \\
-  R082F1                               & L'interfaccia web deve permettere all'amministratore di togliere i privilegi di owner ad un utente che ne sia in possesso                                                                               & AUC10 Capitolato              \\
-  R083F1                               & È necessario che l'amministratore inserisca la mail dell'owner                                                                                                                                          & AUC10.1 Interno               \\
-  R084F2                               & L'interfaccia web deve permettere all'owner di togliere i privilegi di gestore ad un utente che ne sia in possesso                                                                                      & AUC11 Capitolato              \\
-  R085F1                               & È necessario che l'owner inserisca la mail del gestore                                                                                                                                                  & AUC11.1 Interno               \\
-  R086F2                               & L'interfaccia web deve permettere all'owner di togliere i privilegi di visualizzatore ad un utente che ne sia in possesso                                                                               & AUC12 Capitolato              \\
-  R087F1                               & È necessario che l'owner inserisca la mail del visualizzatore                                                                                                                                           & AUC12.1 Interno               \\
-  R088F1                               & L'interfaccia web deve permettere all'amministratore di eliminare un account dal database                                                                                                               & AUC13 Interno                 \\
-  R089F1                               & È necessario che l'amministratore selezioni l'account da eliminare                                                                                                                                      & AUC13.1 Interno               \\
-  R090F1                               & È necessario che l'amministratore confermi di voler procedere con l'eliminazione dell'account selezionato                                                                                               & AUC13.1.1 Interno             \\
+  R078F1                               & L'interfaccia web deve permettere all'utente autenticato di diventare owner e ottenere la possibilità di creare una sua organizzazione                                                                  & AUC7 Capitolato               \\
+  R079F1                               & È necessario che l'utente autenticato confermi la sua scelta di diventare owner                                                                                                                         & AUC7.1 Interno                \\
+  R080F2                               & L'interfaccia web deve permettere all'owner di aggiungere un nuovo gestore dell'organizzazione                                                                                                          & AUC8 Capitolato               \\
+  R081F1                               & È necessario che l'owner inserisca la mail del nuovo gestore                                                                                                                                            & AUC8.1 Interno                \\
+  R082F2                               & L'interfaccia web deve permettere all'owner di aggiungere un nuovo visualizzatore dell'organizzazione                                                                                                   & AUC9 Capitolato               \\
+  R083F1                               & È necessario che l'owner inserisca la mail del nuovo visualizzatore                                                                                                                                     & AUC9.1 Interno                \\
+  R084F1                               & L'interfaccia web deve permettere all'amministratore di togliere i privilegi di owner ad un utente che ne sia in possesso                                                                               & AUC10 Capitolato              \\
+  R085F1                               & È necessario che l'amministratore inserisca la mail dell'owner                                                                                                                                          & AUC10.1 Interno               \\
+  R086F2                               & L'interfaccia web deve permettere all'owner di togliere i privilegi di gestore ad un utente che ne sia in possesso                                                                                      & AUC11 Capitolato              \\
+  R087F1                               & È necessario che l'owner inserisca la mail del gestore                                                                                                                                                  & AUC11.1 Interno               \\
+  R088F2                               & L'interfaccia web deve permettere all'owner di togliere i privilegi di visualizzatore ad un utente che ne sia in possesso                                                                               & AUC12 Capitolato              \\
+  R089F1                               & È necessario che l'owner inserisca la mail del visualizzatore                                                                                                                                           & AUC12.1 Interno               \\
+  R090F1                               & L'interfaccia web deve permettere all'amministratore di eliminare un account dal database                                                                                                               & AUC13 Interno                 \\
+  R091F1                               & È necessario che l'amministratore confermi di voler procedere con l'eliminazione dell'account selezionato                                                                                               & AUC13.1 Interno               \\
 \end{longtable}
-\end{center}
 
 \newpage
 \subsection{Requisiti prestazionali}%
 \label{sub:requisiti_prestazionali}
 In questa sezione indichiamo le prestazioni che il sistema deve fornire: velocità in esecuzione e memoria occupata.
 
-\begin{center}
 \rowcolors{2}{lightgray}{white!80!lightgray!100}
 \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
 \begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{\centering}m{10cm} >{\centering\arraybackslash}m{3cm}}
+  \caption{Tabella dei requisiti prestazionali}
+  \label{tab:tabella_requisiti_prestazionali}                                                                                                                                                         \\
+  \rowcolor{darkgray!90!}
+  \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                          & \color{white}{\textbf{Fonte}} \\
+  \endfirsthead%
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                          & \color{white}{\textbf{Fonte}} \\
   \endhead%
@@ -161,21 +170,24 @@ In questa sezione indichiamo le prestazioni che il sistema deve fornire: velocit
   \multicolumn{3}{c}{\textit{Continua alla pagina seguente}}
   \endfoot%
   \endlastfoot%
-  R091P1                               & Il server deve essere in grado di scalare in modo dinamico in base al numero di utilizzatori                                 & Capitolato                    \\
-  R092P1                               & È necessario permettere il proseguimento dei servizio anche nei casi di richieste che vanno oltre le capacità a pieno regime & Capitolato                    \\
-  R093P1                               & È necessario utilizzare la scalabilità orizzontale                                                                            & Capitolato                    \\
+  R092P1                               & Il server deve essere in grado di scalare in modo dinamico in base al numero di utilizzatori                                 & Capitolato                    \\
+  R093P1                               & È necessario permettere il proseguimento dei servizio anche nei casi di richieste che vanno oltre le capacità a pieno regime & Capitolato                    \\
+  R094P1                               & È necessario utilizzare la scalabilità orizzontale                                                                           & Capitolato                    \\
 \end{longtable}
-\end{center}
 
 \newpage
-\subsection{Requisiti dichiarativi}%
-\label{sub:requisiti_dichiarativi}
-In questa sezione indichiamo i requisiti definiti dall'esterno, ad esempio requisiti di vincolo esposti nel capitolato.
+\subsection{Requisiti di vincolo}%
+\label{sub:requisiti_di_vincolo}
+In questa sezione indichiamo i requisiti di vincolo esposti nel capitolato.
 
-\begin{center}
 \rowcolors{2}{lightgray}{white!80!lightgray!100}
 \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
 \begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{\centering}m{10cm} >{\centering\arraybackslash}m{3cm}}
+  \caption{Tabella dei requisiti di vincolo}
+  \label{tab:tabella_requisiti_vincolo}                                                                                                                                                                                                                                                                                         \\
+  \rowcolor{darkgray!90!}
+  \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                                                                                                                                                    & \color{white}{\textbf{Fonte}} \\
+  \endfirsthead%
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                                                                                                                                                    & \color{white}{\textbf{Fonte}} \\
   \endhead%
@@ -183,42 +195,67 @@ In questa sezione indichiamo i requisiti definiti dall'esterno, ad esempio requi
   \multicolumn{3}{c}{\textit{Continua alla pagina seguente}}
   \endfoot%
   \endlastfoot%
-  R094D1                               & È necessario sviluppare un server backend                                                                                                                                                                                                              & Capitolato                    \\
-  R095D1                               & È necessario che il server sia dotato di un'interfaccia grafica tramite cui gli utenti possano interagire                                                                                                                                              & Capitolato                    \\
-  R096D1                               & È necessario sviluppare un'applicazione mobile (Android o iOS)                                                                                                                                                                                         & Capitolato                    \\
-  R097D1                               & Le comunicazioni tra applicazione e server devono avvenire solo al momento d'ingresso ed uscita dai luoghi designati                                                                                                                                   & Capitolato                    \\
-  R098D2                               & È desiderabile che venga utilizzato il linguaggio \glossario{Java} (versione 8 o superiore), \glossario{Python}, o \glossario{Node.js} per lo sviluppo del server backend                                                                              & Capitolato                    \\
-  R099D2                               & È desiderabile che vengano utilizzati protocolli asincroni per le comunicazioni tra app e server                                                                                                                                                       & Capitolato                    \\
-  R100D2                               & È desiderabile l'utilizzo del design pattern \glossario{Publisher/Subscriber}                                                                                                                                                                          & Capitolato                    \\
-  R101D2                               & È desiderabile che venga utilizzato un \glossario{IAAS} come \glossario{Kubernetes} o un \glossario{PAAS} come \glossario{Openshift} o \glossario{Rancher} per il rilascio delle componenti del server e per la gestione della scalabilità orizzontale & Capitolato                    \\
-  R102D1                               & È necessario che il server esponga delle \glossario{API REST} attraverso cui utilizzare l'applicativo o, alternativamente, è possibile utilizzare il framework \glossario{gRPC}                                                                        & Capitolato                    \\
-  R103D1                               & Si deve garantire una precisione sufficiente a certificare la presenza dell'utente all'interno degli edifici                                                                                                                                           & Capitolato                    \\
-  R104D1                               & È necessario che l'applicazione utilizzi tecnologie \glossario{GPS}                                                                                                                                                                                    & Capitolato                    \\
-  R105D1                               & È necessario che l'applicazione sia in grado di bilanciare il consumo della batteria e la necessità di aggiornare la posizione in background                                                                                                           & Capitolato                    \\
-  R106D1                               & È necessario che venga fornito un resoconto di tutte le scelte fatte e dei test effettuati per garantire il miglior rapporto raggiunto tra consumo della batteria e utilizzo del GPS, comprensivi di report                                            & Capitolato                    \\
-  R107D1                               & È necessario che tutte le componenti applicative siano correlate dei test unitari e d'integrazione                                                                                                                                                     & Capitolato                    \\
-  R108D1                               & È necessario testare interamente il sistema tramite \glossario{test end-to-end}                                                                                                                                                                        & Capitolato                    \\
-  R109D1                               & È necessario effettuare test di carico che dimostrino il corretto funzionamento in ogni situazione: normale, di carico e di sovraccarico                                                                                                               & Capitolato                    \\
-  R110D1                               & È necessario fornire una copertura dei test almeno dell'80\%, correlata di report                                                                                                                                                                      & Capitolato                    \\
-  R111D1                               & È necessario fornire documentazione relativa alle scelte implementative e progettuali effettuate correlate dalle relative motivazioni                                                                                                                  & Capitolato                    \\
-  R112D1                               & È necessario fornire documentazione relativa a problemi aperti ed eventuali soluzioni proposte da esplorare                                                                                                                                            & Capitolato                    \\
-  R113D2                               & È desiderabile che tutte le comunicazioni tra app e server siano cifrate                                                                                                                                                                               & Capitolato                    \\
-  R114D2                               & È desiderabile che venga fornita un'analisi rispetto al carico massimo in numero di utenti e di quale sarebbe il servizio cloud più adatto per supportarlo, analizzando prezzo, stabilità del servizio ed assistenza                                   & Capitolato                    \\
-  R115D1                               & È necessario garantire la privacy degli utenti e rispettare la normativa \glossario{GDPR}                                                                                                                                                              & Interno                       \\
+  R095V1                               & È necessario sviluppare un server backend                                                                                                                                                                                                              & Capitolato                    \\
+  R096V1                               & È necessario che il server sia dotato di un'interfaccia grafica tramite cui gli utenti possano interagire                                                                                                                                              & Capitolato                    \\
+  R097V1                               & È necessario sviluppare un'applicazione mobile (Android o iOS)                                                                                                                                                                                         & Capitolato                    \\
+  R098V1                               & Le comunicazioni tra applicazione e server devono avvenire solo al momento d'ingresso ed uscita dai luoghi designati                                                                                                                                   & Capitolato                    \\
+  R099V2                               & È desiderabile che venga utilizzato il linguaggio \glossario{Java} (versione 8 o superiore), \glossario{Python}, o \glossario{Node.js} per lo sviluppo del server backend                                                                              & Capitolato                    \\
+  R100V2                               & È desiderabile che vengano utilizzati protocolli asincroni per le comunicazioni tra app e server                                                                                                                                                       & Capitolato                    \\
+  R101V2                               & È desiderabile l'utilizzo del design pattern \glossario{Publisher/Subscriber}                                                                                                                                                                          & Capitolato                    \\
+  R102V2                               & È desiderabile che venga utilizzato un \glossario{IAAS} come \glossario{Kubernetes} o un \glossario{PAAS} come \glossario{Openshift} o \glossario{Rancher} per il rilascio delle componenti del server e per la gestione della scalabilità orizzontale & Capitolato                    \\
+  R103V1                               & È necessario che il server esponga delle \glossario{API REST} attraverso cui utilizzare l'applicativo o, alternativamente, è possibile utilizzare il framework \glossario{gRPC}                                                                        & Capitolato                    \\
+  R104V1                               & Si deve garantire una precisione sufficiente a certificare la presenza dell'utente all'interno degli edifici                                                                                                                                           & Capitolato                    \\
+  R105V1                               & È necessario che l'applicazione utilizzi tecnologie \glossario{GPS}                                                                                                                                                                                    & Capitolato                    \\
+  R106V1                               & È necessario che l'applicazione sia in grado di bilanciare il consumo della batteria e la necessità di aggiornare la posizione in background                                                                                                           & Capitolato                    \\
+  R107V1                               & È necessario che venga fornito un resoconto di tutte le scelte fatte e dei test effettuati per garantire il miglior rapporto raggiunto tra consumo della batteria e utilizzo del GPS, comprensivi di report                                            & Capitolato                    \\
 \end{longtable}
-\end{center}
+
+\newpage
+\subsection{Requisiti di qualità}%
+\label{sub:requisiti_di_qualita}
+In questa sezione indichiamo i requisiti di qualità esposti nel capitolato.
+
+\rowcolors{2}{lightgray}{white!80!lightgray!100}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{\centering}m{10cm} >{\centering\arraybackslash}m{3cm}}
+  \caption{Tabella dei requisiti di qualità}
+  \label{tab:tabella_requisiti_qualita}                                                                                                                                                                                                                                                       \\
+  \rowcolor{darkgray!90!}
+  \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                                                                                                                  & \color{white}{\textbf{Fonte}} \\
+  \endfirsthead%
+  \rowcolor{darkgray!90!}
+  \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                                                                                                                  & \color{white}{\textbf{Fonte}} \\
+  \endhead%
+  \rowcolor{white}
+  \multicolumn{3}{c}{\textit{Continua alla pagina seguente}}
+  \endfoot%
+  \endlastfoot%
+  R108Q1                               & È necessario che tutte le componenti applicative siano correlate dei test unitari e d'integrazione                                                                                                                   & Capitolato                    \\
+  R109Q1                               & È necessario testare interamente il sistema tramite \glossario{test end-to-end}                                                                                                                                      & Capitolato                    \\
+  R110Q1                               & È necessario effettuare test di carico che dimostrino il corretto funzionamento in ogni situazione: normale, di carico e di sovraccarico                                                                             & Capitolato                    \\
+  R111Q1                               & È necessario fornire una copertura dei test almeno dell'80\%, correlata di report                                                                                                                                    & Capitolato                    \\
+  R112Q1                               & È necessario fornire documentazione relativa alle scelte implementative e progettuali effettuate correlate dalle relative motivazioni                                                                                & Capitolato                    \\
+  R113Q1                               & È necessario fornire documentazione relativa a problemi aperti ed eventuali soluzioni proposte da esplorare                                                                                                          & Capitolato                    \\
+  R114Q2                               & È desiderabile che tutte le comunicazioni tra app e server siano cifrate                                                                                                                                             & Capitolato                    \\
+  R115Q2                               & È desiderabile che venga fornita un'analisi rispetto al carico massimo in numero di utenti e di quale sarebbe il servizio cloud più adatto per supportarlo, analizzando prezzo, stabilità del servizio ed assistenza & Capitolato                    \\
+  R116Q1                               & È necessario garantire la privacy degli utenti e rispettare la normativa \glossario{GDPR}                                                                                                                            & Interno                       \\
+\end{longtable}
 
 \newpage
 \subsection{Tracciamento}%
 \label{sub:tracciamento}
 
 \subsubsection{Tracciamento fonte-requisito}%
-\label{sub:tracciamento_fonte-requisito}
+\label{subs:tracciamento_fonte-requisito}
 
-\begin{center}
 \rowcolors{2}{lightgray}{white!80!lightgray!100}
 \renewcommand{\arraystretch}{2}
-\begin{longtable}[H]{ p{3cm} | p{4cm} }
+\begin{longtable}[H]{ p{4cm} | p{4cm} }
+  \caption{Tabella di tracciamento fonti-requisiti}
+  \label{tab:tabella_tracciamento_fonti-requisiti}                     \\
+  \rowcolor{darkgray!90!}
+  \color{white}{\textbf{Fonte}} & \color{white}{\textbf{ID requisito}} \\
+  \endfirsthead%
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{Fonte}} & \color{white}{\textbf{ID requisito}} \\
   \endhead%
@@ -244,128 +281,207 @@ In questa sezione indichiamo i requisiti definiti dall'esterno, ad esempio requi
   Interno                       & R016F1                               \\
   Interno                       & R017F1                               \\
   Interno                       & R018F1                               \\
+  Interno                       & R019F1                               \\
+  Interno                       & R020F1                               \\
   Interno                       & R021F1                               \\
+  Interno                       & R022F1                               \\
   Interno                       & R023F1                               \\
   Interno                       & R024F1                               \\
-  Interno                       & R025F1                               \\
   Interno                       & R027F1                               \\
+  Interno                       & R028F1                               \\
   Interno                       & R029F1                               \\
-  Interno                       & R036F1                               \\
-  Interno                       & R037F1                               \\
-  Interno                       & R038F1                               \\
-  Interno                       & R039F1                               \\
+  Interno                       & R030F1                               \\
+  Interno                       & R032F1                               \\
+  Interno                       & R034F1                               \\
   Interno                       & R041F1                               \\
   Interno                       & R042F1                               \\
   Interno                       & R043F1                               \\
   Interno                       & R044F1                               \\
+  Interno                       & R046F1                               \\
   Interno                       & R047F1                               \\
   Interno                       & R048F1                               \\
-  Interno                       & R051F1                               \\
-  Interno                       & R068F1                               \\
-  Interno                       & R074F1                               \\
-  Interno                       & R075F1                               \\
+  Interno                       & R049F1                               \\
+  Interno                       & R052F1                               \\
+  Interno                       & R053F1                               \\
+  Interno                       & R056F1                               \\
+  Interno                       & R076F1                               \\
   Interno                       & R077F1                               \\
   Interno                       & R079F1                               \\
   Interno                       & R081F1                               \\
   Interno                       & R083F1                               \\
   Interno                       & R085F1                               \\
   Interno                       & R087F1                               \\
-  Interno                       & R088F1                               \\
   Interno                       & R089F1                               \\
   Interno                       & R090F1                               \\
-  Interno                       & R115D1                               \\
-\end{longtable}
-\end{center}
-
-\begin{center}
-\rowcolors{2}{lightgray}{white!80!lightgray!100}
-\renewcommand{\arraystretch}{2}
-\begin{longtable}[H]{ p{3cm} | p{4cm} }
-  \rowcolor{darkgray!90!}
-  \color{white}{\textbf{Fonte}} & \color{white}{\textbf{ID requisito}} \\
-  \endhead%
-  \rowcolor{white}
-  \multicolumn{2}{c}{\textit{Continua alla pagina seguente}}
-  \endfoot%
-  \endlastfoot%
-  Capitolato                    & R019F1                               \\
-  Capitolato                    & R020F1                               \\
-  Capitolato                    & R022F1                               \\
+  Interno                       & R091F1                               \\
+  Interno                       & R116Q1                               \\
+  Capitolato                    & R025F1                               \\
   Capitolato                    & R026F1                               \\
-  Capitolato                    & R028F1                               \\
-  Capitolato                    & R030F1                               \\
   Capitolato                    & R031F1                               \\
-  Capitolato                    & R032F1                               \\
   Capitolato                    & R033F1                               \\
-  Capitolato                    & R034F2                               \\
-  Capitolato                    & R035F2                               \\
-  Capitolato                    & R040F1                               \\
+  Capitolato                    & R035F1                               \\
+  Capitolato                    & R036F1                               \\
+  Capitolato                    & R037F1                               \\
+  Capitolato                    & R038F1                               \\
+  Capitolato                    & R039F2                               \\
+  Capitolato                    & R040F2                               \\
   Capitolato                    & R045F1                               \\
-  Capitolato                    & R046F1                               \\
-  Capitolato                    & R049F1                               \\
   Capitolato                    & R050F1                               \\
-  Capitolato                    & R052F1                               \\
-  Capitolato                    & R053F1                               \\
+  Capitolato                    & R051F1                               \\
   Capitolato                    & R054F1                               \\
   Capitolato                    & R055F1                               \\
-  Capitolato                    & R056F1                               \\
   Capitolato                    & R057F1                               \\
   Capitolato                    & R058F1                               \\
   Capitolato                    & R059F1                               \\
   Capitolato                    & R060F1                               \\
-  Capitolato                    & R061F3                               \\
+  Capitolato                    & R061F1                               \\
   Capitolato                    & R062F1                               \\
   Capitolato                    & R063F1                               \\
-  Capitolato                    & R064F1                               \\
+  Capitolato                    & R064F3                               \\
   Capitolato                    & R065F1                               \\
-  Capitolato                    & R066F3                               \\
+  Capitolato                    & R066F1                               \\
   Capitolato                    & R067F1                               \\
-  Capitolato                    & R069F1                               \\
+  Capitolato                    & R068F1                               \\
+  Capitolato                    & R069F3                               \\
   Capitolato                    & R070F1                               \\
   Capitolato                    & R071F1                               \\
-  Capitolato                    & R072F2                               \\
+  Capitolato                    & R072F1                               \\
   Capitolato                    & R073F1                               \\
-  Capitolato                    & R076F1                               \\
-  Capitolato                    & R078F2                               \\
+  Capitolato                    & R074F2                               \\
+  Capitolato                    & R075F1                               \\
+  Capitolato                    & R078F1                               \\
   Capitolato                    & R080F2                               \\
-  Capitolato                    & R082F1                               \\
-  Capitolato                    & R084F2                               \\
+  Capitolato                    & R082F2                               \\
+  Capitolato                    & R084F1                               \\
   Capitolato                    & R086F2                               \\
-  Capitolato                    & R091P1                               \\
+  Capitolato                    & R088F2                               \\
   Capitolato                    & R092P1                               \\
   Capitolato                    & R093P1                               \\
-  Capitolato                    & R094D1                               \\
-  Capitolato                    & R095D1                               \\
-  Capitolato                    & R096D1                               \\
-  Capitolato                    & R097D1                               \\
-  Capitolato                    & R098D2                               \\
-  Capitolato                    & R099D2                               \\
-  Capitolato                    & R100D2                               \\
-  Capitolato                    & R101D2                               \\
-  Capitolato                    & R102D1                               \\
-  Capitolato                    & R103D1                               \\
-  Capitolato                    & R104D1                               \\
-  Capitolato                    & R105D1                               \\
-  Capitolato                    & R106D1                               \\
-  Capitolato                    & R107D1                               \\
-  Capitolato                    & R108D1                               \\
-  Capitolato                    & R109D1                               \\
-  Capitolato                    & R110D1                               \\
-  Capitolato                    & R111D1                               \\
-  Capitolato                    & R112D1                               \\
-  Capitolato                    & R113D2                               \\
-  Capitolato                    & R114D2                               \\
+  Capitolato                    & R094P1                               \\
+  Capitolato                    & R095V1                               \\
+  Capitolato                    & R096V1                               \\
+  Capitolato                    & R097V1                               \\
+  Capitolato                    & R098V1                               \\
+  Capitolato                    & R099V2                               \\
+  Capitolato                    & R100V2                               \\
+  Capitolato                    & R101V2                               \\
+  Capitolato                    & R102V2                               \\
+  Capitolato                    & R103V1                               \\
+  Capitolato                    & R104V1                               \\
+  Capitolato                    & R105V1                               \\
+  Capitolato                    & R106V1                               \\
+  Capitolato                    & R107V1                               \\
+  Capitolato                    & R108Q1                               \\
+  Capitolato                    & R109Q1                               \\
+  Capitolato                    & R110Q1                               \\
+  Capitolato                    & R111Q1                               \\
+  Capitolato                    & R112Q1                               \\
+  Capitolato                    & R113Q1                               \\
+  Capitolato                    & R114Q2                               \\
+  Capitolato                    & R115Q2                               \\
+  UUC1 Interno                  & R001F1                               \\
+  UUC1.1 Interno                & R002F1                               \\
+  UUC1.2 Interno                & R003F1                               \\
+  UUC1.2.1 Interno              & R004F1                               \\
+  UUC1.2.2 Interno              & R005F1                               \\
+  UUC1.2.3 Interno              & R006F1                               \\
+  UUC1.2.4 Interno              & R007F1                               \\
+  UUC1.2.5 Interno              & R008F1                               \\
+  UUC1.2.6 Interno              & R009F1                               \\
+  UUC1.2.7 Interno              & R010F1                               \\
+  UUC1.2.8 Interno              & R011F1                               \\
+  UUC2 Interno                  & R012F1                               \\
+  UUC2.1 Interno                & R013F1                               \\
+  UUC2.2 Interno                & R014F1                               \\
+  UUC2.3 Interno                & R015F1                               \\
+  UUC2.3.1 Interno              & R016F1                               \\
+  UUC2.3.1.1 Interno            & R017F1                               \\
+  UUC2.3.1.2 Interno            & R018F1                               \\
+  UUC2.3.1.2.1 Interno          & R019F1                               \\
+  UUC2.3.1.2.2 Interno          & R020F1                               \\
+  UUC2.3.1.2.3 Interno          & R021F1                               \\
+  UUC2.3.1.2.4 Interno          & R022F1                               \\
+  UUC2.3.1.3 Interno            & R023F1                               \\
+  UUC2.4 Interno                & R024F1                               \\
+  UUC3 Capitolato               & R025F1                               \\
+  UUC3.1 Capitolato             & R026F1                               \\
+  UUC3.2 Interno                & R027F1                               \\
+  UUC3.2.1 Interno              & R028F1                               \\
+  UUC3.2.2 Interno              & R029F1                               \\
+  UUC3.2.3 Interno              & R030F1                               \\
+  UUC4 Capitolato               & R031F1                               \\
+  UUC4.1 Interno                & R032F1                               \\
+  UUC5 Capitolato               & R033F1                               \\
+  UUC5.1 Interno                & R034F1                               \\
+  UUC6 Capitolato               & R035F1                               \\
+  UUC6.1 Capitolato             & R036F1                               \\
+  UUC6.1.1 Capitolato           & R037F1                               \\
+  UUC6.1.2 Capitolato           & R038F1                               \\
+  UUC7 Capitolato               & R039F2                               \\
+  UUC8 Capitolato               & R040F2                               \\
+  UUC9 Interno                  & R041F1                               \\
+  UUC10 Interno                 & R042F1                               \\
+  UUC10.1 Interno               & R043F1                               \\
+  UUC11 Interno                 & R044F1                               \\
+  AUC1 Capitolato               & R045F1                               \\
+  AUC1.1 Interno                & R046F1                               \\
+  AUC1.2 Interno                & R047F1                               \\
+  AUC1.3 Interno                & R048F1                               \\
+  AUC2 Interno                  & R049F1                               \\
+  AUC3 Capitolato               & R050F1                               \\
+  AUC3.1 Capitolato             & R051F1                               \\
+  AUC3.1.1 Interno              & R052F1                               \\
+  AUC3.1.2 Interno              & R053F1                               \\
+  AUC3.1.3 Capitolato           & R054F1                               \\
+  AUC3.2 Capitolato             & R055F1                               \\
+  AUC3.2.1 Interno              & R056F1                               \\
+  AUC3.3 Capitolato             & R057F1                               \\
+  AUC3.3.1 Capitolato           & R058F1                               \\
+  AUC3.3.2 Capitolato           & R059F1                               \\
+  AUC3.3.3 Capitolato           & R060F1                               \\
+  AUC4 Capitolato               & R061F1                               \\
+  AUC4.1 Capitolato             & R062F1                               \\
+  AUC4.1.1 Capitolato           & R063F1                               \\
+  AUC4.1.2 Capitolato           & R065F1                               \\
+  AUC4.2 Capitolato             & R066F1                               \\
+  AUC4.3 Capitolato             & R067F1                               \\
+  AUC4.3.1 Capitolato           & R068F1                               \\
+  AUC4.3.2 Capitolato           & R070F1                               \\
+  AUC5 Capitolato               & R071F1                               \\
+  AUC5.1 Capitolato             & R072F1                               \\
+  AUC5.2 Capitolato             & R073F1                               \\
+  AUC5.3 Capitolato             & R074F2                               \\
+  AUC6 Capitolato               & R075F1                               \\
+  AUC6.1 Interno                & R076F1                               \\
+  AUC6.2 Interno                & R077F1                               \\
+  AUC7 Capitolato               & R078F1                               \\
+  AUC7.1 Interno                & R079F1                               \\
+  AUC8 Capitolato               & R080F2                               \\
+  AUC8.1 Interno                & R081F1                               \\
+  AUC9 Capitolato               & R082F2                               \\
+  AUC9.1 Interno                & R083F1                               \\
+  AUC10 Capitolato              & R084F1                               \\
+  AUC10.1 Interno               & R085F1                               \\
+  AUC11 Capitolato              & R086F2                               \\
+  AUC11.1 Interno               & R087F1                               \\
+  AUC12 Capitolato              & R088F2                               \\
+  AUC12.1 Interno               & R089F1                               \\
+  AUC13 Interno                 & R090F1                               \\
+  AUC13.1 Interno               & R091F1                               \\
 \end{longtable}
-\end{center}
 
 \newpage
 \subsubsection{Tracciamento requisito-fonte}%
-\label{sub:tracciamento_requisito-fonte}
+\label{subs:tracciamento_requisito-fonte}
 
-\begin{center}
 \rowcolors{2}{lightgray}{white!80!lightgray!100}
 \renewcommand{\arraystretch}{2}
-\begin{longtable}[H]{ p{3cm} | p{4cm} }
+\begin{longtable}[H]{ p{4cm} | p{4cm} }
+  \caption{Tabella di tracciamento requisiti-fonti}
+  \label{tab:tabella_tracciamento_requisiti-fonti}                     \\
+  \rowcolor{darkgray!90!}
+  \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Fonte}} \\
+  \endfirsthead%
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Fonte}} \\
   \endhead%
@@ -373,139 +489,139 @@ In questa sezione indichiamo i requisiti definiti dall'esterno, ad esempio requi
   \multicolumn{2}{c}{\textit{Continua alla pagina seguente}}
   \endfoot%
   \endlastfoot%
-  % TODO usare nameref per riferire i casi d'uso su tutte le righe
-  R001F1                               & \nameref{subs:UUC1} Interno   \\
+  R001F1                               & UUC1 Interno                  \\
   R002F1                               & UUC1.1 Interno                \\
-  R003F1                               & UUC1.1.1 Interno              \\
-  R004F1                               & UUC1.2 Interno                \\
-  R005F1                               & UUC1.2.1 Interno              \\
-  R006F1                               & UUC1.2.2 Interno              \\
-  R007F1                               & UUC1.2.3 Interno              \\
-  R008F1                               & UUC1.2.4 Interno              \\
-  R009F1                               & UUC1.2.5 Interno              \\
-  R010F1                               & UUC2 Interno                  \\
-  R011F1                               & UUC2.1 Interno                \\
-  R012F1                               & UUC2.2 Interno                \\
-  R013F1                               & UUC2.3 Interno                \\
-  R014F1                               & UUC3 Interno                  \\
-  R015F1                               & UUC3.1 Interno                \\
-  R016F1                               & UUC3.1.1 Interno              \\
-  R017F1                               & UUC3.1.2 Interno              \\
-  R018F1                               & UUC3.1.3 Interno              \\
-  R019F1                               & UUC4 Capitolato               \\
-  R020F1                               & UUC4.1 Capitolato             \\
-  R021F1                               & UUC4.2 Interno                \\
-  R022F1                               & UUC4.3 Capitolato             \\
-  R023F1                               & UUC4.3.1 Interno              \\
-  R024F1                               & UUC4.3.2 Interno              \\
-  R025F1                               & UUC4.3.3 Interno              \\
-  R026F1                               & UUC5 Capitolato               \\
-  R027F1                               & UUC5.1 Interno                \\
-  R028F1                               & UUC6 Capitolato               \\
-  R029F1                               & UUC6.1 Interno                \\
-  R030F1                               & UUC7 Capitolato               \\
-  R031F1                               & UUC7.1 Capitolato             \\
-  R032F1                               & UUC7.1.1 Capitolato           \\
-  R033F1                               & UUC7.1.2 Capitolato           \\
-  R034F2                               & UUC8 Capitolato               \\
-  R035F2                               & UUC9 Capitolato               \\
-  R036F1                               & UUC10 Interno                 \\
-  R037F1                               & UUC11 Interno                 \\
-  R038F1                               & UUC11.1 Interno               \\
-  R039F1                               & UUC12 Interno                 \\
-  R040F1                               & AUC1 Capitolato               \\
-  R041F1                               & AUC1.1 Interno                \\
-  R042F1                               & AUC1.2 Interno                \\
-  R043F1                               & AUC1.3 Interno                \\
-  R044F1                               & AUC2 Interno                  \\
-  R045F1                               & AUC3 Capitolato               \\
-  R046F1                               & AUC3.1 Capitolato             \\
-  R047F1                               & AUC3.1.1 Interno              \\
-  R048F1                               & AUC3.1.2 Interno              \\
-  R049F1                               & AUC3.1.3 Capitolato           \\
-  R050F1                               & AUC3.2 Capitolato             \\
-  R051F1                               & AUC3.2.1 Interno              \\
-  R052F1                               & AUC3.3 Capitolato             \\
-  R053F1                               & AUC3.3.1 Capitolato           \\
-  R054F1                               & AUC3.3.2 Capitolato           \\
-  R055F1                               & AUC3.3.3 Capitolato           \\
-  R056F1                               & AUC3.4 Capitolato             \\
-  R057F1                               & AUC3.5 Capitolato             \\
-  R058F1                               & AUC4 Capitolato               \\
-  R059F1                               & AUC4.1 Capitolato             \\
-  R060F1                               & AUC4.1.1 Capitolato           \\
-  R061F3                               & Capitolato                    \\
-  R062F1                               & AUC4.1.2 Capitolato           \\
-  R063F1                               & AUC4.2 Capitolato             \\
-  R064F1                               & AUC4.3 Capitolato             \\
-  R065F1                               & AUC4.3.1 Capitolato           \\
-  R066F3                               & Capitolato                    \\
-  R067F1                               & AUC4.3.2 Capitolato           \\
-  R068F1                               & AUC4.4 Interno                \\
-  R069F1                               & AUC5 Capitolato               \\
-  R070F1                               & AUC5.1 Capitolato             \\
-  R071F1                               & AUC5.2 Capitolato             \\
-  R072F2                               & AUC5.3 Capitolato             \\
-  R073F1                               & AUC6 Capitolato               \\
-  R074F1                               & AUC6.1 Interno                \\
-  R075F1                               & AUC6.2 Interno                \\
-  R076F1                               & AUC7 Capitolato               \\
-  R077F1                               & AUC7.1 Interno                \\
-  R078F2                               & AUC8 Capitolato               \\
-  R079F1                               & AUC8.1 Interno                \\
-  R080F2                               & AUC9 Capitolato               \\
-  R081F1                               & AUC9.1 Interno                \\
-  R082F1                               & AUC10 Capitolato              \\
-  R083F1                               & AUC10.1 Interno               \\
-  R084F2                               & AUC11 Capitolato              \\
-  R085F1                               & AUC11.1 Interno               \\
-  R086F2                               & AUC12 Capitolato              \\
-  R087F1                               & AUC12.1 Interno               \\
-  R088F1                               & AUC13 Interno                 \\
-  R089F1                               & AUC13.1 Interno               \\
-  R090F1                               & AUC13.1.1 Interno             \\
-  R091P1                               & Capitolato                    \\
+  R003F1                               & UUC1.2 Interno                \\
+  R004F1                               & UUC1.2.1 Interno              \\
+  R005F1                               & UUC1.2.2 Interno              \\
+  R006F1                               & UUC1.2.3 Interno              \\
+  R007F1                               & UUC1.2.4 Interno              \\
+  R008F1                               & UUC1.2.5 Interno              \\
+  R009F1                               & UUC1.2.6 Interno              \\
+  R010F1                               & UUC1.2.7 Interno              \\
+  R011F1                               & UUC1.2.8 Interno              \\
+  R012F1                               & UUC2 Interno                  \\
+  R013F1                               & UUC2.1 Interno                \\
+  R014F1                               & UUC2.2 Interno                \\
+  R015F1                               & UUC2.3 Interno                \\
+  R016F1                               & UUC2.3.1 Interno              \\
+  R017F1                               & UUC2.3.1.1 Interno            \\
+  R018F1                               & UUC2.3.1.2 Interno            \\
+  R019F1                               & UUC2.3.1.2.1 Interno          \\
+  R020F1                               & UUC2.3.1.2.2 Interno          \\
+  R021F1                               & UUC2.3.1.2.3 Interno          \\
+  R022F1                               & UUC2.3.1.2.4 Interno          \\
+  R023F1                               & UUC2.3.1.3 Interno            \\
+  R024F1                               & UUC2.4 Interno                \\
+  R025F1                               & UUC3 Capitolato               \\
+  R026F1                               & UUC3.1 Capitolato             \\
+  R027F1                               & UUC3.2 Interno                \\
+  R028F1                               & UUC3.2.1 Interno              \\
+  R029F1                               & UUC3.2.2 Interno              \\
+  R030F1                               & UUC3.2.3 Interno              \\
+  R031F1                               & UUC4 Capitolato               \\
+  R032F1                               & UUC4.1 Interno                \\
+  R033F1                               & UUC5 Capitolato               \\
+  R034F1                               & UUC5.1 Interno                \\
+  R035F1                               & UUC6 Capitolato               \\
+  R036F1                               & UUC6.1 Capitolato             \\
+  R037F1                               & UUC6.1.1 Capitolato           \\
+  R038F1                               & UUC6.1.2 Capitolato           \\
+  R039F2                               & UUC7 Capitolato               \\
+  R040F2                               & UUC8 Capitolato               \\
+  R041F1                               & UUC9 Interno                  \\
+  R042F1                               & UUC10 Interno                 \\
+  R043F1                               & UUC10.1 Interno               \\
+  R044F1                               & UUC11 Interno                 \\
+  R045F1                               & AUC1 Capitolato               \\
+  R046F1                               & AUC1.1 Interno                \\
+  R047F1                               & AUC1.2 Interno                \\
+  R048F1                               & AUC1.3 Interno                \\
+  R049F1                               & AUC2 Interno                  \\
+  R050F1                               & AUC3 Capitolato               \\
+  R051F1                               & AUC3.1 Capitolato             \\
+  R052F1                               & AUC3.1.1 Interno              \\
+  R053F1                               & AUC3.1.2 Interno              \\
+  R054F1                               & AUC3.1.3 Capitolato           \\
+  R055F1                               & AUC3.2 Capitolato             \\
+  R056F1                               & AUC3.2.1 Interno              \\
+  R057F1                               & AUC3.3 Capitolato             \\
+  R058F1                               & AUC3.3.1 Capitolato           \\
+  R059F1                               & AUC3.3.2 Capitolato           \\
+  R060F1                               & AUC3.3.3 Capitolato           \\
+  R061F1                               & AUC4 Capitolato               \\
+  R062F1                               & AUC4.1 Capitolato             \\
+  R063F1                               & AUC4.1.1 Capitolato           \\
+  R064F3                               & Capitolato                    \\
+  R065F1                               & AUC4.1.2 Capitolato           \\
+  R066F1                               & AUC4.2 Capitolato             \\
+  R067F1                               & AUC4.3 Capitolato             \\
+  R068F1                               & AUC4.3.1 Capitolato           \\
+  R069F3                               & Capitolato                    \\
+  R070F1                               & AUC4.3.2 Capitolato           \\
+  R071F1                               & AUC5 Capitolato               \\
+  R072F1                               & AUC5.1 Capitolato             \\
+  R073F1                               & AUC5.2 Capitolato             \\
+  R074F2                               & AUC5.3 Capitolato             \\
+  R075F1                               & AUC6 Capitolato               \\
+  R076F1                               & AUC6.1 Interno                \\
+  R077F1                               & AUC6.2 Interno                \\
+  R078F1                               & AUC7 Capitolato               \\
+  R079F1                               & AUC7.1 Interno                \\
+  R080F2                               & AUC8 Capitolato               \\
+  R081F1                               & AUC8.1 Interno                \\
+  R082F2                               & AUC9 Capitolato               \\
+  R083F1                               & AUC9.1 Interno                \\
+  R084F1                               & AUC10 Capitolato              \\
+  R085F1                               & AUC10.1 Interno               \\
+  R086F2                               & AUC11 Capitolato              \\
+  R087F1                               & AUC11.1 Interno               \\
+  R088F2                               & AUC12 Capitolato              \\
+  R089F1                               & AUC12.1 Interno               \\
+  R090F1                               & AUC13 Interno                 \\
+  R091F1                               & AUC13.1 Interno               \\
   R092P1                               & Capitolato                    \\
   R093P1                               & Capitolato                    \\
-  R094D1                               & Capitolato                    \\
-  R095D1                               & Capitolato                    \\
-  R096D1                               & Capitolato                    \\
-  R097D1                               & Capitolato                    \\
-  R098D2                               & Capitolato                    \\
-  R099D2                               & Capitolato                    \\
-  R100D2                               & Capitolato                    \\
-  R101D2                               & Capitolato                    \\
-  R102D1                               & Capitolato                    \\
-  R103D1                               & Capitolato                    \\
-  R104D1                               & Capitolato                    \\
-  R105D1                               & Capitolato                    \\
-  R106D1                               & Capitolato                    \\
-  R107D1                               & Capitolato                    \\
-  R108D1                               & Capitolato                    \\
-  R109D1                               & Capitolato                    \\
-  R110D1                               & Capitolato                    \\
-  R111D1                               & Capitolato                    \\
-  R112D1                               & Capitolato                    \\
-  R113D2                               & Capitolato                    \\
-  R114D2                               & Capitolato                    \\
-  R115D1                               & Interno                       \\
+  R094P1                               & Capitolato                    \\
+  R095V1                               & Capitolato                    \\
+  R096V1                               & Capitolato                    \\
+  R097V1                               & Capitolato                    \\
+  R098V1                               & Capitolato                    \\
+  R099V2                               & Capitolato                    \\
+  R100V2                               & Capitolato                    \\
+  R101V2                               & Capitolato                    \\
+  R102V2                               & Capitolato                    \\
+  R103V1                               & Capitolato                    \\
+  R104V1                               & Capitolato                    \\
+  R105V1                               & Capitolato                    \\
+  R106V1                               & Capitolato                    \\
+  R107V1                               & Capitolato                    \\
+  R108Q1                               & Capitolato                    \\
+  R109Q1                               & Capitolato                    \\
+  R110Q1                               & Capitolato                    \\
+  R111Q1                               & Capitolato                    \\
+  R112Q1                               & Capitolato                    \\
+  R113Q1                               & Capitolato                    \\
+  R114Q2                               & Capitolato                    \\
+  R115Q2                               & Capitolato                    \\
+  R116Q1                               & Interno                       \\
 \end{longtable}
-\end{center}
 
 \subsubsection{Riepilogo}%
-\label{sub:riepilogo}
+\label{subs:riepilogo}
 
-\begin{center}
 \rowcolors{2}{lightgray}{white!80!lightgray!100}
 \renewcommand{\arraystretch}{2}
 \begin{longtable}[H]{c|c|c|c}
+  \caption{Tabella di riepilogo}
+  \label{tab:tabella_riepilogo}                                                                                                                      \\
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{Tipologia}} & \color{white}{\textbf{Obbligatori}} & \color{white}{\textbf{Desiderabili}} & \color{white}{\textbf{Opzionali}} \\
   \endhead%
-  Funzionali                        & 81                                  & 7                                    & 2                                 \\
+  Funzionali                        & 82                                  & 7                                    & 2                                 \\
   Prestazionali                     & 3                                   & 0                                    & 0                                 \\
-  Dichiarativi                      & 15                                  & 6                                    & 0                                 \\
+  Vincolo                           & 9                                   & 4                                    & 0                                 \\
+  Qualità                           & 7                                   & 2                                    & 0                                 \\
 \end{longtable}
-\end{center}
 
 \end{document}
