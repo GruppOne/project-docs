@@ -201,7 +201,7 @@ Una classe, in UML, ha la sottostante rappresentazione:
 \end{figure}
 \begin{description}
   \item [Nomi e visibilità]: i nomi di classi, campi dati e metodi andranno indicati in minuscolo e scritti in lingua inglese.
-   Inoltre, come in un vero e proprio linguaggio di programmazione, in UML è possibile indicare la visibilità di una variabile o di un metodo:
+        Inoltre, come in un vero e proprio linguaggio di programmazione, in UML è possibile indicare la visibilità di una variabile o di un metodo:
         \begin{description}
           \item [-]: visibilità privata
           \item [\#]: visibilità protetta
@@ -209,194 +209,194 @@ Una classe, in UML, ha la sottostante rappresentazione:
           \item [\textasciitilde]: visibilità a livello di package
         \end{description}
   \item[Altre convenzioni]:
-  \begin{itemize}
-    \item I campi dati e i metodi statici devono essere sottolineati.
-    \item Utilizzare \textit{{abstract}} per indicare classi astratte.
-    \item Fare uso di \textit{<<interface>>} per indicare interfacce.
-    \item Il tipo delle variabili e il tipo di ritorno va posto dopo il nome della variabile o del metodo in questione. Ad esempio:
-    \begin{center}
-        \textit{-field1: String} \\\textit{+method1: int}
-    \end{center}
-  \end{itemize}
+        \begin{itemize}
+          \item I campi dati e i metodi statici devono essere sottolineati.
+          \item Utilizzare \textit{{abstract}} per indicare classi astratte.
+          \item Fare uso di \textit{<<interface>>} per indicare interfacce.
+          \item Il tipo delle variabili e il tipo di ritorno va posto dopo il nome della variabile o del metodo in questione. Ad esempio:
+                \begin{center}
+                  \textit{-field1: String} \\\textit{+method1: int}
+                \end{center}
+        \end{itemize}
   \item [Relazioni]: una relazione di dipendenza indica una dipendenza logica presente tra due elementi del diagramma e si ha quando la modifica di un oggetto implica il cambiamento di un altro oggetto.
-  Esistono molteplici tipi di dipendenze e ognuna induce differenti gradi di dipendenza tra gli oggetti.
-  Compito del progettista sarà quello di minimizzare il numero di dipendenze, utilizzandole solo ove necessario al fine di attribuire un valore aggiunto al significato del proprio diagramma.
-  Di seguito verranno elencate i tipi di relazioni di dipendenza possibili, ordinati per grado di dipendenza crescente.
-  \begin{description}
-    \item [Dipendenza]: la dipendenza può verificarsi in due casi:
-      \begin{itemize}
-        \item Una classe A ha un metodo che riceve in input un'istanza di B.
-        \item Una classe A crea un oggetto di tipo B.
-      \end{itemize}
-      Inoltre, per indicare il tipo di dipendenza useremo principalmente due parole chiave:
-      \begin{description}
-        \item [\textit{<<call>>}]: A invoca operazioni di B.
-        \item [\textit{<<create}]: A crea istanze di B.
-      \end{description}
-      La dipendenza si indica con una freccia tratteggiata come illustrato nell'immagine sottostante.
-      \begin{figure}[H]%
-        \label{fig:dipendenza}
-        \includegraphics[width=5cm]{dipendenza.png}
-        \centering
-        \caption{Esempio di relazione di dipendenza}
-      \end{figure}
-    \item [Associazione]: l'associazione si verifica quando un oggetto di classe A ha un campo dati di tipo B.
-     L'associazione si indica con una linea continua come nell'immagine sottostante:
-    \begin{figure}[H]%
-      \label{fig:associazione}
-      \includegraphics[width=5cm]{associazione.png}
-      \centering
-      \caption{Esempio di relazione di associazione}
-    \end{figure}
-    \item [Aggregazione]: l'aggregazione prevede che una classe di tipo A crei esplicitamente tramite il proprio costruttore degli oggetti di tipo B.
-    L'aggregazione si rappresenta tramite una linea continua e un diamante che sta graficamente dalla parte di chi crea la dipendenza. Ad esempio:
-    \begin{figure}[H]%
-      \label{fig:aggregazione}
-      \includegraphics[width=5cm]{aggregazione.png}
-      \centering
-      \caption{Esempio di relazione di aggregazione}
-    \end{figure}
-    \item [Composizione]: la composizione è una forma di aggregazione più forte e si ha quando un oggetto di classe A gestisce completamente gli oggetti di tipo B.
-    La composizione si rappresenta allo stesso modo dell'aggregazione, ma a differenza di quest`ultima il diamante è colorato di nero.
-    \begin{figure}[H]%
-      \label{fig:composizione}
-      \includegraphics[width=5cm]{composizione.png}
-      \centering
-      \caption{Esempio di relazione di composizione}
-    \end{figure}
-    \item [Ereditarietà]: l'ereditarietà si ha quando un classe B deriva da una classe di tipo A.
-    Ovviamente è preferibile ereditare da classi astratte o interfacce, mentre l'ereditarietà da tipi concreti sarebbe in ogni caso da evitare. Si rappresenta così:
-    \begin{figure}[H]%
-      \label{fig:ereditarieta}
-      \includegraphics[width=2.1cm]{ereditarietà.png}
-      \centering
-      \caption{Esempio di relazione di ereditarietà}
-    \end{figure}
-  \end{description}
+        Esistono molteplici tipi di dipendenze e ognuna induce differenti gradi di dipendenza tra gli oggetti.
+        Compito del progettista sarà quello di minimizzare il numero di dipendenze, utilizzandole solo ove necessario al fine di attribuire un valore aggiunto al significato del proprio diagramma.
+        Di seguito verranno elencate i tipi di relazioni di dipendenza possibili, ordinati per grado di dipendenza crescente.
+        \begin{description}
+          \item [Dipendenza]: la dipendenza può verificarsi in due casi:
+                \begin{itemize}
+                  \item Una classe A ha un metodo che riceve in input un'istanza di B.
+                  \item Una classe A crea un oggetto di tipo B.
+                \end{itemize}
+                Inoltre, per indicare il tipo di dipendenza useremo principalmente due parole chiave:
+                \begin{description}
+                  \item [\textit{<<call>>}]: A invoca operazioni di B.
+                  \item [\textit{<<create}]: A crea istanze di B.
+                \end{description}
+                La dipendenza si indica con una freccia tratteggiata come illustrato nell'immagine sottostante.
+                \begin{figure}[H]%
+                  \label{fig:dipendenza}
+                  \includegraphics[width=5cm]{dipendenza.png}
+                  \centering
+                  \caption{Esempio di relazione di dipendenza}
+                \end{figure}
+          \item [Associazione]: l'associazione si verifica quando un oggetto di classe A ha un campo dati di tipo B.
+                L'associazione si indica con una linea continua come nell'immagine sottostante:
+                \begin{figure}[H]%
+                  \label{fig:associazione}
+                  \includegraphics[width=5cm]{associazione.png}
+                  \centering
+                  \caption{Esempio di relazione di associazione}
+                \end{figure}
+          \item [Aggregazione]: l'aggregazione prevede che una classe di tipo A crei esplicitamente tramite il proprio costruttore degli oggetti di tipo B.
+                L'aggregazione si rappresenta tramite una linea continua e un diamante che sta graficamente dalla parte di chi crea la dipendenza. Ad esempio:
+                \begin{figure}[H]%
+                  \label{fig:aggregazione}
+                  \includegraphics[width=5cm]{aggregazione.png}
+                  \centering
+                  \caption{Esempio di relazione di aggregazione}
+                \end{figure}
+          \item [Composizione]: la composizione è una forma di aggregazione più forte e si ha quando un oggetto di classe A gestisce completamente gli oggetti di tipo B.
+                La composizione si rappresenta allo stesso modo dell'aggregazione, ma a differenza di quest`ultima il diamante è colorato di nero.
+                \begin{figure}[H]%
+                  \label{fig:composizione}
+                  \includegraphics[width=5cm]{composizione.png}
+                  \centering
+                  \caption{Esempio di relazione di composizione}
+                \end{figure}
+          \item [Ereditarietà]: l'ereditarietà si ha quando un classe B deriva da una classe di tipo A.
+                Ovviamente è preferibile ereditare da classi astratte o interfacce, mentre l'ereditarietà da tipi concreti sarebbe in ogni caso da evitare. Si rappresenta così:
+                \begin{figure}[H]%
+                  \label{fig:ereditarieta}
+                  \includegraphics[width=2.1cm]{ereditarieta.png}
+                  \centering
+                  \caption{Esempio di relazione di ereditarietà}
+                \end{figure}
+        \end{description}
   \item [Molteplicità]: la molteplicità è uno strumento che permette di specificare quanti oggetti posso fare parte dell'associazione.
-   Ogni molteplicità è una sigla costituita da numeri e simboli.
-   Elenchiamo quelle di cui i progettisti dovranno fare uso:
-  \begin{description}
-    \item [1]: una classe A ha una e una sola istanza di classe di B associata.
-    \item [0..1]: una classe A può avere zero o una istanze di classe B associata.
-    \item [0..*]: una classe A può avere zero o più istanza di classe B associata.
-    \item [*]: una classe A deve avere più istanze di B associate.
-  \end{description}
+        Ogni molteplicità è una sigla costituita da numeri e simboli.
+        Elenchiamo quelle di cui i progettisti dovranno fare uso:
+        \begin{description}
+          \item [1]: una classe A ha una e una sola istanza di classe di B associata.
+          \item [0..1]: una classe A può avere zero o una istanze di classe B associata.
+          \item [0..*]: una classe A può avere zero o più istanza di classe B associata.
+          \item [*]: una classe A deve avere più istanze di B associate.
+        \end{description}
 \end{description}
 
-\subparagraph{diagrammi di package}%
+\subparagraph{Diagrammi di package}%
 \label{subp:diagrammi_di_package}
 I diagrammi di package sono utili per rappresentare elementi appartenenti ad uno stesso namespace.
-Hanno un'etichetta che identifica il nome, il quale deve essere in minuscolo e in inglese e possono contenere al loro interno altri sottopackage o classi.
+Hanno un'etichetta che identifica il nome, il quale deve essere in minuscolo e in inglese e possono contenere al loro interno altri package o classi.
 Inoltre le dipendenze tra package si indicano con frecce tratteggiate e dovrebbero tutte seguire la medesima direzione.
- \begin{figure}[H]%
-    \label{fig:package}
-    \includegraphics[width=5cm]{package.png}
-    \centering
-    \caption{diagramma dei package realizzato con PlantUML}
-  \end{figure}
+\begin{figure}[H]%
+  \label{fig:package}
+  \includegraphics[width=5cm]{package.png}
+  \centering
+  \caption{diagramma dei package realizzato con PlantUML}
+\end{figure}
 
- \subparagraph{diagrammi delle attività}%
- \label{diagrammi_delle_attivita}%
- I diagrammi delle attività rappresentano l'insieme delle azioni che ne costituiscono il funzionamento. Un tipico diagramma delle attività in PlantUML è:
-  \begin{figure}[H]%
-    \label{fig:attività}
-    \includegraphics[width=5cm]{attività.png}
-    \centering
-    \caption{diagramma delle attività realizzato con PlantUML}
-  \end{figure}
-  Gli elementi essenziali che li compongono sono:
-  \begin{itemize}
-    \item Nodo iniziale
-    \item Nodo finale
-    \item Nodi di Branching
-    \item Nodi di merge
-    \item Fork e join.
-  \end{itemize}
-  I diagrammi di attività si basano sulla produzione e consumo di token.
-  Ogniqualvolta inizia il flusso di esecuzione e quindi ci trova nel nodo iniziale si genera un token.
-  Branching e merging consumano e producono un token, la fork produce un token per ogni processo in parallelo in esecuzione mentre la join li consuma tutti e ne genera uno.
-  Infine il nodo finale consuma tutti i token.
-  Altri elementi che possono essere utilizzati per realizzare diagrammi di attività più precisi sono:
-  \begin{itemize}
-    \item Swimlanes
-    \item Segnali
-  \end{itemize}
-  \begin{description}
-    \item[Nodo iniziale]: il nodo iniziale è presente in ogni diagramma e delinea il punto di inizio di ogni diagramma delle attività. In PlantUML lo si rappresenta mediante un cerchio colorato di nero come nella figura:
-    \begin{figure}[H]%
-      \label{fig:nodo_iniziale}
-      \includegraphics[width=3cm]{nodo-iniziale.png}
-      \centering
-      \caption{Esempio di nodo iniziale}
-    \end{figure}
-    \item[Nodo finale]: il nodo finale è presente in ogni diagramma e rappresenta il termine del flusso di esecuzione.
-    In plantuml lo si raffigura come un cerchio contenente un altro cerchio colorato di nero:
-    \begin{figure}[H]%
-      \label{fig:nodo_finale}
-      \includegraphics[width=3cm]{nodo-finale.png}
-      \centering
-      \caption{Esempio di nodo finale}
-    \end{figure}
-    \item[Nodi di branching]: i nodi di branching modellano delle decisioni.
-    Hanno una guardia che indica quale test deve essere soddisfatto che si indica tramite un etichetta da affiancare al nodo di branching.
-    Tali nodi si raffigurano mediante rombi vuoti e generalmente distinguono due branch:
-    \begin{figure}[H]%
-      \label{fig:nodo_di_branch}
-      \includegraphics[width=5cm]{nodo-di-branch.png}
-      \centering
-      \caption{Esempio nodo di branching}
-    \end{figure}
-     \item[Nodi di merge]: i nodi di merge sono il punto in cui i rami generati da un nodo di branching tornano ad unirsi.
-     Hanno la stessa rappresentazione dei nodi di branching.
-    \begin{figure}[H]%
-      \label{fig:nodo_di_merge}
-      \includegraphics[width=5cm]{nodo-di-merge.png}
-      \centering
-      \caption{Esempio di nodo di merge}
-    \end{figure}
-     \item[Fork e join]: Fork e join sono necessari a rappresentare l'esecuzione parallela e concorrente.
-     Ogniqualvolta il flusso di esecuzione incontra una fork il flusso di esecuzione diventa pari al numero di frecce uscenti dalla fork.
-     Non è possibile terminare il flusso con più linee di esecuzione contemporaneamente attive ma è necessario che ci sia successivamente una join che ripristini l'unico flusso iniziale.
-     Fork e join si rappresentano allo stesso modo, tramite una barra orizzontale colorata di nero. Ad esempio:
-    \begin{figure}[H]%
-      \label{fig:fork_e_join}
-      \includegraphics[width=5cm]{fork-e-join.png}
-      \centering
-      \caption{Esempio di fork e join}
-    \end{figure}
-    \item[Swimlanes]: Le Swimlanes sono strutture da poco introdotte in PlantUML che rendono esplicito di chi è la responsabilità nell'esecuzione. Si rappresentano così:
-   \begin{figure}[H]%
-      \label{fig:swimlanes}
-      \includegraphics[width=5cm]{swimlanes.png}
-      \centering
-      \caption{Esempio di swimlanes}
-    \end{figure}
-   \item[Segnali]: I segnali servono per gestire eventi.
-   PlantUML non offre un buon supporto per i segnali e ne offre una versione in beta.
-   Ne esistono di due tipi:
-   \begin{itemize}
-    \item Segnali di input
-    \item Segnali di output.
-   \end{itemize}
-   \item [Input]: i segnali di input aspettano una risposta proveniente dall'esterno.
-   Possono essere la prima azione del diagramma.
-   Si rappresentano così:
-   \begin{figure}[H]%
-      \label{fig:input}
-      \includegraphics[width=5cm]{input.png}
-      \centering
-      \caption{Esempio segnale di input}
-    \end{figure}
-   \item [Output]: i segnali di output chiedono che venga inserito un input dall'esterno.
-   Inoltre non possono essere la prima azione del diagramma.
-   La loro rappresentazione è la seguente:
-   \begin{figure}[H]%
-    \label{fig:segnale_di_output}
-    \includegraphics[width=5cm]{output.png}
-    \centering
-    \caption{Esempio segnale di output}
-  \end{figure}
+\subparagraph{Diagrammi delle attività}%
+\label{diagrammi_delle_attivita}%
+I diagrammi delle attività rappresentano l'insieme delle azioni che ne costituiscono il funzionamento. Un tipico diagramma delle attività in PlantUML è:
+\begin{figure}[H]%
+  \label{fig:attività}
+  \includegraphics[width=5cm]{attivita.png}
+  \centering
+  \caption{diagramma delle attività realizzato con PlantUML}
+\end{figure}
+Gli elementi essenziali che li compongono sono:
+\begin{itemize}
+  \item Nodo iniziale
+  \item Nodo finale
+  \item Nodi di Branching
+  \item Nodi di merge
+  \item Fork e join.
+\end{itemize}
+I diagrammi di attività si basano sulla produzione e consumo di token.
+Ogniqualvolta inizia il flusso di esecuzione e quindi ci trova nel nodo iniziale si genera un token.
+Branching e merging consumano e producono un token, la fork produce un token per ogni processo in parallelo in esecuzione mentre la join li consuma tutti e ne genera uno.
+Infine il nodo finale consuma tutti i token.
+Altri elementi che possono essere utilizzati per realizzare diagrammi di attività più precisi sono:
+\begin{itemize}
+  \item Swimlanes
+  \item Segnali
+\end{itemize}
+\begin{description}
+  \item[Nodo iniziale]: il nodo iniziale è presente in ogni diagramma e delinea il punto di inizio di ogni diagramma delle attività. In PlantUML lo si rappresenta mediante un cerchio colorato di nero come nella figura:
+        \begin{figure}[H]%
+          \label{fig:nodo_iniziale}
+          \includegraphics[width=3cm]{nodo-iniziale.png}
+          \centering
+          \caption{Esempio di nodo iniziale}
+        \end{figure}
+  \item[Nodo finale]: il nodo finale è presente in ogni diagramma e rappresenta il termine del flusso di esecuzione.
+        In plantuml lo si raffigura come un cerchio contenente un altro cerchio colorato di nero:
+        \begin{figure}[H]%
+          \label{fig:nodo_finale}
+          \includegraphics[width=3cm]{nodo-finale.png}
+          \centering
+          \caption{Esempio di nodo finale}
+        \end{figure}
+  \item[Nodi di branching]: i nodi di branching modellano delle decisioni.
+        Hanno una guardia che indica quale test deve essere soddisfatto che si indica tramite un etichetta da affiancare al nodo di branching.
+        Tali nodi si raffigurano mediante rombi vuoti e generalmente distinguono due branch:
+        \begin{figure}[H]%
+          \label{fig:nodo_di_branch}
+          \includegraphics[width=5cm]{nodo-di-branch.png}
+          \centering
+          \caption{Esempio nodo di branching}
+        \end{figure}
+  \item[Nodi di merge]: i nodi di merge sono il punto in cui i rami generati da un nodo di branching tornano ad unirsi.
+        Hanno la stessa rappresentazione dei nodi di branching.
+        \begin{figure}[H]%
+          \label{fig:nodo_di_merge}
+          \includegraphics[width=5cm]{nodo-di-merge.png}
+          \centering
+          \caption{Esempio di nodo di merge}
+        \end{figure}
+  \item[Fork e join]: Fork e join sono necessari a rappresentare l'esecuzione parallela e concorrente.
+        Ogniqualvolta il flusso di esecuzione incontra una fork il flusso di esecuzione diventa pari al numero di frecce uscenti dalla fork.
+        Non è possibile terminare il flusso con più linee di esecuzione contemporaneamente attive ma è necessario che ci sia successivamente una join che ripristini l'unico flusso iniziale.
+        Fork e join si rappresentano allo stesso modo, tramite una barra orizzontale colorata di nero. Ad esempio:
+        \begin{figure}[H]%
+          \label{fig:fork_e_join}
+          \includegraphics[width=5cm]{fork-e-join.png}
+          \centering
+          \caption{Esempio di fork e join}
+        \end{figure}
+  \item[Swimlanes]: Le Swimlanes sono strutture da poco introdotte in PlantUML che rendono esplicito di chi è la responsabilità nell'esecuzione. Si rappresentano così:
+        \begin{figure}[H]%
+          \label{fig:swimlanes}
+          \includegraphics[width=5cm]{swimlanes.png}
+          \centering
+          \caption{Esempio di swimlanes}
+        \end{figure}
+  \item[Segnali]: I segnali servono per gestire eventi.
+        PlantUML non offre un buon supporto per i segnali e ne offre una versione in beta.
+        Ne esistono di due tipi:
+        \begin{itemize}
+          \item Segnali di input
+          \item Segnali di output.
+        \end{itemize}
+  \item [Input]: i segnali di input aspettano una risposta proveniente dall'esterno.
+        Possono essere la prima azione del diagramma.
+        Si rappresentano così:
+        \begin{figure}[H]%
+          \label{fig:input}
+          \includegraphics[width=5cm]{input.png}
+          \centering
+          \caption{Esempio segnale di input}
+        \end{figure}
+  \item [Output]: i segnali di output chiedono che venga inserito un input dall'esterno.
+        Inoltre non possono essere la prima azione del diagramma.
+        La loro rappresentazione è la seguente:
+        \begin{figure}[H]%
+          \label{fig:segnale_di_output}
+          \includegraphics[width=5cm]{output.png}
+          \centering
+          \caption{Esempio segnale di output}
+        \end{figure}
 \end{description}
 
 \subparagraph{Diagrammi di sequenza}%
@@ -408,15 +408,15 @@ Le entità del diagramma si scambiano messaggi sotto forma di frecce che assumon
 Segue un elenco delle tipologie di messaggi che due entità possono scambiarsi:
 \begin{description}
   \item [Messaggio sincrono]: corrisponde alla chiamata di un metodo dal quale si attende un valore di ritorno.
-  Lo si indica con una freccia continua nera piena accompagnata da un'etichetta contenente il tipo di metodo chiamato nella forma \textit{nomeMetodo (listaParametri)} dove la firma del metodo deve essere in lingua inglese e la lista di parametri deve essere nella forma \textit{nomeParametro1:tipo1, nomeParametro2:tipo2,\ldots}.
+        Lo si indica con una freccia continua nera piena accompagnata da un'etichetta contenente il tipo di metodo chiamato nella forma \textit{nomeMetodo (listaParametri)} dove la firma del metodo deve essere in lingua inglese e la lista di parametri deve essere nella forma \textit{nomeParametro1:tipo1, nomeParametro2:tipo2,\ldots}.
   \item [Messaggio asincrono]: corrisponde alla chiamata di un metodo dal quale non si attende nulla.
-  Lo si indica con una freccia nera non piena accompagnata da un'etichetta identica a quella utilizzata per messaggi sincroni.
+        Lo si indica con una freccia nera non piena accompagnata da un'etichetta identica a quella utilizzata per messaggi sincroni.
   \item [Messaggio di ritorno]: corrisponde ad un messaggio contenente il valore ritornato dalla chiamata di un metodo.
-  Lo si indica con una freccia tratteggiata nera non piena accompagnata da un'etichetta contenente il tipo di valore ritornato.
+        Lo si indica con una freccia tratteggiata nera non piena accompagnata da un'etichetta contenente il tipo di valore ritornato.
   \item [Messaggio di creazione]: rappresenta un messaggio che chiede la creazione di un nuovo oggetto.
-  Lo si indica con una freccia tratteggiata non piena seguita da un rettangolo contenente l'oggetto creato e accompagnata da un'etichetta contenente la parola \textit{<<create>>}.
+        Lo si indica con una freccia tratteggiata non piena seguita da un rettangolo contenente l'oggetto creato e accompagnata da un'etichetta contenente la parola \textit{<<create>>}.
   \item [Messaggio di distruzione]: rappresenta un messaggio che chiede la distruzione di un oggetto.
-  Lo si indica con con una linea nera  seguita da una X e accompagnata da un'etichetta contenente la parola \textit{<<destroy>>}.
+        Lo si indica con con una linea nera  seguita da una X e accompagnata da un'etichetta contenente la parola \textit{<<destroy>>}.
 \end{description}
 Un esempio di diagramma di sequenza corretto realizzato con PlantUML è il seguente:
 \begin{figure}[H]%
@@ -465,23 +465,23 @@ Questa attività viene svolta dal ruolo del programmatore, in quanto dispone del
 \label{subp:nomi_file_e_variabili}
 I nomi dei file:
 \begin{itemize}
-    \item Devono essere univoci e significativi.
-    \item Devono rispettare le condizioni del linguaggio che contengono, se presenti.
+  \item Devono essere univoci e significativi.
+  \item Devono rispettare le condizioni del linguaggio che contengono, se presenti.
 \end{itemize}
 I nomi delle variabili:
 \begin{itemize}
-    \item Devono essere chiari, descrittivi e possibilmente brevi.
-    \item Devono essere significativi, relativi al contesto e alla loro utilità.
-    \item Non devono somigliare tra loro, per evitare confusione a chi scrive il codice e a chi lo legge.
-    \item Devono rispettare le condizioni del linguaggio in cui vengono usate, se presenti.
-    \item Devono essere necessariamente scritti in lingua inglese.
+  \item Devono essere chiari, descrittivi e possibilmente brevi.
+  \item Devono essere significativi, relativi al contesto e alla loro utilità.
+  \item Non devono somigliare tra loro, per evitare confusione a chi scrive il codice e a chi lo legge.
+  \item Devono rispettare le condizioni del linguaggio in cui vengono usate, se presenti.
+  \item Devono essere necessariamente scritti in lingua inglese.
 \end{itemize}
 
 \subparagraph{Commenti}%
 \label{subp:commenti}
 Il programmatore è tenuto ad inserire commenti dove ritiene che questo possa migliorare la leggibilità del codice.
 In questo caso, i commenti devono essere chiari e nello stesso tempo sintetici, per non distrarre dal contesto.
-Per contro, i commenti vanno omessi dove il codice è auto esplicatorio.
+Per contro, i commenti vanno omessi dove il codice è auto-esplicativo.
 
 \subparagraph{Complessità ciclomatica}%
 \label{subp:complessita_ciclomatica}
@@ -617,7 +617,7 @@ La metrica requisiti obbligatori soddisfatti indica la percentuale di requisiti 
 \[
   \frac{requisiti\ obbligatori\ soddisfatti}{requisiti\ obbligatori\ totali}\cdot 100
 \]
-% TODO scrivi metriche di codifica (grosso)
+
 \paragraph{MPS-NFV: Nomi di file e variabili non normati}% in questo caso NON ci va il "\@". chktex 13
 \label{par:MPS-NFV_nomi_file_variabili_non_normati}
 
@@ -651,7 +651,7 @@ dove:
 \end{description}
 \textbf{Metrica:} numero di metodi che hanno \[v(G) > 3.\]
 
-\paragraph{MPS-ICC: Classi che implementano classi concrete}%
+\paragraph{MPS-ICC: Classi che implementano classi concrete}% in questo caso NON ci va il "\@". chktex 13
 \label{par:MPS-ICC_classi_implementano_concrete}
 L'ereditarietà tra classi andrebbe evitata poiché la presenza di dipendenze tra più componenti ne ostacola la modifica e la verifica.
 
@@ -659,7 +659,5 @@ L'ereditarietà tra classi andrebbe evitata poiché la presenza di dipendenze tr
 
 % par:MPS-014_classi_implementano_concrete (end)
 
-% TODO basta scrivere statement/branch/decision coverage per ora?
-% Per il momento le lasciamo perdere le rimandiamo alla progettazione architetturale
 
 \end{document}
