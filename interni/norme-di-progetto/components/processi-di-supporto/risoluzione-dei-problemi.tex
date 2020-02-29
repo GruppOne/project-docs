@@ -5,19 +5,73 @@
 \subsubsection{Finalità}%
 \label{subs:processo_di_risoluzione_dei_problemi/finalita}
 
-GruppOne istanzia il processo di risoluzione dei problemi per affrontare sia i rischi che si sono manifestati concretamente che quelli non previsti, cercando di ridurre al minimo questi ultimi attraverso analisi e gestione dei rischi.
+GruppOne istanzia il processo di risoluzione dei problemi per affrontare in maniera strutturata ed efficiente i problemi riscontrati.
 
 \subsubsection{Descrizione}%
 \label{subs:processo_di_risoluzione_dei_problemi/descrizione}
 
-Per effettuare il tracciamento dei problemi riscontrati utilizziamo gli issue di GitHub come \glossario{ticket}, facendo attenzione a utilizzare i label corretti (e.g\@. bug, invalid) in modo da distinguerli ed effettuarne una prioritizzazione adeguata.
+Il processo fornisce procedure e per analizzare e risolvere i problemi riscontrati e le non-conformità indipendentemente dall'origine.
+Consiste nelle seguenti attività:
 
-L'attività di risoluzione dei problemi verrà istanziata ove necessario, identificando chiaramente chi ne è responsabile, che dovrà provvedere a riportare nel ticket corrispondente la soluzione applicata.
+\begin{itemize}
+  \item Implementazione del processo
+  \item Risoluzione dei problemi.
+\end{itemize}
+
+\subsubsection{Attività}%
+\label{subs:processo_di_risoluzione_dei_problemi/attivita}
+
+\paragraph{Implementazione del processo}%
+\label{par:implementazione_del_processo}
+
+Il processo di risoluzione dei problemi istanziato da GruppOne rispetta i seguenti requisiti:
+
+\begin{enumerate}
+  \item Ciascuna istanza del processo è isolata, in modo da assicurare che i problemi identificati siano riportati, risolti e che ne sia tracciato lo stato.
+  \item È presente uno schema di categorizzazione e prioritizzazione dei problemi, in modo da facilitare l'analisi delle tendenze.
+  \item Si effettua verifica dell'avvenuta risoluzione di ogni problema, della corretta implementazione delle modifiche e dell'assenza di ulteriori problemi introdotti dalla risoluzione.
+\end{enumerate}
+
+\paragraph{Risoluzione dei problemi}%
+\label{par:risoluzione_dei_problemi}
+
+L'attività di risoluzione dei problemi viene istanziata ove necessario, secondo le caratteristiche sopra descritte, a partire dalla stesura di un \glossario{ticket} contenente il report del problema, e identificando chiaramente chi ne è responsabile.
+
+\subsubsection{Procedure}%
+\label{subs:risoluzione_dei_problemi/procedure}
+
+La procedura stabilita da GruppOne per riportare i problemi consiste in:
+
+\begin{enumerate}
+  \item Creare una branch apposita, o posizionarsi su una branch esistente e correlata.
+  \item Creare una \textit{issue} che descrive il problema sulla piattaforma GitHub.
+  \item Assegnare una o più categorie (\textit{label} e/o \textit{project}) rilevanti al problema.
+  \item Selezionare uno o più \textit{assignee} tra i membri del team in base alla categoria individuata.
+\end{enumerate}
+
+Per la risoluzione effettiva del problema, il membro del team che ci sta lavorando deve:
+
+\begin{enumerate}
+  \item Rimuovere eventuali altri assignee dall'issue su GitHub.
+  \item Se l'issue è presente in una o più \textit{Project Board}, marcarlo come \textit{In Progress}.
+  \item Risolvere il problema, discutendone con altri membri ove necessario.
+  \item Implementare la soluzione nel minimo numero possibile di commit, avendo cura di aggiornare lo stato dell'issue.
+\end{enumerate}
+
+La verifica dell'avvenuta risoluzione del problema avviene attraverso la Pull Request associata, come descritto in~\ref{par:code_review}.
+
+I ticket vengono chiusi solo dopo la verifica e approvazione della modifica, quando la Pull Request viene integrata nella baseline.
+
+\subsubsection{Strumenti di supporto}%
+\label{subs:risoluzione_dei_problemi/strumenti_di_supporto}
+
+Il tracciamento dei problemi riscontrati avviene direttamente nella piattaforma GitHub.
+Lo schema delle categorie e delle priorità individuate da GruppOne è accessibile dalla lista delle issue. Per ogni label è presente una descrizione del suo intento.
 
 \subsubsection{Metriche}%
 \label{subs:processo_di_risoluzione_dei_problemi/metriche}
 
-% TODO scrivi metriche (velocità di risoluzione?)
+% TODO sistemare questa metrica
 \paragraph{MPS-RDP: Indice di risoluzione dei problemi}% in questo caso NON ci va il "\@". chktex 13
 \label{par:MPS-RDP_indice_di_risoluzione_dei_problemi}
 
