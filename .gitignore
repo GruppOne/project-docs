@@ -289,3 +289,6 @@ __latexindent_temp.tex
 
 # ignora cartella contenente alcuni script
 .pwsh/scripts
+
+# ignora cartella delle firme
+**/firme/

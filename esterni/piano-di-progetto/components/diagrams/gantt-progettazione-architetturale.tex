@@ -18,31 +18,42 @@ milestone inline label node/.append style={font=\scriptsize}%
 
 \begin{document}
   \hspace*{-1.7cm}
-  \begin{ganttchart}{20/1/2020}{15/3/2020}
-    \gantttitle{Progettazione architetturale}{43}\\
-    \gantttitlecalendar*{20/1/2020}{15/3/2020}{month=italy,week=1}\\
-    \gantttitlecalendar*[title label font=\tiny]{20/1/2020}{15/3/2020}{day}\\
+  \begin{ganttchart}{20/1/2020}{5/4/2020}
+    \gantttitle{Progettazione architetturale}{77}\\
+    \gantttitlecalendar*{20/1/2020}{5/4/2020}{month=italy,week=1}\\
+    \gantttitlecalendar*[title label font=\tiny]{20/1/2020}{5/4/2020}{day}\\
 
-    \ganttgroup[name=group1]{Integrazione in uscita dalla RR}{22/1/2020}{31/1/2020}\\
-    \ganttbar[name=bar1]{Normazione}{22/1/2020}{29/1/2020}\\
-    \ganttbar[name=bar2]{Analisi dei Requisiti}{22/1/2020}{29/1/2020}\\
-    \ganttbar[name=bar3]{Pianificazione di progetto}{22/1/2020}{29/1/2020}\\
-    \ganttbar[name=bar4]{Pianificazione di qualifica}{22/1/2020}{29/1/2020}\\
-    \ganttbar[name=bar5]{Terminologia e nomenclatura}{22/1/2020}{29/1/2020}\\
-    \ganttbar[name=bar6]{Produzione documentazione}{22/1/2020}{29/1/2020}\\
-    \ganttbar[name=bar7]{Verifica documentazione}{22/1/2020}{31/1/2020}\\
+    \ganttgroup[name=group1]{Integrazione in uscita dalla RR}{22/1/2020}{2/3/2020}\\
+    \ganttbar[name=bar1]{Normazione}{22/1/2020}{28/2/2020}\\
+    \ganttbar[name=bar2]{Analisi dei Requisiti}{22/1/2020}{28/2/2020}\\
+    \ganttbar[name=bar3]{Pianificazione di progetto}{22/1/2020}{28/2/2020}\\
+    \ganttbar[name=bar4]{Pianificazione di qualifica}{22/1/2020}{28/2/2020}\\
+    \ganttbar[name=bar5]{Terminologia e nomenclatura}{22/1/2020}{28/2/2020}\\
+    \ganttbar[name=bar6]{Produzione documentazione}{22/1/2020}{28/2/2020}\\
+    \ganttbar[name=bar7]{Verifica documentazione}{22/1/2020}{2/3/2020}\\
     \\
-    \ganttgroup[name=group2]{Progettazione architetturale}{1/2/2020}{9/3/2020}\\
-    \ganttbar[name=bar8]{Soluzione architetturale}{1/2/2020}{16/2/2020}\\
-    \ganttbar[name=bar9]{Codifica}{17/2/2020}{26/2/2020}\\
-    \ganttbar[name=bar10]{Verifica del codice}{20/2/2020}{29/2/2020}\\
-    \ganttbar[name=bar11]{Produzione documentazione}{1/2/2020}{29/2/2020}\\
-    \ganttbar[name=bar12]{Verifica documentazione}{4/2/2020}{5/3/2020}\\
-    \ganttlink{bar8}{bar9}
+    \ganttgroup[name=group2]{Prima versione del PoC}{3/3/2020}{16/3/2020}\\
+    \ganttbar[name=bar8]{Soluzione architetturale}{3/3/2020}{9/3/2020}\\
+    \ganttbar[name=bar9]{Codifica}{6/3/2020}{13/3/2020}\\
+    \ganttbar[name=bar10]{Verifica del codice}{6/3/2020}{16/3/2020}\\
+    \ganttbar[name=bar11]{Produzione documentazione}{3/3/2020}{13/3/2020}\\
+    \ganttbar[name=bar12]{Verifica documentazione}{3/3/2020}{16/3/2020}\\
+    \ganttbar[name=bar13]{Incontri con il proponente}{3/3/2020}{16/3/2020}\\
     \\
-    \ganttmilestone[name=mile1]{Consegna documenti}{9/3/2020}\\
+    \ganttmilestone[name=mile1]{Prima release PoC}{16/3/2020}\\
+    \ganttgroup[name=group3]{Raffinamento del PoC}{17/3/2020}{30/3/2020}\\
+    \ganttbar[name=bar14]{Soluzione architetturale}{17/3/2020}{20/3/2020}\\
+    \ganttbar[name=bar15]{Codifica}{19/3/2020}{26/3/2020}\\
+    \ganttbar[name=bar16]{Verifica del codice}{19/3/2020}{30/3/2020}\\
+    \ganttbar[name=bar17]{Produzione documentazione}{17/3/2020}{27/3/2020}\\
+    \ganttbar[name=bar18]{Verifica documentazione}{17/3/2020}{30/3/2020}\\
+    \ganttbar[name=bar19]{Incontri con il proponente}{17/3/2020}{30/3/2020}\\
+    \\
+    \ganttmilestone[name=mile2]{Release PoC finale}{30/3/2020}\\
 
     \ganttlink[link mid=0.88]{group1}{group2}
     \ganttlink[link mid=0.83]{group2}{mile1}
+    \ganttlink[link mid=0.5]{mile1}{group3}
+    \ganttlink[link mid=0.83]{group3}{mile2}
   \end{ganttchart}
 \end{document}

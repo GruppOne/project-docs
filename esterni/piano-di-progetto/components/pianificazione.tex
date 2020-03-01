@@ -221,7 +221,7 @@ Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
 ~~\label{fig:gantt_preparazione_rr}
 \end{figure}
 % sub:preparazione_in_entrata_alla_rr (end)
-\subsection[Progettazione architetturale]{Progettazione architetturale {\normalsize\normalfont\itshape(22/01/2020 \symbol{8594} 09/03/2020)}}%
+\subsection[Progettazione architetturale]{Progettazione architetturale {\normalsize\normalfont\itshape(22/01/2020 \symbol{8594} 30/03/2020)}}%
 \label{sub:progettazione_architetturale}
 In questa fase il gruppo trova una soluzione architetturale che soddisfi tutti i requisiti individuati nell'\textit{Analisi dei requisiti}.
 Prima di procedere alla progettazione, il gruppo completa le attività di analisi e pianificazione secondo i commenti ricevuti in sede di Revisione dei requisiti.
@@ -241,12 +241,12 @@ Le precondizioni sono:
 \end{itemize}
 Le postcondizioni sono:
 \begin{itemize}
-  \item Il gruppo ha definito la propria soluzione architetturale al problema, presentata e giustificata nella \textit{Technology baseline}
-  \item Il gruppo ha prodotto un \textit{Proof of concept} che presenti le caratteristiche della soluzione proposta.
+  \item Il gruppo ha definito la propria \textit{Technology baseline}.
+  \item Il gruppo ha prodotto un \textit{Proof of concept} che presenti le tecnologie che intende utilizzare.
 \end{itemize}
-Questa fase è divisa in due periodi.
+Questa fase è divisa in tre periodi.
 Per ciascuno si elencano le attività coinvolte ed i rispettivi compiti che devono essere svolti.
-\subsubsection[Integrazione in uscita dalla RR]{Integrazione in uscita dalla RR {\normalsize\normalfont\itshape(22/01/2020 \symbol{8594} 04/02/2020)}}%
+\subsubsection[Integrazione in uscita dalla RR]{Integrazione in uscita dalla RR {\normalsize\normalfont\itshape(22/01/2020 \symbol{8594} 02/03/2020)}}%
 \label{subs:integrazione_in_uscita_dalla_rr}
 \begin{itemize}
   \item Normazione
@@ -283,22 +283,22 @@ Per ciascuno si elencano le attività coinvolte ed i rispettivi compiti che devo
   \end{itemize}
 \end{itemize}
 % subs:integrazione_in_uscita_dalla_rr (end)
-\subsubsection[Progettazione architetturale]{Progettazione architetturale {\normalsize\normalfont\itshape(05/02/2020 \symbol{8594} 09/03/2020)}}%
-\label{subs:progettazione_architetturale}
+\subsubsection[Prima versione del PoC]{Prima versione del PoC {\normalsize\normalfont\itshape(03/03/2020 \symbol{8594} 16/03/2020)}}%
+\label{subs:prima_versione_del_poc}
 \begin{itemize}
   \item Soluzione architetturale
   \begin{itemize}
     \item Scelta delle tecnologie
     \item Progettazione delle classi
-    \item Definizione del \textit{}{Proof of concept}.
+    \item Definizione della prima versione del \textit{Proof of concept}.
   \end{itemize}
   \item Codifica
   \begin{itemize}
-    \item Codifica del \textit{Proof of concept}.
+    \item Codifica della prima versione del \textit{Proof of concept}.
   \end{itemize}
   \item Produzione documentazione
   \begin{itemize}
-    \item Stesura della \textit{Technology baseline}.
+    \item Raccolta dei diagrammi che riassumono la \textit{Technology baseline}.
   \end{itemize}
   \item Verifica documentazione
   \begin{itemize}
@@ -308,8 +308,43 @@ Per ciascuno si elencano le attività coinvolte ed i rispettivi compiti che devo
   \begin{itemize}
     \item Verifica del \textit{Proof of concept}.
   \end{itemize}
+  \item Incontri con il proponente.
+  \begin{itemize}
+    \item Confronto sulle tecnologie utilizzate
+    \item Presentazione della prima versione del \textit{Proof of concept}.
+  \end{itemize}
 \end{itemize}
-% subs:progettazione_architetturale (end)
+% subs:prima_versione_del_poc (end)
+\subsubsection[Raffinamento del PoC]{Raffinamento del PoC {\normalsize\normalfont\itshape(17/03/2020 \symbol{8594} 30/03/2020)}}%
+\label{subs:raffinamento_del_poc}
+\begin{itemize}
+  \item Soluzione architetturale
+  \begin{itemize}
+    \item Definizione dei margini di miglioramento
+    \item Definizione delle versioni successive del \textit{Proof of concept}.
+  \end{itemize}
+  \item Codifica
+  \begin{itemize}
+    \item Codifica delle versioni successive del \textit{Proof of concept}.
+  \end{itemize}
+  \item Produzione documentazione
+  \begin{itemize}
+    \item Aggiornamento dei diagrammi che riassumono la \textit{Technology baseline}.
+  \end{itemize}
+  \item Verifica documentazione
+  \begin{itemize}
+    \item Verifica dei documenti prodotti.
+  \end{itemize}
+  \item Verifica codice
+  \begin{itemize}
+    \item Verifica del \textit{Proof of concept}.
+  \end{itemize}
+  \item Incontri con il proponente.
+  \begin{itemize}
+    \item Presentazione delle versioni successive del \textit{Proof of concept}.
+  \end{itemize}
+\end{itemize}
+% subs:raffinamento_del_poc (end)
 \begin{figure}[H]
   \centering
   \subfile{diagrams/gantt-progettazione-architetturale}
@@ -317,41 +352,7 @@ Per ciascuno si elencano le attività coinvolte ed i rispettivi compiti che devo
 ~~\label{fig:gantt_progettazione_architetturale}
 \end{figure}
 % sub:progettazione_architetturale (end)
-\subsection[Preparazione in entrata alla RP]{Preparazione in entrata alla RP {\normalsize\normalfont\itshape(10/03/2020 \symbol{8594} 16/03/2020)}}%
-\label{sub:preparazione_in_entrata_alla_rp}
-In questa fase il gruppo si prepara alla propria presentazione in sede di Revisione di progettazione.
-I componenti si dividono gli argomenti da esporre e descrivono il lavoro svolto nella fase di Progettazione architetturale attraverso delle diapositive.
-I ruoli coinvolti sono:
-\begin{itemize}
-  \item Amministratore
-  \item Verificatore.
-\end{itemize}
-Le precondizioni sono:
-\begin{itemize}
-  \item Tutte le postcondizioni della fase precedente sono state soddisfatte
-  \item Il gruppo ha consegnato al committente i documenti richiesti per la partecipazione alla Revisione di progettazione.
-\end{itemize}
-Le postcondizioni sono:
-\begin{itemize}
-  \item Il gruppo ha preparato la propria presentazione da esporre in sede di Revisione di progettazione.
-\end{itemize}
-Questa fase è composta di un unico periodo, che coincide con la fase stessa.
-Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
-\begin{itemize}
-  \item Preparazione presentazione.
-  \begin{itemize}
-    \item Ripartizione delle parti da esporre
-    \item Preparazione delle diapositive.
-  \end{itemize}
-\end{itemize}
-\begin{figure}[H]
-  \centering
-  \subfile{diagrams/gantt-preparazione-rp}
-  \caption{diagramma di Gantt per la Preparazione in entrata alla RP}%
-~~\label{fig:gantt_preparazione_rp}
-\end{figure}
-% sub:preparazione_in_entrata_alla_rp (end)
-\subsection[Incremento 1]{Incremento 1 {\normalsize\normalfont\itshape(17/03/2020 \symbol{8594} 23/03/2020)}}%
+\subsection[Incremento 1]{Incremento 1 {\normalsize\normalfont\itshape(31/03/2020 \symbol{8594} 06/04/2020)}}%
 \label{sub:incremento_1}
 Durante questa fase il gruppo progetta, implementa e verifica le componenti del sistema relative a \textit{registrazione}, \textit{login} e \textit{setup di root}.
 I ruoli coinvolti sono:
@@ -409,7 +410,7 @@ Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
 ~~\label{fig:gantt_incremento_1}
 \end{figure}
 % sub:incremento_1 (end)
-\subsection[Incremento 2]{Incremento 2 {\normalsize\normalfont\itshape(24/03/2020 \symbol{8594} 30/03/2020)}}%
+\subsection[Incremento 2]{Incremento 2 {\normalsize\normalfont\itshape(07/04/2020 \symbol{8594} 13/04/2020)}}%
 \label{sub:incremento_2}
 Durante questa fase il gruppo progetta, implementa e verifica le componenti del sistema relative alla \textit{creazione degli amministratori}.
 I ruoli coinvolti sono:
@@ -467,7 +468,41 @@ Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
 ~~\label{fig:gantt_incremento_2}
 \end{figure}
 % sub:incremento_2 (end)
-\subsection[Incremento 3]{Incremento 3 {\normalsize\normalfont\itshape(31/03/2020 \symbol{8594} 06/04/2020)}}%
+\subsection[Preparazione in entrata alla RP]{Preparazione in entrata alla RP {\normalsize\normalfont\itshape(14/04/2020 \symbol{8594} 20/04/2020)}}%
+\label{sub:preparazione_in_entrata_alla_rp}
+In questa fase il gruppo si prepara alla propria presentazione in sede di Revisione di progettazione.
+I componenti si dividono gli argomenti da esporre e descrivono il lavoro svolto nella fase di Progettazione architetturale attraverso delle diapositive.
+I ruoli coinvolti sono:
+\begin{itemize}
+  \item Amministratore
+  \item Verificatore.
+\end{itemize}
+Le precondizioni sono:
+\begin{itemize}
+  \item Tutte le postcondizioni della fase precedente sono state soddisfatte
+  \item Il gruppo ha consegnato al committente i documenti richiesti per la partecipazione alla Revisione di progettazione.
+\end{itemize}
+Le postcondizioni sono:
+\begin{itemize}
+  \item Il gruppo ha preparato la propria presentazione da esporre in sede di Revisione di progettazione.
+\end{itemize}
+Questa fase è composta di un unico periodo, che coincide con la fase stessa.
+Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
+\begin{itemize}
+  \item Preparazione presentazione.
+  \begin{itemize}
+    \item Ripartizione delle parti da esporre
+    \item Preparazione delle diapositive.
+  \end{itemize}
+\end{itemize}
+\begin{figure}[H]
+  \centering
+  \subfile{diagrams/gantt-preparazione-rp}
+  \caption{diagramma di Gantt per la Preparazione in entrata alla RP}%
+~~\label{fig:gantt_preparazione_rp}
+\end{figure}
+% sub:preparazione_in_entrata_alla_rp (end)
+\subsection[Incremento 3]{Incremento 3 {\normalsize\normalfont\itshape(21/04/2020 \symbol{8594} 27/04/2020)}}%
 \label{sub:incremento_3}
 Durante questa fase il gruppo progetta, implementa e verifica le componenti del sistema relative alla \textit{gestione delle organizzazioni}.
 I ruoli coinvolti sono:
@@ -525,7 +560,7 @@ Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
 ~~\label{fig:gantt_incremento_3}
 \end{figure}
 % sub:incremento_3 (end)
-\subsection[Incremento 4]{Incremento 4 {\normalsize\normalfont\itshape(07/04/2020 \symbol{8594} 13/04/2020)}}%
+\subsection[Incremento 4]{Incremento 4 {\normalsize\normalfont\itshape(28/04/2020 \symbol{8594} 04/05/2020)}}%
 \label{sub:incremento_4}
 Durante questa fase il gruppo progetta, implementa e verifica le componenti del sistema relative all'\textit{interazione degli utenti con le organizzazioni}.
 I ruoli coinvolti sono:
@@ -583,7 +618,7 @@ Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
 ~~\label{fig:gantt_incremento_4}
 \end{figure}
 % sub:incremento_4 (end)
-\subsection[Incremento 5]{Incremento 5 {\normalsize\normalfont\itshape(14/04/2020 \symbol{8594} 20/04/2020)}}%
+\subsection[Incremento 5]{Incremento 5 {\normalsize\normalfont\itshape(05/05/2020 \symbol{8594} 11/05/2020)}}%
 \label{sub:incremento_5}
 Durante questa fase il gruppo progetta, implementa e verifica le componenti del sistema relative a \textit{creazione dei gestori} e \textit{creazione dei visualizzatori}. Inoltre, si prepara alla propria presentazione in sede di Revisione di qualifica.
 I ruoli coinvolti sono:
@@ -647,7 +682,41 @@ Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
 ~~\label{fig:gantt_incremento_5}
 \end{figure}
 % sub:incremento_5 (end)
-\subsection[Incremento 6]{Incremento 6 {\normalsize\normalfont\itshape(21/04/2020 \symbol{8594} 27/04/2020)}}%
+% TODO PREPARAZIONE IN ENTRATA ALLA RQ 12/05 -> 18/05
+\subsection[Preparazione in entrata alla RQ]{Preparazione in entrata alla RQ {\normalsize\normalfont\itshape(12/05/2020 \symbol{8594} 18/05/2020)}}%
+\label{sub:preparazione_in_entrata_alla_rq}
+In questa fase il gruppo si prepara alla propria presentazione in sede di Revisione di qualifica.
+I ruoli coinvolti sono:
+\begin{itemize}
+  \item Amministratore
+  \item Verificatore.
+\end{itemize}
+Le precondizioni sono:
+\begin{itemize}
+  \item Tutte le postcondizioni della fase precedente sono state soddisfatte
+  \item Il gruppo ha consegnato al committente i documenti richiesti per la candidatura alla Revisione di qualifica.
+\end{itemize}
+Le postcondizioni sono:
+\begin{itemize}
+  \item Il gruppo ha preparato la propria presentazione da esporre in sede di Revisione di qualifica.
+\end{itemize}
+Questa fase è composta di un unico periodo, che coincide con la fase stessa.
+Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
+\begin{itemize}
+  \item Preparazione presentazione.
+  \begin{itemize}
+    \item Ripartizione delle parti da esporre
+    \item Preparazione delle diapositive.
+  \end{itemize}
+\end{itemize}
+\begin{figure}[H]
+  \centering
+  \subfile{diagrams/gantt-preparazione-rq}
+  \caption{diagramma di Gantt per la Preparazione in entrata alla RQ}%
+~~\label{fig:gantt_preparazione_ra}
+\end{figure}
+% sub:preparazione_in_entrata_alla_rq (end)
+\subsection[Incremento 6]{Incremento 6 {\normalsize\normalfont\itshape(19/05/2020 \symbol{8594} 25/05/2020)}}%
 \label{sub:incremento_6}
 Durante questa fase il gruppo progetta, implementa e verifica le componenti del sistema relative alla \textit{gestione dei luoghi}.
 I ruoli coinvolti sono:
@@ -705,7 +774,7 @@ Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
 ~~\label{fig:gantt_incremento_6}
 \end{figure}
 % sub:incremento_6 (end)
-\subsection[Incremento 7]{Incremento 7 {\normalsize\normalfont\itshape(28/04/2020 \symbol{8594} 04/05/2020)}}%
+\subsection[Incremento 7]{Incremento 7 {\normalsize\normalfont\itshape(26/05/2020 \symbol{8594} 01/06/2020)}}%
 \label{sub:incremento_7}
 Durante questa fase il gruppo progetta, implementa e verifica le componenti del sistema relative a \textit{recupero credenziali}, \textit{storico degli accessi utente} e \textit{trasferimento proprietà}.
 I ruoli coinvolti sono:
@@ -763,7 +832,7 @@ Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
 ~~\label{fig:gantt_incremento_7}
 \end{figure}
 % sub:incremento_7 (end)
-\subsection[Verifica e collaudo finali]{Verifica e collaudo finali {\normalsize\normalfont\itshape(05/05/2020 \symbol{8594} 11/05/2020)}}%
+\subsection[Verifica e collaudo finali]{Verifica e collaudo finali {\normalsize\normalfont\itshape(02/06/2020 \symbol{8594} 11/06/2020)}}%
 \label{sub:verifica_e_collaudo_finali}
 In questa fase il gruppo verifica l'integrità del sistema, si assicura che tutti i requisiti siano effettivamente rispettati, e risolve eventuali problemi insorti nel corso delle fasi di incremento.
 I ruoli coinvolti sono:
@@ -802,7 +871,7 @@ Le attività coinvolte ed i rispettivi compiti che devono essere svolti sono:
 ~~\label{fig:gantt_verifica_e_collaudo_finali}
 \end{figure}
 % sub:verifica_e_collaudo_finali (end)
-\subsection[Preparazione in entrata alla RA]{Preparazione in entrata alla RA {\normalsize\normalfont\itshape(12/05/2020 \symbol{8594} 18/05/2020)}}%
+\subsection[Preparazione in entrata alla RA]{Preparazione in entrata alla RA {\normalsize\normalfont\itshape(12/06/2020 \symbol{8594} 18/06/2020)}}%
 \label{sub:preparazione_in_entrata_alla_ra}
 In questa fase il gruppo si prepara alla propria presentazione in sede di Revisione di accettazione.
 I ruoli coinvolti sono:

@@ -18,22 +18,19 @@ milestone inline label node/.append style={font=\scriptsize}%
 
 \begin{document}
   \hspace*{-1.7cm}
-  \begin{ganttchart}{13/4/2020}{26/4/2020}
+  \begin{ganttchart}{4/5/2020}{17/5/2020}
     \gantttitle{Incremento 5}{14}\\
-    \gantttitlecalendar*{13/4/2020}{26/4/2020}{month=italy,week=1}\\
-    \gantttitlecalendar*[title label font=\tiny]{13/4/2020}{26/4/2020}{day}\\
-    \ganttgroup[name=group1]{Incremento 5}{14/4/2020}{20/4/2020}\\
-    \ganttbar[name=bar1]{Progettazione}{14/4/2020}{16/4/2020}\\
-    \ganttbar[name=bar2]{Implementazione}{17/4/2020}{19/4/2020}\\
-    \ganttbar[name=bar3]{Verifica codice}{17/4/2020}{20/4/2020}\\
-    \ganttbar[name=bar4]{Produzione documentazione}{14/4/2020}{19/4/2020}\\
-    \ganttbar[name=bar5]{Verifica documentazione}{14/4/2020}{20/4/2020}\\
-    \ganttbar[name=bar6]{Preparazione presentazione}{14/4/2020}{20/4/2020}\\
+    \gantttitlecalendar*{4/5/2020}{17/5/2020}{month=italy,week=1}\\
+    \gantttitlecalendar*[title label font=\tiny]{4/5/2020}{17/5/2020}{day}\\
+    \ganttgroup[name=group1]{Incremento 5}{5/5/2020}{11/5/2020}\\
+    \ganttbar[name=bar1]{Progettazione}{5/5/2020}{7/5/2020}\\
+    \ganttbar[name=bar2]{Implementazione}{8/5/2020}{10/5/2020}\\
+    \ganttbar[name=bar3]{Verifica codice}{8/5/2020}{11/5/2020}\\
+    \ganttbar[name=bar4]{Produzione documentazione}{5/5/2020}{10/5/2020}\\
+    \ganttbar[name=bar5]{Verifica documentazione}{5/5/2020}{11/5/2020}\\
     \ganttlink[link bulge=0.05]{bar1}{bar2}
     \\
-    \ganttmilestone[name=mile1]{Integrazione incremento 5}{20/4/2020}\\
-    \ganttmilestone[name=mile2]{RQ}{20/4/2020}\\
+    \ganttmilestone[name=mile1]{Integrazione incremento 5}{11/5/2020}\\
     \ganttlink[link mid=0.86]{group1}{mile1}
-    \ganttlink[link mid=0.76]{group1}{mile2}
   \end{ganttchart}
 \end{document}
