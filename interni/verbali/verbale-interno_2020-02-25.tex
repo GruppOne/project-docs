@@ -18,6 +18,9 @@
 \multirow{-3}{*}{0.1.0}& Alessandro Rizzo & 2020--02--25 & stendi verbale %
 }
 
+\disabilitaElencoFigure{}
+\disabilitaElencoTabelle{}
+
 \begin{document}
 
 \input{../../commons/template}
@@ -78,18 +81,11 @@ Abbiamo quindi deciso di associare un unico numero all'intero processo di azione
 \section{Registro delle decisioni}%
 \label{sec:registro_delle_decisioni}
 
-\begin{table}[H]
-  \centering
-  \rowcolors{2}{lightgray}{white!80!lightgray!100}
-  \renewcommand{\arraystretch}{2}
-  \begin{tabular}{c b{13cm}}
-    \rowcolor{darkgray!90!}\color{white}{\textbf{Codice}} & \color{white}{\textbf{Decisione}}\\
-    1 & Abbiamo deciso di iniziare a scrivere le chiamate di rete per andare a definire una API REST da cui poi sviluppare il nostro PoC.\\
-    2 & Modificheremo il registro delle modifiche come sopra per riflettere azione, verifica e approvazione come parti di una unica versione che si concretizza al momento della approvazione delle modifiche.\\
-  \end{tabular}
-  \caption{registro delle decisioni}%
-  \label{tab:registro delle decisioni}
-\end{table}
+\begin{enumerate}
+  \item Abbiamo deciso di iniziare a scrivere le chiamate di rete per andare a definire una API REST da cui poi sviluppare il nostro PoC.
+  \item Modificheremo il registro delle modifiche come sopra per riflettere azione, verifica e approvazione come parti di una unica versione che si concretizza al momento della approvazione delle modifiche.
+\end{enumerate}
+
 % sec:registro_delle_decisioni (end)
 
 \end{document}

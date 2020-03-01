@@ -16,6 +16,9 @@
 \multirow{-3}{*}{0.1.0}& Alessandro Rizzo & 2020--02--25 & stendi verbale %
 }
 
+\disabilitaElencoFigure{}
+\disabilitaElencoTabelle{}
+
 \begin{document}
 
 \input{../../commons/template}
@@ -103,19 +106,12 @@ Inoltre la tabella che collega le fonti con i casi d'uso è poco indicativa e no
 \section{Registro delle decisioni}%
 \label{sec:registro_delle_decisioni}
 
-\begin{table}[H]
-  \centering
-  \rowcolors{2}{lightgray}{white!80!lightgray!100}
-  \renewcommand{\arraystretch}{2}
-  \begin{tabular}{c b{13cm}}
-    \rowcolor{darkgray!90!}\color{white}{\textbf{Codice}} & \color{white}{\textbf{Decisione}}\\
-    1 & Correggere i casi d'uso AUC3, UUC4.3 e UUC4.2 in concordanza con quanto discusso con il Professore durante la chiamata.\\
-    2 & Rivalutare la struttura e le componenti principali del PoC in base a quanto ci ha detto il Professore. \\
-    3 & Scrivere la tabella che correla casi d'uso e requisiti al posto di quella con fonte e casi d'uso.\\
-  \end{tabular}
-  \caption{registro delle decisioni}%
-  \label{tab:registro delle decisioni}
-\end{table}
+\begin{enumerate}
+  \item Correggere i casi d'uso AUC3, UUC4.3 e UUC4.2 in concordanza con quanto discusso con il Professore durante la chiamata.
+  \item Rivalutare la struttura e le componenti principali del PoC in base a quanto ci ha detto il Professore.
+  \item Scrivere la tabella che correla casi d'uso e requisiti al posto di quella con fonte e casi d'uso.
+\end{enumerate}
+
 % sec:registro_delle_decisioni (end)
 
 \end{document}

@@ -15,6 +15,9 @@
 \setModifiche{%
 }
 
+\disabilitaElencoFigure{}
+\disabilitaElencoTabelle{}
+
 \begin{document}
 
 \input{../../commons/template}
@@ -125,17 +128,8 @@ A cui Davide Zanetti ha risposto:
 \section{Registro delle decisioni}%
 \label{sec:registro_delle_decisioni}
 
-\begin{table}[H]
-  \centering
-  \rowcolors{2}{lightgray}{white!80!lightgray!100}
-  \renewcommand{\arraystretch}{2}
-  \begin{tabular}{c b{13cm}}
-    \rowcolor{darkgray!90!}\color{white}{\textbf{Codice}} & \color{white}{\textbf{Decisione}} \\
-    \placeholder{\dots}
-  \end{tabular}
-  \caption{registro delle decisioni}%
-  \label{tab:registro delle decisioni}
-\end{table}
-% sec:registro_delle_decisioni (end)
+\begin{enumerate}
+  \item \placeholder{\dots}
+\end{enumerate}
 
 \end{document}

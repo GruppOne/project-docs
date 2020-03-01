@@ -20,6 +20,9 @@
 -&Luca Ercole & 2020--01--13 & stendi verbale %
 }
 
+\disabilitaElencoFigure{}
+\disabilitaElencoTabelle{}
+
 \begin{document}
 
 \input{../../commons/template}
@@ -95,19 +98,12 @@ Abbiamo chiesto al proponente consigli su come decidere le metriche per la quali
 \newpage
 \section{Registro delle decisioni}%
 \label{sec:registro_delle_decisioni}
-\begin{table}[H]
-  \centering
-  \rowcolors{2}{lightgray}{white!80!lightgray!100}
-  \renewcommand{\arraystretch}{2}
-  \begin{tabular}{c b{13cm}}
-    \rowcolor{darkgray!90!}\color{white}{\textbf{Codice}} & \color{white}{\textbf{Decisione}}\\
-    1 & abbiamo deciso di continuare con lo sviluppo del modello incrementale come già iniziato apportando delle modifiche per correlare ogni incremento con i flussi implementati. \\
-    2 & abbiamo perso la decisione di aggiornare il caso d'uso e i requisiti relativi all'autenticazione nelle organizzazioni per riflettere quanto richiesto dal proponente.\\
-    3 & terremo in considerazione i consigli che ci verranno forniti dal proponente e aggiorneremo di conseguenza le metriche per la qualità di prodotto. \\
 
-  \end{tabular}
-  \caption{registro delle decisioni}%
-  \label{tab:registro delle decisioni}
-  \end{table}
+\begin{enumerate}
+  \item abbiamo deciso di continuare con lo sviluppo del modello incrementale come già iniziato apportando delle modifiche per correlare ogni incremento con i flussi implementati.
+  \item abbiamo perso la decisione di aggiornare il caso d'uso e i requisiti relativi all'autenticazione nelle organizzazioni per riflettere quanto richiesto dal proponente.
+  \item terremo in considerazione i consigli che ci verranno forniti dal proponente e aggiorneremo di conseguenza le metriche per la qualità di prodotto.
+\end{enumerate}
+
 % sec:registro_delle_decisioni (end)
 \end{document}
