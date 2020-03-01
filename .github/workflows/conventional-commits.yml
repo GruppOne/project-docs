@@ -21,4 +21,4 @@ jobs:
       #     fetch-depth: 0
 
       - name: Run commitsar
-        uses: outillage/commitsar@v0.9.0
+        uses: docker://outillage/commitsar:0.11.1
