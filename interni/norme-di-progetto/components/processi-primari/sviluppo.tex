@@ -38,7 +38,7 @@ Si articola nei seguenti compiti:
   \item Ricavare i requisiti atomici da fornire ai progettisti perché possano iniziare l'attività di progettazione.
 \end{itemize}
 
-Il documento di riferimento, \textit{Analisi dei requisiti}, è redatto dagli analisti.
+Il documento di riferimento, \textit{Analisi dei requisiti (versione \versione)}, è redatto dagli analisti.
 
 \subparagraph{Classificazione dei requisiti}%
 \label{subp:classificazione_dei_requisiti}
@@ -118,9 +118,15 @@ Possono essere di quattro differenti tipi:
   \item [Generalizzazione] La generalizzazione è un legame tra attori o più raramente tra use case. Dati due casi d'uso A e B, A è generalizzazione di B se condivide almeno le funzionalità di A. B può modificare le funzionalità di A, mentre tutte le funzionalità non ridefinite si mantengono identiche a quelle di A.
 \end{description}
 
+% TODO spostare metriche qui?
+% \subparagraph{Metriche}%
+% \label{subp:analisi_dei_requisiti/metriche}
+
+% % subp:metriche (end)
+
 \paragraph{Progettazione}%
 \label{par:progettazione}
-L'attività di progettazione precede la codifica e si occupa di organizzare le componenti del sistema cercando una soluzione che possa soddisfare tutti gli stakeholders e che adempia alle necessità e ai bisogni definiti nell'\textit{Analisi dei requisiti}.
+L'attività di progettazione precede la codifica e si occupa di organizzare le componenti del sistema cercando una soluzione che possa soddisfare tutti gli stakeholders e che adempia alle necessità e ai bisogni definiti durante l'attività di analisi dei requisiti.
 
 Essa procede inversamente rispetto a quest'ultima la quale adotta un approccio investigativo, di studio del dominio applicativo e di scomposizione dei requisiti.
 La progettazione cerca, invece, di fissare l'\glossario{architettura} del prodotto adottando un approccio di tipo sistematico.
@@ -162,7 +168,7 @@ Nel periodo di progettazione in dettaglio, invece, si definiscono con maggiore p
 Essendo l'architettura a garantire l'organizzazione e la coesione dei componenti si intuisce come rivesta un ruolo fondamentale per ottenere un prodotto di qualità.
 A tal proposito essa dovrà avere le seguenti caratteristiche:
 \begin{description}
-  \item [Sufficienza]: deve soddisfare tutti i requisiti definiti nel documento di \textit{Analisi dei requisiti}.
+  \item [Sufficienza]: deve soddisfare tutti i requisiti definiti nel documento \textit{Analisi dei requisiti (versione \versione)}.
   \item [Comprensibilità]: deve essere comprensibile a tutti gli stakeholders.
   \item [Modularità]: deve essere suddivisa in parti chiare e distinte minimizzando le dipendenze.
   \item [Robustezza]: deve saper tollerare carichi di lavoro in ingresso variabili.
@@ -534,6 +540,13 @@ Le varabili andrebbero inizializzate il prima possibile: ad ogni definizione and
 La ricorsione come paradigma di programmazione va usata con moderazione poiché un uso sconsiderato può portare a una maggiore occupazione di memoria rispetto alla controparte iterativa.
 L'uso della ricorsione andrebbe motivato con appositi commenti.
 % subp:ricorsione (end)
+
+% TODO scrivere procedure processo sviluppo?
+% \subsubsection{Procedure}%
+% \label{subs:procedure}
+
+% subs:procedure (end)
+
 % subp:indentazione (end)
 \subsubsection{Strumenti}%
 \label{subs:strumenti}
