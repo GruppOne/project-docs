@@ -1,0 +1,35 @@
+\documentclass[../piano-di-qualifica.tex]{subfiles}
+
+\begin{document}
+	\subsection{Analisi statica dei documenti}
+	\label{sub:analisi_statica_doc}
+	Per l'analisi statica dei documenti GruppOne ha utilizzato il package \glossario{chktex}, che ha consentito di trovare errori nella sintassi latex.
+	Il test, eseguito ad ogni modifica repository ha dato esito positivo per ogni documento segnalando complessivamente 0 errori.
+	% sub:analisi_statica_doc (end)
+	\subsection{Esito verifica leggibilità}
+	\label{sub:verifica_leggibilita}
+	Allo scopo di assicurarci una leggibilità perlomeno accettabile dei documenti abbiamo monitorato l'indice \glossario{Gulpease} di ogni documento, qui sotto riportiamo i risultati della versione consegnata in RR e successive relativamente agli obiettivi di qualità che erano stati definiti.
+  \rowcolors{2}{lightgray}{white!80!lightgray!100}
+  \begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering\arraybackslash}m{1cm} >{\centering\arraybackslash}m{1cm} >{\centering\arraybackslash}m{4cm}}
+    \rowcolor{darkgray!90!}
+    \color{white}{\textbf{Documento}} & \color{white}{\textbf{Indice Gulpease 0.0.8}} & \color{white}{\textbf{Indice Gulpease 0.1.?}} &\color{white}{\textbf{Esito dell'ultima verifica}} \\
+    Piano di Progetto & 96 & &Positivo\\
+    Norme di Progetto & 68 & &Positivo\\
+    Piano di Qualifica & 81 & &Positivo\\
+    Studio di Fattibilità & 65 &&Positivo\\
+    Analisi dei requisiti & 100 & & Positivo\\
+    Glossario & 74 & & Sufficiente\\
+    Verbale esterno 2019-12-16 & 71 & & Sufficiente \\
+    Verbale esterno 2020-01-09 & 67 & & Sufficiente \\
+    Verbale esterno 2020-02-25 &-& & Sufficiente \\
+    Verbale esterno 2020-02-26 &-& &Positivo\\
+    Verbale esterno 2020-01-13 & 62 & &Positivo\\
+    Verbale interno 2020-11-22 & 81 & &Positivo\\
+    Verbale interno 2020-11-28 & 75 & &Positivo\\
+    Verbale interno 2020-12-20 & 69 & &Positivo\\
+  	Verbale interno 2020-01-03 & 79 & &Positivo\\
+  	Verbale interno 2020-02-25 &-& &Positivo\\
+\end{longtable}
+	% sub:verifica_leggibilita (end)
+\end{document}
+
