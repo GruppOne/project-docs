@@ -1,0 +1,120 @@
+\documentclass{article}
+
+\input{../../commons/config}
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale esterno --- 25/02/2020}
+
+\setResponsabile{Alessandro Rizzo}
+\setRedattori{Alessandro Rizzo}
+\setVerificatori{
+  Alberto Cocco \\ &
+  Alberto Gobbo
+}
+\setUso{Esterno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 25/02/2020}
+\setModifiche{%
+\cellcolor{white!80!lightgray!100} & Alessandro Rizzo & 2020--02--27 & approva documento \\%
+\cellcolor{white!80!lightgray!100} & Verificatori & 2020--02--26 & verifica verbale \\%
+\multirow{-3}{*}{0.1.0} \cellcolor{white!80!lightgray!100} & Alessandro Rizzo & 2020--02--25 & stendi verbale %
+}
+
+\disabilitaElencoFigure{}
+\disabilitaElencoTabelle{}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Informazioni logistiche}%
+\label{sec:informazioni_logistiche}
+
+\begin{description}
+  \item [Luogo] chiamata Hangouts
+  \item [Data] 25/02/2020
+  \item [Ora] 12:30 \symbol{8594} 12:55
+\end{description}
+
+\subsection{Membri del gruppo presenti}%
+\label{sub:membri_del_gruppo_presenti}
+
+\begin{enumerate}
+  \item Alberto Cocco
+  \item Luca Ercole
+  \item Alberto Gobbo
+  \item Alessandro Rizzo
+\end{enumerate}
+% sub:membri_del_gruppo_presenti (end)
+
+\subsection{Altri partecipanti}%
+\label{sub:altri_partecipanti}
+
+\begin{enumerate}
+  \item Prof.\ Riccardo Cardin (committente)
+\end{enumerate}
+
+% sub:altri_partecipanti (end)
+% sec:informazioni_logistiche (end)
+
+\section{Introduzione}%
+\label{sec:introduzione}
+
+L'incontro, avvenuto tramite chiamata Hangouts, ci è servito per chiarire i dubbi riguardanti il giudizio ricevuto in RR e approfondire alcuni dettagli relativi al PoC.
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item Discussione UUC4.3
+  \item Discussione AUC3
+  \item Discussione sul tracciamento di casi d'uso e requisiti
+  \item Struttura del PoC
+  \item Tecnologie da usare nel PoC.
+\end{itemize}
+% sec:registro_delle_decisioni (end)
+\section{Discussione UUC4.3}%
+\label{sec:discussione_uuc_4.3}
+\textbf{Domanda:} Il motivo per il quale vediamo UUC4.3 come un'estensione di UUC4.2, è il fatto che l'utente può selezionare una o più organizzazioni e, nel momento in cui una di queste sia privata e quindi richieda l'autenticazione LDAP, allora si scateni il caso d'uso UUC4.3.
+Quindi se UUC4.3 non fosse un'estensione di UUC4.2 ma una sua pre-condizione, l'autenticazione LDAP verrebbe effettuata a priori su tutte le organizzazioni selezionate, il che sarebbe vero solo se tutte le organizzazioni lo richiedano (sia private che pubbliche), cosa che non è richiesta da capitolato (solo private), in che modo è sbagliata questa visione del caso d'uso? \\
+\textbf{Risposta:} Bisogna innanzitutto capire come UML può essere utilizzato per modellare i casi d'uso, questi ultimi infatti definiscono solamente le funzionalità del nostro software. Il professore ha ribadito questo fatto per dire che la selezione di una organizzazione è un dettaglio implementativo non una funzionalità, la funzionalità offerta invece è il collegamento ad una organizzazione dunque l'estensione non ha motivo di esserci così come il caso d'uso relativo alla selezione.
+In caso il modo corretto di modellare un caso d'uso di questo tipo sarebbe prevedere 4.3 come precondizione di 4.2.
+% sec:discussione_uuc_4.3 (end)
+\section{Discussione AUC3}%
+\label{sec:discussione_auc3}
+\textbf{Domanda:} \textit{AUC3: le inclusioni non sono corrette (\ldots) AUC4: inclusioni non corrette.} Non ci è chiaro il motivo per il quale le inclusioni nei seguenti casi d'uso non sono corrette.\\
+\textbf{Risposta:} Analogamente a quanto scritto prima la funzionalità di selezione di organizzazione non esiste di fatto e in questo caso nemmeno l'invio di richiesta di aggiornamento delle organizzazioni è una funzionalità esprimibile nei casi d'uso poiché è una azione automatica del sistema.
+Il professore ha compreso l'intento del gruppo di fornire la possibilità di collegarsi, eliminare e modificare più organizzazioni insieme e ha suggerito se si desidera implementare queste funzionalità di definirle in casi d'uso appositi (e.g. Eliminazione di più organizzazioni).
+% sec:discussione_auc3 (end)
+
+\section{Discussione tracciamento casi d'uso e requisiti}%
+\label{sec:discussione_tracciamento_casi_requisiti}
+\textbf{Domanda:} \textit{Manca il tracciamento tra casi d’uso e requisiti}. Anche qui non ci è chiaro esattamente che modifiche dovremmo attuare.\\
+\textbf{Risposta:} Nel documento \textit{Analisi dei Requisiti v0.0.8} è presente solamente la tabella che correla i requisiti ai casi d'uso e non viceversa.
+La prima correlazione ci permette di appurare che tutti i requisiti siano necessari poiché derivano da un caso d'uso, la seconda che tutti i casi d'uso siano necessari poiché si concretizzano in un requisito.
+Inoltre la tabella che collega le fonti con i casi d'uso è poco indicativa e non fornisce informazioni utili.
+% sec:discussione_tracciamento_casi_requisiti (end)
+
+\section{Domanda sul PoC}%
+\label{sec:domanda_poc}
+\textbf{Domanda:} Qual è il nostro obiettivo con il PoC?\@ Che grado di comprensione delle tecnologie dobbiamo dimostrare di aver raggiunto?\\
+\textbf{Risposta:} Il professore ci ha consigliato di raggiungere il massimo grado di integrazione tra il maggior numero di tecnologie possibili nel PoC con lo scopo di dimostrare la piena padronanza delle suddette.
+% sec:domanda_poc (end)
+
+\section{Tecnologie da utilizzare nel PoC}%
+\label{sec:tecnologie_poc}
+\textbf{Domanda:} Lei consiglia di utilizzare Quarkus come tecnologie contrapposto a Spring?\\
+\textbf{Risposta:} Il professore non ha sconsigliato di utilizzare Quarkus ma ci ha anche fatto notare che Spring offre una integrazione con quasi ogni tecnologia.
+% sec:tecnologie_poc (end)
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+
+\begin{enumerate}
+  \item Correggere i casi d'uso AUC3, UUC4.3 e UUC4.2 in concordanza con quanto discusso con il Professore durante la chiamata.
+  \item Rivalutare la struttura e le componenti principali del PoC in base a quanto ci ha detto il Professore.
+  \item Scrivere la tabella che correla casi d'uso e requisiti al posto di quella con fonte e casi d'uso.
+\end{enumerate}
+
+% sec:registro_delle_decisioni (end)
+
+\end{document}
