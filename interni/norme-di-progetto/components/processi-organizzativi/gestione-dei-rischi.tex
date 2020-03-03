@@ -4,46 +4,62 @@
 
 \subsubsection{Finalità}%
 \label{subs:gestione_dei_rischi/finalita}
-Lo scopo del processo di gestione dei rischi è
+
+Gli scopi del processo di gestione dei rischi sono:
+
 \begin{itemize}
-  \item Individuare i principali rischi associati alle attività degli altri processi
-  \item Classificare i rischi individuati per attribuire loro una priorità
-  \item Identificare dei metodi di prevenzione dei rischi
-  \item Effettuare continui monitoraggi sui processi durante l'andamento del progetto
+  \item Individuare i principali rischi associati alle attività degli altri processi.
+  \item Classificare i rischi individuati per attribuire loro una priorità.
+  \item Identificare dei metodi di prevenzione dei rischi.
+  \item Effettuare continui monitoraggi sui processi durante l'andamento del progetto.
   \item Stabilire, per ciascun rischio, delle strategie di contenimento che possano ridurre gli effetti negativi provocati dall'eventuale verificarsi del rischio.
+\end{itemize}
+
+\subsubsection{Descrizione}%
+\label{subs:gestione_dei_rischi/descrizione}
+
+La gestione dei rischi consiste nel prevedere i rischi che potrebbero influire negativamente su alcune attività del ciclo di vita del software, danneggiando i risultati o la qualità del prodotto intermedio.
+
+Questo processo raggruppa le seguenti attività:
+
+\begin{itemize}
+  \item Classificazione dei rischi
+  \item Analisi dei rischi
+  \item Pianificazione dei rischi
+  \item Monitoraggio dei rischi
 \end{itemize}
 
 \subsubsection{Attività}%
 \label{subs:gestione_dei_rischi/attivita}
-La gestione dei rischi consiste nel prevedere i rischi che potrebbero influire negativamente su alcune attività del ciclo di vita del software, danneggiando i risultati o la qualità del prodotto intermedio.
-La gestione dei rischi raggruppa diverse attività:
-
-\begin{description}
-  \item [Classificazione dei rischi] si identificano e si classificano i rischi per il progetto e il prodotto.
-  \item [Analisi dei rischi] si valutano le probabilità che si verifichino i rischi e si descrivono le conseguenze.
-  \item [Pianificazione dei rischi] si presentano i piani per evitare i rischi e i rimedi per minimizzare gli effetti.
-  \item [Monitoraggio dei rischi] si monitorano i rischi e si aggiornano incrementalmente i piani.
-\end{description}
-
-% TODO migliorare paragrafo?
-Pianificazione e monitoraggio dei rischi sono attività che vengono presentate all'interno del PdP.
 
 \paragraph{Classificazione dei rischi}%
 \label{par:classificazione_dei_rischi}
+
+si identificano e si classificano i rischi per il progetto e il prodotto.
+
 \begin{description}
-  \item [Rischi per il progetto] influiscono sui tempi di realizzazione del progetto. L'assenza di un componente del gruppo per un lungo periodo di tempo potrebbe condizionare la pianificazione di progetto e potrebbe allungare i tempi di consegna.
-  \item [Rischi per il prodotto] influiscono sulla qualità del prodotto. L'utilizzo di algoritmi e procedure non ottimizzate potrebbe peggiorare le prestazioni del sistema e influire negativamente sulla qualità del prodotto.
-\end{description}
-Essendo la classificazione soprastante troppo generica, GruppOne ha individuato un elenco di rischi maggiormente dettagliato:
-\begin{description}
-  \item [Rischi del personale] riguardano i membri di GruppOne. L'assenza o l'indisponibilità di un componente del gruppo per un lungo periodo di tempo ne è un esempio.
-  \item [Rischi dei requisiti] riguardano il modo in cui GruppOne gestisce i requisiti del cliente. Un esempio potrebbe essere il fraintendimento di un requisito del cliente durante l'attività di analisi dei requisiti.
-  \item [Rischi tecnologici] riguardano i software e l'hardware utilizzato per sviluppare il sistema. Un esempio potrebbe essere la mancanza di alcune feature nei software scelti per lo sviluppo del prodotto.
-  \item [Rischi degli strumenti] riguardano i software di supporto impiegati. Un esempio potrebbe essere la presenza di un bug in uno strumento e la necessità di risolverlo.
+  \item [Rischi per il progetto] influiscono sui tempi di realizzazione del progetto.
+        L'assenza di un componente del gruppo per un lungo periodo di tempo potrebbe condizionare la pianificazione di progetto e potrebbe allungare i tempi di consegna.
+  \item [Rischi per il prodotto] influiscono sulla qualità del prodotto.
+        L'utilizzo di algoritmi e procedure non ottimizzate potrebbe peggiorare le prestazioni del sistema e influire negativamente sulla qualità del prodotto.
 \end{description}
 
-\paragraph{Analisi e pianificazione dei rischi}%
-\label{par:analisi_e_pianificazione_dei_rischi}
+Essendo la classificazione soprastante troppo generica, GruppOne ha individuato un elenco di rischi maggiormente dettagliato:
+\begin{description}
+  \item [Rischi del personale] riguardano i membri di GruppOne.
+        L'assenza o l'indisponibilità di un componente del gruppo per un lungo periodo di tempo ne è un esempio.
+  \item [Rischi dei requisiti] riguardano il modo in cui GruppOne gestisce i requisiti del cliente.
+        Un esempio potrebbe essere il fraintendimento di un requisito del cliente durante l'attività di analisi dei requisiti.
+  \item [Rischi tecnologici] riguardano i software e l'hardware utilizzato per sviluppare il sistema.
+        Un esempio potrebbe essere la mancanza di alcune feature nei software scelti per lo sviluppo del prodotto.
+  \item [Rischi degli strumenti] riguardano i software di supporto impiegati.
+        Un esempio potrebbe essere la presenza di un bug in uno strumento e la necessità di risolverlo.
+\end{description}
+
+\paragraph{Analisi dei rischi}%
+\label{par:analisi__dei_rischi}
+
+si valutano le probabilità che si verifichino i rischi e si descrivono le conseguenze.
 
 L'attività di analisi dei rischi descrive e valuta i rischi individuati durante un progetto software per facilitarne il successivo monitoraggio. Per ogni rischio si individuano:
 \begin{description}
@@ -55,14 +71,31 @@ L'attività di analisi dei rischi descrive e valuta i rischi individuati durante
   \item[Impatto]: è un indicatore che quantifica l'impatto di un rischio sull'andamento del progetto.
 \end{description}
 
-\subsubsection{Metodi di classificazione dei rischi}%
-\label{subs:metodi_di_classificazione_dei_rischi}
+\paragraph{Pianificazione dei rischi}%
+\label{par:pianificazione_dei_rischi}
 
-\paragraph{Codifica dei rischi}%
-\label{par:codifica_dei_rischi}
+I compiti di questa attività sono presentare i piani per evitare i rischi e mostrare i rimedi per minimizzarne gli effetti.
+Le misure pratiche messe in atto da GruppOne sono documentate all'interno della sezione apposita del \textit{Piano di progetto (versione \versione)}.
+% TODO riferire sezione esatta del doc?
+
+% par:pianificazione_dei_rischi (end)
+
+\paragraph{Monitoraggio dei rischi}%
+\label{par:monitoraggio_dei_rischi}
+
+In appendice al \textit{Piano di progetto (versione \versione)} vengono documentati i rischi previsti che sono stati effettivamente riscontrati da GruppOne, e le disposizioni attuate per evitarne la ricomparsa.
+
+% par:monitoraggio_dei_rischi (end)
+
+\subsubsection{Procedure}%
+\label{subs:gestione_dei_rischi/procedure}
+
+\paragraph{Identificazione e classificazione dei rischi}%
+\label{par:identificazione_e_classificazione_dei_rischi}
 
 Per identificare i rischi senza alcun fraintendimento, il team ha deciso di introdurre dei codici che possano identificarli univocamente.
 Ogni rischio ha un codice così costituito:
+
 \begin{center}
   \textbf{RI[Tipo][Codice]}
 \end{center}
@@ -75,23 +108,26 @@ dove il tipo può essere uno tra i seguenti:
   \item [TEC]: identifica un rischio tecnologico.
   \item [STR]: identifica un rischio di strumento.
 \end{description}
-mentre il codice è un numero progressivo a tre cifre. Ad esempio il primo rischio di prodotto si identifica con \textit{RIPRD001}.
+Il codice è invece un numero progressivo a tre cifre. Ad esempio il primo rischio di prodotto si identifica con \textit{RIPRD001}.
 
-\paragraph{Indicatori}%
-\label{par:indicatori}
+Utilizziamo inoltre i seguenti indicatori per misurare la pericolosità e i danni che un rischio può arrecare:
 
-Gli indicatori sono utili per quantificare la pericolosità e i danni che un rischio può potenzialmente arrecare. Per l'analisi dei rischi si utilizzano probabilità e impatto. La probabilità, che misura il grado di possibilità di verificarsi di un rischio può assumere i seguenti valori:
-\begin{itemize}
-  \item Bassa
-  \item Media
-  \item Alta
-\end{itemize}
-L'impatto, invece, indica il tipo di effetto che l'attuarsi del rischio può avere sull'andamento del progetto. Può essere:
-\begin{itemize}
-  \item Basso
-  \item Tollerabile
-  \item Significativo
-\end{itemize}
+\begin{description}
+  \item[Probabilità] è una stima indicativa della probabilità che un rischio si verifichi e può assumere i seguenti valori:
+        \begin{itemize}
+          \item Bassa
+          \item Media
+          \item Alta
+        \end{itemize}
+  \item[Impatto] indica il tipo di effetto che l'attuarsi del rischio può avere sull'andamento del progetto. Può essere:
+        \begin{itemize}
+          \item Basso
+          \item Tollerabile
+          \item Significativo
+        \end{itemize}
+\end{description}
+
+% par:identificazione_e_classificazione_dei_rischi (end)
 
 \subsubsection{Metriche di processo}%
 \label{subs:gestione_dei_rischi/metriche_di_processo}
