@@ -16,10 +16,9 @@ La presente sezione ha lo scopo di descrivere in maniera dettagliata, attraverso
   \label{fig:usersapp}
 \end{figure}
 
-Un utente che accede per la prima volta all'applicazione mobile non è autenticato, quindi per accedere al sistema di Stalker inserisce le
-credenziali per diventare un utente autenticato.
-Successivamente a questo passaggio, l'utente può essere non collegato se non ha provveduto a collegarsi ad alcuna organizzazione, in caso contrario
-è un utente autenticato che, in base all'organizzazione alla quale è collegato, può essere noto (con annessa autenticazione LDAP) oppure incognito.
+Un utente che accede per la prima volta all'applicazione mobile non è autenticato, quindi per accedere al sistema di Stalker inserisce le proprie credenziali per diventare un utente autenticato.
+Successivamente a questo passaggio, l'utente è non collegato, in quanto subito dopo l'autenticazione non è collegato di default ad alcuna organizzazione. Nel momento in cui l'utente decida di collegarsi ad una o più organizzazioni, allora
+diventa a tutti gli effetti un utente collegato che, in base al tipo di argomento dell'organizzazione scelta, può essere noto (con annessa autenticazione LDAP) se l'argomento dell'organizzazione è privato, altrimenti è incognito se l'argomento dell'organizzazione è pubblico.
 
 \subsubsection{Web application}%
 \label{subs:web_application}
