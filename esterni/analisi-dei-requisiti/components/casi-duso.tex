@@ -36,8 +36,8 @@ credenziali per diventare un utente autenticato.
 Successivamente a questo passaggio, in base al tipo di privilegi l'utente può essere:
 \begin{description}
   \item[visualizzatore]: visualizza determinate organizzazioni e i relativi luoghi, non ha permessi di modifica;
-  \item[gestore]: gestisce i luoghi di una o più organizzazioni;
-  \item[owner]: crea una o più organizzazioni, identificando i suoi gestori e visualizzatori.
+  \item[gestore]: gestisce i luoghi di una o più organizzazioni; eredita i privilegi del visualizzatore;
+  \item[owner]: crea una o più organizzazioni, identificando i suoi gestori e visualizzatori; eredita i privilegi del gestore.
 \end{description}
 L'amministratore assume tutti i privilegi che il sistema può offrire, gestendo tutte le organizzazioni e i relativi owner, gestori e visualizzatori.
 
