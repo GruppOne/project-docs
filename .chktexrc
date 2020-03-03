@@ -225,11 +225,15 @@ UserWarn
 
   # utilizziamo \href per i link
   \url
+  \plchold
   \placeholder
   grupp0ne
+  # caratteri che saltano fuori da errori nella codifica utf-8
   Ã
   ã
+  Â
   â
+  Å
 ]
 
 
