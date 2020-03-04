@@ -2,24 +2,22 @@
 !include ../../../../../../commons/style/use-cases.pu
 
 actor :utente autenticato: as A
+actor :server LDAP: as B
 
 rectangle {
   together {
-    usecase (UUC4.1) as "UUC4.1\nAggiornamento\nlista organizzazioni\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
-    usecase (UUC4.2) as "UUC4.2\nSeleziona organizzazioni\n--\nExtension points:\n-Visualizzazione errore in\ncaso di disconnessione\nin mancanza di rete\n-Visualizzazione schermata\nautenticazione in caso di\ncollegamento a organizzazione privata"
+    usecase (UUC3.1) as "UUC3.1\nAggiornamento\nlista organizzazioni\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
+    usecase (UUC3.2) as "UUC3.2\nScelta organizzazioni\n--\nExtension points:\n-Visualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
+    usecase (UUC11) as "UUC11\nVisualizzazione errore\nrete mancante"
   }
-  together {
-    usecase (UUC4.3) as "UUC4.3\nAutenticazione LDAP\norganizzazione"
-    usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
-  }
+
 }
 
-:A: -- (UUC4.1)
-:A: -- (UUC4.2)
+:A: -- (UUC3.1)
+:A: -- (UUC3.2)
+(UUC3.2) -- :B:
 
-(UUC12) .up.> (UUC4.1) : <<extends>>
-(UUC12) .up.> (UUC4.2) : <<extends>>
-
-(UUC4.3) .up.> (UUC4.2) : <<extends>>
+(UUC3.1) <.left. (UUC11) : <<extends>>
+(UUC11) .left.> (UUC3.2) : <<extends>>
 
 @enduml

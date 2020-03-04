@@ -5,20 +5,20 @@ actor :utente collegato: as A3.1
 
 rectangle {
   together {
-    usecase (UUC4) as "UUC4\nGestione lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
+    usecase (UUC3) as "UUC3\nGestione lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
   }
   together {
-    usecase (UUC6.1) as "UUC6.1\nFiltra organizzazioni\ncollegato"
-    usecase (UUC7.1) as "UUC7.1\nScelta noto o incognito"
-    usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
+    usecase (UUC5.1) as "UUC5.1\nFiltra organizzazioni\ncollegate"
+    usecase (UUC6.1) as "UUC6.1\nScelta noto o incognito"
+    usecase (UUC11) as "UUC11\nVisualizzazione errore\nrete mancante"
   }
 }
 
-:A3.1: -- (UUC4)
+:A3.1: -- (UUC3)
 
-(UUC4) .up.> (UUC6.1) : <<include>>
-(UUC4) ..> (UUC7.1) : <<include>>
-(UUC4) <.down. (UUC12) : <<extends>>
+(UUC3) .up.> (UUC5.1) : <<include>>
+(UUC3) ..> (UUC6.1) : <<include>>
+(UUC3) <.down. (UUC11) : <<extends>>
 
 @enduml
 
@@ -36,12 +36,12 @@ actor :utente incognito: as A3.2
 
 rectangle {
   together {
-    usecase (UUC7.1.1) as "UUC7.1.1\nPassaggio a incognito"
-    usecase (UUC7.1.2) as "UUC7.1.2\nPassaggio a noto"
+    usecase (UUC6.1.1) as "UUC6.1.1\nPassaggio a incognito"
+    usecase (UUC6.1.2) as "UUC6.1.2\nPassaggio a noto"
   }
 }
 
-:A3.1: -- (UUC7.1.1)
-:A3.2: -- (UUC7.1.2)
+:A3.1: -- (UUC6.1.1)
+:A3.2: -- (UUC6.1.2)
 
 @enduml

@@ -9,15 +9,11 @@ rectangle {
     usecase (AUC4.2) as "AUC4.2\nEliminazione luogo"
     usecase (AUC4.3) as "AUC4.3\nModifica luogo"
   }
-  usecase (AUC4.4) as "AUC4.4\nSeleziona luogo"
 }
 
 :G: -- AUC4.1
 :G: -- AUC4.2
 :G: -- AUC4.3
-
-(AUC4.4) <.up. (AUC4.2) : <<include>>
-(AUC4.4) <.up. (AUC4.3) : <<include>>
 
 @enduml
 

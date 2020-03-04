@@ -2,17 +2,20 @@
 
 \begin{document}
 
+\subsubsection{UUC5: Scollegamento organizzazione}%
+\label{subs:UUC5}
+
 \begin{figure}[H]
   \centering
   \scalegraphics{scollegamento-organizzazione.png}
-  \caption{UUC6: Scollegamento organizzazione}%
-  \label{fig:UUC12}
+  \caption{UUC5: Scollegamento organizzazione}%
+  \label{fig:UUC11}
 \end{figure}
 
 \begin{description}
-  \item[Caso d’uso:] UUC6;
+  \item[Caso d’uso:] UUC5;
   \item[Titolo:] Scollegamento organizzazione;
-  \item[Attori primari:] utente collegato;
+  \item[Attori primari:] utente autenticato;
   \item[Precondizione:] l'utente si trova sulla lista delle organizzazioni;
   \item[Postcondizione:] l'utente si scollega da una o più organizzazioni;
   \item[Scenario principale:]
@@ -21,16 +24,17 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione~\ref{subs:UUC12}.
+          \item in caso di rete mancante, non è possibile collegarsi ad un'organizzazione~\ref{subs:UUC11}.
         \end{enumerate}
 \end{description}
 
 
-\subsubsection{UUC6.1: Filtra organizzazioni collegato}%
+\subsubsection{UUC5.1: Filtra organizzazioni collegate}%
+\label{subs:UUC5.1}
 \begin{description}
-  \item[Caso d’uso:] UUC6.1;
-  \item[Titolo:] Filtra organizzazioni collegato;
-  \item[Attori primari:] utente non collegato;
+  \item[Caso d’uso:] UUC5.1;
+  \item[Titolo:] Filtra organizzazioni collegate;
+  \item[Attori primari:] utente autenticato;
   \item[Precondizione:] l'utente si trova sulla lista delle organizzazioni;
   \item[Postcondizione:] l'utente visualizza solo le organizzazioni su cui è collegato;
   \item[Scenario principale:]

@@ -2,42 +2,46 @@
 
 \begin{document}
 
+\subsubsection{UUC6: Passaggio noto/incognito}%
+\label{subs:UUC6}
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=150mm]{passaggio-noto-incognito.png}
-  \caption{UUC7: Passaggio noto/incognito}%
-  \label{fig:uuc7}
+  \caption{UUC6: Passaggio noto/incognito}%
+  \label{fig:UUC6}
 \end{figure}
 
 \begin{description}
-  \item[Caso d’uso:] UUC7;
+  \item[Caso d’uso:] UUC6;
   \item[Titolo:] Passaggio noto/incognito;
   \item[Attori primari:] utente collegato;
   \item[Precondizione:] il sistema rende disponibile la pagina di passaggio noto/incognito;
   \item[Postcondizione:] se l'utente era noto diventa incognito; vale anche il contrario;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'utente deve selezionare la/le organizzazioni su cui è collegato;
-          \item l'utente ha la possibilità di cambiare il tipo di monitoraggio che l'organizzazione è tenuta a conoscere.
+          \item l'utente può selezionare una o più organizzazioni alla quale è collegato;
+          \item l'utente ha la possibilità di scegliere in che modo farsi monitorare dalla/e organizzazione/i selezionata/e:
+                può diventare incognito se è noto, oppure diventare noto se è incognito.
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un errore~\ref{subs:UUC12}.
+          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un errore~\ref{subs:UUC11}.
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC7.1: Scelta noto o incognito}%
-\label{subs:UUC7.1}
+\subsubsection{UUC6.1: Scelta noto o incognito}%
+\label{subs:UUC6.1}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=150mm]{scelta-noto-o-incognito.png}
-  \caption{UUC7.1: Scelta noto o incognito}%
-  \label{fig:uuc7_1}
+  \caption{UUC6.1: Scelta noto o incognito}%
+  \label{fig:UUC6_1}
 \end{figure}
 
 \begin{description}
-  \item[Caso d’uso:] UUC7.1;
+  \item[Caso d’uso:] UUC6.1;
   \item[Titolo:] Scelta noto o incognito;
   \item[Attori primari:] utente collegato, in particolare utente noto ed utente incognito;
   \item[Precondizione:] l'utente seleziona una o più organizzazioni da cui cambiare tipologia di presenza;
@@ -49,14 +53,14 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un errore~\ref{subs:UUC12}.
+          \item se viene eseguita questa operazione in mancanza di rete, verrà visualizzato un errore~\ref{subs:UUC11}.
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC7.1.1: Passaggio a incognito}%
-\label{subs:UUC7.1.1}
+\subsubsection{UUC6.1.1: Passaggio a incognito}%
+\label{subs:UUC6.1.1}
 \begin{description}
-  \item[Caso d’uso:] UUC7.1.1;
+  \item[Caso d’uso:] UUC6.1.1;
   \item[Titolo:] Passaggio a incognito;
   \item[Attori primari:] utente collegato, in particolare utente noto;
   \item[Precondizione:] l'utente deve essere collegato e noto;
@@ -67,10 +71,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC7.1.2: Passaggio a noto}%
-\label{subs:UUC7.1.2}
+\subsubsection{UUC6.1.2: Passaggio a noto}%
+\label{subs:UUC6.1.2}
 \begin{description}
-  \item[Caso d’uso:] UUC7.1.2;
+  \item[Caso d’uso:] UUC6.1.2;
   \item[Titolo:] Passaggio a noto;
   \item[Attori primari:] utente collegato, in particolare utente incognito;
   \item[Precondizione:] l'utente deve essere collegato ed incognito;

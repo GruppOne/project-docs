@@ -5,14 +5,14 @@ actor :utente autenticato: as A
 
 rectangle {
   together {
-    usecase (UUC8) as "UUC8\nVisualizzazione storico accessi\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta storico\nin mancanza di rete"
-    usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
-    note right of (UUC8): implementazione opzionale
+    usecase (UUC7) as "UUC7\nVisualizzazione storico accessi\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta storico\nin mancanza di rete"
+    usecase (UUC11) as "UUC11\nVisualizzazione errore\nrete mancante"
+    note right of (UUC7): implementazione opzionale
   }
 }
 
-:A: -- (UUC8)
+:A: -- (UUC7)
 
-(UUC12) .up.> (UUC8) : <<extends>>
+(UUC11) .up.> (UUC7) : <<extends>>
 
 @enduml

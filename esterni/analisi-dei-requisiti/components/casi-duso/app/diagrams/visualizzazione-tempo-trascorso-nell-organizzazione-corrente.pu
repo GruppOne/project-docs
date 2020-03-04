@@ -5,14 +5,14 @@ actor :utente collegato: as A3
 
 rectangle {
   together {
-    usecase (UUC9) as "UUC9\nVisualizzazione tempo \nnell'organizzazione corrente\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta tempo trascorso\nin mancanza di rete"
-    usecase (UUC12) as "UUC12\nVisualizzazione errore\nrete mancante"
-    note right of (UUC9): implementazione opzionale
+    usecase (UUC8) as "UUC8\nVisualizzazione tempo \nnell'organizzazione corrente\n--\nExtension points:\nVisualizzazione errore in\ncaso di richiesta tempo trascorso\nin mancanza di rete"
+    usecase (UUC11) as "UUC11\nVisualizzazione errore\nrete mancante"
+    note right of (UUC8): implementazione opzionale
   }
 }
 
-:A3: -- (UUC9)
+:A3: -- (UUC8)
 
-(UUC12) .up.> (UUC9) : <<extends>>
+(UUC11) .up.> (UUC8) : <<extends>>
 
 @enduml
