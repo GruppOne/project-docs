@@ -1,9 +1,7 @@
 \documentclass[../analisi-dei-requisiti.tex]{subfiles}
 
-% TODO trovare un modo per riferire una sezione di un altro documento; così rischia di non essere aggiornata
 \begin{document}
-In questa sezione verranno assegnati dei codici ai requisiti, in modo da semplificarne l’identificazione.
-La procedura per stabilire l'identificatore di un requisito è descritta nella sezione 2.3.3.1.1 del documento \textit{Norme di progetto (versione \versione)}.
+La procedura per classificare i requisiti è descritta nelle \textit{Norme di progetto (versione \versione)}, ma viene riportata di seguito per praticità.
 Ogni requisito è caratterizzato da un codice alfanumerico così formato:
 \begin{center}
   \textbf{R[numero][tipo][priorità]}
@@ -160,20 +158,20 @@ In questa sezione indichiamo le prestazioni che il sistema deve fornire: velocit
 \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
 \begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{\centering}m{10cm} >{\centering\arraybackslash}m{3cm}}
   \caption{Tabella dei requisiti prestazionali}%
-  \label{tab:tabella_requisiti_prestazionali}                                                                                                                                                         \\
+  \label{tab:tabella_requisiti_prestazionali}                                                                                                                                            \\
   \rowcolor{darkgray!90!}
-  \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                          & \color{white}{\textbf{Fonte}} \\
+  \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                             & \color{white}{\textbf{Fonte}} \\
   \endfirsthead%
   \rowcolor{darkgray!90!}
-  \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                                          & \color{white}{\textbf{Fonte}} \\
+  \color{white}{\textbf{ID requisito}} & \color{white}{\textbf{Descrizione}}                                                                             & \color{white}{\textbf{Fonte}} \\
   \endhead%
   \rowcolor{white}
   \multicolumn{3}{c}{\textit{Continua alla pagina seguente}}
   \endfoot%
   \endlastfoot%
-  R092P1                               & Il server deve essere in grado di scalare in modo dinamico in base al numero di utilizzatori                                 & Capitolato                    \\
-  R093P1                               & È necessario permettere il proseguimento dei servizio anche nei casi di richieste che vanno oltre le capacità a pieno regime & Capitolato                    \\
-  R094P1                               & È necessario utilizzare la scalabilità orizzontale                                                                           & Capitolato                    \\
+  R092P1                               & Il server deve essere in grado di scalare in modo dinamico in base al numero di utilizzatori                    & Capitolato                    \\
+  R093P1                               & È necessario degradare efficacemente i servizi nel caso di richieste che vanno oltre le capacità a pieno regime & Capitolato                    \\
+  R094P1                               & È necessario utilizzare la scalabilità orizzontale                                                              & Capitolato                    \\
 \end{longtable}
 
 \newpage
