@@ -9,12 +9,16 @@ I processi organizzativi stabiliscono le attività interne che il team deve svol
 Rivestono un ruolo fondamentale in quanto permettono di gestire la suddivisione dei ruoli e coordinare i membri del gruppo.
 Essi sono trasversali rispetto ai singoli progetti.
 
-Le attività coinvolte dai processi organizzativi sono:
+Da notare che secondo lo standard ISO/IEC 12207:1995 la gestione dei rischi è un'attività.
+Per rispecchiare l'importanza che ricopre nel nostro progetto, facciamo riferimento allo standard ISO/IEC 12207:2008 che la categorizza come processo.
+
+Inoltre, il processo di gestione delle infrastrutture non è rilevante alla nostra situazione, quindi non vi è necessità di normarlo.
+
+I processi organizzativi istanziati da GruppOne sono i seguenti:
 
 \begin{itemize}
-  \item Gestione dei processi
-  \item Gestione delle infrastrutture
   \item Gestione dei rischi
+  \item Gestione dei processi
   \item Miglioramento del processo
   \item Formazione del personale.
 \end{itemize}
@@ -22,275 +26,23 @@ Le attività coinvolte dai processi organizzativi sono:
 \subsection{Gestione dei rischi}%
 \label{sub:gestione_dei_rischi}
 
-\subsubsection{Classificazione dei rischi}%
-\label{subs:classificazione_dei_rischi}
-La gestione dei rischi consiste nel prevedere i rischi che potrebbero influire negativamente su alcune attività del ciclo di vita del software, danneggiando i risultati o la qualità del prodotto intermedio.
-Questo paragrafo ha lo scopo di presentare i potenziali rischi all'interno di un progetto, mentre l'attività di analisi dei rischi è descritta dettagliatamente nel \glossario{Piano di progetto}.
-Si parla di attività di analisi dei rischi dato che la gestione dei rischi potrebbe essere intesa come un vero e proprio processo, in quanto racchiude molteplici attività. La gestione dei rischi si divide in diverse fasi:
+\subfile{processi-organizzativi/gestione-dei-rischi}
 
-\begin{description}
-  \item [Identificazione dei rischi] si identificano i rischi per il progetto e il prodotto.
-  \item [Analisi dei rischi] si valutano le probabilità che si verifichino i rischi e si descrivono le conseguenze.
-  \item [Pianificazione dei rischi] si presentano i piani per evitare i rischi e i rimedi per minimizzare gli effetti.
-  \item [Monitoraggio dei rischi] si monitorano i rischi e si aggiornano incrementalmente i piani.
-\end{description}
+% questo è il processo "management" nelle slide del professore
+\subsection{Gestione di processo}%
+\label{sub:gestione_di_processo}
 
-Analisi dei rischi e pianificazione dei rischi saranno trattate nel \textit{Piano di progetto} mentre in questo paragrafo ci si occuperà dell'attività di identificazione dei rischi.
-Una prima classificazione dei rischi distingue:
+\subfile{processi-organizzativi/gestione-di-processo}
 
-\begin{description}
-  \item [Rischi per il progetto] influiscono sui tempi di realizzazione del progetto. L'assenza di un componente del gruppo per un lungo periodo di tempo potrebbe condizionare la pianificazione di progetto e potrebbe allungare i tempi di consegna.
-  \item [Rischi per il prodotto] influiscono sulla qualità del prodotto. L'utilizzo di algoritmi e procedure non ottimizzate potrebbe peggiorare le prestazioni del sistema e influire negativamente sulla qualità del prodotto.
-\end{description}
-Essendo la classificazione soprastante troppo generica, GruppOne ha individuato un elenco di rischi maggiormente dettagliato:
-\begin{description}
-  \item [Rischi del personale] riguardano i membri di GruppOne. L'assenza o l'indisponibilità di un componente del gruppo per un lungo periodo di tempo ne è un esempio.
-  \item [Rischi dei requisiti] riguardano il modo in cui GruppOne gestisce i requisiti del cliente. Un esempio potrebbe essere il fraintendimento di un requisito del cliente durante l'attività di analisi dei requisiti.
-  \item [Rischi tecnologici] riguardano i software e l'hardware utilizzato per sviluppare il sistema. Un esempio potrebbe essere la mancanza di alcune feature nei software scelti per lo sviluppo del prodotto.
-  \item [Rischi degli strumenti] riguardano i software di supporto impiegati. Un esempio potrebbe essere la presenza di un bug in uno strumento e la necessità di risolverlo.
-\end{description}
+% TODO togliere i commenti dopo che il processo è stato scritto
+% \subsection{Miglioramento del processo}%
+% \label{sub:miglioramento_del_processo}
 
-\subsubsection{Metriche}%
-\label{subs:gestione_dei_rischi/metriche}
-
-\paragraph{MPS-RNP\@: Rischi incontrati e non preventivati}%
-\label{par:MPS-RNP_rischi_incontrati_e_non_preventivati}
-
-La metrica misura il numero di rischi incontrati che non sono stati preventivati nell'analisi dei rischi del \textit{Piano di progetto}. Un valore maggiore di 0 indica una analisi dei rischi effettuata in maniera non ottimale.
-
-\subsection{Gestione del personale}%
-\label{sub:gestione_del_personale}
-
-\subsubsection{Finalità}%
-\label{subs:gestione_del_personale/finalita}
-
-Gli scopi del processo di gestione del personale sono:
-
-\begin{itemize}
-  \item Individuare i ruoli fondamentali all'interno di un progetto
-  \item Pianificare le attività da ripartire nel team
-  \item Gestire le comunicazioni interne ed esterne
-  \item Organizzare come e dove svolgere gli incontri.
-\end{itemize}
-
-\subsubsection{Pianificazione}%
-\label{subs:pianificazione}
-
-\paragraph{Documenti di pianificazione}%
-\label{par:documenti_di_pianificazione}
-
-\subparagraph{Piano di progetto}%
-\label{subp:piano_di_progetto}
-Il piano di progetto è redatto dal responsabile e contiene l'organizzazione dell'attività allo scopo di raggiungere l'economicità.
-Esso rappresenta, anche mediante l'utilizzo di diagrammi, le risorse fondamentali a disposizione e come andrebbero impiegate per organizzare un efficiente pianificazione delle attività.
-Il documento è così strutturato:
-\begin{description}
-  \item [Introduzione] si presentano lo scopo e la struttura del documento.
-  \item [Analisi dei rischi] si realizza un'indagine per scoprire quali sono i maggiori rischi con cui il gruppo deve confrontarsi nel corso della realizzazione del progetto. Si illustra la gravità di ogni rischio, i danni che ognuno potrebbe arrecare, ed eventuali contromisure per riuscire a contrastarli.
-  \item [Pianificazione] si stabiliscono quali sono le risorse temporali e umane a disposizione e si decide come suddividerle nelle diverse attività.
-  \item [Preventivo e consuntivo] Il preventivo presenta una stima dei costi totali di progetto, mentre il consuntivo illustra un bilancio totale delle attività di processo compiute in un determinato periodo di tempo.
-\end{description}
-
-\subparagraph{Piano di qualifica}%
-\label{subp:piano_di_qualifica}
-Il \textit{Piano di qualifica} è redatto dai progettisti nella sua parte programmatica e dai verificatori nella parte che illustra le verifiche effettuate.
-I suoi scopi principali sono:
-
-\begin{itemize}
-  \item Definire gli attributi di qualità che il nostro prodotto deve avere, e dettagliare le specifiche dei test di accettazione, sistema, integrazione e unità.
-  \item Definire quali sono i valori minimi e quelli ottimali delle metriche riportate nelle \textit{Norme di progetto} per ciascuno dei processi istanziati da GruppOne che sono soggetti al sistema di \glossario{qualità}.
-  \item Documentare le strategie e procedure attraverso cui intendiamo perseguire gli obiettivi definiti nei punti precedenti.
-  \item Analizzare in retrospettiva i risultati delle prove e verifiche effettuate in accordo con quanto definito.
-\end{itemize}
-
-La struttura del documento vuole riflettere le due visioni perpendicolari del sistema qualità.
-
-\begin{description}
-  \item [Introduzione] esplora più in dettaglio lo scopo del documento.
-  \item [Qualità di prodotto] riguarda la visione verticale e specifica a ciò che stiamo realizzando.
-  \item [Qualità di processo] esplicita la visione orizzontale trasversale a processi, attività e compiti istanziati dal team.
-        % \item [Report su attività di verifica] contiene brevi riassunti delle attività di verifica
-\end{description}
-
-Il \textit{Piano di qualifica} è redatto dai progettisti nella sua parte programmatica e dai verificatori nella parte che illustra le verifiche effettuate. Esso descrive la strategia complessiva di verifica e validazione adottata da GruppOne per garantire qualità ai processi e ai prodotti. Il documento è così strutturato:
-\begin{description}
-  \item [Introduzione]: si presentano lo scopo del prodotto e del documento.
-  \item [Qualità di prodotto]: si delineano gli attributi di qualità che il nostro prodotto deve avere. Per ognuno degli attributi si indicano le metriche definite nelle \textit{Norme di progetto} per quantificare la qualità e si illustrano dei valori soglia da rispettare. Si definiscono inoltre i test di unità, integrazione, sistema e accettazione.
-  \item [Qualità di processo]: per ogni processo istanziato nelle \textit{Norme di progetto} si presentano le metriche per misurare la qualità e si descrivono i valori ottimali e minimali.
-\end{description}
-
-\subsubsection{Ruoli di progetto}%
-\label{subs:ruoli_di_progetto}
-
-Il committente ha fissato per i membri del team dei ruoli attraverso cui si svolgono le attività di progetto. Ciascun ruolo ha un costo orario correlato alle responsabilità che comporta, e rappresentativo del fatto che ogni processo consuma risorse.
-
-GruppOne si impegna a far sì che i ruoli vengano distribuiti tra i membri del team secondo quanto definito nella pianificazione di progetto, assicurandosi che ogni membro ricopra ciascun ruolo in proporzioni eque.
-
-Oltre che nella pianificazione, terremo traccia delle risorse consumate per ogni ruolo attraverso un foglio di lavoro su \href{https://www.google.it/intl/it/sheets/about/}{Google Sheets}, i cui totali verranno riportati nel consuntivo di periodo da consegnare al committente.
-
-\paragraph{Responsabile}%
-\label{par:responsabile}
-Il responsabile di progetto si occupa di garantire l'amministrazione e la gestione contabile di progetto.
-Ha il compito di rappresentare il gruppo presso il proponente e redige il \textit{Piano di progetto} e l'organigramma.
-Le sue attività principali sono:
-
-\begin{itemize}
-  \item Effettuare l'approvazione finale di ogni documento
-  \item Gestire la pianificazione di progetto
-  \item Gestire le risorse umane
-  \item Coordinare i rapporti con clienti e fornitori
-  \item Approvare l'offerta e i relativi allegati.
-\end{itemize}
-
-Consuma risorse pari a 30 €/h.
-
-\paragraph{Amministratore}%
-\label{par:amministratore}
-L'amministratore di progetto ha il controllo diretto sull'ambiente di lavoro. È responsabile dell'efficienza e dell'operatività del team di sviluppo e redige le \textit{Norme di progetto}. Le sue attività principali sono:
-
-\begin{itemize}
-  \item Gestire controllo di versioni e configurazioni
-  \item Amministrare infrastrutture di supporto
-  \item Redigere il piano di progetto per conto del responsabile
-  \item Controllare le procedure di gestione della qualità
-  \item Organizzare o configurare l'archivio di documentazione.
-\end{itemize}
-
-Consuma risorse pari a 30 €/h.
-
-\paragraph{Analista}%
-\label{par:analista}
-L'analista svolge l'attività di \textit{Analisi dei requisiti}.
-Egli ha esperienza professionale e ha il compito di indagare il dominio applicativo.
-Redige l`\textit{Analisi dei requisiti} e lo \textit{Studio di fattibilità}. Le sue attività principali sono:
-
-\begin{itemize}
-  \item tradurre i requisiti esposti in un linguaggio comprensibile ai progettisti dopo aver studiato il dominio dell'applicazione.
-  \item collaborare con il progettista per cercare soluzioni al problema
-  \item Interagire con gli \glossario{stakeholder} attraverso interviste.
-\end{itemize}
-
-Consuma risorse pari a 25 €/h.
-
-\paragraph{Progettista}%
-\label{par:progettista}
-Il progettista è responsabile dell'attività di progettazione.
-Egli ha competenze tecniche e tecnologiche avanzate.
-Redige inoltre la Specifica tecnica, la Definizione di prodotto e parte del \textit{Piano di Qualifica}.
-Le sue attività principali sono:
-
-\begin{itemize}
-  \item Ricevere i requisiti che il sistema deve soddisfare
-  \item Pianificare l'\glossario{architettura} complessiva
-  \item Selezionare i principali componenti coinvolti nella realizzazione del prodotto.
-\end{itemize}
-
-Consuma risorse pari a 20 €/h.
-
-\paragraph{Programmatore}%
-\label{par:programmatore}
-Il programmatore svolge l'attività di codifica al fine di implementare il prodotto, senza avere alcuna autorità decisionale.
-Partecipa concretamente alla produzione del software e ha la responsabilità di realizzare i moduli per effettuare i test di unità sulle singole componenti.
-Possiede competenze tecnologiche mirate ma settoriali.
-
-Consuma risorse pari a 15 €/h.
-
-\paragraph{Verificatore}%
-\label{par:verificatore}
-Il verificatore svolge l'attività di verifica per l'intera durata del progetto, e di validazione in preparazione al collaudo.
-Ha competenze tecniche, esperienza professionale e conoscenza delle norme. Redige una parte del \textit{piano di qualifica}.
-Svolge un ruolo fondamentale nella fase di revisione del prodotto, dove va a cercare eventuali errori nel documento che sta visionando.
-
-Consuma risorse pari a 15 €/h.
-
-\subsubsection{Coordinazione del personale}%
-\label{subs:coordinazione_del_personale}
-Per organizzare le attività di progetto è necessario avere una buona coordinazione nella gestione delle riunioni, delle comunicazioni e ci si deve accordare sugli strumenti da utilizzare.
-Nella sezione sottostante si presentano le metodologie e i mezzi adottati da GruppOne per dirigere le comunicazioni interni ed esterne.
-
-\paragraph{Coordinamento incontri}%
-\label{par:coordinamento_incontri}
-
-\subparagraph{interni}%
-\label{subp:coordinamento_incontri/interni}
-Gli incontri del gruppo avvengono in due modalità:
-\begin{description}
-  \item [Fisicamente] una volta ogni una o due settimane il team si riunisce per effettuare il punto della situazione. Si discutono, quindi, le problematiche riscontrate nello svolgimento dei compiti assegnati, si definiscono nuove \glossario{milestone}.
-  \item [Virtualmente] con la stessa frequenza degli incontri fisici il team si riunisce utilizzando software VoIP per coordinarsi nelle attività di maggiore complessità e che richiedono la presenza di tutti i membri del team. GruppOne ha scelto di utilizzare \glossario{Google Hangouts}.
-\end{description}
-Il responsabile fissa le date degli incontri su \glossario{Google Calendar} dove ogni membro del gruppo deve indicare la propria presenza o assenza.
-
-\subparagraph{esterni}%
-\label{subp:coordinamento_incontri/esterni}
-Per organizzare gli incontri con il proponente o le revisioni di progetto col committente, GruppOne utilizza la mail ufficiale del gruppo \href{gruppone.swe@gmail.com}{gruppone.swe@gmail.com} che è gestita dal responsabile.
-
-\paragraph{Coordinamento comunicazioni}%
-\label{par:coordinamento_comunicazioni}
-
-\subparagraph{interne}%
-\label{subp:coordinamento_comunicazioni/interne}
-Per le comunicazioni interne GruppOne fa uso di due differenti mezzi di comunicazione:
-\begin{description}
-  \item [Telegram] è un software di messaggistica istantanea che viene utilizzato dal team per comunicazioni urgenti, avvisi dell'ultimo minuto o eventi imminenti.
-  \item [Slack] è uno strumento di collaborazione aziendale che permette la creazione di canali diversi suddivisi per argomento. Ha il pregio di interfacciarsi con software di terze parti ed è in grado di inviare notifiche al verificarsi di nuovi eventi, come l'apertura di una nuova issue su GitHub, per questo motivo il gruppo ha optato per il suo utilizzo. Come norma desiderabile si è stabilito inoltre che tutti i membri del gruppo tengano il sito internet di Slack in esecuzione in background, in modo che il resto del team capisca chi sta lavorando.
-\end{description}
-
-\subparagraph{esterne}%
-\label{subp:esterne}
-Per comunicazioni con il proponente o con il committente, GruppOne utilizza la mail ufficiale del gruppo, come già illustrato nel paragrafo~\ref{subp:coordinamento_incontri/esterni}.
-
-
-\subsubsection{Metriche}%
-\label{subs:gestione_del_personale/metriche}
-
-\paragraph{MPS-VDC\@: Varianza dei costi}%
-\label{par:MPS-VDC_varianza_dei_costi}
-
-La metrica varianza dei costi misura se il costo effettivamente maturato al momento del calcolo dell'indice sia in linea con quanto pianificato. Si calcola:
-\[
-  BCWP-ACWP
-\]
-dove:
-\begin{description}
-  \item [BCWP] misura il costo del lavoro svolto alla data attuale.
-  \item [ACWP] indica il costo sostenuto alla data corrente.
-\end{description}
-
-\paragraph{MPS-VDS\@: Varianza rispetto allo schedule}%
-\label{par:MPS-VDS_varianza_rispetto_allo_schedule}
-
-La metrica varianza rispetto allo schedule misura se si è in anticipo o in ritardo rispetto allo schedule delle attività di progetto pianificate nella baseline. Si calcola:
-\[
-  BCWP - BCWS
-\]
-dove:
-\begin{description}
-  \item [BCWP] misura il costo del lavoro svolto alla data attuale.
-  \item [BCWS] indica il budget previsto per la realizzazione dell'intero progetto.
-\end{description}
-Il numero risultante indica:
-\begin{itemize}
-  \item Una varianza di schedule pari a 0 indica che si sta rispettando la pianificazione.
-  \item Una varianza di schedule inferiore a 0 indica che si è in ritardo rispetto alla pianificazione.
-  \item Una varianza di schedule superiore a 0 indica che si è in anticipo rispetto alla pianificazione.
-\end{itemize}
+% \subfile{processi-organizzativi/miglioramento-del-processo}
 
 \subsection{Formazione del personale}%
 \label{sub:formazione_del_personale}
 
-\subsubsection{Formazione individuale}%
-\label{subs:formazione_individuale}
-
-Il prodotto da sviluppare presenta un'elevata complessità tecnica e teorica.
-Molti degli strumenti che si utilizzano nel corso del progetto sono sconosciuti alla maggior parte dei componenti del team.
-Per tale motivo è fondamentale che ciascun membro del gruppo investa una parte del proprio tempo nell'autoapprendimento di nuove tecnologie.
-Nel caso in cui qualcuno possedesse già una certa familiarità con le tecnologie utilizzate è invitato a condividere le proprie conoscenze con gli altri.
-
-\paragraph{Materiali utili}%
-\label{par:materiali_utili}
-
-La lista dei materiali utili all'autoapprendimento è fornita nell'introduzione del documento per praticità,~\ref{sub:materiali_consigliati_per_l_autoapprendimento}.
-
-% par:materiali_utili (end)
+\subfile{processi-organizzativi/formazione-del-personale}
 
 \end{document}

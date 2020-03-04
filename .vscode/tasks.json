@@ -8,6 +8,8 @@
       "args": [
         "-jar",
         "${env:PLANTUML_JAR}",
+        "-progress",
+        "-failfast",
         "-checkmetadata",
         "-charset",
         "UTF-8",
@@ -15,7 +17,8 @@
         "**/commons/style/*.pu",
         "-o",
         "img",
-        "**/**.pu",
+        // compila solo file contenuti in cartelle "diagrams"
+        "**/diagrams/*.pu"
       ],
       "presentation": {
         "echo": true,

@@ -1,0 +1,340 @@
+\documentclass[../../norme-di-progetto.tex]{subfiles}
+
+% FIXME struttura non conforme
+\begin{document}
+
+\subsubsection{Finalità}%
+\label{subs:documentazione/finalita}
+
+GruppOne istanzia il processo di documentazione per illustrare in maniera chiara e coerente le attività di processo svolte e i prodotti da esse ottenuti.
+
+\subsubsection{Descrizione}%
+\label{subs:documentazione/descrizione}
+
+La documentazione è essenziale durante ogni attività del ciclo di vita del software, essa costituisce un importante mezzo di comunicazione per i membri del team che per il committente.
+Si vogliono quindi definire delle norme che possano standardizzare il processo di documentazione e renderlo più accessibile a tutti i componenti del gruppo.
+Tale processo distingue quattro differenti attività:
+\begin{itemize}
+  \item  Implementazione
+  \item  Progettazione e sviluppo
+  \item  Produzione
+  \item  Manutenzione.
+\end{itemize}
+
+\subsubsection{Implementazione}%
+\label{subs:implementazione}
+L'attività di implementazione descrive il ciclo di vita dei documenti e illustra le proprietà di base comuni a tutti i documenti situate in file a sé stanti.
+
+\paragraph{Configurazione}%
+\label{par:configurazione}
+La configurazione di base comune ai documenti rilevanti è astratta in due file \LaTeX{} che contengono ad esempio\ la struttura e la formattazione che ogni file deve avere.
+Si riporta un elenco (non esaustivo) di ciò che è presente nel file di configurazione:
+
+\begin{itemize}
+  \item Definizione e decorazione di header e footer.
+  \item Definizione dei margini laterali e dell'altezza del footer.
+  \item Configurazione dei link.
+  \item Dichiarazione di nuovi comandi.
+\end{itemize}
+
+\paragraph{Ciclo di vita}%
+\label{par:ciclo_di_vita}
+Il ciclo di vita di rappresenta gli stadi in cui il documento si può trovare nel corso della sua esistenza. Ne distinguiamo cinque:
+
+\begin{description}
+  \item [Creazione del template del documento] un membro del gruppo crea il template del documento il quale conterrà solamente una pagina di frontespizio. Inizialmente sono configurate una serie di impostazioni di base per la formattazione delle pagine grazie all'utilizzo di alcuni package di \LaTeX.
+  \item [Scrittura del documento] l'incaricato scrive il documento incrementalmente e lo termina entro la scadenza della \glossario{milestone} fissata.
+  \item [Verifica del documento] i \glossario{verificatori} effettuano una revisione del documento segnalando eventuali errori o discordanze che verranno segnalate all'autore del documento che sarà incaricato di correggerli.
+  \item [Approvazione del documento] il \glossario{responsabile} di progetto approva il documento.
+  \item [Archiviazione] l'amministratore archivia il documento in un repository pubblico su \glossario{GitHub}.
+\end{description}
+
+\subsubsection{Progettazione e sviluppo}%
+\label{subs:progettazione_e_sviluppo}
+
+L'attività di progettazione e sviluppo descrive la struttura di ogni documento ed elenca le procedure che ogni componente del team si deve impegnare a seguire nella scrittura dei documenti.
+
+\paragraph{Frontespizio}%
+\label{par:frontespizio}
+Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: nella prima è presente l'intestazione contenente logo, nome del gruppo e nome del documento, mentre la seconda consiste di uno schema contenente alcune informazioni essenziali sul documento descritto. In esso compaiono, ordinatamente, dall'alto verso il basso:
+
+\begin{itemize}
+  \item Intestazione
+        \begin{description}
+          \item [Logo] rappresenta il logo del gruppo.
+          \item [Nome del gruppo] rappresenta il nome del gruppo.
+          \item [Nome del documento] rappresenta nome del documento.
+        \end{description}
+  \item Schema
+        \begin{description}
+          \item [Versione] indica la versione attuale del documento (e.g\@. glossario v1.0.0).
+          \item [Approvazione] indica chi ha approvato il documento.
+          \item [Redazione] indica la lista dei redattori del documento.
+          \item [Verifica] indica la lista dei verificatori del documento.
+          \item [Stato] indica lo stato attuale in cui si trova il documento.
+          \item [Uso] indica l'uso finale del documento (interno o esterno).
+          \item [Destinato a] indica lo stato attuale del documento.
+          \item [Descrizione] indica una breve descrizione del documento.
+        \end{description}
+\end{itemize}
+
+\paragraph{Registro delle modifiche}%
+\label{par:registro_delle_modifiche}
+Il registro delle modifiche ha lo scopo di presentare quali cambiamenti sono stati effettuati e da parte di quale componente del gruppo. Consiste di quattro colonne ed è così articolato:
+\begin{description}
+  \item [Versione] indica il numero di versione a cui una modifica è andata a contribuire tramite la sua approvazione.
+        Ad ogni versione, infatti, corrisponde una catena di eventi che coinvolge scrittura, verifica e approvazione dei cambiamenti.
+        Ogni approvazione di un documento (eccetto i verbali) produce uno scatto di versione.
+        Una descrizione accurata del significato dei numeri di versione che GruppOne ha deciso di adottare è presente al paragrafo~\ref{par:versione_di_prodotto}.
+  \item [Nominativo] indica nome e cognome del componente del team che ha effettuato la modifica.
+  \item [Data] indica la data di modifica del documento con formato YYYY/MM/DD\@.
+  \item [Descrizione] indica il tipo di modifica effettuata con i riferimenti alle specifiche sezioni.
+\end{description}
+
+\paragraph{Indice}%
+\label{par:indice}
+L'indice presenta presenta l'elenco, accompagnato dal numero di pagina, delle sezioni e dei paragrafi di cui è composto il documento.
+GruppOne ha deciso di utilizzare la tipica suddivisione del testo offerta da \LaTeX{} che distingue cinque diversi blocchi testuali:
+\begin{itemize}
+  \item Sezioni
+  \item Sottosezioni
+  \item Sotto-sottosezioni
+  \item Paragrafi
+  \item Sottoparagrafi.
+\end{itemize}
+
+Ogni blocco testuale ha un numero identificativo univoco la cui lunghezza dipende dal grado di annidamento del blocco ed è predefinita in \LaTeX{} (e.g.:\ la sezione Introduzione è indicata con 1, la relativa sottosezione quattro è indicata con 1.4 e i capitoli contenuti in quella sottosezione sono indicati con 1.4.1 e 1.4.2).
+Ogni blocco testuale si identifica mediante una \glossario{label} univoca, utile a creare riferimenti interni al documento.
+
+Ogni riga dell'indice contiene il numero di pagina in cui si trova la sezione o il paragrafo a cui si riferisce e, cliccando sul nome del blocco, è possibile raggiungerlo direttamente.
+
+\paragraph{Contenuto}%
+\label{par:contenuto}
+Le pagine di contenuto sono suddivise in tre parti, dall'alto verso il basso:
+\begin{description}
+  \item [Header] contiene sinistra il logo del gruppo, a destra il nome del documento.
+  \item [Contenuto] contiene il testo del documento.
+  \item [Footer] contiene l'indicazione della pagina attuale rispetto il totale (e.g 1 di 6).
+\end{description}
+
+\paragraph{Norme per la redazione dei documenti}%
+\label{par:norme_per_la_redazione_dei_documenti}
+
+\subparagraph{Stile del testo}%
+\label{subp:stile_del_testo}
+In questo paragrafo GruppOne definisce le norme che uniformano lo stile di scrittura dei documenti:
+\begin{description}
+  \item [Verbi in forma attiva] i verbi devono essere in forma attiva e al tempo presente indicativo o passato prossimo. È ammesso l'uso del futuro per esprimere azioni che devono ancora avvenire.
+  \item [Struttura del testo chiara] la suddivisione del testo in sezioni, sottosezioni e paragrafi aiuta la coerenza e la coesione.
+  \item [Frasi brevi e poco complesse] i periodi devono essere il più possibile semplici per non generare incomprensioni.
+  \item [Uso degli elenchi puntati] per evitare lunghe digressioni ed eccessiva verbosità si vogliono utilizzare gli elenchi puntati laddove è possibile.
+  \item [Brevi blocchi testuali] si preferisce l'utilizzo di brevi paragrafi.
+  \item [Termini di glossario in maiuscolo] il testo è scritto in minuscolo. I termini di glossario, invece, sono indicati in maiuscolo con una g a pedice nel nome. Questa regola vale per la prima occorrenza di ogni termine di glossario.
+\end{description}
+
+\subparagraph{Elenchi }%
+\label{subp:elenchi}
+Gli elenchi sono un ottimo mezzo per la scrittura di documentazione. Essi permettono di riordinare il testo e di organizzare una serie di elementi correlati, pertanto, in questo paragrafo, si stabiliscono le norme per il loro corretto uso:
+
+\begin{enumerate}
+  \item Per indicare gli elementi di un elenco puntato non innestato utilizziamo il simbolo •. Gli elementi innestati sono preceduti da -.
+  \item Ogni elemento di elenco puntato inizia con una lettera maiuscola.
+  \item Se un elenco ha elementi composti da etichetta e descrizione, l'etichetta deve essere scritta in grassetto e la descrizione va inserita dopo i due punti.
+  \item Gli elenchi puntati semplici non hanno bisogno di punti fermi per terminare la frase. Gli elenchi puntati complessi, che possono essere formati da lunghi periodi, necessitano di un punto al termine della frase.
+  \item L'ultimo elemento dell'elenco deve comunque avere obbligatoriamente un punto al termine della frase.
+\end{enumerate}
+
+\subparagraph{Nomi dei file}%
+\label{nomi_dei_file}
+Per identificare i file memorizzati nel repository si seguono le seguenti convenzioni:
+
+\begin{itemize}
+  \item I nomi dei file devono essere in minuscolo e ignorare eventuali accenti o apostrofi.
+  \item Le parole contenute nei nomi di file composti devono essere separate da -.
+\end{itemize}
+
+Analisi dei requisiti sarà quindi salvato come analisi-dei-requisiti, mentre Norme di progetto come norme-di-progetto.
+
+\subparagraph{Sigle}%
+\label{subp:sigle}
+Si elencano una serie di sigle che possono essere utilizzate nei documenti. Si accompagna ad ognuna di esse il relativo significato:
+
+\begin{itemize}
+  \item sigle per identificare le revisioni
+        \begin{description}
+          \item [RR] revisione dei requisiti
+          \item [RP] revisione di progettazione
+          \item [RQ] revisione di qualifica
+          \item [RA] revisione di accettazione.
+        \end{description}
+  \item sigle per identificare i documenti
+        \begin{description}
+          \item [AdR] analisi dei requisiti
+          \item [NdP] norme di progetto
+          \item [PdQ] piano di qualifica
+          \item [PdP] piano di progetto
+          \item [MU] manuale utente
+          \item [MS] manuale sviluppatore
+          \item [G] glossario
+          \item [V] verbali.
+        \end{description}
+  \item sigle per identificare i ruoli
+        \begin{description}
+          \item [Re] responsabile
+          \item [Am] amministratore
+          \item [An] analista
+          \item [Pgt] progettista
+          \item [Pgr] programmatore
+          \item [Ve] verificatore.
+        \end{description}
+\end{itemize}
+
+\subparagraph{Convenzioni comuni}%
+\label{subp:convenzioni_comuni}
+Per la scrittura delle date si fa uso della seguente convenzione:
+\begin{center}
+  \textbf{YYYY-MM-DD}
+\end{center}
+Ad esempio 15 Novembre 2019 si scrive 2019--11--15.
+
+\subparagraph{Immagini}%
+\label{subp:immagini}
+Le immagini si devono utilizzare per apportare un valore aggiunto a ciò che si sta descrivendo o per dare una rappresentazione grafica di ciò che si sta presentando.
+Immagini con funzione puramente estetica non sono pertanto ammesse, ad eccezione di quanto definito nel template comune.
+Tutte le immagini devono essere inoltre centrate all'interno della pagina e munite di una breve didascalia così formata:
+\begin{center}
+  \textbf{Figura x: breve descrizione dell'immagine}
+\end{center}
+dove x indica la numerazione delle immagini (e.g.:\ figura 1, figura 2, figura 3).
+
+\subparagraph{Tabelle}%
+\label{subp:tabelle}
+L'uso di tabelle è consigliato solo quando strettamente necessario. La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento in cui risulti molto difficile organizzare informazioni aventi una struttura complessa. È obbligatorio l'uso di colori che abbiano un elevato contrasto al fine di promuovere la leggibilità. Inoltre, non devono essere eccessivamente lunghe altrimenti risultano dispersive.
+
+\subparagraph{Metriche}%
+\label{subp:metriche}
+
+\begin{description}
+  \item [MPS-IDG]:L'indice di Gulpease è un indice che valuta la leggibilità di un testo scritto in lingua italiana. Ha il vantaggio principale di utilizzare la lunghezza delle parole in lettere invece che sillabe. La formula per il calcolo è la seguente:
+  \[
+    89 +\frac{300\cdot nf-10\cdot nl}{np}
+  \]
+  dove:
+  \begin{description}
+    \item [nf] indica il numero delle frasi.
+    \item [nl] indica il numero delle lettere.
+    \item [np] indica il numero di parole.
+  \end{description}
+  I risultati sono compresi tra 0 e 100 dove 0 indica la leggibilità minima mentre 100 quella massima. In genere l'indice dice che:
+  \begin{itemize}
+    \item Un testo con indice inferiore a 80 è difficile per chi ha la licenza elementare.
+    \item Un testo con indice inferiore a 60 è difficile per chi la licenza media.
+    \item Un testo con indice inferiore a 40 è difficile per chi ha il diploma di scuola superiore.
+  \end{itemize}
+  \item [MPS-CO]: L'indice di correttezza ortografica indica la correttezza del testo.
+  Esso misura il numero di errori ortografici presenti.
+  Ogni componente del gruppo ha un estensione per il proprio code editor (per vscode consigliamo l'estensione \href{https://marketplace.visualstudio.com/items?itemName=ban.spellright}{Spell Right}, che si basa sul dizionario di sistema).
+\end{description}
+
+\subsubsection{Produzione}%
+\label{subs:produzione}
+
+L'attività di produzione mostra come i documenti sono distribuiti all'esterno e come il team ha deciso di archiviarli.
+
+\paragraph{Suddivisione dei documenti}%
+\label{par:suddivisione_dei_documenti}
+I documenti utilizzano la struttura a \glossario{subfiles} offerta da \LaTeX.
+La struttura di base del documento è definita nel file che porta il nome del documento.
+La cartella components, che è unica per ogni documento, contiene un file per la definizione di ogni sezione. In ogni sezione si definiscono poi le relative sottosezioni, paragrafi e sottoparagrafi.
+
+Ad esempio, il file norme di progetto ha la seguente struttura:
+
+\begin{itemize}
+  \item[] \ldots
+  \item[] /interni/
+        \begin{itemize}
+          \item[] norme-di-progetto/
+                \begin{itemize}
+                  \item[] components/
+                        \begin{itemize}
+                          \item[] introduzione.tex
+                          \item[] \ldots
+                        \end{itemize}
+                  \item[] norme-di-progetto.tex
+                \end{itemize}
+          \item[] \ldots
+        \end{itemize}
+  \item[] \ldots
+\end{itemize}
+
+\subparagraph{Interni}%
+\label{subp:suddivisione_dei_documenti/interni}
+I documenti interni sono destinati alla comunicazione tra i componenti di GruppOne. Appartengono a tale categoria:
+
+\begin{itemize}
+  \item Verbali interni
+  \item Studio di fattibilità
+  \item Norme di progetto.
+\end{itemize}
+
+\subparagraph{Esterni}%
+\label{subp:suddivisione_dei_documenti/esterni}
+I documenti esterni sono destinati al committente. Appartengono a tale categoria:
+
+\begin{itemize}
+  \item Analisi dei requisiti
+  \item Piano di progetto
+  \item Piano di qualifica.
+\end{itemize}
+
+\subparagraph{Verbali}%
+\label{subp:verbali}
+I verbali contengono un riassunto degli incontri di GruppOne.
+Se qualche componente del gruppo non fosse presente ad un incontro verbale, è necessario che prenda visione del relativo verbale, in modo da informarsi sugli argomenti discussi alla riunione in cui era assente.
+I verbali si distinguono in interni ed esterni. Ogni verbale è contraddistinto da un nome con il seguente formato:
+\begin{center}
+  \textbf{verbale-USO\_YYYY-MM-DD.tex}
+\end{center}
+Dove USO può essere `interno' o `esterno'. I verbali sono così organizzati:
+
+\begin{description}
+  \item [Titolo] il titolo indica che il documento in questione è un verbale e mostra la data di redazione.
+  \item [Schema] lo schema contiene le informazioni basilari relative al documento. È identico allo schema degli altri documenti, spiegato nella sezione~\ref{par:frontespizio}.
+  \item [Informazioni logistiche] elenca i partecipanti interni ed eventualmente esterni, e documenta luogo, data e orario di inizio e fine dell'incontro.
+  \item [Registro delle modifiche] il registro delle modifiche ha la struttura di quello presentato in~\ref{par:registro_delle_modifiche}.
+  \item [Ordine del giorno] l'ordine del giorno consiste in un elenco puntato degli argomenti che saranno trattati nel verbale.
+  \item [Sezioni] Ogni sezione del documento sviluppa un elemento dell'ordine del giorno.
+  \item [Registro delle decisioni] il registro delle decisioni indica le decisioni prese sulla base degli argomenti discussi nell'ordine del giorno.
+\end{description}
+
+\subsubsection{Strumenti}
+
+\paragraph{\LaTeX}%
+\label{par:LaTeX}
+\LaTeX{} (versione \href{https://texfaq.org/FAQ-latex2e}{\LaTeX2e}) è il linguaggio di markup utilizzato da GruppOne per la stesura dei documenti.
+Ogni componente del gruppo ha installato sul proprio sistema una distribuzione di \TeX{}/\LaTeX{} a piacere che includesse Lua\TeX{} e ne esponesse sul \verb|PATH| l'eseguibile.
+
+Ognuno ha inoltre aggiunto un'estensione per il proprio Code Editor preferito che consentisse di facilitare la corretta esecuzione del processo di build dei file *.tex.
+
+Questa avviene attraverso il comando:
+
+\begin{minted}{bash}
+  lualatex `
+    --interaction=nonstopmode `
+    --c-style-errors `
+    --shell-escape `
+    <file-to-build>
+\end{minted}
+
+Da eseguire due volte per permettere a \LaTeX{} di recuperare i riferimenti corretti e ad es\@. il numero totale di pagine.
+
+È inoltre necessario avere disponibile sul proprio sistema \href{https://pygments.org/}{Pygments}, un package di python richiesto dal package di \LaTeX{} \href{https://ctan.org/pkg/minted?lang=en}{minted}, che permette di evidenziare la sintassi degli \glossario{snippet} di codice presenti nel documento.
+
+\paragraph{\LaTeX{} linter}%
+\label{par:latex_linter}
+
+% Un linter è uno strumento che analizza il codice sorgente per determinare errori di programmazione o costrutti sintattici ritenuti non corretti
+Per la verifica del codice ogni componente ha installato sulla propria macchina un \glossario{linter}.
+Abbiamo deciso di utilizzare \href{https://www.nongnu.org/chktex/}{Chk\TeX}, che è incluso nella maggior parte delle distribuzioni \LaTeX{} così come nell'estensione di vscode che utilizziamo, ed è facilmente configurabile per le nostre necessità.
+
+\end{document}

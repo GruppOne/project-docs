@@ -16,6 +16,7 @@
   // 	"description": "Log output to console"
   // }
   "chapter": {
+    "scope": "latex",
     "prefix": "chapter",
     "body": [
       "\\chapter{${1:chapter}}%",
@@ -25,6 +26,7 @@
     ]
   },
   "section": {
+    "scope": "latex",
     "prefix": "section",
     "body": [
       "\\section{${1:section}}%",
@@ -34,6 +36,7 @@
     ]
   },
   "subsection": {
+    "scope": "latex",
     "prefix": "subsection",
     "body": [
       "\\subsection{${1:subsection}}%",
@@ -43,6 +46,7 @@
     ]
   },
   "subsubsection": {
+    "scope": "latex",
     "prefix": "subsubsection",
     "body": [
       "\\subsubsection{${1:subsubsection}}%",
@@ -52,6 +56,7 @@
     ]
   },
   "paragraph": {
+    "scope": "latex",
     "prefix": "paragraph",
     "body": [
       "\\paragraph{${1:paragraph}}%",
@@ -61,6 +66,7 @@
     ]
   },
   "subparagraph": {
+    "scope": "latex",
     "prefix": "subparagraph",
     "body": [
       "\\subparagraph{${1:subparagraph}}%",

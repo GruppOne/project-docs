@@ -1,0 +1,20 @@
+@startuml stylesheet
+
+hide circle
+hide empty members
+
+skinparam {
+  classAttributeIconSize 0
+  ' non funziona ma sarebbe bello se funzionasse
+  ' groupInheritance 2
+  ' figo, ma rende invisibili i label sulle relationship
+  ' linetype ortho
+  linetype polyline
+  monochrome true
+  shadowing false
+  defaultFontName Consolas
+  DefaultTextAlignment center
+  noteFontName Arial
+}
+
+@enduml

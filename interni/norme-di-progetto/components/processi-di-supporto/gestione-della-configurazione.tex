@@ -1,0 +1,98 @@
+\documentclass[../../norme-di-progetto.tex]{subfiles}
+
+% FIXME struttura non conforme
+\begin{document}
+
+\subsubsection{Finalità}%
+\label{subs:gestione_della_configurazione/finalita}
+
+GruppOne istanzia il processo di gestione della configurazione per:
+\begin{itemize}
+  \item Assicurare completezza e correttezza del prodotto.
+  \item Gestire al meglio il lavoro di gruppo.
+  \item Identificare procedure per l'organizzazione, gestione e rilascio del prodotto.
+  \item Conservare documentazione e software in un luogo accessibile e compatibile con la licenza richiesta dal committente.
+\end{itemize}
+
+\subsubsection{Gestione del versionamento}%
+\label{subs:gestione_del_versionamento}
+
+La gestione delle versioni del prodotto avviene tramite Git, utilizzando il \href{https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/github-flow}{GitHub flow} nel periodo iniziale e possibilmente transizionando verso il \href{https://trunkbaseddevelopment.com/}{Trunk Based Development} quando i membri del gruppo avranno più familiarità con Git e con le tecnologie necessarie allo svolgimento delle attività di Testing.
+
+\paragraph{Repository}%
+\label{par:repository}
+
+Abbiamo deciso di distribuire il prodotto software su più repository corrispondenti alle parti principali di cui è costituito, che verranno creati in corrispondenza dell'approvazione di una \glossario{API} stabile per il prodotto software che stiamo sviluppando.
+
+Ciascuno di questi repository sarà versionato in conformità alla specifica \href{https://semver.org/spec/v2.0.0.html}{Semantic Versioning 2.0.0}{semver}, utilizzando degli strumenti per automatizzare il più possibile l'attività.
+
+Ci aspettiamo che questi numeri di versione raggiungano cifre elevate e ci impegniamo a dare una stima del numero previsto per ogni repository basata sul numero di requisiti concordati con il committente in seguito alla prima revisione di progetto.
+
+Lo scopo primario di questa previsione sarà di manifestare sinteticamente ai membri del gruppo la differenza tra preventivo e consuntivo di periodo in occasione delle successive revisioni, contenendo essa informazioni sia sull'implementazione graduale delle funzionalità richieste che sul numero di modifiche implementate e problemi risolti per ogni componente del prodotto.
+
+Consideriamo quindi questi numeri di versione dei componenti individuali come numeri di versione \textbf{interni}.
+
+\paragraph{Versione di prodotto}%
+\label{par:versione_di_prodotto}
+
+A espressione del nostro rapporto con il committente e con il proponente, ci impegniamo a mantenere un numero di versione rappresentativo del prodotto complessivo, anch'esso organizzato su 3 livelli (X.Y.Z) ma con significato non conforme alla specifica semver.
+
+In particolare:
+
+\begin{itemize}
+  \item Un aumento di Z corrisponde all'approvazione interna di un documento, che implica necessariamente la verifica da parte di minimo 2 membri del team.
+  \item Un aumento di Y corrisponde al raggiungimento di una milestone come definita nel \textit{Piano di progetto (versione \versione)}. Le milestone comprendono sia le revisioni di progetto con il committente che gli incrementi.
+  \item Un aumento di X corrisponde al rilascio pubblico di una nuova versione \textit{non retro-compatibile} dell'API pubblica del prodotto C5-Stalker
+\end{itemize}
+
+Ogni componente software sviluppata dipenderà esplicitamente in ogni momento da una versione di prodotto (e quindi di documentazione).
+
+Eventi non previsti dalla pianificazione si manifesteranno con appropriate richieste di modifiche alla documentazione di progetto, riflettute in modifiche locali ai componenti espresse attraverso il cambiamento del numero di versione di prodotto riferito dal componente stesso.
+
+Eventuali discordanze tra la cifra MAJOR delle parti e la cifra X del prodotto verranno sanate con la massima priorità, a manifestare l'aderenza del prodotto alla API rilasciata pubblicamente.
+
+\subparagraph{Eventuale aderenza ai principi delle twelve-factor app}%
+\label{subp:eventuale_aderenza_ai_principi_delle_twelve-factor_app}
+
+Qualora in fase di progettazione decidessimo che è sostenibile sviluppare il prodotto in aderenza ai principi delineati in \href{https://12factor.net/codebase}{12-factor app}, con riferimento al primo fattore consideriamo il nostro prodotto come un \glossario{sistema distribuito}, in cui ricerchiamo la conformità di quanti più componenti possibili.
+
+\subparagraph{Identità di prodotto}%
+\label{subp:identita_di_prodotto}
+
+Ci riserviamo la possibilità di modificare opportunamente la gestione del versionamento del prodotto in seguito a eventuale feedback negativo del committente, semplificandolo ove necessario.
+
+Valuteremo inoltre la convenienza manutentiva di fornire al committente in corrispondenza delle prossime revisioni di progetto un repository impostato per tracciare sia le parti del sistema che la documentazione di progetto attraverso il meccanismo dei \href{https://git-scm.com/book/en/v2/Git-Tools-Submodules}{Submodule}.
+
+% subp:identita_di_prodotto (end)
+
+\paragraph{Struttura dei messaggi di commit}%
+\label{par:struttura_dei_messaggi_di_commit}
+
+In tutti i repository gestiti dall'organizzazione GruppOne ci impegniamo a rispettare la specifica \href{https://www.conventionalcommits.org/en/v1.0.0/}{Conventional Commits 1.0.0}. Il vantaggio principale di questa convenzione risiede nella sua stretta correlazione con la specifica semver e gli avanzamenti di versione interna.
+
+Sebbene l'utilità di seguire questa convenzione nel repository di documentazione sia limitata, abbiamo deciso di imporla comunque per entrare fin da subito nell'ottica necessaria e uniformare il flusso di lavoro.
+
+\paragraph{Baseline}%
+\label{par:baseline}
+
+Stante quanto detto ai paragrafi precedenti, emerge in maniera naturale un concetto di \glossario{baseline} per il nostro progetto.
+
+Considerati tutti i repository di progetto creati dall'organizzazione, la baseline corrispondente ad ogni milestone di progetto è definita univocamente dal numero di versione di prodotto e dai numeri di versione interni, e consiste concretamente nel contenuto delle branch di default di ciascun repository, opportunamente marcato da una \glossario{tag} e da una \href{https://help.github.com/en/github/administering-a-repository/about-releases}{release} di GitHub.
+
+Nel caso del repository di documentazione di progetto, ci impegniamo anche ad allegare una copia dei documenti compilati in formato PDF\@.
+
+% par:baseline (end)
+
+\subsubsection{Strumenti}%
+\label{subs:gestione_della_configurazione/strumenti}
+
+La gestione del numero di versione avverrà attraverso uno strumento la cui scelta verrà effettuata in base alle necessità specifiche che emergeranno durante la fase di analisi. Alcune opzioni che stiamo considerando sono:
+
+\begin{itemize}
+  \item \href{https://github.com/conventional-changelog/standard-version}{conventional changelog - Standard Version}
+  \item \href{https://semantic-release.gitbook.io/semantic-release/}{semantic-release}
+\end{itemize}
+
+Invece per facilitare l'adozione dei commit convenzionali, abbiamo iniziato da subito a utilizzare lo strumento \href{https://commitizen.github.io/cz-cli/}{Commitizen}, configurato con il \glossario{commitizen adapter} \href{https://www.npmjs.com/package/cz-conventional-changelog/v/3.0.1}{cz-conventional-changelog@3.0.1}
+
+\end{document}
