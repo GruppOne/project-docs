@@ -16,7 +16,9 @@
     \centering
 
     \begin{tabular}{r|l} % chktex -2
+      \ifthenelse{\equal{\versione}{DISABILITATA}}{}{
       \textbf{Versione}                   & \versione{}             \\
+      }
       \textbf{Approvazione}               & \responsabile{}         \\
       \textbf{Redazione}                  & \redattori{}            \\
       \textbf{Verifica}                   & \verificatori{}         \\
@@ -25,7 +27,9 @@
                                           & GruppOne                \\
                                           & prof.\ Vardanega Tullio \\
                                           & prof.\ Cardin Riccardo  \\
-      \ifthenelse{\equal{\uso}{Esterno}}{ & Imola Informatica       \\ }{}
+      \ifthenelse{\equal{\uso}{Esterno}}{
+                                          & Imola Informatica       \\
+      }{}
     \end{tabular}
   \end{table}
 
