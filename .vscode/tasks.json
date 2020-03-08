@@ -47,6 +47,20 @@
         "kind": "test",
         "isDefault": true
       }
-    }
+    },
+    {
+      "label": "clean latex files",
+      "detail": "Remove all latex-generated files",
+      "type": "shell",
+      "command": "D:/Projects/_SWE-PROJECT/swe-project-docs/.pwsh/scripts/Remove-LatexGeneratedFiles.ps1 -RemovePdfs",
+      "presentation": {
+        "clear": true,
+        "echo": false,
+        "focus": true,
+        "panel": "dedicated",
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    },
   ]
 }
