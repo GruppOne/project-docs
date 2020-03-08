@@ -1,0 +1,119 @@
+\documentclass{article}
+
+\input{../../commons/config}
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale interno --- 05/03/2020}
+
+\setResponsabile{Riccardo Agatea}
+\setRedattori{Alberto Gobbo}
+\setVerificatori{
+  Tobia Apolloni
+}
+\setUso{Interno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 05/03/2020}
+\setModifiche{%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--03--07 & approva documento \\%
+\cellcolor{white!80!lightgray!100} & Verificatore & 2020--03--06 & verifica verbale \\%
+\multirow{-3}{*}{0.1.5} \cellcolor{white!80!lightgray!100} & Alberto Gobbo & 2020--03--05 & stendi verbale %
+}
+
+\disabilitaVersione{}
+\disabilitaElencoFigure{}
+\disabilitaElencoTabelle{}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Informazioni logistiche}%
+\label{sec:informazioni_logistiche}
+
+\begin{description}
+  \item [Luogo] chiamata Hangouts
+  \item [Data] 05/03/2020
+  \item [Ora] 15:30 \symbol{8594} 17:30
+\end{description}
+
+\subsection{Membri del gruppo presenti}%
+\label{sub:membri_del_gruppo_presenti}
+
+\begin{enumerate}
+  \item Riccardo Agatea
+  % \item Tobia Apolloni
+  \item Riccardo Cestaro
+  \item Alberto Cocco
+  \item Luca Ercole
+  \item Alberto Gobbo
+  \item Alessandro Rizzo
+  \item Fabio Scettro
+\end{enumerate}
+% sub:membri_del_gruppo_presenti (end)
+% sec:informazioni_logistiche (end)
+
+\section{Introduzione}%
+\label{sec:introduzione}
+
+Abbiamo definito lo schema relazionale del database che verrà sviluppato in MySQL che sarà fondamentale per tutte le interrogazioni che saranno effettuate dal back-end e front-end del sistema di Stalker.
+
+Inoltre abbiamo preso decisioni che erano rimaste in sospeso dall'ultimo incontro, in merito all'ambiente di sviluppo da utilizzare per il front-end e agli strumenti per lo sviluppo del layout grafico di applicazione mobile e web application.
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item Definizione struttura schema relazionale per il database MySQL\@.
+  \item Decisioni finali su tecnologie da utilizzare.
+\end{itemize}
+% sec:ordine_del_giorno (end)
+
+\section{Definizione struttura schema relazionale per il database MySQL}%
+\label{sec:definizione_struttura_schema_relazionale_per_il_database_MySQL}
+Il gruppo ha lavorato congiuntamente per realizzare lo schema relazionale del database MySQL che verrà utilizzato nel sistema di Stalker per memorizzare tutti i dati relativi agli utenti registrati e alle organizzazioni nel loro complesso.
+
+Abbiamo utilizzato \href{https://www.genmymodel.com/}{GenMyModel}, uno strumento online per costruire diagrammi e molto altro.
+
+L'attività principale svolta è stata l'individuazione di tutte le entità, le relazioni tra esse e gli attributi coinvolti.
+
+Lo schema relazionale sarà ulteriormente raffinato a partire dal documento di \textit{Analisi dei Requisiti} per aggiungere i dettagli mancanti.
+
+Una volta ultimato, lo schema concettuale sarà definito in un database relazionale MySQL che servirà per comunicare i dati d'interesse all'applicazione mobile e alla web application.
+
+% sec:definizione_struttura_schema_relazionale_per_il_database_MySQL (end)
+
+\section{Decisioni finali su tecnologie da utilizzare}%
+\label{sec:decisioni_finali}
+
+\subsection{Scelta ambiente di sviluppo per l'applicazione mobile}%
+\label{sub:scelta_ambiente_di_sviluppo_per_applicazione_mobile}
+Il gruppo ha valutato attentamente quale ambiente di sviluppo utilizzare per lo sviluppo dell'applicazione mobile tra Android Studio e IntelliJ IDEA\@.
+
+Nonostante Android Studio sia un ambiente di sviluppo dedicato alle applicazioni Android, i requisiti di sistema minimi sono troppo onerosi per i computer di alcuni membri del gruppo.
+
+Vista la possibilità di sviluppare applicazioni Android e un ambiente di sviluppo più leggero, la scelta è ricaduta su \href{https://www.jetbrains.com/help/idea/getting-started-with-android-development.html}{IntelliJ IDEA 2019.3.3} versione Community, in quanto la licenza è gratuita.
+% sub:scelta_ambiente_di_sviluppo_per_applicazione_mobile (end)
+
+\subsection{Scelta strumenti per design applicazione mobile e web application}%
+\label{sub:scelta_strumenti_per_design_applicazione_mobile_e_web_application}
+Per l'aspetto grafico dell'applicazione mobile, è stato scelto il linguaggio visuale di Google \href{https://material.io/develop/android}{\glossario{Material design}}, in quanto c'è un'ampia documentazione per Android che descrive i vari componenti grafici e i temi da applicare all'applicazione.
+
+Per quanto riguarda l'aspetto grafico della web application, è stato scelto \href{https://getbootstrap.com/}{\glossario{Bootstrap}}, una piattaforma per la creazione di contenuti web che offre un'ampia documentazione.
+
+% sub:scelta_strumenti_per_design_applicazione_mobile_e_web_application (end)
+
+% sec:varie_ed_eventuali (end)
+
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+
+\begin{enumerate}
+  \item Abbiamo definito lo schema relazionale per definire il database relazionale MySQL del sistema di Stalker.
+  \item Abbiamo deciso che l'ambiente di sviluppo da utilizzare per lo sviluppo dell'applicazione mobile sarà IntelliJ IDEA\@.
+  \item Abbiamo deciso che per il linguaggio visuale per l'applicazione mobile sarà utilizzato Material Design.
+  \item Abbiamo deciso che per la grafica della web application sarà utilizzata la piattaforma web Bootstrap.
+\end{enumerate}
+
+% sec:registro_delle_decisioni (end)
+
+\end{document}

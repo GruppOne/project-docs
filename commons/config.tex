@@ -117,6 +117,11 @@
 }
 \newcommand{\versione}{\@versione}
 
+\newcommand{\disabilitaVersione}{%
+  \renewcommand{\setVersione}[1]{}%
+  \renewcommand{\versione}{DISABILITATA}
+}
+
 \newcommand{\setResponsabile}[1]{%
   \newcommand{\@responsabile}{#1}%
 }
