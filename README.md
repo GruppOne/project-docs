@@ -35,11 +35,13 @@ Dopo aver scaricato l'archivio jar di PlantUML, impostare sul proprio sistema la
 ```bash
 java \
   -jar $PLANTUML_JAR \
+  -progress \
+  -failfast \
   -checkmetadata \
   -charset UTF-8 \
   -x **/commons/style/*.pu \
   -o img \
-  **/**.pu
+  **/diagrams/*.pu
 ```
 
 ### Syntax Highlighting
