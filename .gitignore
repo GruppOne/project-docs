@@ -296,3 +296,6 @@ __latexindent_temp.tex
 # ignora diagrammi PlantUML analisi dei requisiti
 esterni/analisi-dei-requisiti/components/casi-duso/app/diagrams/img
 esterni/analisi-dei-requisiti/components/casi-duso/web-app/diagrams/img
+
+# ignora subfolder dove teniamo le release compilate
+.releases/
