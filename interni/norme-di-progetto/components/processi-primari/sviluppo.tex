@@ -91,7 +91,7 @@ Un generico caso d'uso è caratterizzato da:
           \item [Caso d'uso] [A/U]UC[codice numerico]
           \item [Sottocaso d'uso] [A/U]UC[codice numerico del genitore].[codice numerico del sottocaso].
         \end{description}
-        Ad esempio il primo caso d'uso interfaccia web avrà codice identificativo AUC1 mentre i relativi sottocasi saranno AUC1.1 AUC1.2 AUC1.3..
+        Ad esempio, il primo caso d'uso relativo all'interfaccia web avrà codice identificativo AUC1 mentre i relativi sottocasi saranno AUC1.1 AUC1.2 AUC1.3..
   \item [Attore primario] attore principale coinvolto nel caso d'uso.
   \item [Attori secondari (opzionale)] attori secondari coinvolti nel caso d'uso.
   \item [Precondizione] condizione in cui si trovano gli attori prima del verificarsi del caso d'uso.
@@ -208,13 +208,13 @@ Una classe, in UML, ha la sottostante rappresentazione:
   \caption{diagramma delle classi realizzato con PlantUML}
 \end{figure}
 \begin{description}
-  \item [Nomi e visibilità]: i nomi di classi, campi dati e metodi andranno indicati in minuscolo e scritti in lingua inglese.
+  \item [Nomi e visibilità]: i nomi delle classi, dei campi dati e dei metodi andranno indicati in minuscolo e scritti in lingua inglese.
         Inoltre, come in un vero e proprio linguaggio di programmazione, in UML è possibile indicare la visibilità di una variabile o di un metodo:
         \begin{description}
           \item [-]: visibilità privata
           \item [\#]: visibilità protetta
           \item [+]: visibilità pubblica
-          \item [\textasciitilde]: visibilità a livello di package
+          \item [\textasciitilde]: visibilità a livello di package.
         \end{description}
   \item[Altre convenzioni]:
         \begin{itemize}
@@ -323,7 +323,7 @@ Gli elementi essenziali che li compongono sono:
 \end{itemize}
 I diagrammi di attività si basano sulla produzione e consumo di token.
 Ogniqualvolta inizia il flusso di esecuzione e quindi ci trova nel nodo iniziale si genera un token.
-Branching e merging consumano e producono un token, la fork produce un token per ogni processo in parallelo in esecuzione mentre la join li consuma tutti e ne genera uno.
+Branching e merging rispettivamente producono e consumano un token, la fork produce un token per ogni processo in parallelo in esecuzione mentre la join li consuma tutti e ne genera uno.
 Infine il nodo finale consuma tutti i token.
 Altri elementi che possono essere utilizzati per realizzare diagrammi di attività più precisi sono:
 \begin{itemize}
@@ -559,7 +559,7 @@ Per la costruzione dei diagrammi UML il team ha deciso di utilizzare \glossario{
 
 \begin{itemize}
   \item Gli aspetti grafici di costruzione dei diagrammi sono demandati al software sottostante.
-  \item La sua natura testuale e dichiarativa permette di attuare un versionamento efficace dei diagrammi attraverso strumenti che già utilizziamo.
+  \item La sua natura testuale e dichiarativa permette di attuare un versionamento efficace dei diagrammi attraverso strumenti già in uso dal team.
   \item Permette di scrivere agevolmente i diagrammi dei casi d'uso, delle classi, di sequenza e di package.
 \end{itemize}
 
