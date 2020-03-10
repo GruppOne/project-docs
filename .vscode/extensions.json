@@ -1,11 +1,11 @@
 {
   "recommendations": [
-    "mhutchie.git-graph",
-    "james-yu.latex-workshop",
-    "github.vscode-pull-request-github",
+    "ban.spellright",
     "eamodio.gitlens",
+    "editorconfig.editorconfig",
+    "github.vscode-pull-request-github",
+    "james-yu.latex-workshop",
     "jebbs.plantuml",
-    "ms-vscode.powershell",
-    "ban.spellright"
+    "mhutchie.git-graph"
   ]
 }
