@@ -13,8 +13,8 @@ rectangle {
   }
 
 :G: -- AUC3.3
-:G: -- AUC4
-:O: -- AUC3
+:O: -- AUC3.2
+:O: -- AUC3.1
 
 @enduml
 
@@ -44,7 +44,7 @@ AUC3.3 -- :S:
 @startuml eliminazione-organizzazione
 !include ../../../../../../commons/style/use-cases.pu
 
-actor :owner: as 0
+actor :owner: as O
 
 rectangle {
     together {
@@ -52,7 +52,7 @@ rectangle {
       }
   }
 
-:0: -- AUC4.1
+:O: -- AUC3.2.1
 @enduml
 
 @startuml modifica-organizzazione
