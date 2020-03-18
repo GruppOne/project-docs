@@ -22,7 +22,7 @@ Raggruppa le seguenti attività:
   \item Installazione.
 \end{itemize}
 
-\subsubsection{Attività}%
+{Attività}%
 \label{subs:sviluppo/attivita}
 
 \paragraph{Analisi dei requisiti}%
@@ -542,6 +542,58 @@ La ricorsione come paradigma di programmazione va usata con moderazione poiché 
 L'uso della ricorsione andrebbe motivato con appositi commenti.
 % subp:ricorsione (end)
 
+\subsubsection{Metriche}%
+\label{subs:sviluppo/metriche}
+
+\paragraph{MPS-ROS: Requisiti obbligatori soddisfatti}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPS-ROS_requisiti_obbligatori_soddisfatti}
+
+La metrica requisiti obbligatori soddisfatti indica la percentuale di requisiti obbligatori soddisfatti sul numero totale di requisiti obbligatori. La formula è la seguente:
+\[
+  \frac{requisiti\ obbligatori\ soddisfatti}{requisiti\ obbligatori\ totali}\cdot 100
+\]
+
+\paragraph{MPS-NFV: Nomi di file e variabili non normati}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPS-NFV_nomi_file_variabili_non_normati}
+
+I nomi dei file o delle variabili devono seguire delle specifiche regole per essere più chiare possibile.
+
+\textbf{Metrica:} numero di nomi di variabili o di titoli di metodi o classi che non rispettano le norme stabilite.
+
+\paragraph{MPS-CNN: Commenti non normati}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPS-CNN_commenti_non_normati}
+
+I commenti devono essere scritti seguendo le norme indicate per essere comprensibili.
+
+\textbf{Metrica:} numero di commenti che non rispettano le norme indicate.
+
+\paragraph{MPS-CCE: Complessità ciclomatica eccessiva}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPS-CCE_complessita_ciclomatica_eccessiva}
+una sezione di codice è il numero di cammini linearmente indipendenti attraverso il codice sorgente
+
+Il grado di difficoltà di testare un metodo è proporzionale al numero di cammini linearmente indipendenti: più è alto il numero di cammini, più è alto il grado di complessità.
+Ne deriva inoltre un'esecuzione più lenta del metodo. E' quindi buona norma limitare il numero massimo di cammini.
+La formula che calcola la complessità ciclomatica è la seguente:
+\[
+  v(G) = e - n + p
+\]
+dove:
+\begin{description}
+  \item[v(G):] complessità ciclomatica del grafo G. % chktex 36
+  \item[e:] numero di archi del grafo.
+  \item[n:] numero di nodi del grafo.
+  \item[p:] numero di componenti connesse.
+\end{description}
+\textbf{Metrica:} numero di metodi che hanno \[v(G) > 3.\]
+
+\paragraph{MPS-ICC: Classi che implementano classi concrete}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPS-ICC_classi_implementano_concrete}
+L'ereditarietà tra classi andrebbe evitata poiché la presenza di dipendenze tra più componenti ne ostacola la modifica e la verifica.
+
+\textbf{Metrica:} numero di classi che ereditano un'altra classe concreta.
+
+% par:MPS-014_classi_implementano_concrete (end)
+
 % TODO scrivere procedure processo sviluppo?
 % \subsubsection{Procedure}%
 % \label{subs:procedure}
@@ -549,8 +601,15 @@ L'uso della ricorsione andrebbe motivato con appositi commenti.
 % subs:procedure (end)
 
 % subp:indentazione (end)
-\subsubsection{Strumenti}%
-\label{subs:strumenti}
+
+%\paragraph{Testing}%
+%\label{par:testing}
+
+%\paragraph{Installazione}%
+%\label{par:installazione}
+
+\subsubsection{Strumenti di supporto}%
+\label{subs:strumenti_di_supporto}
 
 \paragraph{PlantUML}%
 \label{par:plantuml}
@@ -621,58 +680,5 @@ Un diagramma di Gantt viene quindi costruito attraverso uno o più comandi di ti
 L'integrazione dei diagrammi nel documento avviene durante la compilazione del documento effettuata attraverso il comando dato in~\ref{par:LaTeX}.
 
 % par:pgfgantt (end)
-
-\subsubsection{Metriche di processo}%
-\label{subs:sviluppo/metriche_di_processo}
-
-\paragraph{MPS-ROS: Requisiti obbligatori soddisfatti}% in questo caso NON ci va il "\@". chktex 13
-\label{par:MPS-ROS_requisiti_obbligatori_soddisfatti}
-
-La metrica requisiti obbligatori soddisfatti indica la percentuale di requisiti obbligatori soddisfatti sul numero totale di requisiti obbligatori. La formula è la seguente:
-\[
-  \frac{requisiti\ obbligatori\ soddisfatti}{requisiti\ obbligatori\ totali}\cdot 100
-\]
-
-\paragraph{MPS-NFV: Nomi di file e variabili non normati}% in questo caso NON ci va il "\@". chktex 13
-\label{par:MPS-NFV_nomi_file_variabili_non_normati}
-
-I nomi dei file o delle variabili devono seguire delle specifiche regole per essere più chiare possibile.
-
-\textbf{Metrica:} numero di nomi di variabili o di titoli di metodi o classi che non rispettano le norme stabilite.
-
-\paragraph{MPS-CNN: Commenti non normati}% in questo caso NON ci va il "\@". chktex 13
-\label{par:MPS-CNN_commenti_non_normati}
-
-I commenti devono essere scritti seguendo le norme indicate per essere comprensibili.
-
-\textbf{Metrica:} numero di commenti che non rispettano le norme indicate.
-
-\paragraph{MPS-CCE: Complessità ciclomatica eccessiva}% in questo caso NON ci va il "\@". chktex 13
-\label{par:MPS-CCE_complessita_ciclomatica_eccessiva}
-una sezione di codice è il numero di cammini linearmente indipendenti attraverso il codice sorgente
-
-Il grado di difficoltà di testare un metodo è proporzionale al numero di cammini linearmente indipendenti: più è alto il numero di cammini, più è alto il grado di complessità.
-Ne deriva inoltre un'esecuzione più lenta del metodo. E' quindi buona norma limitare il numero massimo di cammini.
-La formula che calcola la complessità ciclomatica è la seguente:
-\[
-  v(G) = e - n + p
-\]
-dove:
-\begin{description}
-  \item[v(G):] complessità ciclomatica del grafo G. % chktex 36
-  \item[e:] numero di archi del grafo.
-  \item[n:] numero di nodi del grafo.
-  \item[p:] numero di componenti connesse.
-\end{description}
-\textbf{Metrica:} numero di metodi che hanno \[v(G) > 3.\]
-
-\paragraph{MPS-ICC: Classi che implementano classi concrete}% in questo caso NON ci va il "\@". chktex 13
-\label{par:MPS-ICC_classi_implementano_concrete}
-L'ereditarietà tra classi andrebbe evitata poiché la presenza di dipendenze tra più componenti ne ostacola la modifica e la verifica.
-
-\textbf{Metrica:} numero di classi che ereditano un'altra classe concreta.
-
-% par:MPS-014_classi_implementano_concrete (end)
-
 
 \end{document}
