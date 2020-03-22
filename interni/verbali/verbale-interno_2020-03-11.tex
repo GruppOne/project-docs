@@ -1,0 +1,76 @@
+\documentclass{article}
+
+\input{../../commons/config}
+
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale interno --- 11/03/2020}
+
+\setResponsabile{Alessandro Rizzo}
+\setRedattori{Luca Ercole}
+\setVerificatori{
+  Tobia Apolloni \\ &
+  Riccardo Cestaro
+}
+\setUso{Interno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 11/03/2020}
+\setModifiche{%
+\cellcolor{white!80!lightgray!100} & Alessandro Rizzo & 2020--03--21 & approva documento \\%
+\cellcolor{white!80!lightgray!100} & Tobia Apolloni, Riccardo Cestaro & 2020--03--20 & verifica verbale \\%
+\multirow{-3}{*}{0.0.3} & Alberto Cocco & 2020--03--13 & stendi verbale%
+}
+
+\disabilitaVersione{}
+\disabilitaElencoFigure{}
+\disabilitaElencoTabelle{}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Informazioni logistiche}%
+\label{sec:informazioni_logistiche}
+
+\begin{description}
+  \item [Luogo] videochiamata su Google Hangouts
+  \item [Data] 11/03/2020
+  \item [Ora] 15:00 \symbol{8594} 18:00
+\end{description}
+
+\subsection{Membri del gruppo presenti}%
+\label{sub:membri_del_gruppo_presenti}
+
+\begin{enumerate}
+  %\item Riccardo Agatea
+  %\item Tobia Apolloni
+  %\item Riccardo Cestaro
+  \item Alberto Cocco
+  \item Luca Ercole
+  \item Alberto Gobbo
+  % \item Alessandro Rizzo
+  \item Fabio Scettro
+\end{enumerate}
+% sub:membri_del_gruppo_presenti (end)
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item Progettare e decidere l'API che il nostro server dovrà esporre pubblicamente.
+\end{itemize}
+
+\section{Progettazione dell'API}%
+\label{sec:progettazione_API}
+
+Il tema dell'incontro è stato la progettazione dell'API\@.
+Come deciso precedentemente abbiamo aderito alla specifica OpenAPI 3.0 e abbiamo elencato all'interno di un file YAML gli schemi JSON dei dati di cui faremo uso (e.g.user, userData, organization).
+Successivamente abbiamo descritto gli endpoint del nostro server che coinvolgeranno principalmente utenti e organizzazioni.
+Per ogni endpoint abbiamo indicato il tipo di operazione (GET, POST, PUT o DELETE), una descrizione contenente il tipo di servizio offerto da una determinata operazione e le tipologie di risposta che la nostra API dovrà restituire in base ai codici di stato definiti dal protocollo HTTP\@.
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+
+Non sono state prese decisioni significative.
+
+% sec:registro_delle_decisioni (end)
+\end{document}
