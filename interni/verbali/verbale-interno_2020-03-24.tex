@@ -6,7 +6,7 @@
 
 \title{Verbale interno --- 25/03/2020}
 
-\setResponsabile{Alessandro Rizzo}
+\setResponsabile{Luca Ercole}
 \setRedattori{Riccardo Agatea}
 \setVerificatori{
   Tobia Apolloni
@@ -14,7 +14,7 @@
 \setUso{Interno}
 \setDescrizione{Verbale dell'incontro di GruppOne del 11/03/2020}
 \setModifiche{%
-\cellcolor{white!80!lightgray!100} & Alessandro Rizzo & 2020--03--27 & approva documento \\%
+\cellcolor{white!80!lightgray!100} & Luca Ercole & 2020--03--28 & approva documento \\%
 \cellcolor{white!80!lightgray!100} & Verificatore & 2020--03--26 & verifica verbale \\%
 \multirow{-3}{*}{-} & Riccardo Agatea & 2020--03--25 & stendi verbale%
 }
@@ -64,20 +64,20 @@
 
 Ciascuno dei tre team in cui ci siamo suddivisi per parallelizzare il lavoro nelle tre componenti del prodotto ha aggiornato gli altri sui propri avanzamenti.
 Gli endpoint del server sono definiti, rimane da decidere quali implementare e in che modo (cioè se implementarli effettivamente, oppure se ricorrere a dei mock) per il POC\@.
-Per la webapp è stato definito lo stile utilizzando angular material e i servizi più rappresentativi sono quasi pronti.
-Per l'app mobile è pronta la base strutturale; lo sviluppo delle activity principali è in corso, e bisogna decidere quali componenti presentare per la Technology baseline.
+Per la web-app è stato definito lo stile utilizzando angular material e i servizi più rappresentativi sono quasi pronti.
+Per l'applicazione mobile è pronta la base strutturale; lo sviluppo delle activity principali è in corso, e bisogna decidere quali componenti presentare per la Technology baseline.
 Abbiamo discusso sull'autenticazione, valutando se fosse il caso di implementarne almeno una bozza oppure se rimandarla interamente al primo incremento.
-Abbiamo accennato ad alcuni framework da tenere in considerazione, fra cui \href{https://www.keycloak.org/}{Keycloak} e \href{https://spring.io/projects/spring-security}{Spring security}.
+Abbiamo accennato ad alcuni framework da tenere in considerazione, fra cui \href{https://www.keycloak.org/}{Keycloak} e \href{https://spring.io/projects/spring-security}{Spring Security}.
 Abbiamo deciso di continuare a studiare le tecnologie e di posporre la decisione.
 
 \section{Finalizzazione POC}%
 \label{sec:finalizzazione_poc}
 
-Visto lo stato di avanzamento, abbiamo è deciso di implementare (o completare):
+Visto lo stato di avanzamento, abbiamo deciso di implementare (o completare):
 \begin{itemize}
   \item Per quanto riguarda il server, gli endpoint relativi alla richiesta delle informazioni su un'organizzazione, l'aggiunta di un luogo ad un'organizzazione, la segnalazione di entrata e/o uscita di un utente da un luogo ed eventualmente la richiesta di login (in base ai risultati dell'autoapprendimento); l'implementazione sarà provvisoria, perché la progettazione del database è ancora in corso.
-  \item Per quanto riguarda la webapp, la visualizzazione delle informazioni relative ad un'organizzazione, l'aggiunta di un luogo ad un'organizzazione ed eventualmente il login; l'implementazione sarà possibilmente definitiva.
-  \item Per quanto riguarda l'app mobile, la visualizzazione dell'elenco di organizzazioni a cui un utente è collegato e la rilevazione dell'entrata e/o uscita da un luogo di interesse; anche in questo caso l'implementazione sarà possibilmente definitiva.
+  \item Per quanto riguarda la web-app, la visualizzazione delle informazioni relative ad un'organizzazione, l'aggiunta di un luogo ad un'organizzazione ed eventualmente il login; l'implementazione sarà possibilmente definitiva.
+  \item Per quanto riguarda l'applicazione mobile, la visualizzazione dell'elenco di organizzazioni a cui un utente è collegato e la rilevazione dell'entrata e/o uscita da un luogo di interesse; anche in questo caso l'implementazione sarà possibilmente definitiva.
 \end{itemize}
 
 \newpage

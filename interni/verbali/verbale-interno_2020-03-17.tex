@@ -1,0 +1,83 @@
+\documentclass{article}
+
+\input{../../commons/config}
+
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale interno --- 17/03/2020}
+
+\setResponsabile{Riccardo Agatea}
+\setRedattori{Luca Ercole}
+\setVerificatori{
+  Tobia Apolloni
+}
+\setUso{Interno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 11/03/2020}
+\setModifiche{%
+\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--03--28 & approva documento \\%
+\cellcolor{white!80!lightgray!100} & Verificatore & 2020--03--28 & verifica verbale \\%
+\multirow{-3}{*}{-} & Luca Ercole & 2020--03--27 & stendi verbale%
+}
+
+\disabilitaVersione{}
+\disabilitaElencoFigure{}
+\disabilitaElencoTabelle{}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Informazioni logistiche}%
+\label{sec:informazioni_logistiche}
+
+\begin{description}
+  \item [Luogo] videochiamata su Google Hangouts
+  \item [Data] 17/03/2020
+  \item [Ora] 15:00 \symbol{8594} 18:00
+\end{description}
+
+\subsection{Membri del gruppo presenti}%
+\label{sub:membri_del_gruppo_presenti}
+
+\begin{enumerate}
+  % \item Riccardo Agatea
+  % \item Tobia Apolloni
+  % \item Riccardo Cestaro
+  \item Alberto Cocco
+  \item Luca Ercole
+  \item Alberto Gobbo
+  \item Alessandro Rizzo
+  \item Fabio Scettro
+\end{enumerate}
+% sub:membri_del_gruppo_presenti (end)
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item Configurazione CI per le varie componenti
+  \item Progettazione API e suddivisione compiti
+\end{itemize}
+
+\section{Configurazione CI per le varie componenti}%
+\label{sec:configurazione_ci_per_le_varie_componenti}
+
+Questa parte dell'incontro è servita a spiegare ai membri del gruppo presenti come gestire e configurare le varie GitHub Actions che permettono di effettuare in maniera automatizzata l'analisi statica e dinamica sulle componenti del progetto, in modo da garantire una qualità minima della baseline indipendente dalla verifica manuale.
+
+% sec:configurazione_ci_per_le_varie_componenti (end)
+
+\section{Progettazione API e suddivisione compiti}%
+\label{sec:progettazione_api_e_suddivisione_compiti}
+
+Abbiamo lavorato collettivamente alla progettazione dell'API individuando i vari endpoint necessari ai client per svolgere le loro funzioni, lasciando ai singoli membri l'implementazione di quanto discusso.
+
+% sec:progettazione_api_e_suddivisione_compiti (end)
+
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+
+Non sono state prese decisioni.
+
+% sec:registro_delle_decisioni (end)
+\end{document}
