@@ -62,5 +62,19 @@
       },
       "problemMatcher": []
     },
+    {
+      "label": "fix current branch out of date with trunk",
+      "detail": "Runs git merge --squash --ff master",
+      "type": "shell",
+      "command": "git status -s && git merge --squash --ff master",
+      "presentation": {
+        "clear": true,
+        "echo": false,
+        "focus": true,
+        "panel": "dedicated",
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    },
   ]
 }
