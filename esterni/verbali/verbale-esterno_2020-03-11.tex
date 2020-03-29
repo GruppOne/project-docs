@@ -33,7 +33,7 @@
 \begin{description}
   \item [Luogo] Telegram
   \item [Data] 7/03/2020 \symbol{8594} 11/03/2020
-  \item [Ora] Tutto il giorno
+  \item [Ora] 11:00 \symbol{8594} 13:00
 \end{description}
 
 \subsection{Membri del gruppo presenti}%
@@ -68,7 +68,7 @@
 
 L'incontro è avvenuto tramite chat su un gruppo Telegram dedicato.
 
-Lo scopo principale era discutere della possibilità per il gruppo di utilizzare l'infrastruttura server di Imola Informatica.
+Lo scopo principale era discutere della possibilità per il gruppo di utilizzare l'infrastruttura server di \glossario{Imola Informatica}.
 
 \section{Ordine del giorno}%
 \label{sec:ordine_del_giorno}
@@ -80,20 +80,20 @@ Lo scopo principale era discutere della possibilità per il gruppo di utilizzare
 \section{Conversazione Telegram}%
 \label{sec:conversazione_telegram}
 
-Riportiamo per completezza la conversazione avvenuta su telegram:
+Riportiamo per completezza la conversazione avvenuta su Telegram:
 
 Andrea Sabbioni, tecnico di Imola Informatica:
 \begin{enumerate}
 
-\item Ciao ragazzi, Vi va di spiegarmi un attimo che risorse vi servono e cosa ci andate a fare sopra così cerco di darvi qualche consiglio. Tenete conto che le risorse che vi possiamo dare non hanno garanzie di SLA quindi cerchiamo di pianificare bene le cose
+\item Ciao ragazzi, vi va di spiegarmi un attimo che risorse vi servono e cosa ci andate a fare sopra così cerco di darvi qualche consiglio. Tenete conto che le risorse che vi possiamo dare non hanno garanzie di \glossario{SLA} quindi cerchiamo di pianificare bene le cose
 \end{enumerate}
 
 A cui il gruppo ha risposto:
 
 \begin{enumerate}
-  \item Ciao! siamo ancora agli inizi per cui non farti problemi a dirci che le nostre idee sono insensate.
+  \item Ciao! Siamo ancora agli inizi per cui non farti problemi a dirci che le nostre idee sono insensate.
 
-  Avevamo pensato di utilizzare le vostre risorse come dev environment remoto per il nostro server spring boot che espone un'API RESTful. Quindi ci basterebbe fare ssh sul vostro server e:
+  Avevamo pensato di utilizzare le vostre risorse come dev environment remoto per il nostro server \glossario{Spring Boot} che espone un'API \glossario{RESTful}. Quindi ci basterebbe fare ssh sul vostro server e:
 
   git clone —depth=1 repo-nostro-server
 
@@ -101,7 +101,7 @@ A cui il gruppo ha risposto:
 
   docker run something
 
-  e poi fare richieste HTTP dai nostri pc usando prima curl e più avanti la web app e app che svilupperemo, in modo da verificare se le cose funzionano come dovrebbero.
+  e poi fare richieste HTTP dai nostri pc usando prima \glossario{curl} e più avanti la web app e app che svilupperemo, in modo da verificare se le cose funzionano come dovrebbero.
   Una delle prime cose che dobbiamo fare (appena capiamo come farlo) è il meccanismo di autenticazione/autorizzazione dell'API (dato che abbiamo tipologie diverse di utenti che hanno accesso a funzionalità diverse).
 
   Abbiamo scoperto questo tool qui che dovrebbe semplificarci build e deploy dell'immagine: https://github.com/GoogleContainerTools/jib. Lo conoscevi? È qualcosa che viene utilizzato in pratica?  %chktex 44
@@ -114,17 +114,17 @@ Il consiglio del tecnico è stato:
 
 \begin{enumerate}
   \item Ciao scusate il ritardo
-  Come primo consiglio visto le precedenti esperienze vi consiglio di poter avere l intero ciclo dell' applicazione prima in locale
+  Come primo consiglio visto le precedenti esperienze vi consiglio di poter avere l'intero ciclo dell' applicazione prima in locale
   Ad esempio con un docker compose che simula sia i client che lato server
   \item Questo permette anche di avere un fall back in caso di problemi durante la demo
   \item Per il resto vi invito sulla mail che mi avete dato e vi credo gli account per creare delle vm su di un nostro cluster interno
-  \item Ma sul principio di creare l intera infrastruttura in locale mi sembra una cosa sulla quale dovreste spingere
-  \item Anche in un ottica Dev ops e vi facilità poi a approcciare Kubernetes
+  \item Ma sul principio di creare l'intera infrastruttura in locale mi sembra una cosa sulla quale dovreste spingere
+  \item Anche in un ottica \glossario{Dev ops} e vi facilità poi a approcciare \glossario{Kubernetes}
 \end{enumerate}
 
 Il suggerimento del tecnico dunque è stato quello di avere a disposizione l'intera applicazione in locale e di non appoggiarci unicamente a \glossario{Imola Informatica}.
 
-Per questo e per quanto riferitoci nel primo messaggio il gruppo ha deciso di iniziare a configurare una versione locale dell'applicazione con l'utilizzo di docker prima di accedere al server dell'azienda.
+Per questo e per quanto riferitoci nel primo messaggio il gruppo ha deciso di iniziare a configurare una versione locale dell'applicazione con l'utilizzo di \glossario{Docker} prima di accedere al server dell'azienda.
 
 % sec:conversazione_telegram (end)
 
