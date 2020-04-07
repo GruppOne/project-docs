@@ -2,40 +2,19 @@
 
 \begin{document}
 
-\subsubsection{AUC3: Gestione organizzazione}%
+
+\subsubsection{AUC3: Creazione organizzazione}%
 \label{subs:AUC3}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=100mm]{gestione-organizzazione.png}
-  \caption{AUC3: Gestione organizzazione}%
+  \includegraphics[width=100mm]{creazione-organizzazione.png}
+  \caption{AUC3: Creazione organizzazione}%
   \label{fig:AUC3}
 \end{figure}
 
 \begin{description}
   \item[Codice:] AUC3;
-  \item[Titolo:] Gestione organizzazione;
-  \item[Attori primari:] owner, gestore;
-  \item[Precondizione:] il sistema deve rendere disponibile la pagina di gestione dell'organizzazione;
-  \item[Postcondizione:] viene gestita un'organizzazione;
-  \item[Scenario principale:]
-        \begin{enumerate}
-          \item sorge la necessità di effettuare operazioni su un'organizzazione;
-        \end{enumerate}
-\end{description}
-
-\subsubsection{AUC3.1: Creazione organizzazione}%
-\label{subs:AUC3.1}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=100mm]{creazione-organizzazione.png}
-  \caption{AUC3.1: Creazione organizzazione}%
-  \label{fig:AUC3_1}
-\end{figure}
-
-\begin{description}
-  \item[Codice:] AUC3.1;
   \item[Titolo:] Creazione organizzazione;
   \item[Attori primari:] owner;
   \item[Attori secondari:] server LDAP\@;
@@ -47,10 +26,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC3.1.1: Inserisci nome organizzazione}%
-\label{subs:AUC3.1.1}
+\subsubsection{AUC3.1: Inserisci nome organizzazione}%
+\label{subs:AUC3.1}
 \begin{description}
-  \item[Codice:] AUC3.1.1;
+  \item[Codice:] AUC3.1;
   \item[Titolo:] Inserisci nome organizzazione;
   \item[Attori primari:]  owner;
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire il nome di una nuova organizzazione;
@@ -62,10 +41,10 @@
 
 \end{description}
 
-\subsubsection{AUC3.1.2: Inserisci descrizione organizzazione}%
-\label{subs:AUC3.1.2}
+\subsubsection{AUC3.2: Inserisci descrizione organizzazione}%
+\label{subs:AUC3.2}
 \begin{description}
-  \item[Codice:] AUC3.1.2;
+  \item[Codice:] AUC3.2;
   \item[Titolo:] Inserisci descrizione organizzazione;
   \item[Attori primari:] owner;
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire una descrizione di una nuova organizzazione;
@@ -76,10 +55,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC3.1.3: Configurazione IP server LDAP}%
-\label{subs:AUC3.1.3}
+\subsubsection{AUC3.3: Configurazione IP server LDAP}%
+\label{subs:AUC3.3}
 \begin{description}
-  \item[Codice:] AUC3.1.3;
+  \item[Codice:] AUC3.3;
   \item[Titolo:] Configurazione IP server LDAP\@;
   \item[Attori primari:] owner;
   \item[Attori secondari:] server LDAP\@;
@@ -91,10 +70,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC3.2: Eliminazione organizzazione}%
-\label{subs:AUC3.2}
+\subsubsection{AUC4: Eliminazione organizzazione}%
+\label{subs:AUC4}
 \begin{description}
-  \item[Codice:] AUC3.2;
+  \item[Codice:] AUC4;
   \item[Titolo:] Eliminazione organizzazione;
   \item[Attori primari:] gestore;
   \item[Precondizione:] deve essere stata selezionata l'organizzazione da eliminare, presente nella lista di \emph{Stalker};
@@ -108,14 +87,14 @@
 \begin{figure}[H]
   \centering
   \includegraphics[width=100mm]{eliminazione-organizzazione.png}
-  \caption{AUC3.2: Eliminazione organizzazione}%
-  \label{fig:AUC3.2}
+  \caption{AUC4: Eliminazione organizzazione}%
+  \label{fig:AUC4}
 \end{figure}
 
-\subsubsection{AUC3.2.1: Conferma eliminazione organizzazione}%
-\label{subs:AUC3.2.1}
+\subsubsection{AUC4.1: Conferma eliminazione organizzazione}%
+\label{subs:AUC4.1}
 \begin{description}
-  \item[Codice:] AUC3.2.1;
+  \item[Codice:] AUC4.1;
   \item[Titolo:] Conferma eliminazione organizzazione;
   \item[Attori primari:] gestore;
   \item[Precondizione:] deve essere stata selezionata l'organizzazione da eliminare;
@@ -126,18 +105,18 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC3.3: Modifica organizzazione}%
-\label{subs:AUC3.3}
+\subsubsection{AUC5: Modifica organizzazione}%
+\label{subs:AUC5}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=100mm]{modifica-organizzazione.png}
-  \caption{AUC3.3: Modifica organizzazione}%
-  \label{fig:AUC3_3}
+  \caption{AUC5: Modifica organizzazione}%
+  \label{fig:AUC5}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC3.3;
+  \item[Codice:] AUC5;
   \item[Titolo:] Modifica organizzazione;
   \item[Attori primari:] owner;
   \item[Attori secondari:] server LDAP\@;
@@ -149,10 +128,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC3.3.1: Modifica nome organizzazione}%
-\label{subs:AUC3.3.1}
+\subsubsection{AUC5.1: Modifica nome organizzazione}%
+\label{subs:AUC5.1}
 \begin{description}
-  \item[Codice:] AUC3.3.1;
+  \item[Codice:] AUC5.1;
   \item[Titolo:] Modifica nome organizzazione;
   \item[Attori primari:] owner;
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di modificare il nome di un'organizzazione;
@@ -163,10 +142,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{AUC3.3.2: Modifica descrizione organizzazione}%
-\label{subs:AUC3.3.2}
+\subsubsection{AUC5.2: Modifica descrizione organizzazione}%
+\label{subs:AUC5.2}
 \begin{description}
-  \item[Codice:] AUC3.3.2;
+  \item[Codice:] AUC5.2;
   \item[Titolo:] Modifica descrizione organizzazione;
   \item[Attori primari:] owner;
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di modificare la descrizione di un'organizzazione;
@@ -178,10 +157,10 @@
 \end{description}
 
 
-\subsubsection{AUC3.3.3: Modifica indirizzo IP server LDAP}%
-\label{subs:AUC3.3.3}
+\subsubsection{AUC5.3: Modifica indirizzo IP server LDAP}%
+\label{subs:AUC5.3}
 \begin{description}
-  \item[Codice:] AUC3.3.3;
+  \item[Codice:] AUC5.3;
   \item[Titolo:] Modifica indirizzo IP server LDAP\@;
   \item[Attori primari:] owner;
   \item[Attori secondari:] server LDAP\@;
