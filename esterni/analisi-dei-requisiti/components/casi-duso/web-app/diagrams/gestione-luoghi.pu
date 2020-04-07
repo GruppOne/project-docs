@@ -5,15 +5,15 @@ actor :gestore: as G
 
 rectangle {
   together {
-    usecase (AUC4.1) as "AUC4.1\nAggiungi luogo"
-    usecase (AUC4.2) as "AUC4.2\nEliminazione luogo"
-    usecase (AUC4.3) as "AUC4.3\nModifica luogo"
+    usecase (AUC6) as "AUC6\nAggiungi luogo"
+    usecase (AUC8) as "AUC8\nEliminazione luogo"
+    usecase (AUC7) as "AUC7\nModifica luogo"
   }
 }
 
-:G: -- AUC4.1
-:G: -- AUC4.2
-:G: -- AUC4.3
+:G: -- AUC6
+:G: -- AUC8
+:G: -- AUC7
 
 @enduml
 
@@ -24,13 +24,13 @@ actor :gestore: as G
 
 rectangle {
   together {
-    usecase (AUC4.1.1) as "AUC4.1.1\nInserisci coordinate geografiche"
-    usecase (AUC4.1.2) as "AUC4.1.2\nInserisci indirizzo luogo"
+    usecase (AUC6.1) as "AUC6.1\nInserisci coordinate geografiche"
+    usecase (AUC6.2) as "AUC6.2\nInserisci indirizzo luogo"
   }
 }
 
-:G: -- AUC4.1.1
-:G: -- AUC4.1.2
+:G: -- AUC6.1
+:G: -- AUC6.2
 
 @enduml
 
@@ -41,12 +41,12 @@ actor :gestore: as G
 
 rectangle {
   together {
-    usecase (AUC4.3.1) as "AUC4.3.1\nModifica coordinate geografiche"
-    usecase (AUC4.3.2) as "AUC4.3.2\nModifica indirizzo luogo"
+    usecase (AUC7.1) as "AUC7.1\nModifica coordinate geografiche"
+    usecase (AUC7.2) as "AUC7.2\nModifica indirizzo luogo"
   }
 }
 
-:G: -- AUC4.3.1
-:G: -- AUC4.3.2
+:G: -- AUC7.1
+:G: -- AUC7.2
 
 @enduml

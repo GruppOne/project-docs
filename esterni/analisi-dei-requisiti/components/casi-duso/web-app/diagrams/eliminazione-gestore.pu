@@ -6,10 +6,10 @@ actor :owner: as A2
 
 rectangle {
   together {
-    usecase (AUC11.1) as "AUC11.1\nInserimento email gestore"
+    usecase (AUC15.1) as "AUC15.1\nInserimento email gestore"
   }
 }
 
-:A2: -- AUC11.1
+:A2: -- AUC15.1
 
 @enduml

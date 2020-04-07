@@ -5,10 +5,10 @@ actor :utente autenticato: as A
 
 rectangle {
   together {
-    usecase (AUC7) as "AUC7.1\nConferma aumento privilegi ad owner"
+    usecase (AUC11) as "AUC11.1\nConferma aumento privilegi ad owner"
   }
 }
 
-:A: -- AUC7
+:A: -- AUC11
 
 @enduml

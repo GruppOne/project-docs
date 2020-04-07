@@ -6,10 +6,10 @@ actor :amministratore: as A
 
 rectangle {
   together {
-    usecase (AUC13.1) as "AUC13.1\nConferma eliminazione account"
+    usecase (AUC17.1) as "AUC17.1\nConferma eliminazione account"
   }
 }
 
-:A: -- AUC13.1
+:A: -- AUC17.1
 
 @enduml

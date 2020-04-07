@@ -5,10 +5,10 @@ actor :owner: as A
 
 rectangle {
   together {
-    usecase (AUC9.1) as "AUC9.1\nInserimento email visualizzatore"
+    usecase (AUC13.1) as "AUC13.1\nInserimento email visualizzatore"
   }
 }
 
-:A: -- AUC9.1
+:A: -- AUC13.1
 
 @enduml
