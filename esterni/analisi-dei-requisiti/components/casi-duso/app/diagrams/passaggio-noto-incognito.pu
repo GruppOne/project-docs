@@ -1,27 +1,3 @@
-@startuml passaggio-noto-incognito
-!include ../../../../../../commons/style/use-cases.pu
-
-actor :utente collegato: as A3.1
-
-rectangle {
-  together {
-    usecase (UUC3) as "UUC3\nGestione lista organizzazioni\n--\nExtension points:\nVisualizzazione errore in caso di\noperazione di cambio contesto\n con rete mancante"
-  }
-  together {
-    usecase (UUC5.1) as "UUC5.1\nFiltra organizzazioni\ncollegate"
-    usecase (UUC6.1) as "UUC6.1\nScelta noto o incognito"
-    usecase (UUC11) as "UUC11\nVisualizzazione errore\nrete mancante"
-  }
-}
-
-:A3.1: -- (UUC3)
-
-(UUC3) .up.> (UUC5.1) : <<include>>
-(UUC3) ..> (UUC6.1) : <<include>>
-(UUC3) <.down. (UUC11) : <<extends>>
-
-@enduml
-
 
 @startuml scelta-noto-o-incognito
 !include ../../../../../../commons/style/use-cases.pu
@@ -36,12 +12,12 @@ actor :utente incognito: as A3.2
 
 rectangle {
   together {
-    usecase (UUC6.1.1) as "UUC6.1.1\nPassaggio a incognito"
-    usecase (UUC6.1.2) as "UUC6.1.2\nPassaggio a noto"
+    usecase (UUC12.1) as "UUC12.1\nPassaggio a incognito"
+    usecase (UUC12.2) as "UUC12.2\nPassaggio a noto"
   }
 }
 
-:A3.1: -- (UUC6.1.1)
-:A3.2: -- (UUC6.1.2)
+:A3.1: -- (UUC12.1)
+:A3.2: -- (UUC12.2)
 
 @enduml
