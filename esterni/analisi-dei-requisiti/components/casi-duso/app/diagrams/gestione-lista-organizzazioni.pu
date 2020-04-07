@@ -53,3 +53,42 @@ rectangle {
 :A: -- (UUC6.1)
 
 @enduml
+@startuml visualizza-info-organizzazione-collegata
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :utente autenticato: as A
+
+rectangle {
+  together {
+    usecase (UUC5.1.1) as "UUC5.1.1\nVisualizza\nnome organizzazione collegata"
+    usecase (UUC5.1.2) as "UUC5.1.2\nVisualizza\ndescrizione organizzazione collegata"
+    usecase (UUC5.1.3) as "UUC5.1.3\nVisualizza\nstato organizzazione collegata"
+  }
+}
+
+:A: -- (UUC5.1.1)
+:A: -- (UUC5.1.2)
+:A: -- (UUC5.1.3)
+
+@enduml
+
+
+@startuml visualizza-info-organizzazione-non-collegata
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :utente autenticato: as A
+
+
+rectangle {
+  together {
+    usecase (UUC6.1.1) as "UUC6.1.1\nVisualizza\nnome organizzazione scollegata"
+    usecase (UUC6.1.2) as "UUC6.1.2\nVisualizza\ndescrizione organizzazione scollegata"
+    usecase (UUC6.1.3) as "UUC6.1.3\nVisualizza\nstato organizzazione scollegata"
+  }
+}
+
+:A: -- (UUC6.1.1)
+:A: -- (UUC6.1.2)
+:A: -- (UUC6.1.3)
+
+@enduml
