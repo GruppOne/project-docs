@@ -5,13 +5,13 @@ actor :utente autenticato: as A
 
 rectangle {
   together {
-    usecase (UUC10.1) as "UUC10.1\nConferma eliminazione account\n--\nExtension points:\nVisualizzazione errore in\ncaso di eliminazione account\nin mancanza di rete"
-    usecase (UUC11) as "UUC11\nVisualizzazione errore\nrete mancante"
+    usecase (UUC16.1) as "UUC16.1\nConferma eliminazione account\n--\nExtension points:\nVisualizzazione errore in\ncaso di eliminazione account\nin mancanza di rete"
+    usecase (UUC17) as "UUC17\nVisualizzazione errore\nrete mancante"
   }
 }
 
-:A: -- (UUC10.1)
+:A: -- (UUC16.1)
 
-(UUC11) .up.> (UUC10.1) : <<extends>>
+(UUC17) .up.> (UUC16.1) : <<extends>>
 
 @enduml

@@ -5,13 +5,13 @@ actor :utente autenticato: as A3
 
 rectangle {
   together {
-    usecase (UUC9) as "UUC9\nDisconnessione utente\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
-    usecase (UUC11) as "UUC11\nVisualizzazione errore\nrete mancante"
+    usecase (UUC15) as "UUC15\nDisconnessione utente\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
+    usecase (UUC17) as "UUC17\nVisualizzazione errore\nrete mancante"
   }
 }
 
-:A3: -- (UUC9)
+:A3: -- (UUC15)
 
-(UUC11) .up.> (UUC9) : <<extends>>
+(UUC17) .up.> (UUC15) : <<extends>>
 
 @enduml

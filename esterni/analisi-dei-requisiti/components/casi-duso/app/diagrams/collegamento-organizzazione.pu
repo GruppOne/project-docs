@@ -5,13 +5,35 @@ actor :utente autenticato: as A3
 
 rectangle {
   together {
-    usecase (UUC3) as "UUC3\nGestione lista organizzazioni"
-    usecase (UUC4.1) as "UUC4.1\nFiltra organizzazioni\nnon collegate"
+    usecase (UUC8) as "UUC8\nCollegamento organizzazione"
+    usecase (UUC9) as "UUC9\nCollegamento organizzazione pubblica"
+    usecase (UUC10) as "UUC10\nCollegamento organizzazione privata"
   }
 }
 
-:A3: -- (UUC3)
+:A3: -- (UUC8)
+(UUC8) <|-- (UUC9)
+(UUC8) <|-- (UUC10)
+@enduml
 
-(UUC4.1) <.up. (UUC3) : <<include>>
+
+@startuml autenticazione-ldap-organizzazione
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :utente autenticato: as A
+
+rectangle {
+  together {
+    usecase (UUC10.1) as "UUC10.1\nInserimento username\norganizzazione\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
+    usecase (UUC10.2) as "UUC10.2\nInserimento password\norganizzazione\n--\nExtension points:\nVisualizzazione errore\ncredenziali errate"
+    usecase (UUC10.3) as "UUC10.3\nVisualizzazione errore autenticazione LDAP"
+  }
+}
+
+:A: -- (UUC10.1)
+:A: -- (UUC10.2)
+
+(UUC10.1) <.left. (UUC10.3) : <<extends>>
+(UUC10.3) .left.> (UUC10.2) : <<extends>>
 
 @enduml
