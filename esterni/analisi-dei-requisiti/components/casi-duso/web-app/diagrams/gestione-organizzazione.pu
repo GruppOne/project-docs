@@ -44,7 +44,7 @@ AUC3.3 -- :S:
 @startuml eliminazione-organizzazione
 !include ../../../../../../commons/style/use-cases.pu
 
-actor :gestore: as G
+actor :owner: as 0
 
 rectangle {
     together {
@@ -52,13 +52,12 @@ rectangle {
       }
   }
 
-:G: -- AUC4.1
+:0: -- AUC4.1
 @enduml
 
 @startuml modifica-organizzazione
 !include ../../../../../../commons/style/use-cases.pu
 
-actor :gestore: as G
 actor :owner: as O
 actor :server LDAP: as S
 
