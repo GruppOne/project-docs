@@ -51,7 +51,7 @@ Ogni requisito è caratterizzato da un codice alfanumerico così formato:
 \end{center}
 in cui ogni elemento ha un diverso significato:
 \begin{description}
-  \item [numero] indica quale numero di caso d’uso si sta esaminando. È un numero di tre cifre progressivo a partire da 1, con eventuali 0 di riempimento a partire dalla cifra più significativa.
+  \item [numero] indica quale numero di caso d'uso si sta esaminando. È un numero di tre cifre progressivo a partire da 1, con eventuali 0 di riempimento a partire dalla cifra più significativa.
   \item [tipo] individua la tipologia di requisito. Esso può essere:
         \begin{description}
           \item [F (funzionale)] indica servizi che il sistema dovrebbe fornire.
@@ -493,12 +493,12 @@ Per contro, i commenti vanno omessi dove il codice è auto-esplicativo.
 
 \subparagraph{Complessità ciclomatica}%
 \label{subp:complessita_ciclomatica}
-Va evitato il più possibile l’annidamento di più strutture di controllo.
+Va evitato il più possibile l'annidamento di più strutture di controllo.
 Una buona prassi da rispettare è non andare oltre i tre livelli di annidamento, in quanto semplifica la leggibilità e il tempo di debugging.
 
 \subparagraph{Ereditarietà}%
 \label{subp:ereditarieta}
-Una cattiva prassi è utilizzare l’ereditarietà tra classi concrete, ovvero che hanno stato, a causa del riuso del codice e dei problemi ``a cascata'' che si possono generare da una classe base alle sue classi derivate.
+Una cattiva prassi è utilizzare l'ereditarietà tra classi concrete, ovvero che hanno stato, a causa del riuso del codice e dei problemi ``a cascata'' che si possono generare da una classe base alle sue classi derivate.
 L'ottima prassi da applicare è utilizzare l'ereditarietà di interfacce, in modo da riutilizzare il comportamento dei metodi astratti definiti nelle interfacce.
 Ergo, è da preferire la composizione sopra l'ereditarietà, adottando il principio di “Composition over inheritance”.
 
