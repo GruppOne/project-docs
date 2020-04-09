@@ -1,5 +1,6 @@
 \documentclass[../piano-di-qualifica.tex]{subfiles}
 
+
 \begin{document}
   \subsection{Analisi statica dei documenti}
   \label{sub:analisi_statica_doc}
@@ -10,28 +11,37 @@
   \label{sub:verifica_leggibilita}
 	Allo scopo di assicurarci una leggibilità accettabile dei documenti abbiamo monitorato l'indice \glossario{Gulpease} di ogni documento. Qui sotto riportiamo i risultati della versione consegnata in RR e successive relativamente agli obiettivi di qualità che erano stati definiti.
   \rowcolors{2}{lightgray}{white!80!lightgray!100}
-  \begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering\arraybackslash}m{1cm} >{\centering\arraybackslash}m{1cm} >{\centering\arraybackslash}m{4cm}}
+  \begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering\arraybackslash}m{2cm} >{\centering\arraybackslash}m{2cm}>{\centering\arraybackslash}m{2cm} >{\centering\arraybackslash}m{4cm}}
     \rowcolor{darkgray!90!}
-    \color{white}{\textbf{Documento}} & \color{white}{\textbf{Indice Gulpease 0.0.8}} & \color{white}{\textbf{Indice Gulpease 0.1.?}} &\color{white}{\textbf{Esito dell'ultima verifica}} \\
-    Piano di Progetto & 96 & &Positivo\\
-    Norme di Progetto & 68 & &Positivo\\
-    Piano di Qualifica & 81 & &Positivo\\
-    Studio di Fattibilità & 65 &&Positivo\\
-    Analisi dei requisiti & 100 & & Positivo\\
-    Glossario & 74 & & Sufficiente\\
-    Verbale esterno 2019-12-16 & 71 & & Sufficiente \\
-    Verbale esterno 2020-01-09 & 67 & & Sufficiente \\
-    Verbale esterno 2020-02-25 & - & & Sufficiente \\
-    Verbale esterno 2020-03-02 & - & &Positivo\\
-    Verbale esterno 2020-01-13 & 62 & &Positivo\\
-    Verbale esterno 2020-02-17 & - & &Positivo\\
-    Verbale esterno 2020-01-13 & - & &Positivo\\
-    Verbale interno 2020-11-22 & 81 & &Positivo\\
-    Verbale interno 2020-11-28 & 75 & &Positivo\\
-    Verbale interno 2020-12-20 & 69 & &Positivo\\
-  	Verbale interno 2020-01-03 & 79 & &Positivo\\
-  	Verbale interno 2020-02-25 & - & &Positivo\\
+    \color{white}{\textbf{Documento}} & \color{white}{\textbf{RR}} & \color{white}{\textbf{RP}} &\color{white}{\textbf{Esito dell'ultima verifica}} \\
+    Piano di Progetto & 96 & 95&Sufficiente\\
+    Norme di Progetto & 68 & 74&Sufficiente\\
+    Piano di Qualifica & 81 & 83&Sufficiente\\
+    Studio di Fattibilità & 65 & -&Sufficiente\\
+    Analisi dei requisiti & 100 & 100&Sufficiente\\
+    Glossario & 74 & 83& Sufficiente\\
+    Verbale esterno (media) & 77 & 74&Sufficiente \\
+    Verbale interno (media) & 80 & 77&Sufficiente\\
 \end{longtable}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=160mm]{gulpease-RR.png}%
+  \caption{Indice di Gulpease per documento in RR}%
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=160mm]{gulpease-RP.png}%
+  \caption{Indice di Gulpease per documento in RP}%
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=160mm]{gulpease-conf.png}%
+  \caption{Indice di Gulpease a confronto}%
+\end{figure}
+
 	% sub:verifica_leggibilita (end)
 \end{document}
 
