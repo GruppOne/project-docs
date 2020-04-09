@@ -95,6 +95,22 @@
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titleformat{\subparagraph}[hang]{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
 
+% % definizione nuovo livello di indentazione
+% \titleclass{\subsubparagraph}{straight}[\subparagraph]
+% \newcounter{subsubparagraph}
+% % \renewcommand{\thesubsubparagraph}{subsubparagraph}
+
+% % setup forma \subsubparagraph
+% \titleformat{\subsubparagraph}[hang]{\normalfont\normalsize\bfseries}{\thesubsubparagraph}{1em}{}
+% \titlespacing*{\subsubparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+
+% % setup formato subsubparagraph nella table of contents
+% % FIXME impostare correttamente subsubparagraph nell'indice usando titletoc
+
+% % setup profondità indice di default
+% \setcounter{secnumdepth}{6}
+% \setcounter{tocdepth}{6}
+
 % setup profondità indice di default
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
