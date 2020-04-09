@@ -44,7 +44,7 @@
     },
     "D": {
         "Dato": "valore privo di significato, che lo assume se associato in determinati contesti significativi.",
-        "Design pattern": "Soluzione progettuale generale a un problema ricorrente. E' la descrizione di un modello da applicare per risolvere un problema, il quale può presentarsi in diverse situazioni durante la progettazione e lo sviluppo del software. Ogni design pattern ha il suo campo applicativo in base alle precondizioni del problema, coi suoi pregi e difetti.",
+        "Design pattern": "Soluzione progettuale generale a un problema ricorrente. È la descrizione di un modello da applicare per risolvere un problema, il quale può presentarsi in diverse situazioni durante la progettazione e lo sviluppo del software. Ogni design pattern ha il suo campo applicativo in base alle precondizioni del problema, coi suoi pregi e difetti.",
         "Documento": "entità fisica o digitale atta a registrare informazioni significative.",
         "dati": "toDelete",
         "documento": "toDelete"
