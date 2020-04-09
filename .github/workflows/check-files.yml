@@ -6,8 +6,8 @@ on:
       - master
 
 jobs:
-  check-bom:
-    name: No BOMs
+  check-files:
+    name: No BOMs or CRLFs
     runs-on: ubuntu-latest
 
     steps:
@@ -16,12 +16,6 @@ jobs:
       - name: Check for BOMs
         uses: arma-actions/bom-check@v1.0
 
-  check-crlf:
-    name: No CRLF endings
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
       - name: Check for CRLF endings
+        if: always()
         uses: erclu/check-crlf@v1

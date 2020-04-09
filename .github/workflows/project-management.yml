@@ -1,0 +1,25 @@
+name: Generic project management jobs
+
+on:
+  issues:
+    types:
+      - opened
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  assign_one_project:
+    name: Assign to main project board
+    runs-on: ubuntu-latest
+
+    env:
+      MY_GITHUB_TOKEN: ${{ secrets.ERCLU_ORGANIZATION_TOKEN }}
+
+    steps:
+      - name: Assign new issues and new PRs to the main organization project board
+        uses: srggrs/assign-one-project-github-action@1.2.0
+        if: github.event.action == 'opened'
+        with:
+          project: "https://github.com/orgs/GruppOne/projects/9"
+          column_name: "To do"
