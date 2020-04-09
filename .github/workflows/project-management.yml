@@ -8,13 +8,54 @@ on:
     types:
       - opened
 
+  push:
+    branches-ignore:
+      - master
+
 jobs:
+  # FIXME nessuno di questi due job funziona
+  # create-draft-pr:
+  #   runs-on: ubuntu-latest
+
+  #   if: github.event_name == 'push'
+
+  #   steps:
+  #     - uses: actions/checkout@v1
+
+  #     - name: pull-request
+  #       uses: repo-sync/pull-request@v2
+  #       with:
+  #         github_token: ${{ secrets.ERCLU_ORGANIZATION_TOKEN }}
+  #         source_branch: ""
+  #         destination_branch: "master"
+  #         pr_title: "Pulling ${{ github.ref }} into master"
+  #         pr_body: This PR was createad automatically. Modify appropriately its title and body.
+  #         pr_draft: true
+
+  # create-draft-pr-too:
+  #   name: Create draft PR on new branch push
+  #   runs-on: ubuntu-latest
+
+  #   if: github.event_name == 'push'
+
+  #   steps:
+  #     - name: pull-request-action
+  #       uses: vsoch/pull-request-action@1.0.5
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.ERCLU_ORGANIZATION_TOKEN }}
+  #         PULL_REQUEST_BRANCH: miglioramenti-ci
+  #         PULL_REQUEST_TITLE: Pulling ${{ github.ref }} into master
+  #         PULL_REQUEST_BODY: This PR was createad automatically. Modify appropriately its title and body.
+  #         PULL_REQUEST_DRAFT: true
+
   assign_one_project:
     name: Assign to main project board
     runs-on: ubuntu-latest
 
     env:
       MY_GITHUB_TOKEN: ${{ secrets.ERCLU_ORGANIZATION_TOKEN }}
+
+    if: github.event_name != 'push'
 
     steps:
       - name: Assign new issues and new PRs to the main organization project board
