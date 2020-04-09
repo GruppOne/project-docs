@@ -1,6 +1,5 @@
 \documentclass[../../norme-di-progetto.tex]{subfiles}
 
-% FIXME struttura non conforme
 \begin{document}
 
 \subsubsection{Finalità}%
@@ -27,7 +26,7 @@ Tale processo distingue quattro differenti attività:
 
 \paragraph{Implementazione}%
 \label{subs:implementazione}
-L'attività di implementazione descrive il ciclo di vita dei documenti e illustra le proprietà di base comuni a tutti i documenti situate in file a sé stanti.
+L'attività di implementazione presenta i prodotti del processo di documentazione, descrive il ciclo di vita dei documenti e ne illustra le proprietà di base comuni situate in file a sé stanti.
 
 \subparagraph{Configurazione}%
 \label{par:configurazione}
@@ -47,16 +46,84 @@ Il ciclo di vita rappresenta gli stadi in cui il documento si può trovare nel c
 
 \begin{description}
   \item [Creazione del template del documento] un membro del gruppo crea il template del documento il quale conterrà solamente una pagina di frontespizio. Inizialmente sono configurate una serie di impostazioni di base per la formattazione delle pagine grazie all'utilizzo di alcuni package di \LaTeX.
-  \item [Scrittura del documento] l'incaricato scrive il documento incrementalmente e lo termina entro la scadenza della \glossario{milestone} fissata.
+  \item [Scrittura del documento] l'incaricato scrive il docu\imento incrementalmente e lo termina entro la scadenza della \glossario{milestone} fissata.
   \item [Verifica del documento] i \glossario{verificatori} effettuano una revisione del documento segnalando eventuali errori o discordanze che verranno segnalate all'autore del documento che sarà incaricato di correggerli.
   \item [Approvazione del documento] il \glossario{responsabile} di progetto approva il documento.
   \item [Archiviazione] l'amministratore archivia il documento in un repository pubblico su \glossario{GitHub}.
 \end{description}
 
-\paragraph{Progettazione e sviluppo}%
+\paragraph{Documenti ufficiali}%
+\label{par:documenti_ufficiali}
+
+In questa sezione verranno indicati tutti i documenti che GruppOne si impegna a consegnare completi entro la revisione di accettazione. Per ogni documento saranno indicati nome del documento, scopo del documento e destinatari.
+I documenti ufficiali e prodotti finali del processo di documentazione sono i seguenti:
+
+\begin{itemize}
+  \item Analisi dei requisiti
+
+        \textit{Scopo}: descrivere i requisiti e comprendere le funzionalità che il sistema software dovrà offrire.
+
+        \textit{Destinatari}: tutti i componenti del team e committente.
+
+
+  \item Studio di fattibilità
+
+        \textit{Scopo}: valutare costi, pregi, difetti dei capitolati proposti.
+
+        \textit{Destinatari}: tutti i componenti del team e committente.
+
+
+  \item Piano di Qualifica
+
+        \textit{Scopo}: specificare e quantificare la qualità delle attività svolte dal fornitore.
+
+        \textit{Destinatari}: tutti i componenti del team e committente.
+
+
+  \item Piano di Progetto
+
+        \textit{Scopo}: illustrare come ripartire le risorse umane e temporali nelle attività di progetto.
+
+        \textit{Destinatari}: tutti i componenti del team e committente.
+
+
+  \item Norme di progetto
+
+        \textit{Scopo}: presentare il Way of Working del fornitore.
+
+        \textit{Destinatari}: tutti i componenti del team e committente.
+
+  \item Glossario
+
+        \textit{Scopo}: raccogliere i vocaboli di significato ambiguo.
+
+        \textit{Destinatari}: committente e proponente.
+
+
+  \item Verbali
+
+        \textit{Scopo}: Registrare ciò di cui si discute durante gli incontri del team.
+
+        \textit{Destinatari}: tutti i componenti del team e committente.
+
+  \item Manuale utente
+
+        \textit{Scopo}: fornire istruzioni per l'uso del prodotto agli utenti.
+
+        \textit{Destinatari}: committente e proponente.
+
+  \item Manuale sviluppatore
+
+        \textit{Scopo}: fornire istruzioni per la configurazione e l'installazione del prodotto.
+
+        \textit{Destinatari}: committente, proponente e eventuali manutentori del prodotto.
+
+\end{itemize}
+
+\subsubsection{Progettazione e sviluppo}%
 \label{subs:progettazione_e_sviluppo}
 
-L'attività di progettazione e sviluppo descrive la struttura di ogni documento ed elenca le procedure che ogni componente del team si deve impegnare a seguire nella scrittura dei documenti.
+L'attività di progettazione e sviluppo descrive il template a cui ogni documento deve aderire.
 
 \subparagraph{Frontespizio}%
 \label{par:frontespizio}
@@ -121,7 +188,13 @@ Le pagine di contenuto sono suddivise in tre parti, dall'alto verso il basso:
   \item [Footer] contiene l'indicazione della pagina attuale rispetto il totale (e.g 1 di 6).
 \end{description}
 
-\subparagraph{Norme per la redazione dei documenti}%
+
+\subsubsection{Produzione}%
+\label{subs:produzione}
+
+L'attività di produzione illustra le norme che i componenti del team si devono impegnare a rispettare nella realizzazione di documenti ben formati e come i documenti sono archiviati nel repository.
+
+\paragraph{Norme per la redazione dei documenti}%
 \label{par:norme_per_la_redazione_dei_documenti}
 
 \subsubparagraph{Stile del testo}%
@@ -240,12 +313,7 @@ L'uso di tabelle è consigliato solo quando strettamente necessario. La rapprese
   Ogni componente del gruppo ha un estensione per il proprio code editor (per vscode consigliamo l'estensione \href{https://marketplace.visualstudio.com/items?itemName=ban.spellright}{Spell Right}, che si basa sul dizionario di sistema).
 \end{description}
 
-\paragraph{Produzione}%
-\label{subs:produzione}
-
-L'attività di produzione mostra come i documenti sono distribuiti all'esterno e come il team ha deciso di archiviarli.
-
-\subparagraph{Suddivisione dei documenti}%
+\paragraph{Suddivisione dei documenti}%
 \label{par:suddivisione_dei_documenti}
 I documenti utilizzano la struttura a \glossario{subfiles} offerta da \LaTeX.
 La struttura di base del documento è definita nel file che porta il nome del documento.
@@ -288,7 +356,9 @@ I documenti esterni sono destinati al committente. Appartengono a tale categoria
 \begin{itemize}
   \item Analisi dei requisiti
   \item Piano di progetto
-  \item Piano di qualifica.
+  \item Piano di qualifica
+  \item Manuale Utente
+  \item Manuale Sviluppatore.
 \end{itemize}
 
 \subsubparagraph{Verbali}%
