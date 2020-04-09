@@ -5,12 +5,12 @@
 \subsubsection{Finalità}%
 \label{subs:risoluzione_dei_problemi/finalita}
 
-GruppOne istanzia il processo di risoluzione dei problemi per affrontare in maniera strutturata ed efficiente i problemi riscontrati.
+GruppOne istanzia il processo di risoluzione dei problemi per affrontare in maniera disciplinata ed efficiente i problemi riscontrati.
 
 \subsubsection{Descrizione}%
 \label{subs:risoluzione_dei_problemi/descrizione}
 
-Il processo fornisce procedure e per analizzare e risolvere i problemi riscontrati e le non-conformità indipendentemente dall'origine.
+Il processo fornisce procedure  per analizzare e risolvere i problemi riscontrati e le non-conformità indipendentemente dall'origine.
 Consiste nelle seguenti attività:
 
 \begin{itemize}
@@ -28,6 +28,8 @@ Il processo di risoluzione dei problemi istanziato da GruppOne rispetta i seguen
 
 \begin{enumerate}
   \item Ciascuna istanza del processo è isolata, in modo da assicurare che i problemi identificati siano riportati, risolti e che ne sia tracciato lo stato.
+  \item Ogni componente del team deve essere prontamente consapevole dell'insorgere di un nuovo problema.
+  \item Le cause di sviluppo del problema devono essere attentamente analizzate e, se possibile, urgentemente eliminate.
   \item È presente uno schema di categorizzazione e prioritizzazione dei problemi, in modo da facilitare l'analisi delle tendenze.
   \item Si effettua una verifica dell'avvenuta risoluzione di ogni problema, della corretta implementazione delle modifiche e dell'assenza di ulteriori problemi introdotti dalla risoluzione.
 \end{enumerate}
@@ -65,8 +67,27 @@ I ticket vengono chiusi solo dopo la verifica e approvazione della modifica, qua
 \subsubsection{Strumenti di supporto}%
 \label{subs:risoluzione_dei_problemi/strumenti_di_supporto}
 
+\paragraph{Project Board di progetto}%
+\label{par:risoluzione_dei_problemi/project_board_di_progetto}
+
 Il tracciamento dei problemi riscontrati avviene direttamente nella piattaforma GitHub.
-Lo schema delle categorie e delle priorità individuate da GruppOne è accessibile dalla lista delle issue. Per ogni label è presente una descrizione del suo intento.
+Nella sezione \textit{projects} è presente una \textit{Projects Board} che rappresenta in maniera chiara e schematica lo stato attuale del progetto.
+In qualsiasi momento, ogni \textit{issue} può trovarsi in uno di cinque differenti stati:
+\begin{description}
+  \item [To do]: indica che la \textit{issue} è stata aperta e assegnata ad alcuni membri del team, ma non è stata presa in esame da nessuno.
+  \item [In progress]: indica che la \textit{issue} è assegnata ad alcuni membri del team ed è in uno stato di risoluzione.
+  \item [Ready for review]: indica che i verificatori assegnati all'\textit{issue} che si trova in tale stato devono svolgere la verifica dei cambiamenti apportati.
+  \item [Reviewer approved]: indica che i verificatori hanno confermato i cambiamenti effettuati.
+  \item [Done]: indica che il problema è stato risolto e che la issue è stata chiusa. I cambiamenti possono essere integrati nella baseline.
+ \end{description}
+
+\paragraph{Etichette delle issue}%
+\label{par:etichette_delle_issue}
+
+Per avere una corretta classificazione delle \textit{issue} l'\textit{amministratore} di progetto ha creato delle etichette assegnabili.
+Aprendo il pannello \textit{label} dall'interfaccia di creazione di un issue è possibile scegliere le etichette che si ritengono più opportune. È possibile eseguire il medesimo procedimento anche per le \textit{Pull Request} sebbene non sia strettamente necessario.
+Le etichette hanno lo scopo di esplicitare il contesto del problema, il tipo di issue aperta e la priorità da assegnare.
+
 
 \subsubsection{Metriche}%
 \label{subs:risoluzione_dei_problemi/metriche}
