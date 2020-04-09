@@ -13,7 +13,7 @@
 \end{figure}
 
 \begin{description}
-  \item[Caso d’uso:] UUC2;
+  \item[Caso d'uso:] UUC2;
   \item[Titolo:] Autenticazione;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] il sistema deve rendere disponibile la schermata per l'autenticazione;
@@ -33,7 +33,7 @@
 \subsubsection{UUC2.1: Inserimento email}%
 \label{subs:UUC2.1}
 \begin{description}
-  \item[Caso d’uso:] UUC2.1;
+  \item[Caso d'uso:] UUC2.1;
   \item[Titolo:] Inserimento email;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire la email per l'autenticazione;
@@ -53,7 +53,7 @@
 \subsubsection{UUC2.2: Inserimento password}%
 \label{subs:UUC2.2}
 \begin{description}
-  \item[Caso d’uso:] UUC2.2;
+  \item[Caso d'uso:] UUC2.2;
   \item[Titolo:] Inserimento password;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire la password per l'autenticazione;
@@ -71,7 +71,7 @@
 \subsubsection{UUC2.3: Informazioni autenticazione non valide}%
 \label{subs:UUC2.3}
 \begin{description}
-  \item[Caso d’uso:] UUC2.3;
+  \item[Caso d'uso:] UUC2.3;
   \item[Titolo:] Informazioni autenticazione non valide;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] i dati forniti dall'utente non corrispondono a credenziali valide;
@@ -94,21 +94,21 @@
 \end{figure}
 
 \begin{description}
-  \item[Caso d’uso:] UUC3;
+  \item[Caso d'uso:] UUC3;
   \item[Titolo:] Recupero password;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] il sistema deve rendere disponibile la schermata di recupero credenziali;
   \item[Postcondizione:] l'utente ha recuperato le credenziali e può nuovamente autenticarsi;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item tramite questa procedura, l’utente ha la possibilità di reimpostare la password.
+          \item tramite questa procedura, l'utente ha la possibilità di reimpostare la password.
         \end{enumerate}
 \end{description}
 
 \subsubsection{UUC3.1: Inserimento email di registrazione}%
 \label{subs:UUC3.1}
 \begin{description}
-  \item[Caso d’uso:] UUC3.1;
+  \item[Caso d'uso:] UUC3.1;
   \item[Titolo:] Inserimento email di registrazione;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire l'email di registrazione;
@@ -134,7 +134,7 @@
 \end{figure}
 
 \begin{description}
-  \item[Caso d’uso:] UUC3.2;
+  \item[Caso d'uso:] UUC3.2;
   \item[Titolo:] Reimpostazione password;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] l'utente ha ricevuto il link presente nella email personale per reimpostare la password;
@@ -152,10 +152,10 @@
 \subsubsection{UUC3.2.1: Inserimento nuova password}%
 \label{subs:UUC3.2.1}
 \begin{description}
-  \item[Caso d’uso:] UUC3.2.1;
+  \item[Caso d'uso:] UUC3.2.1;
   \item[Titolo:] Inserimento nuova password;
   \item[Attori primari:] utente non autenticato;
-  \item[Precondizione:] la password è resettata e l'utente inserisce la nuova password sull'apposito campo;
+  \item[Precondizione:] la password è resettata e l'utente inserisce la nuova password nell'apposito campo;
   \item[Postcondizione:] l'utente ha inserito correttamente la nuova password;
   \item[Scenario principale:]
         \begin{enumerate}
@@ -170,7 +170,7 @@
 \subsubsection{UUC3.2.2: Inserimento conferma password}%
 \label{subs:UUC3.2.2}
 \begin{description}
-  \item[Caso d’uso:] UUC3.2.2;
+  \item[Caso d'uso:] UUC3.2.2;
   \item[Titolo:] Inserimento conferma password;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire la password nuovamente per una conferma;
@@ -188,10 +188,10 @@
 \subsubsection{UUC3.2.3: Password recupero credenziali non valida}%
 \label{subs:UUC3.2.3}
 \begin{description}
-  \item[Caso d’uso:] UUC3.2.3;
+  \item[Caso d'uso:] UUC3.2.3;
   \item[Titolo:] Password recupero credenziali non valida;
   \item[Attori primari:] utente non autenticato;
-  \item[Precondizione:] l'utente non rispetta i vincoli imposti per l'impostazione della nuova password;
+  \item[Precondizione:] la password inserita non rispetta i vincoli imposti per l'impostazione della nuova password;
   \item[Postcondizione:] l'applicazione mobile comunica all'utente l'errore;
   \item[Scenario Principale:]
         \begin{enumerate}
@@ -202,7 +202,7 @@
 \subsubsection{UUC3.2.4: Conferma password recupero credenziali non valida}%
 \label{subs:UUC3.2.4}
 \begin{description}
-  \item[Caso d’uso:] UUC3.2.4;
+  \item[Caso d'uso:] UUC3.2.4;
   \item[Titolo:] Conferma password recupero credenziali non valida;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] l'utente non inserisce correttamente la stessa password inserita nel campo precedente;
@@ -217,7 +217,7 @@
 \label{subs:UUC3.3}
 
 \begin{description}
-  \item[Caso d’uso:] UUC3.3;
+  \item[Caso d'uso:] UUC3.3;
   \item[Titolo:] Mail recupero credenziali non valida;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] l'utente non inserisce la mail in modo corretto;

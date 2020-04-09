@@ -81,9 +81,9 @@ actor :utente autenticato: as A
 
 rectangle {
   together {
-    usecase (UUC6.1.1) as "UUC6.1.1\nVisualizza\nnome organizzazione scollegata"
-    usecase (UUC6.1.2) as "UUC6.1.2\nVisualizza\ndescrizione organizzazione scollegata"
-    usecase (UUC6.1.3) as "UUC6.1.3\nVisualizza\nstato organizzazione scollegata"
+    usecase (UUC6.1.1) as "UUC6.1.1\nVisualizza\nnome organizzazione non collegata"
+    usecase (UUC6.1.2) as "UUC6.1.2\nVisualizza\ndescrizione organizzazione non collegata"
+    usecase (UUC6.1.3) as "UUC6.1.3\nVisualizza\nstato organizzazione non collegata"
   }
 }
 

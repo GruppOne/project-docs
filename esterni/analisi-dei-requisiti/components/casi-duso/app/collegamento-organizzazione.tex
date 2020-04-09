@@ -15,14 +15,14 @@
 
 
 \begin{description}
-  \item[Caso d’uso:] UUC8;
+  \item[Caso d'uso:] UUC8;
   \item[Titolo:] Collegamento organizzazione;
   \item[Attori primari:] utente autenticato;
   \item[Precondizione:] l'utente si trova sulla lista delle organizzazioni;
-  \item[Postcondizione:] l'utente si collega a un'organizzazione;
+  \item[Postcondizione:] l'utente si collega ad un'organizzazione;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'utente sceglie l'organizzazione alla quale collegarsi.
+          \item l'utente sceglie l'organizzazione a cui collegarsi.
         \end{enumerate}
 \end{description}
 
@@ -30,14 +30,14 @@
 \label{subs:UUC9}
 
 \begin{description}
-  \item[Caso d’uso:] UUC9;
+  \item[Caso d'uso:] UUC9;
   \item[Titolo:] Collegamento organizzazione pubblica;
   \item[Attori primari:] utente autenticato;
   \item[Precondizione:] l'utente si trova sulla lista delle organizzazioni;
-  \item[Postcondizione:] l'utente si collega a un'organizzazione pubblica;
+  \item[Postcondizione:] l'utente si collega ad un'organizzazione pubblica;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'utente sceglie l'organizzazione pubblica alla quale collegarsi.
+          \item l'utente sceglie l'organizzazione pubblica a cui collegarsi.
         \end{enumerate}
 \end{description}
 
@@ -52,7 +52,7 @@
 \end{figure}
 
 \begin{description}
-  \item[Caso d’uso:] UUC10;
+  \item[Caso d'uso:] UUC10;
   \item[Titolo:] Collegamento organizzazione privata;
   \item[Attori primari:] utente autenticato;
   \item[Attori secondari:] server LDAP\@;
@@ -60,21 +60,21 @@
   \item[Postcondizione:] l'utente si collega a un'organizzazione privata;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'utente sceglie l'organizzazione privata alla quale collegarsi.
+          \item l'utente sceglie l'organizzazione privata a cui collegarsi.
         \end{enumerate}
 \end{description}
 
 \subsubsection{UUC10.1: Inserimento username organizzazione}%
 \label{subs:UUC10.1}
 \begin{description}
-  \item[Caso d’uso:] UUC10.1;
+  \item[Caso d'uso:] UUC10.1;
   \item[Titolo:] Inserimento username organizzazione;
   \item[Attori primari:] utente autenticato;
   \item[Precondizione:] l'utente ha scelto un'organizzazione privata e non ha ancora inserito lo username dell'organizzazione;
   \item[Postcondizione:] l'utente ha inserito lo username dell'organizzazione privata;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'utente inserisce lo username relativo all'organizzazione privata alla quale vuole collegarsi;
+          \item l'utente inserisce lo username relativo all'organizzazione privata a cui vuole collegarsi;
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
@@ -85,14 +85,14 @@
 \subsubsection{UUC10.2: Inserimento password organizzazione}%
 \label{subs:UUC10.2}
 \begin{description}
-  \item[Caso d’uso:] UUC10.2;
+  \item[Caso d'uso:] UUC10.2;
   \item[Titolo:] Inserimento password organizzazione;
   \item[Attori primari:] utente autenticato;
   \item[Precondizione:] l'utente ha scelto un'organizzazione privata e non ha ancora inserito la password dell'organizzazione;
   \item[Postcondizione:] l'utente ha inserito la password dell'organizzazione privata;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'utente inserisce la password relativa all'organizzazione privata alla quale vuole collegarsi;
+          \item l'utente inserisce la password relativa all'organizzazione privata a cui vuole collegarsi;
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
@@ -103,7 +103,7 @@
 \subsubsection{UUC10.3: Visualizzazione errore autenticazione LDAP}%
 \label{subs:UUC10.3}
 \begin{description}
-  \item[Caso d’uso:] UUC10.3;
+  \item[Caso d'uso:] UUC10.3;
   \item[Titolo:] Visualizzazione errore autenticazione LDAP\@;
   \item[Attori primari:] utente autenticato;
   \item[Precondizione:] i dati forniti dall'utente non corrispondono a credenziali valide;

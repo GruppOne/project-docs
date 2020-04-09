@@ -25,7 +25,7 @@ actor :utente non autenticato: as A
 
 rectangle {
   together {
-    usecase (UUC1.3.1) as "UUC1.3.1\nRegistrazione email\n--\nExtension points:\nVisualizzazione errore se la mail\nnon � scritta in modo corretto"
+    usecase (UUC1.3.1) as "UUC1.3.1\nRegistrazione email\n--\nExtension points:\nVisualizzazione errore se la mail\nnon è scritta in modo corretto"
     usecase (UUC1.3.2) as "UUC1.3.2\nRegistrazione password\n--\nExtension points:\nVisualizzazione errore se la\npassword non rispetta i criteri"
     usecase (UUC1.3.3) as "UUC1.3.3\nConferma password\n--\nExtension points:\nVisualizzazione errore se le\ndue password non coincidono"
     usecase (UUC1.3.4) as "UUC1.3.4\nInserimento dati anagrafici\n--\nExtension points:\nVisualizzazione errore\ndati mancanti"
