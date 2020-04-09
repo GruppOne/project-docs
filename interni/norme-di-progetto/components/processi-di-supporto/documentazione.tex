@@ -21,11 +21,15 @@ Tale processo distingue quattro differenti attività:
   \item  Manutenzione.
 \end{itemize}
 
-\subsubsection{Implementazione}%
+\subsubsection{Attività}%
+\label{subs:documentazione/attivita}
+
+
+\paragraph{Implementazione}%
 \label{subs:implementazione}
 L'attività di implementazione descrive il ciclo di vita dei documenti e illustra le proprietà di base comuni a tutti i documenti situate in file a sé stanti.
 
-\paragraph{Configurazione}%
+\subparagraph{Configurazione}%
 \label{par:configurazione}
 La configurazione di base comune ai documenti rilevanti è astratta in due file \LaTeX{} che contengono ad esempio la struttura e la formattazione che ogni file deve avere.
 Si riporta un elenco (non esaustivo) di ciò che è presente nel file di configurazione:
@@ -37,7 +41,7 @@ Si riporta un elenco (non esaustivo) di ciò che è presente nel file di configu
   \item Dichiarazione di nuovi comandi.
 \end{itemize}
 
-\paragraph{Ciclo di vita}%
+\subparagraph{Ciclo di vita}%
 \label{par:ciclo_di_vita}
 Il ciclo di vita rappresenta gli stadi in cui il documento si può trovare nel corso della sua esistenza. Ne distinguiamo cinque:
 
@@ -49,12 +53,12 @@ Il ciclo di vita rappresenta gli stadi in cui il documento si può trovare nel c
   \item [Archiviazione] l'amministratore archivia il documento in un repository pubblico su \glossario{GitHub}.
 \end{description}
 
-\subsubsection{Progettazione e sviluppo}%
+\paragraph{Progettazione e sviluppo}%
 \label{subs:progettazione_e_sviluppo}
 
 L'attività di progettazione e sviluppo descrive la struttura di ogni documento ed elenca le procedure che ogni componente del team si deve impegnare a seguire nella scrittura dei documenti.
 
-\paragraph{Frontespizio}%
+\subparagraph{Frontespizio}%
 \label{par:frontespizio}
 Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: nella prima è presente l'intestazione contenente logo, nome del gruppo e nome del documento, mentre la seconda consiste di uno schema contenente alcune informazioni essenziali sul documento descritto. In esso compaiono, ordinatamente, dall'alto verso il basso:
 
@@ -78,7 +82,7 @@ Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: ne
         \end{description}
 \end{itemize}
 
-\paragraph{Registro delle modifiche}%
+\subparagraph{Registro delle modifiche}%
 \label{par:registro_delle_modifiche}
 Il registro delle modifiche ha lo scopo di presentare quali cambiamenti sono stati effettuati e da parte di quale componente del gruppo. Consiste di quattro colonne ed è così articolato:
 \begin{description}
@@ -91,7 +95,7 @@ Il registro delle modifiche ha lo scopo di presentare quali cambiamenti sono sta
   \item [Descrizione] indica il tipo di modifica effettuata con i riferimenti alle specifiche sezioni.
 \end{description}
 
-\paragraph{Indice}%
+\subparagraph{Indice}%
 \label{par:indice}
 L'indice presenta presenta l'elenco, accompagnato dal numero di pagina, delle sezioni e dei paragrafi di cui è composto il documento.
 GruppOne ha deciso di utilizzare la tipica suddivisione del testo offerta da \LaTeX{} che distingue cinque diversi blocchi testuali:
@@ -108,7 +112,7 @@ Ogni blocco testuale si identifica mediante una \glossario{label} univoca, utile
 
 Ogni riga dell'indice contiene il numero di pagina in cui si trova la sezione o il paragrafo a cui si riferisce e, cliccando sul nome del blocco, è possibile raggiungerlo direttamente.
 
-\paragraph{Contenuto}%
+\subparagraph{Contenuto}%
 \label{par:contenuto}
 Le pagine di contenuto sono suddivise in tre parti, dall'alto verso il basso:
 \begin{description}
@@ -117,10 +121,10 @@ Le pagine di contenuto sono suddivise in tre parti, dall'alto verso il basso:
   \item [Footer] contiene l'indicazione della pagina attuale rispetto il totale (e.g 1 di 6).
 \end{description}
 
-\paragraph{Norme per la redazione dei documenti}%
+\subparagraph{Norme per la redazione dei documenti}%
 \label{par:norme_per_la_redazione_dei_documenti}
 
-\subparagraph{Stile del testo}%
+\subsubparagraph{Stile del testo}%
 \label{subp:stile_del_testo}
 In questo paragrafo GruppOne definisce le norme che uniformano lo stile di scrittura dei documenti:
 \begin{description}
@@ -132,7 +136,7 @@ In questo paragrafo GruppOne definisce le norme che uniformano lo stile di scrit
   \item [Termini di glossario in maiuscolo] il testo è scritto in minuscolo. I termini di glossario, invece, sono indicati in maiuscolo con una g a pedice nel nome. Questa regola vale per la prima occorrenza di ogni termine di glossario.
 \end{description}
 
-\subparagraph{Elenchi }%
+\subsubparagraph{Elenchi }%
 \label{subp:elenchi}
 Gli elenchi sono un ottimo mezzo per la scrittura di documentazione. Essi permettono di riordinare il testo e di organizzare una serie di elementi correlati, pertanto, in questo paragrafo, si stabiliscono le norme per il loro corretto uso:
 
@@ -144,7 +148,7 @@ Gli elenchi sono un ottimo mezzo per la scrittura di documentazione. Essi permet
   \item L'ultimo elemento dell'elenco deve comunque avere obbligatoriamente un punto al termine della frase.
 \end{enumerate}
 
-\subparagraph{Nomi dei file}%
+\subsubparagraph{Nomi dei file}%
 \label{nomi_dei_file}
 Per identificare i file memorizzati nel repository si seguono le seguenti convenzioni:
 
@@ -155,7 +159,7 @@ Per identificare i file memorizzati nel repository si seguono le seguenti conven
 
 Analisi dei requisiti sarà quindi salvato come analisi-dei-requisiti, mentre Norme di progetto come norme-di-progetto.
 
-\subparagraph{Sigle}%
+\subsubparagraph{Sigle}%
 \label{subp:sigle}
 Si elencano una serie di sigle che possono essere utilizzate nei documenti. Si accompagna ad ognuna di esse il relativo significato:
 
@@ -189,7 +193,7 @@ Si elencano una serie di sigle che possono essere utilizzate nei documenti. Si a
         \end{description}
 \end{itemize}
 
-\subparagraph{Convenzioni comuni}%
+\subsubparagraph{Convenzioni comuni}%
 \label{subp:convenzioni_comuni}
 Per la scrittura delle date si fa uso della seguente convenzione:
 \begin{center}
@@ -197,7 +201,7 @@ Per la scrittura delle date si fa uso della seguente convenzione:
 \end{center}
 Ad esempio 15 Novembre 2019 si scrive 2019--11--15.
 
-\subparagraph{Immagini}%
+\subsubparagraph{Immagini}%
 \label{subp:immagini}
 Le immagini si devono utilizzare per apportare un valore aggiunto a ciò che si sta descrivendo o per dare una rappresentazione grafica di ciò che si sta presentando.
 Immagini con funzione puramente estetica non sono pertanto ammesse, ad eccezione di quanto definito nel template comune.
@@ -207,11 +211,11 @@ Tutte le immagini devono essere inoltre centrate all'interno della pagina e muni
 \end{center}
 dove x indica la numerazione delle immagini (e.g.:\ figura 1, figura 2, figura 3).
 
-\subparagraph{Tabelle}%
+\subsubparagraph{Tabelle}%
 \label{subp:tabelle}
 L'uso di tabelle è consigliato solo quando strettamente necessario. La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento in cui risulti molto difficile organizzare informazioni aventi una struttura complessa. È obbligatorio l'uso di colori che abbiano un elevato contrasto al fine di promuovere la leggibilità. Inoltre, non devono essere eccessivamente lunghe altrimenti risultano dispersive.
 
-\subparagraph{Metriche}%
+\subsubparagraph{Metriche}%
 \label{subp:metriche}
 
 \begin{description}
@@ -236,12 +240,12 @@ L'uso di tabelle è consigliato solo quando strettamente necessario. La rapprese
   Ogni componente del gruppo ha un estensione per il proprio code editor (per vscode consigliamo l'estensione \href{https://marketplace.visualstudio.com/items?itemName=ban.spellright}{Spell Right}, che si basa sul dizionario di sistema).
 \end{description}
 
-\subsubsection{Produzione}%
+\paragraph{Produzione}%
 \label{subs:produzione}
 
 L'attività di produzione mostra come i documenti sono distribuiti all'esterno e come il team ha deciso di archiviarli.
 
-\paragraph{Suddivisione dei documenti}%
+\subparagraph{Suddivisione dei documenti}%
 \label{par:suddivisione_dei_documenti}
 I documenti utilizzano la struttura a \glossario{subfiles} offerta da \LaTeX.
 La struttura di base del documento è definita nel file che porta il nome del documento.
@@ -267,7 +271,7 @@ Ad esempio, il file norme di progetto ha la seguente struttura:
   \item[] \ldots
 \end{itemize}
 
-\subparagraph{Interni}%
+\subsubparagraph{Interni}%
 \label{subp:suddivisione_dei_documenti/interni}
 I documenti interni sono destinati alla comunicazione tra i componenti di GruppOne. Appartengono a tale categoria:
 
@@ -277,7 +281,7 @@ I documenti interni sono destinati alla comunicazione tra i componenti di GruppO
   \item Norme di progetto.
 \end{itemize}
 
-\subparagraph{Esterni}%
+\subsubparagraph{Esterni}%
 \label{subp:suddivisione_dei_documenti/esterni}
 I documenti esterni sono destinati al committente. Appartengono a tale categoria:
 
@@ -287,7 +291,7 @@ I documenti esterni sono destinati al committente. Appartengono a tale categoria
   \item Piano di qualifica.
 \end{itemize}
 
-\subparagraph{Verbali}%
+\subsubparagraph{Verbali}%
 \label{subp:verbali}
 I verbali contengono un riassunto degli incontri di GruppOne.
 Se qualche componente del gruppo non fosse presente ad un incontro verbale, è necessario che prenda visione del relativo verbale, in modo da informarsi sugli argomenti discussi alla riunione in cui era assente.

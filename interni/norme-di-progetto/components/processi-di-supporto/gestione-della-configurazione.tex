@@ -14,12 +14,16 @@ GruppOne istanzia il processo di gestione della configurazione per:
   \item Conservare documentazione e software in un luogo accessibile e compatibile con la licenza richiesta dal committente.
 \end{itemize}
 
-\subsubsection{Gestione del versionamento}%
+
+\subsubsection{Attività}%
+\label{subs:gestione_della_configurazione/attivita}
+
+\paragraph{Gestione del versionamento}%
 \label{subs:gestione_del_versionamento}
 
 La gestione delle versioni del prodotto avviene tramite Git, utilizzando il \href{https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/github-flow}{GitHub flow} nel periodo iniziale e possibilmente transizionando verso il \href{https://trunkbaseddevelopment.com/}{Trunk Based Development} quando i membri del gruppo avranno più familiarità con Git e con le tecnologie necessarie allo svolgimento delle attività di Testing.
 
-\paragraph{Repository}%
+\subparagraph{Repository}%
 \label{par:repository}
 
 Abbiamo deciso di distribuire il prodotto software su più repository corrispondenti alle parti principali di cui è costituito, che verranno creati in corrispondenza dell'approvazione di una \glossario{API} stabile per il prodotto software che stiamo sviluppando.
@@ -32,7 +36,7 @@ Lo scopo primario di questa previsione sarà di manifestare sinteticamente ai me
 
 Consideriamo quindi questi numeri di versione dei componenti individuali come numeri di versione \textbf{interni}.
 
-\paragraph{Versione di prodotto}%
+\subparagraph{Versione di prodotto}%
 \label{par:versione_di_prodotto}
 
 A espressione del nostro rapporto con il committente e con il proponente, ci impegniamo a mantenere un numero di versione rappresentativo del prodotto complessivo, anch'esso organizzato su 3 livelli (X.Y.Z) ma con significato non conforme alla specifica di \glossario{versionamento semantico} già citata.
@@ -51,12 +55,12 @@ Eventi non previsti dalla pianificazione si manifesteranno con appropriate richi
 
 Eventuali discordanze tra la cifra MAJOR delle parti e la cifra X del prodotto verranno sanate con la massima priorità, a manifestare l'aderenza del prodotto alla API rilasciata pubblicamente.
 
-\subparagraph{Eventuale aderenza ai principi delle twelve-factor app}%
+\subsubparagraph{Eventuale aderenza ai principi delle twelve-factor app}%
 \label{subp:eventuale_aderenza_ai_principi_delle_twelve-factor_app}
 
 Qualora in fase di progettazione decidessimo che è sostenibile sviluppare il prodotto in aderenza ai principi delineati in \href{https://12factor.net/codebase}{12-factor app}, con riferimento al primo fattore consideriamo il nostro prodotto come un \glossario{sistema distribuito}, in cui ricerchiamo la conformità di quanti più componenti possibili.
 
-\subparagraph{Identità di prodotto}%
+\subsubparagraph{Identità di prodotto}%
 \label{subp:identita_di_prodotto}
 
 Ci riserviamo la possibilità di modificare opportunamente la gestione del versionamento del prodotto in seguito a eventuale feedback negativo del committente, semplificandolo ove necessario.
@@ -65,7 +69,7 @@ Valuteremo inoltre la convenienza manutentiva di fornire al committente in corri
 
 % subp:identita_di_prodotto (end)
 
-\paragraph{Struttura dei messaggi di commit}%
+\subparagraph{Struttura dei messaggi di commit}%
 \label{par:struttura_dei_messaggi_di_commit}
 
 In tutti i repository gestiti dall'organizzazione GruppOne ci impegniamo a rispettare la specifica \href{https://www.conventionalcommits.org/en/v1.0.0/}{Conventional Commits 1.0.0}.
@@ -73,7 +77,7 @@ Il vantaggio principale di questa convenzione risiede nella sua stretta correlaz
 
 Sebbene l'utilità di seguire questa convenzione nel repository di documentazione sia limitata, abbiamo deciso di imporla comunque per entrare fin da subito nell'ottica necessaria e uniformare il flusso di lavoro.
 
-\paragraph{Baseline}%
+\subparagraph{Baseline}%
 \label{par:baseline}
 
 Stante quanto detto ai paragrafi precedenti, emerge in maniera naturale un concetto di \glossario{baseline} per il nostro progetto.
