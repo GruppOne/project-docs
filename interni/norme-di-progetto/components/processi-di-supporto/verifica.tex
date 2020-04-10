@@ -1,18 +1,17 @@
 \documentclass[../../norme-di-progetto.tex]{subfiles}
 
-% FIXME struttura non conforme
 \begin{document}
 
 \subsubsection{Finalità}%
 \label{subs:verifica/finalita}
 
-GruppOne istanzia il processo di verifica per certificare che il susseguirsi di attività diverse non comporti l'introduzione di errori nei prodotti intermedi.
+GruppOne istanzia il processo di verifica per certificare che il susseguirsi delle attività svolte dai membri del team non comporti l'introduzione di errori nei prodotti intermedi.
 Si deve verificare qualsiasi prodotto intermedio, pertanto sia documentazione che codice sono soggetti a verifica.
 
 \subsubsection{Descrizione}%
 \label{subs:verifica/descrizione}
 
-Il processo di verifica è il processo che controlla e garantisce che i prodotti di una determinata attività soddisfino i requisiti e le condizioni che quel prodotto deve avere. Il processo di verifica si integra in toto con gli altri processi, in particolare con quello di sviluppo, e offre attività di revisione, analisi e test. È composto da due attività:
+Il processo di verifica controlla e garantisce che i prodotti di una determinata attività soddisfino i requisiti e le condizioni che quel prodotto deve avere. Il processo di verifica si integra in toto con gli altri processi, in particolare con quello di sviluppo, e regolamenta revisione, analisi e test. È composto da due attività:
 
 \begin{itemize}
   \item Implementazione del processo
@@ -25,41 +24,86 @@ Il processo di verifica è il processo che controlla e garantisce che i prodotti
 \paragraph{Implementazione del processo}%
 \label{par:implementazione_di_processo}
 
-% TODO scrivere
+GruppOne si impegna, nel contesto del progetto intrapreso, ad effettuare attività di verifica e a formulare un piano delle attività di verifica quantificando nel \textit{Piano di progetto (versione \versione)} l'impegno orario necessario in ogni fase rilevante del ciclo di vita del prodotto. Tale pianificazione verrà messa in atto utilizzando le procedure definite in §~\ref{subs:verifica/procedure}.
 
 % par:implementazione_di_processo (end)
 
 \paragraph{Verifica}%
 \label{par:verifica}
 
-% TODO scrivere
+Vista l'importanza dell'attività, ogni compito verrà descritto in un sotto-paragrafo a parte. I compiti coinvolti dall'attività di verifica sono:
+
+\begin{itemize}
+  \item verifica del contratto
+  \item verifica del processo
+  \item verifica dei requisiti
+  \item verifica della progettazione
+  \item verifica del codice
+  \item verifica dell'integrazione
+  \item verifica della documentazione.
+\end{itemize}
+
+\subparagraph{Verifica del contratto}%
+\label{subp:verifica_del_contratto}
+
+GruppOne effettua verifica dell'accuratezza e fattibilità di quanto delineato nei documenti a valore contrattuale consegnati al committente, in particolare per assicurarsi della soddisfazione dei criteri di accettazione per il prodotto come descritti dal committente nel capitolato d'appalto propostoci.
+
+% subp:verifica_del_contratto (end)
+
+\subparagraph{verifica del processo}%
+\label{subp:verifica_del_processo}
+
+Per verificare l'adeguatezza dei processi istanziati, vista la mancanza di esperienza dei membri del team, GruppOne fa affidamento principalmente al feedback espresso dal committente nei colloqui e nelle revisioni ufficiali per assicurarsi un corretto way of working durante ogni fase del progetto intrapreso.
+
+% subp:verifica_del_processo (end)
+
+\subparagraph{Verifica dei requisiti}%
+\label{subp:verifica_dei_requisiti}
+
+GruppOne effettua verifica interna dell'adeguatezza, consistenza, fattibilità e testabilità dei singoli requisiti emersi dall'attività di analisi, come elencati nel documento \textit{Analisi dei requisiti (versione \versione)}.
+La procedura è descritta nel paragrafo §~\ref{par:verifica_semantica_dei_prodotti_documentali}.
+
+% subp:verifica_dei_requisiti (end)
+
+\subparagraph{Verifica della progettazione}%
+\label{subp:verifica_della_progettazione}
+
+Questo compito serve ad assicurarsi che la progettazione sia ``consistente con'' che ``tracciabile ai'' requisiti del prodotto. Ciò avviene sia attraverso la procedura descritta nel paragrafo §~\ref{par:verifica_semantica_dei_prodotti_documentali} che con la produzione di documenti tecnici nelle fasi avanzate del progetto.
+
+% subp:verifica_della_progettazione (end)
+
+\subparagraph{Verifica del codice}%
+\label{subp:verifica_del_codice}
+
+La verifica del codice si divide in automatica e manuale.
+La verifica manuale avviene attraverso lo strumento descritto in §~\ref{par:code_review}, mentre quella automatica è subordinata al corretto svolgimento dell'attività di scrittura dei test di unità, sistema e integrazione.
+L'esecuzione effettiva dei test scritti è garantita attraverso lo strumento descritto in §~\ref{par:github_actions} e implementato come check obbligatorio per effettuare il \textit{merge} nel trunk, come descritto in §~\ref{subp:protezione_della_branch_di_default}.
+
+% subp:verifica_del_codice (end)
+
+\subparagraph{Verifica dell'integrazione}%
+\label{subp:verifica_dell_integrazione}
+
+Nel modello incrementale la verifica dell'integrazione avviene gradualmente attraverso la scrittura di test appositi come documentato nelle sezioni §~\ref{par:test_integrazione} e §~\ref{par:test_sistema}, che va effettuata in concomitanza con l'integrazione di modifiche descritta in §~\ref{subp:integrazione_di_modifiche_nel_trunk}.
+
+% subp:verifica_dell'integrazione (end)
+
+\subparagraph{Verifica della documentazione}%
+\label{subp:verifica_della_documentazione}
+
+GruppOne garantisce consistenza, adeguatezza e completezza della documentazione attraverso le procedure descritte in §~\ref{par:verifica_grammaticale_dei_prodotti_documentali} e §~\ref{par:verifica_semantica_dei_prodotti_documentali}.
+Tutti i prodotti documentali sono adeguatamente versionati, come specificato in §~\ref{par:gestione_della_configurazione/implementazione_del_processo}.
+
+% subp:verifica_della_documentazione (end)
 
 % par:verifica (end)
 
-\paragraph{Analisi statica}%
-\label{par:analisi_statica}
-L'analisi statica consiste nell'insieme delle buone pratiche che valutano un componente del sistema sulla base della sua forma, struttura e contenuto.
-L'analisi statica quindi definisce una serie di regole a cui tutti i prodotti intermedi del ciclo di vita del software devono attenersi. Esistono due tipi di analisi statica:
-\begin{description}
-  \item [Walkthrough] La tecnica walkthrough esegue una verifica a largo spettro del prodotto. Si articola nelle seguenti attività:
-        \begin{itemize}
-          \item Pianificazione di cosa è necessario monitorare.
-          \item Lettura dell'oggetto di verifica da parte di più membri del team.
-          \item Discussione dei difetti individuati da tutti i componenti del team.
-          \item Correzione concordata degli errori trovati.
-        \end{itemize}
-  \item [Inspection] la tecnica inspection esegue una verifica mirata del prodotto. Si articola nelle seguenti attività:
-        \begin{itemize}
-          \item Pianificazione di cosa è necessario monitorare.
-          \item Costruzione di una checklist di controllo.
-          \item Lettura dell'oggetto di verifica sulla base delle metriche definite nella lista di controllo.
-          \item Correzione degli errori trovati.
-        \end{itemize}
-\end{description}
-GruppOne predilige la tecnica inspection pertanto si impegna a fornire una checklist dei controlli da effettuare sui documenti e sul software.
+\subsubsection{Procedure}%
+\label{subs:verifica/procedure}
 
-\subparagraph{Analisi statica dei documenti}%
-\label{subp:analisi_statica_dei_documenti}
+\paragraph{Verifica della correttezza grammaticale dei prodotti documentali}%
+\label{par:verifica_grammaticale_dei_prodotti_documentali}
+
 Di seguito si riporta una checklist da seguire per effettuare l'analisi statica dei documenti:
 
 \begin{description}
@@ -70,84 +114,52 @@ Di seguito si riporta una checklist da seguire per effettuare l'analisi statica 
   \item [Errori nella strutturazione del documento] si deve verificare che tutti i paragrafi si trovino nella sezione corretta, che le sezioni siano ben strutturate e che i titoli siano significativi.
 \end{description}
 
-Sarà compito dei verificatori attenersi alla checklist definita in~\ref{subp:analisi_statica_dei_documenti} per le attività di verifica.
+% par:verifica_grammaticale_dei_prodotti_documentali (end)
 
-\paragraph{Analisi dinamica del codice}%
-\label{par:analisi_dinamica_del_codice}
-L'analisi dinamica del codice necessita che l'oggetto di verifica sia in esecuzione.
-Essa cerca di dimostrare che il programma svolge i compiti per il quale è stato realizzato e identifica gli errori prima che il software sia messo in uso.
-Si realizza attraverso la creazione e l'esecuzione di test che producono deterministicamente un risultato da confrontare con un valore atteso.
-Il numero di test è chiaramente finito e quindi non sarà possibile provare tutte le esecuzioni possibili.
-Per questo motivo bisogna produrre dei test sensati.
-Un test, affinché sia definito come tale, deve avere delle precise caratteristiche:
+\paragraph{Verifica semantica dei prodotti documentali}%
+\label{par:verifica_semantica_dei_prodotti_documentali}
 
-\begin{itemize}
-  \item Velocità
-  \item Ripetibilità
-  \item Minima interazione umana richiesta.
-\end{itemize}
+Il verificatore deve prestare particolare attenzione ad appurare la correttezza concettuale di quanto da lui letto. Per via della natura complessa di questo aspetto della verifica, GruppOne si raccomanda che il verificatore effettui la compilazione del sorgente \LaTeX{} ed almeno una lettura completa delle sezioni del documento di cui sta svolgendo la verifica, se non del documento nel suo complesso.
 
-\subparagraph{Copertura dei test}%
-\label{subp:copertura_dei_test}
-Per ogni tipo di test è necessario fornire la sua copertura.
-Essa è un valore percentuale e indica quanti \glossario{statement} i test hanno eseguito rispetto al totale.
-Più la copertura è alta meglio è, tuttavia una copertura del 100\% non dà in alcun modo la certezza di essere in assenza di difetti.
-Il capitolato di Stalker richiede una copertura dei test pari almeno all' 80\%, correlata di report.
+% par:verifica_dei_prodotti_documentali (end)
 
-\subparagraph{Test di unità}%
-\label{subp:test_di_unita}
-Il software è un insieme di componenti. Per effettuare verifica del software è necessario adottare un approccio \glossario{bottom-up} che deve necessariamente occuparsi di controllare anzitutto che le unità su cui è costruito il software siano corrette. I test di unità, quindi, servono a testare i moduli elementari del software.
+\paragraph{Procedure di verifica del codice}%
+\label{par:procedure_di_verifica_del_codice}
 
-\subparagraph{Test di integrazione}%
-\label{subp:test_di_integrazione}
-I test di integrazione si occupano di verificare l'interazione tra le sottocomponenti del sistema.
-Essi suppongono che i test di unità siano già stati eseguiti e abbiano dato esito positivo.
-Lo scopo dei test di integrazione è quello di dimostrare che le interfacce delle componenti del software si comportino in conformità alle specifiche richieste.
+% par:procedure_di_verifica_del_codice (end)
 
-\subparagraph{Test di sistema}%
-\label{test_di_sistema}
-I test di sistema si possono iniziare solo nel momento in cui i test di integrazione abbiano dato esito positivo.
-Essi verificano il comportamento generale del software rispetto ai requisiti.
-Durante i test di sistema si esercitano le funzionalità di alcune componenti del software che sono fortemente dipendenti da altri moduli del sistema.
+\subparagraph{Analisi statica}%
+\label{subp:verifica/analisi_statica}
+
+L'analisi statica consiste nell'insieme delle buone pratiche che valutano un componente del sistema sulla base della sua forma, struttura e contenuto.
+Consiste in una serie di regole a cui tutti i prodotti intermedi del ciclo di vita del software devono attenersi.
+Viene effettuata in maniera automatizzata utilizzando gli strumenti descritti in §~\ref{par:analisi_statica_e_dinamica}. L'adeguata impostazione di tali strumenti è richiesta ai verificatori ed è soggetta a controllo di configurazione.
 
 \subparagraph{Test di regressione}%
 \label{test_di_regressione}
-I test di regressione servono per accertare che le modifiche apportate non comportino altri errori nel software: consistono nella ripetizione selettiva di test di unità, integrazione, test di sistema.
 
-\subparagraph{Test di accettazione}%
-\label{test_di_accettazione}
-I test di accettazione verificano il completo soddisfacimento dei requisiti utente.
-Sono eseguiti in collaborazione con il committente.
-
-\subsubsection{Procedure}%
-\label{subs:procedure}
+I test di regressione servono per accertare che le modifiche apportate non reintroducano errori nel software che erano stati risolti in precedenza.
+Consistono nella ripetizione selettiva di test di unità, integrazione, test di sistema.
 
 % subs:procedure (end)
 
 \subsubsection{Strumenti di supporto}%
 \label{subs:verifica/strumenti}
 
-\paragraph{Code Review}%
+\paragraph{GitHub Code Review}%
 \label{par:code_review}
 
 Il processo di verifica avviene principalmente attraverso il meccanismo delle \href{https://github.com/features/code-review/}{Code Review} offerto da GitHub.
 Lo stretto legame con lo strumento di versionamento permette di svolgere la verifica in maniera incrementale, procedendo di pari passo con l'aggiunta di contenuto sia ai documenti che al codice sorgente.
 
+La procedura descritta in §~\ref{subp:integrazione_di_modifiche_nel_trunk} ha come conseguenza diretta il fatto che il set di modifiche disponibile nella scheda \textit{changes} della Pull request corrisponda esattamente con ciò che non è ancora stato verificato.
+
 % par:code_review (end)
-
-% \subparagraph{Code owners}%
-% \label{subp:code_owners}
-
-% Abbiamo adattato alle nostre necessità la feature \href{https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners}{Code Owners} offerta da GitHub.
-% All'interno del file \verb|CODEOWNERS| posizionato nella cartella \verb|.github| nella radice del repository, abbiamo definito due code owner per ogni documento di progetto.
-% Ogni volta che viene aperta una \glossario{Pull Request} che modifica alcuni file, i rispettivi code owner vengono notificati automaticamente e viene loro richiesta una verifica dei cambiamenti effettuati.
-
-% L'integrazione delle modifiche nella branch di default del repository è condizionata al superamento di queste verifiche.
 
 \paragraph{GitHub Actions}%
 \label{par:github_actions}
 
-GruppOne utilizzerà ove possibile la feature \href{https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-github-actions}{GitHub Actions} al fine di automatizzare quante più attività di verifica possibili.
+GruppOne utilizza la feature \href{https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-github-actions}{GitHub Actions} al fine di automatizzare quante più attività di verifica possibili.
 
 È infatti possibile definire o riutilizzare delle action per rendere meno onerose sia l'analisi statica che dinamica del codice, e contemporaneamente facilitare molte delle attività e dei compiti svolti dai membri del team.
 

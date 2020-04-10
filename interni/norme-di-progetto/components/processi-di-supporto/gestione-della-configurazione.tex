@@ -178,12 +178,36 @@ Il versionamento delle componenti del prodotto avviene utilizzando Git, e distri
 
 Utilizziamo il workflow \href{https://trunkbaseddevelopment.com/}{Trunk Based Development} a livello dei singoli repository sia per la documentazione di progetto che per le componenti software, considerando come \glossario{trunk} la branch di default \textit{master}.
 
+\subparagraph{Integrazione di modifiche nel trunk}%
+\label{subp:integrazione_di_modifiche_nel_trunk}
+
+Una parte fondamentale del flusso di lavoro da noi utilizzato è l'integrazione di piccoli gruppi di modifiche all'interno del trunk.
+Questa parte viene realizzata isolando ciascun gruppo di modifiche in una branch dedicata e affidando la responsabilità di mantenere aggiornata la branch rispetto al trunk ad un membro del team chiaramente identificato come \textit{assignee} nella Pull request associata alla branch. È quindi necessario che l'\textit{assignee} effettui periodicamente dei \textit{merge} dalla branch \textit{master} verso la branch di sua responsabilità.
+
+Infine, per mantenere linearità nell'evoluzione del trunk e facilitare l'individuazione di ciò che deve essere effettivamente soggetto a verifica, è necessario che l'\textit{assignee}, una volta completata l'implementazione delle modifiche, effettui un \textit{rebase} della branch sulla branch di default.
+
+% subp:integrazione_di_modifiche_nel_trunk (end)
+
 % par:git (end)
 
 \paragraph{GitHub}%
 \label{par:github}
 
 I repository vengono condivisi tra i membri del gruppo attraverso la piattaforma online GitHub, in repository raggiungibili a partire dalla pagina dell'organizzazione GruppOne, all'indirizzo \href{https://github.com/GruppOne}{https://github.com/GruppOne}.
+
+\subparagraph{Pull request}%
+\label{subp:pull_request}
+
+Le pull request sono uno spazio dove è possibile discutere aspetti e conseguenze delle modifiche introdotte da una branch. Utilizziamo in particolare la distinzione tra pull request e draft pull request (distinguibili dal colore dell'icona, rispettivamente verde e grigio) per esprimere il fatto che una branch ha completato l'implementazione del set di modifiche richieste, ed è dunque pronta per sottostare all'attività di verifica utilizzando lo strumento delle code review descritto in §~\ref{par:code_review}.
+
+% subp:pull_request (end)
+
+\subparagraph{Protezione della branch di default}%
+\label{subp:protezione_della_branch_di_default}
+
+GruppOne ha implementato una protezione condizionale sulla branch \textit{master}, che vieta ai membri del team di effettuare dei push diretti. Ogni aggiunta presente su master deve avvenire attraverso il meccanismo delle \glossario{Pull request}, che sono imprescindibilmente soggette sia a verifica effettuata seguendo la procedura documentata in §~\ref{par:code_review} che al superamento di check appropriati alle modifiche effettuate, implementati con il meccanismo descritto in §~\ref{par:github_actions}.
+
+% subp:protezione_della_branch_di_default (end)
 
 % par:github (end)
 
