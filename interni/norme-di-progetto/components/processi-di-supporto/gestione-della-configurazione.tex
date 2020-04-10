@@ -171,69 +171,30 @@ All'interno del file \verb|README.md| presente nella radice di tale repository v
 \subsubsection{Strumenti di supporto}%
 \label{subs:gestione_della_configurazione/strumenti_di_supporto}
 
-
-% par:implementazione_del_processo (end)
-
-\paragraph{Identificazione della configurazione}%
-\label{par:identificazione_della_configurazione}
-
-% TODO scrivere sezione
-% GruppOne si impegna a fornire esplicitamente la versione della documentazione che stabilisce univocamente per ogni componente la
-
-% par:identificazione_della_configurazione (end)
-
-\paragraph{Controllo della configurazione}%
-\label{par:controllo_della_configurazione}
-
-Verranno identificate e tracciate tutte le richieste di modifiche pervenute da fonti esterne (quali ad es.\ il committente) e interne, insieme all'evoluzione, implementazione e rilascio di tali modifiche.
-
-% par:controllo_della_configurazione (end)
-
-\paragraph{Resoconto dello stato della configurazione}%
-\label{par:resoconto_dello_stato_della_configurazione}
-
-Lo stato attuale della configurazione del prodotto è espresso attraverso un numero di versione di prodotto
-
-% par:resoconto_dello_stato_della_configurazione (end)
-
-\paragraph{Valutazione della configurazione}%
-\label{par:valutazione_della_configurazione}
-
-Nel corso del progetto verrà documentata all'interno del documento \textit{Piano di Qualifica
-  (versione \versione)} la copertura dei requisiti elencati nel documento \textit{Analisi dei Requisiti (versione \versione)} rispetto all'implementazione effettiva dei componenti software richiesti.
-
-% par:valutazione_della_configurazione (end)
-
-\paragraph{Gestione dei rilasci e delle consegne}%
-\label{par:gestione_dei_rilasci_e_delle_consegne}
-
-GruppOne effettuerà con cadenza settimanale in corrispondenza degli incrementi definiti nel \textit{Piano di Progetto (versione \versione)} dei rilasci interni dei componenti del prodotto software in via di sviluppo, che andranno a costituire baseline incrementali. In occasione delle consegne di materiale richieste dal committente, le baseline più recenti dei componente insieme alla documentazione corrispondente verranno rese disponibili al committente, per concludersi in un rilascio finale del prodotto compiuto a
-
-% par:gestione_dei_rilasci_e_della_consegna (end)
-
-% \subsubsection{Metriche}%
-% \label{subs:gestione_della_configurazione/metriche}
-
-\subsubsection{Procedure}%
-\label{subs:gestione_della_configurazione/procedure}
-
-\paragraph{Tracciamento delle richieste di modifiche}%
-\label{par:tracciamento_delle_richieste_di_modifiche}
-
-
-% par:tracciamento_delle_richieste_di_modifiche (end)
-
-\subsubsection{Strumenti di supporto}%
-\label{subs:gestione_della_configurazione/strumenti_di_supporto}
-
 \paragraph{Git}%
 \label{par:git}
+
+Il versionamento delle componenti del prodotto avviene utilizzando Git, e distribuendo le componenti software e la documentazione su un totale di 4 \glossario{repository} diversi.
+
+Utilizziamo il workflow \href{https://trunkbaseddevelopment.com/}{Trunk Based Development} a livello dei singoli repository sia per la documentazione di progetto che per le componenti software, considerando come \glossario{trunk} la branch di default \textit{master}.
 
 % par:git (end)
 
 \paragraph{GitHub}%
 \label{par:github}
 
+I repository vengono condivisi tra i membri del gruppo attraverso la piattaforma online GitHub, in repository raggiungibili a partire dalla pagina dell'organizzazione GruppOne, all'indirizzo \href{https://github.com/GruppOne}{https://github.com/GruppOne}.
+
 % par:github (end)
+
+\paragraph{Conventional Changelog --- Standard Version}%
+\label{par:conventional_changelog_standard_version}
+
+Questo strumento, la cui documentazione di utilizzo è reperibile all'indirizzo \href{https://github.com/conventional-changelog/standard-version/blob/master/README.md}{Conventional Changelog - Standard Version}, permette la generazione automatica di un registro delle modifiche per ogni componente software sfruttando la categorizzazione dei commit imposta dalla specifica \href{https://www.conventionalcommits.org/en/v1.0.0/}{Conventional Commits 1.0.0}.
+
+Tale registro è contenuto in un file \verb|CHANGELOG.md| presente nella radice del repository della componente considerata.
+Viene aggiornato con una procedura semiautomatica documentata in~\ref{par:gestione_dei_rilasci_e_delle_consegne} dal responsabile che approva ciascuna Pull Request.
+
+% par:conventional_changelog_standard_version (end)
 
 \end{document}
