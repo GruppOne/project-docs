@@ -20,23 +20,157 @@ Attraverso il processo di gestione della configurazione vengono tracciati lo sta
 Le attività coinvolte sono:
 
 \begin{itemize}
-  \item Implementazione del processo.
-  \item Identificazione della configurazione.
-  \item Controllo della configurazione.
-  \item Resoconto dello stato della configurazione.
-  \item Valutazione della configurazione.
+  \item Implementazione del processo
+  \item Identificazione della configurazione
+  \item Controllo della configurazione
+  \item Resoconto dello stato della configurazione
+  \item Valutazione della configurazione
   \item Gestione dei rilasci e della consegna.
 \end{itemize}
 
 \subsubsection{Attività}%
 \label{subs:gestione_della_configurazione/attivita}
-% un \paragraph per ogni attività
 
 \paragraph{Implementazione del processo}%
 \label{par:implementazione_del_processo}
 
 Verrà sviluppato nella fase iniziale del progetto un piano di gestione della configurazione, espresso attraverso procedure documentate nel presente documento (§~\ref{subs:gestione_della_configurazione/procedure}).
-I vari membri del gruppo saranno di volta in volta incaricati della gestione puntuale di aspetti specifici della configurazione del prodotto nel rispetto delle norme definite.
+I vari membri del gruppo saranno di volta in volta incaricati della gestione puntuale di aspetti specifici della configurazione del prodotto nel rispetto delle procedure definite.
+
+% par:implementazione_del_processo (end)
+
+\paragraph{Identificazione della configurazione}%
+\label{par:identificazione_della_configurazione}
+
+GruppOne stabilisce uno schema delle componenti software e delle loro versioni soggette a controllo (§~\ref{par:controllo_della_configurazione}), identificando per ogni componente la versione attuale associata al codice sorgente che la costituisce e la versione di riferimento della documentazione di progetto come documentato nella procedura §~\ref{par:rilascio_interno_di_versioni_dei_componenti}.
+
+GruppOne identifica in maniera univoca le versioni delle componenti software del prodotto in conformità con la specifica \href{https://semver.org/spec/v2.0.0.html}{Semantic Versioning 2.0.0}.
+Ciascuna versione delle componenti software fa inoltre riferimento ad una versione della documentazione di progetto come definita nel sotto-paragrafo §~\ref{subp:schema_di_versionamento_della_documentazione_di_progetto}.
+
+\subparagraph{Schema di versionamento della documentazione di progetto}%
+\label{subp:schema_di_versionamento_della_documentazione_di_progetto}
+
+La versione della documentazione di progetto è rappresentata da un numero organizzato su 3 livelli (X.Y.Z) ma con significato non conforme alla specifica di versionamento semantico già citata.
+
+\begin{itemize}
+  \item Un aumento di Z corrisponde all'approvazione interna di un documento, che implica necessariamente la verifica da parte di minimo 2 membri del team.
+  \item Un aumento di Y corrisponde al raggiungimento di una milestone come definita nel \textit{Piano di progetto (versione \versione)}. Le milestone comprendono quindi sia le revisioni di progetto che gli incrementi.
+  \item Un aumento di X corrisponde al rilascio pubblico di una nuova versione \textit{non retro-compatibile} dell'API pubblica del prodotto Stalker. In questo contesto il numero 0 va interpretato come indicativo del fatto che non è ancora avvenuto alcun rilascio dell'API, in quanto incompleta.
+\end{itemize}
+
+GruppOne ha inoltre stabilito che il numero di versione così definito è rappresentativo sia della documentazione stessa che del prodotto nel suo complesso, considerato che esso riflette sia l'approvazione di modifiche a documenti che l'evoluzione nel tempo delle componenti software.
+
+% subp:schema_di_versionamento_della_documentazione_di_progetto (end)
+
+% par:identificazione_della_configurazione (end)
+
+\paragraph{Controllo della configurazione}%
+\label{par:controllo_della_configurazione}
+
+Verranno identificate e tracciate tutte le richieste di modifiche pervenute da fonti esterne (quali ad es.\ il committente) e interne, insieme all'evoluzione, implementazione e rilascio di tali modifiche.
+La procedura è documentata nella sezione §~\ref{par:tracciamento_delle_richieste_di_modifiche}.
+
+% par:controllo_della_configurazione (end)
+
+\paragraph{Resoconto dello stato della configurazione}%
+\label{par:resoconto_dello_stato_della_configurazione}
+
+Considerati tutti i repository di progetto creati da GruppOne, la \glossario{baseline} di prodotto consiste in ogni momento in ciò che è presente nelle branch di default dei repository delle componenti e della documentazione di progetto, disponibile agli indirizzi:
+
+\begin{description}
+  \item \href{https://github.com/GruppOne/project-docs/tree/master}{GruppOne/project-docs/tree/master}
+  \item \href{https://github.com/GruppOne/stalker-mobile-app/tree/master}{GruppOne/stalker-mobile-app/tree/master}
+  \item \href{https://github.com/GruppOne/stalker-server/tree/master}{GruppOne/stalker-server/tree/master}
+  \item \href{https://github.com/GruppOne/stalker-web-app/tree/master}{GruppOne/stalker-web-app/tree/master}
+\end{description}
+
+Dove il numero di versione è reperibile alle pagine indicate nella descrizione della procedura §~\ref{par:rilascio_interno_di_versioni_dei_componenti}.
+
+% par:resoconto_dello_stato_della_configurazione (end)
+
+\paragraph{Valutazione della configurazione}%
+\label{par:valutazione_della_configurazione}
+
+Nel corso del progetto verrà documentata all'interno del documento \textit{Piano di Qualifica (versione \versione)} la copertura dei requisiti elencati nel documento \textit{Analisi dei Requisiti (versione \versione)} rispetto all'implementazione effettiva dei componenti software richiesti.
+
+% par:valutazione_della_configurazione (end)
+
+\paragraph{Gestione dei rilasci e delle consegne}%
+\label{par:gestione_dei_rilasci_e_delle_consegne}
+
+Per mantenere una visione d'insieme del prodotto, GruppOne effettuerà in corrispondenza degli incrementi definiti nel \textit{Piano di Progetto (versione \versione)} dei rilasci interni dei componenti del prodotto software in via di sviluppo, che andranno a costituire baseline incrementali. La procedura per effettuare i rilasci interni è documentata in §~\ref{par:rilascio_interno_di_versioni_dei_componenti}.
+
+In occasione delle consegne di materiale richieste dal committente, la baseline più recente di ciascun componente software verrà resa disponibile al committente utilizzando la procedura definita in §~\ref{par:rilascio_esterno_di_versioni_del_prodotto}.
+
+Il rilascio e consegna finale del prodotto compiuto avverrà attraverso un repository unico come documentato nella procedura §~\ref{par:consegna_del_prodotto}.
+
+% par:gestione_dei_rilasci_e_della_consegna (end)
+
+% \subsubsection{Metriche}%
+% \label{subs:gestione_della_configurazione/metriche}
+
+\subsubsection{Procedure}%
+\label{subs:gestione_della_configurazione/procedure}
+
+\paragraph{Tracciamento delle richieste di modifiche}%
+\label{par:tracciamento_delle_richieste_di_modifiche}
+
+Ogni richiesta di modifiche pervenuta al team viene documentata sulla piattaforma GitHub, creando una issue sul repository di ogni componente coinvolto dalla richiesta e applicandovi il label \textit{change request}.
+Questa procedura è funzionalmente identica, a meno del label effettivamente selezionato, a quanto documentato in §~\ref{par:flusso_di_lavoro_per_la_risoluzione_dei_problemi}.
+
+% par:tracciamento_delle_richieste_di_modifiche (end)
+
+\paragraph{Rilascio interno di versioni dei componenti}%
+\label{par:rilascio_interno_di_versioni_dei_componenti}
+
+Il rilascio interno avviene attraverso il meccanismo delle \href{https://git-scm.com/book/en/v2/Git-Basics-Tagging}{git tag}, da apporre determinando il numero di versione che risulta dall'approvazione di un set di modifiche, che coincide con il \textit{merge} sulla branch di default del repository del lavoro effettuato su una \textit{feature/fix branch}. Tali rilasci interni sono visibili agli indirizzi:
+
+\begin{description}
+  \item \href{https://github.com/GruppOne/project-docs/tags}{GruppOne/project-docs/tags}
+  \item \href{https://github.com/GruppOne/stalker-mobile-app/tags}{GruppOne/stalker-mobile-app/tags}
+  \item \href{https://github.com/GruppOne/stalker-server/tags}{GruppOne/stalker-server/tags}
+  \item \href{https://github.com/GruppOne/stalker-web-app/tags}{GruppOne/stalker-web-app/tags}
+\end{description}
+
+% par:rilascio_interno_di_versioni_dei_componenti (end)
+
+\paragraph{Rilascio esterno di versioni del prodotto}%
+\label{par:rilascio_esterno_di_versioni_del_prodotto}
+
+In corrispondenza delle revisioni non bloccanti previste dal committente è necessario consegnare:
+
+\begin{enumerate}
+  \item Al committente prof. Tullio Vardanega la documentazione di progetto, attraverso una \href{https://help.github.com/en/enterprise/2.16/user/github/administering-a-repository/about-releases}{release} alla pagina \href{https://github.com/GruppOne/project-docs/releases}{GruppOne/project-docs/releases}.
+  \item Al committente prof. Riccardo Cardin le componenti software e, in occasione della Product Baseline, un allegato tecnico.
+\end{enumerate}
+
+Ad entrambi i committenti verrà notificata l'avvenuta consegna attraverso email entro le scadenze prefissate.
+Resta inteso che in ogni momento lo stato attuale dei componenti software, inclusivo delle modifiche non ancora approvate, è disponibile pubblicamente in conformità con la licenza richiesta a questi indirizzi:
+
+\begin{description}
+  \item \href{https://github.com/GruppOne/stalker-mobile-app/branches}{GruppOne/stalker-mobile-app/branches}
+  \item \href{https://github.com/GruppOne/stalker-server/branches}{GruppOne/stalker-server/branches}
+  \item \href{https://github.com/GruppOne/stalker-web-app/branches}{GruppOne/stalker-web-app/branches}
+\end{description}
+
+% par:rilascio_esterno_di_versioni_del_prodotto (end)
+
+\paragraph{Consegna del prodotto}%
+\label{par:consegna_del_prodotto}
+
+La consegna finale del prodotto avverrà attraverso un repository unico che definisce univocamente la baseline conclusiva di prodotto e comprenderà dei puntatori a versioni specifiche delle componenti software e della documentazione di progetto, utilizzando il meccanismo dei \href{https://git-scm.com/book/en/v2/Git-Tools-Submodules}{submodule}, che verrà reso disponibile all'indirizzo:
+
+\begin{center}
+  \href{https://github.com/GruppOne/stalker}{https://github.com/GruppOne/stalker}
+\end{center}
+
+All'interno del file \verb|README.md| presente nella radice di tale repository verranno fornite le istruzioni di installazione del prodotto.
+
+% par:consegna_del_prodotto (end)
+
+\subsubsection{Strumenti di supporto}%
+\label{subs:gestione_della_configurazione/strumenti_di_supporto}
+
 
 % par:implementazione_del_processo (end)
 
