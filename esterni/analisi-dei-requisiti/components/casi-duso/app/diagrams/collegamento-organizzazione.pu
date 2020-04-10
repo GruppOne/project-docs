@@ -6,16 +6,19 @@ actor :server LDAP: as A4
 
 rectangle {
   together {
-    usecase (UUC8) as "UUC8\nCollegamento organizzazione"
+    usecase (UUC8) as "UUC8\nCollegamento organizzazione\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
     usecase (UUC9) as "UUC9\nCollegamento organizzazione pubblica"
     usecase (UUC10) as "UUC10\nCollegamento organizzazione privata"
+    usecase (UUC17) as "UUC17\nVisualizzazione errore\nrete mancante"
   }
 }
 
 :A3: -- (UUC8)
+(UUC8) <.left. (UUC17) : <<extends>>
 (UUC8) <|-- (UUC9)
 (UUC8) <|-- (UUC10)
 (UUC10) -- :A4:
+
 @enduml
 
 
