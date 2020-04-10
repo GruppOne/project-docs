@@ -15,17 +15,17 @@ Il processo di sviluppo fissa quali sono gli obiettivi dello sviluppo, dalla cre
 
 Raggruppa le seguenti attività:
 \begin{itemize}
-  \item Implementazione del processo.
-  \item Analisi dei requisiti del sistema.
-  \item Progettazione architetturale del sistema.
-  \item Analisi dei requisiti del software.
-  \item Progettazione architetturale del software.
-  \item Progettazione di dettaglio del software.
-  \item Codifica e test di unità del software.
-  \item Integrazione del software.
-  \item Test di integrazione.
-  \item Integrazione del sistema.
-  \item Test di sistema.
+  \item Implementazione del processo
+  \item Analisi dei requisiti del sistema
+  \item Progettazione architetturale del sistema
+  \item Analisi dei requisiti del software
+  \item Progettazione architetturale del software
+  \item Progettazione di dettaglio del software
+  \item Codifica e test di unità del software
+  \item Integrazione del software
+  \item Test di integrazione
+  \item Integrazione del sistema
+  \item Test di sistema
   \item Installazione del software.
   % XXX questo vuol dire sostanzialmente integrare le cose che cardin/vardanega ci dicono che non van bene
   \item Supporto all'accettazione del software.
@@ -35,6 +35,131 @@ Raggruppa le seguenti attività:
 \label{subs:sviluppo/attivita}
 
 % TODO sistemare da qui in poi
+
+% Implementazione del processo
+\paragraph{Implementazione del processo}%
+\label{par:implementazione_del_processo}
+
+L'implementazione del processo si articola nei seguenti compiti:
+
+\begin{itemize}
+  \item Definire o selezionare un modello del ciclo di vita del software appropriato all'ambito, all'entità e alla complessità del progetto.
+  \item È necessario:
+        \begin{itemize}
+          \item Documentare gli output.
+          \item Posizionare gli output nel processo di gestione della configurazione ed eseguire le modifiche di controllo in conformità con esso.
+          \item Documentare e risolvere problemi e non conformità riscontrati nei prodotti software.
+          \item Eseguire i processi di supporto come specificato nel contratto.
+        \end{itemize}
+  \item Selezionare, personalizzare e utilizzare gli standard, i metodi, gli strumenti e i linguaggi di programmazione (se non previsti nel contratto) che sono documentati e appropriati per lo svolgimento delle attività di processo di sviluppo.
+  \item Sviluppare piani che includano standard, metodi, strumenti, azioni e responsabilità specifici associati con lo sviluppo e la qualificazione di tutti i requisiti, compresa la sicurezza, per lo svolgimento delle attività di processo di sviluppo.
+  \item Le componenti non consegnabili possono essere impiegate nello sviluppo o nella manutenzione del software. Tuttavia deve essere garantito che le operazioni di sviluppo e manutenzione del software dopo la sua consegna all'acquirente siano indipendenti dalle componenti citate, altrimenti devono essere anch'esse considerate come consegnabili.
+\end{itemize}
+
+% Analisi dei requisiti del sistema
+\paragraph{Analisi dei requisiti del sistema}%
+\label{par:analisi_dei_requisiti_del_sistema}
+
+L'uso specifico previsto del sistema da sviluppare deve essere analizzato per specificare i requisiti di sistema. La specifica dei requisiti di sistema deve descrivere: funzioni e capacità del sistema; requisiti aziendali, organizzativi e dell'utente; requisiti di sicurezza, di interfaccia e prestazionali; vincoli di progettazione e requisiti di qualità. Le specifiche dei requisiti devono essere documentate e valutate considerando i criteri elencati di seguito:
+
+\begin{itemize}
+  \item tracciabilità delle esigenze di acquisizione
+  \item coerenza con le esigenze di acquisizione
+  \item testabilità
+  \item fattibilità della progettazione architettonica del sistema
+  \item fattibilità del funzionamento e della manutenzione.
+\end{itemize}
+
+
+% Progettazione architetturale del sistema
+\paragraph{Progettazione architetturale del sistema}%
+\label{par:progettazione_architetturale_del_sistema}
+
+L'architettura deve identificare elementi hardware, software e operazioni manuali ed è necessario garantire che tutti i requisiti di sistema siano assegnati tra gli elementi. L'architettura e i requisiti del sistema assegnati agli articoli devono essere documentati e valutati tenendo conto dei criteri elencati di seguito:
+
+\begin{itemize}
+  \item tracciabilità dei requisiti di sistema
+  \item coerenza con i requisiti di sistema
+  \item adeguatezza degli standard di progettazione e dei metodi utilizzati
+  \item fattibilità degli articoli software che soddisfano i requisiti assegnati
+  \item fattibilità di funzionamento e manutenzione.
+\end{itemize}
+
+
+% Analisi dei requisiti del software
+\paragraph{Analisi dei requisiti del software}%
+\label{par:analisi_dei_requisiti_del_software}
+
+Per ciascun elemento software (o elemento di configurazione software, se identificato), lo sviluppatore deve stabilire e documentare i requisiti software. Tra questi devono essere comprese le specifiche delle caratteristiche di qualità, funzionali e di prestazioni; specifiche di sicurezza, comprese quelle relative ai metodi di funzionamento, manutenzione e alla compromissione di informazioni sensibili; definizione dei dati e requisiti del database; requisiti di installazione e accettazione del prodotto software consegnato; documentazione per l'utente; requisiti di funzionamento ed esecuzione dell'utente; requisiti di manutenzione dell'utente.
+
+Lo sviluppatore deve valutare i requisiti software in base ai criteri elencati di seguito:
+
+\begin{itemize}
+  \item tracciabilità dei requisiti di sistema e della progettazione del sistema
+  \item coerenza esterna con i requisiti di sistema
+  \item consistenza interna
+  \item testabilità
+  \item fattibilità della progettazione del software
+  \item fattibilità di funzionamento e manutenzione.
+\end{itemize}
+
+Si devono condurre revisioni congiunte e, in caso di riuscita delle revisioni, deve essere stabilita una baseline per i requisiti dell'articolo software.
+
+% Progettazione architetturale del software
+\paragraph{Progettazione architetturale del software}%
+\label{par:progettazione_architetturale_del_software}
+
+Si devono trasformare i requisiti del software in un'architettura che ne descriva la struttura ad alto livello e ne identifichi i componenti. È necessario garantire che tutti i requisiti del software siano assegnati ai suoi componenti e ulteriormente perfezionati per facilitare la progettazione. Lo sviluppatore dovrebbe inoltre sviluppare e documentare le versioni preliminari della documentazione per l'utente.
+
+Lo sviluppatore deve valutare l'architettura dell'elemento software e i design dell'interfaccia e del database considerando i criteri elencati di seguito:
+
+\begin{itemize}
+  \item tracciabilità dei requisiti del software
+  \item coerenza esterna con i requisiti del software
+  \item coerenza interna tra i componenti del software
+  \item adeguatezza dei metodi di progettazione e degli standard utilizzati
+  \item fattibilità della progettazione dettagliata
+  \item fattibilità del funzionamento e della manutenzione.
+\end{itemize}
+
+
+% Progettazione di dettaglio del software
+\paragraph{Progettazione di dettaglio del software}%
+\label{par:progettazione_di_dettaglio_del_software}
+
+I componenti del software devono essere perfezionati in livelli inferiori contenenti unità software che possono essere codificate, compilate e testate. Si devono sviluppare e documentare dettagliatamente le interfacce esterne all'elemento software. La progettazione delle interfacce deve consentire la codifica senza la necessità di ulteriori informazioni e, se necessario, deve essere aggiornata la documentazione dell'utente. Si devono definire e documentare i requisiti dei test e la programmazione dei test dei software. I requisiti del test dovrebbero includere lo stress dell'unità software ai limiti dei suoi requisiti.
+
+Lo sviluppatore deve valutare la progettazione dettagliata del software e i requisiti dei test tenendo conto dei criteri elencati di seguito:
+
+\begin{itemize}
+  \item tracciabilità dei requisiti dell'articolo software
+  \item coerenza esterna con la progettazione architettonica
+  \item coerenza interna tra componenti software e unità software
+  \item adeguatezza dei metodi di progettazione e degli standard utilizzati
+  \item fattibilità del test
+  \item fattibilità di funzionamento e manutenzione.
+\end{itemize}
+
+
+% Codifica e test di unità del software
+\paragraph{Codifica e test di unità del software}%
+\label{par:codifica_e_test_di_unita_del_software}
+
+Si devono sviluppare e documentare ogni unità software, oltre a procedure di test e dati per testarle. Deve essere testata ogni unità software assicurando che soddisfi i suoi requisiti. I risultati delle prove devono essere documentati. Se necessario devono essere aggiornati la documentazione dell'utente, i requisiti di prova e la programmazione dell'integrazione del software.
+
+Lo sviluppatore deve valutare il codice del software e i risultati dei test considerando i criteri elencati di seguito:
+
+\begin{itemize}
+  \item tracciabilità dei requisiti e progettazione del software
+  \item coerenza esterna con i requisiti e la progettazione del software
+  \item coerenza interna tra i singoli requisiti
+  \item copertura dei test di unità
+  \item adeguatezza dei metodi di codifica e degli standard utilizzati
+  \item fattibilità dell'integrazione software e dei test
+  \item fattibilità del funzionamento e della manutenzione.
+\end{itemize}
+
+% TODO riscritto fino a qui
 
 \paragraph{Analisi dei requisiti}%
 \label{par:analisi_dei_requisiti}
