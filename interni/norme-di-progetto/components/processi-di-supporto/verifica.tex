@@ -15,12 +15,26 @@ Si deve verificare qualsiasi prodotto intermedio, pertanto sia documentazione ch
 Il processo di verifica è il processo che controlla e garantisce che i prodotti di una determinata attività soddisfino i requisiti e le condizioni che quel prodotto deve avere. Il processo di verifica si integra in toto con gli altri processi, in particolare con quello di sviluppo, e offre attività di revisione, analisi e test. È composto da due attività:
 
 \begin{itemize}
-  \item Implementazione di processo
+  \item Implementazione del processo
   \item Verifica.
 \end{itemize}
 
 \subsubsection{Attività}%
 \label{subs:verifica/attivita}
+
+\paragraph{Implementazione del processo}%
+\label{par:implementazione_di_processo}
+
+% TODO scrivere
+
+% par:implementazione_di_processo (end)
+
+\paragraph{Verifica}%
+\label{par:verifica}
+
+% TODO scrivere
+
+% par:verifica (end)
 
 \paragraph{Analisi statica}%
 \label{par:analisi_statica}
@@ -105,6 +119,11 @@ I test di regressione servono per accertare che le modifiche apportate non compo
 I test di accettazione verificano il completo soddisfacimento dei requisiti utente.
 Sono eseguiti in collaborazione con il committente.
 
+\subsubsection{Procedure}%
+\label{subs:procedure}
+
+% subs:procedure (end)
+
 \subsubsection{Strumenti di supporto}%
 \label{subs:verifica/strumenti}
 
@@ -112,31 +131,27 @@ Sono eseguiti in collaborazione con il committente.
 \label{par:code_review}
 
 Il processo di verifica avviene principalmente attraverso il meccanismo delle \href{https://github.com/features/code-review/}{Code Review} offerto da GitHub.
-Lo stretto legame con lo strumento di versionamento permette di svolgere la verifica in maniera incrementale, procedendo di pari passo con l'aggiunta di contenuto sia ai documenti che, in futuro, al codice sorgente.
-
-Resta inteso che all'avvicinarsi dell'approvazione di un documento è appropriato effettuare una lettura anche del documento nel suo insieme.
+Lo stretto legame con lo strumento di versionamento permette di svolgere la verifica in maniera incrementale, procedendo di pari passo con l'aggiunta di contenuto sia ai documenti che al codice sorgente.
 
 % par:code_review (end)
 
-\subparagraph{Code owners}%
-\label{subp:code_owners}
+% \subparagraph{Code owners}%
+% \label{subp:code_owners}
 
-Abbiamo adattato alle nostre necessità la feature \href{https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners}{Code Owners} offerta da GitHub.
-All'interno del file \verb|CODEOWNERS| posizionato nella cartella \verb|.github| nella radice del repository, abbiamo definito due code owner per ogni documento di progetto.
-Ogni volta che viene aperta una \glossario{Pull Request} che modifica alcuni file, i rispettivi code owner vengono notificati automaticamente e viene loro richiesta una verifica dei cambiamenti effettuati.
+% Abbiamo adattato alle nostre necessità la feature \href{https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners}{Code Owners} offerta da GitHub.
+% All'interno del file \verb|CODEOWNERS| posizionato nella cartella \verb|.github| nella radice del repository, abbiamo definito due code owner per ogni documento di progetto.
+% Ogni volta che viene aperta una \glossario{Pull Request} che modifica alcuni file, i rispettivi code owner vengono notificati automaticamente e viene loro richiesta una verifica dei cambiamenti effettuati.
 
-L'integrazione delle modifiche nella branch di default del repository è condizionata al superamento di queste verifiche.
+% L'integrazione delle modifiche nella branch di default del repository è condizionata al superamento di queste verifiche.
 
 \paragraph{GitHub Actions}%
 \label{par:github_actions}
 
-GruppOne utilizzerà ove possibile la feature \href{https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-github-actions}{GitHub Actions} al fine di automatizzare quanti più processi di verifica possibile.
+GruppOne utilizzerà ove possibile la feature \href{https://help.github.com/en/actions/automating-your-workflow-with-github-actions/about-github-actions}{GitHub Actions} al fine di automatizzare quante più attività di verifica possibili.
 
 È infatti possibile definire o riutilizzare delle action per rendere meno onerose sia l'analisi statica che dinamica del codice, e contemporaneamente facilitare molte delle attività e dei compiti svolti dai membri del team.
 
 La configurazione delle action si trova in file \glossario{YAML} posizionati nella cartella \verb|.github/workflows| del repository a cui vengono applicate.
-
-Un primo esempio di utilizzo si può trovare nella action \href{https://github.com/marketplace/actions/commitsar-action}{Commitsar Action}, uno strumento a configurazione pressoché nulla che garantisce la conformità con la specifica dei commit convenzionali.
 
 % par:github_actions (end)
 
