@@ -199,57 +199,6 @@ in cui ogni elemento ha un diverso significato:
         \end{enumerate}
 \end{description}
 
-\subparagraph{Casi d'uso}%
-\label{subp:casi_d'uso}
-I diagrammi dei casi d'uso descrivono le funzioni e i servizi offerti dal prodotto agli attori che interagiscono con il sistema. Ogni caso d'uso ha:
-
-\begin{itemize}
-  \item Una rappresentazione testuale
-  \item Una rappresentazione grafica.
-\end{itemize}
-
-Nel presente paragrafo si descrive la prima mentre nel successivo verrà descritta la seconda.
-Un generico caso d'uso è caratterizzato da:
-\begin{description}
-  \item [Sigla del caso d'uso] per riflettere più chiaramente il sistema che stiamo sviluppando anteponiamo una lettera maiuscola al caso d'uso.
-        Useremo:
-        \begin{description}
-          \item [A] per distinguere i casi d'uso validi nell'interfaccia web.
-          \item [U] per distinguere i casi d'uso validi nell'applicazione.
-        \end{description}
-  \item [Titolo] breve titolo del caso d'uso.
-  \item [Codice] codice identificativo del caso d'uso. Ogni caso d'uso può essere suddiviso in altri sottocasi. La denominazione convenzionale è la seguente:
-        \begin{description}
-          \item [Caso d'uso] [A/U]UC[codice numerico]
-          \item [Sottocaso d'uso] [A/U]UC[codice numerico del genitore].[codice numerico del sottocaso].
-        \end{description}
-        Ad esempio, il primo caso d'uso relativo all'interfaccia web avrà codice identificativo AUC1 mentre i relativi sottocasi saranno AUC1.1 AUC1.2 AUC1.3..
-  \item [Attore primario] attore principale coinvolto nel caso d'uso.
-  \item [Attori secondari (opzionale)] attori secondari coinvolti nel caso d'uso.
-  \item [Precondizione] condizione in cui si trovano gli attori prima del verificarsi del caso d'uso.
-  \item [Postcondizione] condizione in cui si trovano gli attori dopo il verificarsi del caso d'uso.
-  \item [Scenario principale] sequenza di azioni svolte dall'attore per portare a compimento il caso d'uso.
-  \item [Inclusioni (opzionale)] il caso d'uso incluso è incondizionatamente eseguito dal caso d'uso che lo include.
-  \item [Estensioni (opzionale)] sequenza di possibilità dell'attore al verificarsi di eventi anomali o di situazioni di errore.
-\end{description}
-
-\subparagraph{Diagrammi UML dei casi d'uso}%
-\label{subp:diagrammi_UML_dei_casi_d'uso}
-I diagrammi dei casi d'uso forniscono una rappresentazione grafica del caso d'uso che si sta descrivendo. I principali elementi di un diagramma UML sono:
-\begin{itemize}
-  \item Attori
-  \item Scenario
-  \item Use case.
-\end{itemize}
-Gli attori che interagiscono con il sistema si trovano fuori dallo scenario, mentre gli use case sono parte integrante dello scenario.
-I collegamenti tra attori e casi d'uso, e tra quest'ultimi e altri casi d'uso, avvengono tramite legami rappresentati mediante linee.
-Possono essere di quattro differenti tipi:
-\begin{description}
-  \item [Associazione] l'associazione è la comunicazione diretta tra attore e use case. Rappresenta la partecipazione dell'attore al caso d'uso a cui è legato.
-  \item [Inclusione] L'inclusione è un legame diretto stretto tra due use case. Dati due casi d'uso A e B, si dice che A include B se ogni istanza di A esegue B. B è incluso nell'esecuzione di A e la responsabilità di esecuzione di B è unicamente di A.
-  \item [Estensione] L'estensione aumenta le funzionalità di uno use case. Dati due casi d'uso A e B, si dice che B estende A se A esegue B solo a determinate condizioni. L'esecuzione di B interrompe A e per questo motivo viene utilizzata prevalentemente per gestire errori e eccezioni.
-  \item [Generalizzazione] La generalizzazione è un legame tra attori o più raramente tra use case. Dati due casi d'uso A e B, A è generalizzazione di B se condivide almeno le funzionalità di A. B può modificare le funzionalità di A, mentre tutte le funzionalità non ridefinite si mantengono identiche a quelle di A.
-\end{description}
 
 \paragraph{Progettazione}%
 \label{par:progettazione}
@@ -323,6 +272,163 @@ Tali diagrammi includono:
   \item Diagrammi di sequenza: definiscono come gli oggetti collaborano tra di loro per riprodurre un comportamento comune.
 \end{itemize}
 Nei prossimi paragrafi verranno presentate le norme a cui i progettisti dovranno attenersi nella produzione dei diagrammi.
+
+\paragraph{Codifica e test di unità del software}%
+\label{par:codifica_test_software}
+L'attività di codifica consiste nell'implementazione delle specifiche del prodotto definite nelle attività precedenti.
+Questa attività prevede di sviluppare e documentare adeguatamente ogni componente software e le procedure di test necessari per quest'ultimi.
+Questa attività viene svolta dal ruolo del programmatore.
+Il programmatore deve sviluppare e testare ogni elemento software assicurandosi che rispettino i requisiti definiti, questi risultati andranno adeguatamente documentati.
+Il programmatore deve valutare il codice e testarne i risultati tenendo in considerazione i seguenti criteri:
+\begin{itemize}
+    \item tracciabilità dei requisiti e della progettazione del componente software
+    \item consistenza con i requisiti e della progettazione
+    \item consistenza interna tra gli elementi
+    \item copertura dei test di unità
+    \item appropriatezza dei metodi di codifica e degli standard utilizzati
+    \item fattibilità dell'integrazione e testing del software
+    \item fattibilità della manutenzione del software.
+\end{itemize}
+
+\paragraph{Integrazione del software}%
+\label{par:integrazione_software}
+L'attività di integrazione si impone di pianificare ed effettuare l'integrazione delle componenti software, questa pianificazione deve includere requisiti, procedure, dati e responsabilità per i test e va adeguatamente documentata.
+Il programmatore deve integrare le componenti e i test nel modo in cui sono stati sviluppati e seguendo il piano di integrazione, deve assicurarsi inoltre che ogni insieme di componenti soddisfi i requisiti del singolo componente e del piano di integrazione.
+Il programmatore deve sviluppare e documentare, per ogni requisito di integrazione, un insieme di test e procedure da effettuare alla conclusione dell'attività di integrazione.
+Il programmatore deve valutare il piano di integrazione, il codice e i test generati durante questa attività secondo i seguenti criteri:
+\begin{itemize}
+  \item tracciabilità dei requisiti e della progettazione del componente software
+  \item consistenza con i requisiti e della progettazione
+  \item consistenza interna tra gli elementi
+  \item copertura dei test di unità
+  \item appropriatezza dei metodi di codifica e degli standard utilizzati
+  \item fattibilità dell'integrazione e testing del software
+  \item fattibilità della manutenzione del software.
+\end{itemize}
+
+\paragraph{Test di integrazione}%
+\label{par:test_integrazione}
+L'attività si pone come obiettivo di testare ogni componente software secondo i test di integrazione definiti nel piano di integrazione e documentarne i risultati.
+Il programmatore deve effettuare test di integrazione al fine di verificare i requisiti di accettazione per l'elemento testato, deve inoltre assicurarsi che ogni requisito di integrazione venga testato e documentare i risultati ottenuti.
+Il programmatore deve valutare i test di integrazione e i loro risultati secondo i seguenti criteri:
+\begin{itemize}
+  \item copertura dei test di integrazione
+  \item conformità dei risultati con quelli attesi
+  \item fattibilità dei test e dell'integrazione di sistema, quando effettuata
+  \item fattibilità della manutenzione del software.
+\end{itemize}
+Lo sviluppatore inoltre deve completare delle verifiche sul lavoro svolto, se la verifica ha successo lo sviluppatore dovrà:
+\begin{itemize}
+  \item aggiornare e preparare il prodotto in vista dell'integrazione e dei test di sistema, per l'installazione e il supporto all'accettazione del software
+  \item fissare una baseline di integrazione per il codice e la progettazione del software.
+\end{itemize}
+
+\paragraph{Integrazione di sistema}%
+\label{par:integrazione_sistema}
+L'attività consiste nell'integrare tutte differenti configurazioni del software in un unico sistema, quest'ultimo deve poi essere testato e documentato.
+Il programmatore deve integrare ogni configurazione del software, testare l'aggregato risultante e documentare i risultati.
+Deve inoltre definire requisiti, test e procedure per testare l'integrazione di sistema e assicurarsi che il sistema integrato sia pronto per l'attività di test.
+Il sistema integrato deve essere valutato dal programmatore secondo i seguenti criteri:
+\begin{itemize}
+  \item copertura nei test dei requisiti di sistema
+  \item appropriatezza delle metodologie e degli standard usati per i test
+  \item conformità dei risultati con quelli attesi
+  \item fattibilità dei test e dell'integrazione di sistema, quando effettuata
+  \item fattibilità della manutenzione del software.
+\end{itemize}
+
+\paragraph{Test di sistema}%
+\label{par:test_sistema}
+Questa attività consiste nell'atto di testare, in accordo con i requisiti di sistema, il sistema integrato da parte del programmatore.
+Lo sviluppare deve inoltre valutare il sistema secondo i seguenti criteri:
+\begin{itemize}
+  \item copertura nei test dei requisiti di sistema
+  \item conformità dei risultati a quelli attesi
+  \item fattibilità della manutenzione del software.
+\end{itemize}
+
+\paragraph{Installazione}%
+\label{par:installazione}
+L'attività di installazione consiste nello sviluppo di un piano di installazione per il prodotto software in un determinato ambiente.
+Questa attività verrà definitiva concordemente con quanto scritto nella sezione: §~\ref{par:rilascio_esterno_di_versioni_del_prodotto}
+
+\paragraph{supporto all'accettazione del prodotto}%
+\label{par:supporto_accettazione_prodotto}
+Questa attività si pone come obiettivo il supporto da parte del gruppo al feedback di accettazione del committente.
+I membri del gruppo devono completare e consegnare il software prodotto come specificato nel contrato con il committente
+
+\subsubsection{Metriche}%
+\label{subs:sviluppo/metriche}
+
+\paragraph{MPS-ROS: Requisiti obbligatori soddisfatti}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPS-ROS_requisiti_obbligatori_soddisfatti}
+
+La metrica requisiti obbligatori soddisfatti indica la percentuale di requisiti obbligatori soddisfatti sul numero totale di requisiti obbligatori. La formula è la seguente:
+\[
+  \frac{requisiti\ obbligatori\ soddisfatti}{requisiti\ obbligatori\ totali}\cdot 100
+\]
+
+\paragraph{MPS-NFV: Nomi di file e variabili non normati}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPS-NFV_nomi_file_variabili_non_normati}
+
+I nomi dei file o delle variabili devono seguire delle specifiche regole per essere più chiari possibile.
+
+\textbf{Metrica:} numero di nomi di variabili o di titoli di metodi o classi che non rispettano le norme stabilite.
+
+\paragraph{MPS-CNN: Commenti non normati}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPS-CNN_commenti_non_normati}
+
+I commenti devono essere scritti seguendo le norme indicate per essere comprensibili.
+
+\textbf{Metrica:} numero di commenti che non rispettano le norme indicate.
+
+\paragraph{MPS-CCE: Complessità ciclomatica eccessiva}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPS-CCE_complessita_ciclomatica_eccessiva}
+
+Il grado di difficoltà nel testare un metodo è proporzionale al numero di cammini linearmente indipendenti: più è alto il numero di cammini, più è alto il grado di complessità. Ne deriva inoltre un'esecuzione più lenta del metodo, è quindi buona norma limitare il numero massimo di cammini. La formula che calcola la complessità ciclomatica è la seguente:
+\[
+  v(G) = e - n + p
+\]
+dove:
+\begin{description}
+  \item[v(G):] complessità ciclomatica del grafo G. % chktex 36
+  \item[e:] numero di archi del grafo.
+  \item[n:] numero di nodi del grafo.
+  \item[p:] numero di componenti connesse.
+\end{description}
+\textbf{Metrica:} numero di metodi che hanno \[v(G) > 3.\]
+
+\paragraph{MPS-ICC: Classi che implementano classi concrete}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPS-ICC_classi_implementano_concrete}
+L'ereditarietà tra classi andrebbe evitata poiché la presenza di dipendenze tra più componenti ne ostacola la modifica e la verifica.
+
+\textbf{Metrica:} numero di classi che ereditano un'altra classe concreta.
+
+% par:MPS-014_classi_implementano_concrete (end)
+
+\subsubsection{Procedure}%
+\label{subs:procedure}
+
+\paragraph{Aggiunta diagramma UML}%
+\label{par:aggiunta_uml}
+Per aggiungere un elemento ad un diagramma UML lo sviluppatore deve attenersi alla seguente sintassi a seconda della tipologia di diagramma in uso.
+\subparagraph{Diagrammi UML dei casi d'uso}%
+\label{subp:diagrammi_UML_dei_casi_d'uso}
+I diagrammi dei casi d'uso forniscono una rappresentazione grafica del caso d'uso che si sta descrivendo. I principali elementi di un diagramma UML sono:
+\begin{itemize}
+  \item Attori
+  \item Scenario
+  \item Use case.
+\end{itemize}
+Gli attori che interagiscono con il sistema si trovano fuori dallo scenario, mentre gli use case sono parte integrante dello scenario.
+I collegamenti tra attori e casi d'uso, e tra quest'ultimi e altri casi d'uso, avvengono tramite legami rappresentati mediante linee.
+Possono essere di quattro differenti tipi:
+\begin{description}
+  \item [Associazione] l'associazione è la comunicazione diretta tra attore e use case. Rappresenta la partecipazione dell'attore al caso d'uso a cui è legato.
+  \item [Inclusione] L'inclusione è un legame diretto stretto tra due use case. Dati due casi d'uso A e B, si dice che A include B se ogni istanza di A esegue B. B è incluso nell'esecuzione di A e la responsabilità di esecuzione di B è unicamente di A.
+  \item [Estensione] L'estensione aumenta le funzionalità di uno use case. Dati due casi d'uso A e B, si dice che B estende A se A esegue B solo a determinate condizioni. L'esecuzione di B interrompe A e per questo motivo viene utilizzata prevalentemente per gestire errori e eccezioni.
+  \item [Generalizzazione] La generalizzazione è un legame tra attori o più raramente tra use case. Dati due casi d'uso A e B, A è generalizzazione di B se condivide almeno le funzionalità di A. B può modificare le funzionalità di A, mentre tutte le funzionalità non ridefinite si mantengono identiche a quelle di A.
+\end{description}
 
 \subparagraph{Diagrammi delle classi}%
 \label{subp:diagrammi_delle_classi}
@@ -589,215 +695,17 @@ Esistono diverse etichette per identificare i frame d'interazione. I progettisti
   \item [Ad]: si utilizza per racchiudere un intero diagramma di sequenza.
 \end{description}
 
-\paragraph{Codifica e test di unità del software}%
-\label{par:codifica_test_software}
-L'attività di codifica consiste nell'implementazione delle specifiche del prodotto definite nelle attività precedenti.
-Questa attività prevede di sviluppare e documentare adeguatamente ogni componente software e le procedure di test necessari per quest'ultimi.
-Questa attività viene svolta dal ruolo del programmatore.
-Il programmatore deve sviluppare e testare ogni elemento software assicurandosi che rispettino i requisiti definiti, questi risultati andranno adeguatamente documentati.
-Il programmatore deve valutare il codice e testarne i risultati tenendo in considerazione i seguenti criteri:
+\paragraph{Aggiunta del codice}%
+\label{par:aggiunta_codice}
+Lo sviluppatore per aggiungere una funzionalità o semplicemente del codice deve attenersi alla seguente procedura:
 \begin{itemize}
-    \item tracciabilità dei requisiti e della progettazione del componente software
-    \item consistenza con i requisiti e della progettazione
-    \item consistenza interna tra gli elementi
-    \item copertura dei test di unità
-    \item appropriatezza dei metodi di codifica e degli standard utilizzati
-    \item fattibilità dell'integrazione e testing del software
-    \item fattibilità della manutenzione del software.
+  \item aprire una branch da master nella repository in cui si vuole aggiungere la funzionalità e aprire una pull-request dalla branch appena creata
+  \item implementare la funzionalità seguendo le regole definite dagli strumenti di supporto per la codifica
+  \item implementare i test per la funzionalità e assicurarsi che siano rispettati i vincoli imposti dagli strumenti di supporto ai test di unità
+  \item richiedere una review del codice
+  \item se la review ha esito negativo sistemare i problemi rilevati e in seguito procedere con l'approvazione del codice e quindi con il merge del branch nel ramo master della repository.
 \end{itemize}
 
-\paragraph{Integrazione del software}%
-\label{par:integrazione_software}
-L'attività di integrazione si impone di pianificare ed effettuare l'integrazione delle componenti software, questa pianificazione deve includere requisiti, procedure, dati e responsabilità per i test e va adeguatamente documentata.
-Il programmatore deve integrare le componenti e i test nel modo in cui sono stati sviluppati e seguendo il piano di integrazione, deve assicurarsi inoltre che ogni insieme di componenti soddisfi i requisiti del singolo componente e del piano di integrazione.
-Il programmatore deve sviluppare e documentare, per ogni requisito di integrazione, un insieme di test e procedure da effettuare alla conclusione dell'attività di integrazione.
-Il programmatore deve valutare il piano di integrazione, il codice e i test generati durante questa attività secondo i seguenti criteri:
-\begin{itemize}
-  \item tracciabilità dei requisiti e della progettazione del componente software
-  \item consistenza con i requisiti e della progettazione
-  \item consistenza interna tra gli elementi
-  \item copertura dei test di unità
-  \item appropriatezza dei metodi di codifica e degli standard utilizzati
-  \item fattibilità dell'integrazione e testing del software
-  \item fattibilità della manutenzione del software.
-\end{itemize}
-
-\paragraph{Test di integrazione}%
-\label{par:test_integrazione}
-L'attività si pone come obiettivo di testare ogni componente software secondo i test di integrazione definiti nel piano di integrazione e documentarne i risultati.
-Il programmatore deve effettuare test di integrazione al fine di verificare i requisiti di accettazione per l'elemento testato, deve inoltre assicurarsi che ogni requisito di integrazione venga testato e documentare i risultati ottenuti.
-Il programmatore deve valutare i test di integrazione e i loro risultati secondo i seguenti criteri:
-\begin{itemize}
-  \item copertura dei test di integrazione
-  \item conformità dei risultati con quelli attesi
-  \item fattibilità dei test e dell'integrazione di sistema, quando effettuata
-  \item fattibilità della manutenzione del software.
-\end{itemize}
-Lo sviluppatore inoltre deve completare delle verifiche sul lavoro svolto, se la verifica ha successo lo sviluppatore dovrà:
-\begin{itemize}
-  \item aggiornare e preparare il prodotto in vista dell'integrazione e dei test di sistema, per l'installazione e il supporto all'accettazione del software
-  \item fissare una baseline di integrazione per il codice e la progettazione del software.
-\end{itemize}
-
-\paragraph{Integrazione di sistema}%
-\label{par:integrazione_sistema}
-L'attività consiste nell'integrare tutte differenti configurazioni del software in un unico sistema, quest'ultimo deve poi essere testato e documentato.
-Il programmatore deve integrare ogni configurazione del software, testare l'aggregato risultante e documentare i risultati.
-Deve inoltre definire requisiti, test e procedure per testare l'integrazione di sistema e assicurarsi che il sistema integrato sia pronto per l'attività di test.
-Il sistema integrato deve essere valutato dal programmatore secondo i seguenti criteri:
-\begin{itemize}
-  \item copertura nei test dei requisiti di sistema
-  \item appropriatezza delle metodologie e degli standard usati per i test
-  \item conformità dei risultati con quelli attesi
-  \item fattibilità dei test e dell'integrazione di sistema, quando effettuata
-  \item fattibilità della manutenzione del software.
-\end{itemize}
-
-\paragraph{Test di sistema}%
-\label{par:test_sistema}
-Questa attività consiste nell'atto di testare, in accordo con i requisiti di sistema, il sistema integrato da parte del programmatore.
-Lo sviluppare deve inoltre valutare il sistema secondo i seguenti criteri:
-\begin{itemize}
-  \item copertura nei test dei requisiti di sistema
-  \item conformità dei risultati a quelli attesi
-  \item fattibilità della manutenzione del software.
-\end{itemize}
-
-\paragraph{Installazione}%
-\label{par:installazione}
-L'attività di installazione consiste nello sviluppo di un piano di installazione per il prodotto software in un determinato ambiente.
-Questa attività verrà definitiva concordemente con quanto scritto nella sezione: §~\ref{par:rilascio_esterno_di_versioni_del_prodotto}
-
-\paragraph{supporto all'accettazione del prodotto}%
-\label{par:supporto_accettazione_prodotto}
-Questa attività si pone come obiettivo il supporto da parte del gruppo al feedback di accettazione del committente.
-I membri del gruppo devono completare e consegnare il software prodotto come specificato nel contrato con il committente
-
-\subparagraph{Nomi dei file e delle variabili}%
-\label{subp:nomi_file_e_variabili}
-I nomi dei file:
-\begin{itemize}
-  \item Devono essere univoci e significativi
-  \item Devono rispettare le condizioni del linguaggio che contengono, se presenti.
-\end{itemize}
-I nomi delle variabili:
-\begin{itemize}
-  \item Devono essere chiari, descrittivi e possibilmente brevi.
-  \item Devono essere significativi, relativi al contesto e alla loro utilità.
-  \item Non devono somigliare tra loro, per evitare confusione a chi scrive il codice e a chi lo legge.
-  \item Devono rispettare le condizioni del linguaggio in cui vengono usate, se presenti.
-  \item Devono essere necessariamente scritti in lingua inglese.
-\end{itemize}
-
-\subparagraph{Commenti}%
-\label{subp:commenti}
-Il programmatore è tenuto ad inserire commenti dove ritiene che questo possa migliorare la leggibilità del codice.
-In questo caso, i commenti devono essere chiari e nello stesso tempo sintetici, per non distrarre dal contesto.
-Per contro, i commenti vanno omessi dove il codice è auto-esplicativo.
-
-\subparagraph{Complessità ciclomatica}%
-\label{subp:complessita_ciclomatica}
-Va evitato il più possibile l'annidamento di più strutture di controllo.
-Una buona prassi da rispettare è non andare oltre i tre livelli di annidamento, in quanto semplifica la leggibilità e il tempo di debugging.
-
-\subparagraph{Ereditarietà}%
-\label{subp:ereditarieta}
-Una cattiva prassi è utilizzare l'ereditarietà tra classi concrete, ovvero che hanno stato, a causa del riuso del codice e dei problemi ``a cascata'' che si possono generare da una classe base alle sue classi derivate.
-L'ottima prassi da applicare è utilizzare l'ereditarietà di interfacce, in modo da riutilizzare il comportamento dei metodi astratti definiti nelle interfacce.
-Ergo, è da preferire la composizione sopra l'ereditarietà, adottando il principio di “Composition over inheritance”.
-
-\subparagraph{Indentazione}%
-\label{subp:indentazione}
-Le indentazioni devono rispettare le seguenti specifiche:
-\begin{itemize}
-  \item I blocchi annidati devono essere indentati con quattro (4) spazi
-  \item Non è possibile utilizzare tabulazioni per l'indentatura, è obbligatorio utilizzare il numero di spazi appropriato
-  \item Tutto il codice facente parte di un blocco deve essere indentato a livello di quel blocco.
-\end{itemize}
-
-\subparagraph{Parentesizzazione}%
-\label{subp:parentesizzazione}
-La parentesizzazione deve rispettare le seguenti norme:
-\begin{itemize}
-  \item I blocchi di codice devono essere necessariamente racchiusi tra parentesi graffe
-  \item Le parentesi graffe iniziano sempre nella stessa riga del codice che le precede.
-\end{itemize}
-% subp:parentesizzazione (end)
-
-\subparagraph{Lunghezza dei metodi}%
-\label{subp:lunghezza_metodi}
-Quando possibile è auspicabile limitare la lunghezza dei metodi per circoscrivere lo scopo del metodo e aumentarne la leggibilità.
-% subp:lunghezza_metodi (end)
-
-\subparagraph{TODO}%
-\label{subp:TODO}
-Gli sviluppatori sono invitati a usare il commento ``TODO'' per il codice temporaneo e per il codice ancora da implementare così da facilitare la comprensione del compito ancora da svolgere.
-Se i ``TODO'' hanno una data di scadenza essa va indicata nel commento.
-% subp:TODO (end)
-
-\subparagraph{Inizializzazione variabili}%
-\label{subp:inizializzazione_variabili}
-Le varabili andrebbero inizializzate il prima possibile: ad ogni definizione andrebbe affiancata l'inizializzazione della variabile, se ciò non è possibile va fatto quanto prima.
-% subp:inizializzazione_variabili (end)
-
-\subparagraph{Ricorsione}%
-\label{subp:ricorsione}
-La ricorsione come paradigma di programmazione va usata con moderazione poiché un uso sconsiderato può portare a una maggiore occupazione di memoria rispetto alla controparte iterativa.
-L'uso della ricorsione andrebbe motivato con appositi commenti.
-% subp:ricorsione (end)
-
-\subsubsection{Metriche}%
-\label{subs:sviluppo/metriche}
-
-\paragraph{MPS-ROS: Requisiti obbligatori soddisfatti}% in questo caso NON ci va il "\@". chktex 13
-\label{par:MPS-ROS_requisiti_obbligatori_soddisfatti}
-
-La metrica requisiti obbligatori soddisfatti indica la percentuale di requisiti obbligatori soddisfatti sul numero totale di requisiti obbligatori. La formula è la seguente:
-\[
-  \frac{requisiti\ obbligatori\ soddisfatti}{requisiti\ obbligatori\ totali}\cdot 100
-\]
-
-\paragraph{MPS-NFV: Nomi di file e variabili non normati}% in questo caso NON ci va il "\@". chktex 13
-\label{par:MPS-NFV_nomi_file_variabili_non_normati}
-
-I nomi dei file o delle variabili devono seguire delle specifiche regole per essere più chiari possibile.
-
-\textbf{Metrica:} numero di nomi di variabili o di titoli di metodi o classi che non rispettano le norme stabilite.
-
-\paragraph{MPS-CNN: Commenti non normati}% in questo caso NON ci va il "\@". chktex 13
-\label{par:MPS-CNN_commenti_non_normati}
-
-I commenti devono essere scritti seguendo le norme indicate per essere comprensibili.
-
-\textbf{Metrica:} numero di commenti che non rispettano le norme indicate.
-
-\paragraph{MPS-CCE: Complessità ciclomatica eccessiva}% in questo caso NON ci va il "\@". chktex 13
-\label{par:MPS-CCE_complessita_ciclomatica_eccessiva}
-
-Il grado di difficoltà nel testare un metodo è proporzionale al numero di cammini linearmente indipendenti: più è alto il numero di cammini, più è alto il grado di complessità. Ne deriva inoltre un'esecuzione più lenta del metodo, è quindi buona norma limitare il numero massimo di cammini. La formula che calcola la complessità ciclomatica è la seguente:
-\[
-  v(G) = e - n + p
-\]
-dove:
-\begin{description}
-  \item[v(G):] complessità ciclomatica del grafo G. % chktex 36
-  \item[e:] numero di archi del grafo.
-  \item[n:] numero di nodi del grafo.
-  \item[p:] numero di componenti connesse.
-\end{description}
-\textbf{Metrica:} numero di metodi che hanno \[v(G) > 3.\]
-
-\paragraph{MPS-ICC: Classi che implementano classi concrete}% in questo caso NON ci va il "\@". chktex 13
-\label{par:MPS-ICC_classi_implementano_concrete}
-L'ereditarietà tra classi andrebbe evitata poiché la presenza di dipendenze tra più componenti ne ostacola la modifica e la verifica.
-
-\textbf{Metrica:} numero di classi che ereditano un'altra classe concreta.
-
-% par:MPS-014_classi_implementano_concrete (end)
-
-% TODO scrivere procedure processo sviluppo?
-% \subsubsection{Procedure}%
-% \label{subs:procedure}
 
 % subs:procedure (end)
 
