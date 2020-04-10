@@ -12,12 +12,17 @@ actor :utente incognito: as A3.2
 
 rectangle {
   together {
-    usecase (UUC12.1) as "UUC12.1\nPassaggio a incognito"
-    usecase (UUC12.2) as "UUC12.2\nPassaggio a noto"
+    usecase (UUC12.1) as "UUC12.1\nPassaggio a incognito\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
+    usecase (UUC17) as "UUC17\nVisualizzazione errore\nrete mancante"
+    usecase (UUC12.2) as "UUC12.2\nPassaggio a noto\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
+
   }
 }
 
 :A3.1: -- (UUC12.1)
-:A3.2: -- (UUC12.2)
 
+:A3.2: -- (UUC12.2)
+(UUC12.1) <.left. (UUC17) : <<extends>>
+
+(UUC12.2) <- (UUC17) : <<extends>>
 @enduml
