@@ -5,6 +5,55 @@
 
 Le caratteristiche dello standard ISO/IEC 25010:2011 che il gruppo ha ritenuto rilevanti per il prodotto vengono elencate qui sotto, accompagnate dai valori desiderabili delle metriche definite nelle \textit{Norme di Progetto} per misurare il grado di raggiungimento della qualità di prodotto.
 
+\subsection{Qualità di documentazione}
+Qualità di documentazione come:
+\begin{itemize}
+  \item Completa
+  \item Leggibile
+  \item Corretta
+  \item Coerente
+  \item Modulare
+\end{itemize}
+\subsubsection{Metriche}%
+\label{par:metriche_doc}
+
+\textbf{MPS-IDG}: l'indice di Gulpease è definito nelle \textit{Norme di progetto} alla sezione 3.2.7.1.
+\begin{itemize}
+  \item Risultato: indice compreso tra 0 e 100 che stabilisce la leggibilità del testo in base ala lunghezza delle parole.
+  \item Valore ottimale: compreso tra 80 e 100.
+  \item Valore minimale: non inferiore a 50.
+\end{itemize}
+
+\textbf{MPS-IGF}: l'indice di Gunning Fog è definito nelle \textit{Norme di progetto} alla sezione 3.2.7.2.
+\begin{itemize}
+  \item Risultato: numero intero che indica il numero di anni minimi di educazione formale necessari a comprendere il testo.
+  \item Valore ottimale: compreso tra 9 e 10.
+  \item Valore minimale: inferiore a 12.
+\end{itemize}
+
+\textbf{MPS-CO}: l'indice di correttezza ortografica è definito nelle \textit{Norme di progetto} alla sezione 3.2.7.3.
+\begin{itemize}
+  \item Risultato: numero intero che rappresenta il numero di errori ortografici presenti nel testo.
+  \item Valore ottimale: 0.
+  \item Valore minimale: 0.
+\end{itemize}
+
+\subsection{Qualità di prodotto software}
+
+\subsubsection{Metriche}%
+\label{subs:metriche_funzionale}
+\begin{description}
+\item [[MPR-RS \textasciitilde] Percentuale di requisiti soddisfatti]: La completezza C del prodotto in relazione al numeri di requisiti soddisfatti verrà calcolata come \begin{equation} C = \frac{N_s}{N_{tot}}\\*100 \end{equation} con \(N_s\) numero di requisiti implementati e \(N_{tot}\) il numero di requisiti totali.
+\begin{itemize} \item Valore ammissibile: 100\% \item Valore ottimale: 100\% \end{itemize}
+\item [[MPR-SOF \textasciitilde] Semplicità delle funzioni]: Possiamo monitorare la modularità, analizzabilità e testabilità del prodotto valutando il numero di parametri per ogni funzione, meno saranno più il suo compito sarà specifico.
+  \begin{itemize}   \item Valore ammissibile: \leq{}  6 \item Valore ottimale: \leq{}  3 \end{itemize}
+\item [[MPR-SOC \textasciitilde] Semplicità delle classi]: Possiamo monitorare la modularità, analizzabilità e testabilità del prodotto valutando il numero di metodi per ogni classe, meno saranno più lo scopo di quella classe sarà specifico.
+  \begin{itemize} \item Valore ammissibile: \leq{}  10 \item Valore ottimale: \leq{}  5 \end{itemize}
+\item [[MPR-CC \textasciitilde] Complessità ciclomatica]: Monitoriamo la analizzabilità, modificabilità e testabilità del prodotto calcolando la complessità ciclomatica (\(CC\)) secondo la seguente formula: \begin{equation} CC = e - n + p \end{equation}. Dove \(e\) è il numero di archi del grafo formato da tutti i possibili esiti del programma, \(n\) è il numero di nodi del grafo e \(p\) è il numero di \glossario{componenti connesse} del grafo.
+  \begin{itemize} \item Valore ammissibile: \leq{}  7 \item Valore ottimale: \leq{}  3 \end{itemize}
+\end{description}
+
+% TODO - copiare descrizioni sotto nelle NDP
 
 \subsection{Appropriatezza funzionale}%
 \label{sub:appropriatezza_funzionale}
@@ -23,55 +72,17 @@ Le caratteristiche dello standard ISO/IEC 25010:2011 che il gruppo ha ritenuto r
       \begin{description}
         \item [[MPR-RS \textasciitilde] Percentuale di requisiti soddisfatti]: La completezza C del prodotto in relazione al numeri di requisiti soddisfatti verrà calcolata come \begin{equation} C = \frac{N_s}{N_{tot}}\\*100 \end{equation} con \(N_s\) numero di requisiti implementati e \(N_{tot}\) il numero di requisiti totali.
         \begin{itemize} \item Valore ammissibile: 100\% \item Valore ottimale: 100\% \end{itemize}
-\end{description}
+        \item [[MPR-SOF \textasciitilde] Semplicità delle funzioni]: Possiamo monitorare la modularità, analizzabilità e testabilità del prodotto valutando il numero di parametri per ogni funzione, meno saranno più il suo compito sarà specifico.
+          \begin{itemize}   \item Valore ammissibile: \leq{}  6 \item Valore ottimale: \leq{}  3 \end{itemize}
+        \item [[MPR-SOC \textasciitilde] Semplicità delle classi]: Possiamo monitorare la modularità, analizzabilità e testabilità del prodotto valutando il numero di metodi per ogni classe, meno saranno più lo scopo di quella classe sarà specifico.
+          \begin{itemize} \item Valore ammissibile: \leq{}  10 \item Valore ottimale: \leq{}  5 \end{itemize}
+        \item [[MPR-CC \textasciitilde] Complessità ciclomatica]: Monitoriamo la analizzabilità, modificabilità e testabilità del prodotto calcolando la complessità ciclomatica (\(CC\)) secondo la seguente formula: \begin{equation} CC = e - n + p \end{equation}. Dove \(e\) è il numero di archi del grafo formato da tutti i possibili esiti del programma, \(n\) è il numero di nodi del grafo e \(p\) è il numero di \glossario{componenti connesse} del grafo.
+          \begin{itemize} \item Valore ammissibile: \leq{}  7 \item Valore ottimale: \leq{}  3 \end{itemize}
+      \end{description}
 
   % subs:metriche_funzionale (end)
 
 % sub:appropriatezza_funzionale (end)
-
-\subsection{Performance}%
-\label{sub:performance}
- Questa caratteristica rappresenta la performance del prodotto relativamente alle risorse utilizzate in specifiche condizioni.
-  \subsubsection{Obiettivi}%
-  \label{subs:obiettivi_performance}
-      \begin{description}
-        \item [Risposta nel tempo]: Grado con cui i tempi di risposta e di elaborazione del prodotto rispettano i requisiti.
-        \item [Utilizzo delle risorse]: Grado con cui la quantità e il tipo di risorse usate dal prodotto rispettano i requisiti.
-        \item [Capacità]: Grado con cui il massimo limite di un parametro del prodotto rispetta i requisiti.
-      \end{description}
-  % subs:obiettivi_performance (end)
-
-  \subsubsection{Metriche}%
-  \label{subs:metriche_performance}
-    \begin{description}
-      \item [[MPR-IS \textasciitilde] apdex]: Apdex è una misura numerica della soddisfazione utente in relazione ai tempi di risposta del prodotto in vari casi. L'indice \(A_t\) si calcola come \begin{equation} A_t = \frac{C_s + \frac{C_a}{2}}{C_{tot}} \\ \end{equation} Con t tempo soglia della misura, \(C_s\) numero di casi misurati con tempo inferiore a t, \(C_a\) il numero di casi misurati con tempo compreso tra t e 4t ed \(C_{tot}\) numero di casi totali misurati.
-      \begin{itemize} \item Valore ammissibile: 0.6 \item Valore ottimale: 0.9 \end{itemize}
-    \end{description}
-  % subs:metriche_performance (end)
-
-% sub:performance (end)
-
-\subsection{Sicurezza}%
-\label{sub:sicurezza}
- Questa caratteristica indica il grado con cui il prodotto protegge e limita l'accesso a dati e informazioni in modo da rispettare i livelli di autorizzazione definiti.
-  \subsubsection{Obiettivi}%
-  \label{subs:obiettivi_sicurezza}
-      \begin{description}
-        \item [Riservatezza]: Grado con cui il prodotto garantisce che i dati siano accessibili solamente a entità autorizzate.
-        \item [Integrità]: Grado con cui il prodotto previene utilizzi e modifiche non autorizzate di computer, programmi e dati.
-        \item [Non-ripudiazione]: Grado con cui azioni o eventi che è provato siano avvenute non possano essere ripudiate successivamente.
-        \item [Autenticazione]: Grado con cui le azioni di un'entità possono essere collegate univocamente all'entità.
-        \item [Autenticità]: Grado con cui l'identità di un soggetto o risorsa può essere confermata.
-      \end{description}
-  % subs:obiettivi_sicurezza (end)
-
-  \subsubsection{Metriche}%
-  \label{subs:metriche_sicurezza}
-  \begin{description}
-  \item [[MPR-AS \textasciitilde] Superficie d'attacco]: possiamo monitorare la sicurezza del nostro prodotto e in particolare la riservatezza e l'integrità tramite il calcolo della superficie d'attacco, ossia i punti in cui una entità può provare a estorcere o inserire dati nel sistema.
-    \begin{itemize} \item Valore ammissibile: \leq{}  6  \item Valore ottimale: \leq{}  3 \end{itemize}
-  \end{description}
-  % subs:metriche_sicurezza (end)
 
 % sub:sicurezza (end)
 
@@ -103,51 +114,5 @@ Questa caratteristica rappresenta il grado di efficacia e efficienza con cui il 
 % subs:metriche_manutenibilita (end)
 
 % sub:manutenibilita (end)
-
-\subsection{Usabilità}%
-\label{sub:usabilita}
-Questa caratteristica rappresenta il grado con cui il prodotto può essere usato da un determinato utente per raggiungere obiettivi specifici con efficienza, efficacia e soddisfazione in un determinato contesto d'uso.
-\subsubsection{Obiettivi}%
-\label{subs:obiettivi_usabilita}
-      \begin{description}
-        \item [Apprendibilità]: Grado con cui il prodotto consente a un determinato utente di apprendere ad utilizzare il prodotto con efficienza, efficacia, libertà dai rischi, e soddisfazione.
-        \item [Operabilità]: Grado con un il prodotto presenta delle caratteristiche che lo rendono di semplice utilizzo.
-        \item [Protezione dagli errori]: Grado con cui il prodotto protegge l'utente dal commettere errori.
-        \item [Accessibilità]: Grado con cui il prodotto risulta utilizzabile da persone con caratteristiche e capacità varie per raggiungere un determinato obiettivo.
-      \end{description}
-% subs:obiettivi_usabilita (end)
-
-\subsubsection{Metriche}%
-\label{subs:metriche_usabilita}
-\begin{description}
-  \item [[MPR-IS \textasciitilde] Percentuale di interazioni sbagliate]: possiamo monitorare la protezione dagli errori del prodotto tramite le interazioni il cui esito si è discostato dall'obiettivo dell'utente rispetto a quelle totali. L'indice \(R_s\) si calcola come \(R_s = \frac{I_{fail}}{I_{tot}} \times 100 \). Dove \(I_{fail}\) sono le interazioni fallite mentre \(I_{tot}\) sono le interazioni totali.
-        \begin{itemize} \item Valore ammissibile: \leq{}  10 \%  \item Valore ottimale: \leq{}  2 \% \end{itemize}
-\end{description}
-% subs:metriche_usabilita (end)
-
-% sub:usabilita (end)
-
-\subsection{Affidabilità}%
-\label{sub:affidabilita}
-Questa caratteristica rappresenta il grado con cui il prodotto effettua specifici compiti sotto determinate condizioni per un periodo di tempo fissato.
-\subsubsection{Obiettivi}%
-\label{subs:obiettivi_affidabilita}
-      \begin{description}
-        \item [Maturità]: Grado con cui il prodotto rispetta i requisiti di affidabilità in condizioni normali.
-        \item [Disponibilità]: Grado con cui il prodotto risulta operativo e accessibile quando ne è richiesto l'uso.
-        \item [Tolleranza agli errori]: Grado con cui il prodotto continua ad operare in maniera corretta nonostante la presenza di errori software e hardware.
-        \item [Recuperabilità]: Grado con cui il prodotto, in caso di un'interruzione o di un errore, riesce a recuperare i dati coinvolti e ristabilire il corretto funzionamento del sistema.
-      \end{description}
-% subs:obiettivi_affidabilita (end)
-
-\subsubsection{Metriche}%
-\label{subs:metriche_affidabilita}
-\begin{description}
-  \item [[MPR-RS \textasciitilde] Percentuale Richieste soddisfatte]: possiamo monitorare la disponibilità e la maturità del prodotto tramite il numero di richieste fatte al software che hanno avuto successo rispetto al totale di richieste effettuate: \(\frac{R_{succ}}{R_{tot}} \). Dove \(R_{succ}\) sono le richieste effettuate con successo mentre \(R_{tot}\) sono le richieste totali.
-        \begin{itemize} \item Valore ammissibile: \le{}  90 \%  \item Valore ottimale: \le{}  98 \% \end{itemize}
-\end{description}
-% subs:metriche_affidabilita (end)
-
-% sub:affidabilita (end)
 
 \end{document}
