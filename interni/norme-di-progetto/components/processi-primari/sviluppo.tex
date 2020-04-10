@@ -155,8 +155,6 @@ Lo sviluppatore deve valutare il codice del software e i risultati dei test cons
   \item fattibilità del funzionamento e della manutenzione.
 \end{itemize}
 
-% TODO riscritto fino a qui
-
 \paragraph{Analisi dei requisiti}%
 \label{par:analisi_dei_requisiti}
 L'analisi dei requisiti è l'attività che studia e comprende il dominio applicativo del problema e ha come scopo quello di offrire i requisiti che dovranno essere soddisfatti dal software.
@@ -717,8 +715,11 @@ Lo sviluppatore per aggiungere una funzionalità o semplicemente del codice deve
 \subsubsection{Strumenti di supporto}%
 \label{subs:strumenti_di_supporto}
 
-\paragraph{PlantUML}%
-\label{par:plantuml}
+\paragraph{Strumenti utlizzati nella stesura della documentazione}%
+\label{par:strumenti_utlizzati_nella_stesura_della_documentazione}
+
+\subparagraph{PlantUML}%
+\label{subp:plantuml}
 Per la costruzione dei diagrammi UML il team ha deciso di utilizzare \glossario{PlantUML}\@.
 È un software open source che permette la costruzione di diagrammi UML a partire dalla scrittura di codice in un linguaggio di markup dedicato. GruppOne ha valutato positivamente tale strumento in quanto:
 
@@ -747,37 +748,11 @@ La corretta esecuzione del comando richiede di aver impostato la variabile d'amb
 
 In questo modo vengono generate le immagini che sono effettivamente incluse nei documenti dal comando dato in~\ref{par:LaTeX}.
 
-\subparagraph{Esempio diagramma PlantUML}%
-\label{subp:esempio_diagramma_plantuml}
+\href{https://plantuml.com/}{Sito web di PlantUML}
+% subp:plantuml (end)
 
-\begin{minted}{text}
-  @startuml
-  left to right direction
-  skinparam packageStyle rectangle
-  actor customer
-  actor clerk
-  rectangle checkout {
-    customer -- (checkout)
-    (checkout) .> (payment) : include
-    (help) .> (checkout) : extends
-    (checkout) -- clerk
-  }
-  @enduml
-\end{minted}
-
-Il risultato grafico del codice è presentato in~\ref{fig:esempio_caso_duso}
-
-\begin{figure}[H]%
-  \label{fig:esempio_caso_duso}
-  \includegraphics[width=8cm]{use-case-example.png}
-  \centering
-  \caption{diagramma dei casi d'uso realizzato con PlantUML}
-\end{figure}
-
-% subp:esempio_diagramma_plantuml (end)
-
-\paragraph{Package pgfgantt}%
-\label{par:pgfgantt}
+\subparagraph{Package pgfgantt}%
+\label{subp:pgfgantt}
 
 Per i diagrammi di Gantt il gruppo ha scelto di utilizzare pgfgantt, un package disponibile per \LaTeX{} che sfrutta il linguaggio \glossario{PGF} e il rispettivo omonimo interprete.
 PGF è in grado di produrre rappresentazioni grafiche vettoriali, e pgfgantt fornisce dei comandi \TeX{} che fungono da astrazioni per le direttive di basso livello.
@@ -785,6 +760,174 @@ Un diagramma di Gantt viene quindi costruito attraverso uno o più comandi di ti
 
 L'integrazione dei diagrammi nel documento avviene durante la compilazione del documento effettuata attraverso il comando dato in~\ref{par:LaTeX}.
 
-% par:pgfgantt (end)
+\href{http://texdoc.net/texmf-dist/doc/latex/pgfgantt/pgfgantt.pdf}{Link alla documentazione del pacchetto}
+% subp:pgfgantt (end)
 
+\subparagraph{ChkTex}%
+\label{subp:chktex}
+Per rilevare errori tipografici e sintattici il gruppo ha scelto di utilizzare \glossario{ChkTex} un \glossario{linter} per \LaTeX{}.
+
+\href{https://www.nongnu.org/chktex/}{Link allo strumento}
+% subp:chktex (end)
+
+
+\paragraph{Code editor utlizzati}%
+\label{par:code_editor}
+
+\subparagraph{MS-Visual Studio Code}%
+\label{subp:vscode}
+Come \glossario{code editor} è stato scelto Visual Studio Code.
+Visual Studio Code è un editor di codice sorgente sviluppato da Microsoft per Windows, Linux e macOS. Include supporto per debugging, un controllo per Git integrato, refactoring del codice, ecc. Offre inoltre supporto di prima classe e capacità avanzate paragonabili ad un IDE per quanto riguarda i linguaggi di programmazione JavaScript e TypeScript.
+
+\href{https://code.visualstudio.com/}{Sito web di Visual Studio Code}
+% subp:vscode (end)
+
+\subparagraph{Stoplight Studio}%
+\label{subp:stoplight_studio}
+Per lo sviluppo della API è stato scelto Stoplight Studio.
+Stoplight Studio offre una serie di funzionalità che coprono l'intero ciclo di vita dell'API di pre-produzione, dalla modellazione, al test, alla simulazione del funzionamento dell'API.
+
+\href{https://stoplight.io/docs}{Documentazione di Stoplight}
+% subp:stoplight_studio (end)
+
+\paragraph{Ambienti di sviluppo utlizzati}%
+\label{par:ambienti_di_sviluppo}
+
+\subparagraph{Intellij IDEA}%
+\label{subp:intellij}
+Per la mobile app è stato scelto l'ambiente di sviluppo Intellij IDEA, un ambiente di sviluppo integrato (IDE) per il linguaggio di programmazione Java.
+
+\href{https://www.jetbrains.com/idea/}{Sito web di Intellij IDEA}
+% subp:intellij (end)
+
+\paragraph{Analisi statica e dinamica}%
+\label{par:analisi_statica_e_dinamica}
+
+\subparagraph{Sonarcloud}%
+\label{subp:sonarcloud}
+Per tutti i componenti è stato scelto di utilizzare SonarCloud.
+SonarCloud è uno strumento in grado di segnalare bug e vulnerabilità e migliorare il flusso di lavoro grazie al concetto di Continuous Code Quality.
+
+\href{https://sonarcloud.io/documentation}{Documentazione di SonarCloud}
+% subp:sonarcloud (end)
+
+\paragraph{Strumenti eseguiti da Intellij IDEA}%
+\label{par:strumenti_eseguiti_da_Intellij_IDEA}
+
+\subparagraph{Checkstyle}%
+\label{subp:checkstyle}
+Per lo sviluppo del server e della mobile app è stato scelto di utilizzare Checkstyle.
+Checkstyle è uno strumento di sviluppo che aiuta gli sviluppatori a scrivere codice Java che aderisce a uno standard di codifica. Automatizza il processo di controllo del codice e questo lo rende ideale per i progetti che vogliono applicare uno standard di codifica.
+
+\href{https://checkstyle.sourceforge.io/}{Link allo strumento}
+% subp:checkstyle (end)
+
+\subparagraph{Android Lint}%
+\label{subp:androidlint}
+Per lo sviluppo della mobile app è stato scelto di utilizzare Android Lint.
+Android Lint è un strumento che analizza il progetto Android alla ricerca di potenziali buge possiede un'architettura indipendente dall'IDE, quindi integrabile con altri IDE, con altri strumenti di costruzione e anche con sistemi di integrazione continua.
+
+\href{https://developer.android.com/studio/write/lint}{Link allo strumento}
+% subp:androidlint (end)
+
+\paragraph{Strumenti eseguiti da VS Code e nella pipeline di Continuous Integration:}%
+\label{par:strumenti_eseguiti_da_vscode_e_ci}
+
+\subparagraph{Eslint}%
+\label{subp:eslint}
+Per lo sviluppo della web-app è stato scelto di utilizzare Eslint.
+ESLint analizza staticamente il codice per trovare rapidamente i problemi ed è possibile eseguire ESLint come parte della pipeline di integrazione continua. Molti problemi rilevati da ESLint possono inoltre essere risolti automaticamente e le correzioni avvengono rispettando la sintassi, quindi non si verificano errori introdotti dagli algoritmi tradizionali di ricerca e sostituzione.
+
+\href{https://eslint.org/}{Sito web di ESLint}
+% subp:eslint (end)
+
+\subparagraph{Stylelint}%
+\label{subp:stylelint}
+Per lo sviluppo della web-app è stato inoltre scelto di utilizzare Stylelint.
+Stylelint è un linter che aiuta a evitare errori e ad applicare convenzioni nei fogli di stile.
+
+\href{https://stylelint.io/}{Sito web di Stylelint}
+% subp:stylelint (end)
+
+\subparagraph{Prettier}%
+\label{subp:stylelint}
+Per lo sviluppo della web-app è stato inoltre scelto di utilizzare un code formatter: Prettier.
+Prettier è un formattatore di codice supponente. Applica uno stile coerente analizzando il codice e ristampandolo con le proprie regole che tengono conto della lunghezza massima della linea, andando a capo quando necessario senza alterare la semantica del codice.
+
+\href{https://prettier.io/}{Sito web di Prettier}
+% subp:stylelint (end)
+
+\paragraph{Framework e Sdk}%
+\label{par:framework_sdk}
+
+\subparagraph{Angular}%
+\label{subp:angular}
+Per lo sviluppo della web-application il gruppo ha deciso di appoggiarsi ad Angular, un framework per lo sviluppo di applicazioni web, il linguaggio utilizzato è Typescript.
+
+\href{https://angular.io/docs}{Documentazione di Angular}
+
+\subparagraph{Spring}%
+\label{subp:spring}
+Per sviluppare il server è stato scelto Spring, un framework open source per lo sviluppo di applicazioni in linguaggio Java, sono associati a Spring altri progetti che offrono funzionalità aggiuntive al framework.
+
+\href{https://spring.io/}{Sito di Spring}
+
+\subparagraph{Android Sdk}%
+\label{subp:android_sdk}
+Il gruppo per sviluppare l'applicazione mobile richiesta dal capitolato ha scelto di avvalersi di Android Sdk, un framework per lo sviluppo software android che include molti strumenti per facilitare lo sviluppo di applicazioni android.
+È associato ad IntelliJ idea nello sviluppo dell'app\dots
+
+\href{https://developer.android.com/guide}{Guida di Google allo sviluppo Android}
+
+\paragraph{Framework di testing}%
+\label{par:framework_test}
+Per effettuare i test di unità all'interno della web application è stato scelto Jasmine, un framework per il test orientato verso il behavior-driven-development.
+Associato all'ambiente di test Karma costituisce la suite di Angular per i test di unità.
+
+\href{https://jasmine.github.io/}{Documentazione di Jasmine}
+
+\subparagraph{Protractor}%
+\label{subp:protractor}
+Per effettuare i test e2e è stato scelto protractor, un framework per i test e2e in grado di simulare le interazioni dell'utente con la web application.
+Viene integrato automaticamente con Angular.
+
+\href{https://www.protractortest.org/}{Sito web di Protractor}
+
+\subparagraph{JUnit}%
+\label{subp:junit}
+Per effettare i test di unità nello sviluppo del server e della applicazione mobile il gruppo ha scelto di utilizzare JUnit, un framework di unit testing per il linguaggio Java.
+
+\href{https://junit.org/junit4/}{Sito web di JUnit}
+
+\subparagraph{Mockito}%
+\label{subp:mockito}
+Per lo sviluppo dell'applicazione mobile e del server è stato scelto Mockito, un mocking framework per Java.
+
+\href{https://site.mockito.org/}{Documentazione di Mockito}
+
+\subparagraph{Espresso}%
+\label{subp:espresso}
+Per sviluppare l'applicazione mobile il gruppo si appoggia a Espresso, un framework per i test di sistema nello sviluppo android.
+
+\href{https://developer.android.com/training/testing/espresso}{documentazione di Espresso}
+
+% \subparagraph{Cucumber}%
+% \label{subp:pgfgantt} test autoesplicativi
+
+\paragraph{Gestori delle dipendenze}%
+\label{par:gestori_dipendenze}
+
+\subparagraph{Node Package Manager}%
+\label{subp:npm}
+Per gestire le dipendenze della web application il gruppo si appoggia a npm, il gestore delle dipendenze di Node.js.
+
+\href{https://www.npmjs.com/}{Sito web di npm}
+
+\subparagraph{Gradle}%
+\label{subp:gradle}
+Per gestire le dipendenze della web application il gruppo si appoggia a npm,
+Gradle è un sistema per l'automazione dello sviluppo che introduce un domain-specific language basato su Groovy.
+Gradle supporta sviluppi incrementali determinando in modo intelligente quali parti del build tree sono aggiornate ("up-to-date"), in modo che tutti i processi che dipendono solo da quelle parti non avranno bisogno di essere ri-eseguiti; così facendo, il software riduce significativamente il tempo di costruzione del progetto.
+
+\href{https://gradle.org/}{Sito web di Gradle}
 \end{document}
