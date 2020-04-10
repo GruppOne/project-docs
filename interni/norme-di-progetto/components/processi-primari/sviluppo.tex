@@ -589,17 +589,95 @@ Esistono diverse etichette per identificare i frame d'interazione. I progettisti
   \item [Ad]: si utilizza per racchiudere un intero diagramma di sequenza.
 \end{description}
 
-\paragraph{Codifica}%
-\label{par:codifica}
+\paragraph{Codifica e test di unità del software}%
+\label{par:codifica_test_software}
 L'attività di codifica consiste nell'implementazione delle specifiche del prodotto definite nelle attività precedenti.
-Questa sezione ha lo scopo di evitare qualsiasi tipo di inconsistenza e rendere il codice più omogeneo possibile.
-Questa attività viene svolta dal ruolo del programmatore, in quanto dispone delle conoscenze tecniche per eseguire le scelte effettuate nell'attività di progettazione e quindi sviluppare il prodotto di Stalker.
+Questa attività prevede di sviluppare e documentare adeguatamente ogni componente software e le procedure di test necessari per quest'ultimi.
+Questa attività viene svolta dal ruolo del programmatore.
+Il programmatore deve sviluppare e testare ogni elemento software assicurandosi che rispettino i requisiti definiti, questi risultati andranno adeguatamente documentati.
+Il programmatore deve valutare il codice e testarne i risultati tenendo in considerazione i seguenti criteri:
+\begin{itemize}
+    \item tracciabilità dei requisiti e della progettazione del componente software
+    \item consistenza con i requisiti e della progettazione
+    \item consistenza interna tra gli elementi
+    \item copertura dei test di unità
+    \item appropriatezza dei metodi di codifica e degli standard utilizzati
+    \item fattibilità dell'integrazione e testing del software
+    \item fattibilità della manutenzione del software.
+\end{itemize}
+
+\paragraph{Integrazione del software}%
+\label{par:integrazione_software}
+L'attività di integrazione si impone di pianificare ed effettuare l'integrazione delle componenti software, questa pianificazione deve includere requisiti, procedure, dati e responsabilità per i test e va adeguatamente documentata.
+Il programmatore deve integrare le componenti e i test nel modo in cui sono stati sviluppati e seguendo il piano di integrazione, deve assicurarsi inoltre che ogni insieme di componenti soddisfi i requisiti del singolo componente e del piano di integrazione.
+Il programmatore deve sviluppare e documentare, per ogni requisito di integrazione, un insieme di test e procedure da effettuare alla conclusione dell'attività di integrazione.
+Il programmatore deve valutare il piano di integrazione, il codice e i test generati durante questa attività secondo i seguenti criteri:
+\begin{itemize}
+  \item tracciabilità dei requisiti e della progettazione del componente software
+  \item consistenza con i requisiti e della progettazione
+  \item consistenza interna tra gli elementi
+  \item copertura dei test di unità
+  \item appropriatezza dei metodi di codifica e degli standard utilizzati
+  \item fattibilità dell'integrazione e testing del software
+  \item fattibilità della manutenzione del software.
+\end{itemize}
+
+\paragraph{Test di integrazione}%
+\label{par:test_integrazione}
+L'attività si pone come obiettivo di testare ogni componente software secondo i test di integrazione definiti nel piano di integrazione e documentarne i risultati.
+Il programmatore deve effettuare test di integrazione al fine di verificare i requisiti di accettazione per l'elemento testato, deve inoltre assicurarsi che ogni requisito di integrazione venga testato e documentare i risultati ottenuti.
+Il programmatore deve valutare i test di integrazione e i loro risultati secondo i seguenti criteri:
+\begin{itemize}
+  \item copertura dei test di integrazione
+  \item conformità dei risultati con quelli attesi
+  \item fattibilità dei test e dell'integrazione di sistema, quando effettuata
+  \item fattibilità della manutenzione del software.
+\end{itemize}
+Lo sviluppatore inoltre deve completare delle verifiche sul lavoro svolto, se la verifica ha successo lo sviluppatore dovrà:
+\begin{itemize}
+  \item aggiornare e preparare il prodotto in vista dell'integrazione e dei test di sistema, per l'installazione e il supporto all'accettazione del software
+  \item fissare una baseline di integrazione per il codice e la progettazione del software.
+\end{itemize}
+
+\paragraph{Integrazione di sistema}%
+\label{par:integrazione_sistema}
+L'attività consiste nell'integrare tutte differenti configurazioni del software in un unico sistema, quest'ultimo deve poi essere testato e documentato.
+Il programmatore deve integrare ogni configurazione del software, testare l'aggregato risultante e documentare i risultati.
+Deve inoltre definire requisiti, test e procedure per testare l'integrazione di sistema e assicurarsi che il sistema integrato sia pronto per l'attività di test.
+Il sistema integrato deve essere valutato dal programmatore secondo i seguenti criteri:
+\begin{itemize}
+  \item copertura nei test dei requisiti di sistema
+  \item appropriatezza delle metodologie e degli standard usati per i test
+  \item conformità dei risultati con quelli attesi
+  \item fattibilità dei test e dell'integrazione di sistema, quando effettuata
+  \item fattibilità della manutenzione del software.
+\end{itemize}
+
+\paragraph{Test di sistema}%
+\label{par:test_sistema}
+Questa attività consiste nell'atto di testare, in accordo con i requisiti di sistema, il sistema integrato da parte del programmatore.
+Lo sviluppare deve inoltre valutare il sistema secondo i seguenti criteri:
+\begin{itemize}
+  \item copertura nei test dei requisiti di sistema
+  \item conformità dei risultati a quelli attesi
+  \item fattibilità della manutenzione del software.
+\end{itemize}
+
+\paragraph{Installazione}%
+\label{par:installazione}
+L'attività di installazione consiste nello sviluppo di un piano di installazione per il prodotto software in un determinato ambiente.
+Questa attività verrà definitiva concordemente con quanto scritto nella sezione: §~\ref{par:rilascio_esterno_di_versioni_del_prodotto}
+
+\paragraph{supporto all'accettazione del prodotto}%
+\label{par:supporto_accettazione_prodotto}
+Questa attività si pone come obiettivo il supporto da parte del gruppo al feedback di accettazione del committente.
+I membri del gruppo devono completare e consegnare il software prodotto come specificato nel contrato con il committente
 
 \subparagraph{Nomi dei file e delle variabili}%
 \label{subp:nomi_file_e_variabili}
 I nomi dei file:
 \begin{itemize}
-  \item Devono essere univoci e significativi.
+  \item Devono essere univoci e significativi
   \item Devono rispettare le condizioni del linguaggio che contengono, se presenti.
 \end{itemize}
 I nomi delle variabili:
@@ -727,9 +805,6 @@ L'ereditarietà tra classi andrebbe evitata poiché la presenza di dipendenze tr
 
 %\paragraph{Testing}%
 %\label{par:testing}
-
-%\paragraph{Installazione}%
-%\label{par:installazione}
 
 \subsubsection{Strumenti di supporto}%
 \label{subs:strumenti_di_supporto}
