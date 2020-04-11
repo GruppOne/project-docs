@@ -6,10 +6,26 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
+\usepackage{hyperref}
 \usepackage{longtable}
 \usepackage[table]{xcolor}
 \usepackage{multicol}
 \usepackage{changepage}
+
+\hypersetup{
+  % set true if you want colored links (instead of boxes)
+  colorlinks=true,
+  % set to all if you want both sections and subsections linked
+  linktoc=all,
+  % set color for file links
+  filecolor=magenta,
+  % set color for internal links
+  linkcolor=black,
+  % set url color
+  urlcolor=blue,
+  % set characters encoding in the bookmarks tab
+  pdfencoding=unicode,
+}
 
 \graphicspath{{../commons/img/}}
 
@@ -28,7 +44,7 @@
 \end{center}
 
 \begin{multicols}{2}
-  Padova, 27 febbraio 2020
+  Padova, 10 Aprile 2020
   \columnbreak{}
   \begin{itemize}
     % \begin{noindent}
@@ -46,13 +62,13 @@
 \end{multicols}
 Egregi professori,
 
-Con la presente lettera, originariamente presentata il 14 gennaio 2020, intendiamo comunicare la partecipazione di \textit{GruppOne} al progetto didattico.
-Il gruppo si impegna a realizzare il prodotto da Lei commissionato:
+Con la presente lettera intendiamo comunicare la partecipazione di \textit{GruppOne} alla Revisione di Progettazione prevista in data 2020--04--20.
+Il gruppo si impegna a presentare lo stato del prodotto da Lei commissionato:
 \begin{center}
   \textbf{Stalker}
 \end{center}
 proposto dall'azienda \textit{Imola Informatica}.
-Tutti i dettagli relativi all'offerta che le proponiamo si possono trovare nei seguenti documenti riferiti alla versione 0.1.5, presenti in allegato:
+Tutti i dettagli relativi all'offerta che le proponiamo si possono trovare nei seguenti documenti riferiti alla versione, presenti in allegato:
 \begin{itemize}
   \item Analisi dei Requisiti
   \item Glossario
@@ -60,9 +76,19 @@ Tutti i dettagli relativi all'offerta che le proponiamo si possono trovare nei s
   \item Piano di Qualifica
   \item Norme di Progetto
   \item Studio di Fattibilità
-  \item Verbali Interni (6)
-  \item Verbali Esterni (6)
+  \item Verbali Interni (11)
+  \item Verbali Esterni (9)
 \end{itemize}
+
+% FIXME fornire i link esatti e il numero di versione complessivo
+Link alla release del prodotto:
+\begin{itemize}
+  \item \href{https://github.com/GruppOne/project-docs/tags}{project-docs}
+  \item \href{https://github.com/GruppOne/stalker-mobile-app/releases/tag/v0.5.2}{mobile app v0.5.2}
+  \item \href{https://github.com/GruppOne/stalker-server/releases/tag/v0.3.0}{server v0.3.0 }
+  \item \href{https://github.com/GruppOne/stalker-web-app/releases/tag/v0.6.0}{web app v0.6.0}
+\end{itemize}
+
 
 Il gruppo ha deciso di consegnare il progetto nella data 2020--06--18, seconda data possibile per la revisione di accettazione, preventivando un costo complessivo del prodotto software di:
 \begin{center}
@@ -94,9 +120,9 @@ Distinti saluti,
 \begin{adjustwidth}{2.5cm}{10.5cm}
   \centering
   \textit{Responsabile di Progetto}\\
-  Riccardo Agatea\\
+  Alberto Cocco\
   \hspace{2cm}
-  \underline{\color{white}{\includegraphics[width=2cm]{firme/riccardo_agatea.png}}} % chktex 44
+  \underline{\color{white}{\includegraphics[width=2cm]{firme/alberto_cocco.png}}} % chktex 44
 \end{adjustwidth}
 
 \end{document}

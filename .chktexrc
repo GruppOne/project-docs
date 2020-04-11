@@ -273,6 +273,8 @@ UserWarnRegex
   (?!#4:! Lo! spelling! corretto! e'! GitHub)[Gg]ithub
   (?!#5:! Lo! spelling! corretto! e'! PlantUML! o! plantuml)Plant[uU]ml|plantU[mM][lL]
   (?!#6:! \@! va! prima! del! punto)\.\\@
+  # TODO regola temporaneamente disabilitata
+  # (?!#6:! Non! usare! :! dentro! ai! label)item! *\[.*:.*\]
 }
 
 
