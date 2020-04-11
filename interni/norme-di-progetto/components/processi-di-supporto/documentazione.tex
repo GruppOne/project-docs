@@ -286,31 +286,6 @@ dove x indica la numerazione delle immagini (e.g.:\ figura 1, figura 2, figura 3
 \label{subp:tabelle}
 L'uso di tabelle è consigliato solo quando strettamente necessario. La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento in cui risulti molto difficile organizzare informazioni aventi una struttura complessa. È obbligatorio l'uso di colori che abbiano un elevato contrasto al fine di promuovere la leggibilità. Inoltre, non devono essere eccessivamente lunghe altrimenti risultano dispersive.
 
-\paragraph{Metriche}%
-\label{par:metriche}
-
-\begin{description}
-  \item [MPR-IDG]:L'indice di Gulpease è un indice che valuta la leggibilità di un testo scritto in lingua italiana. Ha il vantaggio principale di utilizzare la lunghezza delle parole in lettere invece che sillabe. La formula per il calcolo è la seguente:
-  \[
-    89 +\frac{300\cdot nf-10\cdot nl}{np}
-  \]
-  dove:
-  \begin{description}
-    \item [nf] indica il numero delle frasi.
-    \item [nl] indica il numero delle lettere.
-    \item [np] indica il numero di parole.
-  \end{description}
-  I risultati sono compresi tra 0 e 100 dove 0 indica la leggibilità minima mentre 100 quella massima. In genere l'indice dice che:
-  \begin{itemize}
-    \item Un testo con indice inferiore a 80 è difficile per chi ha la licenza elementare.
-    \item Un testo con indice inferiore a 60 è difficile per chi la licenza media.
-    \item Un testo con indice inferiore a 40 è difficile per chi ha il diploma di scuola superiore.
-  \end{itemize}
-  \item [MPR-CO]: L'indice di correttezza ortografica indica la correttezza del testo.
-  Esso misura il numero di errori ortografici presenti.
-  Ogni componente del gruppo ha un estensione per il proprio code editor (per vscode consigliamo l'estensione \href{https://marketplace.visualstudio.com/items?itemName=ban.spellright}{Spell Right}, che si basa sul dizionario di sistema).
-\end{description}
-
 \subparagraph{Suddivisione dei documenti}%
 \label{subp:suddivisione_dei_documenti}
 
@@ -385,6 +360,31 @@ Dove USO può essere `interno' o `esterno'. I verbali sono così organizzati:
   \item [Ordine del giorno] l'ordine del giorno consiste in un elenco puntato degli argomenti che saranno trattati nel verbale.
   \item [Sezioni] Ogni sezione del documento sviluppa un elemento dell'ordine del giorno.
   \item [Registro delle decisioni] il registro delle decisioni indica le decisioni prese sulla base degli argomenti discussi nell'ordine del giorno.
+\end{description}
+
+\paragraph{Metriche}%
+\label{par:metriche}
+
+\begin{description}
+  \item [MPR-IDG]:L'indice di Gulpease è un indice che valuta la leggibilità di un testo scritto in lingua italiana. Ha il vantaggio principale di utilizzare la lunghezza delle parole in lettere invece che sillabe. La formula per il calcolo è la seguente:
+  \[
+    89 +\frac{300\cdot nf-10\cdot nl}{np}
+  \]
+  dove:
+  \begin{description}
+    \item [nf] indica il numero delle frasi.
+    \item [nl] indica il numero delle lettere.
+    \item [np] indica il numero di parole.
+  \end{description}
+  I risultati sono compresi tra 0 e 100 dove 0 indica la leggibilità minima mentre 100 quella massima. In genere l'indice dice che:
+  \begin{itemize}
+    \item Un testo con indice inferiore a 80 è difficile per chi ha la licenza elementare.
+    \item Un testo con indice inferiore a 60 è difficile per chi la licenza media.
+    \item Un testo con indice inferiore a 40 è difficile per chi ha il diploma di scuola superiore.
+  \end{itemize}
+  \item [MPR-CO]: L'indice di correttezza ortografica indica la correttezza del testo.
+  Esso misura il numero di errori ortografici presenti.
+  Ogni componente del gruppo ha un estensione per il proprio code editor (per vscode consigliamo l'estensione \href{https://marketplace.visualstudio.com/items?itemName=ban.spellright}{Spell Right}, che si basa sul dizionario di sistema).
 \end{description}
 
 \subsubsection{Strumenti di supporto}
