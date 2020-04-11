@@ -23,11 +23,11 @@ Tale processo distingue tre differenti attività:
 \label{subs:documentazione/attivita}
 
 \paragraph{Implementazione del processo}%
-\label{subs:documentazione/implementazione}
+\label{par:documentazione/implementazione}
 L'attività di implementazione presenta i prodotti del processo di documentazione, descrive il ciclo di vita dei documenti e ne illustra le proprietà di base comuni situate in file a sé stanti.
 
 \subparagraph{Configurazione}%
-\label{par:configurazione}
+\label{subp:configurazione}
 La configurazione di base comune ai documenti rilevanti è astratta in due file \LaTeX{} che contengono ad esempio la struttura e la formattazione che ogni file deve avere.
 Si riporta un elenco (non esaustivo) di ciò che è presente nel file di configurazione:
 
@@ -39,7 +39,7 @@ Si riporta un elenco (non esaustivo) di ciò che è presente nel file di configu
 \end{itemize}
 
 \subparagraph{Ciclo di vita}%
-\label{par:ciclo_di_vita}
+\label{subp:ciclo_di_vita}
 Il ciclo di vita rappresenta gli stadi in cui il documento si può trovare nel corso della sua esistenza. Ne distinguiamo cinque:
 
 \begin{description}
@@ -118,13 +118,13 @@ I documenti ufficiali e prodotti finali del processo di documentazione sono i se
 
 \end{itemize}
 
-\subsubsection{Progettazione e sviluppo}%
-\label{subs:progettazione_e_sviluppo}
+\paragraph{Progettazione e sviluppo}%
+\label{par:progettazione_e_sviluppo}
 
 L'attività di progettazione e sviluppo descrive il template a cui ogni documento deve aderire.
 
-\paragraph{Frontespizio}%
-\label{par:frontespizio}
+\subparagraph{Frontespizio}%
+\label{subp:frontespizio}
 Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: nella prima è presente l'intestazione contenente logo, nome del gruppo e nome del documento, mentre la seconda consiste di uno schema contenente alcune informazioni essenziali sul documento descritto. In esso compaiono, ordinatamente, dall'alto verso il basso:
 
 \begin{itemize}
@@ -147,8 +147,8 @@ Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: ne
         \end{description}
 \end{itemize}
 
-\paragraph{Registro delle modifiche}%
-\label{par:registro_delle_modifiche}
+\subparagraph{Registro delle modifiche}%
+\label{subp:registro_delle_modifiche}
 Il registro delle modifiche ha lo scopo di presentare quali cambiamenti sono stati effettuati e da parte di quale componente del gruppo. Consiste di quattro colonne ed è così articolato:
 \begin{description}
   \item [Versione] indica il numero di versione a cui una modifica è andata a contribuire tramite la sua approvazione.
@@ -160,8 +160,8 @@ Il registro delle modifiche ha lo scopo di presentare quali cambiamenti sono sta
   \item [Descrizione] indica il tipo di modifica effettuata con i riferimenti alle specifiche sezioni.
 \end{description}
 
-\paragraph{Indice}%
-\label{par:indice}
+\subparagraph{Indice}%
+\label{subp:indice}
 L'indice presenta presenta l'elenco, accompagnato dal numero di pagina, delle sezioni e dei paragrafi di cui è composto il documento.
 GruppOne ha deciso di utilizzare la tipica suddivisione del testo offerta da \LaTeX{} che distingue cinque diversi blocchi testuali:
 \begin{itemize}
@@ -177,8 +177,8 @@ Ogni blocco testuale si identifica mediante una \glossario{label} univoca, utile
 
 Ogni riga dell'indice contiene il numero di pagina in cui si trova la sezione o il paragrafo a cui si riferisce e, cliccando sul nome del blocco, è possibile raggiungerlo direttamente.
 
-\paragraph{Contenuto}%
-\label{par:contenuto}
+\subparagraph{Contenuto}%
+\label{subp:contenuto}
 Le pagine di contenuto sono suddivise in tre parti, dall'alto verso il basso:
 \begin{description}
   \item [Header] contiene sinistra il logo del gruppo, a destra il nome del documento.
@@ -187,13 +187,13 @@ Le pagine di contenuto sono suddivise in tre parti, dall'alto verso il basso:
 \end{description}
 
 
-\subsubsection{Produzione}%
-\label{subs:produzione}
+\paragraph{Produzione}%
+\label{èar:produzione}
 
 L'attività di produzione illustra le norme che i componenti del team si devono impegnare a rispettare nella realizzazione di documenti ben formati e come i documenti sono archiviati nel repository.
 
-\paragraph{Norme per la redazione dei documenti}%
-\label{par:norme_per_la_redazione_dei_documenti}
+%\paragraph{Norme per la redazione dei documenti}%
+%\label{par:norme_per_la_redazione_dei_documenti}
 
 \subparagraph{Stile del testo}%
 \label{subp:stile_del_testo}
@@ -207,7 +207,7 @@ In questo paragrafo GruppOne definisce le norme che uniformano lo stile di scrit
   \item [Termini di glossario in maiuscolo] il testo è scritto in minuscolo. I termini di glossario, invece, sono indicati in maiuscolo con una g a pedice nel nome. Questa regola vale per la prima occorrenza di ogni termine di glossario.
 \end{description}
 
-\subparagraph{Elenchi }%
+\subparagraph{Elenchi}%
 \label{subp:elenchi}
 Gli elenchi sono un ottimo mezzo per la scrittura di documentazione. Essi permettono di riordinare il testo e di organizzare una serie di elementi correlati, pertanto, in questo paragrafo, si stabiliscono le norme per il loro corretto uso:
 
@@ -220,7 +220,7 @@ Gli elenchi sono un ottimo mezzo per la scrittura di documentazione. Essi permet
 \end{enumerate}
 
 \subparagraph{Nomi dei file}%
-\label{nomi_dei_file}
+\label{subp:nomi_dei_file}
 Per identificare i file memorizzati nel repository si seguono le seguenti convenzioni:
 
 \begin{itemize}
@@ -286,8 +286,8 @@ dove x indica la numerazione delle immagini (e.g.:\ figura 1, figura 2, figura 3
 \label{subp:tabelle}
 L'uso di tabelle è consigliato solo quando strettamente necessario. La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento in cui risulti molto difficile organizzare informazioni aventi una struttura complessa. È obbligatorio l'uso di colori che abbiano un elevato contrasto al fine di promuovere la leggibilità. Inoltre, non devono essere eccessivamente lunghe altrimenti risultano dispersive.
 
-\subparagraph{Metriche}%
-\label{subp:metriche}
+\paragraph{Metriche}%
+\label{par:metriche}
 
 \begin{description}
   \item [MPR-IDG]:L'indice di Gulpease è un indice che valuta la leggibilità di un testo scritto in lingua italiana. Ha il vantaggio principale di utilizzare la lunghezza delle parole in lettere invece che sillabe. La formula per il calcolo è la seguente:
@@ -310,6 +310,9 @@ L'uso di tabelle è consigliato solo quando strettamente necessario. La rapprese
   Esso misura il numero di errori ortografici presenti.
   Ogni componente del gruppo ha un estensione per il proprio code editor (per vscode consigliamo l'estensione \href{https://marketplace.visualstudio.com/items?itemName=ban.spellright}{Spell Right}, che si basa sul dizionario di sistema).
 \end{description}
+
+\subsubsection{Procedure}%
+\label{subs:procedure}
 
 \paragraph{Suddivisione dei documenti}%
 \label{par:suddivisione_dei_documenti}
