@@ -52,7 +52,7 @@ rectangle {
       }
   }
 
-:O: -- AUC3.2.1
+:O: -- AUC4.1
 @enduml
 
 @startuml modifica-organizzazione
