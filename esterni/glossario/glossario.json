@@ -5,6 +5,7 @@
     "Account": "il complesso dei dati identificativi di un utente, che gli consentono l'accesso all'applicazione mobile oppure alla web application.",
     "Amministratore": "utente con privilegi avanzati su tutto il sistema di Stalker, esegue operazioni amministrative e gestisce le richieste che provengono da utenti con permessi limitati.",
     "Analista": "ruolo assunto da uno o più membri del team di progetto, è responsabile delle attività di analisi e redige lo Studio di Fattibilità e l'Analisi dei Requisiti.",
+    "Analisti": "\\placeholder{scrivere o ignorare questa definizione}",
     "Angular": "framework open source, sviluppato principalmente da Google, per lo sviluppo di applicazioni web nel linguaggio TypeScript",
     "Applicazione mobile": "applicazione software dedicata ai dispositivi di tipo mobile, quali smartphone o tablet. ",
     "Architettura": "processo di definizione di una soluzione strutturata che soddisfa tutti i requisiti tecnici e operativi, ottimizzando al contempo attributi di qualità comuni come prestazioni, sicurezza e gestibilità. Implica una serie di decisioni basate su una vasta gamma di fattori e ciascuna di queste decisioni può avere un impatto notevole sulla qualità, sulle prestazioni, sulla manutenibilità e sul successo complessivo dell'applicazione.",
@@ -20,6 +21,7 @@
   "B": {
     "Back-end": "parte di un software con il quale l'utente interagisce indirettamente, ma che risulta essenziale per il funzionamento del sistema.",
     "Baseline": "istanza di configurazione che consolida lo stato di avanzamento del prodotto ad un dato istante, ovvero l'avanzamento incrementale che è parte del prodotto finale.",
+    "Bootstrap": "\\placeholder{scrivere o ignorare questa definizione}",
     "Bottom-up": "approccio di analisi e progettazione volto prima a individuare tutte le unità del sistema al dettaglio, poi a connetterle tra loro in modo da formare componenti più grandi, a loro volta interconnesse fino a realizzare un sistema completo.",
     "back-end": null,
     "baseline": null,
@@ -28,13 +30,18 @@
   "C": {
     "Capitolato": "documento tecnico redatto dall'azienda committente, contenente tutte le specifiche tecniche del prodotto software che devono essere rispettate ed eseguite dall'azienda fornitrice per effetto di un contratto d'appalto.",
     "Caso d'uso": "insieme di scenari, ovvero sequenze di azioni, che hanno in comune uno scopo finale per un attore, ovvero un utente. Descrivono l'insieme di funzionalità del sistema percepite dall'utente.",
+    "ChkTex": "\\placeholder{scrivere o ignorare questa definizione}",
+    "Chktex": "\\placeholder{scrivere o ignorare questa definizione}",
     "Client": "componente che accede ai servizi o alle risorse di un'altra componente detta server.",
+    "Code editor": "\\placeholder{scrivere o ignorare questa definizione}",
     "Command Line Interface": "in italiano interfaccia a linea di comando, è un tipo di interfaccia utente caratterizzata da un'interazione testuale tra l'utente e l'elaboratore.",
     "Commit": "comando di Git utilizzato per salvare i propri cambiamenti nella repository locale del progetto.",
     "Commitizen": "strumento da riga di comando che consente di formattare i messaggi di commit con una serie di prompt utilizzati per generare un messaggio di commit.",
     "Commitizen adapter": "meccanismo attraverso cui la utility Commitizen permette di applicare specifiche diverse, caso per caso, ai messaggi di commit",
     "Componente connessa": "nella teoria dei grafi, sottografo in cui qualsiasi coppia di vertici è connessa da cammini e il sottografo non è connesso a nessun vertice addizionale del supergrafo.",
+    "Componenti connesse": "\\placeholder{scrivere o ignorare questa definizione}",
     "Copertura": "nelle telecomunicazioni, la zona geografica servita da una rete di telefonia cellulare o stazione radio.",
+    "Curl": "\\placeholder{scrivere o ignorare questa definizione}",
     "capitolato": null,
     "casi d'uso": null,
     "client": null,
@@ -43,6 +50,7 @@
     "copertura": null
   },
   "D": {
+    "Dati": "\\placeholder{scrivere o ignorare questa definizione}",
     "Dato": "valore privo di significato, che lo assume se associato in determinati contesti significativi.",
     "Design pattern": "Soluzione progettuale generale a un problema ricorrente. È la descrizione di un modello da applicare per risolvere un problema, il quale può presentarsi in diverse situazioni durante la progettazione e lo sviluppo del software. Ogni design pattern ha il suo campo applicativo in base alle precondizioni del problema, coi suoi pregi e difetti.",
     "Documento": "entità fisica o digitale atta a registrare informazioni significative.",
@@ -57,6 +65,8 @@
   "F": {
     "Fase": "segmento temporale delimitato da un inizio e una fine, nel quale avvengono delle transazioni coerenti tra stati.",
     "Fase di incremento": "fase nella quale la parte da integrare nel software da aggiungere viene verificata e, solo in caso di accettazione, questa viene integrata nel software, rispettando la logica del modello incrementale.",
+    "Fasi": "\\placeholder{scrivere o ignorare questa definizione}",
+    "Fasi di incremento": "\\placeholder{scrivere o ignorare questa definizione}",
     "Front-end": "parte di un software visibile all'utente e con cui egli può interagire tramite un interfaccia utente.",
     "fasi": null,
     "fasi di incremento": null,
@@ -65,12 +75,14 @@
   "G": {
     "GDPR": "acronimo di General Data Protection Regulation, è un regolamento applicato a tutti gli stati membri dell'Unione Europea in merito alla alla protezione delle persone fisiche, con riguardo al trattamento e alla libera circolazione dei dati personali.",
     "GPS": "acronimo di Global Positioning System, è un sistema di posizionamento satellitare che permette in ogni istante di localizzare la latitudine e la longitudine di un oggetto, grazie all'utilizzo di satelliti che stazionano nell'orbita terrestre.",
+    "GRPC": "\\placeholder{scrivere o ignorare questa definizione}",
     "Geofencing": "tecnologia che crea un perimetro virtuale (chiamato geo-fence) attorno ad ogni dispositivo mobile. Consente alle applicazioni mobile di tracciare i movimenti degli utenti registrati allâ€™interno di una area geografica circolare, definita da due punti. Le tecnologie coinvolte per il geofencing sono GPS, Bluetooth e Wi-Fi.",
     "Gestore": "utente appartenente ad un'organizzazione abilitato a gestire i luoghi dell'organizzazione. Un singolo utente può essere gestore di più organizzazioni distinte.",
     "Git": "sistema di controllo versione distribuito, in inglese DVCS (acronimo di Distributed Version Control System), utilizzabile da interfaccia a riga di comando. Utile per gestire progetti che siano tracciabili sia in locale che in remoto.",
     "GitHub": "servizio di hosting per progetti software, è un implementazione del DVCS Git che offre un sistema di Issue Tracking System e dov'è possibile fare attività in branch diversi e visualizzare lo stato di ogni singola attività e a chi è stata assegnata.",
     "Google Calendar": "sistema di calendari concepito da Google, che offre la possibilità di creare più calendari, di condividerli e importarli da altri servizi online o nel computer.",
     "Google Hangouts": "web application di Google utilizzata da GruppOne per la messaggistica istantanea e videoconferenza.",
+    "Gulpease": "\\placeholder{scrivere o ignorare questa definizione}",
     "gRPC": "open source RPC framework sviluppato inizialmente da Google che sta prendendo una fetta di mercato sempre più importante per quanto riguarda le comunicazioni in architetture di microservizi, mobile e siti web.",
     "geofencing": null,
     "gestore": null
@@ -83,9 +95,10 @@
     "Imola Informatica": "proponente del capitolato per il progetto Stalker."
   },
   "J": {
+    "JSON": "\\placeholder{scrivere o ignorare questa definizione}",
     "Java": "linguaggio di programmazione ad alto livello, orientato agli oggetti e a tipizzazione statica, progettato per essere il più possibile indipendente dalla piattaforma di esecuzione.",
-    "Javascript": "linguaggio di scripting orientato agli oggetti e agli eventi, comunemente utilizzato nella programmazione web lato client per gestire gli effetti dinamici interattivi.",
     "Java 8": null,
+    "Javascript": "linguaggio di scripting orientato agli oggetti e agli eventi, comunemente utilizzato nella programmazione web lato client per gestire gli effetti dinamici interattivi.",
     "javascript": null
   },
   "K": {
@@ -96,6 +109,7 @@
     "Label": "etichetta che viene assegnata da un membro del team ad una issue oppure una pull request, che aiuta a catalogare e prioritizzare le attività da svolgere nel progetto.",
     "Link": "collegamento ad un'altra pagina.",
     "Linter": "programma che analizza staticamente il codice sorgente per segnalare errori, bug, costrutti non congrui e mancato adempimento ad uno stile.",
+    "Luoghi": "\\placeholder{scrivere o ignorare questa definizione}",
     "Luogo": "spazio fisico indentificato da un insieme di coordinate geografiche. Ciascun luogo è riconducibile ad un'organizzazione.",
     "label": null,
     "linter": null,
@@ -103,27 +117,30 @@
     "luogo": null
   },
   "M": {
+    "Material design": "\\placeholder{scrivere o ignorare questa definizione}",
     "Milestone": "punto nel tempo fissato sulla baseline che indica il raggiungimento di determinati obiettivi stabiliti con importanza strategica.",
     "Modello a V": "modello di sviluppo del software che dimostra la relazione tra ogni fase del ciclo di vita dello sviluppo del software e la sua fase di testing.",
+    "Modello a \\textit{V": null,
     "Modello client/server": "modello architetturale di sistemi distribuiti, organizzato come un insieme di servizi associati a uno o più server, e di client che accedono e utilizzano tali servizi.",
     "Modello incrementale": "modello di sviluppo del software atto a procedere per incrementi continui del sistema, con la caratteristica che tutto il software sviluppato prima di un incremento è valido. L'incremento deve essere di qualità per attenersi ai requisiti del prodotto finale.",
     "milestone": null,
-    "Modello a \\textit{V": null,
     "modello client/server": null,
     "modello incrementale": null,
     "modello server/client": null
   },
   "N": {
     "Nativescript": "framework open source per lo sviluppo di applicazioni mobile su piattaforme iOS e Android. Le applicazioni mobile NativeScript vengono create utilizzando JavaScript o qualsiasi linguaggio che esegue la traslazione in JavaScript, come TypeScript.",
+    "Node.js": null,
     "NodeJS": "ambiente di runtime JavaScript open source multipiattaforma orientato agli eventi per l'esecuzione di codice JavaScript.",
     "Notifica": "messaggio che viene spedito all'utente direttamente dal server, a causa del verificarsi di un evento indipendente dalle richieste dell'utente.",
-    "Node.js": null,
     "notifica": null
   },
   "O": {
+    "OpenAPI 3.0": "\\placeholder{scrivere o ignorare questa definizione}",
     "OpenStreetMap": "progetto collaborativo finalizzato a creare mappe del mondo a contenuto libero.",
     "Openshift": "PAAS prodotto da Red Hat ed è una piattaforma per applicazioni cloud che rende semplice lo sviluppo, il deploy e la scalabilità di applicazioni cloud.",
     "Organizzazione": "soggetto che ha interesse a tracciare le presenze delle persone all'interno dei propri luoghi, in maniera anonima o autenticata.",
+    "Organizzazioni": "\\placeholder{scrivere o ignorare questa definizione}",
     "Owner": "utente proprietario di una o più organizzazioni, ha privilegi di gestione dell'organizzazione su cui opera e dei suoi gestori e visualizzatori. Un singolo utente può essere owner di più organizzazioni distinte.",
     "organizzazioni": null,
     "owner": null
@@ -131,32 +148,38 @@
   "P": {
     "PAAS": "acronimo di Platform as a Service, è un ambiente di sviluppo e distribuzione completo nel cloud. Come IASS, include l'infrastruttura ma anche middleware, strumenti di sviluppo, sistemi di gestione dei database e molto altro.",
     "PGF": "linguaggio utilizzato per i diagrammi di Gantt che genera grafica vettoriale a partire da descrizione geometrica.",
+    "POC": "\\placeholder{scrivere o ignorare questa definizione}",
     "Pattern Publisher/Subscriber": "Design pattern utilizzato per la comunicazione asincrona fra diversi processi. In questo schema, mittenti e destinatari di messaggi dialogano attraverso un tramite, che può essere detto dispatcher o broker. Il mittente di un messaggio (detto publisher) non deve essere consapevole dell'identità dei destinatari (detti subscriber); esso si limita a pubblicare il proprio messaggio al dispatcher. I destinatari si rivolgono a loro volta al dispatcher abbonandosi alla ricezione di messaggi. Il dispatcher quindi inoltra ogni messaggio inviato da un publisher a tutti i subscriber interessati a quel messaggio.",
+    "Periodi": "\\placeholder{scrivere o ignorare questa definizione}",
     "Periodo": "Spazio di tempo caratterizzato da particolari condizioni o avvenimenti.",
+    "Piano di progetto": null,
+    "Piano di qualifica": null,
     "PlantUML": "strumento open source che consente agli utenti di creare diagrammi UML da un linguaggio di testo semplice.",
     "Postcondizione": "condizione che deve essere sempre vera immediatamente dopo l'uscita dallo scenario di un caso d'uso specifico.",
+    "Postcondizioni": "\\placeholder{scrivere o ignorare questa definizione}",
     "Precondizione": "condizione che deve essere sempre vera prima di accedere allo scenario di un caso d'uso specifico.",
+    "Precondizioni": "\\placeholder{scrivere o ignorare questa definizione}",
     "Prodotto": "entità software progettata per essere rilasciata all'utente.",
     "Product Baseline": "baseline del progetto in cui il prodotto è stato realizzato e funziona, ma non è ancora pronto per il rilascio.",
     "Progetto": "insieme di processi, attività e compiti progettato e svolto dal fornitore, per raggiungere gli obiettivi prestabiliti dai requisiti obbligatori, in un arco temporale fissato nel contratto stipulato con il proponente e con risorse limitate che si esauriscono con l'avanzare del tempo.",
     "Proof of Concept": "realizzazione incompleta di un determinato progetto, allo scopo di provare il funzionamento base dell'applicativo software e il conseguimento di alcuni requisiti.",
+    "Proof of concept": null,
     "Proponente": "azienda che presenta una proposta di contratto.",
+    "Prototipi": "\\placeholder{scrivere o ignorare questa definizione}",
     "Prototipo": "idea del prodotto che viene implementata in fase di sviluppo del software che soddisfa parte delle esigenze degli stakeholder.",
+    "Publisher/Subscriber": null,
     "Pull Request": "funzionalità di GitHub che consente di comunicare a tutti i membri del progetto le modifiche che sono state inviate da un membro specifico ad un repository GitHub. Una volta inviata una pull request, le parti interessate possono rivedere l'insieme di modifiche, discutere potenziali modifiche, richiedere modifiche oppure confermare il lavoro eseguito.",
+    "Pull request": "\\placeholder{scrivere o ignorare questa definizione}",
     "Python": "linguaggio di programmazione dinamico orientato agli oggetti utilizzabile per molti tipi di sviluppo software. Offre un forte supporto all'integrazione con altri linguaggi e programmi.",
     "periodi": null,
-    "Piano di progetto": null,
-    "Piano di qualifica": null,
     "piano di qualifica": null,
     "postcondizioni": null,
     "precondizioni": null,
     "prodotto": null,
     "progetto": null,
-    "Proof of concept": null,
     "proof of concept": null,
     "proponente": null,
-    "prototipi": null,
-    "Publisher/Subscriber": null
+    "prototipi": null
   },
   "Q": {
     "Qualità": "insieme di caratteristiche di un'entità che ne determinano la capacità di soddisfare esigenze sia esplicite che implicite.",
@@ -165,8 +188,10 @@
     "query": null
   },
   "R": {
+    "RESTful": "\\placeholder{scrivere o ignorare questa definizione}",
     "Rancher": "PAAS che consente di fornire Kubernetes-as-a-Service",
     "Report": "insieme di dati opportunamente estrapolati e/o elaborati, organizzati sotto forma tabellare.",
+    "Repository": "\\placeholder{scrivere o ignorare questa definizione}",
     "Requisiti": "necessità del committente, legate al prodotto software da realizzare, che devono essere obbligatoriamente soddisfatte dal fornitore.",
     "Responsabile": "responsabile ultimo del gruppo dei risultati del progetto, elabora ed emana piani e scadenze, approva l'emissione di documenti e redige l'organigramma e il Piano di Progetto.",
     "report": null,
@@ -174,6 +199,7 @@
     "responsabile": null
   },
   "S": {
+    "SLA": "\\placeholder{scrivere o ignorare questa definizione}",
     "Scalabilità": "parametro di qualità, che indica la capacità di un sistema di aumentare o diminuire in modo dinamico le risorse a sua disposizione in funzione delle necessità e disponibilità. Ai fini di questo progetto si parla di scalabilità di carico, ovvero la capacità di un sistema di incrementare le proprie prestazioni, e può essere di due tipi: verticale, che consiste in una scalabilità hardware in cui si aumentano le risorse fisiche a disposizione, e orizzontale, che consiste nell'aggiunta di più istanze dell'applicazione.",
     "Server": "componente o sistema informatico di elaborazione e gestione del traffico di informazioni che fornisce servizi ad altre componenti dette client.",
     "Server LDAP": "server che utilizza il protocollo standard LDAP per l'autenticazione degli utenti ad un'organizzazione, se questa la prevede.",
@@ -181,6 +207,7 @@
     "Smartphone": "apparecchio elettronico che combina le funzioni di un telefono cellulare e di un computer palmare.",
     "Snippet": "frammento oppure un esempio di codice sorgente.",
     "Software": "insieme delle procedure e delle istruzioni in un sistema di elaborazione dati.",
+    "Spring Boot": "\\placeholder{scrivere o ignorare questa definizione}",
     "Stakeholder": "letteralmente portatori di interesse, sono l'insieme di persone che, a vario titolo, hanno influenza sul prodotto, sul progetto e sui processi. ",
     "Stalker": "nome del progetto proposto dall'azienda Imola Informatica.",
     "Statement": "blocco di istruzioni che può consistere di una o più righe di codice.",
@@ -206,6 +233,7 @@
     "Test end-to-end": "metodologia utilizzata per verificare se il flusso di un'applicazione sta funzionando come progettato dall'inizio alla fine.",
     "Ticket": "termine tecnico utilizzato per riferirsi all'assegnazione della responsabilità di una determinata issue su GitHub ad un membro del team di progetto.",
     "Tracciatura": "rilevamento della presenza di un'utente autenticato all'interno di un luogo. Può essere anonima quando l'utente non è autenticato nell'organizzazione di riferimento, oppure autenticata quando l'utente è autenticato nell'organizzazione di riferimento.",
+    "Trunk": "\\placeholder{scrivere o ignorare questa definizione}",
     "tag": null,
     "test end-to-end": null,
     "ticket": null,
@@ -213,6 +241,7 @@
   },
   "U": {
     "UML": "acronimo di Unified Modeling Language, rappresenta un linguaggio visuale che si basa su un insieme di regole, vincoli e teorie utilizzate per la modellazione di una classe di problemi. Serve a supportare la descrizione dei sistemi software. La versione corrente di UML è la 2.0.",
+    "UML 2.0": null,
     "Utente": "soggetto che ha interesse ad utilizzare il software prodotto da GruppOne.",
     "Utente autenticato": "utente non autenticato che ha effettuato l'autenticazione alla piattaforma dall'applicazione mobile oppure alla web application.",
     "Utente collegato": "utente autenticato che è collegato ad almeno un'organizzazione;",
@@ -220,7 +249,6 @@
     "Utente collegato noto": "utente collegato ad un'organizzazione in modalità noto, in quanto la sua identità è conosciuta.",
     "Utente non autenticato": "utente che non ha ancora effettuato l'autenticazione all'applicazione mobile oppure alla web application.",
     "Utente non collegato": "utente autenticato che non ha effettuato alcun collegamento ad un'organizzazione.",
-    "UML 2.0": null,
     "utente": null,
     "utente autenticato": null,
     "utente collegato": null,
@@ -230,7 +258,9 @@
     "utenti autenticati": null
   },
   "V": {
+    "VCS": "\\placeholder{scrivere o ignorare questa definizione}",
     "Verificatore": "responsabile delle attività di verifica, redige la parte retrospettiva del Piano di Qualifica che illustra l'esito e la completezza delle verifiche e delle prove effettuate secondo il piano.",
+    "Verificatori": "\\placeholder{scrivere o ignorare questa definizione}",
     "Visualizzatore": "utente appartenente ad un'organizzazione abilitato esclusivamente a visualizzare i luoghi dell'organizzazione. Un singolo utente può essere visualizzatore di più organizzazioni distinte.",
     "verificatori": null,
     "visualizzatore": null
