@@ -28,10 +28,18 @@
 \disabilitaElencoFigure{}
 \disabilitaElencoTabelle{}
 
+% % aggiunge automaticamente i due punti e un non-breaking space alle description
+\renewcommand{\descriptionlabel}[1]{%
+  \hspace\labelsep{} \upshape\bfseries #1:~%
+}
+
 \begin{document}
 
 \input{../../commons/template}
 
+% XXX QUESTA SEZIONE È GENERATA AUTOMATICAMENTE. NON MODIFICARLA !!!! MAI !!!! DIRETTAMENTE O PERDERETE LE MODIFICHE EFFETTUATE
+
+% --------------------------------------------------- INIZIO_SEZIONE_GENERATA_AUTOMATICAMENTE ---------------------------------------------------
 	\section{A}
 	\begin{description}
 		\item[API:] acronimo di Application Programming Interface, si intende un insieme di procedure e funzioni offerte ai programmatori, ottenendo un'astrazione ad alto livello per facilitare lo sviluppo. Le API espongono blocchi di codice delle librerie di cui fanno parte, permettendo il riuso del codice.
@@ -237,4 +245,6 @@
 		\item[YAML:] standard di serializzazione dei dati a misura d'uomo per tutti i linguaggi di programmazione.
 	\end{description}
 	\newpage
+% --------------------------------------------------- FINE_SEZIONE_GENERATA_AUTOMATICAMENTE ---------------------------------------------------
+
 \end{document}
