@@ -5,12 +5,12 @@
 \subsubsection{Finalità}%
 \label{subs:risoluzione_dei_problemi/finalita}
 
-GruppOne istanzia il processo di risoluzione dei problemi per affrontare in maniera strutturata ed efficiente i problemi riscontrati.
+GruppOne istanzia il processo di risoluzione dei problemi per affrontare in maniera disciplinata ed efficiente i problemi riscontrati.
 
 \subsubsection{Descrizione}%
 \label{subs:risoluzione_dei_problemi/descrizione}
 
-Il processo fornisce procedure e per analizzare e risolvere i problemi riscontrati e le non-conformità indipendentemente dall'origine.
+Il processo fornisce procedure per analizzare e risolvere i problemi riscontrati e le non-conformità indipendentemente dall'origine.
 Consiste nelle seguenti attività:
 
 \begin{itemize}
@@ -22,14 +22,16 @@ Consiste nelle seguenti attività:
 \label{subs:risoluzione_dei_problemi/attivita}
 
 \paragraph{Implementazione del processo}%
-\label{par:implementazione_del_processo}
+\label{par:risoluzione_dei_problemi/implementazione_del_processo}
 
 Il processo di risoluzione dei problemi istanziato da GruppOne rispetta i seguenti requisiti:
 
 \begin{enumerate}
   \item Ciascuna istanza del processo è isolata, in modo da assicurare che i problemi identificati siano riportati, risolti e che ne sia tracciato lo stato.
+  \item Ogni componente del team deve essere prontamente consapevole dell'insorgere di un nuovo problema.
+  \item Le cause di sviluppo del problema devono essere attentamente analizzate e, se possibile, urgentemente eliminate.
   \item È presente uno schema di categorizzazione e prioritizzazione dei problemi, in modo da facilitare l'analisi delle tendenze.
-  \item Si effettua verifica dell'avvenuta risoluzione di ogni problema, della corretta implementazione delle modifiche e dell'assenza di ulteriori problemi introdotti dalla risoluzione.
+  \item Il team effettua una verifica dell'avvenuta risoluzione di ogni problema, della corretta implementazione delle modifiche e dell'assenza di ulteriori problemi introdotti dalla risoluzione.
 \end{enumerate}
 
 \paragraph{Risoluzione dei problemi}%
@@ -39,6 +41,9 @@ L'attività di risoluzione dei problemi viene intrapresa ove necessario, secondo
 
 \subsubsection{Procedure}%
 \label{subs:risoluzione_dei_problemi/procedure}
+
+\paragraph{Flusso di lavoro per la risoluzione dei problemi}%
+\label{par:flusso_di_lavoro_per_la_risoluzione_dei_problemi}
 
 La procedura stabilita da GruppOne per riportare i problemi consiste in:
 
@@ -62,29 +67,50 @@ La verifica dell'avvenuta risoluzione del problema avviene attraverso la Pull Re
 
 I ticket vengono chiusi solo dopo la verifica e approvazione della modifica, quando la Pull Request viene integrata nella baseline.
 
+% par:flusso_di_lavoro_di_risoluzione_dei_problemi (end)
+
 \subsubsection{Strumenti di supporto}%
 \label{subs:risoluzione_dei_problemi/strumenti_di_supporto}
 
+\paragraph{Etichettatura delle issue}%
+\label{par:etichettatura_delle_issue}
+
+Per avere una corretta classificazione delle \textit{issue} l'\textit{amministratore} di progetto ha creato delle etichette assegnabili.
+Aprendo il pannello \textit{label} dall'interfaccia di creazione di un issue si scelgono le etichette che si ritengono più opportune. Dal momento che GitHub considera le \textit{Pull Request} stesse delle \textit{issue}, è possibile eseguire il medesimo procedimento anche per quest'ultime sebbene non sia strettamente necessario.
+Le etichette hanno lo scopo di esplicitare il contesto del problema e dove si sia verificato, il tipo di issue aperta e la priorità da assegnare.
+
+\paragraph{Project Board di progetto}%
+\label{par:risoluzione_dei_problemi/project_board_di_progetto}
+
 Il tracciamento dei problemi riscontrati avviene direttamente nella piattaforma GitHub.
-Lo schema delle categorie e delle priorità individuate da GruppOne è accessibile dalla lista delle issue. Per ogni label è presente una descrizione del suo intento.
-
-\subsubsection{Metriche}%
-\label{subs:risoluzione_dei_problemi/metriche}
-
-% TODO sistemare questa metrica
-\paragraph{MPS-RDP: Indice di risoluzione dei problemi}% in questo caso NON ci va il "\@". chktex 13
-\label{par:MPS-RDP_indice_di_risoluzione_dei_problemi}
-
-L'indice di risoluzione dei problemi misura il tempo di risoluzione dei problemi incontrati nel corso dello svolgimento del progetto.
-Esso quantifica il tempo trascorso tra l'apertura della relativa issue su GitHub e la sua chiusura. Tale issue deve essere identificata da una label appropriata. Si calcola:
-\[
-  CS-AS
-\]
-dove:
+Nella sezione \textit{projects} è presente una \textit{Projects Board} che rappresenta in maniera chiara e schematica lo stato attuale del progetto.
+In qualsiasi momento, ogni \textit{issue} può trovarsi in uno di cinque differenti stati:
 \begin{description}
-  \item [CS] giorno di chiusura dell'issue.
-  \item [AS] giorno di apertura dell'issue.
+  \item [To do]: indica che la \textit{issue} è stata aperta e assegnata ad alcuni membri del team, ma non è stata presa in esame da nessuno.
+  \item [In progress]: indica che la \textit{issue} è assegnata ad alcuni membri del team ed è in uno stato di risoluzione.
+  \item [Ready for review]: indica che i verificatori assegnati all'\textit{issue} che si trova in tale stato devono svolgere la verifica dei cambiamenti apportati.
+  \item [Reviewer approved]: indica che i verificatori hanno confermato i cambiamenti effettuati.
+  \item [Done]: indica che il problema è stato risolto e che la issue è stata chiusa. I cambiamenti possono essere integrati nella baseline.
 \end{description}
+
+
+% \subsubsection{Metriche}%
+% \label{subs:risoluzione_dei_problemi/metriche}
+
+% \paragraph{MPS-RDP: Indice di risoluzione dei problemi}% in questo caso NON ci va il "\@". chktex 13
+% \label{par:MPS-RDP_indice_di_risoluzione_dei_problemi}
+
+% L'indice di risoluzione dei problemi misura il tempo di risoluzione dei problemi incontrati nel corso dello svolgimento del progetto.
+% Esso quantifica il tempo trascorso tra l'apertura della relativa issue su GitHub e la sua chiusura. Tale issue deve essere identificata da una label appropriata. Si calcola:
+% \[
+%   CS-AS
+% \]
+% dove:
+% \begin{description}
+%   \item [CS] giorno di chiusura dell'issue.
+%   \item [AS] giorno di apertura dell'issue.
+% \end{description}
+
 % sub:risoluzione_dei_problemi (end)
 
 \end{document}

@@ -1,6 +1,5 @@
 \documentclass[../../norme-di-progetto.tex]{subfiles}
 
-% FIXME struttura non conforme
 \begin{document}
 
 \subsubsection{Finalità}%
@@ -13,21 +12,23 @@ GruppOne istanzia il processo di documentazione per illustrare in maniera chiara
 
 La documentazione è essenziale durante ogni attività del ciclo di vita del software, essa costituisce un importante mezzo di comunicazione per i membri del team che per il committente.
 Si vogliono quindi definire delle norme che possano standardizzare il processo di documentazione e renderlo più accessibile a tutti i componenti del gruppo.
-Tale processo distingue quattro differenti attività:
+Tale processo distingue tre differenti attività:
 \begin{itemize}
-  \item  Implementazione
+  \item  Implementazione del processo
   \item  Progettazione e sviluppo
-  \item  Produzione
-  \item  Manutenzione.
+  \item  Produzione.
 \end{itemize}
 
-\subsubsection{Implementazione}%
-\label{subs:implementazione}
-L'attività di implementazione descrive il ciclo di vita dei documenti e illustra le proprietà di base comuni a tutti i documenti situate in file a sé stanti.
+\subsubsection{Attività}%
+\label{subs:documentazione/attivita}
 
-\paragraph{Configurazione}%
-\label{par:configurazione}
-La configurazione di base comune ai documenti rilevanti è astratta in due file \LaTeX{} che contengono ad esempio\ la struttura e la formattazione che ogni file deve avere.
+\paragraph{Implementazione del processo}%
+\label{par:documentazione/implementazione}
+L'attività di implementazione presenta i prodotti del processo di documentazione, descrive il ciclo di vita dei documenti e ne illustra le proprietà di base comuni situate in file a sé stanti.
+
+\subparagraph{Configurazione}%
+\label{subp:configurazione}
+La configurazione di base comune ai documenti rilevanti è astratta in due file \LaTeX{} che contengono ad esempio la struttura e la formattazione che ogni file deve avere.
 Si riporta un elenco (non esaustivo) di ciò che è presente nel file di configurazione:
 
 \begin{itemize}
@@ -37,9 +38,9 @@ Si riporta un elenco (non esaustivo) di ciò che è presente nel file di configu
   \item Dichiarazione di nuovi comandi.
 \end{itemize}
 
-\paragraph{Ciclo di vita}%
-\label{par:ciclo_di_vita}
-Il ciclo di vita di rappresenta gli stadi in cui il documento si può trovare nel corso della sua esistenza. Ne distinguiamo cinque:
+\subparagraph{Ciclo di vita}%
+\label{subp:ciclo_di_vita}
+Il ciclo di vita rappresenta gli stadi in cui il documento si può trovare nel corso della sua esistenza. Ne distinguiamo cinque:
 
 \begin{description}
   \item [Creazione del template del documento] un membro del gruppo crea il template del documento il quale conterrà solamente una pagina di frontespizio. Inizialmente sono configurate una serie di impostazioni di base per la formattazione delle pagine grazie all'utilizzo di alcuni package di \LaTeX.
@@ -49,13 +50,81 @@ Il ciclo di vita di rappresenta gli stadi in cui il documento si può trovare ne
   \item [Archiviazione] l'amministratore archivia il documento in un repository pubblico su \glossario{GitHub}.
 \end{description}
 
-\subsubsection{Progettazione e sviluppo}%
-\label{subs:progettazione_e_sviluppo}
+\subparagraph{Documenti ufficiali}%
+\label{subp:documenti_ufficiali}
 
-L'attività di progettazione e sviluppo descrive la struttura di ogni documento ed elenca le procedure che ogni componente del team si deve impegnare a seguire nella scrittura dei documenti.
+In questa sezione verranno indicati tutti i documenti che GruppOne si impegna a consegnare completi entro la revisione di accettazione. Per ogni documento saranno indicati nome del documento, scopo del documento e destinatari.
+I documenti ufficiali e prodotti finali del processo di documentazione sono i seguenti:
 
-\paragraph{Frontespizio}%
-\label{par:frontespizio}
+\begin{itemize}
+  \item Analisi dei requisiti
+
+        \textit{Scopo}: descrivere i requisiti e comprendere le funzionalità che il sistema software dovrà offrire.
+
+        \textit{Destinatari}: tutti i componenti del team ed il committente.
+
+
+  \item Studio di fattibilità
+
+        \textit{Scopo}: valutare costi, pregi e difetti dei capitolati proposti.
+
+        \textit{Destinatari}: tutti i componenti del team ed il committente.
+
+
+  \item Piano di Qualifica
+
+        \textit{Scopo}: specificare e quantificare la qualità delle attività svolte dal fornitore.
+
+        \textit{Destinatari}: tutti i componenti del team ed il committente.
+
+
+  \item Piano di Progetto
+
+        \textit{Scopo}: illustrare come ripartire le risorse umane e temporali nelle attività di progetto.
+
+        \textit{Destinatari}: tutti i componenti del team ed il committente.
+
+
+  \item Norme di progetto
+
+        \textit{Scopo}: presentare il Way of Working del fornitore.
+
+        \textit{Destinatari}: tutti i componenti del team ed il committente.
+
+  \item Glossario
+
+        \textit{Scopo}: raccogliere i vocaboli di significato ambiguo.
+
+        \textit{Destinatari}: committente e proponente.
+
+
+  \item Verbali
+
+        \textit{Scopo}: Registrare ciò di cui si discute durante gli incontri del team.
+
+        \textit{Destinatari}: tutti i componenti del team ed il committente.
+
+  \item Manuale utente
+
+        \textit{Scopo}: fornire istruzioni per l'uso del prodotto agli utenti.
+
+        \textit{Destinatari}: committente e proponente.
+
+  \item Manuale sviluppatore
+
+        \textit{Scopo}: fornire istruzioni per la configurazione e l'installazione del prodotto.
+
+        \textit{Destinatari}: committente, proponente e eventuali manutentori del prodotto.
+
+\end{itemize}
+
+\paragraph{Progettazione e sviluppo}%
+\label{par:progettazione_e_sviluppo}
+
+L'attività di progettazione e sviluppo descrive il template a cui ogni documento deve aderire.
+
+\subparagraph{Frontespizio}%
+\label{subp:frontespizio}
 Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: nella prima è presente l'intestazione contenente logo, nome del gruppo e nome del documento, mentre la seconda consiste di uno schema contenente alcune informazioni essenziali sul documento descritto. In esso compaiono, ordinatamente, dall'alto verso il basso:
 
 \begin{itemize}
@@ -78,21 +147,21 @@ Il frontespizio è la prima pagina di ogni documento. È diviso in due parti: ne
         \end{description}
 \end{itemize}
 
-\paragraph{Registro delle modifiche}%
-\label{par:registro_delle_modifiche}
+\subparagraph{Registro delle modifiche}%
+\label{subp:registro_delle_modifiche}
 Il registro delle modifiche ha lo scopo di presentare quali cambiamenti sono stati effettuati e da parte di quale componente del gruppo. Consiste di quattro colonne ed è così articolato:
 \begin{description}
   \item [Versione] indica il numero di versione a cui una modifica è andata a contribuire tramite la sua approvazione.
         Ad ogni versione, infatti, corrisponde una catena di eventi che coinvolge scrittura, verifica e approvazione dei cambiamenti.
         Ogni approvazione di un documento (eccetto i verbali) produce uno scatto di versione.
-        Una descrizione accurata del significato dei numeri di versione che GruppOne ha deciso di adottare è presente al paragrafo~\ref{par:versione_di_prodotto}.
+        Una descrizione accurata del significato dei numeri di versione che GruppOne ha deciso di adottare è presente al paragrafo~\ref{subp:schema_di_versionamento_della_documentazione_di_progetto}.
   \item [Nominativo] indica nome e cognome del componente del team che ha effettuato la modifica.
   \item [Data] indica la data di modifica del documento con formato YYYY/MM/DD\@.
   \item [Descrizione] indica il tipo di modifica effettuata con i riferimenti alle specifiche sezioni.
 \end{description}
 
-\paragraph{Indice}%
-\label{par:indice}
+\subparagraph{Indice}%
+\label{subp:indice}
 L'indice presenta presenta l'elenco, accompagnato dal numero di pagina, delle sezioni e dei paragrafi di cui è composto il documento.
 GruppOne ha deciso di utilizzare la tipica suddivisione del testo offerta da \LaTeX{} che distingue cinque diversi blocchi testuali:
 \begin{itemize}
@@ -108,8 +177,8 @@ Ogni blocco testuale si identifica mediante una \glossario{label} univoca, utile
 
 Ogni riga dell'indice contiene il numero di pagina in cui si trova la sezione o il paragrafo a cui si riferisce e, cliccando sul nome del blocco, è possibile raggiungerlo direttamente.
 
-\paragraph{Contenuto}%
-\label{par:contenuto}
+\subparagraph{Contenuto}%
+\label{subp:contenuto}
 Le pagine di contenuto sono suddivise in tre parti, dall'alto verso il basso:
 \begin{description}
   \item [Header] contiene sinistra il logo del gruppo, a destra il nome del documento.
@@ -117,8 +186,14 @@ Le pagine di contenuto sono suddivise in tre parti, dall'alto verso il basso:
   \item [Footer] contiene l'indicazione della pagina attuale rispetto il totale (e.g 1 di 6).
 \end{description}
 
-\paragraph{Norme per la redazione dei documenti}%
-\label{par:norme_per_la_redazione_dei_documenti}
+
+\paragraph{Produzione}%
+\label{èar:produzione}
+
+L'attività di produzione illustra le norme che i componenti del team si devono impegnare a rispettare nella realizzazione di documenti ben formati e come i documenti sono archiviati nel repository.
+
+%\paragraph{Norme per la redazione dei documenti}%
+%\label{par:norme_per_la_redazione_dei_documenti}
 
 \subparagraph{Stile del testo}%
 \label{subp:stile_del_testo}
@@ -132,7 +207,7 @@ In questo paragrafo GruppOne definisce le norme che uniformano lo stile di scrit
   \item [Termini di glossario in maiuscolo] il testo è scritto in minuscolo. I termini di glossario, invece, sono indicati in maiuscolo con una g a pedice nel nome. Questa regola vale per la prima occorrenza di ogni termine di glossario.
 \end{description}
 
-\subparagraph{Elenchi }%
+\subparagraph{Elenchi}%
 \label{subp:elenchi}
 Gli elenchi sono un ottimo mezzo per la scrittura di documentazione. Essi permettono di riordinare il testo e di organizzare una serie di elementi correlati, pertanto, in questo paragrafo, si stabiliscono le norme per il loro corretto uso:
 
@@ -145,7 +220,7 @@ Gli elenchi sono un ottimo mezzo per la scrittura di documentazione. Essi permet
 \end{enumerate}
 
 \subparagraph{Nomi dei file}%
-\label{nomi_dei_file}
+\label{subp:nomi_dei_file}
 Per identificare i file memorizzati nel repository si seguono le seguenti convenzioni:
 
 \begin{itemize}
@@ -211,38 +286,9 @@ dove x indica la numerazione delle immagini (e.g.:\ figura 1, figura 2, figura 3
 \label{subp:tabelle}
 L'uso di tabelle è consigliato solo quando strettamente necessario. La rappresentazione dei dati in forma tabellare è obbligatoria solo nel momento in cui risulti molto difficile organizzare informazioni aventi una struttura complessa. È obbligatorio l'uso di colori che abbiano un elevato contrasto al fine di promuovere la leggibilità. Inoltre, non devono essere eccessivamente lunghe altrimenti risultano dispersive.
 
-\subparagraph{Metriche}%
-\label{subp:metriche}
+\subparagraph{Suddivisione dei documenti}%
+\label{subp:suddivisione_dei_documenti}
 
-\begin{description}
-  \item [MPS-IDG]:L'indice di Gulpease è un indice che valuta la leggibilità di un testo scritto in lingua italiana. Ha il vantaggio principale di utilizzare la lunghezza delle parole in lettere invece che sillabe. La formula per il calcolo è la seguente:
-  \[
-    89 +\frac{300\cdot nf-10\cdot nl}{np}
-  \]
-  dove:
-  \begin{description}
-    \item [nf] indica il numero delle frasi.
-    \item [nl] indica il numero delle lettere.
-    \item [np] indica il numero di parole.
-  \end{description}
-  I risultati sono compresi tra 0 e 100 dove 0 indica la leggibilità minima mentre 100 quella massima. In genere l'indice dice che:
-  \begin{itemize}
-    \item Un testo con indice inferiore a 80 è difficile per chi ha la licenza elementare.
-    \item Un testo con indice inferiore a 60 è difficile per chi la licenza media.
-    \item Un testo con indice inferiore a 40 è difficile per chi ha il diploma di scuola superiore.
-  \end{itemize}
-  \item [MPS-CO]: L'indice di correttezza ortografica indica la correttezza del testo.
-  Esso misura il numero di errori ortografici presenti.
-  Ogni componente del gruppo ha un estensione per il proprio code editor (per vscode consigliamo l'estensione \href{https://marketplace.visualstudio.com/items?itemName=ban.spellright}{Spell Right}, che si basa sul dizionario di sistema).
-\end{description}
-
-\subsubsection{Produzione}%
-\label{subs:produzione}
-
-L'attività di produzione mostra come i documenti sono distribuiti all'esterno e come il team ha deciso di archiviarli.
-
-\paragraph{Suddivisione dei documenti}%
-\label{par:suddivisione_dei_documenti}
 I documenti utilizzano la struttura a \glossario{subfiles} offerta da \LaTeX.
 La struttura di base del documento è definita nel file che porta il nome del documento.
 La cartella components, che è unica per ogni documento, contiene un file per la definizione di ogni sezione. In ogni sezione si definiscono poi le relative sottosezioni, paragrafi e sottoparagrafi.
@@ -267,8 +313,11 @@ Ad esempio, il file norme di progetto ha la seguente struttura:
   \item[] \ldots
 \end{itemize}
 
-\subparagraph{Interni}%
-\label{subp:suddivisione_dei_documenti/interni}
+%\subparagraph{Interni}%
+%\label{subp:suddivisione_dei_documenti/interni}
+
+\textbf{Documenti interni}:
+
 I documenti interni sono destinati alla comunicazione tra i componenti di GruppOne. Appartengono a tale categoria:
 
 \begin{itemize}
@@ -277,18 +326,24 @@ I documenti interni sono destinati alla comunicazione tra i componenti di GruppO
   \item Norme di progetto.
 \end{itemize}
 
-\subparagraph{Esterni}%
-\label{subp:suddivisione_dei_documenti/esterni}
+%\subparagraph{Esterni}%
+%\label{subp:suddivisione_dei_documenti/esterni}
+
+\textbf{Documenti esterni}:
+
 I documenti esterni sono destinati al committente. Appartengono a tale categoria:
 
 \begin{itemize}
   \item Analisi dei requisiti
   \item Piano di progetto
-  \item Piano di qualifica.
+  \item Piano di qualifica
+  \item Manuale Utente
+  \item Manuale Sviluppatore.
 \end{itemize}
 
-\subparagraph{Verbali}%
-\label{subp:verbali}
+
+\textbf{Verbali:}
+
 I verbali contengono un riassunto degli incontri di GruppOne.
 Se qualche componente del gruppo non fosse presente ad un incontro verbale, è necessario che prenda visione del relativo verbale, in modo da informarsi sugli argomenti discussi alla riunione in cui era assente.
 I verbali si distinguono in interni ed esterni. Ogni verbale è contraddistinto da un nome con il seguente formato:
@@ -299,15 +354,40 @@ Dove USO può essere `interno' o `esterno'. I verbali sono così organizzati:
 
 \begin{description}
   \item [Titolo] il titolo indica che il documento in questione è un verbale e mostra la data di redazione.
-  \item [Schema] lo schema contiene le informazioni basilari relative al documento. È identico allo schema degli altri documenti, spiegato nella sezione~\ref{par:frontespizio}.
+  \item [Schema] lo schema contiene le informazioni basilari relative al documento. È identico allo schema degli altri documenti, spiegato nella sezione~\ref{subp:frontespizio}.
   \item [Informazioni logistiche] elenca i partecipanti interni ed eventualmente esterni, e documenta luogo, data e orario di inizio e fine dell'incontro.
-  \item [Registro delle modifiche] il registro delle modifiche ha la struttura di quello presentato in~\ref{par:registro_delle_modifiche}.
+  \item [Registro delle modifiche] il registro delle modifiche ha la struttura di quello presentato in~\ref{subp:registro_delle_modifiche}.
   \item [Ordine del giorno] l'ordine del giorno consiste in un elenco puntato degli argomenti che saranno trattati nel verbale.
   \item [Sezioni] Ogni sezione del documento sviluppa un elemento dell'ordine del giorno.
   \item [Registro delle decisioni] il registro delle decisioni indica le decisioni prese sulla base degli argomenti discussi nell'ordine del giorno.
 \end{description}
 
-\subsubsection{Strumenti}
+\paragraph{Metriche}%
+\label{par:metriche}
+
+\begin{description}
+  \item [MPR-IDG]:L'indice di Gulpease è un indice che valuta la leggibilità di un testo scritto in lingua italiana. Ha il vantaggio principale di utilizzare la lunghezza delle parole in lettere invece che sillabe. La formula per il calcolo è la seguente:
+  \[
+    89 +\frac{300\cdot nf-10\cdot nl}{np}
+  \]
+  dove:
+  \begin{description}
+    \item [nf] indica il numero delle frasi.
+    \item [nl] indica il numero delle lettere.
+    \item [np] indica il numero di parole.
+  \end{description}
+  I risultati sono compresi tra 0 e 100 dove 0 indica la leggibilità minima mentre 100 quella massima. In genere l'indice dice che:
+  \begin{itemize}
+    \item Un testo con indice inferiore a 80 è difficile per chi ha la licenza elementare.
+    \item Un testo con indice inferiore a 60 è difficile per chi la licenza media.
+    \item Un testo con indice inferiore a 40 è difficile per chi ha il diploma di scuola superiore.
+  \end{itemize}
+  \item [MPR-CO]: L'indice di correttezza ortografica indica la correttezza del testo.
+  Esso misura il numero di errori ortografici presenti.
+  Ogni componente del gruppo ha un estensione per il proprio code editor (per vscode consigliamo l'estensione \href{https://marketplace.visualstudio.com/items?itemName=ban.spellright}{Spell Right}, che si basa sul dizionario di sistema).
+\end{description}
+
+\subsubsection{Strumenti di supporto}
 
 \paragraph{\LaTeX}%
 \label{par:LaTeX}

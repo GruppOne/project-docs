@@ -1,6 +1,5 @@
 \documentclass[../../norme-di-progetto.tex]{subfiles}
 
-% FIXME struttura non conforme
 \begin{document}
 
 \subsubsection{Finalità}%
@@ -13,11 +12,19 @@ GruppOne istanzia il processo di validazione per assicurarsi che il prodotto fin
 
 Dovendo verificare se il prodotto finale soddisfa i requisiti, anche il processo di validazione fa uso dell'analisi dinamica del codice e quindi di test ad hoc per dimostrare la correttezza del prodotto.
 
-\subsubsection{Piano di validazione}%
-\label{subs:piano_di_validazione}
+\subsubsection{Attività}%
+\label{subs:attivita}
 
-Il piano di validazione comprende tutte le attività del processo di validazione:
+Il processo comprende due attività principali:
 
+\begin{itemize}
+\item implementazione del processo
+\item validazione.
+\end{itemize}
+
+\paragraph{Implementazione del processo}%
+\label{subs:validazione/implementazione}
+Un piano di implementazione dovrebbe includere almeno:
 \begin{itemize}
   \item Scelta dell'oggetto di validazione.
   \item Decisione dei compiti da eseguire per realizzare la validazione.
@@ -25,11 +32,27 @@ Il piano di validazione comprende tutte le attività del processo di validazione
   \item Procedure per fornire al cliente i report di validazione.
 \end{itemize}
 
-\subsubsection{Metriche}%
-\label{subs:validazione/metriche}
+\paragraph{Validazione}
+L'attività di validazione consiste nel preparare test sui requisiti e analizzare i loro risultati.
 
-% TODO scrivi metriche (copertura dei requisiti?)
+\paragraph{Test di accettazione}
+I test di accettazione vengono effettuati in presenza del proponente in modo da verificare congiuntamente che siano stati soddisfatti tutti i requisiti espliciti o impliciti del prodotto.
+Vengono effettuati nel collaudo, utilizzando anche i test di sistema.
 
-% subs:metriche (end)
+\paragraph{Test di sistema}
+Verificano, dopo aver passato con successo i test di integrazione, i requisiti del capitolato. I test sono trasversali su più componenti del sistema.
+Tali test garantiscono, oltre ai casi d'uso del software, test di performance, stress test o test similari.
+Essendo tutti i test derivanti da un gruppo di requisiti che hanno una determinata importanza nel prodotto software il team enumera i Test di Sistema nel modo seguente:
+\begin{center}
+    [TA][numero][tipo][priorità]
+\end{center}
+Dove: \textit{priorità} è un valore numerico ad indicare l'importanza del requisito che deve essere soddisfatto, con un numero da 1 a 3 \textit{numero} è un numero identificativo per il test e \textit{tipo} può assumere i seguenti valori:
+\begin{description}
+  \item [F]: requisito funzionale
+  \item [P]: requisito prestazionale
+  \item [V]: requisito vincolo
+  \item [Q]: requisito qualità.
+\end{description}
+
 
 \end{document}
