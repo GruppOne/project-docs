@@ -299,3 +299,4 @@ esterni/analisi-dei-requisiti/components/casi-duso/web-app/diagrams/img
 
 # ignora subfolder dove teniamo le release compilate
 .releases/
+node_modules

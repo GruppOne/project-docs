@@ -2,40 +2,19 @@
 
 \begin{document}
 
-\subsubsection{AUC4: Gestione luoghi}%
-\label{subs:AUC4}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=100mm]{gestione-luoghi}
-  \caption{AUC4: Gestione luoghi}%
-  \label{fig:AUC4}
-\end{figure}
-
-\begin{description}
-  \item[Codice:] AUC4;
-  \item[Titolo:] Gestione luoghi;
-  \item[Attori primari:] gestore;
-  \item[Precondizione:] il sistema deve rendere disponibile la pagina di gestione dei luoghi di un'organizzazione;
-  \item[Postcondizione:] vengono gestiti i luoghi di un'organizzazione;
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item sorge la necessità di effettuare operazioni sul luogo di un'organizzazione, e viene offerta la possibilità di selezionarlo.
-  \end{enumerate}
-\end{description}
-
-\subsubsection{AUC4.1: Aggiungi luogo}%
-\label{subs:AUC4.1}
+\subsubsection{AUC6: Aggiungi luogo}%
+\label{subs:AUC6}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=100mm]{aggiungi-luogo.png}
-  \caption{AUC4.1: Aggiungi luogo}%
-  \label{fig:AUC4.1}
+  \caption{AUC6: Aggiungi luogo}%
+  \label{fig:AUC6}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC4.1;
+  \item[Codice:] AUC6;
   \item[Titolo:] Aggiungi luogo;
   \item[Attori primari:] gestore;
   \item[Precondizione:] il \glossario{luogo} da aggiungere nell'organizzazione non deve esistere;
@@ -46,10 +25,10 @@
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC4.1.1: Inserisci coordinate geografiche}%
-\label{subs:AUC4.1.1}
+\subsubsection{AUC6.1: Inserisci coordinate geografiche}%
+\label{subs:AUC6.1}
 \begin{description}
-  \item[Codice:] AUC4.1.1;
+  \item[Codice:] AUC6.1;
   \item[Titolo:] Inserisci coordinate geografiche;
   \item[Attori primari:] gestore;
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire le coordinate geografiche di un nuovo luogo;
@@ -60,10 +39,10 @@
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC4.1.2: Inserisci indirizzo luogo}%
-\label{subs:AUC4.1.2}
+\subsubsection{AUC6.2: Inserisci indirizzo luogo}%
+\label{subs:AUC6.2}
 \begin{description}
-  \item[Codice:] AUC4.1.2;
+  \item[Codice:] AUC6.2;
   \item[Titolo:] Inserisci indirizzo luogo;
   \item[Attori primari:] gestore;
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire l'indirizzo di un nuovo luogo;
@@ -74,32 +53,20 @@
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC4.2: Eliminazione luogo}%
-\label{subs:AUC4.2}
-\begin{description}
-  \item[Codice:] AUC4.2;
-  \item[Titolo:] Eliminazione luogo;
-  \item[Attori primari:] gestore;
-  \item[Precondizione:] il luogo dell'organizzazione deve essere presente in \emph{Stalker};
-  \item[Postcondizione:] il luogo dell'organizzazione viene eliminato;
-  \item[Scenario principale:]
-  \begin{enumerate}
-    \item sorge la necessità di eliminare un luogo di un'organizzazione.
-  \end{enumerate}
-\end{description}
 
-\subsubsection{AUC4.3: Modifica luogo}%
-\label{subs:AUC4.3}
+
+\subsubsection{AUC7: Modifica luogo}%
+\label{subs:AUC7}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=100mm]{modifica-luogo.png}
-  \caption{AUC4.3: Modifica luogo}%
-  \label{fig:AUC4.3}
+  \caption{AUC7: Modifica luogo}%
+  \label{fig:AUC7}
 \end{figure}
 
 \begin{description}
-  \item[Codice:] AUC4.3;
+  \item[Codice:] AUC7;
   \item[Titolo:] Modifica luogo;
   \item[Attori primari:] gestore;
   \item[Precondizione:] il luogo dell'organizzazione deve essere presente in \emph{Stalker};
@@ -110,10 +77,10 @@
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC4.3.1: Modifica coordinate geografiche}%
-\label{subs:AUC4.3.1}
+\subsubsection{AUC7.1: Modifica coordinate geografiche}%
+\label{subs:AUC7.1}
 \begin{description}
-  \item[Codice:] AUC4.3.1;
+  \item[Codice:] AUC7.1;
   \item[Titolo:] Modifica coordinate geografiche;
   \item[Attori primari:] gestore;
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di modificare le coordinate geografiche di un luogo;
@@ -124,10 +91,10 @@
   \end{enumerate}
 \end{description}
 
-\subsubsection{AUC4.3.2: Modifica indirizzo luogo}%
-\label{subs:AUC4.3.2}
+\subsubsection{AUC7.2: Modifica indirizzo luogo}%
+\label{subs:AUC7.2}
 \begin{description}
-  \item[Codice:] AUC4.3.2;
+  \item[Codice:] AUC7.2;
   \item[Titolo:] Modifica indirizzo luogo;
   \item[Attori primari:] gestore;
   \item[Precondizione:] il sistema deve rendere disponibile la possibilità di modificare l'indirizzo di un luogo;
@@ -138,5 +105,20 @@
   \end{enumerate}
 \end{description}
 %gestione luoghi (end)
+
+
+\subsubsection{AUC8: Eliminazione luogo}%
+\label{subs:AUC8}
+\begin{description}
+  \item[Codice:] AUC8;
+  \item[Titolo:] Eliminazione luogo;
+  \item[Attori primari:] gestore;
+  \item[Precondizione:] il luogo dell'organizzazione deve essere presente in \emph{Stalker};
+  \item[Postcondizione:] il luogo dell'organizzazione viene eliminato;
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item sorge la necessità di eliminare un luogo di un'organizzazione.
+  \end{enumerate}
+\end{description}
 
 \end{document}

@@ -5,13 +5,16 @@ actor :utente non autenticato: as A
 
 rectangle {
   together {
-    usecase (UUC1.1) as "UUC1.1\nConferma EULA"
-    usecase (UUC1.2) as "UUC1.2\nInserimento dati registrazione"
+    usecase (UUC1.1) as "UUC1.1\nVisualizza EULA"
+    usecase (UUC1.2) as "UUC1.2\nConferma EULA"
+    usecase (UUC1.3) as "UUC1.3\nInserimento dati registrazione"
   }
 }
 
 :A: -- (UUC1.1)
-:A: -- (UUC1.2)
+(UUC1.2) <.up. (UUC1.1) : <<include>>
+:A: -- (UUC1.3)
+
 
 @enduml
 
@@ -22,25 +25,25 @@ actor :utente non autenticato: as A
 
 rectangle {
   together {
-    usecase (UUC1.2.1) as "UUC1.2.1\nRegistrazione email\n--\nExtension points:\nVisualizzazione errore se la mail\nnon è scritta in modo corretto"
-    usecase (UUC1.2.2) as "UUC1.2.2\nRegistrazione password\n--\nExtension points:\nVisualizzazione errore se la\npassword non rispetta i criteri"
-    usecase (UUC1.2.3) as "UUC1.2.3\nConferma password\n--\nExtension points:\nVisualizzazione errore se le\ndue password non coincidono"
-    usecase (UUC1.2.4) as "UUC1.2.4\nInserimento dati anagrafici\n--\nExtension points:\nVisualizzazione errore\ndati mancanti"
-    usecase (UUC1.2.5) as "UUC1.2.5\nMail registrazione\nnon valida"
-    usecase (UUC1.2.6) as "UUC1.2.6\nPassword registrazione\nnon valida"
-    usecase (UUC1.2.7) as "UUC1.2.7\nConferma password registrazione\nnon valida"
-    usecase (UUC1.2.8) as "UUC1.2.8\nDati anagrafici registrazione\nnon valida"
+    usecase (UUC1.3.1) as "UUC1.3.1\nRegistrazione email\n--\nExtension points:\nVisualizzazione errore se la mail\nnon Ã¨ scritta in modo corretto"
+    usecase (UUC1.3.2) as "UUC1.3.2\nRegistrazione password\n--\nExtension points:\nVisualizzazione errore se la\npassword non rispetta i criteri"
+    usecase (UUC1.3.3) as "UUC1.3.3\nConferma password\n--\nExtension points:\nVisualizzazione errore se le\ndue password non coincidono"
+    usecase (UUC1.3.4) as "UUC1.3.4\nInserimento dati anagrafici\n--\nExtension points:\nVisualizzazione errore\ndati mancanti"
+    usecase (UUC1.3.5) as "UUC1.3.5\nMail registrazione\nnon valida"
+    usecase (UUC1.3.6) as "UUC1.3.6\nPassword registrazione\nnon valida"
+    usecase (UUC1.3.7) as "UUC1.3.7\nConferma password registrazione\nnon valida"
+    usecase (UUC1.3.8) as "UUC1.3.8\nDati anagrafici registrazione\nnon valida"
   }
 }
 
-:A: -- (UUC1.2.1)
-:A: -- (UUC1.2.2)
-:A: -- (UUC1.2.3)
-:A: -- (UUC1.2.4)
+:A: -- (UUC1.3.1)
+:A: -- (UUC1.3.2)
+:A: -- (UUC1.3.3)
+:A: -- (UUC1.3.4)
 
-(UUC1.2.8) .up.> (UUC1.2.4) : <<extends>>
-(UUC1.2.7) .up.> (UUC1.2.3) : <<extends>>
-(UUC1.2.6) .up.> (UUC1.2.2) : <<extends>>
-(UUC1.2.5) .up.> (UUC1.2.1) : <<extends>>
+(UUC1.3.8) .up.> (UUC1.3.4) : <<extends>>
+(UUC1.3.7) .up.> (UUC1.3.3) : <<extends>>
+(UUC1.3.6) .up.> (UUC1.3.2) : <<extends>>
+(UUC1.3.5) .up.> (UUC1.3.1) : <<extends>>
 
 @enduml
