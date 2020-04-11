@@ -311,11 +311,9 @@ L'uso di tabelle è consigliato solo quando strettamente necessario. La rapprese
   Ogni componente del gruppo ha un estensione per il proprio code editor (per vscode consigliamo l'estensione \href{https://marketplace.visualstudio.com/items?itemName=ban.spellright}{Spell Right}, che si basa sul dizionario di sistema).
 \end{description}
 
-\subsubsection{Procedure}%
-\label{subs:procedure}
+\subparagraph{Suddivisione dei documenti}%
+\label{subp:suddivisione_dei_documenti}
 
-\paragraph{Suddivisione dei documenti}%
-\label{par:suddivisione_dei_documenti}
 I documenti utilizzano la struttura a \glossario{subfiles} offerta da \LaTeX.
 La struttura di base del documento è definita nel file che porta il nome del documento.
 La cartella components, che è unica per ogni documento, contiene un file per la definizione di ogni sezione. In ogni sezione si definiscono poi le relative sottosezioni, paragrafi e sottoparagrafi.
@@ -340,8 +338,11 @@ Ad esempio, il file norme di progetto ha la seguente struttura:
   \item[] \ldots
 \end{itemize}
 
-\subparagraph{Interni}%
-\label{subp:suddivisione_dei_documenti/interni}
+%\subparagraph{Interni}%
+%\label{subp:suddivisione_dei_documenti/interni}
+
+\textbf{Documenti interni}:
+
 I documenti interni sono destinati alla comunicazione tra i componenti di GruppOne. Appartengono a tale categoria:
 
 \begin{itemize}
@@ -350,8 +351,11 @@ I documenti interni sono destinati alla comunicazione tra i componenti di GruppO
   \item Norme di progetto.
 \end{itemize}
 
-\subparagraph{Esterni}%
-\label{subp:suddivisione_dei_documenti/esterni}
+%\subparagraph{Esterni}%
+%\label{subp:suddivisione_dei_documenti/esterni}
+
+\textbf{Documenti esterni}:
+
 I documenti esterni sono destinati al committente. Appartengono a tale categoria:
 
 \begin{itemize}
@@ -362,8 +366,9 @@ I documenti esterni sono destinati al committente. Appartengono a tale categoria
   \item Manuale Sviluppatore.
 \end{itemize}
 
-\subparagraph{Verbali}%
-\label{subp:verbali}
+
+\textbf{Verbali:}
+
 I verbali contengono un riassunto degli incontri di GruppOne.
 Se qualche componente del gruppo non fosse presente ad un incontro verbale, è necessario che prenda visione del relativo verbale, in modo da informarsi sugli argomenti discussi alla riunione in cui era assente.
 I verbali si distinguono in interni ed esterni. Ogni verbale è contraddistinto da un nome con il seguente formato:
