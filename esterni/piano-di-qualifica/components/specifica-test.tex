@@ -373,8 +373,8 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item verificare che le modifiche siano avvenute con successo.
                       \end{itemize}
                     & NS \\
-        TS038F1     & La web application deve permettere al gestore di aggiungere un luogo ad un'organizzazione nella quale ha questo tipo di permesso. \newline
-                      Il gestore deve:
+        TS038F1     & La web application deve permettere all'owner ed al gestore di aggiungere un luogo ad un'organizzazione. \newline
+                      L'owner ed il gestore devono:
                       \begin{itemize}
                         \item avviare la procedura di creazione di un luogo.
                         \item inserire le coordinate geografiche specifiche al nuovo luogo.
@@ -383,8 +383,8 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item verificare che sia stato aggiunto un nuovo luogo nell'organizzazione di riferimento con successo.
                       \end{itemize}
                     & NS \\
-        TS039F3     & La web application può permettere opzionalmente al gestore di aggiungere un luogo ad un'organizzazione nella quale ha questo tipo di permesso, evidenziando l'area sulla mappa. \newline
-                      Il gestore deve:
+        TS039F3     & La web application può permettere opzionalmente all'owner ed al gestore di aggiungere un luogo ad un'organizzazione, evidenziando l'area sulla mappa. \newline
+                      L'owner ed il gestore devono:
                       \begin{itemize}
                         \item avviare la procedura di creazione di un luogo.
                         \item specificare l'area sulla mappa, che corrisponde al nuovo luogo da inserire.
@@ -392,8 +392,8 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item verificare che sia stato aggiunto un nuovo luogo nell'organizzazione di riferimento con successo.
                       \end{itemize}
                     & NS \\
-        TS040F1     & La web application deve permettere al gestore di modificare un luogo in un'organizzazione nella quale ha questo tipo di permesso. \newline
-                      Il gestore deve:
+        TS040F1     & La web application deve permettere all'owner ed al gestore di modificare un luogo in un'organizzazione. \newline
+                    L'owner ed il gestore devono:
                       \begin{itemize}
                         \item avviare la procedura di modifica di un luogo.
                         \item modificare le coordinate geografiche, se necessario.
@@ -402,8 +402,8 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item verificare che le modifiche siano avvenute con successo.
                       \end{itemize}
                     & NS \\
-        TS041F1     & La web application deve permettere al gestore di eliminare un luogo in un'organizzazione nella quale ha questo tipo di permesso. \newline
-                      Il gestore deve:
+        TS041F1     & La web application deve permettere all'owner ed al gestore di eliminare un luogo in un'organizzazione. \newline
+                      L'owner ed il gestore devono:
                       \begin{itemize}
                         \item avviare la procedura di eliminazione di un luogo.
                         \item eliminare un luogo.
@@ -411,10 +411,32 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item verificare che l'eliminazione del luogo sia avvenuta con successo.
                       \end{itemize}
                     & NS \\
+        TS042F1     & La web application deve permettere all'owner, al gestore ed al visualizzatore di monitorare il numero di dipendenti in una specifica organizzazione. \newline
+                      L'owner, il gestore e il visualizzatore devono:
+                      \begin{itemize}
+                        \item avviare la procedura di monitoraggio.
+                        \item visualizzare il numero di dipendenti presenti all'interno di una specifica organizzazione.
+                      \end{itemize}
+                    & NS \\
+        TS043F1     & La web application deve permettere all'owner, al gestore ed al visualizzatore di monitorare il numero di dipendenti in un specifico luogo di una specifica organizzazione. \newline
+                      L'owner, il gestore e il visualizzatore devono:
+                      \begin{itemize}
+                        \item avviare la procedura di monitoraggio.
+                        \item visualizzare il numero di dipendenti presenti all'interno di uno specifico luogo di una specifica organizzazione.
+                      \end{itemize}
+                    & NS \\
+        TS044F2     & La web application deve permettere all'owner, al gestore ed al visualizzatore di visualizzare un report sotto forma tabellare di una specifica organizzazione. \newline
+                      L'owner, il gestore e il visualizzatore devono:
+                      \begin{itemize}
+                        \item avviare la procedura di visualizzazione del report.
+                        \item visualizzare gli accessi, le ore trascorse all'interno dei luoghi e quali luoghi sono più frequentati all'interno di un'organizzazione
+                      \end{itemize}
+                  & NS \\
 
-% arrivato a R073F1
+% arrivato a R081F2
 %TODO cambiare tutti gli identificativi da TA a TS
 %TODO modificare i test di sistema relativi alla web application ed aggiungere quelli mancanti
+
 
         TS038F1     & Il sistema deve inviare una richiesta di aggiornamento della lista delle organizzazioni a tutte le applicazioni mobile. \newline
                       L'utente deve:
@@ -422,35 +444,12 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item visualizzare una notifica con la richiesta di aggiornamento qualora una delle organizzazioni venga modificata.
                       \end{itemize}
                     & NS \\
-        TAWFO025      & La web application deve permettere all'owner e al gestore di gestire i luoghi dell'organizzazione. \newline
-                        L'utente deve:
-                        \begin{itemize}
-                          \item avviare la procedura di inserimento di un nuovo luogo.
-                          \item inserire le coordinate geografiche.
-                          \item inserire l'indirizzo.
-                        \end{itemize}
-                      & NS \\
-        TAWFF026      & La web application può opzionalmente permettere all'owner e al gestore di aggiungere un luogo all'organizzazione evidenziandone l'area sulla mappa. \newline
-                        L'owner e il gestore devono:
-                        \begin{itemize}
-                          \item avviare la procedura di inserimento di un nuovo luogo;
-                          \item selezionare l'area sulla mappa.
-                        \end{itemize}
-                      & NS \\
-        TAWFO027      & La web application deve permettere all'owner e al gestore di eliminare luoghi dall'organizzazione. \newline
-                        L'owner e il gestore devono:
-                        \begin{itemize}
-                          \item avviare la procedura di eliminazione di un nuovo luogo;
-                          \item confermare l'eliminazione.
-                        \end{itemize}
-                      & NS \\
-        TAWFO028      & La web application deve permettere all'owner e al gestore di modificare i luoghi dell'organizzazione. \newline
-                        L'owner e il gestore devono:
-                        \begin{itemize}
-                          \item avviare la procedura di modifica di un nuovo luogo.
-                          \item modificare i dati del luogo (indirizzo e coordinate o area sulla mappa).
-                        \end{itemize}
-                      & NS \\
+
+
+
+
+
+
         TAWFO029      & La web application deve permettere all'owner, gestore e visualizzatore di visualizzare una lista dei luoghi dell'organizzazione. \newline
                         L'owner, gestore e visualizzatore devono:
                         \begin{itemize}
