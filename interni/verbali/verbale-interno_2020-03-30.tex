@@ -1,0 +1,82 @@
+\documentclass{article}
+
+\input{../../commons/config}
+
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale interno --- 30/03/2020}
+
+\setResponsabile{Alberto Cocco}
+\setRedattori{Alessandro Rizzo}
+\setVerificatori{
+  Alberto Cocco
+}
+\setUso{Interno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 11/03/2020}
+\setModifiche{%
+\cellcolor{white!80!lightgray!100} & Alberto Cocco & 2020--04--02 & approva documento \\%
+\cellcolor{white!80!lightgray!100} & Verificatore & 2020--03--31 & verifica verbale \\%
+\multirow{-3}{*}{-} & Rizzo Alessandro & 2020--03--30 & stendi verbale%
+}
+
+\disabilitaVersione{}
+\disabilitaElencoFigure{}
+\disabilitaElencoTabelle{}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Informazioni logistiche}%
+\label{sec:informazioni_logistiche}
+
+\begin{description}
+  \item [Luogo] videochiamata su Google Hangouts
+  \item [Data] 30/03/2020
+  \item [Ora] 11:30 \symbol{8594} 13:00
+\end{description}
+
+\subsection{Membri del gruppo presenti}%
+\label{sub:membri_del_gruppo_presenti}
+
+\begin{enumerate}
+  \item Riccardo Agatea
+  % \item Tobia Apolloni
+  \item Riccardo Cestaro
+  \item Alberto Cocco
+  \item Luca Ercole
+  \item Alberto Gobbo
+  \item Alessandro Rizzo
+  \item Fabio Scettro
+\end{enumerate}
+% sub:membri_del_gruppo_presenti (end)
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item Termine della fase di progettazione architetturale
+  \item Inizio degli incrementi
+\end{itemize}
+
+\section{Termine della fase di progettazione architetturale}%
+\label{sec:termine_progettazione}
+Il gruppo ha discusso della situazione nella quale il progetto si trovava al termine della fase di progettazione architetturale, è apparso evidente che non tutti i membri avessero compreso a pieno gli obiettivi della fase corrente concentrando il lavoro su aspetti importanti ma non necessari nella fase corrente.
+Questo pertanto ha portato ad una discrepanza di ore rispetto a quanto pianificato che comunque è stata utilizzata per effettuare lavoro preventivato nelle fasi successive.
+A questo proposito il gruppo ha riflettuto sull'esigenza di prestare maggiore attenzione
+
+\section{Inizio degli incrementi}%
+\label{sec:inizio_incrementi}
+GruppOne ha assegnato i compiti per il primo incremento, in cui ha deciso di occuparsi di autenticazione e login, mentre continua la configurazione delle repository e degli strumenti necessari per la qualità.
+Abbiamo inoltre definito le tecnologie da utilizzare per gestire l'autenticazione
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+
+\begin{enumerate}
+  \item Abbiamo deciso di utilizzare \glossario{Spring Security} associato ai token \glossario{JWT} per la gestione dell'autenticazione e dell'autorizzazione degli utenti
+  \item Abbiamo deciso di porre maggiore attenzione alla pianificazione settimanale e aumentare il dialogo tra i membri del gruppo.
+\end{enumerate}
+
+% sec:registro_delle_decisioni (end)
+\end{document}
