@@ -1,4 +1,10 @@
 {
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
   "[latex]": {
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false,

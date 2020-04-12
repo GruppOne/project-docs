@@ -8,7 +8,7 @@ on:
 jobs:
   chktex:
     name: Lint LaTeX files
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
       - uses: actions/checkout@v2
@@ -17,3 +17,39 @@ jobs:
         uses: docker://gruppone/chktex-action:v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  glossary:
+    name: Ensure glossary is up to date
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: project-docs
+
+      - name: checkout make-glossary repository in a subfolder
+        uses: actions/checkout@v2
+        with:
+          repository: GruppOne/make-glossary
+          path: make-glossary
+
+      - uses: actions/setup-python@v1
+        with:
+          python-version: "3.x"
+
+      - run: python ../make-glossary/make-glossary/make-json.py
+        working-directory: project-docs
+
+      - run: python ../make-glossary/make-glossary/make-tex.py
+        working-directory: project-docs
+
+      - name: check if git status is clean
+        run: |
+          if [[ $(git status -s) ]]; then
+              echo "glossary is not up to date"
+              exit 1
+          else
+              echo "everything ok"
+              exit 0
+          fi
+        working-directory: project-docs
