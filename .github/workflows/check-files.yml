@@ -1,4 +1,4 @@
-name: Best practices for source files
+name: Source files best practices
 
 on:
   pull_request:
