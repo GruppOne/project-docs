@@ -5,7 +5,7 @@
   \subsection{Analisi statica dei documenti}%
   \label{sub:analisi_statica_doc}
 	Per l'analisi statica dei documenti GruppOne ha utilizzato il package \glossario{chktex} che ha consentito di trovare errori nella sintassi latex.
-  Il test, eseguito ad ogni modifica repository, ha dato esito positivo per ogni documento segnalando complessivamente 0 errori.
+  Il test, eseguito automaticamente, impedisce l'approvazione definitiva se vengono segnalati errori.
 
   \begin{figure}[H]
     \centering
@@ -23,7 +23,7 @@
 	% sub:analisi_statica_doc (end)
   \subsection{Esito verifica leggibilità}%
   \label{sub:verifica_leggibilita}
-	Allo scopo di assicurarci una leggibilità accettabile dei documenti abbiamo monitorato l'indice \glossario{Gulpease} di ogni documento. Qui sotto riportiamo i risultati della versione consegnata in RR e successive relativamente agli obiettivi di qualità che erano stati definiti.
+	Allo scopo di assicurarci una leggibilità accettabile dei documenti abbiamo monitorato l'indice \glossario{Gulpease} di ogni documento. Qui sotto riportiamo i risultati associati alle versioni consegnate in occasione delle revisioni di avanzamento relativamente agli obiettivi di qualità che erano stati definiti.
   \rowcolors{2}{lightgray}{white!80!lightgray!100}
   \begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering\arraybackslash}m{2cm} >{\centering\arraybackslash}m{2cm}>{\centering\arraybackslash}m{2cm} >{\centering\arraybackslash}m{4cm}}
     \rowcolor{darkgray!90!}
@@ -34,8 +34,8 @@
     Studio di Fattibilità & 65 & -&Sufficiente\\
     Analisi dei requisiti & 100 & 100&Sufficiente\\
     Glossario & 74 & 83& Sufficiente\\
-    Verbale esterno (media) & 77 & 74&Sufficiente \\
-    Verbale interno (media) & 80 & 77&Sufficiente\\
+    Verbali esterni (media) & 77 & 74&Sufficiente \\
+    Verbali interni (media) & 80 & 77&Sufficiente\\
 \end{longtable}
 \begin{figure}[H]
   \centering
@@ -70,7 +70,7 @@ Per assicurarci di rispettare il preventivo, abbiamo monitorato i discostamenti,
 
 \subsection{Metriche con valore ottimale}%
 \label{sub:metriche_ottimali}
-Infine per avere una visione complessiva dell'andamento della qualità nei controlli alla fine di ogni fase controlliamo quante metriche raggiungono valori definiti come ottimali.
+Infine, alla fine di ogni fase misuriamo quante metriche raggiungono valori definiti come ottimali per avere una visione complessiva dell'andamento della qualità nei controlli.
 \begin{figure}[H]
   \centering
   \includegraphics[width=160mm]{percentualemetricheottimali.png}%
