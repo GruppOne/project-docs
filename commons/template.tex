@@ -52,7 +52,7 @@
 
 \rowcolors{2}{lightgray}{white!80!lightgray!100}
 \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
-\begin{longtable}[H]{>{\centering\bfseries}m{2cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{6.5cm}}
+\begin{longtable}[H]{|>{\centering\bfseries}m{2cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{6.5cm}|}
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{Versione}} & \color{white}{\textbf{Nominativo}} & \color{white}{\textbf{Data}} & \color{white}{\textbf{Descrizione}} \\
   \endfirsthead%
@@ -62,6 +62,7 @@
   \rowcolor{white}%
   \multicolumn{4}{r}{\textit{Continua alla pagina seguente}}
   \endfoot%
+  \hline % chktex 44
   \endlastfoot%
   \modifiche{}%
 \end{longtable}
