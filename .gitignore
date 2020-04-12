@@ -298,5 +298,7 @@ esterni/analisi-dei-requisiti/components/casi-duso/app/diagrams/img
 esterni/analisi-dei-requisiti/components/casi-duso/web-app/diagrams/img
 
 # ignora subfolder dove teniamo le release compilate
-.releases/
-node_modules
+.releases/**
+!.releases/Build-Release.ps1
+
+node_modules/
