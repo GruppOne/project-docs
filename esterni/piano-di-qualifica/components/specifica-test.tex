@@ -6,38 +6,38 @@
 Per misurare la qualità di prodotto inoltre utilizziamo dei test secondo il \glossario{Modello a \textit{V}}, per il quale definiamo e sviluppiamo i test in parallelo alle attività di analisi, progettazione architetturale e di sviluppo e verifica incrementi.
 Abbiamo definito i test dividendoli nelle seguenti categorie:
 \begin{description}
-  \item [Test di Accettazione (TA)]
-  \item [Test di Sistema (TS)]
-  \item [Test di Integrazione (TI)]
-  \item [Test di Unità (TU)]
+  \item [Test di Accettazione (TA)].
+  \item [Test di Sistema (TS)].
+  \item [Test di Integrazione (TI)].
+  \item [Test di Unità (TU)].
 \end{description}
 
 Inoltre classifichiamo i test in base al loro stato:
 \begin{description}
-  \item [S]: il test è stato soddisfatto
-  \item [NS]: il test non è stato ancora soddisfatto
+  \item [S]: il test è stato soddisfatto.
+  \item [NS]: il test non è stato ancora soddisfatto.
 \end{description}
 
 \subsection{Test di Accettazione}%
 \label{sub:test_di_accettazione}
 
-I test di Accettazione vengono attuati dal proponente e dal committente, in sede di collaudo finale, e servono a dimostrare che il prodotto soddisfi tutti i requisiti.
+I test di accettazione vengono attuati dal proponente e dal committente, in sede di collaudo finale, e servono a dimostrare che il prodotto soddisfi tutti i requisiti.
 
 \subsection{Test di Sistema}%
 \label{sub:test_di_sistema}
 
 I test di sistema hanno lo scopo di verificare che il prodotto soddisfi i requisiti richiesti, vengono eseguiti durante la fase di verifica e collaudo finale.
-Essendo tutti i test derivanti da un gruppo di requisiti che hanno una determinata importanza nel prodotto software abbiamo pensato di numerare i Test di Sistema nel modo seguente:
+Essendo tutti i test derivanti da un gruppo di requisiti che hanno una determinata importanza nel prodotto software, abbiamo pensato di numerare i test di sistema nel modo seguente:
 \begin{center}
   [TS][numero][tipo][priorità]
 \end{center}
 
 Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza del requisito che deve essere soddisfatto, \textit{numero} è un numero identificativo incrementale per tipologia che parte da 1 e \textit{tipo} può assumere i seguenti valori:
 \begin{description}
-  \item [F]: requisito funzionale
-  \item [P]: requisito prestazionale
-  \item [V]: requisito vincolo
-  \item [Q]: requisito qualità
+  \item [F]: requisito funzionale.
+  \item [P]: requisito prestazionale.
+  \item [V]: requisito vincolo.
+  \item [Q]: requisito qualità.
 \end{description}
 
       \newpage
@@ -158,7 +158,7 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item visualizzare lo stato, pubblico o privato, dell'organizzazione.
                       \end{itemize}
                     & NS \\
-        TS013F1     & L'applicazione mobile non è collegata alla rete, quindi il server non riceve alcuna richiesta di recuperare la lista di organizzazioni a cui può collegarsi l'utente autenticato. \newline
+        TS013F1     & L'applicazione mobile non recupera la lista di organizzazioni a cui può collegarsi l'utente autenticato, in quanto non c'è collegamento alla rete. \newline
                       L'utente deve:
                       \begin{itemize}
                         \item visualizzare un messaggio d'errore.
@@ -171,7 +171,7 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item visualizzare la lista aggiornata delle organizzazioni.
                       \end{itemize}
                     & NS \\
-        TS015F1     & L'applicazione mobile non è collegata alla rete, quindi il server non riceve alcuna richiesta di aggiornare la lista di organizzazioni a cui può collegarsi l'utente autenticato. \newline
+        TS015F1     & L'applicazione mobile non riceve alcuna richiesta di aggiornare la lista di organizzazioni a cui può collegarsi l'utente autenticato, in quanto non c'è collegamento alla rete. \newline
                       L'utente deve:
                       \begin{itemize}
                         \item visualizzare un messaggio d'errore.
@@ -198,7 +198,7 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item visualizzare la pagina dell'organizzazione privata alla quale è ora collegato.
                       \end{itemize}
                     & NS \\
-        TS018F1     & L'applicazione mobile non permette all'utente autenticato di collegarsi ad un'organizzazione privata, in quanto sono stati inseriti erroneamente i dati d'accesso al server LDAP\@. \newline
+        TS018F1     & L'applicazione mobile non permette all'utente autenticato di collegarsi ad un'organizzazione privata, in quanto vengono inseriti erroneamente i dati d'accesso al server LDAP\@. \newline
                       L'utente deve:
                       \begin{itemize}
                         \item visualizzare la lista delle organizzazioni alla quale può collegarsi.
@@ -219,7 +219,7 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                       \item visualizzare un messaggio d'errore.
                     \end{itemize}
                     & NS \\
-        TS020F1     & L'applicazione mobile deve permettere all'utente autenticato di scollegarsi ad un'organizzazione pubblica. \newline
+        TS020F1     & L'applicazione mobile deve permettere all'utente autenticato di scollegarsi da un'organizzazione pubblica. \newline
                       L'utente deve:
                       \begin{itemize}
                         \item visualizzare la pagina dell'organizzazione pubblica alla quale è ora collegato.
@@ -235,7 +235,7 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item visualizzare la lista delle organizzazioni alla quale può collegarsi.
                       \end{itemize}
                     & NS \\
-        TS022F1     & L'applicazione mobile non è collegata alla rete, quindi il server non riceve alcuna richiesta di scollegamento da un'organizzazione a cui è collegato l'utente autenticato. \newline
+        TS022F1     & L'applicazione mobile non riceve alcuna richiesta di scollegamento da un'organizzazione a cui è collegato l'utente autenticato, in quanto non c'è collegamento alla rete. \newline
                       L'utente deve:
                       \begin{itemize}
                         \item avviare la procedura di scollegamento.
@@ -253,7 +253,7 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item accertarsi che sia noto al sistema.
                       \end{itemize}
                     & NS \\
-        TS024F1     & L'applicazione mobile non è collegata alla rete, quindi non permette all'utente autenticato, che è collegato ad un'organizzazione privata, di passare da noto ad incognito e viceversa. \newline
+        TS024F1     & L'applicazione mobile non permette all'utente autenticato, che è collegato ad un'organizzazione privata, di passare da noto ad incognito e viceversa, in quanto non c'è collegamento alla rete. \newline
                       L'utente deve:
                       \begin{itemize}
                         \item visualizzare la pagina dell'organizzazione privata alla quale è ora collegato.
@@ -268,7 +268,7 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item visualizzare il proprio storico degli accessi.
                       \end{itemize}
                     & NS \\
-        TS026F2     & L'applicazione mobile non è collegata alla rete, quindi non permette all'utente autenticato di visualizzare il proprio storico degli accessi. \newline
+        TS026F2     & L'applicazione mobile non permette all'utente autenticato di visualizzare il proprio storico degli accessi, in quanto non c'è collegamento alla rete. \newline
                       L'utente deve:
                       \begin{itemize}
                         \item visualizzare un messaggio d'errore.
@@ -280,7 +280,7 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item visualizzare il proprio tempo trascorso all'interno di un'organizzazione.
                       \end{itemize}
                     & NS \\
-        TS028F2     & L'applicazione mobile non è collegata alla rete, quindi non permette all'utente autenticato di visualizzare il tempo trascorso all'interno di un'organizzazione. \newline
+        TS028F2     & L'applicazione mobile non permette all'utente autenticato di visualizzare il tempo trascorso all'interno di un'organizzazione, in quanto non c'è collegamento alla rete. \newline
                       L'utente deve:
                       \begin{itemize}
                         \item visualizzare un messaggio d'errore.
@@ -293,7 +293,7 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item confermare la procedura.
                       \end{itemize}
                     & NS \\
-        TS030F1     & L'applicazione mobile non è collegata alla rete, quindi permette all'utente autenticato di disconnettersi dall'applicazione. \newline
+        TS030F1     & L'applicazione mobile non permette all'utente autenticato di disconnettersi dall'applicazione, in quanto non c'è collegamento alla rete. \newline
                       L'utente deve:
                       \begin{itemize}
                         \item avviare la procedura di disconnessione.
@@ -308,7 +308,7 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item confermare la procedura.
                       \end{itemize}
                     & NS \\
-        TS032F1     & L'applicazione mobile non è collegata alla rete, quindi non permette all'utente autenticato di eliminare il suo account. \newline
+        TS032F1     & L'applicazione mobile non permette all'utente autenticato di eliminare il suo account, in quanto non c'è collegamento alla rete. \newline
                       L'utente deve:
                       \begin{itemize}
                         \item avviare la procedura di eliminazione.
@@ -391,7 +391,7 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item verificare che sia stato aggiunto un nuovo luogo nell'organizzazione di riferimento con successo.
                       \end{itemize}
                     & NS \\
-        TS041F1     & La web application deve permettere all'owner ed al gestore di modificare un luogo in un'organizzazione. \newline
+        TS041F1     & La web application deve permettere all'owner ed al gestore di modificare un luogo di un'organizzazione. \newline
                     L'owner ed il gestore devono:
                       \begin{itemize}
                         \item avviare la procedura di modifica di un luogo.
@@ -401,27 +401,27 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item verificare che le modifiche siano avvenute con successo.
                       \end{itemize}
                     & NS \\
-        TS042F1     & La web application deve permettere all'owner ed al gestore di eliminare un luogo in un'organizzazione. \newline
+        TS042F1     & La web application deve permettere all'owner ed al gestore di eliminare un luogo di un'organizzazione. \newline
                       L'owner ed il gestore devono:
                       \begin{itemize}
                         \item avviare la procedura di eliminazione di un luogo.
-                        \item eliminare un luogo.
+                        \item eliminare il luogo.
                         \item confermare la procedura di eliminazione del luogo.
                         \item verificare che l'eliminazione del luogo sia avvenuta con successo.
                       \end{itemize}
                     & NS \\
-        TS043F1     & La web application deve permettere all'owner, al gestore ed al visualizzatore di monitorare il numero di dipendenti in una specifica organizzazione. \newline
+        TS043F1     & La web application deve permettere all'owner, al gestore ed al visualizzatore di monitorare il numero di utenti in una specifica organizzazione. \newline
                       L'owner, il gestore e il visualizzatore devono:
                       \begin{itemize}
                         \item avviare la procedura di monitoraggio.
-                        \item visualizzare il numero di dipendenti presenti all'interno di una specifica organizzazione.
+                        \item visualizzare il numero di utenti presenti all'interno di una specifica organizzazione.
                       \end{itemize}
                     & NS \\
-        TS044F1     & La web application deve permettere all'owner, al gestore ed al visualizzatore di monitorare il numero di dipendenti in un specifico luogo di una specifica organizzazione. \newline
+        TS044F1     & La web application deve permettere all'owner, al gestore ed al visualizzatore di monitorare il numero di utenti in un specifico luogo di una specifica organizzazione. \newline
                       L'owner, il gestore e il visualizzatore devono:
                       \begin{itemize}
                         \item avviare la procedura di monitoraggio.
-                        \item visualizzare il numero di dipendenti presenti all'interno di uno specifico luogo di una specifica organizzazione.
+                        \item visualizzare il numero di utenti presenti all'interno di uno specifico luogo di una specifica organizzazione.
                       \end{itemize}
                     & NS \\
         TS045F2     & La web application deve permettere all'owner, al gestore ed al visualizzatore di visualizzare un report sotto forma tabellare di una specifica organizzazione. \newline
@@ -431,12 +431,12 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
                         \item visualizzare gli accessi, le ore trascorse all'interno dei luoghi e quali luoghi sono più frequentati all'interno di un'organizzazione.
                       \end{itemize}
                     & NS \\
-        TS046F1     & La web application deve permettere all'owner, al gestore ed al visualizzatore di visualizzare le informazioni riguardo uno specifico dipendente. \newline
+        TS046F1     & La web application deve permettere all'owner, al gestore ed al visualizzatore di visualizzare le informazioni riguardo uno specifico utente. \newline
                       L'owner, il gestore e il visualizzatore devono:
                       \begin{itemize}
-                        \item avviare la procedura di monitoraggio del dipendente.
-                        \item visualizzare l'organizzazione in cui si trova il dipendente.
-                        \item visualizzare il luogo in cui si trova il dipendente.
+                        \item avviare la procedura di monitoraggio dell'utente.
+                        \item visualizzare l'organizzazione in cui si trova l'utente.
+                        \item visualizzare il luogo in cui si trova l'utente.
                       \end{itemize}
                     & NS \\
         TS047F1     & La web application deve permettere all'utente autenticato di diventare owner e ottenere la possibilità di creare una sua organizzazione. \newline
@@ -508,49 +508,49 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
 
 % - Vincoli di sistema
 
-        TS001P1 & Il sistema deve garantire un rintracciamento con una precisione sufficiente a certificare la presenza della persona all’interno degli edifici. \newline
+        TS001P1 & Il sistema deve garantire un tracciamento con una precisione sufficiente a certificare la presenza della persona all’interno degli edifici. \newline
                 & NS \\
 
-        TS001V1 & Il sistema deve garantire che le comunicazioni tra applicazione e server devono avvenire solo al momento d’ingresso ed uscita dai luoghi designati. \newline
+        TS001V1 & Il sistema deve garantire che le comunicazioni tra applicazione e server avvengano solo al momento d’ingresso ed uscita dai luoghi designati. \newline
                 & NS \\
 
-        TS002V2 & Il sistema vorrebbe che vengano utilizzati protocolli asincroni per le comunicazioni tra app e server. \newline
+        TS002V2 & Il proponente richiede che vengano utilizzati protocolli asincroni per le comunicazioni tra app e server. \newline
                 & NS \\
 
-        TS003V2 & Il sistema vorrebbe l’utilizzo del design pattern Publisher/Subscriber. \newline
+        TS003V2 & Il proponente richiede l’utilizzo del design pattern Publisher/Subscriber. \newline
                 & NS \\
 
-        TS004V2 & Il sistema vorrebbe che venga utilizzato un IAAS come Kubernetes o un PAAS come Openshift o Rancher per il rilascio delle componenti del server e per la gestione della scalabilità orizzontale. \newline
+        TS004V2 & Il proponente richiede che venga utilizzato un IAAS come Kubernetes o un PAAS come Openshift o Rancher per il rilascio delle componenti del server e per la gestione della scalabilità orizzontale. \newline
                 & NS \\
 
-        TS005V1 & Si necessita che il server esponga delle API REST attraverso cui utilizzare l’applicativo o, alternativamente, è possibile utilizzare il framework RPC\@. \newline
+        TS005V1 & Il server espone delle API REST attraverso cui utilizzare l’applicativo, o in alternativa alle API REST, utilizza il framework RPC\@. \newline
                 & NS \\
 
-        TS006V1 & È necessario che l’applicazione utilizzi tecnologie GPS\@. \newline
+        TS006V1 & L’applicazione utilizza tecnologie GPS\@. \newline
                 & NS \\
 
-        TS007V1 & È necessario che l’applicazione sia in grado di bilanciare il consumo della batteria e la necessità di aggiornare la posizione in background. \newline
+        TS007V1 & L’applicazione è in grado di bilanciare il consumo della batteria e la necessità di aggiornare la posizione in background. \newline
                 & NS \\
 
-        TS001Q1 & È necessario che tutte le componenti applicative siano correlate dei test unitari e d’integrazione. \newline
+        TS001Q1 & Tutte le componenti applicative sono correlate dai test unitari e d’integrazione. \newline
                 & NS \\
 
-        TS002Q1 & È necessario testare interamente il sistema tramite test end-to-end. \newline
+        TS002Q1 & Viene testato interamente il sistema tramite test end-to-end. \newline
                 & NS \\
 
-        TS003Q1 & È necessario effettuare test di carico che dimostrino il corretto funzionamento in ogni situazione: normale, di carico e di sovraccarico. \newline
+        TS003Q1 & Vengono effettuati test di carico che dimostrino il corretto funzionamento in ogni situazione: normale, di carico e di sovraccarico. \newline
                 & NS \\
 
-        TS004Q1 & È necessario fornire una copertura dei test almeno dell’80\%, correlata di report. \newline
+        TS004Q1 & Viene fornita una copertura dei test almeno dell’80\%, correlata di report. \newline
                 & NS \\
 
-        TS005Q2 & È desiderabile che tutte le comunicazioni tra app e server siano cifrate. \newline
+        TS005Q2 & Tutte le comunicazioni tra app e server sono cifrate. \newline
                 & NS \\
 
-        TS006Q2 & È desiderabile che venga fornita un’analisi rispetto al carico massimo in numero di utenti e di quale sarebbe il servizio cloud più adatto per supportarlo, analizzando prezzo, stabilità del servizio ed assistenza. \newline
+        TS006Q2 & Viene fornita un’analisi rispetto al carico massimo in numero di utenti e di quale sarebbe il servizio cloud più adatto per supportarlo, analizzando prezzo, stabilità del servizio ed assistenza. \newline
                 & NS \\
 
-        TS007Q1 & È necessario garantire la privacy degli utenti e rispettare la normativa GDPR\@. \newline
+        TS007Q1 & Viene garantita la privacy degli utenti e rispettare la normativa GDPR\@. \newline
                 & NS \\
 
         \caption{Tabella dei test di sistema}%
@@ -561,12 +561,12 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
 \subsection{Test di Integrazione}%
 \label{subs:test_di_integrazione}
 
-I test di sistema verificano la corretta interazione e collaborazione tra un insieme di unità. I test verranno identificati nel seguente modo:
+I test di integrazione verificano la corretta interazione e collaborazione tra un insieme di unità. I test verranno identificati nel seguente modo:
 \begin{center}
   TI[codice]
 \end{center}
 
-Dove \textit{codice} rappresenta un numero identificativo per il Test di Integrazione.
+Dove \textit{codice} rappresenta un numero progressivo che identifica il test di integrazione.
 
 \begin{centering}
   \rowcolors{2}{lightgray}{white!80!lightgray!100}
@@ -596,7 +596,7 @@ Dove \textit{codice} rappresenta un numero identificativo per il Test di Integra
 \subsection{Test di Unità}%
 \label{subs:test_di_unita}
 
-I test di sistema verificano la correttezza e il funzionamento di una singola unità del software. I test verranno identificati nel seguente modo:
+I test di unità verificano la correttezza e il funzionamento di una singola unità del software. I test verranno identificati nel seguente modo:
 \begin{center}
   TU[codice]
 \end{center}
