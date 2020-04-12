@@ -1,4 +1,4 @@
-name: Generic project management jobs
+name: Project management
 
 on:
   issues:
