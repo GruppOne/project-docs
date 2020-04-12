@@ -37,6 +37,9 @@ jobs:
         with:
           python-version: "3.x"
 
+      - run: python ../make-glossary/make-glossary/make-json.py
+        working-directory: project-docs
+
       - run: python ../make-glossary/make-glossary/make-tex.py
         working-directory: project-docs
 
