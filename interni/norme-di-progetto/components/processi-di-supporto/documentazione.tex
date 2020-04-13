@@ -188,7 +188,7 @@ Le pagine di contenuto sono suddivise in tre parti, dall'alto verso il basso:
 
 
 \paragraph{Produzione}%
-\label{èar:produzione}
+\label{par:produzione}
 
 L'attività di produzione illustra le norme che i componenti del team si devono impegnare a rispettare nella realizzazione di documenti ben formati e come i documenti sono archiviati nel repository.
 
@@ -362,11 +362,34 @@ Dove USO può essere `interno' o `esterno'. I verbali sono così organizzati:
   \item [Registro delle decisioni] il registro delle decisioni indica le decisioni prese sulla base degli argomenti discussi nell'ordine del giorno.
 \end{description}
 
+\subparagraph{Utilizzo delle lingue}%
+\label{subp:utilizzo_delle_lingue}
+
+Per la comunicazione e produzione in forma scritta GruppOne ha deciso di fare uso delle lingue italiano e inglese.
+Di seguito verrà elencato dove è richiesto esplicitamente l'uso \textbf{obbligatorio} di ciascuna lingua.
+
+Utilizziamo la lingua italiana:
+\begin{itemize}
+  \item Nei titoli delle \textit{issue}.
+  \item Nelle conversazioni delle \textit{issue} e delle \textit{Pull Request}.
+  \item Nei messaggi di commit del repository della documentazione di progetto.
+  \item In tutti i file MarkDown presenti nei repository delle componenti software.
+\end{itemize}
+
+Utilizziamo la lingua inglese:
+\begin{itemize}
+  \item Nel codice e nei commenti al codice.
+  \item Nei messaggi di commit dei repository delle componenti software.
+  \item Nei titoli delle \textit{Pull Request} dei repository delle componenti software.
+\end{itemize}
+
+% subp:lingue_da_utilizzare (end)
+
 \paragraph{Metriche}%
 \label{par:metriche}
 
 \begin{description}
-  \item [MPR-IDG]:L'indice di Gulpease è un indice che valuta la leggibilità di un testo scritto in lingua italiana. Ha il vantaggio principale di utilizzare la lunghezza delle parole in lettere invece che sillabe. La formula per il calcolo è la seguente:
+  \item [MPR-IDG]:L'indice di Gulpease è un indice che valuta la leggibilità di un testo scritto in lingua italiana. Ha il vantaggio principale di utilizzare la lunghezza delle parole in lettere invece che sillabe. Questa metrica compete a §~\ref{par:produzione}. La formula per il calcolo è la seguente:
   \[
     89 +\frac{300\cdot nf-10\cdot nl}{np}
   \]
@@ -384,6 +407,7 @@ Dove USO può essere `interno' o `esterno'. I verbali sono così organizzati:
   \end{itemize}
   \item [MPR-CO]: L'indice di correttezza ortografica indica la correttezza del testo.
   Esso misura il numero di errori ortografici presenti.
+  Questa metrica compete a §~\ref{par:produzione}.
   Ogni componente del gruppo ha un estensione per il proprio code editor (per vscode consigliamo l'estensione \href{https://marketplace.visualstudio.com/items?itemName=ban.spellright}{Spell Right}, che si basa sul dizionario di sistema).
 \end{description}
 

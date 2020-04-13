@@ -6,6 +6,8 @@
 \appendToGraphicspath{../../../../commons/img/}
 \appendToGraphicspath{./components/img/}
 \appendToGraphicspath{../components/img/}
+% non ci sono tabelle, quindi a che serve avere nell'indice la scritta Elenco tabelle?
+\disabilitaElencoTabelle{}
 
 \title{Norme di progetto}
 
@@ -26,59 +28,74 @@
 }
 \setUso{Interno}
 \setDescrizione{Questo documento descrive il nostro Way of Working}
-% ----------------------------------------- usare questa riga come template ------------------------------------------
-% \cellcolor{lightgray} & \placeholder{redattore} & 2020--\placeholder{MM--DD} & \placeholder{contenuto modifica} \\%
-% FIXME sistemare registri delle modifiche riempiendo i buchi
+
 \setModifiche{%
-\cellcolor{white!80!lightgray!100} & Alberto Cocco & 2020--04--11 & approva documento \\%
-\cellcolor{white!80!lightgray!100} & Luca Ercole & 2020--04--11 & corregge errori emersi dalla verifica \\%
-\cellcolor{white!80!lightgray!100} & Fabio Scettro & 2020--04--10 & verifica sezione §~\ref{sec:processi_organizzativi} \\%
-\cellcolor{white!80!lightgray!100} & Alessandro Rizzo & 2020--04--10 & verifica sezione §~\ref{sec:processi_di_supporto} \\%
-\cellcolor{white!80!lightgray!100} & Tobia Apolloni & 2020--04--10 & verifica sezione §~\ref{sec:processi_primari} \\%
-\cellcolor{white!80!lightgray!100} & Luca Ercole & 2020--04--10 & sistema §~\ref{sub:gestione_della_configurazione} \\%
-\cellcolor{white!80!lightgray!100} & Fabio Scettro & 2020--04--09 & sistema §~\ref{subs:strumenti_di_supporto} \\%
-\cellcolor{white!80!lightgray!100} & Alessandro Rizzo & 2020--04--09 & sistema processo §~\ref{sub:sviluppo} \\%
-\multirow{-9}{*}{0.2.1} \cellcolor{white!80!lightgray!100} & Alberto Gobbo & 2020--04--09 & sistema processo §~\ref{sub:accertamento_della_qualita} \\%
-\cellcolor{lightgray} & Riccardo Agatea & 2020--03--06 & approva documento \\%
-\cellcolor{lightgray} & Tobia Apolloni & 2020--03--05 & verifica documento \\%
-\cellcolor{lightgray} & Luca Ercole & 2020--04--02 & riscrive processi §~\ref{sub:gestione_della_configurazione} e §~\ref{sub:verifica} \\%
-\cellcolor{lightgray} & Alberto Cocco & 2020--04--01 & ristruttura processi §~\ref{sub:gestione_dei_rischi}, §~\ref{sub:documentazione}, §~\ref{sub:risoluzione_dei_problemi}   \\%
-\cellcolor{lightgray} & Riccardo Agatea & 2020--03--27 & sistema processo §~\ref{sub:gestione_di_processo} \\%
-\cellcolor{lightgray} & Riccardo Agatea & 2020--03--20 & aggiunge processo §~\ref{sub:revisione} \\%
-\multirow{-7}{*}{0.1.6} \cellcolor{lightgray} & Riccardo Cestaro & 2020--03--11 & riscrive processo §~\ref{sub:fornitura} e §~\ref{sub:validazione}\\%
-\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--03--04 & approva documento \\%
-\cellcolor{white!80!lightgray!100} & Luca Ercole & 2020--03--03 & corregge problemi emersi dalla verifica \\%
-\cellcolor{white!80!lightgray!100} & Alessandro Rizzo & 2020--03--02 & verifica documento \\%
-\cellcolor{white!80!lightgray!100} & Luca Ercole & 2020--02--29 & corregge §~\ref{sub:risoluzione_dei_problemi} e §~\ref{sub:gestione_dei_rischi} \\%
-\cellcolor{white!80!lightgray!100} & Alberto Gobbo & 2020--02--25 & scrive §~\ref{par:codifica_e_test_di_unita_del_software}\\%
-\cellcolor{white!80!lightgray!100} & Alberto Cocco & 2020--02--21 & amplia §~\ref{par:progettazione_architetturale_del_sistema} \\%
-\cellcolor{white!80!lightgray!100} & Luca Ercole & 2020--02--19 & adegua il documento alla struttura richiesta \\%
-\cellcolor{white!80!lightgray!100} & Alberto Cocco & 2020--02--19 & corregge attività mancanti in §~\ref{sub:fornitura} e §~\ref{par:analisi_dei_requisiti_del_sistema}\\%
-\multirow{-9}{*}{0.1.5} \cellcolor{white!80!lightgray!100} & Alberto Cocco & 2020--02--18 & modifica processo §~\ref{sub:gestione_dei_rischi} \\%
-\cellcolor{lightgray} & Alessandro Rizzo & 2019--12--30 & approva documento \\%
-\cellcolor{lightgray} & Alessandro Rizzo, Fabio Scettro & 2019--12--30 & verifica documento completo \\%
-\cellcolor{lightgray} & Luca Ercole & 2019--12--29 & sistema alcuni dettagli e aggiungi varie metriche \\%
-\cellcolor{lightgray} & Alberto Cocco,Luca Ercole & 2019--11--28 & correggi errori trovati durante la verifica \\%
-\cellcolor{lightgray} & Fabio Scettro & 2019--12--28 & revisiona il documento \\%
-\cellcolor{lightgray} & Luca Ercole & 2019--12--27 & modifica sistema di numerazione dei requisiti \\%
-\cellcolor{lightgray} & Alberto Cocco, Luca Ercole & 2019--12--27 & risolvi alcuni errori \\%
-\cellcolor{lightgray} & Alessandro Rizzo & 2019--12--26 & revisiona il documento \\%
-\cellcolor{lightgray} & Alberto Cocco & 2019--12--26 & aggiungi processi §~\ref{sub:verifica} e §~\ref{sub:validazione} \\%
-\cellcolor{lightgray} & Luca Ercole & 2019--12--26 & aggiungi §~\ref{par:classificazione_dei_rischi} \\%
-\cellcolor{lightgray} & Alberto Gobbo & 2019--12--24 & completa processo §~\ref{sub:documentazione} \\%
-\cellcolor{lightgray} & Luca Ercole & 2019--12--23 & risolvi errori \\%
-\cellcolor{lightgray} & Alberto Gobbo & 2019--12--23 & completa §~\ref{sec:processi_primari} \\%
-\cellcolor{lightgray} & Luca Ercole & 2019--12--22 & aggiungi §~\ref{sub:sviluppo} \\%
-\cellcolor{lightgray} & Alberto Gobbo & 2019--12--22 & aggiungi §~\ref{sec:processi_organizzativi} \\%
-\cellcolor{lightgray} & Alberto Gobbo & 2019--12--21 & inizia §~\ref{sec:processi_primari} \\%
-\cellcolor{lightgray} & Luca Ercole & 2019--12--21 & aggiungi label a sottosezioni, paragrafi, sottoparagrafi \\%
-\cellcolor{lightgray} & Alberto Cocco & 2019--12--21 & completa struttura dei processi \\%
-\multirow{-19}{*}{0.0.4} \cellcolor{lightgray} & Alberto Gobbo & 2019--12--21 & inizia §~\ref{sec:introduzione} \\%
-\cellcolor{white!80!lightgray!100} & Riccardo Agatea & 2019--11--19 & approva bozza \\%
-\cellcolor{white!80!lightgray!100} & Alberto Cocco & 2019--11--18 & aggiungi prima bozza di §~\ref{sub:documentazione} \\%
-\cellcolor{white!80!lightgray!100} & Alberto Cocco & 2019--11--16 & aggiungi struttura di §~\ref{sec:processi_primari}, §~\ref{sec:processi_di_supporto}, §~\ref{sec:processi_organizzativi} \\%
-\cellcolor{white!80!lightgray!100} & Luca Ercole & 2019--11--16 & aggiungi redattori e verificatori \\%
-\multirow{-5}{*}{0.0.1} \cellcolor{white!80!lightgray!100} & Luca Ercole & 2019--11--15 & crea documenti vuoti con template %
+\rowcolor{lightgray} 0.3.0 & Alberto Cocco & 2020--04--13 & consegna documenti \textit{Revisione di progettazione}\\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.2.4 & Alberto Cocco & 2020--04--12 & modifica \textit{Piano di qualifica}\\\hline % chktex 44
+\rowcolor{lightgray} 0.2.3 & Alberto Cocco & 2020--04--12 & modifica \textit{Glossario }\\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.2.2 & Alberto Cocco & 2020--04--11 & modifica \textit{Piano di progetto}\\\hline % chktex 44
+\rowcolor{lightgray} 0.2.1 & Alberto Cocco & 2020--04--11 & approva documento \\%
+\rowcolor{lightgray} & Luca Ercole & 2020--04--11 & corregge errori emersi dalla verifica \\%
+\rowcolor{lightgray} & Fabio Scettro & 2020--04--10 & verifica sezione §~\ref{sec:processi_organizzativi} \\%
+\rowcolor{lightgray} & Alessandro Rizzo & 2020--04--10 & verifica sezione §~\ref{sec:processi_di_supporto} \\%
+\rowcolor{lightgray} & Tobia Apolloni & 2020--04--10 & verifica sezione §~\ref{sec:processi_primari} \\%
+\rowcolor{lightgray} & Luca Ercole & 2020--04--10 & sistema §~\ref{sub:gestione_della_configurazione} \\%
+\rowcolor{lightgray} & Fabio Scettro & 2020--04--09 & sistema §~\ref{subs:strumenti_di_supporto} \\%
+\rowcolor{lightgray} & Alessandro Rizzo & 2020--04--09 & sistema processo §~\ref{sub:sviluppo} \\%
+\rowcolor{lightgray} & Alberto Gobbo & 2020--04--09 & sistema processo §~\ref{sub:accertamento_della_qualita} \\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.2.0 & Alberto Cocco & 2020--04--07 & consegna \textit{Technology baseline} \\\hline % chktex 44
+\rowcolor{lightgray} 0.1.7 & Alberto Cocco & 2020--04--06 & modifica \textit{Analisi dei requisiti}\\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.1.6 & Riccardo Agatea & 2020--04--06 & approva documento \\%
+\rowcolor{white!80!lightgray!100} & Tobia Apolloni & 2020--04--05 & verifica documento \\%
+\rowcolor{white!80!lightgray!100} & Luca Ercole & 2020--04--02 & riscrive processi §~\ref{sub:gestione_della_configurazione} e §~\ref{sub:verifica} \\%
+\rowcolor{white!80!lightgray!100} & Alberto Cocco & 2020--04--01 & ristruttura processi §~\ref{sub:gestione_dei_rischi}, §~\ref{sub:documentazione}, §~\ref{sub:risoluzione_dei_problemi}   \\%
+\rowcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--03--27 & sistema processo §~\ref{sub:gestione_di_processo} \\%
+\rowcolor{white!80!lightgray!100} & Riccardo Agatea & 2020--03--20 & aggiunge processo §~\ref{sub:revisione} \\%
+\rowcolor{white!80!lightgray!100} & Riccardo Cestaro & 2020--03--11 & riscrive processo §~\ref{sub:fornitura} e §~\ref{sub:validazione}\\\hline % chktex 44
+\rowcolor{lightgray} 0.1.5 & Riccardo Agatea & 2020--03--04 & approva documento \\%
+\rowcolor{lightgray} & Luca Ercole & 2020--03--03 & corregge problemi emersi dalla verifica \\%
+\rowcolor{lightgray} & Alessandro Rizzo & 2020--03--02 & verifica documento \\%
+\rowcolor{lightgray} & Luca Ercole & 2020--02--29 & corregge §~\ref{sub:risoluzione_dei_problemi} e §~\ref{sub:gestione_dei_rischi} \\%
+\rowcolor{lightgray} & Alberto Gobbo & 2020--02--25 & scrive §~\ref{par:codifica_e_test_di_unita_del_software}\\%
+\rowcolor{lightgray} & Alberto Cocco & 2020--02--21 & amplia §~\ref{par:progettazione_architetturale_del_sistema} \\%
+\rowcolor{lightgray} & Luca Ercole & 2020--02--19 & adegua il documento alla struttura richiesta \\%
+\rowcolor{lightgray} & Alberto Cocco & 2020--02--19 & corregge attività mancanti in §~\ref{sub:fornitura} e §~\ref{par:analisi_dei_requisiti_del_sistema}\\%
+\rowcolor{lightgray} & Alberto Cocco & 2020--02--18 & modifica processo §~\ref{sub:gestione_dei_rischi} \\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.1.4 & Riccardo Agatea & 2020--03--01 & modifica \textit{Analisi dei requisiti}\\\hline % chktex 44
+\rowcolor{lightgray} 0.1.3 & Riccardo Agatea & 2020--03--01 & modifica \textit{Glossario}\\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.1.2 & Riccardo Agatea & 2020--02--27 & modifica \textit{Piano di progetto}\\\hline % chktex 44
+\rowcolor{lightgray} 0.1.1 & Alessandro Rizzo & 2020--02--26 & modifica \textit{Piano di progetto}\\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.1.0 & Alessandro Rizzo & 2020--01--13 & consegna documenti \textit{Revisione dei requisiti} \\\hline % chktex 44
+\rowcolor{lightgray} 0.0.8 & Alessandro Rizzo & 2020--01--13 & creazione \textit{Glossario}\\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.0.7 & Alessandro Rizzo & 2020--01--13 & creazione \textit{Piano di qualifica}\\\hline % chktex 44
+\rowcolor{lightgray} 0.0.6 & Alessandro Rizzo & 2020--01--13 & modifica \textit{Piano di progetto}\\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.0.5 & Alessandro Rizzo & 2020--01--03 & creazione \textit{Analisi dei requisiti}\\\hline % chktex 44
+\rowcolor{lightgray} 0.0.4 & Alessandro Rizzo & 2019--12--30 & approva documento \\%
+\rowcolor{lightgray} & Alessandro Rizzo, Fabio Scettro & 2019--12--30 & verifica documento completo \\%
+\rowcolor{lightgray} & Luca Ercole & 2019--12--29 & sistema alcuni dettagli e aggiungi varie metriche \\%
+\rowcolor{lightgray} & Alberto Cocco,Luca Ercole & 2019--11--28 & correggi errori trovati durante la verifica \\%
+\rowcolor{lightgray} & Fabio Scettro & 2019--12--28 & revisiona il documento \\%
+\rowcolor{lightgray} & Luca Ercole & 2019--12--27 & modifica sistema di numerazione dei requisiti \\%
+\rowcolor{lightgray} & Alberto Cocco, Luca Ercole & 2019--12--27 & risolvi alcuni errori \\%
+\rowcolor{lightgray} & Alessandro Rizzo & 2019--12--26 & revisiona il documento \\%
+\rowcolor{lightgray} & Alberto Cocco & 2019--12--26 & aggiungi processi §~\ref{sub:verifica} e §~\ref{sub:validazione} \\%
+\rowcolor{lightgray} & Luca Ercole & 2019--12--26 & aggiungi §~\ref{par:classificazione_dei_rischi} \\%
+\rowcolor{lightgray} & Alberto Gobbo & 2019--12--24 & completa processo §~\ref{sub:documentazione} \\%
+\rowcolor{lightgray} & Luca Ercole & 2019--12--23 & risolvi errori \\%
+\rowcolor{lightgray} & Alberto Gobbo & 2019--12--23 & completa §~\ref{sec:processi_primari} \\%
+\rowcolor{lightgray} & Luca Ercole & 2019--12--22 & aggiungi §~\ref{sub:sviluppo} \\%
+\rowcolor{lightgray} & Alberto Gobbo & 2019--12--22 & aggiungi §~\ref{sec:processi_organizzativi} \\%
+\rowcolor{lightgray} & Alberto Gobbo & 2019--12--21 & inizia §~\ref{sec:processi_primari} \\%
+\rowcolor{lightgray} & Luca Ercole & 2019--12--21 & aggiungi label a sottosezioni, paragrafi, sottoparagrafi \\%
+\rowcolor{lightgray} & Alberto Cocco & 2019--12--21 & completa struttura dei processi \\%
+\rowcolor{lightgray} & Alberto Gobbo & 2019--12--21 & inizia §~\ref{sec:introduzione} \\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.0.3 & Alessandro Rizzo & 2019--12--07 & crea \textit{Studio di fattibilità} \\\hline % chktex 44
+\rowcolor{lightgray} 0.0.2 & Riccardo Agatea & 2019--11--25 & Creazione \textit{Piano di progetto} \\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.0.1 & Riccardo Agatea & 2019--11--19 & approva bozza \\%
+\rowcolor{white!80!lightgray!100} & Alberto Cocco & 2019--11--18 & aggiungi prima bozza di §~\ref{sub:documentazione} \\%
+\rowcolor{white!80!lightgray!100} & Alberto Cocco & 2019--11--16 & aggiungi struttura di §~\ref{sec:processi_primari}, §~\ref{sec:processi_di_supporto}, §~\ref{sec:processi_organizzativi} \\%
+\rowcolor{white!80!lightgray!100} & Luca Ercole & 2019--11--16 & aggiungi redattori e verificatori \\%
+\rowcolor{white!80!lightgray!100} & Luca Ercole & 2019--11--15 & crea template del documento
 }
 
 \begin{document}

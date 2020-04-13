@@ -290,7 +290,7 @@ __latexindent_temp.tex
 # ignora cartella contenente alcuni script
 .pwsh/scripts
 
-# ignora cartella delle firme
+# ignora cartelle delle firme
 **/firme/
 
 # ignora diagrammi PlantUML analisi dei requisiti
@@ -299,4 +299,6 @@ esterni/analisi-dei-requisiti/components/casi-duso/web-app/diagrams/img
 
 # ignora subfolder dove teniamo le release compilate
 .releases/
-node_modules
+
+# questa non so perché sia qui :/
+node_modules/
