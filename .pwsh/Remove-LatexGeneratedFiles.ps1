@@ -10,9 +10,9 @@ param (
 )
 
 $auxFilesFound = Get-ChildItem -Recurse -File -Include @(
-  if ($RemovePdfs) {
-    "*.pdf"
-  }
+  # if ($RemovePdfs) {
+  #   "*.pdf"
+  # }
   "*.aux"
   "*.log"
   "*.lof"
