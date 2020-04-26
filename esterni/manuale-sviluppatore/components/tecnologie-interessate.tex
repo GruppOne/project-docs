@@ -1,0 +1,59 @@
+\documentclass[../manuale-sviluppatore.tex]{subfiles}
+
+\begin{document}
+\subsection{Back End}%
+\label{sub:back-end}
+In questa sezione sono descritte le tecnologie scelte dopo una fase di analisi per lo sviluppo del back-end.
+
+\subsubsection{InfluxDB}%
+\label{sub:influxDB}
+Abbiamo deciso di utilizzare InfluxDB, un Time Series Database open source, viste le sue alte performance e le sue elevate capacità di scrittura e di sostenere carichi di interrogazioni 
+importanti. Usiamo questo database per salvare dati momentanei, non persistenti.
+% TODO estendere
+
+\subsubsection{MySql}%
+\label{sub:mysql}
+Abbiamo deciso di utilizzare MySql per il salvataggio di dati persistenti attraverso il modello relazionale, il quale garantisce affidabilità.
+% TODO estendere
+
+\subsubsection{Spring}%
+\label{sub:spring}
+Per sviluppare il back-end abbiamo deciso di utilizzare Spring, un framework concepito per la realizzazione di applicazioni enterprise, che soddisfa i requisiti
+di performance, sicurezza e affidabilità richiesti. \\
+Spring contiene molte librerie, che ci hanno consentito di risolvere in modo elegante più di qualche requisito.
+Unico lato negativo di questo framework è la sua documentazione, che può risultare molto dispersiva.
+% TODO estendere
+
+\subsubsection{Open API}%
+\label{sub:open_api}
+Grazie alla specifica Open API abbiamo definito le interfacce per la comunicazione, andando quindi a semplificare la sincronizzazione tra documentazione e codice sorgente.
+Open API è in grado di generare codice, documentazione e test case dato un file di interfaccia.
+% TODO estendere
+
+
+\newpage
+\subsection{Web Application}%
+\label{sub:back-end}
+In questa sezione sono descritte le tecnologie scelte dopo una fase di analisi per lo sviluppo dell'applicazione web.
+
+\subsubsection{Angular}%
+\label{sub:angular}
+Abbiamo scelto Angular come framework per lo sviluppo web, visto che consente di creare applicazioni moderne e molto avanzate in modo facile e veloce.
+Alla base dell'architettura Model View ViewModel di Angular c'è TypeScript, necessario a chiunque voglia utilizzare Angular.\\
+I principali tipi di classi in Angular sono i components, cioè la vista, e i servizi, che interagiscono con un modello.
+% TODO estendere
+
+\subsubsection{Angular Material}%
+\label{sub:angular}
+Gli stili dell'applicazione web sono basati sulla libreria Angular Material, che ci permette di ottenere dei risultati grafici eccellenti in poco tempo.
+% TODO estendere
+
+
+\subsubsection{Leaflet}%
+\label{sub:angular}
+Grazie alla libreria Leaflet e alla sua possibile integrazione in Angular, siamo riusciti a implementare delle mappe basate su OpenStreetMap che possano rendere
+l'interfaccia dell'applicazione web friendly, andando a semplificare di molto l'utilizzo agli utenti inesperti.\\
+ Leaflet permette di creare direttamente dalle mappe i luoghi selezionandoli, modificarli o eliminarli.
+% TODO estendere
+
+\end{document}
