@@ -30,7 +30,7 @@ rectangle {
     usecase (UUC1.3.3) as "UUC1.3.3\nConferma password\n--\nExtension points:\nVisualizzazione errore se le\ndue password non coincidono"
     usecase (UUC1.3.4) as "UUC1.3.4\nInserimento nome\n--\nExtension points:\nVisualizzazione errore se \nmanca il nome"
     usecase (UUC1.3.5) as "UUC1.3.5\nInserimento cognome\n--\nExtension points:\nVisualizzazione errore se \nmanca il cognome"
-    usecase (UUC1.3.6) as "UUC1.3.6\nInserimento data di nascita\n--\nExtension points:\nVisualizzazione errore se la data\nnon rispetta i limiti"
+    usecase (UUC1.3.6) as "UUC1.3.6\nInserimento data di nascita\n--\nExtension points:\nVisualizzazione errore se la data\nnon rispetta il formato yyyy-mm-dd"
     usecase (UUC1.3.7) as "UUC1.3.7\nMail registrazione\nnon valida"
     usecase (UUC1.3.8) as "UUC1.3.8\nPassword registrazione\nnon valida"
     usecase (UUC1.3.9) as "UUC1.3.9\nConferma password registrazione\nnon valida"

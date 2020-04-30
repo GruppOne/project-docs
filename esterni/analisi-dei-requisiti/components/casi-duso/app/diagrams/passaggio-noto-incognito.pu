@@ -14,7 +14,7 @@ rectangle {
 
 :A3: -- (UUC12)
 
-(UUC12) <- (UUC18) : <<extends>>
+(UUC18) .up.> (UUC12) : <<extends>>
 @enduml
 
 
@@ -34,7 +34,7 @@ rectangle {
 
 :A3: -- (UUC13)
 
-(UUC13) <- (UUC18) : <<extends>>
+(UUC18) .up.> (UUC13) : <<extends>>
 @enduml
 
 

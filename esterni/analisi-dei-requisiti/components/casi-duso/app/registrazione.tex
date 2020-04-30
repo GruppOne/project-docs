@@ -77,10 +77,12 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se la mail inserita non è valida, l'utente visualizzerà un errore~\ref{subs:UUC1.3.5};
-          \item se la password inserita non è valida, l'utente visualizzerà un errore~\ref{subs:UUC1.3.6};
-          \item se la conferma della password inserita non è valida, l'utente visualizzerà un errore~\ref{subs:UUC1.3.7};
-          \item se non vengono inseriti tutti i dati anagrafici, l'utente visualizzerà un errore~\ref{subs:UUC1.3.8}.
+          \item se la mail inserita non è valida, l'utente visualizzerà un errore~\ref{subs:UUC1.3.7};
+          \item se la password inserita non è valida, l'utente visualizzerà un errore~\ref{subs:UUC1.3.8};
+          \item se la conferma della password inserita non è valida, l'utente visualizzerà un errore~\ref{subs:UUC1.3.9};
+          \item se il nome dell'utente non è inserito, l'utente visualizzerà un errore~\ref{subs:UUC1.3.10};
+          \item se il cognome dell'utente non è inserito, l'utente visualizzerà un errore~\ref{subs:UUC1.3.11};
+          \item se la data di nascita dell'utente non è inserita correttamente, l'utente visualizzerà un errore~\ref{subs:UUC1.3.12}.
         \end{enumerate}
 \end{description}
 
@@ -100,7 +102,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se la mail è scritta in una forma non corretta, verrà visualizzato un errore di email non valida~\ref{subs:UUC1.3.5}.
+          \item se la mail è scritta in una forma non corretta, verrà visualizzato un errore di email non valida~\ref{subs:UUC1.3.7}.
         \end{enumerate}
 \end{description}
 
@@ -120,7 +122,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se la password non è alfanumerica e con almeno un simbolo, verrà visualizzato un errore di password non valida~\ref{subs:UUC1.3.6}.
+          \item se la password non è alfanumerica e con almeno un simbolo, verrà visualizzato un errore di password non valida~\ref{subs:UUC1.3.8}.
         \end{enumerate}
 \end{description}
 
@@ -140,7 +142,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se la password inserita non è uguale a quella precedente, verrà visualizzato un errore di conferma password non valida~\ref{subs:UUC1.3.7}.
+          \item se la password inserita non è uguale a quella precedente, verrà visualizzato un errore di conferma password non valida~\ref{subs:UUC1.3.9}.
         \end{enumerate}
 \end{description}
 
@@ -160,7 +162,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se il nome non viene inserito, verrà visualizzato un errore~\ref{subs:UUC1.3.8}.
+          \item se il nome non viene inserito, verrà visualizzato un errore~\ref{subs:UUC1.3.10}.
         \end{enumerate}
 \end{description}
 
@@ -178,7 +180,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se il cognome non viene inserito, verrà visualizzato un errore~\ref{subs:UUC1.3.8}.
+          \item se il cognome non viene inserito, verrà visualizzato un errore~\ref{subs:UUC1.3.11}.
         \end{enumerate}
 \end{description}
 
@@ -196,7 +198,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se la data di nascita non viene inserita, o l'utente non rispetta i limiti di età, verrà visualizzato un errore~\ref{subs:UUC1.3.8}.
+          \item se la data di nascita non viene inserita, oppure l'utente inserisce una data non conforme al formato \textit{yyyy-mm-dd}, verrà visualizzato un errore~\ref{subs:UUC1.3.12}.
         \end{enumerate}
 \end{description}
 
@@ -224,7 +226,7 @@
   \item[Postcondizione:] l'applicazione mobile comunica all'utente l'errore;
   \item[Scenario Principale:]
         \begin{enumerate}
-          \item l'utente visualizza il messaggio d'errore, in quanto la password inserita non rispetta i vincoli del sistema.
+          \item l'utente visualizza il messaggio d'errore, in quanto la password inserita non è alfanumerica e non contiene almeno un simbolo.
         \end{enumerate}
 \end{description}
 
@@ -280,7 +282,7 @@
   \item[Postcondizione:] l'applicazione mobile comunica all'utente l'errore;
   \item[Scenario Principale:]
         \begin{enumerate}
-          \item l'utente visualizza il messaggio d'errore, la data di nascita inserita deve rispettare i limiti di età.
+          \item l'utente visualizza il messaggio d'errore, in quanto la data di nascita inserita deve rispettare il formato \textit{yyyy-mm-dd}.
         \end{enumerate}
 \end{description}
 
