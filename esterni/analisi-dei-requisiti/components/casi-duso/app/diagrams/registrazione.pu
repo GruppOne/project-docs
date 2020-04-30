@@ -28,11 +28,15 @@ rectangle {
     usecase (UUC1.3.1) as "UUC1.3.1\nRegistrazione email\n--\nExtension points:\nVisualizzazione errore se la mail\nnon è scritta in modo corretto"
     usecase (UUC1.3.2) as "UUC1.3.2\nRegistrazione password\n--\nExtension points:\nVisualizzazione errore se la\npassword non rispetta i criteri"
     usecase (UUC1.3.3) as "UUC1.3.3\nConferma password\n--\nExtension points:\nVisualizzazione errore se le\ndue password non coincidono"
-    usecase (UUC1.3.4) as "UUC1.3.4\nInserimento dati anagrafici\n--\nExtension points:\nVisualizzazione errore\ndati mancanti"
-    usecase (UUC1.3.5) as "UUC1.3.5\nMail registrazione\nnon valida"
-    usecase (UUC1.3.6) as "UUC1.3.6\nPassword registrazione\nnon valida"
-    usecase (UUC1.3.7) as "UUC1.3.7\nConferma password registrazione\nnon valida"
-    usecase (UUC1.3.8) as "UUC1.3.8\nDati anagrafici registrazione\nnon valida"
+    usecase (UUC1.3.4) as "UUC1.3.4\nInserimento nome\n--\nExtension points:\nVisualizzazione errore se \nmanca il nome"
+    usecase (UUC1.3.5) as "UUC1.3.5\nInserimento cognome\n--\nExtension points:\nVisualizzazione errore se \nmanca il cognome"
+    usecase (UUC1.3.6) as "UUC1.3.6\nInserimento data di nascita\n--\nExtension points:\nVisualizzazione errore se la data\nnon rispetta i limiti"
+    usecase (UUC1.3.7) as "UUC1.3.7\nMail registrazione\nnon valida"
+    usecase (UUC1.3.8) as "UUC1.3.8\nPassword registrazione\nnon valida"
+    usecase (UUC1.3.9) as "UUC1.3.9\nConferma password registrazione\nnon valida"
+    usecase (UUC1.3.10) as "UUC1.3.10\nNome registrazione\nnon valido"
+    usecase (UUC1.3.11) as "UUC1.3.11\nCognome registrazione\nnon valido"
+    usecase (UUC1.3.12) as "UUC1.3.12\nData di nascita registrazione\nnon valida"
   }
 }
 
@@ -40,10 +44,14 @@ rectangle {
 :A: -- (UUC1.3.2)
 :A: -- (UUC1.3.3)
 :A: -- (UUC1.3.4)
+:A: -- (UUC1.3.5)
+:A: -- (UUC1.3.6)
 
-(UUC1.3.8) .up.> (UUC1.3.4) : <<extends>>
-(UUC1.3.7) .up.> (UUC1.3.3) : <<extends>>
-(UUC1.3.6) .up.> (UUC1.3.2) : <<extends>>
-(UUC1.3.5) .up.> (UUC1.3.1) : <<extends>>
+(UUC1.3.12) .up.> (UUC1.3.6) : <<extends>>
+(UUC1.3.11) .up.> (UUC1.3.5) : <<extends>>
+(UUC1.3.10) .up.> (UUC1.3.4) : <<extends>>
+(UUC1.3.9) .up.> (UUC1.3.3) : <<extends>>
+(UUC1.3.8) .up.> (UUC1.3.2) : <<extends>>
+(UUC1.3.7) .up.> (UUC1.3.1) : <<extends>>
 
 @enduml

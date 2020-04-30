@@ -146,28 +146,64 @@
 
 
 
-\subsubsection{UUC1.3.4: Inserimento dati anagrafici}%
+\subsubsection{UUC1.3.4: Inserimento nome}%
 \label{subs:UUC1.3.4}
 \begin{description}
   \item[Caso d'uso:] UUC1.3.4;
-  \item[Titolo:] Inserimento dati anagrafici;
+  \item[Titolo:] Inserimento nome;
   \item[Attori primari:] utente non autenticato;
-  \item[Precondizione:] il sistema deve rendere disponibile la schermata di registrazione riguardante i dati anagrafici;
-  \item[Postcondizione:] l'utente ha inserito i dati anagrafici in modo corretto;
+  \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire il proprio nome;
+  \item[Postcondizione:] l'utente ha inserito il proprio nome in modo corretto;
   \item[Scenario principale:]
         \begin{enumerate}
-          \item l'utente inserisce i propri dati anagrafici.
+          \item l'utente inserisce il proprio nome.
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se uno o più dati anagrafici inseriti non rispettano determinati vincoli, verrà visualizzato un errore~\ref{subs:UUC1.3.8}.
+          \item se il nome non viene inserito, verrà visualizzato un errore~\ref{subs:UUC1.3.8}.
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC1.3.5: Mail registrazione non valida}%
+\subsubsection{UUC1.3.5: Inserimento cognome}%
 \label{subs:UUC1.3.5}
 \begin{description}
   \item[Caso d'uso:] UUC1.3.5;
+  \item[Titolo:] Inserimento cognome;
+  \item[Attori primari:] utente non autenticato;
+  \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire il proprio cognome;
+  \item[Postcondizione:] l'utente ha inserito il proprio cognome in modo corretto;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente inserisce il proprio cognome.
+        \end{enumerate}
+  \item[Estensioni:]
+        \begin{enumerate}
+          \item se il cognome non viene inserito, verrà visualizzato un errore~\ref{subs:UUC1.3.8}.
+        \end{enumerate}
+\end{description}
+
+\subsubsection{UUC1.3.6: Inserimento data di nascita}%
+\label{subs:UUC1.3.6}
+\begin{description}
+  \item[Caso d'uso:] UUC1.3.6;
+  \item[Titolo:] Inserimento data di nascita;
+  \item[Attori primari:] utente non autenticato;
+  \item[Precondizione:] il sistema deve rendere disponibile la possibilità di inserire la propria data di nascita;
+  \item[Postcondizione:] l'utente ha inserito la propria data di nascita in modo corretto;
+  \item[Scenario principale:]
+        \begin{enumerate}
+          \item l'utente inserisce la data di nascita.
+        \end{enumerate}
+  \item[Estensioni:]
+        \begin{enumerate}
+          \item se la data di nascita non viene inserita, o l'utente non rispetta i limiti di età, verrà visualizzato un errore~\ref{subs:UUC1.3.8}.
+        \end{enumerate}
+\end{description}
+
+\subsubsection{UUC1.3.7: Mail registrazione non valida}%
+\label{subs:UUC1.3.7}
+\begin{description}
+  \item[Caso d'uso:] UUC1.3.7;
   \item[Titolo:] Mail registrazione non valida;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] l'utente non inserisce la mail in modo corretto;
@@ -178,10 +214,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC1.3.6: Password registrazione non valida}%
-\label{subs:UUC1.3.6}
+\subsubsection{UUC1.3.8: Password registrazione non valida}%
+\label{subs:UUC1.3.8}
 \begin{description}
-  \item[Caso d'uso:] UUC1.3.6;
+  \item[Caso d'uso:] UUC1.3.8;
   \item[Titolo:] Password registrazione non valida;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] l'utente non rispetta i vincoli imposti per la creazione della password;
@@ -192,10 +228,10 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC1.3.7: Conferma password registrazione non valida}%
-\label{subs:UUC1.3.7}
+\subsubsection{UUC1.3.9: Conferma password registrazione non valida}%
+\label{subs:UUC1.3.9}
 \begin{description}
-  \item[Caso d'uso:] UUC1.3.7;
+  \item[Caso d'uso:] UUC1.3.9;
   \item[Titolo:] Conferma password registrazione non valida;
   \item[Attori primari:] utente non autenticato;
   \item[Precondizione:] l'utente non inserisce correttamente la stessa password inserita nel campo precedente;
@@ -206,18 +242,47 @@
         \end{enumerate}
 \end{description}
 
-\subsubsection{UUC1.3.8: Dati anagrafici registrazione non validi}%
-\label{subs:UUC1.3.8}
+\subsubsection{UUC1.3.10: Nome registrazione non valido}%
+\label{subs:UUC1.3.10}
 \begin{description}
-  \item[Caso d'uso:] UUC1.3.8;
-  \item[Titolo:] Dati anagrafici registrazione non validi;
+  \item[Caso d'uso:] UUC1.3.10;
+  \item[Titolo:] Nome registrazione non valido;
   \item[Attori primari:] utente non autenticato;
-  \item[Precondizione:] l'utente non inserisce tutti i campi che riguardano i dati anagrafici;
+  \item[Precondizione:] l'utente non inserisce il proprio nome;
   \item[Postcondizione:] l'applicazione mobile comunica all'utente l'errore;
   \item[Scenario Principale:]
         \begin{enumerate}
-          \item l'utente visualizza il messaggio d'errore, in quanto devono essere compilati tutti i campi dei dati anagrafici.
+          \item l'utente visualizza il messaggio d'errore, in quanto deve essere riempito il campo con il proprio nome.
         \end{enumerate}
 \end{description}
+
+\subsubsection{UUC1.3.11: Cognome registrazione non valido}%
+\label{subs:UUC1.3.11}
+\begin{description}
+  \item[Caso d'uso:] UUC1.3.11;
+  \item[Titolo:] Cognome registrazione non valido;
+  \item[Attori primari:] utente non autenticato;
+  \item[Precondizione:] l'utente non inserisce il proprio cognome;
+  \item[Postcondizione:] l'applicazione mobile comunica all'utente l'errore;
+  \item[Scenario Principale:]
+        \begin{enumerate}
+          \item l'utente visualizza il messaggio d'errore, in quanto deve essere riempito il campo con il proprio cognome.
+        \end{enumerate}
+\end{description}
+
+\subsubsection{UUC1.3.12: Data di nascita registrazione non valida}%
+\label{subs:UUC1.3.12}
+\begin{description}
+  \item[Caso d'uso:] UUC1.3.12;
+  \item[Titolo:] Data di nascita registrazione non valida;
+  \item[Attori primari:] utente non autenticato;
+  \item[Precondizione:] l'utente non inserisce la propria data di nascita;
+  \item[Postcondizione:] l'applicazione mobile comunica all'utente l'errore;
+  \item[Scenario Principale:]
+        \begin{enumerate}
+          \item l'utente visualizza il messaggio d'errore, la data di nascita inserita deve rispettare i limiti di età.
+        \end{enumerate}
+\end{description}
+
 
 \end{document}
