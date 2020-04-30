@@ -8,7 +8,7 @@ rectangle {
     usecase (UUC4) as "UUC4\nVisualizza\nlista organizzazioni\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
     usecase (UUC5) as "UUC5\nVisualizza\nlista organizzazioni collegate"
     usecase (UUC6) as "UUC6\nVisualizza\nlista organizzazioni non collegate"
-    usecase (UUC17) as "UUC17\nVisualizzazione errore\nrete mancante"
+    usecase (UUC18) as "UUC18\nVisualizzazione errore\nrete mancante"
   }
 
 }
@@ -17,7 +17,7 @@ rectangle {
 (UUC4) <|-- (UUC5)
 (UUC4) <|-- (UUC6)
 
-(UUC4) <.left. (UUC17) : <<extends>>
+(UUC4) <.left. (UUC18) : <<extends>>
 
 
 @enduml
