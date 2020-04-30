@@ -178,7 +178,7 @@ In questa sezione indichiamo le prestazioni che il sistema deve fornire: velocit
   \multicolumn{3}{c}{\textit{Continua alla pagina seguente}}
   \endfoot%
   \endlastfoot%
-  R098P1                               & Il rintracciamento deve avere una precisione sufficiente a certificare la presenza della persona all'interno degli edifici                                                                                                                             & Capitolato                   \\
+  R101P1                               & Il rintracciamento deve avere una precisione tale a certificare la presenza della persona all'interno degli edifici                                                                                                                             & Capitolato                   \\
 \end{longtable}
 
 \newpage
@@ -201,19 +201,19 @@ In questa sezione indichiamo i requisiti di vincolo esposti nel capitolato.
   \multicolumn{3}{c}{\textit{Continua alla pagina seguente}}
   \endfoot%
   \endlastfoot%
-  R099V1                               & È necessario sviluppare un server backend                                                                                                                                                                                                              & Capitolato                    \\
-  R100V1                               & È necessario che il server sia dotato di un'interfaccia grafica tramite cui gli utenti possano interagire                                                                                                                                              & Capitolato                    \\
-  R101V1                               & È necessario sviluppare un'applicazione mobile (Android o iOS)                                                                                                                                                                                         & Capitolato                    \\
-  R102V1                               & Le comunicazioni tra applicazione e server devono avvenire solo al momento d'ingresso ed uscita dai luoghi designati                                                                                                                                   & Capitolato                    \\
-  R103V2                               & È desiderabile che venga utilizzato il linguaggio \glossario{Java} (versione 8 o superiore), \glossario{Python}, o \glossario{Node.js} per lo sviluppo del server backend                                                                              & Capitolato                    \\
-  R104V2                               & È desiderabile che vengano utilizzati protocolli asincroni per le comunicazioni tra app e server                                                                                                                                                       & Capitolato                    \\
-  R105V2                               & È desiderabile l'utilizzo del design pattern \glossario{Publisher/Subscriber}                                                                                                                                                                          & Capitolato                    \\
-  R106V2                               & È desiderabile che venga utilizzato un \glossario{IAAS} come \glossario{Kubernetes} o un \glossario{PAAS} come \glossario{Openshift} o \glossario{Rancher} per il rilascio delle componenti del server e per la gestione della scalabilità orizzontale & Capitolato                    \\
-  R107V1                               & È necessario che il server esponga delle \glossario{API REST} attraverso cui utilizzare l'applicativo o, alternativamente, è possibile utilizzare il framework \glossario{gRPC}                                                                        & Capitolato                    \\
-  R108V1                               & Si deve garantire una precisione sufficiente a certificare la presenza dell'utente all'interno degli edifici                                                                                                                                           & Capitolato                    \\
-  R109V1                               & È necessario che l'applicazione utilizzi tecnologie \glossario{GPS}                                                                                                                                                                                    & Capitolato                    \\
-  R110V1                               & È necessario che l'applicazione sia in grado di bilanciare il consumo della batteria e la necessità di aggiornare la posizione in background                                                                                                           & Capitolato                    \\
-  R111V1                               & È necessario che venga fornito un resoconto di tutte le scelte fatte e dei test effettuati per garantire il miglior rapporto raggiunto tra consumo della batteria e utilizzo del GPS, comprensivi di report                                            & Capitolato                    \\
+  R102V1                               & È necessario sviluppare un server backend                                                                                                                                                                                                              & Capitolato                    \\
+  R103V1                               & È necessario che il server sia dotato di un'interfaccia grafica tramite cui gli utenti possano interagire                                                                                                                                              & Capitolato                    \\
+  R104V1                               & È necessario sviluppare un'applicazione mobile (Android o iOS)                                                                                                                                                                                         & Capitolato                    \\
+  R105V1                               & Le comunicazioni tra applicazione e server devono avvenire solo al momento d'ingresso ed uscita dai luoghi designati                                                                                                                                   & Capitolato                    \\
+  R106V2                               & È desiderabile che venga utilizzato il linguaggio \glossario{Java} (versione 8 o superiore), \glossario{Python}, o \glossario{Node.js} per lo sviluppo del server backend                                                                              & Capitolato                    \\
+  R107V2                               & È desiderabile che vengano utilizzati protocolli asincroni per le comunicazioni tra app e server                                                                                                                                                       & Capitolato                    \\
+  R108V2                               & È desiderabile l'utilizzo del design pattern \glossario{Publisher/Subscriber}                                                                                                                                                                          & Capitolato                    \\
+  R109V2                               & È desiderabile che venga utilizzato un \glossario{IAAS} come \glossario{Kubernetes} o un \glossario{PAAS} come \glossario{Openshift} o \glossario{Rancher} per il rilascio delle componenti del server e per la gestione della scalabilità orizzontale & Capitolato                    \\
+  R110V1                               & È necessario che il server esponga delle \glossario{API REST} attraverso cui utilizzare l'applicativo o, alternativamente, è possibile utilizzare il framework \glossario{gRPC}                                                                        & Capitolato                    \\                                                                                                                                     
+  R111V2                               & È desiderabile che tutte le comunicazioni tra app e server siano cifrate                                                                                                                                                                               & Capitolato                    \\                       
+  R112V1                               & È necessario che l'applicazione utilizzi tecnologie \glossario{GPS}                                                                                                                                                                                    & Capitolato                    \\
+  R113V1                               & È necessario che l'applicazione sia in grado di bilanciare il consumo della batteria e la necessità di aggiornare la posizione in background                                                                                                           & Capitolato                    \\
+  R114V1                               & È necessario che venga fornito un resoconto di tutte le scelte fatte e dei test effettuati per garantire il miglior rapporto raggiunto tra consumo della batteria e utilizzo del GPS, comprensivi di report                                            & Capitolato                    \\
 \end{longtable}
 
 \newpage
@@ -236,15 +236,14 @@ In questa sezione indichiamo i requisiti di qualità esposti nel capitolato.
   \multicolumn{3}{c}{\textit{Continua alla pagina seguente}}
   \endfoot%
   \endlastfoot%
-  R112Q1                               & È necessario che tutte le componenti applicative siano correlate dei test unitari e d'integrazione                                                                                                                   & Capitolato                    \\
-  R113Q1                               & È necessario testare interamente il sistema tramite \glossario{test end-to-end}                                                                                                                                      & Capitolato                    \\
-  R114Q1                               & È necessario effettuare test di carico che dimostrino il corretto funzionamento in ogni situazione: normale, di carico e di sovraccarico                                                                             & Capitolato                    \\
-  R115Q1                               & È necessario fornire una copertura dei test almeno dell'80\%, correlata di report                                                                                                                                    & Capitolato                    \\
-  R116Q1                               & È necessario fornire documentazione relativa alle scelte implementative e progettuali effettuate, correlate dalle relative motivazioni                                                                                & Capitolato                    \\
-  R117Q1                               & È necessario fornire documentazione relativa a problemi aperti ed eventuali soluzioni proposte da esplorare                                                                                                          & Capitolato                    \\
-  R118Q2                               & È desiderabile che tutte le comunicazioni tra app e server siano cifrate                                                                                                                                             & Capitolato                    \\
-  R119Q2                               & È desiderabile che venga fornita un'analisi rispetto al carico massimo in numero di utenti e di quale sarebbe il servizio cloud più adatto per supportarlo, analizzando prezzo, stabilità del servizio ed assistenza & Capitolato                    \\
-  R120Q1                               & È necessario garantire la privacy degli utenti e rispettare la normativa \glossario{GDPR}                                                                                                                            & Interno                       \\
+  R115Q1                               & È necessario che tutte le componenti applicative siano correlate dei test unitari e d'integrazione                                                                                                                   & Capitolato                    \\
+  R116Q1                               & È necessario testare interamente il sistema tramite \glossario{test end-to-end}                                                                                                                                      & Capitolato                    \\
+  R117Q1                               & È necessario effettuare test di carico che dimostrino il corretto funzionamento in ogni situazione: normale, di carico e di sovraccarico                                                                             & Capitolato                    \\
+  R118Q1                               & È necessario fornire una copertura dei test almeno dell'80\%, correlata di report                                                                                                                                    & Capitolato                    \\
+  R119Q1                               & È necessario fornire documentazione relativa alle scelte implementative e progettuali effettuate, correlate dalle relative motivazioni                                                                                & Capitolato                    \\
+  R120Q1                               & È necessario fornire documentazione relativa a problemi aperti ed eventuali soluzioni proposte da esplorare                                                                                                          & Capitolato                    \\                                                           
+  R121Q2                               & È desiderabile che venga fornita un'analisi rispetto al carico massimo in numero di utenti e di quale sarebbe il servizio cloud più adatto per supportarlo, analizzando prezzo, stabilità del servizio ed assistenza & Capitolato                    \\
+  R122Q1                               & È necessario garantire la privacy degli utenti e rispettare la normativa \glossario{GDPR}                                                                                                                            & Interno                       \\
 \end{longtable}
 
 \newpage
@@ -281,114 +280,116 @@ In questa sezione indichiamo i requisiti di qualità esposti nel capitolato.
   UUC1.3.6 Interno              & R010F1                               \\
   UUC1.3.7 Interno              & R011F1                               \\
   UUC1.3.8 Interno              & R012F1                               \\
-  UUC2 Interno                  & R013F1                               \\
-  UUC2.1 Interno                & R014F1                               \\
-  UUC2.2 Interno                & R015F1                               \\
-  UUC2.3 Interno                & R016F1                               \\
-  UUC3 Interno                  & R017F1                               \\
-  UUC3.1 Interno                & R018F1                               \\
-  UUC3.2 Interno                & R019F1                               \\
-  UUC3.2.1 Interno              & R020F1                               \\
-  UUC3.2.2 Interno              & R021F1                               \\
-  UUC3.2.3 Interno              & R022F1                               \\
-  UUC3.2.4 Interno              & R023F1                               \\
-  UUC3.3 Interno                & R024F1                               \\
-  UUC4 Capitolato               & R025F1                               \\
-  UUC5 Capitolato               & R026F1                               \\
-  UUC5.1 Interno                & R027F1                               \\
-  UUC5.1.1 Interno              & R028F1                               \\
-  UUC5.1.2 Interno              & R029F1                               \\
-  UUC5.1.3 Interno              & R030F1                               \\
-  UUC6 Interno                  & R031F1                               \\
-  UUC6.1 Interno                & R032F1                               \\
-  UUC6.1.1 interno              & R033F1                               \\
-  UUC6.1.2 Interno              & R034F1                               \\
-  UUC6.1.3 Interno              & R035F1                               \\
-  UUC7 Capitolato               & R036F1                               \\
-  UUC8 Capitolato               & R037F1                               \\
-  UUC9 Capitolato               & R038F1                               \\
-  UUC10 Capitolato              & R039F1                               \\
-  UUC10.1 Interno               & R040F1                               \\
-  UUC10.2 Interno               & R041F2                               \\
-  UUC10.3 Interno               & R042F2                               \\
-  UUC11 Capitolato              & R043F1                               \\
-  UUC12 Capitolato              & R044F1                               \\
-  UUC12.1 Capitolato            & R045F1                               \\
-  UUC12.2 Capitolato            & R046F1                               \\
-  UUC13 Capitolato              & R047F1                               \\
-  UUC14 Capitolato              & R048F1                               \\
-  UUC15 Interno                 & R049F1                               \\
-  UUC16 Interno                 & R050F1                               \\
-  UUC16.1 Interno               & R051F1                               \\
-  UUC17 Interno                 & R052F1                               \\
-  AUC1 Capitolato               & R053F1                               \\
-  AUC1.1 Interno                & R054F1                               \\
-  AUC1.2 Interno                & R055F1                               \\
-  AUC1.3 Interno                & R056F1                               \\
-  AUC2 Interno                  & R057F1                               \\
-  AUC3 Capitolato               & R058F1                               \\
-  AUC3.1 Interno                & R059F1                               \\
-  AUC3.2 Interno                & R060F1                               \\
-  AUC3.3 Capitolato             & R061F1                               \\
-  AUC4 Capitolato               & R062F1                               \\
-  AUC4.1 Interno                & R063F1                               \\
-  AUC5 Capitolato               & R064F1                               \\
-  AUC5.1 Capitolato             & R065F1                               \\
-  AUC5.2 Capitolato             & R066F1                               \\
-  AUC5.3 Capitolato             & R067F1                               \\
-  AUC6 Capitolato               & R068F1                               \\
-  AUC6.1 Capitolato             & R069F1                               \\
-  AUC6.2 Capitolato             & R070F1                               \\
-  Capitolato                    & R071F1                               \\
-  AUC7 Capitolato               & R072F3                               \\
-  AUC7.1 Capitolato             & R073F1                               \\
-  AUC7.2 Capitolato             & R074F1                               \\
-  AUC8 Capitolato               & R075F1                               \\
-  Capitolato                    & R076F1                               \\
-  AUC9 Capitolato               & R077F3                               \\
-  AUC9.1 Capitolato             & R078F1                               \\
-  AUC9.2 Capitolato             & R079F1                               \\
-  AUC9.3 Capitolato             & R080F1                               \\
-  AUC10 Capitolato              & R081F1                               \\
-  AUC10.1 Interno               & R082F2                               \\
-  AUC10.2 Interno               & R083F1                               \\
-  AUC11 Capitolato              & R084F1                               \\
-  AUC11.1 Interno               & R085F1                               \\
-  AUC12 Capitolato              & R086F1                               \\
-  AUC12.1 Interno               & R087F2                               \\
-  AUC13 Capitolato              & R088F2                               \\
-  AUC13.1 Interno               & R089F2                               \\
-  AUC14 Capitolato              & R090F2                               \\
-  AUC14.1 Interno               & R091F1                               \\
-  AUC15 Capitolato              & R092F1                               \\
-  AUC15.1 Interno               & R093F2                               \\
-  AUC16 Capitolato              & R094F2                               \\
-  AUC16.1 Interno               & R095F2                               \\
-  AUC17 Interno                 & R096F2                               \\
-  AUC17.1 Interno               & R097F1                               \\
-  Capitolato                    & R098P1                               \\
-  Capitolato                    & R099V1                               \\
-  Capitolato                    & R100V1                               \\
-  Capitolato                    & R101V1                               \\
+  UUC1.3.9 Interno              & R013F1                               \\
+  UUC1.3.10 Interno              & R014F1                               \\
+  UUC1.3.11 Interno              & R015F1                               \\
+  UUC1.3.12 Interno              & R016F1                               \\
+  UUC2 Interno                  & R017F1                               \\
+  UUC2.1 Interno                & R018F1                               \\
+  UUC2.2 Interno                & R019F1                               \\
+  UUC2.3 Interno                & R020F1                               \\
+  UUC3 Interno                  & R021F1                               \\
+  UUC3.1 Interno                & R022F1                               \\
+  UUC3.2 Interno                & R023F1                               \\
+  UUC3.2.1 Interno              & R024F1                               \\
+  UUC3.2.2 Interno              & R025F1                               \\
+  UUC3.2.3 Interno              & R026F1                               \\
+  UUC3.2.4 Interno              & R027F1                               \\
+  UUC3.3 Interno                & R028F1                               \\
+  UUC4 Capitolato               & R029F1                               \\
+  UUC5 Capitolato               & R030F1                               \\
+  UUC5.1 Interno                & R031F1                               \\
+  UUC5.1.1 Interno              & R032F1                               \\
+  UUC5.1.2 Interno              & R033F1                               \\
+  UUC5.1.3 Interno              & R034F1                               \\
+  UUC6 Interno                  & R035F1                               \\
+  UUC6.1 Interno                & R036F1                               \\
+  UUC6.1.1 interno              & R037F1                               \\
+  UUC6.1.2 Interno              & R038F1                               \\
+  UUC6.1.3 Interno              & R039F1                               \\
+  UUC7 Capitolato               & R040F1                               \\
+  UUC8 Capitolato               & R041F1                               \\
+  UUC9 Capitolato               & R042F1                               \\
+  UUC10 Capitolato              & R043F1                               \\
+  UUC10.1 Interno               & R044F1                               \\
+  UUC10.2 Interno               & R045F2                               \\
+  UUC10.3 Interno               & R046F2                               \\
+  UUC11 Capitolato              & R047F1                               \\
+  UUC12 Capitolato              & R048F1                               \\
+  UUC13 Capitolato              & R049F1                               \\
+  UUC14 Capitolato              & R050F1                               \\
+  UUC15 Capitolato              & R051F1                               \\
+  UUC16 Interno                 & R052F1                               \\
+  UUC17 Interno                 & R053F1                               \\
+  UUC17.1 Interno               & R054F1                               \\
+  UUC18 Interno                 & R055F1                               \\
+  AUC1 Capitolato               & R056F1                               \\
+  AUC1.1 Interno                & R057F1                               \\
+  AUC1.2 Interno                & R058F1                               \\
+  AUC1.3 Interno                & R059F1                               \\
+  AUC2 Interno                  & R060F1                               \\
+  AUC3 Capitolato               & R061F1                               \\
+  AUC3.1 Interno                & R062F1                               \\
+  AUC3.2 Interno                & R063F1                               \\
+  AUC3.3 Capitolato             & R064F1                               \\
+  AUC4 Capitolato               & R065F1                               \\
+  AUC4.1 Interno                & R066F1                               \\
+  AUC5 Capitolato               & R067F1                               \\
+  AUC5.1 Capitolato             & R068F1                               \\
+  AUC5.2 Capitolato             & R069F1                               \\
+  AUC5.3 Capitolato             & R070F1                               \\
+  AUC6 Capitolato               & R071F1                               \\
+  AUC6.1 Capitolato             & R072F1                               \\
+  AUC6.2 Capitolato             & R073F1                               \\
+  Capitolato                    & R074F1                               \\
+  AUC7 Capitolato               & R075F3                               \\
+  AUC7.1 Capitolato             & R076F1                               \\
+  AUC7.2 Capitolato             & R077F1                               \\
+  AUC8 Capitolato               & R078F1                               \\
+  Capitolato                    & R079F1                               \\
+  AUC9 Capitolato               & R080F3                               \\
+  AUC9.1 Capitolato             & R081F1                               \\
+  AUC9.2 Capitolato             & R082F1                               \\
+  AUC9.3 Capitolato             & R083F1                               \\
+  AUC10 Capitolato              & R084F1                               \\
+  AUC10.1 Interno               & R085F2                               \\
+  AUC10.2 Interno               & R086F1                               \\
+  AUC11 Capitolato              & R087F1                               \\
+  AUC11.1 Interno               & R088F1                               \\
+  AUC12 Capitolato              & R089F1                               \\
+  AUC12.1 Interno               & R090F2                               \\
+  AUC13 Capitolato              & R091F2                               \\
+  AUC13.1 Interno               & R092F2                               \\
+  AUC14 Capitolato              & R093F2                               \\
+  AUC14.1 Interno               & R094F1                               \\
+  AUC15 Capitolato              & R095F1                               \\
+  AUC15.1 Interno               & R096F2                               \\
+  AUC16 Capitolato              & R097F2                               \\
+  AUC16.1 Interno               & R098F2                               \\
+  AUC17 Interno                 & R099F2                               \\
+  AUC17.1 Interno               & R100F1                               \\
+  Capitolato                    & R101P1                               \\
   Capitolato                    & R102V1                               \\
-  Capitolato                    & R103V2                               \\
-  Capitolato                    & R104V2                               \\
-  Capitolato                    & R105V2                               \\
+  Capitolato                    & R103V1                               \\
+  Capitolato                    & R104V1                               \\
+  Capitolato                    & R105V1                               \\
   Capitolato                    & R106V2                               \\
-  Capitolato                    & R107V1                               \\
-  Capitolato                    & R108V1                               \\
-  Capitolato                    & R109V1                               \\
+  Capitolato                    & R107V2                               \\
+  Capitolato                    & R108V2                               \\
+  Capitolato                    & R109V2                               \\
   Capitolato                    & R110V1                               \\
   Capitolato                    & R111V1                               \\
-  Capitolato                    & R112Q1                               \\
-  Capitolato                    & R113Q1                               \\
-  Capitolato                    & R114Q1                               \\
+  Capitolato                    & R112V1                               \\
+  Capitolato                    & R113V1                               \\
+  Capitolato                    & R114V1                               \\
   Capitolato                    & R115Q1                               \\
   Capitolato                    & R116Q1                               \\
   Capitolato                    & R117Q1                               \\
-  Capitolato                    & R118Q2                               \\
-  Capitolato                    & R119Q2                               \\
-  Interno                       & R120Q1                               \\
+  Capitolato                    & R118Q1                               \\
+  Capitolato                    & R119Q1                               \\
+  Capitolato                    & R120Q1                               \\
+  Capitolato                    & R121Q2                               \\
+  Interno                       & R122Q1                               \\
 \end{longtable}
 
 \newpage
@@ -422,114 +423,116 @@ In questa sezione indichiamo i requisiti di qualità esposti nel capitolato.
   R010F1                               & UUC1.3.6 Interno              \\
   R011F1                               & UUC1.3.7 Interno              \\
   R012F1                               & UUC1.3.8 Interno              \\
-  R013F1                               & UUC2 Interno                  \\
-  R014F1                               & UUC2.1 Interno                \\
-  R015F1                               & UUC2.2 Interno                \\
-  R016F1                               & UUC2.3 Interno                \\
-  R017F1                               & UUC3 Interno                  \\
-  R018F1                               & UUC3.1 Interno                \\
-  R019F1                               & UUC3.2 Interno                \\
-  R020F1                               & UUC3.2.1 Interno              \\
-  R021F1                               & UUC3.2.2 Interno              \\
-  R022F1                               & UUC3.2.3 Interno              \\
-  R023F1                               & UUC3.2.4 Interno              \\
-  R024F1                               & UUC3.3 Interno                \\
-  R025F1                               & UUC4 Capitolato               \\
-  R026F1                               & UUC5 Interno                  \\
-  R027F1                               & UUC5.1 Interno                \\
-  R028F1                               & UUC5.1.1 Interno              \\
-  R029F1                               & UUC5.1.2 Interno              \\
-  R030F1                               & UUC5.1.3 Interno              \\
-  R031F1                               & UUC6 Interno                  \\
-  R032F1                               & UUC6.1 Interno                \\
-  R033F1                               & UUC6.1.1 Interno              \\
-  R034F1                               & UUC6.1.2 Interno              \\
-  R035F1                               & UUC6.1.3 Interno              \\
-  R036F1                               & UUC7 Capitolato               \\
-  R037F1                               & UUC8 Capitolato               \\
-  R038F1                               & UUC9 Capitolato               \\
-  R039F1                               & UUC10 Capitolato              \\
-  R040F1                               & UUC10.1 Interno               \\
-  R041F1                               & UUC10.2 Interno               \\
-  R042F1                               & UUC10.3 Interno               \\
-  R043F1                               & UUC11 Capitolato              \\
-  R044F2                               & UUC12 Capitolato              \\
-  R045F2                               & UUC12.1 Capitolato            \\
-  R046F1                               & UUC12.2 Capitolato            \\
-  R047F1                               & UUC13 Capitolato              \\
-  R048F1                               & UUC14 Capitolato              \\
-  R049F1                               & UUC15 Interno                 \\
-  R050F1                               & UUC16 Interno                 \\
-  R051F1                               & UUC16.1 Interno               \\
-  R052F1                               & UUC17 Interno                 \\
-  R053F1                               & AUC1 Capitolato               \\
-  R054F1                               & AUC1.1 Interno                \\
-  R055F1                               & AUC1.2 Interno                \\
-  R056F1                               & AUC1.3 Interno                \\
-  R057F1                               & AUC2 Interno                  \\
-  R058F1                               & AUC3 Capitolato               \\
-  R059F1                               & AUC3.1 Interno                \\
-  R060F1                               & AUC3.2 Interno                \\
-  R061F1                               & AUC3.3 Capitolato             \\
-  R062F1                               & AUC4 Capitolato               \\
-  R063F1                               & AUC4.1 Interno                \\
-  R064F1                               & AUC5 Capitolato               \\
-  R065F1                               & AUC5.1 Capitolato             \\
-  R066F1                               & AUC5.2 Capitolato             \\
-  R067F1                               & AUC5.3 Capitolato             \\
-  R068F1                               & AUC6 Capitolato               \\
-  R069F1                               & AUC6.1 Capitolato             \\
-  R070F1                               & AUC6.2 Capitolato             \\
-  R071F1                               & Capitolato                    \\
-  R072F1                               & AUC7 Capitolato               \\
-  R073F1                               & AUC7.1 Capitolato             \\
-  R074F1                               & AUC7,2 Capitolato             \\
-  R075F1                               & AUC8 Capitolato               \\
-  R076F3                               & Capitolato                    \\
-  R077F3                               & AUC9 Capitolato               \\
-  R078F1                               & AUC9.1 Capitolato             \\
-  R079F1                               & AUC9.2 Capitolato             \\
-  R080F2                               & AUC9.3 Capitolato             \\
-  R081F1                               & AUC10 Capitolato              \\
-  R082F1                               & AUC10.1 Interno               \\
-  R083F1                               & AUC10.2 Interno               \\
-  R084F1                               & AUC11 Capitolato              \\
-  R085F1                               & AUC11.1 Interno               \\
-  R086F2                               & AUC12 Capitolato              \\
-  R087F2                               & AUC12.1 Interno               \\
-  R088F2                               & AUC13 Capitolato              \\
-  R089F2                               & AUC13.1 Interno               \\
-  R090F1                               & AUC14 Capitolato              \\
-  R091F1                               & AUC14.1 Interno               \\
-  R092F2                               & AUC15 Capitolato              \\
-  R093F2                               & AUC15.1 Interno               \\
-  R094F2                               & AUC16 Capitolato              \\
-  R095F2                               & AUC16.1 Interno               \\
-  R096F1                               & AUC17 Interno                 \\
-  R097F1                               & AUC17.1 Interno               \\
-  R098P1                               & Capitolato                    \\
-  R099V1                               & Capitolato                    \\
-  R100V1                               & Capitolato                    \\
-  R101V1                               & Capitolato                    \\
+  R013F1                               & UUC1.3.9 Interno              \\
+  R014F1                               & UUC1.3.10 Interno              \\
+  R015F1                               & UUC1.3.11 Interno              \\
+  R016F1                               & UUC1.3.12 Interno              \\
+  R017F1                               & UUC2 Interno                  \\
+  R018F1                               & UUC2.1 Interno                \\
+  R019F1                               & UUC2.2 Interno                \\
+  R020F1                               & UUC2.3 Interno                \\
+  R021F1                               & UUC3 Interno                  \\
+  R022F1                               & UUC3.1 Interno                \\
+  R023F1                               & UUC3.2 Interno                \\
+  R024F1                               & UUC3.2.1 Interno              \\
+  R025F1                               & UUC3.2.2 Interno              \\
+  R026F1                               & UUC3.2.3 Interno              \\
+  R027F1                               & UUC3.2.4 Interno              \\
+  R028F1                               & UUC3.3 Interno                \\
+  R029F1                               & UUC4 Capitolato               \\
+  R030F1                               & UUC5 Interno                  \\
+  R031F1                               & UUC5.1 Interno                \\
+  R032F1                               & UUC5.1.1 Interno              \\
+  R033F1                               & UUC5.1.2 Interno              \\
+  R034F1                               & UUC5.1.3 Interno              \\
+  R035F1                               & UUC6 Interno                  \\
+  R036F1                               & UUC6.1 Interno                \\
+  R037F1                               & UUC6.1.1 Interno              \\
+  R038F1                               & UUC6.1.2 Interno              \\
+  R039F1                               & UUC6.1.3 Interno              \\
+  R040F1                               & UUC7 Capitolato               \\
+  R041F1                               & UUC8 Capitolato               \\
+  R042F1                               & UUC9 Capitolato               \\
+  R043F1                               & UUC10 Capitolato              \\
+  R044F1                               & UUC10.1 Interno               \\
+  R045F1                               & UUC10.2 Interno               \\
+  R046F1                               & UUC10.3 Interno               \\
+  R047F1                               & UUC11 Capitolato              \\
+  R048F2                               & UUC12 Capitolato              \\
+  R049F2                               & UUC13 Capitolato            \\
+  R050F1                               & UUC14 Capitolato              \\
+  R051F1                               & UUC15 Capitolato              \\
+  R052F1                               & UUC16 Interno                 \\
+  R053F1                               & UUC17 Interno                 \\
+  R054F1                               & UUC17.1 Interno               \\
+  R055F1                               & UUC18 Interno                 \\
+  R056F1                               & AUC1 Capitolato               \\
+  R057F1                               & AUC1.1 Interno                \\
+  R058F1                               & AUC1.2 Interno                \\
+  R059F1                               & AUC1.3 Interno                \\
+  R060F1                               & AUC2 Interno                  \\
+  R061F1                               & AUC3 Capitolato               \\
+  R062F1                               & AUC3.1 Interno                \\
+  R063F1                               & AUC3.2 Interno                \\
+  R064F1                               & AUC3.3 Capitolato             \\
+  R065F1                               & AUC4 Capitolato               \\
+  R066F1                               & AUC4.1 Interno                \\
+  R067F1                               & AUC5 Capitolato               \\
+  R068F1                               & AUC5.1 Capitolato             \\
+  R069F1                               & AUC5.2 Capitolato             \\
+  R070F1                               & AUC5.3 Capitolato             \\
+  R071F1                               & AUC6 Capitolato               \\
+  R072F1                               & AUC6.1 Capitolato             \\
+  R073F1                               & AUC6.2 Capitolato             \\
+  R074F1                               & Capitolato                    \\
+  R075F1                               & AUC7 Capitolato               \\
+  R076F1                               & AUC7.1 Capitolato             \\
+  R077F1                               & AUC7,2 Capitolato             \\
+  R078F1                               & AUC8 Capitolato               \\
+  R079F3                               & Capitolato                    \\
+  R080F3                               & AUC9 Capitolato               \\
+  R081F1                               & AUC9.1 Capitolato             \\
+  R082F1                               & AUC9.2 Capitolato             \\
+  R083F2                               & AUC9.3 Capitolato             \\
+  R084F1                               & AUC10 Capitolato              \\
+  R085F1                               & AUC10.1 Interno               \\
+  R086F1                               & AUC10.2 Interno               \\
+  R087F1                               & AUC11 Capitolato              \\
+  R088F1                               & AUC11.1 Interno               \\
+  R089F2                               & AUC12 Capitolato              \\
+  R090F2                               & AUC12.1 Interno               \\
+  R091F2                               & AUC13 Capitolato              \\
+  R092F2                               & AUC13.1 Interno               \\
+  R093F1                               & AUC14 Capitolato              \\
+  R094F1                               & AUC14.1 Interno               \\
+  R095F2                               & AUC15 Capitolato              \\
+  R096F2                               & AUC15.1 Interno               \\
+  R097F2                               & AUC16 Capitolato              \\
+  R098F2                               & AUC16.1 Interno               \\
+  R099F1                               & AUC17 Interno                 \\
+  R100F1                               & AUC17.1 Interno               \\
+  R101P1                               & Capitolato                    \\
   R102V1                               & Capitolato                    \\
-  R103V2                               & Capitolato                    \\
-  R104V2                               & Capitolato                    \\
-  R105V2                               & Capitolato                    \\
+  R103V1                               & Capitolato                    \\
+  R104V1                               & Capitolato                    \\
+  R105V1                               & Capitolato                    \\
   R106V2                               & Capitolato                    \\
-  R107V1                               & Capitolato                    \\
-  R108V1                               & Capitolato                    \\
-  R109V1                               & Capitolato                    \\
+  R107V2                               & Capitolato                    \\
+  R108V2                               & Capitolato                    \\
+  R109V2                               & Capitolato                    \\
   R110V1                               & Capitolato                    \\
-  R111V1                               & Capitolato                    \\
-  R112Q1                               & Capitolato                    \\
-  R113Q1                               & Capitolato                    \\
-  R114Q1                               & Capitolato                    \\
+  R111V2                               & Capitolato                    \\
+  R112V1                               & Capitolato                    \\
+  R113V1                               & Capitolato                    \\
+  R114V1                               & Capitolato                    \\
   R115Q1                               & Capitolato                    \\
   R116Q1                               & Capitolato                    \\
   R117Q1                               & Capitolato                    \\
-  R118Q2                               & Capitolato                    \\
-  R119Q2                               & Capitolato                    \\
-  R120Q1                               & Interno                       \\
+  R118Q1                               & Capitolato                    \\
+  R119Q1                               & Capitolato                    \\
+  R120Q1                               & Capitolato                    \\
+  R121Q2                               & Capitolato                    \\
+  R122Q1                               & Interno                       \\
 \end{longtable}
 
 \subsubsection{Riepilogo}%
@@ -543,10 +546,10 @@ In questa sezione indichiamo i requisiti di qualità esposti nel capitolato.
   \rowcolor{darkgray!90!}
   \color{white}{\textbf{Tipologia}} & \color{white}{\textbf{Obbligatori}} & \color{white}{\textbf{Desiderabili}} & \color{white}{\textbf{Opzionali}} \\
   \endhead%
-  Funzionali                        & 84                                  & 11                                   & 2                                 \\
+  Funzionali                        & 87                                  & 11                                   & 2                                 \\
   Prestazionali                     & 1                                   & 0                                    & 0                                 \\
-  Vincolo                           & 9                                   & 4                                    & 0                                 \\
-  Qualità                           & 7                                   & 2                                    & 0                                 \\
+  Vincolo                           & 8                                   & 5                                    & 0                                 \\
+  Qualità                           & 7                                   & 1                                    & 0                                 \\
 \end{longtable}
 
 \end{document}
