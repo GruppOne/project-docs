@@ -537,56 +537,170 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
   % da associare uno ad uno con i requisiti dell'AdR
   % Le frasi iniziano con "Verifica che"
 
+  TS001F1            & Si verifichi che un nuovo utente si possa registrare a Stalker. 
+  & S               \\
+
+  TS002F1            & Si verifichi che un nuovo utente visualizzi il EULA al momento della registrazione. 
+  & NS               \\
+  
+  TS003F1            & Si verifichi che un nuovo utente possa confermare il EULA al momento della registrazione. 
+  & NS               \\
+
+  TS004F1            & Si verifichi che un utente possa effettuare l'accesso all'app Android. 
+  & S               \\
+
+  TS005F1            & Si verifichi che un utente possa effettuare il recupero password. 
+  & S               \\
+
+  TS006F1            & Si verifichi che un utente possa visualizzare la lista di organizzazioni a cui può collegarsi. 
+  & S               \\
+
+  TS007F1            & Si verifichi che un utente possa visualizzare la lista di organizzazioni a cui è collegato. 
+  & S               \\
+
+  TS008F1            & Si verifichi che un utente possa visualizzare le informazioni riguardati un'organizzazione in lista alla quale può collegarsi.
+  & NS               \\
+
+  TS009F1            & Si verifichi che un utente possa visualizzare le informazioni riguardati un'organizzazione in lista nella quale è collegato. 
+  & NS               \\
+
+
+  TS010F1            & Si verifichi che un utente possa aggiornare la lista delle organizzazioni. 
+  & NS               \\
+
+  TS011F1            & Si verifichi che un utente collegarsi ad un'organizzazione. 
+  & NS               \\
+
+  TS012F1            & Si verifichi che un utente possa scollegarsi da un'organizzazione. 
+  & NS               \\
+
+  TS013F1            & Si verifichi che un utente possa passare da noto ad incognito in un'organizzazione. 
+  & NS               \\
+
+  TS014F1            & Si verifichi che un utente possa passare da incognito a noto in un'organizzazione. 
+  & NS               \\
+
+  TS015F2            & Si verifichi che un utente possa visualizzare un suo storico degli accessi in un'organizzazione. 
+  & NS               \\
+
+  TS016F2            & Si verifichi che un utente possa visualizzare il tempo trascorso all'interno di un'organizzazione. 
+  & NS               \\
+
+  TS017F1            & Si verifichi che un utente autenticato possa disconnettersi dall'applicazione di Stalker. 
+  & NS               \\
+
+  TS018F1            & Si verifichi che un utente possa eliminare il suo account. 
+  & NS               \\
+
+  TS019F1            & Si verifichi che un utente visualizza un messaggio di errore nel caso mancasse una connessione ad internet. 
+  & NS               \\
+
+  TS020F1            & Si verifichi che un utente possa autenticarsi alla web application. 
+  & S               \\
+
+  TS021F1            & Si verifichi che un utente possa effettuare la disconnessione dalla web application. 
+  & S               \\
+  
+  TS022F1            & Si verifichi che un owner possa creare un'organizzazione. 
+  & NS               \\
+
+  TS023F1            & Si verifichi che un owner possa eliminare una sua organizzazione. 
+  & NS               \\
+
+  TS024F1            & Si verifichi che un owner possa modificare una sua organizzazione. 
+  & S               \\
+  
+  TS025F1            & Si verifichi che un gestore possa aggiungere un luogo ad un'organizzazione. 
+  & S               \\
+
+  TS026F1            & Si verifichi che un gestore possa modificare un luogo ad un'organizzazione. 
+  & S               \\
+
+  TS027F1            & Si verifichi che un gestore possa eliminare un luogo ad un'organizzazione. 
+  & S               \\
+
+  TS028F1            & Si verifichi che un visualizzatore possa visualizzare le informazioni di un'organizzazione. 
+  & NS               \\
+
+  TS029F1            & Si verifichi che un visualizzatore possa monitorare il numero dei dipendenti di tutta l'organizzazione.
+  & NS               \\
+
+  TS030F1            & Si verifichi che un visualizzatore possa monitorare il numero dei dipendenti in uno specifico luogo.
+  & NS               \\
+
+  TS031F1            & Si verifichi che un visualizzatore possa visualizzare un report degli accessi, delle ore trascorse nei vari luoghi, e dei luoghi più frequentati di un'organizzazione.
+  & NS               \\
+
+  TS032F1            & Si verifichi che un visualizzatore possa sapere se un dipendente si trova all’interno di un’organizzazione in cui opera.
+  & NS               \\
+
+  TS033F1            & Si verifichi che un visualizzatore possa sapere in che luogo si trova un dipendente all'interno di un'organizzazione.
+  & NS               \\
+
+  TS034F1            & Si verifichi che un utente abbia la possibilità di diventare owner, creando una sua organizzazione.
+  & NS               \\
+
+  TS035F1            & Si verifichi che un owner abbia la possibilità di aggiungere un nuovo gestore all'organizzazione.
+  & NS               \\
+
+  TS036F1            & Si verifichi che un owner abbia la possibilità di aggiungere un nuovo visualizzatore all'organizzazione.
+  & NS               \\
+
+  TS037F1            & Si verifichi che un amministratore possa togliere i privilegi di owner ad un utente.
+  & NS              \\
+
+  TS038F1            & Si verifichi che un amministratore possa togliere i privilegi di gestore ad un utente.
+  & NS               \\
+
+  TS039F1            & Si verifichi che un amministratore possa togliere i privilegi di visualizzatore ad un utente.
+  & NS               \\
+
+  TS040F1            & Si verifichi che un amministratore possa eliminare un account qualsiasi.
+  & NS               \\
+
   % - Requisiti prestazionali
 
-  % TS001P1            & Il tracciamento deve garantire precisione all'interno degli edifici, in modo da certificarne la presenza della persona. 
-  %                    & NS  
-                     
-  % % - Requisiti di vincolo
+  TS001P1            & Il tracciamento deve garantire precisione all'interno degli edifici, in modo da certificarne la presenza della persona. 
+                     & S               \\
 
-  % TS001V1            & Il sistema deve garantire che le comunicazioni tra applicazione e server avvengano solo al momento d'ingresso ed uscita dai luoghi designati.
-  %                    & NS                                                                                                                                                                                                                                                               \\
+  TS001V1            & Il sistema deve garantire che le comunicazioni tra applicazione e server avvengano solo al momento d'ingresso ed uscita dai luoghi designati.
+                     & NS                                                                                                                                                                                                                                                             \\
 
-  % TS002V2            & Il proponente richiede che vengano utilizzati protocolli asincroni per le comunicazioni tra app e server.
-  %                    & NS                                                                                                                                                                                                                                                               \\
+  TS002V2            & Il proponente richiede che vengano utilizzati protocolli asincroni per le comunicazioni tra app e server.
+                     & S                                                                                                                                                                                                                                                               \\
 
-  % TS003V2            & Il proponente richiede l'utilizzo del design pattern Publisher/Subscriber.
-  %                    & NS                                                                                                                                                                                                                                                               \\
+  TS003V2            & Il proponente richiede l'utilizzo del design pattern Publisher/Subscriber.
+                     & S                                                                                                                                                                                                                                                               \\
 
-  % TS004V2            & Il proponente richiede che venga utilizzato un IAAS come Kubernetes o un PAAS come Openshift o Rancher per il rilascio delle componenti del server e per la gestione della scalabilità orizzontale.
-  %                    & NS                                                                                                                                                                                                                                                               \\
+  TS004V2            & Il proponente richiede che venga utilizzato un IAAS come Kubernetes o un PAAS come Openshift o Rancher per il rilascio delle componenti del server e per la gestione della scalabilità orizzontale.
+                     & NS    \\                                                                                                                                                                                                                                                           \\
+  TS005V1            & Il server espone delle API REST attraverso cui utilizzare l'applicativo, o in alternativa alle API REST, utilizza il framework RPC\@.
+                     & S\\
+  TS006V2            & Tutte le comunicazioni tra app e server sono cifrate.
+                     & NS\\
+  TS007V1            & L'applicazione utilizza tecnologie GPS\@.
+                     & S \\
 
-  % TS005V1            & Il server espone delle API REST attraverso cui utilizzare l'applicativo, o in alternativa alle API REST, utilizza il framework RPC\@.
-  %                    & NS
-  
-  % TS006V2            & Tutte le comunicazioni tra app e server sono cifrate.
-  %                    & NS                   
+  TS008V1            & L'applicazione è in grado di bilanciare il consumo della batteria e la necessità di aggiornare la posizione in background.
+                     & NS                                                                                                                                                                                                                                                               \\
 
-  % TS007V1            & L'applicazione utilizza tecnologie GPS\@.
-  %                    & NS                                                                                                                                                                                                                                                               \\
+  TS001Q1            & Tutte le componenti applicative sono correlate dai test unitari e d'integrazione.
+                     & S                                                                                                                                                                                                                                                               \\
 
-  % TS008V1            & L'applicazione è in grado di bilanciare il consumo della batteria e la necessità di aggiornare la posizione in background.
-  %                    & NS                                                                                                                                                                                                                                                               \\
+  TS002Q1            & Viene testato interamente il sistema tramite test end-to-end.
+                     & S                                                                                                                                                                                                                                                               \\
 
-  % % - Requisiti di qualità
+  TS003Q1            & Vengono effettuati test di carico che dimostrino il corretto funzionamento in ogni situazione: normale, di carico e di sovraccarico.
+                     & NS                                                                                                                                                                                                                                                               \\
 
-  % TS001Q1            & Tutte le componenti applicative sono correlate dai test unitari e d'integrazione.
-  %                    & NS                                                                                                                                                                                                                                                               \\
+  TS004Q1            & Viene fornita una copertura dei test almeno dell'80\%, correlata di report.
+                     & S                                                                                                                                                                                                                                                               \\                                                                                                                                                                                                                                                       \\
 
-  % TS002Q1            & Viene testato interamente il sistema tramite test end-to-end.
-  %                    & NS                                                                                                                                                                                                                                                               \\
+  TS005Q2            & Viene fornita un'analisi rispetto al carico massimo in numero di utenti e di quale sarebbe il servizio cloud più adatto per supportarlo, analizzando prezzo, stabilità del servizio ed assistenza.
+                     & NS                                                                                                                                                                                                                                                               \\
 
-  % TS003Q1            & Vengono effettuati test di carico che dimostrino il corretto funzionamento in ogni situazione: normale, di carico e di sovraccarico.
-  %                    & NS                                                                                                                                                                                                                                                               \\
-
-  % TS004Q1            & Viene fornita una copertura dei test almeno dell'80\%, correlata di report.
-  %                    & NS                                                                                                                                                                                                                                                               \\                                                                                                                                                                                                                                                       \\
-
-  % TS005Q2            & Viene fornita un'analisi rispetto al carico massimo in numero di utenti e di quale sarebbe il servizio cloud più adatto per supportarlo, analizzando prezzo, stabilità del servizio ed assistenza.
-  %                    & NS                                                                                                                                                                                                                                                               \\
-
-  % TS007Q1            & Viene garantita la privacy degli utenti e rispettare la normativa GDPR\@.
-  %                    & NS                                                                                                                                                                                                                                                               \\
+  TS007Q1            & Viene garantita la privacy degli utenti e rispettare la normativa GDPR\@.
+                     & NS                                                                                                                                                                                                                                                               \\
   \rowcolor{white}
   \caption{Tabella dei test di sistema}%
   \label{tab:test_sistema}
