@@ -3,7 +3,7 @@
 \begin{document}
 
 \subsection{Requisiti}%
-\label{sub:requisiti}
+\label{sub:mobile_app_requisiti}
 
 \begin{description}
     \item[Sistema operativo:] Android 5.0 o superiore.
@@ -20,7 +20,7 @@ Vi preghiamo di seguire i seguenti passaggi per l'installazione di \textit{Stalk
 \begin{itemize}
     % dire esplicitamente qual è il link per installare Stalker
     \item Scaricare l'\glossario{\textit{APK}} di \textit{Stalker} dall'apposito link dal browser del vostro smartphone.
-    \item Accedere ad un \glossario{file browser}.
+    \item Accedere ad un \glossario{file manager}.
     \item Accedere alla cartella download dello smartphone.
     \item Selezionare l'applicazione di \textit{Stalker} appena scaricata.
     \item Se richiesto, attivare l'impostazione per la privacy \textit{Origini sconosciute} (consultare la sezione \textit{Risoluzione dei problemi}~\ref{subs:mobile_app_attivare_sorgenti_sconosciute}).
@@ -29,7 +29,7 @@ Vi preghiamo di seguire i seguenti passaggi per l'installazione di \textit{Stalk
 
 Nel caso ci fossero problemi durante l'installazione di \textit{Stalker}, vi preghiamo di consultare la sezione \textit{Risoluzione dei problemi}.
 
-Nel caso non abbiate un file browser nel vostro dispositivo, vi preghiamo di installarlo dal \textit{Play Store}.
+Nel caso non abbiate un file manager nel vostro dispositivo, vi preghiamo di installarlo dal \textit{Play Store}.
 \newpage
 
 \subsection{Manuale d'uso}%
@@ -50,7 +50,7 @@ Al primo avvio di Stalker app, l'utente visualizza la pagina di login.
 Per accedere al servizio, l'utente dovrà seguire i seguenti passaggi:
 \begin{itemize}
     \item inserire correttamente l'email.
-    \item inserire la password che deve contenere almeno 8 caratteri alfanumerici e al massimo ne può contenere 32. La password può essere visualizzata normalmente durante la sua digitazione, cliccando sull'occhio barrato alla fine del campo d'inserimento.
+    \item inserire la password che deve contenere almeno 8 caratteri (almeno una lettera maiuscola, una lettera minuscola, un numero ed un simbolo) e al massimo ne può contenere 32. La password può essere visualizzata normalmente durante la sua digitazione, cliccando sull'occhio barrato alla fine del campo d'inserimento.
     \item selezionare il pulsante \textbf{LOGIN} per inviare le credenziali al server.
 \end{itemize} 
 
@@ -63,14 +63,10 @@ Le cause possono essere le seguenti:
     \item l'email inserita non rispetta i vincoli imposti dal sistema di Stalker.
     \item la password non rispetta i vincoli imposti dal sistema di Stalker.
     \item l'email e la password inserite non rispettano i vincoli imposti dal sistema di Stalker.
-    \item l'email inserita rispetta i vincoli, ma non è presente all'interno del database di Stalker.
-    \item la password inserita rispetta i vincoli, ma non è presente all'interno del database di Stalker.
     \item l'email e la password inserite rispettano i vincoli, ma non sono presenti all'interno del database di Stalker.
 \end{itemize}
 
 In ogni caso, il messaggio di errore non sarà specifico ma generico, per motivi di sicurezza.
-
-Se l'utente non possiede delle credenziali per accedere a Stalker, ha la possibilità di registrarsi grazie all'apposito form, cliccando su \textbf{Not yet registered? Sign up} (~\ref{fig:mobile_app_pagina_di_registrazione} ).
 \newpage
 
 \subsubsection{Pagina di registrazione}%
@@ -83,15 +79,15 @@ Se l'utente non possiede delle credenziali per accedere a Stalker, ha la possibi
     \label{fig:mobile_app_pagina_di_registrazione}
 \end{figure}
 
-Se l'utente non si è mai registrato in Stalker, questo form è l'unico modo per farlo.
+Se l'utente non possiede delle credenziali di accesso, ha la possibilità di registrarsi, grazie all'apposito form disponibile dopo aver cliccato su \textit{Not yet registered? Sign up}. Per farlo dovrà inserire queste informazioni personali:
 
 L'utente per registrarsi deve inserire delle semplici informazioni personali:
 \begin{itemize}
     \item inserire il nome.
     \item inserire il cognome.
     \item inserire la data di nascita, che deve essere conforme al formato \textit{yyyy-mm-dd}.
-    \item inserire l'email, che deve essere univoca all'interno del database di Stalker.
-    \item inserire la password che deve essere alfanumerica con almeno 8 caratteri e al massimo 32. La password può essere visualizzata normalmente durante la sua digitazione, cliccando sull'occhio barrato alla fine del campo d'inserimento.
+    \item inserire l'email, non già utilizzata in Stalker.
+    \item inserire la password che deve contenere almeno 8 caratteri (almeno una lettera maiuscola, una lettera minuscola, un numero ed un simbolo) e al massimo ne può contenere 32 La password può essere visualizzata normalmente durante la sua digitazione, cliccando sull'occhio barrato alla fine del campo d'inserimento.
     \item premere il pulsante \textbf{SIGN UP} per completare la procedura di registrazione.
 \end{itemize}
 
@@ -103,9 +99,6 @@ Le cause possono essere le seguenti:
 \begin{itemize}
     \item l'email inserita non rispetta i vincoli imposti dal sistema di Stalker.
     \item la password non rispetta i vincoli imposti dal sistema di Stalker.
-    \item l'email e la password inserite non rispettano i vincoli imposti dal sistema di Stalker.
-    \item l'email inserita rispetta i vincoli, ma non è presente all'interno del database di Stalker.
-    \item la password inserita rispetta i vincoli, ma non è presente all'interno del database di Stalker.
     \item l'email e la password inserite rispettano i vincoli, ma non sono presenti all'interno del database di Stalker.
     \item l'email inserita è già presente nel database.
     \item la data non rispetta il formato \textit{yyyy-mm-dd}.
@@ -114,7 +107,7 @@ Le cause possono essere le seguenti:
 
 Se questi vincoli non saranno rispettati l'utente non potrà registrarsi.
 
-Se l'utente possiede già delle credenziali e vuole accedere in Stalker, può raggiungere l'apposito form di autenticazione disponibile cliccando \textbf{Already have an account? Login} (~\ref{fig:mobile_app_pagina_di_accesso} ).
+Se l'utente è già in possesso delle credenziali e vuole accedere in Stalker, può raggiungere l'apposito form di autenticazione disponibile cliccando \textbf{Already have an account? Login} (~\ref{fig:mobile_app_pagina_di_accesso}).
 \newpage
 
 \subsubsection{Pagina iniziale}%
@@ -128,7 +121,6 @@ Se l'utente possiede già delle credenziali e vuole accedere in Stalker, può ra
 % \end{figure}
 
 Lorem ipsum
-
 \newpage
 
 
@@ -183,14 +175,14 @@ Se la geolocalizzazione dovesse essere attiva, vi consigliamo di provare a segui
 \begin{itemize}
     \item Accedere alle impostazioni del vostro smartphone, tramite l'apposita icona oppure tramite la tendina delle notifiche.
     \item Accedere alla sezione \textit{Applicazioni} oppure \textit{App e notifiche}. Nel caso questa sezione abbia un altro nome, vi consigliamo di consultare il manuale del vostro smartphone e ricercare la pagina rilevante le applicazioni installate.
-    \item Cercare tra le applicazioni in lista \textit{Stalker} e selezionarlo.
+    \item Cercare l'applicazione \textit{Stalker} tra quelle nella lista e selezionarla.
     \item Accedere alla sezione \textit{Autorizzazioni} o \textit{Permessi} e verificare se i permessi riguardante la geolocalizzazione sono attivi.
     \item Nel caso non fossero attivi, attivare la geolocalizzazione per \textit{Stalker}.
 \end{itemize}
 
 Nel caso i passi indicati non siano risultati utili ai fini del funzionamento di \textit{Stalker}, verificare il corretto funzionamento della geolocalizzazione attraverso altre applicazioni.
 
-Se il problema è generale, probabilmente avete un problema tecnico e vi preghiamo di contattare il vostro \glossario{\textit{vendor}} al più presto.
+Se il problema è di natura tecnica, vi preghiamo di contattare il vostro \glossario{\textit{vendor}} al più presto.
 
 Se il problema persiste solamente in \textit{Stalker}, vi preghiamo di segnalarlo nelle modalità discusse nella sezione \textit{Supporto tecnico}.
 

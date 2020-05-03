@@ -3,7 +3,7 @@
 \begin{document}
 
 \subsection{Requisiti}%
-\label{sub:requisiti}
+\label{sub:web_app_requisiti}
 
 \begin{description}
     \item[Browser:] Google Chrome 50, Firefox 48, Safari 9.1.
@@ -24,12 +24,12 @@
     \label{fig:web_app_pagina_accesso}
 \end{figure}
 
-La prima volta che viene aperta la web application di Stalker, l'utente viene indirizzato alla pagina principale (Home) che si trova al link \textit{localhost:4200/home}.
+Quando ci si connette alla web application di Stalker, l'utente viene indirizzato alla pagina principale (Home) che si trova al link \textit{localhost:4200/home}.
 
 L'utente non è autenticato e ha le seguenti modalità d'azione:
 \begin{itemize}
-    \item essere registrato alla web app di Stalker e accedere con le proprie credenziali email e password (~\ref{fig:web_app_form_accesso} ).
-    \item recuperare la password nel caso l'abbia smarrita (~\ref{fig:web_app_form_recupero_password} ).
+    \item essere registrato alla web app di Stalker e accedere con le proprie credenziali email e password (~\ref{fig:web_app_form_accesso}).
+    \item recuperare la password nel caso l'abbia smarrita (~\ref{fig:web_app_form_recupero_password}).
     \item selezionare il menu ad hamburger posizionato sulla barra superiore a destra, per visualizzare le informazioni riguardo a Stalker. Questo menu è sempre presente in ogni pagina.
 \end{itemize} 
 \newpage
@@ -47,12 +47,12 @@ L'utente non è autenticato e ha le seguenti modalità d'azione:
 L'utente vuole accedere al sistema di Stalker, quindi deve eseguire i seguenti passaggi:
 \begin{itemize}
     \item inserire correttamente l'email.
-    \item inserire la password che deve contenere almeno 8 caratteri alfanumerici e al massimo ne può contenere 32. La password può essere visualizzata normalmente durante la sua digitazione, cliccando sull'occhio barrato alla fine del campo d'inserimento.
+    \item inserire la password che deve contenere almeno 8 caratteri (almeno una lettera maiuscola, una lettera minuscola, un numero ed un simbolo) e al massimo ne può contenere 32. La password può essere visualizzata normalmente durante la sua digitazione, cliccando sull'occhio barrato alla fine del campo d'inserimento.
     \item selezionare il pulsante \textbf{Login} per inviare le credenziali al server.
 \end{itemize} 
 
 % E' corretto?
-Nel caso l'operazione venga svolta correttamente, si avrà diritto all'accesso nella web application di Stalker, visualizzando la pagina del profilo personale (~\ref{fig:web_app_visualizza_profilo_personale} ).
+Nel caso l'operazione venga svolta correttamente, si avrà diritto all'accesso nella web application di Stalker, visualizzando la pagina del profilo personale (~\ref{fig:web_app_visualizza_profilo_personale}).
 
 In caso contrario, l'utente non è autorizzato, in quanto la procedura è fallita.
 
@@ -61,8 +61,6 @@ Le cause possono essere le seguenti:
     \item l'email inserita non rispetta i vincoli imposti dal sistema di Stalker.
     \item la password non rispetta i vincoli imposti dal sistema di Stalker.
     \item l'email e la password inserite non rispettano i vincoli imposti dal sistema di Stalker.
-    \item l'email inserita rispetta i vincoli, ma non è presente all'interno del database di Stalker.
-    \item la password inserita rispetta i vincoli, ma non è presente all'interno del database di Stalker.
     \item l'email e la password inserite rispettano i vincoli, ma non sono presenti all'interno del database di Stalker.
 \end{itemize}
 
@@ -81,7 +79,7 @@ In ogni caso, il messaggio di errore non sarà specifico ma generico, per motivi
 
 L'utente ha smarrito la password o non se la ricorda più, quindi deve eseguire tre passaggi:
 \begin{itemize}
-    \item cliccare alla voce \textbf{Forgot your password?} presente nel form per l'accesso alla web application (~\ref{fig:web_app_pagina_accesso} ).
+    \item cliccare alla voce \textbf{Forgot your password?} presente nel form per l'accesso alla web application (~\ref{fig:web_app_pagina_accesso}).
     \item inserire correttamente l'email.
     \item selezionare il pulsante \textbf{Recover} per inviare la richiesta al server.
 \end{itemize}
@@ -128,8 +126,8 @@ I dati che la pagina mette a disposizione dell'utente sono:
 
 Inoltre, la seguente pagina fornisce alcune operazioni:
 \begin{itemize}
-    \item la visualizzazione della lista di tutte le organizzazioni, cliccando il pulsante \textbf{Organizations list}. %(~\ref{fig:web_app_visualizza_organizzazioni} ).
-    \item la creazione di una nuova organizzazione, cliccando il pulsante \textbf{Create}. %(~\ref{fig:web_app_creazione_organizzazione} ).
+    \item la visualizzazione della lista di tutte le organizzazioni, cliccando il pulsante \textbf{Organizations list}. %(~\ref{fig:web_app_visualizza_organizzazioni}).
+    \item la creazione di una nuova organizzazione, cliccando il pulsante \textbf{Create}. %(~\ref{fig:web_app_creazione_organizzazione}).
 \end{itemize}
 \newpage
 
@@ -172,7 +170,7 @@ I dati che la pagina mette a disposizione sono, dall'alto verso il basso:
     \item la data dell'ultima modifica applicata alle informazioni dell'organizzazione.
 \end{itemize}
 
-Inoltre, viene fornita la possibilità di modificare le informazioni dell'organizzazione cliccando il pulsante \textbf{Edit}, venendo così indirizzati alla pagina di modifica (~\ref{subs:modififica_dettagli_organizzazione} ). 
+Inoltre, viene fornita la possibilità di modificare le informazioni dell'organizzazione cliccando il pulsante \textbf{Edit}, venendo così indirizzati alla pagina di modifica (~\ref{subs:modififica_dettagli_organizzazione}). 
 
 Bisogna evidenziare che la modifica di questi dati è consentita solo agli utenti che ne hanno il diritto.
 \newpage
@@ -307,7 +305,7 @@ I 5 passaggi per la modifica sono i seguenti:
 \subsection{Risoluzione dei problemi}%
 \label{subs:web_app_risoluzione_problemi}
 
-\subsubsection{Accesso all'applicazione non disponibile}
+\subsubsection{Accesso all'applicazione non disponibile}%
 \label{subs:web_app_accesso_non_disponibile}
 
 Nel caso ci siano problemi di collegamento alla web application, consigliamo di consultare il sito \textbf{http://www.isitdownrightnow.com/} per verificare se il problema riguarda il vostro provider oppure il nostro server.
