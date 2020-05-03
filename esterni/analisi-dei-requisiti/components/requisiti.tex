@@ -59,7 +59,7 @@ In questa sezione esaminiamo i servizi che il sistema dovrebbe fornire.
   R013F1                               & Il server deve rifiutare la richiesta di registrazione se la conferma della password inserita non rispetta i vincoli imposti                                                                            & UUC1.3.9 Interno              \\
   R014F1                               & Il server deve rifiutare la richiesta di registrazione se il nome non è stato inserito                                                                                                                  & UUC1.3.10 Interno             \\
   R015F1                               & Il server deve rifiutare la richiesta di registrazione se il cognome non è stato inserito                                                                                                               & UUC1.3.11 Interno             \\
-  R016F1                               & Il server deve rifiutare la richiesta di registrazione se la data di nascita non rispetta il formato richiesto                                                                                          & UUC1.3.12 Interno              \\
+  R016F1                               & Il server deve rifiutare la richiesta di registrazione se la data di nascita non rispetta il formato richiesto                                                                                          & UUC1.3.12 Interno             \\
   R017F1                               & L'applicazione deve permettere all'utente registrato di autenticarsi                                                                                                                                    & UUC2 Interno                  \\
   R018F1                               & È necessario che l'utente registrato compili il campo \textit{email} nel form di autenticazione                                                                                                         & UUC2.1 Interno                \\
   R019F1                               & È necessario che l'utente registrato compili il campo \textit{password} nel form di autenticazione                                                                                                      & UUC2.2 Interno                \\
@@ -95,8 +95,8 @@ In questa sezione esaminiamo i servizi che il sistema dovrebbe fornire.
   R047F1                               & L'applicazione deve permettere all'utente autenticato di scollegarsi da un'organizzazione                                                                                                               & UUC11 Capitolato              \\
 
   % funzioni varie utente
-  R048F1                               & L'applicazione deve permettere all'utente autenticato di passare ad incognito                                                                                                                           & UUC12 Capitolato            \\
-  R049F1                               & L'applicazione deve permettere all'utente autenticato di passare a noto                                                                                                                                 & UUC13 Capitolato            \\
+  R048F1                               & L'applicazione deve permettere all'utente autenticato di passare ad incognito                                                                                                                           & UUC12 Capitolato              \\
+  R049F1                               & L'applicazione deve permettere all'utente autenticato di passare a noto                                                                                                                                 & UUC13 Capitolato              \\
   R050F2                               & L'applicazione deve permettere all'utente autenticato di visualizzare uno storico degli accessi                                                                                                         & UUC14 Capitolato              \\
   R051F2                               & L'applicazione deve permettere all'utente autenticato di visualizzare il tempo trascorso all'interno di un'organizzazione                                                                               & UUC15 Capitolato              \\
   R052F1                               & L'applicazione deve permettere all'utente autenticato di disconnettersi dall'applicazione                                                                                                               & UUC16 Interno                 \\
@@ -178,7 +178,7 @@ In questa sezione indichiamo le prestazioni che il sistema deve fornire: velocit
   \multicolumn{3}{c}{\textit{Continua alla pagina seguente}}
   \endfoot%
   \endlastfoot%
-  R101P1                               & Il rintracciamento deve avere una precisione tale a certificare la presenza della persona all'interno degli edifici                                                                                                                             & Capitolato                   \\
+  R101P1                               & Il tracciamento deve garantire precisione all'interno degli edifici, in modo da certificarne la presenza della persona                                                                                                                           & Capitolato                   \\
 \end{longtable}
 
 \newpage
@@ -203,7 +203,7 @@ In questa sezione indichiamo i requisiti di vincolo esposti nel capitolato.
   \endlastfoot%
   R102V1                               & È necessario sviluppare un server backend                                                                                                                                                                                                              & Capitolato                    \\
   R103V1                               & È necessario che il server sia dotato di un'interfaccia grafica tramite cui gli utenti possano interagire                                                                                                                                              & Capitolato                    \\
-  R104V1                               & È necessario sviluppare un'applicazione mobile (Android o iOS)                                                                                                                                                                                         & Capitolato                    \\
+  R104V1                               & È necessario sviluppare un'applicazione mobile per Android 5.0 o versione superiore                                                                                                                                                                                        & Capitolato                    \\
   R105V1                               & Le comunicazioni tra applicazione e server devono avvenire solo al momento d'ingresso ed uscita dai luoghi designati                                                                                                                                   & Capitolato                    \\
   R106V2                               & È desiderabile che venga utilizzato il linguaggio \glossario{Java} (versione 8 o superiore), \glossario{Python}, o \glossario{Node.js} per lo sviluppo del server backend                                                                              & Capitolato                    \\
   R107V2                               & È desiderabile che vengano utilizzati protocolli asincroni per le comunicazioni tra app e server                                                                                                                                                       & Capitolato                    \\
@@ -281,9 +281,9 @@ In questa sezione indichiamo i requisiti di qualità esposti nel capitolato.
   UUC1.3.7 Interno              & R011F1                               \\
   UUC1.3.8 Interno              & R012F1                               \\
   UUC1.3.9 Interno              & R013F1                               \\
-  UUC1.3.10 Interno              & R014F1                               \\
-  UUC1.3.11 Interno              & R015F1                               \\
-  UUC1.3.12 Interno              & R016F1                               \\
+  UUC1.3.10 Interno             & R014F1                               \\
+  UUC1.3.11 Interno             & R015F1                               \\
+  UUC1.3.12 Interno             & R016F1                               \\
   UUC2 Interno                  & R017F1                               \\
   UUC2.1 Interno                & R018F1                               \\
   UUC2.2 Interno                & R019F1                               \\
@@ -424,9 +424,9 @@ In questa sezione indichiamo i requisiti di qualità esposti nel capitolato.
   R011F1                               & UUC1.3.7 Interno              \\
   R012F1                               & UUC1.3.8 Interno              \\
   R013F1                               & UUC1.3.9 Interno              \\
-  R014F1                               & UUC1.3.10 Interno              \\
-  R015F1                               & UUC1.3.11 Interno              \\
-  R016F1                               & UUC1.3.12 Interno              \\
+  R014F1                               & UUC1.3.10 Interno             \\
+  R015F1                               & UUC1.3.11 Interno             \\
+  R016F1                               & UUC1.3.12 Interno             \\
   R017F1                               & UUC2 Interno                  \\
   R018F1                               & UUC2.1 Interno                \\
   R019F1                               & UUC2.2 Interno                \\
@@ -459,7 +459,7 @@ In questa sezione indichiamo i requisiti di qualità esposti nel capitolato.
   R046F1                               & UUC10.3 Interno               \\
   R047F1                               & UUC11 Capitolato              \\
   R048F2                               & UUC12 Capitolato              \\
-  R049F2                               & UUC13 Capitolato            \\
+  R049F2                               & UUC13 Capitolato              \\
   R050F1                               & UUC14 Capitolato              \\
   R051F1                               & UUC15 Capitolato              \\
   R052F1                               & UUC16 Interno                 \\
