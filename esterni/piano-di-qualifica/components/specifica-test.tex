@@ -22,6 +22,489 @@ Inoltre classifichiamo i test in base al loro stato:
 \label{subs:test_di_accettazione}
 
 I test di accettazione vengono attuati dal proponente e dal committente, in sede di collaudo finale, e servono a dimostrare che il prodotto soddisfi tutti i requisiti.
+Sono i primi test che vengono creati e saranno gli ultimi ad essere eseguiti prima della consegna del prodotto.
+
+I test di accettazione sono indicati nel modo seguente:
+\begin{center}
+  [TA][numero][tipo]
+\end{center}
+\textit{numero} è un numero identificativo incrementale e \textit{tipo} può assumere questi valori:
+\begin{itemize}
+  \item [WA]: Web Application.
+  \item [MA]: Mobile Application.
+\end{itemize}
+
+\rowcolors{2}{lightgray}{white!80!lightgray!100}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{}m{10cm} >{\centering\arraybackslash}m{3cm}}
+  \rowcolor{darkgray!90!}
+  \color{white}
+  {\textbf{ID test}} & \color{white}{\textbf{Descrizione}}                                                                                                                                                                                              & \color{white}{\textbf{Esito}} \\
+  \endhead\rowcolor{white}%
+  \multicolumn{3}{r}{\textit{Continua alla pagina seguente}}
+  \endfoot%
+  \endlastfoot%
+
+  % - Applicazione mobile
+
+  TA001MA          & L'applicazione mobile deve permettere ad un nuovo utente di registrarsi. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare e confermare l'EULA\@.
+    \item inserire la propria email.
+    \item inserire password.
+    \item confermare la password.
+    \item inserire il nome della persona che si registra.
+    \item inserire il cognome della persona che si registra.
+    \item inserire la data di nascita.
+    \item confermare la registrazione.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA002MA           & Il sistema deve rifiutare la richiesta di registrazione se i dati inseriti non rispettano i vincoli imposti. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item inserire dati per la registrazione non validi.
+    \item verificare l'impossibilità di proseguire con la registrazione.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA003MA           & L'applicazione mobile deve permettere all'utente registrato di autenticarsi. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item inserire la propria email.
+    \item inserire la propria password.
+    \item confermare l'autenticazione.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA004MA           & Il sistema deve rifiutare la richiesta di autenticazione se la combinazione di email e password non è presente nel database. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item inserire dati di accesso non validi.
+    \item verificare l'impossibilità di proseguire con l'autenticazione.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA005MA           & L'applicazione mobile deve permettere all'utente di recuperare la sua password. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item avviare la procedura di recupero password.
+    \item inserire la propria email.
+    \item avviare la procedura di reimpostazione password tramite il link ricevuto via mail.
+    \item inserire una nuova password.
+    \item confermare la nuova password.
+    \item confermare la procedura.
+    \item verificare che la password sia stata cambiata correttamente.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA006MA           & Il sistema deve rifiutare la richiesta di reimpostazione password se la mail inserita all'inizio della procedura non è presente all'interno del database del sistema. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item avviare la procedura di recupero password.
+    \item inserire una mail non presente nel database del sistema.
+    \item visualizzare un messaggio di errore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA007MA           & Il sistema deve rifiutare la richiesta di reimpostazione password se la nuova password inserita non rispetta i vincoli imposti. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item avviare la procedura di recupero password.
+    \item inserire la propria email.
+    \item avviare la procedura di reimpostazione password tramite il link ricevuto via mail.
+    \item inserire una nuova password non valida.
+    \item confermare la nuova password.
+    \item confermare la procedura.
+    \item visualizzare un messaggio di errore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA008MA           & Il sistema deve rifiutare la richiesta di reimpostazione password se la nuova password e la conferma della password non sono valide. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item avviare la procedura di recupero password.
+    \item inserire la propria email.
+    \item avviare la procedura di reimpostazione password tramite il link ricevuto via mail.
+    \item inserire una nuova password.
+    \item confermare la nuova password in modo errato.
+    \item confermare la procedura.
+    \item visualizzare un messaggio di errore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA009MA           & L'applicazione mobile deve permettere all'utente autenticato di recuperare dal server una lista di organizzazioni a cui può collegarsi. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare la lista di organizzazioni a cui può collegarsi.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA010MA           & L'applicazione mobile deve permettere all'utente autenticato di visualizzare dal server una lista di organizzazioni a cui è collegato. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare la lista di organizzazioni a cui è collegato.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA011MA           & L'applicazione mobile deve permettere all'utente autenticato di visualizzare dal server una lista di organizzazioni a cui non è collegato. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare la lista di organizzazioni a cui non è collegato.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA012MA           & L'applicazione mobile deve permettere all'utente autenticato di visualizzare le informazioni di un'organizzazione in lista, che sia collegato a questa o non collegato. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare il nome dell'organizzazione.
+    \item visualizzare la descrizione dell'organizzazione.
+    \item visualizzare lo stato, pubblico o privato, dell'organizzazione.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA013MA           & L'applicazione mobile non recupera la lista di organizzazioni a cui può collegarsi l'utente autenticato, in quanto non c'è collegamento alla rete. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare un messaggio d'errore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA014MA           & L'applicazione mobile deve permettere all'utente autenticato di aggiornare la lista delle organizzazioni a cui può collegarsi. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item inviare la richiesta di aggiornamento della lista di organizzazioni.
+    \item visualizzare la lista aggiornata delle organizzazioni.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA015MA           & L'applicazione mobile non riceve alcuna richiesta di aggiornare la lista di organizzazioni a cui può collegarsi l'utente autenticato, in quanto non c'è collegamento alla rete. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare un messaggio d'errore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA016MA           & L'applicazione mobile deve permettere all'utente autenticato di collegarsi ad un'organizzazione pubblica. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare la lista delle organizzazioni alla quale può collegarsi.
+    \item selezionare un'organizzazione pubblica tra quelle presenti in lista.
+    \item avviare la procedura di collegamento.
+    \item visualizzare la pagina dell'organizzazione pubblica alla quale è ora collegato.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA017MA           & L'applicazione mobile deve permettere all'utente autenticato di collegarsi ad un'organizzazione privata. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare la lista delle organizzazioni alla quale può collegarsi.
+    \item selezionare un'organizzazione privata tra quelle presenti in lista.
+    \item visualizzare un form per l'inserimento dei dati di accesso al server LDAP dell'organizzazione privata selezionata.
+    \item inserire lo username associato al server LDAP\@.
+    \item inserire la password associata al server LDAP\@.
+    \item avviare la procedura di collegamento.
+    \item visualizzare la pagina dell'organizzazione privata alla quale è ora collegato.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA018MA           & L'applicazione mobile non permette all'utente autenticato di collegarsi ad un'organizzazione privata, in quanto vengono inseriti erroneamente i dati d'accesso al server LDAP\@. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare la lista delle organizzazioni alla quale può collegarsi.
+    \item selezionare un'organizzazione privata tra quelle presenti in lista.
+    \item visualizzare un form per l'inserimento dei dati di accesso al server LDAP dell'organizzazione privata selezionata.
+    \item inserire lo username associato al server LDAP in modo errato.
+    \item inserire la password associata al server LDAP in modo errato.
+    \item avviare la procedura di collegamento.
+    \item visualizzare un messaggio d'errore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA019MA           & L'applicazione mobile non è collegata alla rete, quindi il server non riceve alcuna richiesta di collegamento ad un'organizzazione a cui può collegarsi l'utente autenticato. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare la lista delle organizzazione alle quale può collegarsi.
+    \item selezionare un'organizzazione tra quelle presenti in lista.
+    \item avviare la procedura di scollegamento.
+    \item visualizzare un messaggio d'errore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA020MA           & L'applicazione mobile deve permettere all'utente autenticato di scollegarsi da un'organizzazione pubblica. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare la pagina dell'organizzazione pubblica alla quale è ora collegato.
+    \item avviare la procedura per lo scollegamento dall'organizzazione pubblica.
+    \item visualizzare la lista delle organizzazioni alla quale può collegarsi.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA021MA           & L'applicazione mobile deve permettere all'utente autenticato di scollegarsi ad un'organizzazione privata. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare la pagina dell'organizzazione privata alla quale è ora collegato.
+    \item avviare la procedura per lo scollegamento dall'organizzazione privata.
+    \item visualizzare la lista delle organizzazioni alla quale può collegarsi.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA022MA           & L'applicazione mobile non riceve alcuna richiesta di scollegamento da un'organizzazione a cui è collegato l'utente autenticato, in quanto non c'è collegamento alla rete. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item avviare la procedura di scollegamento.
+    \item visualizzare un messaggio d'errore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA023MA           & L'applicazione mobile deve permettere all'utente autenticato, che è collegato ad un'organizzazione privata, di passare da noto ad incognito e viceversa. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare la pagina dell'organizzazione privata alla quale è ora collegato.
+    \item accertarsi che sia noto al sistema.
+    \item avviare la procedura per il passaggio da noto ad incognito.
+    \item accertarsi che sia incognito al sistema.
+    \item avviare la procedura per il passaggio da incognito a noto.
+    \item accertarsi che sia noto al sistema.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA024MA           & L'applicazione mobile non permette all'utente autenticato, che è collegato ad un'organizzazione privata, di passare da noto ad incognito e viceversa, in quanto non c'è collegamento alla rete. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare la pagina dell'organizzazione privata alla quale è ora collegato.
+    \item accertarsi che sia noto al sistema, o al contrario incognito al sistema.
+    \item avviare la procedura per il passaggio da noto ad incognito, o al contrario nel caso l'utente sia incognito al sistema.
+    \item visualizzare un messaggio d'errore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA025MA           & L'applicazione mobile deve permettere all'utente autenticato di visualizzare il proprio storico degli accessi. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare il proprio storico degli accessi.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA026MA           & L'applicazione mobile non permette all'utente autenticato di visualizzare il proprio storico degli accessi, in quanto non c'è collegamento alla rete. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare un messaggio d'errore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA027MA           & L'applicazione mobile deve permettere all'utente autenticato di visualizzare il tempo trascorso all'interno di un'organizzazione. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare il proprio tempo trascorso all'interno di un'organizzazione.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA028MA           & L'applicazione mobile non permette all'utente autenticato di visualizzare il tempo trascorso all'interno di un'organizzazione, in quanto non c'è collegamento alla rete. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item visualizzare un messaggio d'errore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA029MA           & L'applicazione mobile deve permettere all'utente autenticato di disconnettersi dall'applicazione. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item avviare la procedura di disconnessione.
+    \item confermare la procedura.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA030MA           & L'applicazione mobile non permette all'utente autenticato di disconnettersi dall'applicazione, in quanto non c'è collegamento alla rete. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item avviare la procedura di disconnessione.
+    \item confermare la procedura.
+    \item visualizzare un messaggio d'errore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA031MA           & L'applicazione mobile deve permettere all'utente autenticato di eliminare il suo account. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item avviare la procedura di eliminazione.
+    \item confermare la procedura.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA032MA           & L'applicazione mobile non permette all'utente autenticato di eliminare il suo account, in quanto non c'è collegamento alla rete. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item avviare la procedura di eliminazione.
+    \item confermare la procedura.
+    \item visualizzare un messaggio d'errore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+
+  % - Web application
+
+  TA033WA           & La web application deve permettere ad un'utente non autenticato di autenticarsi. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item compilare il campo email.
+    \item compilare il campo password.
+    \item confermare l'autenticazione.
+    \item visualizzare la pagina principale della web application.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA034WA           & La web application deve rifiutare la richiesta di autenticazione se i dati inseriti dall'utente non autenticato non rispettano i vincoli imposti, o se la combinazione di email e password non è presente nel database. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item inserire una combinazione email-password non valida.
+    \item visualizzare un messaggio d'errore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA035WA           & La web application deve permettere all'utente autenticato di effettuare la disconnessione. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item avviare la procedura di disconnessione.
+    \item confermare la procedura.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA036WA           & La web application deve permettere all'owner di creare un'organizzazione. \newline
+  L'owner deve:
+  \begin{itemize}
+    \item avviare la procedura di creazione di un'organizzazione.
+    \item inserire il nome dell'organizzazione.
+    \item inserire la descrizione dell'organizzazione.
+    \item configurare i dettagli del server \glossario{LDAP} nel caso l'organizzazione che si vuole creare sia privata.
+    \item confermare la procedura di creazione di un'organizzazione.
+    \item verificare l'avvenuta creazione dell'organizzazione.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA037WA           & La web application deve permettere all'owner di eliminare un'organizzazione in suo possesso. \newline
+  L'owner deve:
+  \begin{itemize}
+    \item avviare la procedura di eliminazione di un'organizzazione.
+    \item confermare la procedura di eliminazione.
+    \item verificare che sia stata eliminata l'organizzazione.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA038WA           & La web application deve permettere all'owner di modificare un'organizzazione in suo possesso. \newline
+  L'owner deve:
+  \begin{itemize}
+    \item avviare la procedura di modifica di un'organizzazione.
+    \item modificare il nome dell'organizzazione, se necessario.
+    \item modificare la descrizione dell'organizzazione, se necessario.
+    \item modificare i dettagli del server LDAP nel caso l'organizzazione che si vuole modificare sia privata, se necessario.
+    \item confermare la procedura di modifica dell'organizzazione.
+    \item verificare che le modifiche siano avvenute con successo.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA039WA           & La web application deve permettere all'owner ed al gestore di aggiungere un luogo ad un'organizzazione. \newline
+  L'owner ed il gestore devono:
+  \begin{itemize}
+    \item avviare la procedura di creazione di un luogo.
+    \item inserire le coordinate geografiche specifiche al nuovo luogo.
+    \item inserire l'indirizzo del nuovo luogo.
+    \item confermare la procedura di creazione del luogo.
+    \item verificare che sia stato aggiunto un nuovo luogo nell'organizzazione di riferimento con successo.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA040WA           & La web application può permettere opzionalmente all'owner ed al gestore di aggiungere un luogo ad un'organizzazione, evidenziando l'area sulla mappa. \newline
+  L'owner ed il gestore devono:
+  \begin{itemize}
+    \item avviare la procedura di creazione di un luogo.
+    \item specificare l'area sulla mappa, che corrisponde al nuovo luogo da inserire.
+    \item confermare la procedura di creazione del luogo.
+    \item verificare che sia stato aggiunto un nuovo luogo nell'organizzazione di riferimento con successo.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA041WA           & La web application deve permettere all'owner ed al gestore di modificare un luogo di un'organizzazione. \newline
+  L'owner ed il gestore devono:
+  \begin{itemize}
+    \item avviare la procedura di modifica di un luogo.
+    \item modificare le coordinate geografiche, se necessario.
+    \item modificare l'indirizzo del luogo, se necessario.
+    \item confermare la procedura di modifica del luogo.
+    \item verificare che le modifiche siano avvenute con successo.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA042WA           & La web application deve permettere all'owner ed al gestore di eliminare un luogo di un'organizzazione. \newline
+  L'owner ed il gestore devono:
+  \begin{itemize}
+    \item avviare la procedura di eliminazione di un luogo.
+    \item eliminare il luogo.
+    \item confermare la procedura di eliminazione del luogo.
+    \item verificare che l'eliminazione del luogo sia avvenuta con successo.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA043WA           & La web application deve permettere all'owner, al gestore ed al visualizzatore di monitorare il numero di utenti in una specifica organizzazione. \newline
+  L'owner, il gestore e il visualizzatore devono:
+  \begin{itemize}
+    \item avviare la procedura di monitoraggio.
+    \item visualizzare il numero di utenti presenti all'interno di una specifica organizzazione.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA044WA           & La web application deve permettere all'owner, al gestore ed al visualizzatore di monitorare il numero di utenti in un specifico luogo di una specifica organizzazione. \newline
+  L'owner, il gestore e il visualizzatore devono:
+  \begin{itemize}
+    \item avviare la procedura di monitoraggio.
+    \item visualizzare il numero di utenti presenti all'interno di uno specifico luogo di una specifica organizzazione.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA045WA           & La web application deve permettere all'owner, al gestore ed al visualizzatore di visualizzare un report sotto forma tabellare di una specifica organizzazione. \newline
+  L'owner, il gestore e il visualizzatore devono:
+  \begin{itemize}
+    \item avviare la procedura di visualizzazione del report.
+    \item visualizzare gli accessi, le ore trascorse all'interno dei luoghi e quali luoghi sono più frequentati all'interno di un'organizzazione.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA046WA           & La web application deve permettere all'owner, al gestore ed al visualizzatore di visualizzare le informazioni riguardo uno specifico utente. \newline
+  L'owner, il gestore e il visualizzatore devono:
+  \begin{itemize}
+    \item avviare la procedura di monitoraggio dell'utente.
+    \item visualizzare l'organizzazione in cui si trova l'utente.
+    \item visualizzare il luogo in cui si trova l'utente.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA047WA           & La web application deve permettere all'utente autenticato di diventare owner e ottenere la possibilità di creare una sua organizzazione. \newline
+  L'utente deve:
+  \begin{itemize}
+    \item avviare la procedura per diventare owner.
+    \item confermare la richiesta di diventare owner.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA048WA           & La web application deve permettere all'owner di aggiungere un nuovo gestore dell'organizzazione. \newline
+  L'owner deve:
+  \begin{itemize}
+    \item selezionare un'organizzazione di cui è owner.
+    \item avviare la procedura di aggiunta di un gestore.
+    \item inserire l'email dell'utente che deve diventare gestore.
+    \item confermare l'aggiunta del gestore.
+    \item verificare che l'utente indicato sia diventato gestore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA049WA           & La web application deve permettere all'owner di aggiungere un nuovo visualizzatore dell'organizzazione. \newline
+  L'owner deve:
+  \begin{itemize}
+    \item selezionare un'organizzazione di cui è owner.
+    \item avviare la procedura di aggiunta di un visualizzatore.
+    \item inserire email dell'utente che deve diventare visualizzatore.
+    \item confermare l'aggiunta del visualizzatore.
+    \item verificare che l'utente indicato sia diventato visualizzatore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA050WA           & La web application deve permettere all'amministratore di rimuovere i privilegi di owner ad un utente che ne sia in possesso. \newline
+  L'amministratore deve:
+  \begin{itemize}
+    \item selezionare un'organizzazione.
+    \item avviare la procedura di rimozione dei privilegi di owner.
+    \item inserire l'email dell'owner da rimuovere.
+    \item confermare la rimozione dell'owner.
+    \item verificare che l'utente indicato non sia più un owner.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA051WA           & La web application deve permettere all'owner di rimuovere i privilegi di gestore ad un utente che ne sia in possesso. \newline
+  L'owner deve:
+  \begin{itemize}
+    \item selezionare un'organizzazione.
+    \item avviare la procedura di rimozione dei privilegi di gestore.
+    \item inserire l'email del gestore da rimuovere.
+    \item confermare la rimozione del gestore.
+    \item verificare che l'utente indicato non sia più un gestore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA052WA           & La web application deve permettere all'owner di rimuovere i privilegi di visualizzatore ad un utente che ne sia in possesso. \newline
+  L'owner deve:
+  \begin{itemize}
+    \item selezionare un'organizzazione.
+    \item avviare la procedura di rimozione dei privilegi di visualizzatore.
+    \item inserire l'email del visualizzatore da rimuovere.
+    \item confermare la rimozione del visualizzatore.
+    \item verificare che l'utente indicato non sia più un visualizzatore.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+  TA053WA           & La web application deve permettere all'amministratore di eliminare un account dal sistema. \newline
+  L'amministratore deve:
+  \begin{itemize}
+    \item avviare la procedura di eliminazione dell'account utente.
+    \item selezionare l'account da rimuovere.
+    \item confermare la rimozione dell'account.
+    \item verificare che l'utente eliminato non riesca più ad accedere al sistema.
+  \end{itemize}
+                    & NS                                                                                                                                                                                                                                                               \\
+
+    \rowcolor{white}
+    \caption{Tabella dei test di accettazione}%
+    \label{tab:test_accettazione}
+  \end{longtable}
+
 
 \subsubsection{Test di Sistema}%
 \label{subs:test_di_sistema}
@@ -32,7 +515,7 @@ Essendo tutti i test derivanti da un gruppo di requisiti che hanno una determina
   [TS][numero][tipo][priorità]
 \end{center}
 
-Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza del requisito che deve essere soddisfatto, \textit{numero} è un numero identificativo incrementale per tipologia che parte da 1 e \textit{tipo} può assumere i seguenti valori:
+Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza del requisito che deve essere soddisfatto, \textit{numero} è un numero identificativo per tipologia che parte da 1 e \textit{tipo} può assumere i seguenti valori:
 \begin{description}
   \item [F]: requisito funzionale.
   \item [P]: requisito prestazionale.
@@ -51,505 +534,59 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
   \endfoot%
   \endlastfoot%
 
-  % - Applicazione mobile
+  % da associare uno ad uno con i requisiti dell'AdR
+  % Le frasi iniziano con "Verifica che"
 
-  TS001F1            & L'applicazione mobile deve permettere ad un nuovo utente di registrarsi. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare e confermare l'EULA\@.
-    \item inserire la propria email.
-    \item inserire password.
-    \item confermare la password.
-    \item inserire i propri dati anagrafici.
-    \item confermare la registrazione.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS002F1            & Il sistema deve rifiutare la richiesta di registrazione se i dati inseriti non rispettano i vincoli imposti. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item inserire dati per la registrazione non validi.
-    \item verificare l'impossibilità di proseguire con la registrazione.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS003F1            & L'applicazione mobile deve permettere all'utente registrato di autenticarsi. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item inserire la propria email.
-    \item inserire la propria password.
-    \item confermare l'autenticazione.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS004F1            & Il sistema deve rifiutare la richiesta di autenticazione se la combinazione di email e password non è presente nel database. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item inserire dati di accesso non validi.
-    \item verificare l'impossibilità di proseguire con l'autenticazione.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS005F1            & L'applicazione mobile deve permettere all'utente di recuperare la sua password. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item avviare la procedura di recupero password.
-    \item inserire la propria email.
-    \item avviare la procedura di reimpostazione password tramite il link ricevuto via mail.
-    \item inserire una nuova password.
-    \item confermare la nuova password.
-    \item confermare la procedura.
-    \item verificare che la password sia stata cambiata correttamente.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS006F1            & Il sistema deve rifiutare la richiesta di reimpostazione password se la mail inserita all'inizio della procedura non è presente all'interno del database del sistema. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item avviare la procedura di recupero password.
-    \item inserire una mail non presente nel database del sistema.
-    \item visualizzare un messaggio di errore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS007F1            & Il sistema deve rifiutare la richiesta di reimpostazione password se la nuova password inserita non rispetta i vincoli imposti. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item avviare la procedura di recupero password.
-    \item inserire la propria email.
-    \item avviare la procedura di reimpostazione password tramite il link ricevuto via mail.
-    \item inserire una nuova password non valida.
-    \item confermare la nuova password.
-    \item confermare la procedura.
-    \item visualizzare un messaggio di errore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS008F1            & Il sistema deve rifiutare la richiesta di reimpostazione password se la nuova password e la conferma della password non sono valide. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item avviare la procedura di recupero password.
-    \item inserire la propria email.
-    \item avviare la procedura di reimpostazione password tramite il link ricevuto via mail.
-    \item inserire una nuova password.
-    \item confermare la nuova password in modo errato.
-    \item confermare la procedura.
-    \item visualizzare un messaggio di errore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS009F1            & L'applicazione mobile deve permettere all'utente autenticato di recuperare dal server una lista di organizzazioni a cui può collegarsi. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare la lista di organizzazioni a cui può collegarsi.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS010F1            & L'applicazione mobile deve permettere all'utente autenticato di visualizzare dal server una lista di organizzazioni a cui è collegato. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare la lista di organizzazioni a cui è collegato.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS011F1            & L'applicazione mobile deve permettere all'utente autenticato di visualizzare dal server una lista di organizzazioni a cui non è collegato. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare la lista di organizzazioni a cui non è collegato.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS012F1            & L'applicazione mobile deve permettere all'utente autenticato di visualizzare le informazioni di un'organizzazione in lista, che sia collegato a questa o non collegato. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare il nome dell'organizzazione.
-    \item visualizzare la descrizione dell'organizzazione.
-    \item visualizzare lo stato, pubblico o privato, dell'organizzazione.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS013F1            & L'applicazione mobile non recupera la lista di organizzazioni a cui può collegarsi l'utente autenticato, in quanto non c'è collegamento alla rete. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare un messaggio d'errore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS014F1            & L'applicazione mobile deve permettere all'utente autenticato di aggiornare la lista delle organizzazioni a cui può collegarsi. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item inviare la richiesta di aggiornamento della lista di organizzazioni.
-    \item visualizzare la lista aggiornata delle organizzazioni.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS015F1            & L'applicazione mobile non riceve alcuna richiesta di aggiornare la lista di organizzazioni a cui può collegarsi l'utente autenticato, in quanto non c'è collegamento alla rete. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare un messaggio d'errore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS016F1            & L'applicazione mobile deve permettere all'utente autenticato di collegarsi ad un'organizzazione pubblica. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare la lista delle organizzazioni alla quale può collegarsi.
-    \item selezionare un'organizzazione pubblica tra quelle presenti in lista.
-    \item avviare la procedura di collegamento.
-    \item visualizzare la pagina dell'organizzazione pubblica alla quale è ora collegato.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS017F1            & L'applicazione mobile deve permettere all'utente autenticato di collegarsi ad un'organizzazione privata. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare la lista delle organizzazioni alla quale può collegarsi.
-    \item selezionare un'organizzazione privata tra quelle presenti in lista.
-    \item visualizzare un form per l'inserimento dei dati di accesso al server LDAP dell'organizzazione privata selezionata.
-    \item inserire lo username associato al server LDAP\@.
-    \item inserire la password associata al server LDAP\@.
-    \item avviare la procedura di collegamento.
-    \item visualizzare la pagina dell'organizzazione privata alla quale è ora collegato.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS018F1            & L'applicazione mobile non permette all'utente autenticato di collegarsi ad un'organizzazione privata, in quanto vengono inseriti erroneamente i dati d'accesso al server LDAP\@. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare la lista delle organizzazioni alla quale può collegarsi.
-    \item selezionare un'organizzazione privata tra quelle presenti in lista.
-    \item visualizzare un form per l'inserimento dei dati di accesso al server LDAP dell'organizzazione privata selezionata.
-    \item inserire lo username associato al server LDAP in modo errato.
-    \item inserire la password associata al server LDAP in modo errato.
-    \item avviare la procedura di collegamento.
-    \item visualizzare un messaggio d'errore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS019F1            & L'applicazione mobile non è collegata alla rete, quindi il server non riceve alcuna richiesta di collegamento ad un'organizzazione a cui può collegarsi l'utente autenticato. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare la lista delle organizzazione alle quale può collegarsi.
-    \item selezionare un'organizzazione tra quelle presenti in lista.
-    \item avviare la procedura di scollegamento.
-    \item visualizzare un messaggio d'errore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS020F1            & L'applicazione mobile deve permettere all'utente autenticato di scollegarsi da un'organizzazione pubblica. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare la pagina dell'organizzazione pubblica alla quale è ora collegato.
-    \item avviare la procedura per lo scollegamento dall'organizzazione pubblica.
-    \item visualizzare la lista delle organizzazioni alla quale può collegarsi.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS021F1            & L'applicazione mobile deve permettere all'utente autenticato di scollegarsi ad un'organizzazione privata. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare la pagina dell'organizzazione privata alla quale è ora collegato.
-    \item avviare la procedura per lo scollegamento dall'organizzazione privata.
-    \item visualizzare la lista delle organizzazioni alla quale può collegarsi.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS022F1            & L'applicazione mobile non riceve alcuna richiesta di scollegamento da un'organizzazione a cui è collegato l'utente autenticato, in quanto non c'è collegamento alla rete. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item avviare la procedura di scollegamento.
-    \item visualizzare un messaggio d'errore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS023F1            & L'applicazione mobile deve permettere all'utente autenticato, che è collegato ad un'organizzazione privata, di passare da noto ad incognito e viceversa. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare la pagina dell'organizzazione privata alla quale è ora collegato.
-    \item accertarsi che sia noto al sistema.
-    \item avviare la procedura per il passaggio da noto ad incognito.
-    \item accertarsi che sia incognito al sistema.
-    \item avviare la procedura per il passaggio da incognito a noto.
-    \item accertarsi che sia noto al sistema.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS024F1            & L'applicazione mobile non permette all'utente autenticato, che è collegato ad un'organizzazione privata, di passare da noto ad incognito e viceversa, in quanto non c'è collegamento alla rete. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare la pagina dell'organizzazione privata alla quale è ora collegato.
-    \item accertarsi che sia noto al sistema, o al contrario incognito al sistema.
-    \item avviare la procedura per il passaggio da noto ad incognito, o al contrario nel caso l'utente sia incognito al sistema.
-    \item visualizzare un messaggio d'errore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS025F2            & L'applicazione mobile deve permettere all'utente autenticato di visualizzare il proprio storico degli accessi. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare il proprio storico degli accessi.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS026F2            & L'applicazione mobile non permette all'utente autenticato di visualizzare il proprio storico degli accessi, in quanto non c'è collegamento alla rete. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare un messaggio d'errore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS027F2            & L'applicazione mobile deve permettere all'utente autenticato di visualizzare il tempo trascorso all'interno di un'organizzazione. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare il proprio tempo trascorso all'interno di un'organizzazione.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS028F2            & L'applicazione mobile non permette all'utente autenticato di visualizzare il tempo trascorso all'interno di un'organizzazione, in quanto non c'è collegamento alla rete. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item visualizzare un messaggio d'errore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS029F1            & L'applicazione mobile deve permettere all'utente autenticato di disconnettersi dall'applicazione. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item avviare la procedura di disconnessione.
-    \item confermare la procedura.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS030F1            & L'applicazione mobile non permette all'utente autenticato di disconnettersi dall'applicazione, in quanto non c'è collegamento alla rete. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item avviare la procedura di disconnessione.
-    \item confermare la procedura.
-    \item visualizzare un messaggio d'errore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS031F1            & L'applicazione mobile deve permettere all'utente autenticato di eliminare il suo account. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item avviare la procedura di eliminazione.
-    \item confermare la procedura.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS032F1            & L'applicazione mobile non permette all'utente autenticato di eliminare il suo account, in quanto non c'è collegamento alla rete. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item avviare la procedura di eliminazione.
-    \item confermare la procedura.
-    \item visualizzare un messaggio d'errore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
+  % - Requisiti prestazionali
 
-  % - Web application
+  % TS001P1            & Il tracciamento deve garantire precisione all'interno degli edifici, in modo da certificarne la presenza della persona. 
+  %                    & NS  
+                     
+  % % - Requisiti di vincolo
 
-  TS033F1            & La web application deve permettere ad un'utente non autenticato di autenticarsi. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item compilare il campo email.
-    \item compilare il campo password.
-    \item confermare l'autenticazione.
-    \item visualizzare la pagina principale della web application.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS034F1            & La web application deve rifiutare la richiesta di autenticazione se i dati inseriti dall'utente non autenticato non rispettano i vincoli imposti, o se la combinazione di email e password non è presente nel database. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item inserire una combinazione email-password non valida.
-    \item visualizzare un messaggio d'errore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS035F1            & La web application deve permettere all'utente autenticato di effettuare la disconnessione. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item avviare la procedura di disconnessione.
-    \item confermare la procedura.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS036F1            & La web application deve permettere all'owner di creare un'organizzazione. \newline
-  L'owner deve:
-  \begin{itemize}
-    \item avviare la procedura di creazione di un'organizzazione.
-    \item inserire il nome dell'organizzazione.
-    \item inserire la descrizione dell'organizzazione.
-    \item configurare i dettagli del server \glossario{LDAP} nel caso l'organizzazione che si vuole creare sia privata.
-    \item confermare la procedura di creazione di un'organizzazione.
-    \item verificare l'avvenuta creazione dell'organizzazione.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS037F1            & La web application deve permettere all'owner di eliminare un'organizzazione in suo possesso. \newline
-  L'owner deve:
-  \begin{itemize}
-    \item avviare la procedura di eliminazione di un'organizzazione.
-    \item confermare la procedura di eliminazione.
-    \item verificare che sia stata eliminata l'organizzazione.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS038F1            & La web application deve permettere all'owner di modificare un'organizzazione in suo possesso. \newline
-  L'owner deve:
-  \begin{itemize}
-    \item avviare la procedura di modifica di un'organizzazione.
-    \item modificare il nome dell'organizzazione, se necessario.
-    \item modificare la descrizione dell'organizzazione, se necessario.
-    \item modificare i dettagli del server LDAP nel caso l'organizzazione che si vuole modificare sia privata, se necessario.
-    \item confermare la procedura di modifica dell'organizzazione.
-    \item verificare che le modifiche siano avvenute con successo.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS039F1            & La web application deve permettere all'owner ed al gestore di aggiungere un luogo ad un'organizzazione. \newline
-  L'owner ed il gestore devono:
-  \begin{itemize}
-    \item avviare la procedura di creazione di un luogo.
-    \item inserire le coordinate geografiche specifiche al nuovo luogo.
-    \item inserire l'indirizzo del nuovo luogo.
-    \item confermare la procedura di creazione del luogo.
-    \item verificare che sia stato aggiunto un nuovo luogo nell'organizzazione di riferimento con successo.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS040F3            & La web application può permettere opzionalmente all'owner ed al gestore di aggiungere un luogo ad un'organizzazione, evidenziando l'area sulla mappa. \newline
-  L'owner ed il gestore devono:
-  \begin{itemize}
-    \item avviare la procedura di creazione di un luogo.
-    \item specificare l'area sulla mappa, che corrisponde al nuovo luogo da inserire.
-    \item confermare la procedura di creazione del luogo.
-    \item verificare che sia stato aggiunto un nuovo luogo nell'organizzazione di riferimento con successo.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS041F1            & La web application deve permettere all'owner ed al gestore di modificare un luogo di un'organizzazione. \newline
-  L'owner ed il gestore devono:
-  \begin{itemize}
-    \item avviare la procedura di modifica di un luogo.
-    \item modificare le coordinate geografiche, se necessario.
-    \item modificare l'indirizzo del luogo, se necessario.
-    \item confermare la procedura di modifica del luogo.
-    \item verificare che le modifiche siano avvenute con successo.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS042F1            & La web application deve permettere all'owner ed al gestore di eliminare un luogo di un'organizzazione. \newline
-  L'owner ed il gestore devono:
-  \begin{itemize}
-    \item avviare la procedura di eliminazione di un luogo.
-    \item eliminare il luogo.
-    \item confermare la procedura di eliminazione del luogo.
-    \item verificare che l'eliminazione del luogo sia avvenuta con successo.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS043F1            & La web application deve permettere all'owner, al gestore ed al visualizzatore di monitorare il numero di utenti in una specifica organizzazione. \newline
-  L'owner, il gestore e il visualizzatore devono:
-  \begin{itemize}
-    \item avviare la procedura di monitoraggio.
-    \item visualizzare il numero di utenti presenti all'interno di una specifica organizzazione.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS044F1            & La web application deve permettere all'owner, al gestore ed al visualizzatore di monitorare il numero di utenti in un specifico luogo di una specifica organizzazione. \newline
-  L'owner, il gestore e il visualizzatore devono:
-  \begin{itemize}
-    \item avviare la procedura di monitoraggio.
-    \item visualizzare il numero di utenti presenti all'interno di uno specifico luogo di una specifica organizzazione.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS045F2            & La web application deve permettere all'owner, al gestore ed al visualizzatore di visualizzare un report sotto forma tabellare di una specifica organizzazione. \newline
-  L'owner, il gestore e il visualizzatore devono:
-  \begin{itemize}
-    \item avviare la procedura di visualizzazione del report.
-    \item visualizzare gli accessi, le ore trascorse all'interno dei luoghi e quali luoghi sono più frequentati all'interno di un'organizzazione.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS046F1            & La web application deve permettere all'owner, al gestore ed al visualizzatore di visualizzare le informazioni riguardo uno specifico utente. \newline
-  L'owner, il gestore e il visualizzatore devono:
-  \begin{itemize}
-    \item avviare la procedura di monitoraggio dell'utente.
-    \item visualizzare l'organizzazione in cui si trova l'utente.
-    \item visualizzare il luogo in cui si trova l'utente.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS047F1            & La web application deve permettere all'utente autenticato di diventare owner e ottenere la possibilità di creare una sua organizzazione. \newline
-  L'utente deve:
-  \begin{itemize}
-    \item avviare la procedura per diventare owner.
-    \item confermare la richiesta di diventare owner.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS048F2            & La web application deve permettere all'owner di aggiungere un nuovo gestore dell'organizzazione. \newline
-  L'owner deve:
-  \begin{itemize}
-    \item selezionare un'organizzazione di cui è owner.
-    \item avviare la procedura di aggiunta di un gestore.
-    \item inserire l'email dell'utente che deve diventare gestore.
-    \item confermare l'aggiunta del gestore.
-    \item verificare che l'utente indicato sia diventato gestore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS049F2            & La web application deve permettere all'owner di aggiungere un nuovo visualizzatore dell'organizzazione. \newline
-  L'owner deve:
-  \begin{itemize}
-    \item selezionare un'organizzazione di cui è owner.
-    \item avviare la procedura di aggiunta di un visualizzatore.
-    \item inserire email dell'utente che deve diventare visualizzatore.
-    \item confermare l'aggiunta del visualizzatore.
-    \item verificare che l'utente indicato sia diventato visualizzatore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS050F1            & La web application deve permettere all'amministratore di rimuovere i privilegi di owner ad un utente che ne sia in possesso. \newline
-  L'amministratore deve:
-  \begin{itemize}
-    \item selezionare un'organizzazione.
-    \item avviare la procedura di rimozione dei privilegi di owner.
-    \item inserire l'email dell'owner da rimuovere.
-    \item confermare la rimozione dell'owner.
-    \item verificare che l'utente indicato non sia più un owner.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS051F2            & La web application deve permettere all'owner di rimuovere i privilegi di gestore ad un utente che ne sia in possesso. \newline
-  L'owner deve:
-  \begin{itemize}
-    \item selezionare un'organizzazione.
-    \item avviare la procedura di rimozione dei privilegi di gestore.
-    \item inserire l'email del gestore da rimuovere.
-    \item confermare la rimozione del gestore.
-    \item verificare che l'utente indicato non sia più un gestore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS052F2            & La web application deve permettere all'owner di rimuovere i privilegi di visualizzatore ad un utente che ne sia in possesso. \newline
-  L'owner deve:
-  \begin{itemize}
-    \item selezionare un'organizzazione.
-    \item avviare la procedura di rimozione dei privilegi di visualizzatore.
-    \item inserire l'email del visualizzatore da rimuovere.
-    \item confermare la rimozione del visualizzatore.
-    \item verificare che l'utente indicato non sia più un visualizzatore.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
-  TS053F1            & La web application deve permettere all'amministratore di eliminare un account dal sistema. \newline
-  L'amministratore deve:
-  \begin{itemize}
-    \item avviare la procedura di eliminazione dell'account utente.
-    \item selezionare l'account da rimuovere.
-    \item confermare la rimozione dell'account.
-    \item verificare che l'utente eliminato non riesca più ad accedere al sistema.
-  \end{itemize}
-                     & NS                                                                                                                                                                                                                                                               \\
+  % TS001V1            & Il sistema deve garantire che le comunicazioni tra applicazione e server avvengano solo al momento d'ingresso ed uscita dai luoghi designati.
+  %                    & NS                                                                                                                                                                                                                                                               \\
 
-  % - Vincoli di sistema
+  % TS002V2            & Il proponente richiede che vengano utilizzati protocolli asincroni per le comunicazioni tra app e server.
+  %                    & NS                                                                                                                                                                                                                                                               \\
 
-  TS001P1            & Il sistema deve garantire un tracciamento con una precisione sufficiente a certificare la presenza della persona all'interno degli edifici.
-                     & NS                                                                                                                                                                                                                                                               \\
+  % TS003V2            & Il proponente richiede l'utilizzo del design pattern Publisher/Subscriber.
+  %                    & NS                                                                                                                                                                                                                                                               \\
 
-  TS001V1            & Il sistema deve garantire che le comunicazioni tra applicazione e server avvengano solo al momento d'ingresso ed uscita dai luoghi designati.
-                     & NS                                                                                                                                                                                                                                                               \\
+  % TS004V2            & Il proponente richiede che venga utilizzato un IAAS come Kubernetes o un PAAS come Openshift o Rancher per il rilascio delle componenti del server e per la gestione della scalabilità orizzontale.
+  %                    & NS                                                                                                                                                                                                                                                               \\
 
-  TS002V2            & Il proponente richiede che vengano utilizzati protocolli asincroni per le comunicazioni tra app e server.
-                     & NS                                                                                                                                                                                                                                                               \\
+  % TS005V1            & Il server espone delle API REST attraverso cui utilizzare l'applicativo, o in alternativa alle API REST, utilizza il framework RPC\@.
+  %                    & NS
+  
+  % TS006V2            & Tutte le comunicazioni tra app e server sono cifrate.
+  %                    & NS                   
 
-  TS003V2            & Il proponente richiede l'utilizzo del design pattern Publisher/Subscriber.
-                     & NS                                                                                                                                                                                                                                                               \\
+  % TS007V1            & L'applicazione utilizza tecnologie GPS\@.
+  %                    & NS                                                                                                                                                                                                                                                               \\
 
-  TS004V2            & Il proponente richiede che venga utilizzato un IAAS come Kubernetes o un PAAS come Openshift o Rancher per il rilascio delle componenti del server e per la gestione della scalabilità orizzontale.
-                     & NS                                                                                                                                                                                                                                                               \\
+  % TS008V1            & L'applicazione è in grado di bilanciare il consumo della batteria e la necessità di aggiornare la posizione in background.
+  %                    & NS                                                                                                                                                                                                                                                               \\
 
-  TS005V1            & Il server espone delle API REST attraverso cui utilizzare l'applicativo, o in alternativa alle API REST, utilizza il framework RPC\@.
-                     & NS                                                                                                                                                                                                                                                               \\
+  % % - Requisiti di qualità
 
-  TS006V1            & L'applicazione utilizza tecnologie GPS\@.
-                     & NS                                                                                                                                                                                                                                                               \\
+  % TS001Q1            & Tutte le componenti applicative sono correlate dai test unitari e d'integrazione.
+  %                    & NS                                                                                                                                                                                                                                                               \\
 
-  TS007V1            & L'applicazione è in grado di bilanciare il consumo della batteria e la necessità di aggiornare la posizione in background.
-                     & NS                                                                                                                                                                                                                                                               \\
+  % TS002Q1            & Viene testato interamente il sistema tramite test end-to-end.
+  %                    & NS                                                                                                                                                                                                                                                               \\
 
-  TS001Q1            & Tutte le componenti applicative sono correlate dai test unitari e d'integrazione.
-                     & NS                                                                                                                                                                                                                                                               \\
+  % TS003Q1            & Vengono effettuati test di carico che dimostrino il corretto funzionamento in ogni situazione: normale, di carico e di sovraccarico.
+  %                    & NS                                                                                                                                                                                                                                                               \\
 
-  TS002Q1            & Viene testato interamente il sistema tramite test end-to-end.
-                     & NS                                                                                                                                                                                                                                                               \\
+  % TS004Q1            & Viene fornita una copertura dei test almeno dell'80\%, correlata di report.
+  %                    & NS                                                                                                                                                                                                                                                               \\                                                                                                                                                                                                                                                       \\
 
-  TS003Q1            & Vengono effettuati test di carico che dimostrino il corretto funzionamento in ogni situazione: normale, di carico e di sovraccarico.
-                     & NS                                                                                                                                                                                                                                                               \\
+  % TS005Q2            & Viene fornita un'analisi rispetto al carico massimo in numero di utenti e di quale sarebbe il servizio cloud più adatto per supportarlo, analizzando prezzo, stabilità del servizio ed assistenza.
+  %                    & NS                                                                                                                                                                                                                                                               \\
 
-  TS004Q1            & Viene fornita una copertura dei test almeno dell'80\%, correlata di report.
-                     & NS                                                                                                                                                                                                                                                               \\
-
-  TS005Q2            & Tutte le comunicazioni tra app e server sono cifrate.
-                     & NS                                                                                                                                                                                                                                                               \\
-
-  TS006Q2            & Viene fornita un'analisi rispetto al carico massimo in numero di utenti e di quale sarebbe il servizio cloud più adatto per supportarlo, analizzando prezzo, stabilità del servizio ed assistenza.
-                     & NS                                                                                                                                                                                                                                                               \\
-
-  TS007Q1            & Viene garantita la privacy degli utenti e rispettare la normativa GDPR\@.
-                     & NS                                                                                                                                                                                                                                                               \\
+  % TS007Q1            & Viene garantita la privacy degli utenti e rispettare la normativa GDPR\@.
+  %                    & NS                                                                                                                                                                                                                                                               \\
   \rowcolor{white}
   \caption{Tabella dei test di sistema}%
   \label{tab:test_sistema}
