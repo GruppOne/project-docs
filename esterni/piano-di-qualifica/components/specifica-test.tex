@@ -628,7 +628,7 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
   TS030F1            & Si verifichi che un visualizzatore possa monitorare il numero dei dipendenti in uno specifico luogo.
   & NS               \\
 
-  TS031F1            & Si verifichi che un visualizzatore possa visualizzare un report degli accessi, delle ore trascorse nei vari luoghi, e dei luoghi più frequentati di un'organizzazione.
+  TS031F2            & Si verifichi che un visualizzatore possa visualizzare un report degli accessi, delle ore trascorse nei vari luoghi, e dei luoghi più frequentati di un'organizzazione.
   & NS               \\
 
   TS032F1            & Si verifichi che un visualizzatore possa sapere se un dipendente si trova all’interno di un’organizzazione in cui opera.
@@ -649,10 +649,10 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
   TS037F1            & Si verifichi che un amministratore possa togliere i privilegi di owner ad un utente.
   & NS              \\
 
-  TS038F1            & Si verifichi che un amministratore possa togliere i privilegi di gestore ad un utente.
+  TS038F1            & Si verifichi che un owner possa togliere i privilegi di gestore ad un utente.
   & NS               \\
 
-  TS039F1            & Si verifichi che un amministratore possa togliere i privilegi di visualizzatore ad un utente.
+  TS039F1            & Si verifichi che un owner possa togliere i privilegi di visualizzatore ad un utente.
   & NS               \\
 
   TS040F1            & Si verifichi che un amministratore possa eliminare un account qualsiasi.
@@ -731,6 +731,97 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
   \label{tab:test_sistema}
 \end{longtable}
 
+
+
+% Tracciamento
+
+\rowcolors{2}{lightgray}{white!80!lightgray!100}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering\arraybackslash}m{5cm}}
+  \rowcolor{darkgray!90!}
+  \color{white}
+  {\textbf{ID test}} & \color{white}{\textbf{Requisito}} \\
+  \endhead\rowcolor{white}%
+
+  \endfoot%
+  \endlastfoot%
+  TS001F1 & R001F1 \\
+  TS002F1 & R002F1 \\
+  TS003F1 & R003F1 \\
+  TS004F1 & R017F1 \\
+  TS005F1 & R021F1 \\
+  TS006F1 & R029F1 \\
+  TS007F1 & R030F1 \\
+  TS008F1 & R031F1 \\
+  TS009F1 & R032F1 \\
+  TS010F1 & R040F1 \\
+  TS011F1 & R041F1 \\
+  TS012F1 & R047F1 \\
+  TS013F1 & R048F1 \\
+  TS014F1 & R049F1 \\
+  TS015F2 & R050F2 \\
+  TS016F2 & R051F2 \\
+  TS017F1 & R052F1 \\
+  TS018F1 & R053F1 \\
+  TS019F1 & R055F1 \\
+  TS020F1 & R056F1 \\
+  TS021F1 & R060F1 \\
+  TS022F1 & R061F1 \\
+  TS023F1 & R066F1 \\
+  TS024F1 & R067F1 \\
+  TS025F1 & R071F1 \\
+  TS026F1 & R075F1 \\
+  TS027F1 & R078F1 \\
+  TS028F1 & R080F1 \\
+  TS029F1 & R081F1 \\
+  TS030F1 & R082F1 \\
+  TS031F2 & R083F2 \\
+  TS032F1 & R085F1 \\
+  TS033F1 & R086F1 \\
+  TS034F1 & R087F1 \\
+  TS035F1 & R089F2 \\
+  TS036F1 & R091F2 \\
+  TS037F1 & R093F1 \\
+  TS038F1 & R095F2 \\
+  TS039F1 & R097F2 \\
+  TS040F1 & R099F1 \\
+  TS041P1 & R101P1 \\
+  TS042V1 & R102V1 \\
+  TS043V1 & R103V1 \\
+  TS044V1 & R104V1 \\
+  TS045V1 & R105V1 \\
+  TS046V2 & R106V2 \\
+  TS047V2 & R107V2 \\
+  TS048V2 & R108V2 \\
+  TS049V2 & R109V2 \\
+  TS050V1 & R110V1 \\
+  TS051V2 & R111V2 \\
+  TS052V1 & R112V1 \\
+  TS053V1 & R113V1 \\
+  TS054V1 & R114V1 \\
+  TS055Q1 & R115Q1 \\
+  TS056Q1 & R116Q1 \\
+  TS057Q1 & R117Q1 \\
+  TS058Q1 & R118Q1 \\
+  TS059Q1 & R119Q1 \\
+  TS060Q1 & R120Q1 \\
+  TS061Q2 & R121Q2 \\
+  TS062Q1 & R122Q1 \\
+
+
+ 
+
+
+
+
+  \rowcolor{white}
+  \caption{Tracciamento test di sistema \- requisito}%
+  \label{tab:test_sistema_requisito}
+\end{longtable}
+
+
+
+\newpage
 \subsubsection{Test di Integrazione}%
 \label{subs:test_di_integrazione}
 
@@ -762,7 +853,7 @@ Dove \textit{codice} rappresenta un numero progressivo che identifica il test di
 \end{longtable}
 
 %sub:test_di_integrazione (end)
-
+\newpage
 \subsubsection{Test di Unità}%
 \label{subs:test_di_unita}
 
