@@ -660,46 +660,71 @@ Dove: \textit{priorità} è un valore numerico da 1 a 3 ad indicare l'importanza
 
   % - Requisiti prestazionali
 
-  TS001P1            & Il tracciamento deve garantire precisione all'interno degli edifici, in modo da certificarne la presenza della persona. 
+  TS041P1            & Si verifichi che il tracciamento garantisca precisione all’interno degli edifici, in modo da certificarne la presenza della persona.
                      & S               \\
 
-  TS001V1            & Il sistema deve garantire che le comunicazioni tra applicazione e server avvengano solo al momento d'ingresso ed uscita dai luoghi designati.
+  TS042V1            & Si verifichi che sia stato realizzato un server backend.
+                     & S               \\
+
+  TS043V1            & Si verifichi che la web app abbia un interfaccia grafica con cui gli utenti possano interagire.
+                     & S               \\
+
+  TS044V1            & Si verifichi che sia stata realizzata un applicazione Android per le versioni 5.0 e superiori.
+                     & S               \\
+
+  TS045V1            & Si verifichi che le comunicazioni tra applicazione e server avvengano solo al momento d'ingresso ed uscita dai luoghi designati.
                      & NS                                                                                                                                                                                                                                                             \\
 
-  TS002V2            & Il proponente richiede che vengano utilizzati protocolli asincroni per le comunicazioni tra app e server.
+  TS046V2            & Si verifichi che sia stato utilizzato il linguaggio Java (versione 8 o superiore), Python, o Node.js per lo sviluppo del server backend.
+                     & S               \\
+
+  TS047V2            & Si verifichi che vengano utilizzati protocolli asincroni per le comunicazioni tra app e server.
                      & S                                                                                                                                                                                                                                                               \\
 
-  TS003V2            & Il proponente richiede l'utilizzo del design pattern Publisher/Subscriber.
+  TS048V2            & Si verifichi l'utilizzo del design pattern Publisher/Subscriber.
                      & S                                                                                                                                                                                                                                                               \\
 
-  TS004V2            & Il proponente richiede che venga utilizzato un IAAS come Kubernetes o un PAAS come Openshift o Rancher per il rilascio delle componenti del server e per la gestione della scalabilità orizzontale.
-                     & NS    \\                                                                                                                                                                                                                                                           \\
-  TS005V1            & Il server espone delle API REST attraverso cui utilizzare l'applicativo, o in alternativa alle API REST, utilizza il framework RPC\@.
+  TS049V2            & Si verifichi che venga utilizzato un IAAS come Kubernetes o un PAAS come Openshift o Rancher per il rilascio delle componenti del server e per la gestione della scalabilità orizzontale.
+                     & NS           
+                                                                                                                                                                                                                                                                  \\
+  TS050V1            & Si verifichi che il server esponga API REST attraverso cui utilizzare l'applicativo, o in alternativa alle API REST, utilizza il framework RPC\@.
                      & S\\
-  TS006V2            & Tutte le comunicazioni tra app e server sono cifrate.
+
+  TS051V2            & Si verifichi che tutte le comunicazioni tra app e server siano cifrate.
                      & NS\\
-  TS007V1            & L'applicazione utilizza tecnologie GPS\@.
+
+  TS052V1            & Si verifichi che l'applicazione utilizzi tecnologie GPS\@.
                      & S \\
 
-  TS008V1            & L'applicazione è in grado di bilanciare il consumo della batteria e la necessità di aggiornare la posizione in background.
+  TS053V1            & Si verifichi che l'applicazione sia in grado di bilanciare il consumo della batteria e la necessità di aggiornare la posizione in background.
                      & NS                                                                                                                                                                                                                                                               \\
 
-  TS001Q1            & Tutte le componenti applicative sono correlate dai test unitari e d'integrazione.
+  TS054V1            & Si verifichi che venga fornito un resoconto di tutte le scelte fatte e dei test effettuati per garantire il miglior rapporto raggiunto tra consumo della batteria e utilizzo del GPS, comprensivi di report.
+                     & NS \\
+
+  TS055Q1            & Si verifichi che tutte le componenti applicative siano correlate dai test unitari e d'integrazione.
                      & S                                                                                                                                                                                                                                                               \\
 
-  TS002Q1            & Viene testato interamente il sistema tramite test end-to-end.
+  TS056Q1            & Si verifichi che venga testato interamente il sistema tramite test end-to-end.
                      & S                                                                                                                                                                                                                                                               \\
 
-  TS003Q1            & Vengono effettuati test di carico che dimostrino il corretto funzionamento in ogni situazione: normale, di carico e di sovraccarico.
+  TS057Q1            & Si verifichi che vengano effettuati test di carico che dimostrino il corretto funzionamento in ogni situazione: normale, di carico e di sovraccarico.
                      & NS                                                                                                                                                                                                                                                               \\
 
-  TS004Q1            & Viene fornita una copertura dei test almeno dell'80\%, correlata di report.
-                     & S                                                                                                                                                                                                                                                               \\                                                                                                                                                                                                                                                       \\
+  TS058Q1            & Si verifichi che venga fornita una copertura dei test almeno dell'80\%, correlata di report.
+                     & S                                                                                                                                                                                                                                                               \\                                                                                                                                                                                                                                                       
 
-  TS005Q2            & Viene fornita un'analisi rispetto al carico massimo in numero di utenti e di quale sarebbe il servizio cloud più adatto per supportarlo, analizzando prezzo, stabilità del servizio ed assistenza.
+
+  TS059Q1            & Si verifichi che sia stata fornita documentazione relativa alle scelte implementative e progettuali effettuate, correlate dalle relative motivazioni
+                     & S                                                                                                                                                                                                                                                               \\                                                                                                                                                                                                                                                       
+
+  TS060Q1            & Si verifichi che sia stata fornita documentazione relativa a problemi aperti ed eventuali soluzioni proposte da esplorare.
+                     & S                                                                                                                                                                                                                                                               \\                                                                                                                                                                                                                                                       
+
+  TS061Q2            & Si verifichi che venga fornita un'analisi rispetto al carico massimo in numero di utenti e di quale sarebbe il servizio cloud più adatto per supportarlo, analizzando prezzo, stabilità del servizio ed assistenza.
                      & NS                                                                                                                                                                                                                                                               \\
 
-  TS007Q1            & Viene garantita la privacy degli utenti e rispettare la normativa GDPR\@.
+  TS062Q1            & Si verifichi che venga garantita la privacy degli utenti e rispettare la normativa GDPR\@.
                      & NS                                                                                                                                                                                                                                                               \\
   \rowcolor{white}
   \caption{Tabella dei test di sistema}%
