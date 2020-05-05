@@ -37,7 +37,7 @@
 }
 
 % esempio di utilizzo: \appendToGraphicspath{./img/} (un comando diverso per ogni path da includere)
-% N.B.: ci DEVE essere un forward slash alla fine del path, a indicare che è una cartella.
+% N.B.: ci DEVE essere un forward slash alla fine del path, a indicare che Ã¨ una cartella.
 \makeatletter
 \newcommand\appendToGraphicspath[1]{%
   \g@addto@macro\Ginput@path{{#1}}%
@@ -108,6 +108,9 @@
 
 % hook per lo script che genera il glossario
 \newcommand{\glossario}[1]{\underline{#1}\textsubscript{g}}
+
+% definizione comando per glossario locale al documento, senza l'utilizzo di script per la sua generazione
+\newcommand{\glossarioLocale}[1]{\underline{#1}\textsubscript{g}}
 
 % definizione dei comandi \uso e \stato
 \makeatletter
