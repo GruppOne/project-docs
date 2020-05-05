@@ -1,6 +1,4 @@
-\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
-
-% Iniziare frasi con "linguaggio/strumento/libreria/framework utilizzato per server/web app/mobile app ..." !!
+\documentclass[../../../manuale-sviluppatore.tex]{subfiles}
 
 \begin{document}
 
@@ -9,27 +7,32 @@
 In questa sezione sono descritti tutti i linguaggi utilizzati per l'implementazione di Stalker.
 
 \subsubsection{Java}%
-\label{subs}
-Back End Mobile (Java 11) App (Java 8).
+\label{subs:java}
 
-I linguaggi consigliati per l'implementazione di Butterfly sono: Python, Java e NodeJS %vedere nel capitolato se sono questi!!!
-Linguaggio utilizzato per compatibilità con Spring.
-%TODO estendere
+Il linguaggio di programmazione utilizzato per lo sviluppo del server backend è \glossarioLocale{Java}, in quanto si interfaccia facilmente con il framework \glossarioLocale{Spring}.
+
+Inoltre, Java è utilizzato come linguaggio per lo sviluppo della mobile application, in quanto è il linguaggio di programmazione più diffuso per lo sviluppo di piattaforme Android, nonostante da qualche anno il linguaggio ufficiale sia \glossarioLocale{Kotlin}. 
+
+Questi fattori e le conoscenze pregresse dei membri del gruppo hanno indirizzato all'unanimità la scelta di questo linguaggio, che permette anche di scrivere ed eseguire test tramite la libreria \glossarioLocale{JUnit}.
+
+Si specifica che nella parte back-end la versione utilizzata è la 11, mentre nella mobile application la versione utilizzata è la 8.
 
 \subsubsection{TypeScript}%
 \label{subs:typescript}
-Web Application
 
-Linguaggio.
-%TODO estendere
+Il linguaggio di programmazione utilizzato per lo sviluppo frontend della web application è \glossarioLocale{TypeScript}, un linguaggio moderno che estende la sintassi di \glossarioLocale{JavaScript} in modo che il codice scritto in JavaScript sia in grado di funzionare con TypeScript senza nessuna modifica.
 
-\subsubsection{Open API}%
-\label{subs:open_api}
-Back End
+La particolarità di questo linguaggio è che deve essere convertito in linguaggio JavaScript prima di poter essere eseguito, grazie all'utilizzo di un tool chiamato \textit{transpiler} che converte il codice sorgente da un certo linguaggio ad un altro.
 
-Grazie alla specifica Open API abbiamo definito le interfacce per la comunicazione, andando quindi a semplificare la sincronizzazione tra documentazione e codice sorgente.
+Inoltre, TypeScript è il linguaggio consigliato per lo sviluppo di applicazioni \textit{Angular}, che è stato utilizzato come framework per la web application nell'ambito del progetto Stalker.
 
-Open API è in grado di generare codice, documentazione e test case.
-%TODO estendere
+\subsubsection{OpenAPI}%
+\label{subs:openapi}
+
+Il linguaggio utilizzato per descrivere i servizi che sono forniti dal server backend di Stalker è la specifica \glossarioLocale{OpenAPI}, che definisce quali sono le interfacce per la comunicazione tra le componenti del sistema, ovvero tra server-web application e server-mobile application.
+
+La specifica OpenAPI semplifica la sincronizzazione che ci deve essere tra documentazione e codice sorgente, e definisce in particolare quali sono gli endpoint per la comunicazione tra le varie componenti e le sue operazioni tramite l'utilizzo del protocollo di rete HTTP\@.
+
+Open API è in grado inoltre di generare codice e test case, ma in questo progetto viene utilizzato solo per la documentazione.
 
 \end{document}

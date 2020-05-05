@@ -1,4 +1,4 @@
-\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+\documentclass[../../../manuale-sviluppatore.tex]{subfiles}
 
 % Iniziare frasi con "linguaggio/strumento/libreria/framework utilizzato per server/web app/mobile app ..." !!
 
@@ -10,35 +10,50 @@ In questa sezione sono descritti tutti gli strumenti utilizzati per l'implementa
 
 \subsubsection{MySQL}%
 \label{subs:mysql}
-Back End
+Lo strumento lato backend utilizzato per la memorizzazione di dati persistenti è \glossarioLocale{MySQL}, un sistema open source di gestione del database relazionale SQL\@.
 
-E' stato deciso di utilizzare MySQL come sistema per la gestione del database relazionale SQL e il salvataggio di dati persistenti.
-%TODO estendere
+Gestisce la maggior parte degli endpoint associati ad operazioni della web application, e comunica con il server tramite la libreria \glossarioLocale{R2DBC} del framework Spring.
+
+E' possibile amministrare il database di Stalker tramite l'interfaccia grafica web fornita da \glossarioLocale{PhpMyAdmin}.
+
+\subsubsection{PhpMyAdmin}%
+\label{subs:phpmyadmin}
+
+Lo strumento lato backend utilizzato per l'amministrazione del database MySQL tramite un qualsiasi browser è PhpMyAdmin.
+
+Per poter usufruire dell'interfaccia grafica, è necessario disporre le credenziali da amministratore.
 
 \subsubsection{InfluxDB}%
 \label{subs:influxdb}
 Back End
 
-E' stato deciso di utilizzare un Time Series Database (TSDB) InfluxDB, ovvero un database appositamente progettato ed ottimizzato per catalogare serie temporali di dati.
-
-E' stato implementato per ottimizzare le operazioni di archiviazione e recupero dei dati ad alta disponibilità.
+Lo strumento lato backend utilizzato per ottimizzare le operazioni di archiviazione e il recupero dei dati ad alta disponibilità è il Time Series Database (TSDB) \glossarioLocale{InfluxDB}, un database appositamente progettato ed ottimizzato per catalogare serie temporali di dati. 
 
 InfluxDB si occupa di salvare coppie tempo-valore, conoscendo in quale preciso punto del tempo è avvenuto il salvataggio dei dati non persistenti.
-%TODO estendere
+
+Gestisce una parte degli endpoint associati ad operazioni della mobile application. 
 
 \subsubsection{Docker}%
 \label{subs:docker}
-Back End
 
-Tecnologia per la containerizzazione dei servizi, come nel caso di questo progetto MySQL e InfluxDB\%.
-%TODO estendere
+Lo strumento lato backend utilizzato per la containerizzazione di servizi e la simulazione di componenti software in ambienti virtuali è \glossarioLocale{Docker}. Questa piattaforma software permette di creare, testare e distribuire applicazioni con la massima rapidità. 
+
+Docker raccoglie il software in ambienti isolati leggeri, chiamati \glossarioLocale{container}, che offrono tutto il necessario per la loro corretta esecuzione, incluse librerie, strumenti di sistema, codice e runtime. 
+
+I container vengono configurati tramite dei particolari file chiamati \glossarioLocale{DockerFile}, che contengono operazioni specifiche e configurazioni che vengono eseguite al suo avvio.
+
+Con Docker, è quindi possibile distribuire, replicare e ricalibrare le risorse per un'applicazione in qualsiasi ambiente, tenendo sempre sotto controllo il codice eseguito.
+
+Il vantaggio che ne deriva dal suo utilizzo è la possibilità di simulare l'esecuzione del proprio ambiente di sviluppo su macchine diverse, senza occuparsi dell'installazione e della configurazione dei servizi necessari. Ne deriva che il consumo di risorse avviene solo nel momento in cui è attivo l'ambiente di sviluppo, ovvero quando viene riprodotto e utilizzato per l'attività di sviluppo.
+
+Nell'ambito di questo progetto, le risorse che sono containerizzate da Docker sono MySQL, PhpMyAdmin e InfluxDB, ovvero tutti gli strumenti che vengono utilizzati nello strato di persistenza.
 
 \subsubsection{Docker Compose}%
 \label{subs:docker_compose}
-Back End
 
-Consente la gestione di più container nello stesso tempo.
-%TODO estendere
+Lo strumento lato backend utilizzato per la definizione e l'esecuzione di applicazioni Docker multi-contenitore è \glossarioLocale{Docker Compose}.
+
+Viene utilizzato un unico file, chiamato Compose, per la configurazione di tutti i servizi dell'applicazione, e un singolo comando per creare e avviare i servizi contenuti nel Compose.
 
 % \subsubsection{Kubernetes}%
 % \label{subs:kubernetes}
@@ -47,16 +62,29 @@ Consente la gestione di più container nello stesso tempo.
 
 \subsubsection{Karma}%
 \label{subs:karma}
-Web Application
 
-Ambiente per l’esecuzione dei test che ci consente di effettuare i test sul browser Chrome, quindi su un device che rispecchia il nostro target di produzione.
-%TODO estendere
+Lo strumento utilizzato per testare l'esecuzione della web application su più browser è \glossarioLocale{Karma}.
+
+E' possibile installare il plugin per diversi browser, ma è consigliato di installarlo su Google Chrome, sapendo che la maggior parte degli utenti Android utilizza questo browser, e quindi rispecchia il target della web application di Stalker.
 
 \subsubsection{Cucumber}%
 \label{subs:cucumber}
-Web Application
 
-Per la stesura dei test secondo la sintassi \glossarioLocale{Gherkin}, consentendo di avere dei test auto-esplicativi suddivisi in step che vengono implementati con l’aiuto della libreria di asserzioni \glossarioLocale{Chai} ed eseguiti tramite \glossarioLocale{Protractor}
-%TODO estendere
+Lo strumento utilizzato per testare i comportamenti software previsti in un linguaggio logico che gli utenti possano comprendere, e quindi che supporta il Behaviour-Driven Development (\glossarioLocale{BDD}), è \glossarioLocale{Cucumber}.
+
+La stesura dei test viene fatta seguendo la sintassi \glossarioLocale{Gherkin}, consentendo di avere dei test auto-esplicativi suddivisi in step che vengono implementati con l’aiuto della libreria di asserzioni \glossarioLocale{Chai} ed eseguiti tramite \glossarioLocale{Protractor}.
+
+\subsubsection{Gradle}%
+\label{subs:gradle}
+
+Lo strumento utilizzato per la gestione del software e la \glossarioLocale{build automation} è \glossarioLocale{Gradle}. 
+
+In particolare, Gradle è utilizzato sia lato backend che lato frontend per quanto riguarda la mobile application.
+
+Gradle è stato preferito a \glossarioLocale{Maven}, in quanto Maven utilizza una configurazione rigida basata sul formato \glossarioLocale{XML}, mentre Gradle utilizza un linguaggio dichiarativo di scripting \glossarioLocale{Groovy} dove il codice è compilato runtime ed assume la forma di bytecode per la Java Virtual Machine (\glossarioLocale{JVM}).
+
+Inoltre, Gradle è integrato da tempo nella programmazione Android, quindi per coerenza anche la parte server utilizza dipendenze Gradle. 
+
+Il file che serve a generare la build prende il nome di \textit{build.gradle}. 
 
 \end{document}
