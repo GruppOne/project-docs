@@ -1,0 +1,62 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+% Iniziare frasi con "linguaggio/strumento/libreria/framework utilizzato per server/web app/mobile app ..." !!
+
+\begin{document}
+
+\subsection{Strumenti}%
+\label{sub:strumenti}
+In questa sezione sono descritti tutti gli strumenti utilizzati per l'implementazione di Stalker.
+
+\subsubsection{MySQL}%
+\label{subs:mysql}
+Back End
+
+E' stato deciso di utilizzare MySQL come sistema per la gestione del database relazionale SQL e il salvataggio di dati persistenti.
+%TODO estendere
+
+\subsubsection{InfluxDB}%
+\label{subs:influxdb}
+Back End
+
+E' stato deciso di utilizzare un Time Series Database (TSDB) InfluxDB, ovvero un database appositamente progettato ed ottimizzato per catalogare serie temporali di dati.
+
+E' stato implementato per ottimizzare le operazioni di archiviazione e recupero dei dati ad alta disponibilità.
+
+InfluxDB si occupa di salvare coppie tempo-valore, conoscendo in quale preciso punto del tempo è avvenuto il salvataggio dei dati non persistenti.
+%TODO estendere
+
+\subsubsection{Docker}%
+\label{subs:docker}
+Back End
+
+Tecnologia per la containerizzazione dei servizi, come nel caso di questo progetto MySQL e InfluxDB\%.
+%TODO estendere
+
+\subsubsection{Docker Compose}%
+\label{subs:docker_compose}
+Back End
+
+Consente la gestione di più container nello stesso tempo.
+%TODO estendere
+
+% \subsubsection{Kubernetes}%
+% \label{subs:kubernetes}
+
+% % già pronta la sottosezione, nel caso dovesse essere implementato
+
+\subsubsection{Karma}%
+\label{subs:karma}
+Web Application
+
+Ambiente per l’esecuzione dei test che ci consente di effettuare i test sul browser Chrome, quindi su un device che rispecchia il nostro target di produzione.
+%TODO estendere
+
+\subsubsection{Cucumber}%
+\label{subs:cucumber}
+Web Application
+
+Per la stesura dei test secondo la sintassi \glossarioLocale{Gherkin}, consentendo di avere dei test auto-esplicativi suddivisi in step che vengono implementati con l’aiuto della libreria di asserzioni \glossarioLocale{Chai} ed eseguiti tramite \glossarioLocale{Protractor}
+%TODO estendere
+
+\end{document}

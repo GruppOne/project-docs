@@ -1,0 +1,71 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+% Iniziare frasi con "linguaggio/strumento/libreria/framework utilizzato per server/web app/mobile app ..." !!
+
+\begin{document}
+
+\subsection{Framework}%
+\label{sub:framework}
+In questa sezione sono descritti tutti i framework utilizzati per l'implementazione di Stalker.
+
+\subsubsection{Spring}%
+\label{subs:spring}
+Back End
+
+Per sviluppare il back-end è stato utilizzato Spring, un framework concepito per la realizzazione di software enterprise su piattaforma Java.
+
+Viene utilizzato in particolare il framework Spring Boot WebFlux, un progetto Spring disponibile dalla versione 5.0 costruito intorno al pattern Publisher/Subscriber (detto anche pattern Observer), che oltre a semplificare lo sviluppo delle applicazioni e fornire opzioni per fare build e deploy delle applicazioni in esecuzione, consente di supportare flussi reattivi completamente non bloccanti. L'elaborazione delle richieste asincrone avviene tramite un gestore eventi che non blocca alcuna richiesta entrante. 
+
+La build è ottenuta mediante l'utilizzo di dipendenze Gradle che, nel momento in cui la build avviene correttamente, consente l'avvio di un embedded server che fungerà da intermediario tra web application/mobile application e strato di persistenza (MySQL/InfluxDB).
+%TODO estendere
+
+\subsubsection{Angular}%
+\label{subs:angular}
+Web Application
+
+Per lo sviluppo della web application è stato scelto il framework Angular, che usa i linguaggi HTML e TypeScript.
+
+Il pattern architetturale di riferimento è il Model-View-ViewModel, che consente di creare una struttura basata sui seguenti elementi:
+\begin{description}
+    \item[view] insieme di elementi di visualizzazione.
+    \item[component] classe che definisce una view.
+    \item[service] classe che incapsula la business logic interagendo con un modello.   
+\end{description}
+%TODO estendere
+
+\subsubsection{Jasmine}%
+\label{subs:jasmine}
+Web Application
+
+Framework di test.
+%TODO estendere
+
+\subsubsection{Protractor}%
+\label{subs:protractor}
+Web Application
+
+Framework per i test e2e in grado di simulare interamente le interazioni dell’utente con la web-app.
+%TODO estendere
+
+\subsubsection{JUnit 4}%
+\label{subs:junit4}
+Mobile Application
+
+Framework di test, a cui è stato appoggiato \glossarioLocale{Mockito} per sostituire le parti non sotto esame di ciascun test ed \glossarioLocale{Espresso} per simulare l’interazione utente con le interfacce grafiche. 
+%TODO estendere
+
+\subsubsection{Mockito}%
+\label{subs:mockito}
+Mobile Application
+
+Framework di test open source
+%TODO estendere
+
+\subsubsection{Espresso}%
+\label{subs:espresso}
+Mobile Application
+
+Framework di test open source
+%TODO estendere
+
+\end{document}

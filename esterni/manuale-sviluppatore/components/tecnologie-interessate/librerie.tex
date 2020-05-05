@@ -1,0 +1,56 @@
+\documentclass[../../../analisi-dei-requisiti.tex]{subfiles}
+
+% Iniziare frasi con "linguaggio/strumento/libreria/framework utilizzato per server/web app/mobile app ..." !!
+
+\begin{document}
+
+\subsection{Librerie}%
+\label{sub:librerie}
+In questa sezione sono descritte tutte le librerie utilizzate per l'implementazione di Stalker.
+
+\subsubsection{Angular Material}%
+\label{subs:angular_material}
+Web Application
+
+Gli stili della web application sono basati sulla libreria Angular Material.
+%TODO estendere
+
+\subsubsection{Leaflet}%
+\label{subs:leaflet}
+Web Application
+
+Per gestire mappe interattive, è stata utilizzata la libreria JavaScript Leaflet, una libreria che si può integrare con Angular che consente di implementare mappe basate su \glossarioLocale{OpenStreetMap}.
+
+Leaflet permette di creare, modificare ed eliminare luoghi direttamente sulla mappa grazie al componente \textit{Leaflet Draw}, ed ottenere le informazioni necessarie grazie alla funzionalità di \glossarioLocale{reverse geocoding}, svincolando l'utente dall'onere di inserire manualmente l'insieme di coordinate, l'indirizzo e il nome associato al luogo selezionato.
+%TODO estendere
+
+\subsubsection{Chai}%
+\label{subs:chai}
+Web Application
+
+Libreria di asserzioni BDD\%.
+%TODO estendere
+
+\subsubsection{Volley}%
+\label{subs:volley}
+Mobile Application
+
+Libreria open source consigliata da Google come wrapper per le funzionalità di connessione a internet di basso livello.
+%TODO estendere
+
+\subsubsection{Lombok}%
+\label{subs:lombok}
+Mobile Application
+
+Libreria open source che genera automaticamente attraverso delle annotazioni Java buona parte del codice boilerplate (come getter e setter).
+%TODO estendere
+
+\subsubsection{JJWT}%
+\label{subs:jjwt}
+Mobile Application
+
+Acronimo di Java JSON Web Token, libreria open source per trasmettere informazioni tra due componenti in formato \glossarioLocale{JSON}, e quindi nello specifico serve a creare, codificare e ottenere informazioni dai token. Questo file JSON viene inviato ad ogni richiesta di login da web application e mobile application.
+Riferimento: https://github.com/jwtk/jjwt.
+%TODO estendere
+
+\end{document}

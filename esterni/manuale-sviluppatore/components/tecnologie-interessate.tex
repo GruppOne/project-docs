@@ -2,81 +2,16 @@
 
 \begin{document}
 
-\subsection{Back End}%
-\label{sub:back_end}
-In questa sezione sono descritte tutte le tecnologie scelte, dopo un'attenta analisi per lo sviluppo del back-end.
+Di seguito vengono descritte tutte le tecnologie coinvolte per lo sviluppo del prodotto. 
 
+\subfile{tecnologie-interessate/linguaggi.tex}
 
-\subsubsection{MySQL}%
-\label{sub:mysql}
-E' stato deciso di utilizzare MySQL come sistema per la gestione del database relazionale SQL e il salvataggio di dati persistenti.
-%TODO estendere
+\subfile{tecnologie-interessate/strumenti.tex}
 
-\subsubsection{InfluxDB}%
-\label{sub:influxdb}
-E' stato deciso di utilizzare un Time Series Database (TSDB) InfluxDB, ovvero un database appositamente progettato ed ottimizzato per catalogare serie temporali di dati.
+\subfile{tecnologie-interessate/framework.tex}
 
-E' stato implementato per ottimizzare le operazioni di archiviazione e recupero dei dati ad alta disponibilità.
+\subfile{tecnologie-interessate/librerie.tex}
 
-InfluxDB si occupa di salvare coppie tempo-valore, conoscendo in quale preciso punto del tempo è avvenuto il salvataggio dei dati non persistenti.
-%TODO estendere
-
-\subsubsection{Spring}%
-\label{sub:spring}
-Per sviluppare il back-end è stato utilizzato Spring, un framework concepito per la realizzazione di software enterprise su piattaforma Java.
-
-Viene utilizzato in particolare il framework Spring Boot WebFlux, un progetto Spring disponibile dalla versione 5.0 costruito intorno al pattern Publisher/Subscriber (detto anche pattern Observer), che oltre a semplificare lo sviluppo delle applicazioni e fornire opzioni per fare build e deploy delle applicazioni in esecuzione, consente di supportare flussi reattivi completamente non bloccanti. L'elaborazione delle richieste asincrone avviene tramite un gestore eventi che non blocca alcuna richiesta entrante. 
-
-La build è ottenuta mediante l'utilizzo di dipendenze Gradle che, nel momento in cui la build avviene correttamente, consente l'avvio di un embedded server che fungerà da intermediario tra web application/mobile application e strato di persistenza (MySQL/InfluxDB).
-%TODO estendere
-
-\subsubsection{Open API}%
-\label{sub:open_api}
-Grazie alla specifica Open API abbiamo definito le interfacce per la comunicazione, andando quindi a semplificare la sincronizzazione tra documentazione e codice sorgente.
-
-Open API è in grado di generare codice, documentazione e test case.
-%TODO estendere
-\newpage
-
-
-\subsection{Web Application}%
-\label{sub:web_app}
-In questa sezione sono descritte tutte le tecnologie coinvolte per lo sviluppo della web application.
-
-
-\subsubsection{Angular}%
-\label{subs:angular}
-
-Per lo sviluppo della web application è stato scelto il framework Angular, che usa i linguaggi HTML e TypeScript.
-
-Il pattern architetturale di riferimento è il Model-View-ViewModel, che consente di creare una struttura basata sui seguenti elementi:
-\begin{description}
-    \item[view] insieme di elementi di visualizzazione.
-    \item[component] classe che definisce una view.
-    \item[service] classe che incapsula la business logic interagendo con un modello.   
-\end{description}
-%TODO estendere
-
-\subsubsection{Angular Material}%
-\label{subs:angular}
-
-Gli stili della web application sono basati sulla libreria Angular Material.
-%TODO estendere
-
-\subsubsection{Leaflet}%
-\label{subs:angular}
-
-Per gestire mappe interattive, è stata utilizzata la libreria Leaflet, una libreria che si può integrare con Angular che consente di implementare mappe basate su OpenStreetMap.
-
-Leaflet permette di creare, modificare ed eliminare luoghi direttamente sulla mappa ed ottenere le informazioni necessarie grazie alla funzionalità di reverse geocoding, svincolando l'utente dall'onere di inserire manualmente l'insieme di coordinate, l'indirizzo e il nome associato al luogo selezionato.
-%TODO estendere
-\newpage
-
-\subsection{Mobile Application}%
-\label{sub:mobile_app}
-
-In questa sezione sono descritte tutte le tecnologie coinvolte per lo sviluppo della mobile application.
-
-%TODO aggiungere tecnologie mobile app
+\subfile{tecnologie-interessate/requisiti.tex}
 
 \end{document}
