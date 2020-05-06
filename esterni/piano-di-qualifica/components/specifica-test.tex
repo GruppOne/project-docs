@@ -1126,6 +1126,74 @@ TUW061             & Verifica il ritorno di un errore da una chiamata get per il
 
 TUW064             & Verifica il mancato aggiornamento di user dopo una chiamata get tramite un errore. & S \\   
 
+ %auth
+
+ TUW065             & Verifica la corretta creazione di AuthGuard. & S \\ 
+
+ TUW066             & Verifica il ritorno a false quando un utente non è autenticato. & S \\ 
+
+TUW067            & Verifica il ritorno a false quando un utente è autenticato, non ha l'autorizzazione e l'url contiene organization. & S \\   
+
+TUW068            & Verifica il ritorno a true quando un utente è autenticato e l'url contiene organization. & S \\   
+
+TUW069            & Verifica il ritorno a true quando un utente è autenticato e l'url non contiene un organizzazione o un utente. & S \\   
+
+TUW070            & Verifica il ritorno a true quando un utente è autenticato, ha l'autorizzazione e l'url contiene un organizzazione. & S \\  
+
+TUW071            & Verifica il ritorno a true quando un utente è autenticato e l'url contiene un utente con i permessi. & S \\  
+
+TUW072            & Verifica il ritorno a false quando un utente è autenticato e l'url contiene un utente senza abbastanza permessi. & S \\  
+
+
+%app.model.classes.organization
+
+TUW073             & Verifica la corretta creazione di Organization. & S \\ 
+
+TUW074             & Verifica il corretto funzionamento dei getter e setter. & S \\ 
+ 
+%app.model.classes.ldapconfiguration
+
+TUW075             & Verifica la corretta creazione di LdapConfiguration. & S \\ 
+
+TUW076             & Verifica il corretto funzionamento dei getter e setter. & S \\ 
+ 
+ 
+%app.model.classes.users.user
+
+TUW077             & Verifica la corretta creazione di User. & S \\ 
+
+TUW078             & Verifica il corretto funzionamento dei getter e setter. & S \\ 
+ 
+%app.model.classes.users.user-data
+
+TUW079             & Verifica la corretta creazione di UserData. & S \\ 
+
+TUW080             & Verifica il corretto funzionamento dei getter e setter. & S \\ 
+ 
+%app.model.classes.place.place
+
+TUW081             & Verifica la corretta creazione di Place. & S \\ 
+
+TUW082             & Verifica il corretto funzionamento dei getter e setter. & S \\ 
+ 
+%app.model.classes.place.place-data
+
+TUW083             & Verifica la corretta creazione di PlaceData. & S \\ 
+
+TUW084             & Verifica il corretto funzionamento dei getter e setter. & S \\ 
+ 
+%app.model.classes.place.my-lat-lng
+
+TUW085             & Verifica la corretta creazione di MyLatLng usando Leaflet data. & S \\ 
+
+TUW086             & Verifica la corretta creazione di MyLatLng. & S \\ 
+ 
+TUW087             & Verifica il ritorno corretto della latitudine. & S \\ 
+
+TUW088             & Verifica il ritorno corretto della longitudine. & S \\ 
+
+
+
 
 
   \rowcolor{white}
@@ -1398,6 +1466,73 @@ TUW061             & app.model.view.\char`_routes.organizations.OrganizationsCom
  TUW063             & app.model.view.\char`_routes.profile.ProfileComponent.getUser\@() \\ 
 
 TUW064             & app.model.view.\char`_routes.profile.ProfileComponent.getUser\@()  \\   
+
+
+
+ %auth
+
+ TUW065             & app.AuthGuard.canActivate\@()  \\ 
+
+ TUW066             & app.AuthGuard.canActivate\@() \\ 
+
+TUW067            & app.AuthGuard.canActivate\@() \\   
+
+TUW068            & app.AuthGuard.canActivate\@() \\   
+
+TUW069            &app.AuthGuard.canActivate\@() \\   
+
+TUW070            & app.AuthGuard.canActivate\@()\\  
+
+TUW071            & app.AuthGuard.canActivate\@() \\  
+
+TUW072            & app.AuthGuard.canActivate\@()\\  
+
+%app.model.classes.organization
+
+TUW073             & app.model.classes.Organization.constructor\@()\\ 
+
+TUW074             & app.model.classes.Organization.build\@()\\ 
+ 
+
+%app.model.classes.ldapconfiguration
+
+TUW075             & app.model.classes.LdapConfiguration.constructor\@()\\ 
+
+TUW076             & app.model.classes.LdapConfiguration.build\@()\\ 
+ 
+%app.model.classes.users.user
+
+TUW077             & app.model.classes.users.User.constructor\@()\\ 
+
+TUW078             & app.model.classes.users.User.build\@()\\ 
+ 
+%app.model.classes.users.user-data
+
+TUW079             & app.model.classes.users.UserData.constructor\@()\\ 
+
+TUW080             & app.model.classes.users.UserData.build\@()\\ 
+ 
+%app.model.classes.place.place
+
+TUW081             & app.model.classes.place.Place.constructor\@()\\ 
+
+TUW082             & app.model.classes.place.Place.build\@()\\ 
+ 
+%app.model.classes.place.place-data
+
+TUW081             & app.model.classes.place.PlaceData.constructor\@()\\ 
+
+TUW082             & app.model.classes.place.PlaceData.build\@()\\ 
+ 
+%app.model.classes.place.my-lat-lng
+
+TUW085              & app.model.classes.place.MyLatLng.constructor\@()\\ 
+
+TUW086             & app.model.classes.place.MyLatLng.constructor\@()\\ 
+ 
+TUW087             & app.model.classes.place.MyLatLng.Latitude\@()\\  
+
+TUW088             & app.model.classes.place.MyLatLng.Longitude\@()\\ 
 
 
 
