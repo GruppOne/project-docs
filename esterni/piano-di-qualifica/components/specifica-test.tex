@@ -1192,9 +1192,87 @@ TUW087             & Verifica il ritorno corretto della latitudine. & S \\
 
 TUW088             & Verifica il ritorno corretto della longitudine. & S \\ 
 
+%app.model.services.administratorservice
+
+TUW089             & Verifica la corretta creazione di AdministratorService. & S \\ 
+
+TUW090             & Verifica la corretta chiamata post per la creazione. & S \\ 
+ 
+TUW091             & Verifica la corretta chiamata delete per la rimozione. & S \\ 
+
+TUW092             & Verifica la corretta chiamata get per il recupero.  & S \\ 
+
+%app.model.services.auth-http-interceptor
+
+TUW093             & Verifica la corretta creazione di AuthHttpInterceptorService. & S \\ 
+
+TUW094             & Verifica di non utilizzare il jwtToker alle richieste di login. & S \\ 
+ 
+TUW095             & Verifica di non utilizzare il jwtToker se l'utente non è autenticato. & S \\ 
+
+TUW096             & Verifica di utilizzare il jwtToker se l'utente è autenticato.  & S \\ 
+
+%app.model.services.connected-users
+
+TUW097             & Verifica la corretta creazione di ConnectedUserService. & S \\ 
+
+TUW098             & Verifica il ritorno corretto della lista degli utenti connessi. & S \\ 
+ 
+%app.model.services.http-client
+
+TUW099             & Verifica la corretta creazione di HttpClientService. & S \\ 
+
+TUW100             & Verifica la corretta chiamata get. & S \\ 
+
+TUW101             & Verifica la corretta chiamata post. & S \\ 
+
+TUW102             & Verifica la corretta chiamata put. & S \\ 
+
+TUW103             & Verifica la corretta chiamata delete. & S \\ 
+
+TUW104             & Verifica la corretta chiamata post con headers addizionali. & S \\ 
+
+%app.model.services.login
+
+TUW105             & Verifica la corretta creazione di LoginService. & S \\ 
+
+TUW106             & Verifica il ritorno corretto dell'id utente. & S \\ 
+ 
+TUW107             & Verifica il logout e il ritorno alla pagina home. & S \\ 
+
+TUW108             & Verifica la chiamata post per il login. & S \\ 
+
+TUW109             & Verifica il ritorno a false se l'utente non è autenticato. & S \\ 
+
+TUW110             & Verifica il ritorno a true se l'utente è autenticato. & S \\ 
+
+TUW111             & Verifica il ritorno di un token per determinare i permessi sufficienti di un utente. & S \\ 
+
+TUW112             & Verifica il ritorno di un token per determinare i permessi insufficienti di un utente. & S \\ 
 
 
+%app.model.services.organization
 
+TUW113             & Verifica la corretta creazione di OrganizationService. & S \\ 
+
+TUW114             & Verifica la corretta aggiunta di un'organizzazione. & S \\ 
+ 
+TUW115             & Verifica il ritorno di un'organizzazione dato un id. & S \\ 
+
+TUW116             & Verifica il ritorno delle informazioni di una lista di organizzazioni. & S \\ 
+
+TUW117             & Verifica la corretta modifica di un'organizzazione. & S \\ 
+%app.model.services.place
+
+TUW118             & Verifica la corretta creazione di PlaceService. & S \\ 
+
+TUW119             & Verifica il ritorno di un oggetto Geocoding da una chiamata get a OpenStreetMaps. & S \\ 
+ 
+%app.model.services.user
+
+TUW120             & Verifica la corretta creazione di UserService. & S \\ 
+
+TUW121             & Verifica il ritorno corretto di un utente. & S \\ 
 
   \rowcolor{white}
   \caption{Tabella dei test di unità}%
@@ -1533,6 +1611,96 @@ TUW086             & app.model.classes.place.MyLatLng.constructor\@()\\
 TUW087             & app.model.classes.place.MyLatLng.Latitude\@()\\  
 
 TUW088             & app.model.classes.place.MyLatLng.Longitude\@()\\ 
+
+%app.model.classes.services.administratorservice
+
+TUW089             & app.model.services.AdministratorService.constructor\@()\\ 
+
+TUW090             & app.model.services.AdministratorService.addAdministrator\@()\\ 
+
+TUW091             & app.model.services.AdministratorService.removeAdministrator\@()\\ 
+
+TUW092            & app.model.services.AdministratorService.getAdministrators\@()\\ 
+
+
+%app.model.services.auth-http-interceptor
+
+TUW093             & app.model.services.AuthHttpInterceptorService.constructor\@()\\ 
+
+TUW094             & app.model.services.AuthHttpInterceptorService.intercept\@()\\ 
+ 
+TUW095            & app.model.services.AuthHttpInterceptorService.intercept\@()\\ 
+
+TUW096             & app.model.services.AuthHttpInterceptorService.intercept\@()\\ 
+
+
+
+%app.model.services.connected-users
+
+TUW097             & app.model.services.ConnectedUserService.constructor\@()\\ 
+
+TUW098             & app.model.services.ConnectedUserService.getUserConnectedToOrg\@()\\ 
+ 
+
+%app.model.services.http-client
+
+TUW099             & app.model.services.HttpClientService.constructor\@()\\ 
+
+TUW100              & app.model.services.HttpClientService.get\@()\\ 
+
+TUW101              & app.model.services.HttpClientService.post\@()\\ 
+
+TUW102              & app.model.services.HttpClientService.put\@()\\ 
+
+TUW103              & app.model.services.HttpClientService.delete\@()\\ 
+
+TUW104              & app.model.services.HttpClientService.post\@()\\ 
+
+
+
+%app.model.services.login
+
+TUW105             & app.model.services.LoginService.constructor\@()\\ 
+
+TUW106             & app.model.services.LoginService.getUserId\@()\\ 
+ 
+TUW107             & app.model.services.LoginService.login\@()\\ 
+
+TUW108             & app.model.services.LoginService.isLoggedIn\@()\\ 
+
+TUW109             & app.model.services.LoginService.isLoggedIn\@()\\ 
+
+TUW110            & app.model.services.LoginService.getAdminOrganizations\@()\\ 
+
+TUW111             & app.model.services.LoginService.checkAutorization\@()\\ 
+
+TUW112             & app.model.services.LoginService.checkAutorization\@()\\ 
+
+%app.model.services.organization
+
+TUW113             & app.model.services.OrganizationService.constructor\@()\\ 
+
+TUW114             & app.model.services.OrganizationService.addOrganization\@()\\ 
+
+ 
+TUW115             & app.model.services.OrganizationService.getOrganizationById\@()\\ 
+
+TUW116             & app.model.services.OrganizationService.getAdminOrganizations\@()\\ 
+
+TUW117            & app.model.services.OrganizationService.editOrganization\@()\\ 
+
+
+%app.model.services.place
+
+TUW118             & app.model.services.PlaceService.constructor\@()\\ 
+
+TUW119             & app.model.services.PlaceService.reverseGeocoding\@()\\ 
+ 
+%app.model.services.user
+
+TUW120             & app.model.services.UserService.constructor\@()\\ 
+
+TUW121             & app.model.services.UserService.getUserById\@()\\ 
 
 
 
