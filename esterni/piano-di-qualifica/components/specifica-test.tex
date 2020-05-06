@@ -968,6 +968,165 @@ Dove \textit{codice} rappresenta un numero identificativo per l'unità a cui il 
 
   TUM042             & Verifica l'aggiunta di una richiesta alla coda. & N\\ % TODO test ancora da completare
 
+  % Web App
+
+  % app.component
+
+  TUW001             & Verifica la corretta creazione dell'app. & S\\ 
+
+  TUW002             & Verifica il ritorno corretto del route. & S\\
+
+  TUW003             & Verifica il ritorno corretto alla home. & S\\
+
+  TUW004             & Verifica il non ritorno alla home. & S\\
+
+  TUW005             & Verifica la creazione del componente tooltip. & S\\
+
+  TUW006             & Verifica la visualizzazione dei bottoni dentro al menu, se un utente ha effettuato il login. & S\\
+
+  TUW007             &  Verifica la mancata visualizzazione dei bottoni dentro al menu, se un utente ha effettuato il login. & S\\
+
+  TUW008             &  Verifica il ritorno dello user id. & S\\
+
+  TUW009             &  Verifica il corretto logout. & S\\
+
+  %view.components.administrator
+
+  TUW010             & Verifica la corretta creazione di AdministratorComponent. & S\\ 
+  
+  TUW011             & Verifica il ritorno corretto degli amministratori da una chiamata get. & S\\ 
+  
+  TUW012             & Verifica il ritorno non corretto degli amministratori da una chiamata get. & S\\ 
+
+  TUW013             & Verifica il ritorno corretto degli utenti connessi ad una organizzazione da una chiamata get. & S\\ 
+  
+  TUW014             & Verifica il ritorno non corretto degli utenti connessi ad una organizzazione da una chiamata get. & S\\ 
+
+  TUW015             & Verifica la corretta rimozione di un admin. & S\\ 
+
+  TUW016             & Verifica la non corretta rimozione di un admin in caso di errori http. & S\\ 
+
+  TUW017             & Verifica la corretta aggiunta di un admin. & S\\ 
+
+  TUW018             & Verifica la non corretta aggiunta di un admin in caso di errori http. & S\\ 
+
+  TUW019             & Verifica il ritorno di un utente corretto data la sua mail. & S\\ 
+
+  %view.components.button-confirm
+
+  TUW020             & Verifica la corretta creazione di button-confirm. & S \\ 
+
+  %view.components.form-email
+
+  TUW021             & Verifica la corretta creazione di form-email. & S \\ 
+
+  TUW022             & Verifica il corretto funzionamento del campo input. & S \\ 
+
+  TUW023             & Verifica il corretto aggiornamento del campo email. & S \\ 
+
+  %view.components.form-password
+
+  TUW024             & Verifica la corretta creazione di form-password. & S \\ 
+
+  TUW025             & Verifica il corretto funzionamento del campo input. & S \\ 
+
+  TUW026             & Verifica il corretto aggiornamento del campo password. & S \\   
+
+  %view.components.map
+
+  TUW027             & Verifica la corretta creazione di map e la richiesta dei luoghi. & S \\ 
+
+  TUW028             & Verifica la corretta creazione di map senza richiedere i luoghi. & S \\ 
+
+  TUW029             & Verifica il ritorno di una risposta vuota delle organizzazioni da una chiamata get. & S \\   
+
+  TUW030             & Verifica il ritorno di una risposta non vuota delle organizzazioni da una chiamata get. & S \\ 
+
+  TUW031             & Verifica il ritorno di una risposta non vuota dei luoghi da una chiamata get e la loro visualizzazione. & S \\ 
+
+  TUW032             & Verifica il ritorno di una risposta non vuota dei luoghi da una chiamata get senza visualizzarli in caso di errore. & S \\ 
+
+  %view.components._routes.create-organization
+
+  TUW033             & Verifica la corretta creazione di CreateOrganizationComponent. & S \\ 
+
+  TUW034             & Verifica il corretto invio del form di creazione organizzazione. & S \\ 
+
+  TUW035             & Verifica il mancato invio del form di creazione organizzazione nel caso di errori http. & S \\   
+
+  TUW036             & Verifica il cambiamento del toggle. & S \\
+  
+    %view.components._routes.edit-organization
+
+    TUW037             & Verifica la corretta creazione di EditOrganizationComponent. & S \\ 
+
+    TUW038             & Verifica la corretta creazione di EditOrganizationComponent con un'organizzazione già inserita. & S \\ 
+  
+    TUW039             & Verifica la corretta creazione di EditOrganizationComponent senza organizzazione inserita & S \\   
+  
+    TUW040             & Verifica il ritorno di una risposta vuota delle organizzazioni da una chiamata get. & S \\
+  
+    TUW041             & Verifica il ritorno di una risposta non vuota delle organizzazioni da una chiamata get. & S \\
+  
+    TUW042              & Verifica il corretto invio del form di modifica organizzazione. & S \\
+   
+    TUW043             & Verifica il mancato invio del form di creazione organizzazione nel caso di errori http. & S \\   
+
+
+      
+    %view.components._routes.home
+
+    TUW044             & Verifica la corretta creazione di HomeComponent. & S \\ 
+
+    TUW045             & Verifica la non validazione di dati di login errati. & S \\ 
+  
+    TUW046             & Verifica la validazione di dati di login errati. & S \\   
+  
+    TUW047             & Verifica che il redirect della pagina funzioni al momento del login. & S \\
+  
+    TUW048             & Verifica che il redirect della pagina non funzioni al momento del login se l'input non è corretto. & S \\
+  
+    TUW049              & Verifica che il redirect della pagina non funzioni al momento del login se ci sono errori http. & S \\
+   
+    TUW050             & Verifica il ritorno a false del toggle. & S \\   
+
+    TUW051             & Verifica il ritorno a true del toggle. & S \\   
+
+    TUW052             & Verifica che non venga visualizzato il form di login nel caso in cui un utente sia autenticato. & S \\   
+
+    TUW053             & Verifica che  venga visualizzato il form di login nel caso in cui un utente non sia autenticato. & S \\  
+
+      
+    %view.components._routes.not-found
+
+    TUW054             & Verifica la corretta creazione di NotFoundComponent. & S \\ 
+
+
+       %view.components._routes.organization
+
+       TUW055             & Verifica la corretta creazione di OrganizationComponent con un'organizzazione ottenuta tramite get. & S \\ 
+       TUW056             & Verifica la corretta creazione di OrganizationComponent senza un'organizzazione ottenuta tramite get. & S \\ 
+       TUW057             & Verifica il ritorno di una risposta vuota delle organizzazioni da una chiamata get. & S \\   
+       TUW058             & Verifica il ritorno di una risposta non vuota delle organizzazioni da una chiamata get. & S \\  
+
+ %view.components._routes.organizations
+
+ TUW059             & Verifica la corretta creazione di OrganizationsComponent senza una lista di organizzazioni. & S \\ 
+
+ TUW060             & Verifica la corretta creazione di OrganizationComponent con una lista valida di organizzazioni. & S \\ 
+
+TUW061             & Verifica il ritorno di un errore da una chiamata get per il ritorno della lista delle organizzazioni. & S \\   
+
+
+ %view.components._routes.profile
+
+ TUW062             & Verifica la corretta creazione di ProfileComponent. & S \\ 
+
+ TUW063             & Verifica il corretto aggiornamento di user dopo una chiamata get. & S \\ 
+
+TUW064             & Verifica il mancato aggiornamento di user dopo una chiamata get tramite un errore. & S \\   
+
+
 
   \rowcolor{white}
   \caption{Tabella dei test di unità}%
@@ -1052,6 +1211,7 @@ Dove \textit{codice} rappresenta un numero identificativo per l'unità a cui il 
   TUM027                & com.gruppone.stalker.OrganizationListAdapter.getItemCount\@() \\
 
   TUM028                & com.gruppone.stalker.StalkerActivity.checkPermissions\@() \\
+  
 
   % test di instrumentation
 
@@ -1076,6 +1236,168 @@ Dove \textit{codice} rappresenta un numero identificativo per l'unità a cui il 
   TUM041                & com.gruppone.stalker.WebSingleton.getRequestQueue\@() \\
 
   TUM042                & com.gruppone.stalker.WebSingleton.addToRequestQueue\@() \\
+
+
+
+  % Web App
+
+  % app.component
+
+  TUW001             & app.model.AppComponent.constructor\@() \\ 
+
+  TUW002             & app.model.AppComponent.getRoute\@()\\
+
+  TUW003             & app.model.AppComponent.backHome\@()\\
+
+  TUW004             & app.model.AppComponent.backHome\@()\\
+
+  TUW005             & app.model.AppComponent.generateComponents\@()\\
+
+  TUW006             & app.model.AppComponent.userLoggedIn\@()\\
+
+  TUW007             & app.model.AppComponent.userLoggedIn\@()\\
+
+  TUW008             & app.model.AppComponent.getUserId\@()\\
+
+  TUW009             & app.model.AppComponent.Logout\@()\\
+
+  %view.components.administrator
+
+  TUW010             & app.model.view.components.administrator.AdministratorComponent.constructor\@() \\ 
+  
+  TUW011             & app.model.view.components.administrator.AdministratorComponent.getOrgAdministrators\@() \\ 
+  
+  TUW012             & app.model.view.components.administrator.AdministratorComponent.getOrgAdministrators\@() \\ 
+
+  TUW013             & app.model.view.components.administrator.AdministratorComponent.getOrgUsers\@() \\ 
+  
+  TUW014             & app.model.view.components.administrator.AdministratorComponent.getOrgUsers\@() \\ 
+
+  TUW015             & app.model.view.components.administrator.AdministratorComponent.deleteAdmin\@() \\ 
+
+  TUW016             & app.model.view.components.administrator.AdministratorComponent.deleteAdmin\@() \\ 
+
+  TUW017             & app.model.view.components.administrator.AdministratorComponent.addAdmin\@() \\ 
+
+  TUW018             & app.model.view.components.administrator.AdministratorComponent.addAdmin\@() \\ 
+
+  TUW019             & app.model.view.components.administrator.AdministratorComponent.checkIfEmailIsUser\@() \\ 
+
+  %view.components.button-confirm
+
+  TUW020             & app.model.view.components.button-confirm.constructor\@() \\ 
+
+  %view.components.form-email
+
+  TUW021             & app.model.view.components.form-email.constructor\@() \\ 
+
+  TUW022             & app.model.view.components.form-email.writeValue\@() \\ 
+
+  TUW023             & app.model.view.components.form-email.registerOnTouched\@() \\ 
+
+  %view.components.form-password
+
+  TUW024             & app.model.view.components.form-password.constructor\@() \\ 
+
+  TUW025             & app.model.view.components.form-password.writeValue\@() \\ 
+
+  TUW026             & app.model.view.components.form-password.registerOnTouched\@() \\ 
+
+    %view.components.map
+
+    TUW027             & app.model.view.components.map.constructor\@() \\ 
+
+    TUW028             & app.model.view.components.map.constructor\@() \\ 
+  
+    TUW029             & app.model.view.components.map.getOrganizationById\@() \\ 
+
+    TUW030             & app.model.view.components.map.getOrganizationById\@() \\ 
+
+    TUW031             & app.model.view.components.map.onDrawCreated\@() \\ 
+
+    TUW032             & app.model.view.components.map.onDrawCreated\@() \\ 
+
+
+  %view.components._routes.create-organization
+
+  TUW033             & app.model.view.\char`_routes.create-organization.CreateOrganizationComponent.constructor\@()\\ 
+
+  TUW034             & app.model.view.\char`_routes.create-organization.CreateOrganizationComponent.submitOrganizationForm\@() \\ 
+
+  TUW035             & app.model.view.\char`_routes.create-organization.CreateOrganizationComponent.submitOrganizationForm\@() \\   
+
+  TUW036             & app.model.view.\char`_routes.create-organization.CreateOrganizationComponent.showLdapConfiguration\@() \\ 
+
+  
+    %view.components._routes.edit-organization
+
+    TUW037             & app.model.view.\char`_routes.edit-organization.EditOrganizationComponent.constructor\@() \\ 
+
+    TUW038             & app.model.view.\char`_routes.edit-organization.EditOrganizationComponent.constructor\@()\\ 
+  
+    TUW039             & app.model.view.\char`_routes.edit-organization.EditOrganizationComponent.constructor\@() \\   
+  
+    TUW040             & app.model.view.\char`_routes.edit-organization.EditOrganizationComponent.getOrganizationById\@()\\
+  
+    TUW041             & app.model.view.\char`_routes.edit-organization.EditOrganizationComponent.getOrganizationById\@() \\
+  
+    TUW042              &app.model.view.\char`_routes.edit-organization.EditOrganizationComponent.submitOrganizationForm\@()\\
+   
+    TUW043             & app.model.view.\char`_routes.edit-organization.EditOrganizationComponent.submitOrganizationForm\@() \\   
+
+   %view.components._routes.home
+
+   TUW044             & app.model.view.\char`_routes.home.HomeComponent.constructor\@() \\ 
+
+   TUW045             & app.model.view.\char`_routes.home.HomeComponent.validateInput\@() \\ 
+ 
+   TUW046             & app.model.view.\char`_routes.home.HomeComponent.validateInput\@() \\   
+ 
+   TUW047             & app.model.view.\char`_routes.home.HomeComponent.login\@()\\
+ 
+   TUW048             & app.model.view.\char`_routes.home.HomeComponent.login\@() \\
+ 
+   TUW049              &app.model.view.\char`_routes.home.HomeComponent.login\@()\\
+  
+   TUW050             & app.model.view.\char`_routes.home.HomeComponent.translate\@()\\   
+
+   TUW051             &app.model.view.\char`_routes.home.HomeComponent.translate\@()\\   
+
+   TUW052             &app.model.view.\char`_routes.home.HomeComponent.userLoggedIn\@() \\   
+
+   TUW053             & app.model.view.\char`_routes.home.HomeComponent.userLoggedIn\@() \\  
+
+
+    %view.components._routes.not-found
+
+    TUW054             & app.model.view.\char`_routes.not-found.NotFoundComponent.constructor\@() \\ 
+
+   %view.components._routes.organization
+
+  TUW055             &app.model.view.\char`_routes.organization.OrganizationComponent.constructor\@() \\ 
+
+  TUW056             & app.model.view.\char`_routes.organization.OrganizationComponent.constructor\@() \\ 
+
+  TUW057             & app.model.view.\char`_routes.organization.OrganizationComponent.getOrganizationById\@() \\   
+
+  TUW058             & app.model.view.\char`_routes.organization.OrganizationComponent.getOrganizationById\@() \\  
+
+ %view.components._routes.organizations
+
+ TUW059             & app.model.view.\char`_routes.organizations.OrganizationsComponent.constructor\@()  \\ 
+
+ TUW060             &app.model.view.\char`_routes.organizations.OrganizationsComponent.constructor\@()  \\ 
+
+TUW061             & app.model.view.\char`_routes.organizations.OrganizationsComponent.getAdminOrganizations\@()  \\  
+
+
+ %view.components._routes.profile
+
+ TUW062             & app.model.view.\char`_routes.profile.ProfileComponent.constructor\@() \\ 
+
+ TUW063             & app.model.view.\char`_routes.profile.ProfileComponent.getUser\@() \\ 
+
+TUW064             & app.model.view.\char`_routes.profile.ProfileComponent.getUser\@()  \\   
 
 
 
