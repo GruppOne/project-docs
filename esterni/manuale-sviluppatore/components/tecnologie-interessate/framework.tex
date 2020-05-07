@@ -14,7 +14,7 @@ Back End
 
 Per sviluppare il back-end è stato utilizzato Spring, un framework concepito per la realizzazione di software enterprise su piattaforma Java.
 
-Viene utilizzato in particolare il framework Spring Boot WebFlux, un progetto Spring disponibile dalla versione 5.0 costruito intorno al pattern Publisher/Subscriber (detto anche pattern Observer), che oltre a semplificare lo sviluppo delle applicazioni e fornire opzioni per fare build e deploy delle applicazioni in esecuzione, consente di supportare flussi reattivi completamente non bloccanti. L'elaborazione delle richieste asincrone avviene tramite un gestore eventi che non blocca alcuna richiesta entrante. 
+Viene utilizzato in particolare il framework Spring Boot WebFlux, un progetto Spring disponibile dalla versione 5.0 costruito intorno al pattern Publisher/Subscriber (detto anche pattern Observer), che oltre a semplificare lo sviluppo delle applicazioni e fornire opzioni per fare build e deploy delle applicazioni in esecuzione, consente di supportare flussi reattivi completamente non bloccanti. L'elaborazione delle richieste asincrone avviene tramite un gestore eventi che non blocca alcuna richiesta entrante.
 
 La build è ottenuta mediante l'utilizzo di dipendenze Gradle che, nel momento in cui la build avviene correttamente, consente l'avvio di un embedded server che fungerà da intermediario tra web application/mobile application e strato di persistenza (MySQL/InfluxDB).
 %TODO estendere
@@ -29,7 +29,7 @@ Il pattern architetturale di riferimento è il Model-View-ViewModel, che consent
 \begin{description}
     \item[view] insieme di elementi di visualizzazione.
     \item[component] classe che definisce una view.
-    \item[service] classe che incapsula la business logic interagendo con un modello.   
+    \item[service] classe che incapsula la business logic interagendo con un modello.
 \end{description}
 %TODO estendere
 
@@ -38,7 +38,7 @@ Il pattern architetturale di riferimento è il Model-View-ViewModel, che consent
 Web Application
 
 Jasmine è un framework di test open source per JavaScript. Mira a funzionare su qualsiasi piattaforma abilitata per JavaScript, a non intromettersi nell'applicazione né nell'IDE e ad avere una sintassi di facile lettura.\\
-E' molto adatto per il Behavior-driven development.\\
+E' molto adatto per il BDD.\\
 Con Jasmine si possono scrivere test che siano espressivi e semplici.
 %TODO estendere
 
@@ -54,14 +54,14 @@ Protractor gira su Selenium WebDriver, che è un’API per l’automazione e tes
 \label{subs:junit4}
 Mobile Application
 
-Framework di test, a cui è stato appoggiato \glossarioLocale{Mockito} per sostituire le parti non sotto esame di ciascun test ed \glossarioLocale{Espresso} per simulare l’interazione utente con le interfacce grafiche. 
+Framework di test, a cui è stato appoggiato \glossarioLocale{Mockito} per sostituire le parti non sotto esame di ciascun test ed \glossarioLocale{Espresso} per simulare l’interazione utente con le interfacce grafiche.
 %TODO estendere
 
 \subsubsection{Mockito}%
 \label{subs:mockito}
 Mobile Application
 
-Mockito è un framework di test open source per Java rilasciato sotto licenza MIT\@. 
+Mockito è un framework di test open source per Java rilasciato sotto licenza MIT\@.
 Il framework consente la creazione di doppi oggetti di test in unit test automatici allo scopo di sviluppo guidato dai test o sviluppo guidato dal comportamento.
 %TODO estendere
 
