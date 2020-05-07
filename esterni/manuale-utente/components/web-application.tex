@@ -197,15 +197,96 @@ Bisogna evidenziare che la modifica di questi dati è consentita solo agli utent
 \subsubsection{Creazione organizzazione}%
 \label{subs:creazione_organizzazione}
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=120mm]{creazione-organizzazione.png}
-%     \caption{Creazione organizzazione}%
-%     \label{fig:web_app_creazione_organizzazione}
-% \end{figure}
+L'utente necessita la creazione di un'organizzazione, che può avvenire in 4 passaggi sequenziali.
 
-% \textbf{Endpoint}: localhost:4200/organizations
-Lorem ipsum
+Ogni passaggio è identificato da un numero progressivo che va da 1 a 4, inserito all'interno di un cerchio, che è colorato di blu per il passaggio corrente e i passaggi nella quale sono state attuate modifiche, mentre è colorato di grigio per i passaggi che devono ancora essere effettuati.
+
+I 4 passaggi per la creazione sono i seguenti:
+
+\begin{enumerate}
+    \item \textbf{Organization details}
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=120mm]{create-organization-1.jpg}
+      \caption{Inserimento dettagli dell'organizzazione}%
+      \label{fig:web_app_inserimento_dettagli_organizzazione}
+    \end{figure}
+
+    I campi che devono essere inseriti obbligatoriamente sono:
+    \begin{description}
+      \item[Organization name] che corrisponde al nome dell'organizzazione che l'utente vuole creare.
+      \item[Organization description] che corrisponde alla descrizione dell'organizzazione che l'utente vuole creare.
+    \end{description} \par\bigskip
+
+    Cliccando \textbf{Next} si va al passaggio 2. \par\bigskip
+
+    \newpage
+    \item \textbf{Organization places}
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=120mm]{create-organization-2.jpg}
+      \caption{Inserimento luoghi dell'organizzazione}%
+      \label{fig:web_app_inserimento_luoghi_organizzazione}
+    \end{figure}
+
+    Per eseguire correttamente la creazione di un'organizzazione, in questo passaggio va creato almeno un luogo all'interno dell'organizzazione.
+
+    I luoghi si possono aggiungere direttamente dalla mappa interattiva, che si può ingrandire (+) oppure rimpicciolire (-) tramite i pulsanti in alto alla sinistra nella mappa.
+    I luoghi si possono anche modificare oppure eliminare, nel caso in cui i luoghi creati siano errati.
+
+    Per compiere azioni sulla mappa, ci sono tre pulsanti in alto a destra:
+    \begin{itemize}
+        \item cliccando il pulsante indicato con il poligono nero, si può creare un luogo bidimensionale sulla mappa cliccando con il tasto sinistro sui punti d'interesse. Per chiudere il poligono basta cliccare sul lato più adiacente all'ultimo punto cliccato dall'utente. Una volta creato il luogo, i dati relativi al luogo creato vengono rilevati attraverso \glossarioLocale{reverse geocoding}.
+        \item cliccando il pulsante indicato con un foglio e una matita, si può modificare un luogo selezionandolo sulla mappa e modificando i vertici del poligono.
+        \item cliccando il pulsante indicato con il cestino, si può eliminare un luogo selezionandolo sulla mappa.
+    \end{itemize} \par\bigskip
+
+    Cliccando \textbf{Back} si torna al passaggio 1, mentre cliccando \textbf{Next} si va al passaggio 3. \par\bigskip
+
+    \newpage
+    \item \textbf{LDAP configuration}-\textit{opzionale}
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=120mm]{create-organization-3a.jpg}
+      \caption{Configurazione LDAP non attiva}%
+      \label{fig:web_app_configurazione_ldap_non_attiva}
+    \end{figure}
+
+    Inizialmente, la vista della pagina web presenta un \glossarioLocale{toggle} con la voce \textbf{Use LDAP} che è deselezionato, in quanto la configurazione LDAP è opzionale. \par\bigskip
+
+    Di default l'organizzazione è di dominio pubblico, ma se l'organizzazione che l'utente vuole creare è di dominio privato, allora deve cliccare sul toggle per attivare la visualizzazione dei campi che permettono la configurazione LDAP\@.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=120mm]{create-organization-3b.jpg}
+      \caption{Inserimento dettagli configurazione LDAP}%
+      \label{fig:web_app_inserimento_dettagli_configurazione_ldap}
+    \end{figure}
+
+    I campi che devono essere compilati sono:
+    \begin{description}
+        \item[Host] che corrisponde all'indirizzo IP del server LDAP per l'autenticazione.
+        \item[Username] che è lo username per accedere all'organizzazione privata.
+        \item[Password] che è la password per accedere all'organizzazione privata.
+    \end{description} \par\bigskip
+
+    Cliccando \textbf{Back} si torna al passaggio 2, mentre cliccando \textbf{Next} si va al passaggio 4. \par\bigskip
+
+    \item \textbf{Confirm}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=120mm]{create-organization-4.jpg}
+        \caption{Conferma creazione organizzazione}%
+        \label{fig:web_app_conferma_organizzazione}
+    \end{figure}
+
+    Questo è l'ultimo passaggio per la conferma della creazione dell'organizzazione. Per confermarla, cliccare la voce \textbf{Submit}.
+
+\end{enumerate}
 \newpage
 
 \subsubsection{Modifica dettagli organizzazione}%
@@ -313,7 +394,7 @@ I 5 passaggi per la modifica sono i seguenti:
         \label{fig:web_app_conferma_modifiche}
     \end{figure}
 
-    Questo è l'ultimo passaggio per la conferma delle modifiche effettuate. Per confermarle, basta cliccare la voce \textbf{Submit}.
+    Questo è l'ultimo passaggio per la conferma delle modifiche effettuate. Per confermarle, cliccare la voce \textbf{Submit}.
 
 \end{enumerate}
 \newpage
