@@ -2,94 +2,15 @@
 
 \begin{document}
 
-\subsection{Stalker server}
+Di seguito vengono descritte le modalità di installazione delle tecnologie coinvolte in Stalker e i comandi per avviare l'ambiente di produzione.
 
-All'interno della repository è presente una coppia di script (gradlew per linux e gradlew.bat per windows) che permette di eseguire i task necessari 
-senza bisogno di installare \glossarioLocale{gradle}.\\
-Il comando da utilizzare per eseguire il server è:\\
+\subfile{installazione/server}
+\newpage
 
-\emph{./gradlew bootRun}\\
+\subfile{installazione/web-app}
+\newpage
 
-Spring utilizza una funzione chiamata \glossarioLocale{LiveReload}: consente una compilazione automatica ad ogni modifica del codice sorgente in modo da velocizzare il lavoro.\\
-Il server funziona anche senza bisogno del database attivo sotto, ma chiaramente se si vuole controllare che le cose vadano correttamente è necessario avviarlo.
-Il comando per avviarlo (da eseguire posizionandosi sulla root nel server) è:\\
-
-\emph{docker-compose up -d rdb}\\
-
-Per i dettagli bisogna aprire i file \emph{docker-compose.yml} e \emph{docker-compose.override.yml}.\\
-RDB (\glossarioLocale{Relational Database}) è il nome del servizio definito all'interno di quei file. \\
-E' anche possibile far partire più di un servizio alla volta con:\\
-
-\emph{docker-compose up -d rdb rdb-gui}\\
-
-(questo comando fa partire anche un istanza di phpmyadmin con cui è possibile ispezionare il database)\\
-
-oppure\\
-
-\emph{docker-compose up -d}\\
-
-Il comando soprastante fa partire tutti i servizi disponibili. -d, che sta per --detached serve a ridare il prompt dopo che docker ha fatto partire il \glossarioLocale{container}.\\ 
-Si può provare anche ad eseguire gli stessi comandi senza il -d per vedere la differenza.\\
-
-Il teardown completo dei database si può fare con:\\
-
-\emph{docker-compose down --rmi all --remove-orphans --volumes}\\
-
-Il consiglio è di eseguirlo spesso in modo da evitare che il funzionamento del server dipenda da cose che si hanno fatto su una specifica istanza del database.
-
-\subsubsection{Docker Toolbox con Windows Home}
-
-Se si sta utilizzando Windows 10 Pro o Education è conveniente installare Docker Desktop for Windows.
-
-Se invece si utilizza Windows 10 Home è obbligatorio usare Docker Toolbox, che lavora dentro una \glossarioLocale{VM}, 
-in questo modo i container non vengono eseguiti su localhost ma sull'IP della VM.% 
-La cosa si può risolvere configurando il \glossarioLocale{port forwarding} delle porte interessate da VirtualBox:
-
-\begin{itemize}
-\item selezionare la VM su cui sta girando docker;
-\item andare sui setting della VM;%
-\item selezionare la tab network;
-\item cliccare su port forwarding (è dentro il menu advanced), e aprire le porte.
-\end{itemize}
-
-\subsection{Stalker web app}
-
-\subsubsection{Installazione delle dipendenze}
-
-Prima di effettuare qualsiasi operazione si avvii il comando \emph{npm install}, in questo modo saranno installate tutte le dipendenze necessarie.\\
-
-\subsubsection{Avvio del server}
-
-Utilizzare il comando \emph{ng serve} per ottenere un server di sviluppo e navigare all'indirizzo http://localhost:4200/. \\
-La web app si aggiornerà automaticamente dopo qualsiasi cambiamento ai file sorgente.
-
-\subsubsection{Creazione di nuovi componenti}
-
-Utilizzare \emph{ng generate component component-name} per generare un nuovo componente.\\
-Si può anche usare \emph{ng generate directive|pipe|service|class|guard|interface|enum|module}.
-
-\subsubsection{Build}
-
-Scrivere \emph{ng build} per effettuare la build del progetto. \\
-L'artefatto di build si troverà nella cartella \emph{dist/}. Usare la flag \emph{--prod} per una build di produzione. 
-
-\subsubsection{Eseguire i test di unità}
-
-Scrivere \emph{ng test} per eseguire i test di unità tramite Karma.
-
-\subsubsection{Eseguire i test end-to-end}
-
-Scrivere \emph{ng e2e} per eseguire i test end-to-end tramite Protractor.
-
-\subsubsection{Configurazione}
-
-Per eseguire comandi con una configurazione specifica scrivere \emph{ng build|serve|test --configuration=your-configuration} con \emph{your-configuration} la configurazione desiderata. \\
-Le configurazioni possibili sono \emph{localhost|imola|production}, per eseguire la configurazione di default è sufficiente non aggiungere nulla ai comandi originali.
-
-\subsection{Stalker Android app}
-
-Per configurare l'ambiente di lavoro dell'Android app di Stalker, è necessario utilizzare un \glossarioLocale{IDE} come \glossarioLocale{IntelliJ IDEA} o \glossarioLocale{Android Studio}.\\
-Per lo sviluppo dell'applicazione il team ha deciso di utilizzare IntelliJ IDEA, ma è possibile utilizzare senza problemi anche Android Studio.\\
-Per il \glossarioLocale{debug} dell'applicazione basterà aprire il codice sorgente di essa in uno dei due IDE sopra citati, e avviare l'esecuzione tramite \glossarioLocale{ADB}. \\
+\subfile{installazione/mobile-app}
+\newpage
 
 \end{document}

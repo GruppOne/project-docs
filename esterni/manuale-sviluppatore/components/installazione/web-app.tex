@@ -1,0 +1,113 @@
+\documentclass[../manuale-sviluppatore.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Web application}%
+\label{sub:web_application}
+
+
+\subsubsection{Installazione delle dipendenze}%
+\label{subs:installazione_delle_dipendenze}
+
+Prima di effettuare qualsiasi operazione, l'utente deve posizionarsi nella root della cartella che contiene il codice della web application e avviare dalla CLI di Windows (preferibilmente Windows PowerShell) il seguente comando: \par\bigskip
+
+\begin{center}
+  \textit{npm install}
+\end{center}
+\par\bigskip
+
+In questo modo saranno installate tutte le dipendenze necessarie per l'esecuzione della web application.
+
+La procedura impiegherà qualche minuto.
+
+\subsubsection{Avvio del server}%
+\label{subs:avvio_del_server}
+
+Per ottenere un server di sviluppo, utilizzare il seguente comando: \par\bigskip
+
+\begin{center}
+  \textit{ng serve}
+\end{center}
+\par\bigskip
+
+Se la procedura è andata a buon fine, digitare sulla barra degli indirizzi di un browser web l'indirizzo \href{http://localhost:4200/}{http://localhost:4200/} e verificare che si visualizzi la pagina home del sito.
+
+La procedura impiegherà qualche minuto.
+
+Non serve che questo comando sia digitato più di una volta, in quanto le pagine web si aggiornano automaticamente al cambiamento dei file sorgente.
+
+\subsubsection{Creazione di nuovi componenti}%
+\label{subs:creazione_dei_nuovi_componenti}
+
+Per generare un nuovo componente, eseguire il seguente comando: \par\bigskip
+
+\begin{center}
+  \textit{ng generate component component-name}
+\end{center}
+\par\bigskip
+
+Un'alternativa di questo comando è: \par\bigskip
+
+\begin{center}
+  \textit{ng generate directive|pipe|service|class|guard|interface|enum|module}
+\end{center}
+\par\bigskip
+
+\subsubsection{Build}%
+\label{subs:build}
+
+Per effettuare la build di questo progetto, eseguire il seguente comando: \par\bigskip
+
+\begin{center}
+  \textit{ng build}
+\end{center}
+\par\bigskip
+
+Per effettuare una build di produzione, eseguire il seguente comando: \par\bigskip
+
+\begin{center}
+  \textit{ng build --prod}
+\end{center}
+\par\bigskip
+
+\subsubsection{Configurazione}%
+\label{subs:configurazione}
+
+Per eseguire comandi con una configurazione specifica, eseguire il seguente comando: \par\bigskip
+
+\begin{center}
+  \textit{ng build|serve|test --configuration=your-configuration}
+\end{center}
+\par\bigskip
+
+\textbf{your-configuration} corrisponde alla configurazione desiderata.
+
+Le configurazioni possibili sono:
+\begin{itemize}
+  \item localhost.
+  \item imola.
+  \item production.
+\end{itemize}
+
+Per eseguire la configurazione di default, non serve aggiungere il flag \textit{--configuration}.
+
+\subsubsection{Aiuto}%
+\label{subs:aiuto}
+
+Per ricevere informazioni sui comandi di Angular CLI, eseguire:
+\begin{itemize}
+  \item \textit{ng help}.
+  \item oppure visitare il README di Angular CLI il seguente \href{https://github.com/angular/angular-cli/blob/master/README.md}{indirizzo}.
+\end{itemize}
+
+% \subsubsection{Esecuzione test di unità}%
+% \label{subs:esecuzione_test_di_unita}
+
+% Scrivere \emph{ng test} per eseguire i test di unità tramite Karma.
+
+% \subsubsection{Esecuzione test end-to-end}%
+% \label{subs:esecuzione_test_end_to_end}
+
+% Scrivere \emph{ng e2e} per eseguire i test end-to-end tramite Protractor.
+
+\end{document}
