@@ -1,7 +1,5 @@
 \documentclass[../../../manuale-sviluppatore.tex]{subfiles}
 
-% Iniziare frasi con "linguaggio/strumento/libreria/framework utilizzato per server/web app/mobile app ..." !!
-
 \begin{document}
 
 \subsection{Strumenti}%
@@ -27,18 +25,18 @@ Per poter usufruire dell'interfaccia grafica, è necessario disporre le credenzi
 \label{subs:influxdb}
 Back End
 
-Lo strumento lato backend utilizzato per ottimizzare le operazioni di archiviazione e il recupero dei dati ad alta disponibilità è il Time Series Database (TSDB) \glossarioLocale{InfluxDB}, un database appositamente progettato ed ottimizzato per catalogare serie temporali di dati. 
+Lo strumento lato backend utilizzato per ottimizzare le operazioni di archiviazione e il recupero dei dati ad alta disponibilità è il Time Series Database (TSDB) \glossarioLocale{InfluxDB}, un database appositamente progettato ed ottimizzato per catalogare serie temporali di dati.
 
 InfluxDB si occupa di salvare coppie tempo-valore, conoscendo in quale preciso punto del tempo è avvenuto il salvataggio dei dati non persistenti.
 
-Gestisce una parte degli endpoint associati ad operazioni della mobile application. 
+Gestisce una parte degli endpoint associati ad operazioni della mobile application.
 
 \subsubsection{Docker}%
 \label{subs:docker}
 
-Lo strumento lato backend utilizzato per la containerizzazione di servizi e la simulazione di componenti software in ambienti virtuali è \glossarioLocale{Docker}. Questa piattaforma software permette di creare, testare e distribuire applicazioni con la massima rapidità. 
+Lo strumento lato backend utilizzato per la containerizzazione di servizi e la simulazione di componenti software in ambienti virtuali è \glossarioLocale{Docker}. Questa piattaforma software permette di creare, testare e distribuire applicazioni con la massima rapidità.
 
-Docker raccoglie il software in ambienti isolati leggeri, chiamati \glossarioLocale{container}, che offrono tutto il necessario per la loro corretta esecuzione, incluse librerie, strumenti di sistema, codice e runtime. 
+Docker raccoglie il software in ambienti isolati leggeri, chiamati \glossarioLocale{container}, che offrono tutto il necessario per la loro corretta esecuzione, incluse librerie, strumenti di sistema, codice e runtime.
 
 I container vengono configurati tramite dei particolari file chiamati \glossarioLocale{Dockerfile}, che contengono operazioni specifiche e configurazioni che vengono eseguite al suo avvio.
 
@@ -77,14 +75,14 @@ La stesura dei test viene fatta seguendo la sintassi \glossarioLocale{Gherkin}, 
 \subsubsection{Gradle}%
 \label{subs:gradle}
 
-Lo strumento utilizzato per la gestione del software e la \glossarioLocale{build automation} è \glossarioLocale{Gradle}. 
+Lo strumento utilizzato per la gestione del software e la \glossarioLocale{build automation} è \glossarioLocale{Gradle}.
 
 In particolare, Gradle è utilizzato sia lato backend che lato frontend per quanto riguarda la mobile application.
 
 Gradle è stato preferito a \glossarioLocale{Maven}, in quanto Maven utilizza una configurazione rigida basata sul formato \glossarioLocale{XML}, mentre Gradle utilizza un linguaggio dichiarativo di scripting \glossarioLocale{Groovy} dove il codice è compilato runtime ed assume la forma di bytecode per la Java Virtual Machine (\glossarioLocale{JVM}).
 
-Inoltre, Gradle è integrato da tempo nella programmazione Android, quindi per coerenza anche la parte server utilizza dipendenze Gradle. 
+Inoltre, Gradle è integrato da tempo nella programmazione Android, quindi per coerenza anche la parte server utilizza dipendenze Gradle.
 
-Il file che serve a generare la build prende il nome di \textit{build.gradle}. 
+Il file che serve a generare la build prende il nome di \textit{build.gradle}.
 
 \end{document}
