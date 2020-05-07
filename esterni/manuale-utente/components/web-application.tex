@@ -6,10 +6,10 @@
 \label{sub:web_app_requisiti}
 
 \begin{description}
-    \item[Browser:] Google Chrome 50, Firefox 48, Safari 9.1.
+    \item[Browser:] Google Chrome 72.x, Firefox 65.x, Edge 44.x.
     \item[Necessario:] JavaScript.
 \end{description}
-\newpage
+
 
 \subsection{Manuale d'uso}%
 \label{sub:manuale-uso-web}
@@ -24,7 +24,7 @@
     \label{fig:web_app_pagina_accesso}
 \end{figure}
 
-Quando ci si connette alla web application di Stalker, l'utente viene indirizzato alla pagina principale (Home) che si trova al link \textit{localhost:4200/home}.
+Quando ci si connette alla web application di Stalker, l'utente viene indirizzato alla pagina principale (Home) che si trova al link \textit{localhost:4200/home}. \par\bigskip
 
 L'utente non è autenticato e ha le seguenti modalità d'azione:
 \begin{itemize}
@@ -49,9 +49,8 @@ L'utente vuole accedere al sistema di Stalker, quindi deve eseguire i seguenti p
     \item inserire correttamente l'email.
     \item inserire la password che deve contenere almeno 8 caratteri (almeno una lettera maiuscola, una lettera minuscola, un numero ed un simbolo) e al massimo ne può contenere 32. La password può essere visualizzata normalmente durante la sua digitazione, cliccando sull'occhio barrato alla fine del campo d'inserimento.
     \item selezionare il pulsante \textbf{Login} per inviare le credenziali al server.
-\end{itemize}
+\end{itemize} \par\bigskip
 
-% E' corretto?
 Nel caso l'operazione venga svolta correttamente, si avrà diritto all'accesso nella web application di Stalker, visualizzando la pagina del profilo personale (~\ref{fig:web_app_visualizza_profilo_personale}).
 
 In caso contrario, l'utente non è autorizzato, in quanto la procedura è fallita.
@@ -82,7 +81,7 @@ L'utente ha smarrito la password o non se la ricorda più, quindi deve eseguire 
     \item cliccare alla voce \textbf{Forgot your password?} presente nel form per l'accesso alla web application (~\ref{fig:web_app_pagina_accesso}).
     \item inserire correttamente l'email.
     \item selezionare il pulsante \textbf{Recover} per inviare la richiesta al server.
-\end{itemize}
+\end{itemize} \par\bigskip
 
 Nel caso l'operazione venga svolta correttamente, l'utente riceverà una mail sulla propria casella postale contenente il link per il recupero della password.
 
@@ -122,12 +121,12 @@ I dati che la pagina mette a disposizione dell'utente sono:
         \item il numero totale di organizzazioni in cui è manager.
         \item il numero totale di organizzazioni in cui è viewer.
     \end{itemize}
-\end{itemize}
+\end{itemize} \par\bigskip
 
 Inoltre, la seguente pagina fornisce alcune operazioni:
 \begin{itemize}
-    \item la visualizzazione della lista di tutte le organizzazioni, cliccando il pulsante \textbf{Organizations list}. %(~\ref{fig:web_app_visualizza_organizzazioni}).
-    \item la creazione di una nuova organizzazione, cliccando il pulsante \textbf{Create}. %(~\ref{fig:web_app_creazione_organizzazione}).
+    \item la visualizzazione della lista di tutte le organizzazioni, cliccando il pulsante \textbf{Organizations list} (~\ref{fig:web_app_visualizza_organizzazioni}).
+    \item la creazione di una nuova organizzazione, cliccando il pulsante \textbf{Create}.
 \end{itemize}
 \newpage
 
@@ -141,26 +140,25 @@ Inoltre, la seguente pagina fornisce alcune operazioni:
     \label{fig:web_app_visualizza_organizzazioni}
 \end{figure}
 
-Una volta che l'utente si trova nella pagina relativa al suo profilo, ha la possibilità di visualizzare la propria lista delle organizzazioni attraverso l'apposito pulsante.\\
+L'utente ha cliccato il pulsante \textbf{Organizations list}, e quindi ha la possibilità di visualizzare la propria lista delle organizzazioni nelle quali ha un determinato ruolo.
+
 La lista delle organizzazioni che l'utente riceve contiene le seguenti informazioni:
 
+\begin{description}
+    \item[Name] nome dell'organizzazione.
+    \item[Description] descrizione dell'organizzazione.
+    \item[Role] un'icona che rappresenta il ruolo dell'utente in un'organizzazione. E' possibile visualizzare testualmente il ruolo di un utente spostando il cursore sopra l'icona.
+    \item[Type] un'icona che rappresenta se l'organizzazione è di dominio pubblico o di dominio privato: è possibile visualizzare testualmente il dominio di un'organizzazione spostando il cursore sopra l'icona.
+\end{description} \par\bigskip
+
+L'utente ha la possibilità di interagire con la pagina e può eseguire queste operazioni:
+
 \begin{itemize}
-    \item Nome dell'organizzazione.
-    \item Descrizione dell'organizzazione.
-    \item Un'icona che rappresenta il ruolo dell'utente in un'organizzazione: è possibile visualizzare testualmente il ruolo di un utente spostando il cursore sopra l'icona.
-    \item Un'icona che rappresenta se l'organizzazione è di dominio pubblico o di dominio privato: è possibile visualizzare testualmente il dominio di un'organizzazione spostando il cursore sopra l'icona.
+\item visualizzare la pagina della relativa organizzazione, contenente informazioni più dettagliate, cliccando sopra l'apposita organizzazione in lista.
+\item filtrare le organizzazioni in lista per nome tramite un'apposita area di ricerca, sopra la lista delle organizzazioni.
+\item filtrare il numero di organizzazioni visualizzabili in una pagina, tramite la tendina sotto la lista delle organizzazioni.
+\item cambiare la pagina della lista delle organizzazioni, tramite le apposite frecce direzionali sotto la lista delle organizzazioni.
 \end{itemize}
-
-L'utente ha la possibilità di interagire con la pagina e può:
-
-\begin{itemize}
-\item Visualizzare la pagina della relativa organizzazione, contenente informazioni più dettagliate, cliccando sopra l'apposita organizzazione in lista.
-\item Filtrare le organizzazioni in lista per nome tramite un'apposita area di ricerca, sopra la lista delle organizzazioni.
-\item Filtrare il numero di organizzazioni visualizzabili in una pagina, tramite la tendina sotto la lista delle organizzazioni.
-\item Cambiare la pagina della lista delle organizzazioni, tramite le apposite frecce direzionali sotto la lista delle organizzazioni.
-\end{itemize}
-
-
 
 \newpage
 \paragraph{Visualizza dettagli organizzazione}%
@@ -190,9 +188,7 @@ I dati che la pagina mette a disposizione sono, dall'alto verso il basso:
 
 Inoltre, viene fornita la possibilità di modificare le informazioni dell'organizzazione cliccando il pulsante \textbf{Edit}, venendo così indirizzati alla pagina di modifica (~\ref{subs:modififica_dettagli_organizzazione}).
 
-Bisogna evidenziare che la modifica di questi dati è consentita solo agli utenti che ne hanno il diritto.
-\newpage
-
+Bisogna evidenziare che la modifica di questi dati è consentita solo agli utenti che ne hanno il diritto. \par\bigskip
 
 \subsubsection{Creazione organizzazione}%
 \label{subs:creazione_organizzazione}
@@ -264,7 +260,7 @@ I 4 passaggi per la creazione sono i seguenti:
       \includegraphics[width=120mm]{create-organization-3b.jpg}
       \caption{Inserimento dettagli configurazione LDAP}%
       \label{fig:web_app_inserimento_dettagli_configurazione_ldap}
-    \end{figure}
+    \end{figure} \newpage
 
     I campi che devono essere compilati sono:
     \begin{description}
@@ -282,7 +278,7 @@ I 4 passaggi per la creazione sono i seguenti:
         \includegraphics[width=120mm]{create-organization-4.jpg}
         \caption{Conferma creazione organizzazione}%
         \label{fig:web_app_conferma_organizzazione}
-    \end{figure}
+    \end{figure} \par\bigskip
 
     Questo è l'ultimo passaggio per la conferma della creazione dell'organizzazione. Per confermarla, cliccare la voce \textbf{Submit}.
 
@@ -312,9 +308,9 @@ I 5 passaggi per la modifica sono i seguenti:
     \begin{description}
         \item[Organization name] che corrisponde al nome dell'organizzazione.
         \item[Organization description] che corrisponde alla descrizione dell'organizzazione.
-    \end{description}
+    \end{description} \par\bigskip
 
-    Cliccando \textbf{Next} si va al passaggio 2.
+    Cliccando \textbf{Next} si va al passaggio 2. \par\bigskip
 
     \newpage
     \item \textbf{Organization places}
@@ -351,9 +347,9 @@ I 5 passaggi per la modifica sono i seguenti:
         \item[Host] che corrisponde all'indirizzo IP del server LDAP per l'autenticazione.
         \item[Username] che è lo username per accedere all'organizzazione privata.
         \item[Password] che è la password per accedere all'organizzazione privata.
-    \end{description}
+    \end{description} \par\bigskip
 
-    Cliccando \textbf{Back} si torna al passaggio 2, mentre cliccando \textbf{Next} si va al passaggio 4.
+    Cliccando \textbf{Back} si torna al passaggio 2, mentre cliccando \textbf{Next} si va al passaggio 4. \par\bigskip
 
     \newpage
     \item \textbf{Administrator management}-\textit{opzionale}
@@ -375,14 +371,14 @@ I 5 passaggi per la modifica sono i seguenti:
             \item \glossarioLocale{Viewer}.
         \end{itemize}
         \item un campo dove aggiungere nome e cognome dell'utente del nuovo administrator.
-    \end{itemize}
+    \end{itemize} \par\bigskip
 
     Una volta che questi dati sono stati inseriti correttamente, l'utente con i nuovi privilegi viene aggiunto cliccando sulla spunta che si trova a destra dei campi d'inserimento.
     % se l'utente inserito non esiste, che succede?? Aggiungere queste righe e che errori si possono verificare
 
-    Non ci sono limiti per la ripetizione di questa procedura.
+    Non ci sono limiti per la ripetizione di questa procedura. \par\bigskip
 
-    Cliccando \textbf{Back} si torna al passaggio 3, mentre cliccando \textbf{Next} si va al passaggio 5.
+    Cliccando \textbf{Back} si torna al passaggio 3, mentre cliccando \textbf{Next} si va al passaggio 5. \par\bigskip
 
     \newpage
     \item \textbf{Confirm}
@@ -392,7 +388,7 @@ I 5 passaggi per la modifica sono i seguenti:
         \includegraphics[width=120mm]{5-conferma-modifiche.png}
         \caption{Conferma modifiche}%
         \label{fig:web_app_conferma_modifiche}
-    \end{figure}
+    \end{figure} \par\bigskip
 
     Questo è l'ultimo passaggio per la conferma delle modifiche effettuate. Per confermarle, cliccare la voce \textbf{Submit}.
 
