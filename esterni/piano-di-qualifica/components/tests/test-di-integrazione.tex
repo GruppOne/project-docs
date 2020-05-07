@@ -1,0 +1,39 @@
+\documentclass[../../piano-di-qualifica.tex]{subfiles}
+\appendToGraphicspath{../../../../commons/img/}
+
+\begin{document}
+
+
+
+I test di integrazione verificano la corretta interazione e collaborazione tra un insieme di unità. I test verranno identificati nel seguente modo:
+\begin{center}
+  TI[codice]
+\end{center}
+Dove \textit{codice} rappresenta un numero progressivo che identifica il test di integrazione.
+
+\subsubsection{Tabella dei test di integrazione}
+\label{subsub:tabella_test_di_integrazione}
+
+
+\rowcolors{2}{lightgray}{white!80!lightgray!100}
+\renewcommand{\arraystretch}{2}
+\begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{}m{10cm} >{\centering\arraybackslash}m{3cm}}
+  \rowcolor{darkgray!90!}
+  \color{white}
+  {\textbf{ID test}} & \color{white}{\textbf{Descrizione}}                                    & \color{white}{\textbf{Esito}} \\
+  \endhead\rowcolor{white}%
+  \multicolumn{3}{r}{\textit{Continua alla pagina seguente}}
+  \endfoot%
+  \endlastfoot%
+
+  TI1                & Il sistema deve garantire l'integrazione tra API e web application.
+                     & NS                                                                                                     \\
+
+  TI2                & Il sistema deve garantire l'integrazione tra API e mobile application.
+                     & NS                                                                                                     \\
+  \rowcolor{white}
+  \caption{Tabella dei test di integrazione}%
+  \label{tab:test_integrazione}
+\end{longtable}
+%sub:test_di_integrazione (end)
+\end{document}
