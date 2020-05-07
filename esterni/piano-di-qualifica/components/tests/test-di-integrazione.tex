@@ -4,7 +4,6 @@
 \begin{document}
 
 
-
 I test di integrazione verificano la corretta interazione e collaborazione tra un insieme di unità. I test verranno identificati nel seguente modo:
 \begin{center}
   TI[codice]
@@ -26,11 +25,154 @@ Dove \textit{codice} rappresenta un numero progressivo che identifica il test di
   \endfoot%
   \endlastfoot%
 
-  TI1                & Il sistema deve garantire l'integrazione tra API e web application.
-                     & NS                                                                                                     \\
+  TI1                & Verifica l'integrazione della richiesta delle organizzazioni a cui un utente è connesso dalle API alla mobile app.   & NS  \\
 
-  TI2                & Il sistema deve garantire l'integrazione tra API e mobile application.
-                     & NS                                                                                                     \\
+  TI2                & Verifica l'integrazione della richiesta di collegamento di un nuovo utente a un'organizzazione dalla mobile app alle API\@.   & S \\
+
+  TI3                & Verifica l'integrazione della richiesta di scollegamento di un utente da un'organizzazione dalla mobile app alle API\@.   & S \\
+
+  TI4                & Verifica l'integrazione della richiesta di una singola organizzazione dalle API alla mobile app.   & S \\
+
+  TI5                & Verifica l'integrazione della richiesta di una singola organizzazione dalle API alla web app.   & S \\
+
+  TI6                & Verifica l'integrazione della richiesta di aggiornamento di un'organizzazione dalla web app alle API\@.   & S \\
+
+  TI7                & Verifica l'integrazione della richiesta di eliminazione di un'organizzazione dalla web app alle API\@.   & S \\
+
+  TI8                & Verifica l'integrazione della richiesta della lista degli utenti collegati a un'organizzazione dalle API alla web app.   & S \\
+
+  TI9                & Verifica l'integrazione della richiesta di aggiunta di un ruolo per un utente di un'organizzazione dalla web app alle API\@.   & S \\
+
+  TI10               & Verifica l'integrazione della richiesta di eliminazione di un ruolo per un utente di un'organizzazione dalla web app alle API\@.   & S \\
+
+  TI11               & Verifica l'integrazione della richiesta di un report di un'organizzazione dalle API alla web app.   & S \\
+
+  TI12               & Verifica l'integrazione della richiesta delle informazioni degli utenti di un'organizzazione dalle API alla web app.   & S \\
+
+  TI13               & Verifica l'integrazione della richiesta di una lista delle organizzazioni dalle API alla mobile app.   & S  \\
+
+  TI14               & Verifica l'integrazione della richiesta di una lista delle organizzazioni dalle API alla web app.   & S  \\
+
+  TI15               & Verifica l'integrazione della richiesta di creazione di un'organizzazione dalla web app alle API\@.   & S  \\
+
+  TI16               & Verifica l'integrazione della richiesta di un singolo luogo di un'organizzazione dalle API alla web app.   & S \\
+
+  TI17               & Verifica l'integrazione della richiesta di aggiornamento di un luogo di un'organizzazione dalla web app alle API\@.   & S \\
+
+  TI18               & Verifica l'integrazione della richiesta di eliminazione di un luogo di un'organizzazione dalla web app alle API\@.   & S \\
+
+  TI19               & Verifica l'integrazione della richiesta di tutti i luoghi di un'organizzazione dalle API alla mobile app.   & S \\
+
+  TI20               & Verifica l'integrazione della richiesta di tutti i luoghi di un'organizzazione dalle API alla web app.   & S \\
+
+  TI21               & Verifica l'integrazione della richiesta di aggiunta di un luogo di un'organizzazione dalla web app alle API\@.   & S \\
+
+  TI22               & Verifica l'integrazione della richiesta di recupero password di un utente dalla mobile app alle API\@.   & S \\
+
+  TI23               & Verifica l'integrazione della richiesta di un utente dalle API alla mobile app.   & S \\
+
+  TI24               & Verifica l'integrazione della richiesta di un utente dalle API alla web app.   & S \\
+
+  TI25               & Verifica l'integrazione della richiesta di aggiornamento di un utente dalla mobile app alle API\@.   & S \\
+
+  TI26               & Verifica l'integrazione della richiesta di eliminazione di un utente dalla mobile app alle API\@.   & S \\
+
+  TI27               & Verifica l'integrazione della richiesta di disconnessione di un utente dalla mobile app alle API\@.   & S \\
+
+  TI28               & Verifica l'integrazione della richiesta di disconnessione di un utente dalla web app alle API\@.   & S \\
+
+  TI29               & Verifica l'integrazione della richiesta di una storia dei luoghi visitati da un utente dalle API alla mobile app.   & S \\
+
+  TI30               & Verifica l'integrazione della richiesta di dei luoghi in cui si trova l'utente e il relativo tempo dal suo accesso dalle API alla mobile app.   & S \\
+
+  TI31               & Verifica l'integrazione della richiesta di una lista degli utenti dalle API alla web app.   & S \\
+
+  TI32               & Verifica l'integrazione della richiesta di creazione di un utente dalla mobile app alle API\@.   & S \\
+
+  \rowcolor{white}
+  \caption{Tabella dei test di integrazione}%
+  \label{tab:test_integrazione}
+\end{longtable}
+
+\subsubsection{Tabella del tracciamento dei test di integrazione}%
+\label{subsub:tabella_tracciamento_test_di_integrazione}
+
+
+\rowcolors{2}{lightgray}{white!80!lightgray!100}
+\renewcommand{\arraystretch}{2}
+\begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{}m{13cm}}
+    \rowcolor{darkgray!90!}
+    \color{white}
+    {\textbf{ID test}}                    & \color{white}{\textbf{Componente}} \\
+    \endhead\rowcolor{white}%
+    \multicolumn{2}{r}{\textit{Continua alla pagina seguente}}
+    \endfoot%
+    \endlastfoot%
+
+  TI1                & tech.gruppone.stalker.server.controllers.ConnectionController.getConnectedOrganizationsByUserId\@()  \\
+
+  TI2                & tech.gruppone.stalker.server.controllers.ConnectionController.connectUserToOrganizationById\@() \\
+
+  TI3                & tech.gruppone.stalker.server.controllers.ConnectionController.deleteUserConnectionById\@() \\
+
+  TI4                & tech.gruppone.stalker.server.controllers.OrganizationController.getOrganizationById\@() \\
+
+  TI5                & tech.gruppone.stalker.server.controllers.OrganizationController.getOrganizationById\@() \\
+
+  TI6                & tech.gruppone.stalker.server.controllers.OrganizationController.putOrganizationById\@() \\
+
+  TI7                & tech.gruppone.stalker.server.controllers.OrganizationController.putOrganizationById\@() \\
+
+  TI8                & tech.gruppone.stalker.server.controllers.OrganizationController.getUsersConnectionsToOrganizationById\@() \\
+
+  TI9                & tech.gruppone.stalker.server.controllers.OrganizationController.createRoleForAnUserById\@() \\
+
+  TI10               & tech.gruppone.stalker.server.controllers.OrganizationController.deleteRoleForAnUserById\@() \\
+
+  TI11               & tech.gruppone.stalker.server.controllers.OrganizationController.getReportByOrganizationId\@() \\
+
+  TI12               & tech.gruppone.stalker.server.controllers.OrganizationController.getPeopleNumberByOrganizationId\@() \\  
+
+  TI13               & tech.gruppone.stalker.server.controllers.OrganizationsController.getOrganizations\@() \\ 
+
+  TI14               & tech.gruppone.stalker.server.controllers.OrganizationsController.getOrganizations\@() \\ 
+
+  TI15               & tech.gruppone.stalker.server.controllers.OrganizationsController.createOrganization\@() \\ 
+
+  TI16               & tech.gruppone.stalker.server.controllers.PlaceController.getPlacesByOrganizationId\@() \\ 
+
+  TI17               & tech.gruppone.stalker.server.controllers.PlaceController.putPlaceById\@() \\ 
+
+  TI18               & tech.gruppone.stalker.server.controllers.PlaceController.deletePlaceById\@() \\ 
+
+  TI19               & tech.gruppone.stalker.server.controllers.PlacesController.getPlaces\@() \\ 
+
+  TI20               & tech.gruppone.stalker.server.controllers.PlacesController.getPlaces\@() \\ 
+
+  TI21               & tech.gruppone.stalker.server.controllers.PlacesController.createPlace\@() \\ 
+
+  TI22               & tech.gruppone.stalker.server.controllers.RecoveryPasswordController.recoveryUserPassword\@() \\ 
+
+  TI23               & tech.gruppone.stalker.server.controllers.UserController.getUserById\@() \\ 
+
+  TI24               & tech.gruppone.stalker.server.controllers.UserController.getUserById\@() \\ 
+
+  TI25               & tech.gruppone.stalker.server.controllers.UserController.updateUserById\@() \\ 
+
+  TI26               & tech.gruppone.stalker.server.controllers.UserController.deleteUserById\@() \\ 
+
+  TI27               & tech.gruppone.stalker.server.controllers.UserController.logoutUser\@() \\ 
+
+  TI28               & tech.gruppone.stalker.server.controllers.UserController.logoutUser\@() \\ 
+
+  TI29               & tech.gruppone.stalker.server.controllers.UserController.getHistoryUser\@() \\ 
+
+  TI30               & tech.gruppone.stalker.server.controllers.UserController.getUserTimeInside\@() \\ 
+
+  TI30               & tech.gruppone.stalker.server.controllers.UsersController.getUsers\@() \\ 
+
+  TI30               & tech.gruppone.stalker.server.controllers.UsersController.createUser\@() \\ 
+
   \rowcolor{white}
   \caption{Tabella dei test di integrazione}%
   \label{tab:test_integrazione}
