@@ -1,66 +1,67 @@
 \documentclass[../../../manuale-sviluppatore.tex]{subfiles}
 
-% Iniziare frasi con "linguaggio/strumento/libreria/framework utilizzato per server/web app/mobile app ..." !!
-
 \begin{document}
 
 \subsection{Librerie}%
 \label{sub:librerie}
 In questa sezione sono descritte tutte le librerie utilizzate per l'implementazione di Stalker.
 
+
 \subsubsection{Angular Material}%
 \label{subs:angular_material}
-Web Application
 
-Gli stili della web application sono basati sulla libreria Angular Material, che è una implementazione della \glossarioLocale{material design specification} di Google.\\
-Questo progetto fornisce una serie di componenti grafici testati e riusabili per AngularJS\@.\\
-Gli stili forniti da Angular Material sono moderni, performanti e completamente personalizzabili attraverso il linguaggio di stili a cascata \glossarioLocale{CSS}.
-%TODO estendere
+La libreria utilizzata per definire gli stili lato frontend, in particolare nella web application, è \glossarioLocale{Angular Material}, che è una implementazione della specifica \glossarioLocale{Material Design} di Google.
+
+Questo progetto fornisce una serie di componenti grafici testati e riusabili per \glossarioLocale{AngularJS}\@.
+
+Gli stili forniti da Angular Material sono completamente personalizzabili attraverso il linguaggio di stili a cascata \glossarioLocale{CSS}.
 
 \subsubsection{Leaflet}%
 \label{subs:leaflet}
-Web Application
 
-Per gestire mappe interattive, è stata utilizzata la libreria JavaScript Leaflet, una libreria che si può integrare con Angular che consente di implementare mappe basate su \glossarioLocale{OpenStreetMap}.
+La libreria utilizzata per gestire mappe interattive lato frontend, in particolare nella web application, è \glossarioLocale{Leaflet}, una libreria che si può integrare con Angular che consente di implementare mappe user-friendly basate su \glossarioLocale{OpenStreetMap}.
 
 Leaflet permette di creare, modificare ed eliminare luoghi direttamente sulla mappa grazie al componente \textit{Leaflet Draw}, ed ottenere le informazioni necessarie grazie alla funzionalità di \glossarioLocale{reverse geocoding}, svincolando l'utente dall'onere di inserire manualmente l'insieme di coordinate, l'indirizzo e il nome associato al luogo selezionato.
-%TODO estendere
 
 \subsubsection{Chai}%
 \label{subs:chai}
-Web Application
 
-Libreria di asserzioni BDD/TDD\%.\\
-Chai offre diverse interfacce utilizzabili dal programmatore a suo piacimento.\\
-Utilizza nodejs, infatti è disponibile l'installazione tramite npm. Si può utilizzare anche all'interno del browser, includendo il file JavaScript Chai all'interno di una pagina.
-%TODO estendere
+\glossarioLocale{Chai} è una libreria di asserzioni BDD/TDD utilizzata per il lato frontend, in particolare nella web application, che offre diverse interfacce utilizzabili dallo sviluppatore e può essere abbinata a qualsiasi framework di test JavaScript.
+
+Chai utilizza \glossarioLocale{Node.js}, infatti è disponibile l'installazione della libreria tramite \glossarioLocale{npm}. Si può utilizzare anche all'interno del browser web, includendo il file JavaScript Chai all'interno di una pagina.
 
 \subsubsection{Volley}%
 \label{subs:volley}
-Mobile Application
 
-Libreria open source consigliata da Google come wrapper per le funzionalità di connessione a internet di basso livello.\\
-E' una libreria HTTP che rende la gestione delle connessioni facile e veloce.\\
-Inoltre Volley è parte di Android Open Source Project, anche se Google ha annunciato che Volley 
-diventerà una libreria indipendente.
-%TODO estendere
+\glossarioLocale{Volley} è una libreria consigliata da Google, utilizzata per il lato frontend in particolare la mobile application, che forniscono strumenti wrapper per le funzionalità di connessione a Internet di basso livello.
+
+Volley si integra facilmente con qualsiasi protocollo e supporta stringhe, immagini e JSON non elaborati.
+
+Inoltre, svincola il programmatore dal scrivere codice boilerplate per concentrarsi unicamente sulla logica della mobile application.
+
+Volley non è adatto per operazioni di download o streaming di grandi dimensioni, poiché conserva tutte le risposte in memoria durante l'analisi.
 
 \subsubsection{Lombok}%
 \label{subs:lombok}
-Mobile Application
 
-Libreria open source che genera automaticamente attraverso delle annotazioni Java buona parte del codice boilerplate.\\
-Infatti si occupa di generare automaticamente i getter e i setter, o i builder.\\
-Utilizza una serie di annotazioni da inserire precedentemente alla dichiarazione di una classe o di un metodo.
+\glossarioLocale{Lombok} è una libreria Java utilizza sia lato backend che lato frontend, in particolare per la mobile application, che genera automaticamente attraverso delle annotazioni Java buona parte del codice boilerplate.
 
-%TODO estendere
+Lombok si occupa di utilizzare una serie di annotazioni da inserire precedentemente alla dichiarazione di una classe o di un metodo, in modo da generare automaticamente i costruttori, i metodi \textit{getter}, \textit{setter}, \textit{toString ()}, \textit{hashCode ()} o i builder.
+
+Per maggiori informazioni sulle possibili annotazioni da implementare, visitare \href{https://projectlombok.org/features/all}.
 
 \subsubsection{JJWT}%
 \label{subs:jjwt}
 Mobile Application
 
-Acronimo di Java JSON Web Token, libreria open source per trasmettere informazioni tra due componenti in formato \glossarioLocale{JSON}, e quindi nello specifico serve a creare, codificare e ottenere informazioni dai token. Questo file JSON viene inviato ad ogni richiesta di login da web application e mobile application.
-Riferimento: \href{https://github.com/jwtk/jjwt}.
-%TODO estendere
+La libreria che consente la creazione di \glossarioLocale{token di accesso} basati su \glossarioLocale{JSON} è \glossarioLocale{JJWT}.
+
+JJWT coinvolge tutte le componenti di Stalker, e nello specifico serve a creare, codificare e ottenere informazioni dai token.
+
+Inoltre, i token di accesso sono firmati utilizzando una chiave privata o una coppia chiave pubblica/privata, e quindi utilizzati nei casi di autenticazione ed autorizzazione.
+
+Un file JSON viene inviato ad ogni richiesta di login da web application e mobile application.
+
+Per maggiori informazioni, visitare \href{https://github.com/jwtk/jjwt}.
 
 \end{document}
