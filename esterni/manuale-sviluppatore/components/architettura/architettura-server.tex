@@ -46,7 +46,7 @@ Ciò in spring avviene grazie a delle annotazioni che effettuano il mapping tra 
 
 \begin{figure}[H]
   \centering
-  \includegraphics{img/controller-image.png}
+  \includegraphics{img/server-controller-image.png}
   \caption{Endpoint di esempio}%
    \label{fig:immagine che illustra un endpoint di esempio}
 \end{figure}
@@ -75,7 +75,7 @@ Per realizzare, invece, il mapping delle classi Java in tabelle del database abb
 
 \begin{figure}[H]
   \centering
-  \includegraphics{img/hibernate-example.png}
+  \includegraphics{img/server-hibernate-example.png}
   \caption{classe che fa uso di hibernate}%
    \label{fig:classe che fa uso di hibernate}
 \end{figure}
@@ -91,8 +91,28 @@ Lo strato repository si occupa di interagire con lo strato di persistenza e quin
 Per interagire con il database abbiamo utilizzato il driver \glossario{R2DBC} che permette di connettere database relazionali MySQL ad API reactive.
 Tramite R2DBC è possibile estendere delle interfacce e aggiungere delle annotazioni \textit{@Query} che permettono di creare query personalizzate.
 
+\paragraph{Database}%
+\label{par:database}
 
+Lo strato di persistenza contiene i database. Il backend di Stalker è dotato di due database:
+\begin{itemize}
+  \item Un database mySQL per gestire i dati persistenti.
+  \item Un database influxDB per gestire le timeseries.
+\end{itemize}
 
+\subparagraph{Database mySQL}
+\label{subp:database_mySQL}
+Il database mySQL contiene i dati relativi agli utenti, alle organizzazioni, ai luoghi e ai ruoli ricoperti da ciascun utente nelle organizzazioni a cui è iscritto.
+Nell'immagine sottostante è presente lo schema relazionale che mostra la struttura del database.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=14cm,height=10cm]{img/server-mysql-diagram.png}
+  \caption{schema relazionale del database mySQL}%
+   \label{fig: schema relazionale del database mySQL}
+\end{figure}
+
+\subparagraph{Database InfluxDB}
+\label{par:database_influxDB}
 \end{document}
 
 
