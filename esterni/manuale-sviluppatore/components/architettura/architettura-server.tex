@@ -71,8 +71,7 @@ Opera in due maniere opposte:
 
 Il model contiene le informazioni corrispondenti ai dati presenti nel database e ai dati che i client possono inviare in formato JSON sotto forma di classi Java.
 Per effettuare il mapping tra file JSON e classi Java, Spring usa di default la libreria \glossario{Jackson}.
-Per realizzare, invece, il mapping delle classi Java in tabelle del database abbiamo utilizzato il driver \glossario{Hibernate} che è uno standard nel fornire servizi di \glossario{Object-Relational-Mapping}.
-Hibernate fa uso di parecchie annotazioni per realizzare la conversione di classi Java in tabelle del database.
+Per realizzare, invece, il mapping delle classi Java in tabelle del database abbiamo utilizzato le \glossario{hibernate JPA annotation} che forniscono servizi di \glossario{Object-Relational-Mapping}.
 
 \begin{figure}[H]
   \centering
@@ -81,7 +80,7 @@ Hibernate fa uso di parecchie annotazioni per realizzare la conversione di class
    \label{fig:classe che fa uso di hibernate}
 \end{figure}
 
-Nella figura soprastante è presente una classe che fa uso di Hibernate.
+Nella figura soprastante è presente una classe che fa uso di JPA annotations.
 Quest'ultimo, infatti, tramite l'utilizzo dell'annotazione \textit{@Column} mappa ogni campo dati alla corrispettva colonna nel database.
 
 
@@ -89,6 +88,8 @@ Quest'ultimo, infatti, tramite l'utilizzo dell'annotazione \textit{@Column} mapp
 \label{par:repository}
 
 Lo strato repository si occupa di interagire con lo strato di persistenza e quindi di effettuare query al database.
+Per interagire con il database abbiamo utilizzato il driver \glossario{R2DBC} che permette di connettere database relazionali MySQL ad API reactive.
+Tramite R2DBC è possibile estendere delle interfacce e aggiungere delle annotazioni \textit{@Query} che permettono di creare query personalizzate.
 
 \end{document}
 
