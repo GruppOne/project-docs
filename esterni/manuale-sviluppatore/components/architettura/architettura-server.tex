@@ -35,10 +35,10 @@ Il controller è il layer più superficiale e che si interfaccia con le altre co
 Esso, inoltra la richiesta agli strati sottostanti fino allo strato di persistenza dove il server cercherà di soddisfarla.
 Sia in caso di successo che di errore il server risponderà con un codice di stato Http.
 
-Segue ora una breve descrizione dei compiti di ogni strato.
+Segue ora una breve descrizione di ogni strato.
 
-\subsubsection{Controller}%
-\label{subs:controller}
+\paragraph{Controller}%
+\label{par:controller}
 
 Il controller è lo strato del server che si interfaccia direttamente con i client.
 Ogniqualvolta una richiesta di un client arriva al server una funzione di un controller sarà incaricata di soddisfarla.
@@ -47,7 +47,7 @@ Ciò in spring avviene grazie a delle annotazioni che effettuano il mapping tra 
 \begin{figure}[H]
   \centering
   \includegraphics{img/controller-image.png}
-  \caption{Immagine che illustra un endpoint di esempio}%
+  \caption{Endpoint di esempio}%
    \label{fig:immagine che illustra un endpoint di esempio}
 \end{figure}
 
@@ -55,4 +55,45 @@ Nell'immagine soprastante si può osservare un esempio di handler implementato n
 L'annotazione \textit{@PostMapping} indica che la funzione si attiverà nel caso di una chiamata post all'endpoint /user/login.
 È presente, inoltre, l'annotazione \textit{@ResponseStatus} che stabilisce il tipo di codice di stato http che verrà restituito nel caso in cui la chiamata andasse a buon fine.
 
+\paragraph{Service}%
+\label{par:service}
+
+Il service è lo strato che si occupa di gestire la logica di business.
+Effettua manipolazioni sui dati sia in entrata che in uscita dal server.
+Opera in due maniere opposte:
+\begin{itemize}
+  \item Nel caso in cui un client richieda delle informazioni, lo strato service si occupa di effettuare elaborazioni sui dati in modo che le informazioni siano accessibili ai client.
+  \item Nel caso in cui un client mandi delle informazioni, lo strato service effettua le operazioni necessarie a elaborare i dati provenienti dal controller in modo che il server possa manipolarli.
+\end{itemize}
+
+\paragraph{Model}%
+\label{par:model}
+
+Il model contiene le informazioni corrispondenti ai dati presenti nel database e ai dati che i client possono inviare in formato JSON sotto forma di classi Java.
+Per effettuare il mapping tra file JSON e classi Java, Spring usa di default la libreria \glossario{Jackson}.
+Per realizzare, invece, il mapping delle classi Java in tabelle del database abbiamo utilizzato il driver \glossario{Hibernate} che è uno standard nel fornire servizi di \glossario{Object-Relational-Mapping}.
+Hibernate fa uso di parecchie annotazioni per realizzare la conversione di classi Java in tabelle del database.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{img/hibernate-example.png}
+  \caption{classe che fa uso di hibernate}%
+   \label{fig:classe che fa uso di hibernate}
+\end{figure}
+
+Nella figura soprastante è presente una classe che fa uso di Hibernate.
+Quest'ultimo, infatti, tramite l'utilizzo dell'annotazione \textit{@Column} mappa ogni campo dati alla corrispettva colonna nel database.
+
+
+\paragraph{Repository}%
+\label{par:repository}
+
+Lo strato repository si occupa di interagire con lo strato di persistenza e quindi di effettuare query al database.
+
 \end{document}
+
+
+
+
+
+
