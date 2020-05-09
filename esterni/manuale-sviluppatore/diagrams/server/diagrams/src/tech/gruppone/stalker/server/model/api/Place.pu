@@ -1,0 +1,15 @@
+@startuml Place
+!include ../../../../../../../style/class.pu
+
+class model.api.Place {
+  - id : Integer
+  - data : PlaceData
+
+  --
+
+  + Place()
+}
+
+model.api.Place *- model.api.PlaceData
+
+@enduml

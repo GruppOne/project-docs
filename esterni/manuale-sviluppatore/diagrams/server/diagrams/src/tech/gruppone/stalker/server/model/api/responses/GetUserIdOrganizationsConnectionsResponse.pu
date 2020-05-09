@@ -1,0 +1,12 @@
+@startuml GetUserIdOrganizationsConnectionsResponse
+!include ../../../../../../../../style/class.pu
+
+' class model.api.responses.GetUserIdOrganizationsConnectionsResponse {
+'   - id : Integer[]
+
+'   --
+
+'   + GetUserIdOrganizationsConnectionsResponse()
+' }
+
+@enduml

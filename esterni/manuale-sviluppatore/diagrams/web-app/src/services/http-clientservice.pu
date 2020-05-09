@@ -1,0 +1,56 @@
+@startuml HttpClientService
+!include ../../style/class.pu
+class HttpOptions  {
+  + headers : HttpHeaders
+  + observe : String
+}
+ class HttpClientService {
+  - httpClient : HttpClient {readonly}
+  - url : String
+  - defaultHttpHeaders : HttpHeaders
+
+  --
+
+  + HttpClientService(
+    private httpClient : HttpClient
+    )
+  + get<T>(
+    relativePath : String,
+    additionalHeaders : HttpHeaders
+    ) : Observable<HttpResponse<T>>
+  + post<T>(
+    relativePath : String,
+    body : T,
+    additionalHeaders : HttpHeaders
+    ) : Observable<HttpResponse<T>>
+  + put<T>(
+    relativePath : String,
+    body : T,
+    additionalHeaders : HttpHeaders
+    ) : Observable<HttpResponse<T>>
+  + delete<T>(
+    relativePath : String,
+    additionalHeaders : HttpHeaders
+    ) : Observable<HttpResponse<T>>
+  - mergeAdditionalHeaders(
+    additionalHeaders : HttpHeaders
+    ) : HttpOptions
+  - handleError()
+ }
+
+note right of HttpClientService
+similar behavior for the put, post and delete methods
+get<T>(
+    relativePath : String,
+    additionalHeaders : HttpHeaders,
+  ) : Observable<HttpResponse<T>> {
+    const httpOptions = this.mergeAdditionalHeaders(additionalHeaders);
+
+    return this.httpClient
+      .get<T>(`${this.url}${relativePath}`, httpOptions)
+      .pipe(catchError(this.handleError()));
+  }
+end note
+
+HttpClientService *-- HttpOptions
+@enduml

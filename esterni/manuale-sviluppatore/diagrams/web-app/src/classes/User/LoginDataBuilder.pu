@@ -1,0 +1,24 @@
+@startuml Login Builder Diagram
+!include ../../../style/class.pu
+class AbsLoginDataBuilder {
+  --
+
+  + build()
+}
+
+class LoginDataBuilder {
+  - id : Integer
+  - userData : UserData
+  - loginData : LoginData
+
+  --
+
+  + LoginDataBuilder(id : Integer)
+  + addEmail(email : String) : LoginDataBuilder
+  + addPassword(password : String) : LoginDataBuilder
+  + build() : User
+}
+
+LoginDataBuilder ..> "<<create>>" LoginData
+LoginDataBuilder --|>  AbsLoginDataBuilder
+@enduml

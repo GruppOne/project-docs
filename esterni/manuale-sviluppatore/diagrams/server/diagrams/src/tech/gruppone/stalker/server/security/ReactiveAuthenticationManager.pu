@@ -1,0 +1,8 @@
+@startuml ServerSecurityContextRepository_diagram
+!include ../../../../../../style/class.pu
+
+class org.springframework.security.authentication.ReactiveAuthenticationManager <<interface>>{
+
+}
+
+@enduml

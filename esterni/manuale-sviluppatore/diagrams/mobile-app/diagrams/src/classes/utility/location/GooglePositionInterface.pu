@@ -1,0 +1,16 @@
+@startuml GooglePositionInterface diagram
+!include ../../style/class.pu
+
+class GooglePositionInterface {
+  - {static} locationRequest : LocationRequest
+
+  --
+
+  + {static} startLocationUpdates(
+    Activity activity
+  ) : void
+  + {static} checkPermissions(
+    Activity activity
+  ) : void
+}
+@enduml

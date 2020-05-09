@@ -1,0 +1,32 @@
+@startuml profile sequence diagram
+!include ../../style/class.pu
+
+title Stalker web application show profile sequence diagram
+
+[-> AuthGuard : Utente con id 1 desidera\nnavigare alla pagina profilo\ne attiva canActivate()
+activate AuthGuard
+AuthGuard -> ProfileComponent : consente l'accesso\nalla pagina
+deactivate AuthGuard
+activate ProfileComponent
+ProfileComponent -> ProfileComponent : getUserById(1)
+activate ProfileComponent
+ProfileComponent -> UserService : getUserById(1)
+activate UserService
+UserService -> HttpClientService : get<User>('users/1')
+activate HttpClientService
+HttpClientService -> AuthHttpInterceptor : manda richiesta http
+activate AuthHttpInterceptor
+AuthHttpInterceptor -> API : clona, aggiunge un header\ne rimanda la richiesta
+deactivate AuthHttpInterceptor
+activate API
+API --> HttpClientService : risposta http
+deactivate API
+HttpClientService --> UserService : Observable<HttpResponse<User>>
+deactivate HttpClientService
+UserService --> ProfileComponent : Observable<User>
+deactivate UserService
+ProfileComponent --> ProfileComponent : aggiorna proprio\ncampo utente
+deactivate ProfileComponent
+[<-- ProfileComponent : La vista si aggiorna
+deactivate ProfileComponent
+@enduml

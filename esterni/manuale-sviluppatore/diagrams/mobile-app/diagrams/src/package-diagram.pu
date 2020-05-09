@@ -1,0 +1,33 @@
+@startuml Mobile-App package diagram
+!include ../style/class.pu
+
+title Stalker mobile app package diagram
+
+package tech.gruppone.stalker.app{
+package view{
+
+}
+package viewmodel{
+
+}
+package utility{
+  package location{
+
+  }
+
+}
+package model{
+
+}
+package business{
+}
+}
+
+view .> viewmodel
+viewmodel ..> model
+model .> utility
+model ..> business
+view ..> utility
+viewmodel ..> business
+business <. utility
+@enduml

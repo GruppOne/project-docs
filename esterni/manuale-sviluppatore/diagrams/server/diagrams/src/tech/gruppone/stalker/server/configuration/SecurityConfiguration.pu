@@ -1,0 +1,16 @@
+@startuml  SecurityConfiguration_diagram
+!include ../../../../../../style/class.pu
+
+class configuration.SecurityConfiguration{
+  - authenticationManager {readonly}
+  - securityContextRepository : {readonly}
+
+  --
+
+  # securityFilterChain(ServerHttpSecurity http): SecurityWebFilterChain
+}
+
+configuration.SecurityConfiguration ..> security.securityContextRepository
+configuration.SecurityConfiguration ..> security.authenticationManager
+
+@enduml

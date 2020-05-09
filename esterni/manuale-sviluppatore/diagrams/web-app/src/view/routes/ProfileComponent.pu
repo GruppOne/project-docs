@@ -1,0 +1,15 @@
+@startuml ProfileComponent diagram
+!include ../../../style/class.pu
+class ProfileComponent {
+  - userService : UserService {readonly}
+  - userBuilder : AbsUserBuilder
+  + fetched : Boolean
+  + user : User
+
+  --
+
+  + ProfileComponent(private userService : UserService)
+  + ngOnInit() : void
+  + getUser(id : Integer) : void
+}
+@enduml

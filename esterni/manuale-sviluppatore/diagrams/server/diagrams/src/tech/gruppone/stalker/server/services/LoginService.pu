@@ -1,0 +1,18 @@
+@startuml LoginService_diagram
+!include ../../../../../../style/class.pu
+
+class services.LoginService {
+  - jwtConfiguration {frozen}
+  - userRepository {frozen}
+
+  --
+
+  + LoginService(jwtConfiguration, userRepository)
+  + logUser(loginData : LoginData) : Mono <String>
+}
+
+services.LoginService ..> security.JwtConfiguration
+services.LoginService ..> repositories.UserRepository
+services.LoginService -- model.api.LoginData
+
+@enduml

@@ -1,0 +1,42 @@
+
+@startuml PlaceRepository_diagram
+!include ../../../../../../style/class.pu
+
+class repositories.PlaceRepository <<interface>>  {
+  --
+
+  + findAllPlaces(
+    organizationId : Integer
+    ) : Flux<Place>
+  + findPlaceById(
+    organizationId : Integer,
+    placeId : Integer
+    ) : Mono<Place>
+  + create(
+    name : String,
+    position : String, organizationId : Integer,
+    address : String,
+    city : String,
+    state : String,
+    zipcode : String
+    ) : Mono <Place>
+  + updatePlaceById(
+    name : String,
+    address : String,
+    city : String,
+    String state,
+    String zipcode,
+    String position,
+    Integer placeId,
+    Integer organizationId
+  ) : Mono<Void>
+  + deletePlaceById(
+    organization : Integer,
+    placeId : Integer
+    ) : Mono<Void>
+}
+
+repositories.PlaceRepository --> model.db.Place
+
+repositories.PlaceRepository -up-|> org.springframework.data.repository.reactive.ReactiveCrudRepository
+@enduml

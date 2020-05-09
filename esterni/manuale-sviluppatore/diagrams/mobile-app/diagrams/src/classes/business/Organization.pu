@@ -1,0 +1,26 @@
+@startuml Class diagram
+!include ../../style/class.pu
+
+class Organization {
+  - id : Integer {readonly}
+  - name : String {readonly}
+  - places : List<Place> {readonly}
+
+  --
+
+  + Organization(
+    id : Integer,
+    name : String,
+    places : List<Place>
+    )
+  + constructor(
+    jsonOrg : JSONObject
+  )
+  + equals(Object other) : Boolean
+  + hashCode() : Integer
+  + getInsidePlaces(
+    point : Point
+  ) : List<Integer>
+}
+
+@enduml

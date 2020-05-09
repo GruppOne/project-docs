@@ -1,0 +1,22 @@
+@startuml OrganizationsController_diagram
+!include ../../../../../../style/class.pu
+
+
+class controllers.OrganizationsController{
+  - organizationRepository {frozen}
+
+--
+
+  + getOrganizations()
+  : Mono<GetOrganizationsResponse>
+  + createOrganization(
+    organizationData : OrganizationData
+  ): Mono<PostIdResponse>
+}
+
+controllers.OrganizationsController ..> repositories.OrganizationRepository
+controllers.OrganizationsController --> model.api.OrganizationData
+controllers.OrganizationsController --> model.api.responses.GetOrganizationsResponse
+controllers.OrganizationsController --> model.api.responses.PostIdResponse
+
+@enduml

@@ -1,0 +1,29 @@
+@startuml PlaceController_diagram
+!include ../../../../../../style/class.pu
+
+
+class controllers.PlaceController {
+  - PlaceRepository {frozen}
+
+  --
+
+  + getPlacesByOrganizationId(
+    organizationId : Integer,
+    placeId : Integer
+    ) : Mono<GetOrganizationOrganizationIdPlacePlaceIdresponse>
+  + putPlaceById(
+    organizationId : Integer,
+    placeId : Integer,
+    place : Place
+    ) : Mono<Void>
+  + deletePlaceById(
+    organizationId : Integer,
+    placeId : Integer
+    ) : Mono<Void>
+
+}
+
+controllers.PlaceController ..> repositories.PlaceRepository
+controllers.PlaceController ..> model.api.Place
+controllers.PlaceController --> model.api.responses.GetOrganizationOrganizationIdPlacePlaceIdresponse
+@enduml

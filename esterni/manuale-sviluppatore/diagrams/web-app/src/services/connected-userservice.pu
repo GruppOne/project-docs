@@ -1,0 +1,15 @@
+@startuml ConnectedUserService
+!include ../../style/class.pu
+class ConnectedUserService {
+  - httpClientService : HttpClientService {readonly}
+
+  --
+
+  + ConnectedUserService(
+    private httpClientService : HttpClientService {readonly}
+    )
+  + getUserConnectedToOrg(
+    organizationId : Integer
+    ) : Observable<User[]>
+}
+@enduml

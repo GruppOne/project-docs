@@ -1,0 +1,15 @@
+@startuml PlaceInfo
+!include ../../../../../../../style/class.pu
+
+class model.api.PlaceInfo{
+  - address : String
+  - city : String
+  - zipcode : String
+  - state : String
+
+  --
+
+  + PlaceInfo()
+}
+
+@enduml

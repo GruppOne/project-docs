@@ -1,0 +1,12 @@
+@startuml PostIdResponse
+!include ../../../../../../../../style/class.pu
+
+class model.api.responses.PostIdResponse{
+  - id : Integer
+
+  --
+
+  + PostIdResponse()
+}
+
+@enduml

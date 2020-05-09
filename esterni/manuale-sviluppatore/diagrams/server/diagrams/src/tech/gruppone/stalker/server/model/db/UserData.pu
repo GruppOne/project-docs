@@ -1,0 +1,17 @@
+@startuml UserData
+!include ../../../../../../../style/class.pu
+
+class model.db.UserData {
+  - userId : Integer
+  - firstName : String
+  - lastName : String
+  - birthDate : DateTime
+  - createdDate : DateTime
+  - lastModifiedDate : DateTime
+
+  --
+
+  + UserData()
+}
+
+@enduml

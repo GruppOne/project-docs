@@ -1,0 +1,14 @@
+@startuml GetUsersResponse
+!include ../../../../../../../../style/class.pu
+
+class model.api.responses.GetUsersResponse{
+  - users : User[]
+
+  --
+
+  + GetUsersResponse()
+}
+
+model.api.responses.GetUsersResponse --> model.api.User
+
+@enduml

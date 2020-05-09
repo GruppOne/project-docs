@@ -1,0 +1,15 @@
+@startuml LoginViewModel diagram
+!include ../../style/class.pu
+
+class LoginViewModel {
+  - model : LoginModel
+
+  --
+
+  + getUserLiveData() : LiveData<User>
+  + login(
+    email : String,
+    password : String
+  ) : void
+}
+@enduml

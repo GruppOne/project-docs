@@ -1,0 +1,24 @@
+@startuml PlacesController
+!include ../../../../../../style/class.pu
+
+class controllers.PlacesController {
+  - placeRepository : PlaceRepository {frozen}
+
+  --
+
+  + getPlaces(
+      organizationId : Integer
+      ) : Mono<GetOrganizationOrganizationIdPlacesResponse>
+  + createPlace(
+      organizationId : Integer,
+      body : PlaceData
+      ) : Mono<Place>
+}
+
+controllers.PlacesController ..> repositories.PlaceRepository
+controllers.PlacesController ..> model.api.PlaceData
+controllers.PlacesController --> model.api.Place
+controllers.PlacesController --> model.api.responses.GetOrganizationOrganizationIdPlacesResponse
+
+
+@enduml

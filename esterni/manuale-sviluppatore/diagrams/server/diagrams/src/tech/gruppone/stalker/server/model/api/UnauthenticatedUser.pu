@@ -1,0 +1,13 @@
+@startuml UnauthenticatedUser
+!include ../../../../../../../style/class.pu
+
+class UnauthenticatedUser {
+  - email : String
+  - password : String
+
+  --
+
+  + UnauthenticatedUser()
+}
+
+@enduml

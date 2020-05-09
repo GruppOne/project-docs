@@ -1,0 +1,12 @@
+@startuml SignUpModel diagram
+!include ../../style/class.pu
+
+class SignupModel {
+  --
+
+  + signup(
+    user : User,
+    passwordHash : String
+  ) : void
+}
+@enduml

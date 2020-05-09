@@ -1,0 +1,16 @@
+@startuml UserData
+!include ../../../../../../../style/class.pu
+
+class model.api.UserData{
+  - email : String
+  - firstName : String
+  - lastName : String
+  - birthDate : LocalDate
+  - creationDateTime : DateTime
+
+  --
+
+  + UserData()
+}
+
+@enduml

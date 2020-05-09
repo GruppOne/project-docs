@@ -1,0 +1,17 @@
+@startuml Place
+!include ../../../../../../../style/class.pu
+
+class model.db.Place {
+  - id : Integer
+  - organizationId : Integer
+  - name : String
+  - polygon : model.api.Polygon
+
+  --
+
+  + Place()
+}
+
+model.db.Place *- model.db.Polygon
+
+@enduml

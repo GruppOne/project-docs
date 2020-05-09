@@ -1,0 +1,13 @@
+@startuml UserService
+!include ../../style/class.pu
+class UserService {
+  - httpClientService : HttpClientService {readonly}
+
+  --
+
+  + UserService(
+    private httpClientService : HttpClientService {readonly}
+    )
+  + getUserById(userId : Integer) : Observable<User>
+}
+@enduml

@@ -1,0 +1,23 @@
+@startuml Place Diagram
+!include ../../../style/class.pu
+class Place <<interface>> {
+  + id : Integer {readonly}
+  + name : String {readonly}
+  + polyline : MyLatLng[] {readonly}
+  + placeData : PlaceData {readonly}
+
+  --
+
+  + getLatLng(polyline : MyLatLng[]) : LatLng[]
+}
+
+Place --> MyLatLng
+Place o-- PlaceData
+
+/'
+' if you decomment this part it will no longer appear within the package
+' leaflet, this part has already been moved to the main file, it's here
+' just to remember it
+'/
+' Place ..> LatLng
+@enduml

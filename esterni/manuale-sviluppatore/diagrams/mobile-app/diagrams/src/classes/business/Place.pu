@@ -1,0 +1,25 @@
+@startuml Class diagram
+!include ../../style/class.pu
+
+class Place {
+  - id : Integer {readonly}
+  - polyLine : List<Point> {readonly}
+
+  --
+
+  + constructor(
+    id : Integer,
+    polyLine : List<Point>
+    )
+  + constructor(jsonPlace : JSONObject)
+  + equals(Object other) : Boolean
+  + hashCode() : Integer
+  + isInside(point : Point) : Boolean
+  - {static} relativePosition(
+  {static} origin : Point,
+  {static} vertex : Point,
+  {static} point : Point
+  {static} ) : Position
+}
+
+@enduml

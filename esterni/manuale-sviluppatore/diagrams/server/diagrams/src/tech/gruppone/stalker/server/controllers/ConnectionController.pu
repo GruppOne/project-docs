@@ -1,0 +1,27 @@
+@startuml ConnectionController_diagram
+!include ../../../../../../style/class.pu
+
+class controllers.ConnectionController {
+  - connectionRepository {frozen}
+
+  --
+
+  + ConnectionController(connectionRepository)
+  + getConnectedOrganizationByUserId(
+      userId : Integer
+    ) : Mono<GetUserIdOrganizationsConnectionsResponse>
+  + connectUserToOrganizationById(
+      userId : Integer,
+      organizationId : Integer,
+      ldapConfiguration : LdapConfiguration
+    ) : Mono<Void>
+  + deleteUserConnectionById(
+      userId : Integer,
+      organizationId : Integer
+    ) : Mono<Void>
+}
+
+controllers.ConnectionController ..> repositories.ConnectionRepository
+controllers.ConnectionController ..>  model.api.LdapConfiguration
+
+@enduml

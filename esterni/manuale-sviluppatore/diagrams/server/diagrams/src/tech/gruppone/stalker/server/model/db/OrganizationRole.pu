@@ -1,0 +1,15 @@
+@startuml OrganizationRole
+!include ../../../../../../../style/class.pu
+
+class model.db.OrganizationRole {
+  - organizationId : Integer
+  - userId : Integer
+  - adminType : Integer
+  - createdDate : DateTime
+
+  --
+
+  + OrganizationRole()
+}
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml OrganizationRole
+!include ../../../../../../../style/class.pu
+
+class model.api.OrganizationRole {
+  - userId : Integer
+  - organizationId : Integer
+  - role : String
+
+  --
+
+  + OrganizationRole()
+}
+
+@enduml

@@ -1,0 +1,13 @@
+@startuml MVVM pattern diagram
+
+title MVVM pattern diagram
+
+!include ../../style/class.pu
+
+!include ../classes/LoginActivity.pu
+!include ../classes/LoginViewModel.pu
+!include ../classes/LoginModel.pu
+
+LoginActivity *-- LoginViewModel
+LoginViewModel *-- LoginModel
+@enduml

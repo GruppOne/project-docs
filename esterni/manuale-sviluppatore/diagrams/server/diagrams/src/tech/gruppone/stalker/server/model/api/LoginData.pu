@@ -1,0 +1,13 @@
+@startuml LoginData
+!include ../../../../../../../style/class.pu
+
+class model.api.LoginData{
+  - email : String
+  - password : String
+
+  --
+
+  + LoginData()
+}
+
+@enduml

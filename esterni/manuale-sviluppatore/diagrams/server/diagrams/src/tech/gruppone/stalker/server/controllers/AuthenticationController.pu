@@ -1,0 +1,25 @@
+@startuml AuthenticationController
+!include ../../../../../../style/class.pu
+
+class controllers.AuthenticationController {
+  - loginService : LoginService {frozen}
+
+  --
+  + AuthenticationController(loginService : LoginService)
+  + login(loginData : LoginData) : Mono<JwtResponse>
+}
+
+controllers.AuthenticationController ..> model.api.LoginData
+controllers.AuthenticationController ..> services.LoginService
+
+class model.api.responses.JwtResponse {
+  jwt : String
+
+  --
+
+  + Jwt()
+}
+
+controllers.AuthenticationController --> model.api.responses.JwtResponse
+
+@enduml

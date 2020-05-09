@@ -1,0 +1,18 @@
+@startuml SignUpViewModel diagram
+!include ../../style/class.pu
+
+class SignupViewModel{
+  - model : SignUpModel
+
+  --
+
+  + signup(
+    email : String,
+     password : String,
+    firstName : String,
+    lastName : String,
+    birthDate : String
+    ) : void
+}
+
+@enduml

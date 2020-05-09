@@ -1,0 +1,80 @@
+@startuml complete-class-diagram
+!include ../../../../../style/class.pu
+
+!include ServerApplication.pu
+
+'------------------------------------------------------ configuration
+!include configuration/InfluxDBConfiguration.pu
+!include configuration/ApplicationConfiguration.pu
+!include configuration/SecurityConfiguration.pu
+!include configuration/SmtpMailSenderConfiguration.pu
+
+'------------------------------------------------------ controller
+!include controllers/AuthenticationController.pu
+!include controllers/ConnectionController.pu
+!include controllers/MultiLocationInfoController.pu
+!include controllers/OrganizationController.pu
+!include controllers/OrganizationsController.pu
+!include controllers/PlaceController.pu
+!include controllers/PlacesController.pu
+!include controllers/RecoveryPasswordController.pu
+!include controllers/UserController.pu
+!include controllers/UsersController.pu
+
+'------------------------------------------------------ model/api/responses
+!include model/api/responses/GetOrganizationOrganizationIdPlacePlaceIdresponse.pu
+!include model/api/responses/GetOrganizationOrganizationIdPlacesResponse.pu
+!include model/api/responses/GetOrganizationOrganizationIdUsersConnectionsResponse.pu
+!include model/api/responses/GetOrganizationsResponse.pu
+!include model/api/responses/GetUserIdOrganizationsConnectionsResponse.pu
+!include model/api/responses/GetUsersResponse.pu
+!include model/api/responses/PostIdResponse.pu
+
+'------------------------------------------------------ model/api
+!include model/api/LdapConfiguration.pu
+!include model/api/LoginData.pu
+!include model/api/MultiLocationInfo.pu
+!include model/api/Organization.pu
+!include model/api/OrganizationData.pu
+!include model/api/OrganizationRole.pu
+!include model/api/Place.pu
+!include model/api/PlaceData.pu
+!include model/api/PlaceInfo.pu
+!include model/api/Polygon.pu
+!include model/api/UnauthenticatedUser.pu
+!include model/api/User.pu
+!include model/api/UserData.pu
+!include model/api/UserDataWithLoginData.pu
+
+'------------------------------------------------------ model/db
+!include model/db/AdminType.pu
+!include model/db/Connections.pu
+!include model/db/LdapConfiguration.pu
+!include model/db/LocationInfo.pu
+!include model/db/OrganizationRole.pu
+!include model/db/Organizations.pu
+!include model/db/Place.pu
+!include model/db/PlaceData.pu
+!include model/db/UserData.pu
+!include model/db/UserLog.pu
+!include model/db/Users.pu
+
+'------------------------------------------------------ Repositories
+!include repositories/ConnectionRepository.pu
+!include repositories/LocationInfoRepository.pu
+!include repositories/OrganizationRepository.pu
+!include repositories/PlaceRepository.pu
+!include repositories/UserRepository.pu
+
+'------------------------------------------------------ Security
+!include security/AuthenticationManager.pu
+!include security/JwtConfiguration.pu
+!include security/ReactiveAuthenticationManager.pu
+!include security/SecurityContextRepository.pu
+!include security/ServerSecurityContextRepositor.pu
+
+'------------------------------------------------------ Services
+!include services/LocationInfoService.pu
+!include services/LoginService.pu
+
+@enduml

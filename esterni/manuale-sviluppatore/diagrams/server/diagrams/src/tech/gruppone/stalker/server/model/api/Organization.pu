@@ -1,0 +1,16 @@
+@startuml Organization
+!include ../../../../../../../style/class.pu
+!include ./OrganizationData.pu
+
+class model.api.Organization {
+  - id : Integer
+  - data : OrganizationData
+
+  --
+
+  + Organization()
+}
+
+model.api.Organization *- model.api.OrganizationData
+
+@enduml

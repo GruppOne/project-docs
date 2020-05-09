@@ -1,0 +1,14 @@
+@startuml Users
+!include ../../../../../../../style/class.pu
+
+class model.db.Users {
+  - id : Integer
+  - email : String
+  - password : String
+
+  --
+
+  + Users()
+}
+
+@enduml

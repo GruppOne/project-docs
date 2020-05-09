@@ -1,0 +1,16 @@
+@startuml UserDataWithLoginData
+!include ../../../../../../../style/class.pu
+
+class model.api.UserDataWithLoginData {
+  - loginData : LoginData
+  - userData : UserData
+
+  --
+
+  + UserDataWithLoginData()
+}
+
+model.api.UserDataWithLoginData --> model.api.LoginData
+model.api.UserDataWithLoginData --> model.api.UserData
+
+@enduml

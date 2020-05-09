@@ -1,0 +1,15 @@
+@startuml LoginActivity diagram
+!include ../../style/class.pu
+
+class LoginActivity {
+  + viewModel : LoginViewModel
+
+  --
+
+  + checkPermission() : void
+  # onPause() : void
+  # onCreate(
+    savedInstanceState : Bundle
+  ) : void
+}
+@enduml

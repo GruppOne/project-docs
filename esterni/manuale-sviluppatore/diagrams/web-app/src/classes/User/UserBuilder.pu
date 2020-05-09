@@ -1,0 +1,27 @@
+@startuml UserBuilder Diagram
+!include ../../../style/class.pu
+class AbsUserBuilder {
+  --
+
+  + addUserData()
+  + addLoginData()
+  + build()
+}
+class UserBuilder {
+  - id : Integer
+  - userData : UserData
+  - loginData : LoginData
+
+  --
+
+  + UserBuilder(id : Integer)
+  + addId(id : Integer) : UserBuilder
+  + addUserData(userData : UserData) : UserBuilder
+  + addLoginData(loginData : Logindata) : UserBuilder
+  + build() : User
+}
+UserBuilder --|> AbsUserBuilder
+UserBuilder --> LoginData
+UserBuilder --> UserData
+UserBuilder ..> "<<create>>" User
+@enduml

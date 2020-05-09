@@ -1,0 +1,56 @@
+@startuml stylesheet
+
+hide circle
+
+skinparam {
+  ArrowColor #000
+  BackgroundColor #efefef
+  DefaultFontName Roboto
+  Linetype ortho
+  NoteFontName Roboto
+  SequenceLifeLineBackgroundColor #989898
+  SequenceLifeLineBorderColor #000
+  SequenceMessageAlignment center
+  SequenceTitleFontColor #000
+  ParticipantPadding 10
+  ResponseMessageBelowArrow true
+  classAttributeIconSize 0
+  TitleFontSize 20
+  TitleBorderColor #989898
+  TitleBackgroundColor #fff
+  ' HeaderBackgroundColor non funziona più se facciamo gli angoli arrotondati
+  ' roundCorner 10
+
+  Class {
+    BackgroundColor #fff
+    BorderColor #989898
+    FontStyle bold
+    HeaderBackgroundColor #add1b2
+    StereotypeFontStyle normal
+  }
+
+  Class<<interface>> {
+    HeaderBackgroundColor #b4a7e5
+  }
+
+  Class<<enumeration>> {
+    HeaderBackgroundColor #eb937f
+  }
+
+  Package {
+    BackgroundColor #c3c3c3
+    BorderColor #989898
+  }
+
+  Note {
+    BackgroundColor #fdfd96
+    BorderColor #ffd400
+  }
+
+  Participant {
+    BackgroundColor #fff
+    BorderColor #989898
+    FontStyle bold
+  }
+}
+@enduml

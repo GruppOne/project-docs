@@ -1,0 +1,27 @@
+@startuml edit administrators
+!include ../../style/class.pu
+' -------------------------------------------------- Administrators
+!include ../interfaces/Administrators/Administrators.pu
+' -------------------------------------------------- User
+!include ../interfaces/User/User.pu
+!include ../interfaces/User/UserData.pu
+!include ../interfaces/User/LoginData.pu
+
+title Stalker web application manage administrators class diagram
+
+!include ../view/components/administratorcomponent.pu
+!include ../services/connected-userservice.pu
+!include ../services/administratorservice.pu
+
+AdministratorComponent --> AdminType
+AdministratorComponent --> ConnectedUserService
+AdministratorComponent --> AdministratorService
+AdministratorComponent --> Administrator
+
+AdministratorService --> HttpClientService
+AdministratorService ..> Administrator
+
+ConnectedUserService --> HttpClientService
+ConnectedUserService ..> User
+
+@enduml

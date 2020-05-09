@@ -1,0 +1,15 @@
+@startuml Administrator
+!include ../../../style/class.pu
+class Administrator <<interface>> {
+  + id : Integer {readonly}
+  + email : String {readonly}
+  + role : AdminType {readonly}
+}
+
+enum AdminType <<enumeration>> {
+  + manager = 'Manager'
+  + viewer = 'Viewer'
+}
+
+Administrator --> AdminType
+@enduml

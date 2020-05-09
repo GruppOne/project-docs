@@ -1,0 +1,48 @@
+@startuml MultiLocationInfo
+!include ../../../../../../../style/class.pu
+
+class java.sql.Timestamp
+
+class model.api.MultiLocationInfo {
+  - timestamp : Timestamp
+  - user : MultiLocationInfo.AbstractUser
+  - inside : Boolean
+  - placeIds : Integer[]
+
+  --
+
+  + MultiLocationInfo()
+}
+
+abstract class model.api.MultiLocationInfo.AbstractUser {
+
+}
+
+
+class model.api.MultiLocationInfo.PublicUser {
+  - user : model.api.PublicUser
+
+  --
+
+  + MultiLocationInfoPublicUser()
+}
+
+class model.api.MultiLocationInfo.Anonymous {
+  anonymous : Boolean
+
+  --
+
+  + MultiLocationInfoAnonymous()
+}
+note bottom
+  anonymous is always true and is used to map
+  to the correct type in the database
+end note
+
+model.api.MultiLocationInfo o-- java.sql.Timestamp
+model.api.MultiLocationInfo *-- model.api.MultiLocationInfo.AbstractUser
+
+model.api.MultiLocationInfo.PublicUser -up-|> model.api.MultiLocationInfo.AbstractUser
+model.api.MultiLocationInfo.Anonymous -up-|> model.api.MultiLocationInfo.AbstractUser
+
+@enduml

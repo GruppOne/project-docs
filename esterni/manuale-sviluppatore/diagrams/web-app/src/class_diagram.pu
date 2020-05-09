@@ -1,0 +1,266 @@
+@startuml Class Diagram
+
+!include ../style/class.pu
+' START include interfaces
+' -------------------------------------------------- User
+!include interfaces/User/User.pu
+!include interfaces/User/UserData.pu
+!include interfaces/User/LoginData.pu
+
+' -------------------------------------------------- Place
+!include interfaces/Place/Place.pu
+!include interfaces/Place/PlaceData.pu
+
+' -------------------------------------------------- Organization
+!include interfaces/Organization/Organization.pu
+
+' -------------------------------------------------- LdapConfiguration
+!include interfaces/LdapConfiguration/LdapConfiguration.pu
+
+' -------------------------------------------------- Administrators
+!include interfaces/Administrators/Administrators.pu
+' END include interfaces
+
+'---------------------------------------------------------------------------
+
+' START include classes
+' -------------------------------------------------- UserBuilder
+!include classes/User/UserBuilder.pu
+!include classes/User/UserDataBuilder.pu
+!include classes/User/LoginDataBuilder.pu
+
+' -------------------------------------------------- PlaceBuilder
+!include classes/Place/PlaceBuilder.pu
+!include classes/Place/PlaceDataBuilder.pu
+!include classes/Place/MyLatLng.pu
+
+' -------------------------------------------------- OrganizationBuilder
+!include classes/Organization/OrganizationBuilder.pu
+
+' -------------------------------------------------- LdapConfiguration
+!include classes/LdapConfiguration/LdapConfigurationBuilder.pu
+
+' -------------------------------------------------- Environment
+!include classes/Environment/Environment.pu
+' END include classes
+
+'---------------------------------------------------------------------------
+
+' START include services
+
+!include services/administratorservice.pu
+!include services/auth-http-interceptorservice.pu
+!include services/connected-userservice.pu
+!include services/http-clientservice.pu
+!include services/loginservice.pu
+!include services/organizationservice.pu
+!include services/placeservice.pu
+!include services/userservice.pu
+' END include services
+
+'---------------------------------------------------------------------------
+
+' START include components
+!include view/components/FormEmailComponent.pu
+!include view/components/FormPasswordComponent.pu
+!include view/components/MapComponent.pu
+!include view/components/administratorcomponent.pu
+
+!include view/routes/CreateOrganizationComponent.pu
+!include view/routes/EditOrganizationComponent.pu
+!include view/routes/HomeComponent.pu
+!include view/routes/NotFoundComponent.pu
+!include view/routes/OrganizationComponent.pu
+!include view/routes/OrganizationsComponent.pu
+!include view/routes/ProfileComponent.pu
+' END include components
+
+'---------------------------------------------------------------------------
+
+' START include managers
+!include page-manager/AppComponent.pu
+!include page-manager/AuthGuard.pu
+' END include managers
+
+'---------------------------------------------------------------------------
+
+title Stalker web application class diagram
+' START packages
+package "Angular" {
+  class AbstractControl
+  class ActivatedRouteSnapshot
+  class CanActivate
+  class FormBuilder
+  class FormGroup
+  class HttpClient
+  class HttpHeaders
+  class HttpRequest
+  class Location
+  class Router
+  class Title
+  class Validators
+  class Interceptor
+  class HttpRequest
+  class ActivatedRoute
+  class Interceptor
+}
+
+package "Leaflet" {
+  class LatLng
+  class LatLngBounds
+  class Polygon
+}
+
+package "Angular Material" {
+  class MatTableDataSource
+  class MatPaginator
+  class MatSort
+}
+
+package "Typescript" {
+  interface Event <<interface>>
+}
+' END packages
+
+'---------------------------------------------------------------------------
+
+AppComponent --> Router
+AppComponent --> LoginService
+
+
+AuthGuard --> LoginService
+AuthGuard --> Router
+AuthGuard --> Location
+AuthGuard ..> ActivatedRouteSnapshot
+AuthGuard ..> CanActivate
+
+
+AdministratorComponent --> AdminType
+AdministratorComponent --> FormGroup
+AdministratorComponent --> FormBuilder
+AdministratorComponent --> ActivatedRoute
+AdministratorComponent --> ConnectedUserService
+AdministratorComponent --> AdministratorService
+AdministratorComponent --> Administrator
+
+CreateOrganizationComponent --> MapComponent
+CreateOrganizationComponent o-- AbsOrganizationBuilder
+CreateOrganizationComponent --> FormGroup
+CreateOrganizationComponent ..> AbstractControl
+CreateOrganizationComponent --> FormBuilder
+CreateOrganizationComponent --> OrganizationService
+CreateOrganizationComponent --> Router
+CreateOrganizationComponent ..> AbsLdapConfigurationBuilder
+CreateOrganizationComponent ..> AbsPlaceBuilder
+CreateOrganizationComponent ..> AbsPlaceDataBuilder
+CreateOrganizationComponent ..> Organization
+
+
+EditOrganizationComponent --> MapComponent
+EditOrganizationComponent --> Organization
+EditOrganizationComponent o-- AbsOrganizationBuilder
+EditOrganizationComponent --> FormGroup
+EditOrganizationComponent ..> AbstractControl
+EditOrganizationComponent --> FormBuilder
+EditOrganizationComponent --> OrganizationService
+EditOrganizationComponent ..> Validators
+EditOrganizationComponent ..> MyLatLng
+EditOrganizationComponent ..> AbsLdapConfigurationBuilder
+EditOrganizationComponent ..> AbsPlaceBuilder
+EditOrganizationComponent ..> AbsPlaceDataBuilder
+
+
+
+HomeComponent --> LoginService
+' -------------------------------------------------- Angular
+HomeComponent --> Title
+HomeComponent --> FormGroup
+HomeComponent --> Router
+HomeComponent ..> FormEmailComponent
+HomeComponent ..> FormPasswordComponent
+HomeComponent o-- AbsUserBuilder
+HomeComponent o-- AbsLoginDataBuilder
+
+
+OrganizationComponent --> Organization
+OrganizationComponent o-- AbsOrganizationBuilder
+OrganizationComponent ..> AbsPlaceBuilder
+OrganizationComponent ..> AbsPlaceDataBuilder
+OrganizationComponent ..> AbsLdapConfigurationBuilder
+OrganizationComponent --> OrganizationService
+
+
+OrganizationsComponent --> OrganizationService
+OrganizationsComponent ..> AdminType
+OrganizationsComponent ..> Event
+' -------------------------------------------------- Angular Material
+OrganizationsComponent --> MatTableDataSource
+OrganizationsComponent --> MatPaginator
+OrganizationsComponent --> MatSort
+
+
+ProfileComponent o-- AbsUserBuilder
+ProfileComponent o-- AbsUserDataBuilder
+ProfileComponent --> User
+ProfileComponent --> UserService
+
+
+' -------------------------------------------------- Angular
+FormEmailComponent --> FormGroup
+FormPasswordComponent --> FormGroup
+
+
+MapComponent --> Organization
+MapComponent --> Polygon
+MapComponent --> LatLngBounds
+MapComponent --> PlaceService
+MapComponent --> OrganizationService
+
+
+AdministratorService --> HttpClientService
+AdministratorService ..> Administrator
+
+
+AuthHttpInterceptor ..> User
+AuthHttpInterceptor ..> Organization
+AuthHttpInterceptor ..> Geocoding
+AuthHttpInterceptor --> LoginService
+AuthHttpInterceptor --|> Interceptor
+
+
+ConnectedUserService --> HttpClientService
+ConnectedUserService ..> User
+
+
+HttpClientService ..> Environment
+' -------------------------------------------------- Angular
+HttpClientService --> HttpClient
+HttpClientService --> HttpHeaders
+
+
+LoginService --> HttpClientService
+LoginService ..> User
+LoginService ..> AdminType
+' -------------------------------------------------- Angular
+LoginService -->Router
+
+
+OrganizationService --> HttpClientService
+OrganizationService ..> Organization
+OrganizationService ..> AdminType
+OrganizationService --> LoginService
+
+
+' -------------------------------------------------- Angular
+PlaceService --> HttpClient
+
+
+UserService --> HttpClientService
+UserService ..> User
+
+
+' keep them here instead of inside included components
+MapComponent --> LatLng
+Place ..> LatLng
+MyLatLng --> LatLng
+@enduml

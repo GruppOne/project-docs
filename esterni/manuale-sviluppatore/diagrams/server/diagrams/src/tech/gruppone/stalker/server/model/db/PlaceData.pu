@@ -1,0 +1,16 @@
+@startuml PlaceData
+!include ../../../../../../../style/class.pu
+
+class model.db.PlaceData {
+  - id : Integer
+  - address : String
+  - city : String
+  - zipcode : String
+  - state : String
+
+  --
+
+  + PlaceData()
+}
+
+@enduml

@@ -1,0 +1,11 @@
+@startuml User Diagram
+!include ../../../style/class.pu
+class User <<interface>> {
+  + id : Integer {readonly}
+  + userData : UserData {readonly}
+  + loginData : LoginData {readonly}
+}
+
+User o-- UserData
+User o-- LoginData
+@enduml

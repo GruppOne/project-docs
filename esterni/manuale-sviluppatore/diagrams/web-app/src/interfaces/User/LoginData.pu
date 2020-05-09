@@ -1,0 +1,8 @@
+@startuml LoginData Diagram
+!include ../../../style/class.pu
+class LoginData <<interface>> {
+  + email : String {readonly}
+  + password : String {readonly}
+}
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml User
+!include ../../../../../../../style/class.pu
+
+class model.api.User{
+  - id : Integer
+  - userData : UserData
+
+  --
+
+  + User()
+}
+
+model.api.User *- model.api.UserData
+
+@enduml

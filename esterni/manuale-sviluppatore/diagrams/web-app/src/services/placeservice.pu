@@ -1,0 +1,31 @@
+@startuml PlaceService
+!include ../../style/class.pu
+class Geocoding <<interface>> {
+  + display_name : String
+  + address : AddressType
+}
+
+class AddressType <<interface>> {
+  + city : String
+  + country : String
+  + postcode : String
+  + road : String
+}
+
+class PlaceService {
+  - httpClient : HttpClient {readonly}
+
+  --
+
+  + PlaceService(
+    private httpClient : HttpClient {readonly}
+    )
+  + reverseGeocoding(
+    lat : Real,
+    lng : Real
+    ) : Observable<Geocoding>
+}
+
+Geocoding *--> AddressType
+PlaceService ..> Geocoding
+@enduml

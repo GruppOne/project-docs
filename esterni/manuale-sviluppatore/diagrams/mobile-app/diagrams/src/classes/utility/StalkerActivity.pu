@@ -1,0 +1,13 @@
+@startuml StalkerActivity Diagram
+!include ../../style/class.pu
+
+class StalkerActivity{
+  --
+
+  # onResume() : void
+  + checkPermission() : void
+}
+
+/'StalkerActivity --|> AppCompactActivity '/
+
+@enduml

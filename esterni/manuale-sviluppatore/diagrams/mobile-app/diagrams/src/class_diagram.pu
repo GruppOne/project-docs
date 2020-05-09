@@ -1,0 +1,171 @@
+@startuml Class diagram
+
+title Stalker mobile app class diagram
+
+!include ../style/class.pu
+/'----------------------------------------------------- View'/
+!include ./classes/view/LoginActivity.pu
+!include ./classes/view/MainPageActivity.pu
+!include ./classes/view/SignUpActivity.pu
+
+/'----------------------------------------------------- ViewModel'/
+!include ./classes/viewmodel/LoginViewModel.pu
+!include ./classes/viewmodel/MainPageViewModel.pu
+!include ./classes/viewmodel/SignUpViewModel.pu
+
+/'----------------------------------------------------- Model'/
+!include ./classes/model/LoginModel.pu
+!include ./classes/model/MainPageModel.pu
+!include ./classes/model/SignUpModel.pu
+/'----------------------------------------------------- Utility'/
+!include ./classes/utility/App.pu
+!include ./classes/utility/AuthenticatedRequest.pu
+!include ./classes/utility/OrganizationListAdapter.pu
+!include ./classes/utility/OrgViewHolder.pu
+!include ./classes/utility/StalkerActivity.pu
+!include ./classes/utility/WebSingleton.pu
+!include ./classes/utility/CurrentSessionSingleton.pu
+!include ./classes/utility/GooglePositionInterface.pu
+!include ./classes/utility/LocationNotifier.pu
+
+/'----------------------------------------------------- Business'/
+!include ./classes/business/Organization.pu
+!include ./classes/business/Place.pu
+!include ./classes/business/Point.pu
+!include ./classes/business/User.pu
+
+package com.android.volley{
+  class Request
+  class RequestQueue
+  class Response::ErrorListener
+  class Response::Listener
+  package toolbox{
+    class JsonObjectRequest
+  }
+}
+
+package androidx.appcompat.app{
+  class AppCompatActivity
+}
+
+package android.view{
+  class View
+  class ViewGroup
+}
+
+package androidx.recyclerview.widget{
+  class ListAdapter< T, V >
+  class RecyclerView
+  class RecyclerView::ViewHolder
+}
+
+package android.widget{
+  class TextView
+}
+package android.app{
+  class Application
+}
+package androidx.lifecycle{
+  class MutableLiveData
+  class LiveData
+  class ViewModel
+}
+package com.google.android.gms.location{
+class LocationCallback
+class LocationRequest
+class LocationResult
+class LocationSettingsRequest
+}
+package androidx.core.app{
+  class JobIntentService
+}
+package android.location{
+  class Location
+}
+
+class ListAdapterInstance
+
+WebSingleton ..> Organization
+WebSingleton ..> Place
+WebSingleton ..> User
+WebSingleton *-- RequestQueue
+WebSingleton ..> Request
+WebSingleton ..> Response::Listener
+WebSingleton ..> Response::ErrorListener
+WebSingleton ..> AuthenticatedRequest
+
+StalkerActivity ..> GooglePositionInterface
+StalkerActivity --|> AppCompatActivity
+
+OrganizationListAdapter --> Organization
+OrganizationListAdapter *- OrganizationListAdapter::OrgViewHolder
+ListAdapterInstance <|-- OrganizationListAdapter
+ListAdapterInstance --|> ListAdapter: <<bind>> \n <T::Organization,\nV::OrgViewHolder>
+OrganizationListAdapter ..> View
+OrganizationListAdapter ..> ViewGroup
+
+OrganizationListAdapter::OrgViewHolder *-- TextView
+OrganizationListAdapter::OrgViewHolder ..> View
+OrganizationListAdapter::OrgViewHolder ..> Organization
+
+AuthenticatedRequest --|> JsonObjectRequest
+AuthenticatedRequest ..> Response::Listener
+AuthenticatedRequest ..> Response::ErrorListener
+AuthenticatedRequest ..> CurrentSessionSingleton
+
+App --|> Application
+
+CurrentSessionSingleton ..> WebSingleton
+CurrentSessionSingleton o-- MutableLiveData
+
+GooglePositionInterface ..> LocationCallback
+GooglePositionInterface *-- LocationRequest
+GooglePositionInterface ..> LocationResult
+GooglePositionInterface ..> LocationSettingsRequest
+GooglePositionInterface ..> App
+
+LocationNotifier --> CurrentSessionSingleton
+LocationNotifier ..> Point
+LocationNotifier --> WebSingleton
+LocationNotifier --|> JobIntentService
+LocationNotifier ..> Location
+
+LoginModel ..> CurrentSessionSingleton
+LoginModel ..> WebSingleton
+LoginModel ..> User
+
+MainPageModel ..> CurrentSessionSingleton
+MainPageModel ..> WebSingleton
+MainPageModel ..> Organization
+
+
+SignupModel ..> CurrentSessionSingleton
+SignupModel ..> WebSingleton
+SignupModel ..> User
+
+LoginViewModel *-- LoginModel
+LoginViewModel ..> User
+LoginViewModel ..> LiveData
+LoginViewModel --|> ViewModel
+
+SignupViewModel *-- SignupModel
+SignupViewModel ..> User
+SignupViewModel --|> ViewModel
+
+MainPageViewModel *-- MainPageModel
+MainPageViewModel ..> Organization
+MainPageViewModel ..> LiveData
+MainPageViewModel --|> ViewModel
+
+StalkerActivity <|-- LoginActivity
+LoginActivity *-- LoginViewModel
+
+StalkerActivity <|-- SignUpActivity
+SignUpActivity *-- SignupViewModel
+
+StalkerActivity <|-- MainPageActivity
+MainPageActivity *-- MainPageViewModel
+MainPageActivity --> OrganizationListAdapter
+MainPageActivity --> RecyclerView
+
+@enduml

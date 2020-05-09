@@ -1,0 +1,29 @@
+@startuml PlaceBuilder Diagram
+!include ../../../style/class.pu
+class AbsPlaceBuilder {
+  --
+
+  + addPlaceData(placeData : PlaceData)
+  + build()
+}
+class PlaceBuilder {
+  - id : Integer
+  - name : String
+  - placeData : PlaceData
+  - polyline : MyLatLng[]
+
+  --
+
+  + PlaceBuilder(private polyline : MyLatLng[])
+  + addId(id : Integer) : PlaceBuilder
+  + addName(name : String) : PlaceBuilder
+  + addPolyline(polyline : MyLatLng[]) : PlaceBuilder
+  + addPlaceData(placeData : PlaceData) : PlaceBuilder
+  + build() : Place
+}
+
+PlaceBuilder --> PlaceData
+PlaceBuilder --> MyLatLng
+PlaceBuilder ..> Place
+PlaceBuilder --|> AbsPlaceBuilder
+@enduml

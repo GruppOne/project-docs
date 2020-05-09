@@ -1,0 +1,22 @@
+@startuml User builder design pattern diagram
+!include ../../style/class.pu
+' -------------------------------------------------- User
+!include ../interfaces/User/User.pu
+!include ../interfaces/User/UserData.pu
+!include ../interfaces/User/LoginData.pu
+' -------------------------------------------------- UserBuilder
+!include ../classes/User/UserBuilder.pu
+!include ../classes/User/UserDataBuilder.pu
+!include ../classes/User/LoginDataBuilder.pu
+
+title Stalker web application user builder class diagram
+
+ProfileComponent o-- AbsUserBuilder
+ProfileComponent o-- AbsUserDataBuilder
+HomeComponent o-- AbsLoginDataBuilder
+ProfileComponent -[hidden]> AbsUserBuilder
+ProfileComponent -[hidden]> AbsUserDataBuilder
+HomeComponent -[hidden]> AbsLoginDataBuilder
+HomeComponent o-- AbsUserBuilder
+
+@enduml

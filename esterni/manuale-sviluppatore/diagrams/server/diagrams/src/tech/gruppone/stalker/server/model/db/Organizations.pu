@@ -1,0 +1,16 @@
+@startuml Organizations
+!include ../../../../../../../style/class.pu
+
+class model.db.Organizations {
+  - id : Integer
+  - name : String
+  - description : String
+  - createdDate : DateTime
+  - lastModifiedDate : DateTime
+
+  --
+
+  + Organizations()
+}
+
+@enduml

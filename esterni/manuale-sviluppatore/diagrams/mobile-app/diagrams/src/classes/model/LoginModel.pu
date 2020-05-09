@@ -1,0 +1,14 @@
+@startuml LoginModel diagram
+!include ../../style/class.pu
+
+class LoginModel {
+  --
+
+  + getUserLiveData() : LiveData<User>
+  + login(
+    email : String,
+    hashedPassword : String
+  ) : void
+}
+
+@enduml

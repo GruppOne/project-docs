@@ -1,0 +1,18 @@
+@startuml influxdb-write-endpoint
+!include ../../../../../style/class.pu
+
+!include ServerApplication.pu
+
+!include configuration/InfluxDBConfiguration.pu
+!include controllers/MultiLocationInfoController.pu
+!include model/api/MultiLocationInfo.pu
+!include model/db/LocationInfo.pu
+!include services/LocationInfoService.pu
+!include repositories/LocationInfoRepository.pu
+
+ServerApplication .l.> configuration.InfluxDBConfiguration
+ServerApplication .l.> controllers.MultiLocationInfoController
+ServerApplication .l.> services.LocationInfoService
+ServerApplication .l.> repositories.LocationInfoRepository
+
+@enduml

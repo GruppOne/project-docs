@@ -1,0 +1,25 @@
+@startuml Class diagram
+!include ../../style/class.pu
+
+class User <<data type>>{
+  - id : Integer
+  - email : String {readonly}
+  - firstName : String {readonly}
+  - lastName : String {readonly}
+  - birthDate : String {readonly}
+
+  --
+
+  + User(
+    id : Integer,
+    email : String,
+    firstName : String,
+    lastName : String,
+    birthDate : String
+    )
+  + toString() : String
+  + equals(Object other) : Boolean
+  + hashCode() : Integer
+}
+
+@enduml

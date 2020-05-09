@@ -1,0 +1,39 @@
+@startuml UserRepository_diagram
+!include ../../../../../../style/class.pu
+
+
+class repositories.UserRepository <<interface>> {
+  --
+
+  + findAllUsers()
+  : Flux<User>
+  + findById(
+    id : Integer
+    ) : Mono<model.db.User>
+  + findByEmail(
+    email : String
+    ) : Mono<User>
+  + createUser(
+    email : String,
+    password : String,
+    firstname : String,
+    lastname : String,
+    birthdate : DateTime
+    ) : Mono<Integer>
+  + updateUser(
+    firstname : String,
+    lastname : String,
+    birthdate : DateTime,
+    id : Integer
+    ) : Mono<Void>
+  + deleteUserById(
+    id : Integer
+    ) : Mono<Void>
+}
+
+repositories.UserRepository --> model.db.Users
+repositories.UserRepository --> model.db.UserData
+repositories.UserRepository --> model.db.UserLog
+
+repositories.UserRepository -up-|> org.springframework.data.repository.reactive.ReactiveCrudRepository
+@enduml

@@ -1,0 +1,27 @@
+@startuml UserDataBuilder Diagram
+!include ../../../style/class.pu
+class AbsUserDataBuilder {
+  --
+
+  + build()
+}
+class UserDataBuilder {
+  - firstName : String
+  - lastName : String
+  - birthDate : String
+  - createdDate : String
+  - lastModifiedDate : String
+
+  --
+
+  + addFirstName(firstName : String) : UserDataBuilder
+  + addLastName(lastName : String) : UserDataBuilder
+  + addBirthDate(birthDate : String) : UserDataBuilder
+  + addCreatedDate(createdDate : String) : UserDataBuilder
+  + addLastModifiedDate(lastModifiedDate : String) : UserDataBuilder
+  + build() : UserData
+}
+
+UserDataBuilder ..> "<<create>>" UserData
+UserDataBuilder --|> AbsUserDataBuilder
+@enduml

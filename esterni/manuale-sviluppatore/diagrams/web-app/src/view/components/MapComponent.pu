@@ -1,0 +1,31 @@
+@startuml MapComponent diagram
+!include ../../../style/class.pu
+class MapComponent {
+  - placeService : PlaceService {readonly}
+  - organizationService : OrganizationService {readonly}
+  + arrayCoord : LatLng[]
+  + arrayRoad : String[]
+  + arrayCity : String[]
+  + arrayPostcode : String[]
+  + arrayCountry : String[]
+  + arrayName : String[]
+  + organization : Organization
+  + organizationBuilder : AbsOrganizationBuilder
+  + options : object
+  + drawOptions : object
+  + polygonLayers : Polygon[]
+  + bounds : LatLngBounds[]
+
+  --
+
+  + MapComponent(
+    private placeService : PlaceService {readonly},
+    private organizationService : OrganizationService {readonly},
+  )
+  + ngOnInit() : void
+  + onDrawCreated(e : {layer : Polygon}) : void
+  + getOrganizationById(id : Integer) : void
+  + getRandomColor() : String
+  + getCentroid(latlngs : LatLng[]) : LatLng
+}
+@enduml

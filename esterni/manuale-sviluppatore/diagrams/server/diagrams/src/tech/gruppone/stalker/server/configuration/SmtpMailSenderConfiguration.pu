@@ -1,0 +1,21 @@
+@startuml SmtpMailSenderConfiguration
+!include ../../../../../../style/class.pu
+
+class configuration.SmtpMailSenderConfiguration {
+    - javaMailSender
+    : JavaMailSender {readonly}
+
+    --
+
+    + SmtpMailSenderConfiguration()
+    + send(to : String,
+    subject : String,
+    body : String
+    ) : void
+}
+
+class org.springframework.mail.javamail.JavaMailSender
+
+configuration.SmtpMailSenderConfiguration --* org.springframework.mail.javamail.JavaMailSender
+
+@enduml

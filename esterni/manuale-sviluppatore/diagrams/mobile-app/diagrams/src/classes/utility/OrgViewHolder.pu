@@ -1,0 +1,15 @@
+@startuml Class diagram
+!include ../../style/class.pu
+
+class OrganizationListAdapter::OrgViewHolder {
+  - textView : TextView
+
+  --
+
+  + OrgViewHolder(v : View)
+  + bindTo(
+    organization : Organization
+  ) : void
+}
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml LdapConfiguration
+!include ../../../../../../../style/class.pu
+
+class model.db.LdapConfiguration {
+  - id : Integer
+  - host : String
+  - username : String
+  - password : String
+
+  --
+
+  + LdapConfiguration()
+}
+
+@enduml

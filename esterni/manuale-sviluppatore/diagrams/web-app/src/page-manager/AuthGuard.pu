@@ -1,0 +1,17 @@
+@startuml AuthGuard diagram
+!include ../../style/class.pu
+class AuthGuard {
+  - loginService : LoginService {readonly}
+  - router : Router {readonly}
+  - location : Location {readonly}
+
+  --
+
+  + AuthGuard(
+    private loginService : LoginService {readonly},
+    private router : Router {readonly},
+    private location : Location {readonly},
+    )
+  + canActivate(route : ActivatedRouteSnapshot) : Boolean
+}
+@enduml

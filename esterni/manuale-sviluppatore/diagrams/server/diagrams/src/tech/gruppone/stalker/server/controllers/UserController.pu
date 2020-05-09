@@ -1,0 +1,35 @@
+@startuml UserController
+!include ../../../../../../style/class.pu
+
+class controllers.UserController{
+  - userRepository : UserRepository {frozen}
+
+  --
+
+  + getUserById(
+      userId : Integer
+    ) : Mono<User>
+  + updateUserById(
+      userId : Integer,
+      userDataWithLoginData : UserDataWithLoginData
+    ) : Mono<Void>
+  + deleteUserById(
+      userId : Integer
+    ) : Mono<Void>
+  + logoutUser(
+      userId : Integer
+    ) : Mono<Void>
+  ' + getHistoryUser(
+  '     userId : Integer
+  '   ) : Mono<Void>
+  ' + getUserTimeInside(
+  '     userId : Integer
+  '   ) : Mono<TimeInsidePlaces>
+}
+
+repositories.UserRepository <.. controllers.UserController
+controllers.UserController ..> model.api.User
+controllers.UserController ..> model.api.UserDataWithLoginData
+' controllers.UserController ..> TimeInsidePlaces
+
+@enduml
