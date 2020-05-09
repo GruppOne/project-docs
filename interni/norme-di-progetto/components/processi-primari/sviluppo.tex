@@ -242,6 +242,72 @@ I membri del gruppo devono completare e consegnare il software prodotto come spe
 \subsubsection{Metriche}%
 \label{subs:sviluppo/metriche}
 
+
+\paragraph{MPR-CCE: Complessità ciclomatica eccessiva}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPR-CCE_complessita_ciclomatica_eccessiva}
+
+Il grado di difficoltà nel testare un metodo è proporzionale al numero di cammini linearmente indipendenti: più è alto il numero di cammini, più è alto il grado di complessità. 
+Ne deriva inoltre un'esecuzione più lenta del metodo, è quindi buona norma limitare il numero massimo di cammini. La formula che calcola la complessità ciclomatica è la seguente:
+\[
+ v(G) = e - n + p
+\]
+dove:
+\begin{description}
+ \item[v(G):] complessità ciclomatica del grafo G. % chktex 36
+ \item[e:] numero di archi del grafo.
+ \item[n:] numero di nodi del grafo.
+ \item[p:] numero di componenti connesse.
+\end{description}
+\textbf{Metrica:} numero di metodi che hanno \[v(G) > 3.\]
+
+
+
+
+\paragraph{MPR-CDU: Percentuale di duplicazione del codice}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPR-BUG_percentuale_duplicazione_codice}
+
+La percentuale di duplicazione del codice è misurata attraverso l'analisi statica del codice con SonarCloud.
+Il risultato rilevato ha i seguenti significati:
+\begin{description}
+  \item[=0:] il codice scritto non è duplicato su più parti del programma.
+  \item[>0:] una parte del codice scritto è stato duplicato su più parti del programma.
+\end{description}
+
+
+\paragraph{MPR-SML: Numero di code smell}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPR-SML_numero_di_code_smell}
+
+Il numero di code smell rilevati indica il numero di una mancata best practice che i programmatori dovrebbero seguire per rendere il codice leggibile.
+Il risultato rilevato ha i seguenti significati:
+\begin{description}
+  \item[=0:] il codice scritto ha rispettato tutte le best practice segnalate.
+  \item[>0:] il codice non ha rispettato tutte le best practice segnalate.
+\end{description}
+
+
+\paragraph{MPR-BUG: Numero di bug rilevati}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPR-BUG_percentuale_duplicazione_codice}
+
+Il numero di bug rilevati per un componente software è misurato con SonarCloud.
+Il risultato rilevato ha i seguenti significati:
+\begin{description}
+  \item[=0:] non sono stati rilevati bug al componente software.
+  \item[>0:] sono stati rilevati bug al componente software.
+\end{description}
+
+
+\paragraph{MPR-BGS: Tempo stimato di risoluzione bug}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPR-BGS_tempo_stimato_risoluzione_bug}
+
+Il tempo stimato di risoluzione bug per un componente software è misurato con SonarCloud.
+Il risultato rilevato ha i seguenti significati:
+\begin{description}
+  \item[=0:] non sono stati rilevati bug al componente software.
+  \item[>0:] sono stati rilevati dei bug con un tempo di risoluzione stimato pari a quello riportato.
+\end{description}
+
+
+
 %\paragraph{MPS-ROS: Requisiti obbligatori soddisfatti}% in questo caso NON ci va il "\@". chktex 13
 %\label{par:MPS-ROS_requisiti_obbligatori_soddisfatti}
 
