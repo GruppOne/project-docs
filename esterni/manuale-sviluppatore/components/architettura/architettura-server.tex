@@ -97,11 +97,11 @@ Tramite R2DBC è possibile estendere delle interfacce e aggiungere delle annotaz
 Lo strato di persistenza contiene i database. Il backend di Stalker è dotato di due database:
 \begin{itemize}
   \item Un database mySQL per gestire i dati persistenti.
-  \item Un database influxDB per gestire le timeseries.
+  \item Un database influxDB per gestire le timeseries, in particolare per monitorare le posizioni degli utenti.
 \end{itemize}
 
-\subparagraph{Database mySQL}
-\label{subp:database_mySQL}
+\subparagraph{Schema relazionale database mySQL}
+\label{subp:schema_relazionale_database_mysql}
 Il database mySQL contiene i dati relativi agli utenti, alle organizzazioni, ai luoghi e ai ruoli ricoperti da ciascun utente nelle organizzazioni a cui è iscritto.
 Nell'immagine sottostante è presente lo schema relazionale che mostra la struttura del database.
 \begin{figure}[H]
@@ -111,12 +111,15 @@ Nell'immagine sottostante è presente lo schema relazionale che mostra la strutt
    \label{fig: schema relazionale del database mySQL}
 \end{figure}
 
-\subparagraph{Database InfluxDB}
-\label{par:database_influxDB}
+\subsection{Feature d'esempio}
+\label{sub:feature_d'esempio}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight]{img/server-influxDB-write-endpoint.png}
+    \caption{diagramma delle classi d'esempio}%
+     \label{fig: diagramma delle classi d'esempio}
+  \end{figure}
+
 \end{document}
-
-
-
-
-
 
