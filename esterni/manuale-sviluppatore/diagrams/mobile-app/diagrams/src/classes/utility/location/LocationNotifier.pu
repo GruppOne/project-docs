@@ -1,5 +1,5 @@
 @startuml LocationNotifier diagram
-!include ../../style/class.pu
+!include ../../../../style/class.pu
 
 class LocationNotifier {
   - {static} JOB_ID : Integer

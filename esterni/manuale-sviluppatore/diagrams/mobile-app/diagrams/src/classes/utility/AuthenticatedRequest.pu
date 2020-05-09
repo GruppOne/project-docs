@@ -1,5 +1,5 @@
 @startuml AuthenticatedRequest diagram
-!include ../../style/class.pu
+!include ../../../style/class.pu
 
 class AuthenticatedRequest {
   --

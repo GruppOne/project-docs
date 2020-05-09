@@ -4,9 +4,9 @@ title MVVM pattern diagram
 
 !include ../../style/class.pu
 
-!include ../classes/LoginActivity.pu
-!include ../classes/LoginViewModel.pu
-!include ../classes/LoginModel.pu
+!include ../classes/view/LoginActivity.pu
+!include ../classes/viewmodel/LoginViewModel.pu
+!include ../classes/model/LoginModel.pu
 
 LoginActivity *-- LoginViewModel
 LoginViewModel *-- LoginModel

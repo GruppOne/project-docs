@@ -1,5 +1,5 @@
 @startuml SignUpModel diagram
-!include ../../style/class.pu
+!include ../../../style/class.pu
 
 class SignupModel {
   --

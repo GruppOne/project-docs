@@ -1,5 +1,5 @@
 @startuml WebSingleton diagram
-!include ../../style/class.pu
+!include ../../../style/class.pu
 
 class WebSingleton {
   - {static} WebSingleton instance {readonly}

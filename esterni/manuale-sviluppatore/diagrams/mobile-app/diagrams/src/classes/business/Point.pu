@@ -1,5 +1,5 @@
 @startuml Class diagram
-!include ../../style/class.pu
+!include ../../../style/class.pu
 
 class Point <<data type>> {
   - {static} EARTH_EQUAT_RADIUS : Real

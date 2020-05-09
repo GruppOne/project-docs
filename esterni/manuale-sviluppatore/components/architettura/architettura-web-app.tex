@@ -1,6 +1,35 @@
-\documentclass[../manuale-sviluppatore.tex]{subfiles}
+\documentclass[../../manuale-sviluppatore.tex]{subfiles}
 
 \begin{document}
 
+\subsubsection{Architettura generale}%
+\label{subs:architettura_generale}
+
+%TODO diagramma dei package qui
+
+La web application di stalker si basa sul design pattern architetturale Model-View-ViewModel, come è possibile osservare in questo diagramma dei package il ViewModel è rappresentato dai component di angular si collegano ai propri template html che rappresenta la View, i servizi che gestiscono la business login e i modelli invece rappresentano il Model.
+Questa architettura ci consente di lavorare in maniera asincrona nelle chiamate effettuate al server grazie agli \textit{Observables}, la vista inoltre rimane sempre aggiornata con il ViewModel tramite il \textit{two way data binding}.
+%TODO two way data binding here
+
+\subsubsection{Comunicazione con il server}%
+\label{subs:comunicazione_server}
+
+La comunicazione con il server lasciata completamente in mano ai servizi.
+In Stalker è stato modellato un servizio per ogni dato che saremmo andati ad utilizzare, tutti questi servizi si interfacciano poi con il servizio HttpClientService che si occupa di mandare le richieste http rivolte agli endpoint definiti dalla nostra API che vengono esposti dal server.
+Tutte le richieste http in uscita vengono intercettate dalla class AuthHttpInterceptor che aggiunge un header per l'autenticazione in caso di chiamate agli endpoint di Stalker; il funzionamento di questa classe è definito nel dettaglio in §\ref{subs:autenticazione}.
+Le risposte alle chiamate del server tornano poi ad Http
+
+% subs:comunicazione_server (end)
+
+% subs:architettura_generale (end)
+\subsubsection{feature principali}%
+\label{subs:feature_principali}
+
+\paragraph{Home page}%
+\label{par:home_page}
+La visualizzazione del pagina home una volta arrivati sul sito di Stalker
+
+% par:home_page (end)
+% subs:feature_principali (end)
 
 \end{document}

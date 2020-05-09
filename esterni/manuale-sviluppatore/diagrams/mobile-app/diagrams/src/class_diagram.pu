@@ -25,8 +25,8 @@ title Stalker mobile app class diagram
 !include ./classes/utility/StalkerActivity.pu
 !include ./classes/utility/WebSingleton.pu
 !include ./classes/utility/CurrentSessionSingleton.pu
-!include ./classes/utility/GooglePositionInterface.pu
-!include ./classes/utility/LocationNotifier.pu
+!include ./classes/utility/location/GooglePositionInterface.pu
+!include ./classes/utility/location/LocationNotifier.pu
 
 /'----------------------------------------------------- Business'/
 !include ./classes/business/Organization.pu

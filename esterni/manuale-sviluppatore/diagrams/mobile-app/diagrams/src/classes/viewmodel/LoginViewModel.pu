@@ -1,5 +1,5 @@
 @startuml LoginViewModel diagram
-!include ../../style/class.pu
+!include ../../../style/class.pu
 
 class LoginViewModel {
   - model : LoginModel

@@ -5,7 +5,7 @@ title Decorator pattern diagram
 
 !include ../../style/class.pu
 
-!include ../classes/AuthenticatedRequest.pu
+!include ../classes/utility/AuthenticatedRequest.pu
 
 class com.android.volley.toolbox.JsonObjectRequest
 

@@ -1,5 +1,5 @@
 @startuml StalkerActivity Diagram
-!include ../../style/class.pu
+!include ../../../style/class.pu
 
 class StalkerActivity{
   --

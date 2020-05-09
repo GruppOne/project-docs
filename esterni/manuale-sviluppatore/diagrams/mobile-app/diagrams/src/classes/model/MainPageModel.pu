@@ -1,5 +1,5 @@
 @startuml MainPageModel diagram
-!include ../../style/class.pu
+!include ../../../style/class.pu
 
 class MainPageModel {
   --
