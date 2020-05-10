@@ -21,6 +21,19 @@ Per eseguire i test di unità tramite Karma, eseguire il comando: \par\bigskip
 \end{center}
 \par\bigskip
 
+\subsubsection{estensione test di unità}%
+\label{subs:estensione_test_unita_webapp}
+
+I test di unità vengono definiti utilizzando la sintassi di Jasmine, dunque per aggiungere un test ad un componente è sufficiente creare un blocco come il seguente:
+
+\typescript{  it('should create', () => { %chktex 36
+  expect(component).toBeTruthy(); %chktex 36
+});} %chktex 36
+
+Poi definire un altro test.
+I test in seguito verranno eseguiti con il framework Karma, che esegue i test sul browser Chrome.
+
+% subs:estensione_test_unita_webapp (end)
 \subsubsection{Esecuzione test end-to-end}%
 \label{subs:esecuzione_test_end_to_end}
 
@@ -31,6 +44,12 @@ Per eseguire i test end-to-end tramite Protractor, eseguire il comando: \par\big
 \end{center}
 \par\bigskip
 
+\subsubsection{Estensione test end-to-end}%
+\label{subs:estensione_test_end_to_end}
+I test end-to-end vengono definiti utilizzando la sintassi gherkin all'interno del framework cucumber, quindi la prima cosa da fare è definire testualmente il test.
+In seguito vanno definiti gli step in codice a cui gli step testuali corrispondono.
+Infine i test vanno eseguiti tramite Protractor, che simula l'interazione dell'utente con il browser.
+% subs:estensione_test_end_to_end (end)
 % \subsection{Mobile application}%
 % \label{sub:}
 %TODO
