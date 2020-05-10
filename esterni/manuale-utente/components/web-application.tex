@@ -14,25 +14,21 @@
 \subsection{Manuale d'uso}%
 \label{sub:manuale-uso-web}
 
-\subsubsection{Pagina home}%
-\label{subs:pagina_home}
+\subsubsection{Pagina principale}%
+\label{subs:pagina_principale}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=175mm]{pagina-home.png}
-    \caption{Pagina di accesso}%
-    \label{fig:web_app_pagina_accesso}
+    \caption{Pagina principale}%
+    \label{fig:web_app_pagina_principale}
 \end{figure}
-
-Quando ci si connette alla web application di Stalker, l'utente viene indirizzato alla pagina principale (Home) che si trova al link \textit{localhost:4200/home}. \par\bigskip
-
-L'utente non è autenticato e ha le seguenti modalità d'azione:
+Quando l'utente si vuole connettere all'interfaccia amministratore di Stalker, non è autenticato e può eseguire queste azioni, ognuna diversa dall'altra:
 \begin{itemize}
-    \item essere registrato alla web app di Stalker e accedere con le proprie credenziali email e password (~\ref{fig:web_app_form_accesso}).
-    \item recuperare la password nel caso l'abbia smarrita (~\ref{fig:web_app_form_recupero_password}).
-    \item selezionare il menu ad hamburger posizionato sulla barra superiore a destra, per visualizzare le informazioni riguardo a Stalker. Questo menu è sempre presente in ogni pagina.
+    \item accedere a Stalker, nel caso sia già registrato, con le proprie credenziali email e password (§~\ref{fig:web_app_form_accesso}).
+    \item recuperare la password nel caso l'abbia smarrita (§~\ref{fig:web_app_form_recupero_password}).
+    \item selezionare il menu ad hamburger posizionato sulla barra superiore a destra, per visualizzare le informazioni riguardo a Stalker. Questo menu è presente in ogni pagina.
 \end{itemize}
-\newpage
 
 \paragraph{Accesso alla web application}%
 \label{par:accesso_alla_web_application}
@@ -43,18 +39,14 @@ L'utente non è autenticato e ha le seguenti modalità d'azione:
     \caption{Form di accesso alla web application di Stalker}%
     \label{fig:web_app_form_accesso}
 \end{figure}
-
 L'utente vuole accedere al sistema di Stalker, quindi deve eseguire i seguenti passaggi:
 \begin{itemize}
     \item inserire correttamente l'email.
-    \item inserire la password che deve contenere almeno 8 caratteri (almeno una lettera maiuscola, una lettera minuscola, un numero ed un simbolo) e al massimo ne può contenere 32. La password può essere visualizzata normalmente durante la sua digitazione, cliccando sull'occhio barrato alla fine del campo d'inserimento.
-    \item selezionare il pulsante \textbf{Login} per inviare le credenziali al server.
-\end{itemize} \par\bigskip
-
-Nel caso l'operazione venga svolta correttamente, si avrà diritto all'accesso nella web application di Stalker, visualizzando la pagina del profilo personale (~\ref{fig:web_app_visualizza_profilo_personale}).
-
+    \item inserire la password. La password può essere visualizzata normalmente durante la sua digitazione, cliccando sull'occhio barrato alla fine del campo d'inserimento.
+    \item selezionare il pulsante \textbf{Login} per concludere la procedura di accesso.
+\end{itemize}
+Nel caso l'operazione venga svolta correttamente, si avrà diritto all'accesso nella web application di Stalker, visualizzando la pagina del profilo personale (§~\ref{fig:web_app_visualizzazione_profilo_personale}).
 In caso contrario, l'utente non è autorizzato, in quanto la procedura è fallita.
-
 Le cause possono essere le seguenti:
 \begin{itemize}
     \item l'email inserita non rispetta i vincoli imposti dal sistema di Stalker.
@@ -62,9 +54,7 @@ Le cause possono essere le seguenti:
     \item l'email e la password inserite non rispettano i vincoli imposti dal sistema di Stalker.
     \item l'email e la password inserite rispettano i vincoli, ma non sono presenti all'interno del database di Stalker.
 \end{itemize}
-
 In ogni caso, il messaggio di errore non sarà specifico ma generico, per motivi di sicurezza.
-\newpage
 
 \paragraph{Recupero password}%
 \label{par:recupero_password}
@@ -75,42 +65,34 @@ In ogni caso, il messaggio di errore non sarà specifico ma generico, per motivi
     \caption{Form recupero password}%
     \label{fig:web_app_form_recupero_password}
 \end{figure}
-
 L'utente ha smarrito la password o non se la ricorda più, quindi deve eseguire tre passaggi:
 \begin{itemize}
-    \item cliccare alla voce \textbf{Forgot your password?} presente nel form per l'accesso alla web application (~\ref{fig:web_app_pagina_accesso}).
+    \item cliccare alla voce \textbf{Forgot your password?} presente nel form per l'accesso alla web application (§~\ref{fig:web_app_pagina_principale}).
     \item inserire correttamente l'email.
     \item selezionare il pulsante \textbf{Recover} per inviare la richiesta al server.
-\end{itemize} \par\bigskip
+\end{itemize}
 
 Nel caso l'operazione venga svolta correttamente, l'utente riceverà una mail sulla propria casella postale contenente il link per il recupero della password.
-
 In caso contrario, l'utente non può recuperare la password, in quanto la procedura è fallita.
-
 Le cause possono essere le seguenti:
 \begin{itemize}
     \item l'email inserita non rispetta i vincoli imposti dal sistema di Stalker.
     \item l'email inserita rispetta i vincoli, ma non è presente nel database di Stalker, quindi non si può avviare la procedura.
 \end{itemize}
-
 In ogni caso, il messaggio di errore non sarà specifico ma generico, per motivi di sicurezza.
-\newpage
 
-\subsubsection{Visualizza profilo personale}%
-\label{subs:visualizza_profilo_personale}
+\subsubsection{Visualizzazione profilo personale}%
+\label{subs:visualizzazione_profilo_personale}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=120mm]{visualizza-profilo-personale.png}
-    \caption{Visualizza profilo personale}%
-    \label{fig:web_app_visualizza_profilo_personale}
+    \caption{Visualizzazione profilo personale}%
+    \label{fig:web_app_visualizzazione_profilo_personale}
 \end{figure}
-
 L'utente ha appena effettuato l'autenticazione alla web application di Stalker, quindi si ritrova nella pagina del profilo personale.
-
 I dati che la pagina mette a disposizione dell'utente sono:
 \begin{itemize}
-    \item una foto profilo.
     \item nome e cognome.
     \item la data di nascita.
     \item l'email con la quale è registrato in Stalker.
@@ -121,38 +103,31 @@ I dati che la pagina mette a disposizione dell'utente sono:
         \item il numero totale di organizzazioni in cui è manager.
         \item il numero totale di organizzazioni in cui è viewer.
     \end{itemize}
-\end{itemize} \par\bigskip
-
+\end{itemize}
 Inoltre, la seguente pagina fornisce alcune operazioni:
 \begin{itemize}
-    \item la visualizzazione della lista di tutte le organizzazioni, cliccando il pulsante \textbf{Organizations list} (~\ref{fig:web_app_visualizza_organizzazioni}).
+    \item la visualizzazione della lista di tutte le organizzazioni, cliccando il pulsante \textbf{Organizations list} (§~\ref{fig:web_app_visualizzazione_organizzazioni}).
     \item la creazione di una nuova organizzazione, cliccando il pulsante \textbf{Create}.
 \end{itemize}
-\newpage
 
-\subsubsection{Visualizza organizzazioni}%
-\label{subs:visualizza_organizzazioni}
+\subsubsection{Visualizzazione organizzazioni}%
+\label{subs:visualizzazione_organizzazioni}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=160mm]{organizations-list.png}
-    \caption{Visualizza organizzazioni}%
-    \label{fig:web_app_visualizza_organizzazioni}
+    \caption{Visualizzazione organizzazioni}%
+    \label{fig:web_app_visualizzazione_organizzazioni}
 \end{figure}
-
-L'utente ha cliccato il pulsante \textbf{Organizations list}, e quindi ha la possibilità di visualizzare la propria lista delle organizzazioni nelle quali ha un determinato ruolo.
-
-La lista delle organizzazioni che l'utente riceve contiene le seguenti informazioni:
-
+L'utente ha cliccato il pulsante \textbf{Organizations list}, e quindi ha la possibilità di visualizzare la lista delle organizzazioni nelle quali ha un determinato ruolo.
+La lista delle organizzazioni che l'utente visualizza contiene le seguenti informazioni:
 \begin{description}
-    \item[Name] nome dell'organizzazione.
-    \item[Description] descrizione dell'organizzazione.
-    \item[Role] un'icona che rappresenta il ruolo dell'utente in un'organizzazione. È possibile visualizzare testualmente il ruolo di un utente spostando il cursore sopra l'icona.
-    \item[Type] un'icona che rappresenta se l'organizzazione è di dominio pubblico o di dominio privato: è possibile visualizzare testualmente il dominio di un'organizzazione spostando il cursore sopra l'icona.
-\end{description} \par\bigskip
-
+    \item[Name:] nome dell'organizzazione.
+    \item[Description:] descrizione dell'organizzazione.
+    \item[Role:] un'icona che rappresenta il ruolo dell'utente in un'organizzazione. È possibile visualizzare testualmente il ruolo di un utente spostando il cursore sopra l'icona.
+    \item[Type:] un'icona che rappresenta se l'organizzazione è di dominio pubblico o di dominio privato: è possibile visualizzare testualmente il dominio di un'organizzazione spostando il cursore sopra l'icona.
+\end{description}
 L'utente ha la possibilità di interagire con la pagina e può eseguire queste operazioni:
-
 \begin{itemize}
 \item visualizzare la pagina della relativa organizzazione, contenente informazioni più dettagliate, cliccando sopra l'apposita organizzazione in lista.
 \item filtrare le organizzazioni in lista per nome tramite un'apposita area di ricerca, sopra la lista delle organizzazioni.
@@ -160,45 +135,36 @@ L'utente ha la possibilità di interagire con la pagina e può eseguire queste o
 \item cambiare la pagina della lista delle organizzazioni, tramite le apposite frecce direzionali sotto la lista delle organizzazioni.
 \end{itemize}
 
-\newpage
-\paragraph{Visualizza dettagli organizzazione}%
-\label{par:visualizza_dettagli_organizzazione}
+\paragraph{Visualizzazione dettagli organizzazione}%
+\label{par:visualizzazione_dettagli_organizzazione}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=120mm]{visualizza-dettagli-organizzazione.png}
-    \caption{Visualizza dettagli organizzazione}%
-    \label{fig:web_app_visualizza_dettagli_organizzazione}
+    \caption{Visualizzazione dettagli organizzazione}%
+    \label{fig:web_app_visualizzazione_dettagli_organizzazione}
 \end{figure}
-
 Una volta che l'utente seleziona un'organizzazione dalla lista di organizzazioni, viene indirizzato in un'altra pagina che riporta i dettagli dell'organizzazione selezionata.
-
 I dati che la pagina mette a disposizione sono, dall'alto verso il basso:
 \begin{itemize}
     \item il nome dell'organizzazione.
     \item una descrizione relativa all'organizzazione.
     \item una mappa dei luoghi che appartengono all'organizzazione, evidenziati con colori diversi per mostrarli chiaramente sulla mappa.
-    \item la configurazione del \glossarioLocale{server LDAP}, presente solo se l'organizzazione è privata e quindi richiede un'autenticazione per l'accesso ad essa.
-    \item nome e cognome degli utenti che sono owner dell'organizzazione.
+    \item la configurazione del \glossarioLocale{server LDAP}, presente solo se l'organizzazione è privata e quindi richiede un'autenticazione per l'accesso.
+    \item nome e cognome dell'utente che è owner dell'organizzazione.
     \item nome e cognome degli utenti che sono manager dell'organizzazione.
     \item nome e cognome degli utenti che sono viewer dell'organizzazione.
     \item la data di creazione dell'organizzazione.
     \item la data dell'ultima modifica applicata alle informazioni dell'organizzazione.
 \end{itemize}
-
-Inoltre, viene fornita la possibilità di modificare le informazioni dell'organizzazione cliccando il pulsante \textbf{Edit}, venendo così indirizzati alla pagina di modifica (~\ref{subs:modififica_dettagli_organizzazione}).
-
-Bisogna evidenziare che la modifica di questi dati è consentita solo agli utenti che ne hanno il diritto. \par\bigskip
+Inoltre, viene fornita la possibilità di modificare le informazioni dell'organizzazione cliccando il pulsante \textbf{Edit}, venendo così indirizzati alla pagina di modifica (§~\ref{subs:modififica_dettagli_organizzazione}).
+La modifica di questi dati è consentita solo agli utenti che ne hanno il diritto.
 
 \subsubsection{Creazione organizzazione}%
 \label{subs:creazione_organizzazione}
 
-L'utente necessita la creazione di un'organizzazione, che può avvenire in 4 passaggi sequenziali.
-
-Ogni passaggio è identificato da un numero progressivo che va da 1 a 4, inserito all'interno di un cerchio, che è colorato di blu per il passaggio corrente e i passaggi nella quale sono state attuate modifiche, mentre è colorato di grigio per i passaggi che devono ancora essere effettuati.
-
+L'utente vuole creare un'organizzazione, che avviene in 4 passaggi sequenziali.
 I 4 passaggi per la creazione sono i seguenti:
-
 \begin{enumerate}
     \item \textbf{Organization details}
 
@@ -208,16 +174,13 @@ I 4 passaggi per la creazione sono i seguenti:
       \caption{Inserimento dettagli dell'organizzazione}%
       \label{fig:web_app_inserimento_dettagli_organizzazione}
     \end{figure}
-
     I campi che devono essere inseriti obbligatoriamente sono:
     \begin{description}
-      \item[Organization name] che corrisponde al nome dell'organizzazione che l'utente vuole creare.
-      \item[Organization description] che corrisponde alla descrizione dell'organizzazione che l'utente vuole creare.
-    \end{description} \par\bigskip
+      \item[Organization name:] che corrisponde al nome dell'organizzazione che l'utente vuole creare.
+      \item[Organization description:] che corrisponde alla descrizione dell'organizzazione che l'utente vuole creare.
+    \end{description}
+    Cliccando \textbf{Next} si va al passaggio 2.
 
-    Cliccando \textbf{Next} si va al passaggio 2. \par\bigskip
-
-    \newpage
     \item \textbf{Organization places}
 
     \begin{figure}[H]
@@ -226,22 +189,17 @@ I 4 passaggi per la creazione sono i seguenti:
       \caption{Inserimento luoghi dell'organizzazione}%
       \label{fig:web_app_inserimento_luoghi_organizzazione}
     \end{figure}
-
     Per eseguire correttamente la creazione di un'organizzazione, in questo passaggio va creato almeno un luogo all'interno dell'organizzazione.
-
-    I luoghi si possono aggiungere direttamente dalla mappa interattiva, che si può ingrandire (+) oppure rimpicciolire (-) tramite i pulsanti in alto alla sinistra nella mappa.
+    I luoghi si possono aggiungere direttamente dalla mappa interattiva, che si può ingrandire oppure rimpicciolire tramite i pulsanti in alto alla sinistra nella mappa.
     I luoghi si possono anche modificare oppure eliminare, nel caso in cui i luoghi creati siano errati.
-
     Per compiere azioni sulla mappa, ci sono tre pulsanti in alto a destra:
     \begin{itemize}
         \item cliccando il pulsante indicato con il poligono nero, si può creare un luogo bidimensionale sulla mappa cliccando con il tasto sinistro sui punti d'interesse. Per chiudere il poligono basta cliccare sul lato più adiacente all'ultimo punto cliccato dall'utente. Una volta creato il luogo, i dati relativi al luogo creato vengono rilevati attraverso \glossarioLocale{reverse geocoding}.
         \item cliccando il pulsante indicato con un foglio e una matita, si può modificare un luogo selezionandolo sulla mappa e modificando i vertici del poligono.
         \item cliccando il pulsante indicato con il cestino, si può eliminare un luogo selezionandolo sulla mappa.
-    \end{itemize} \par\bigskip
+    \end{itemize}
+    Cliccando \textbf{Back} si torna al passaggio 1, mentre cliccando \textbf{Next} si va al passaggio 3.
 
-    Cliccando \textbf{Back} si torna al passaggio 1, mentre cliccando \textbf{Next} si va al passaggio 3. \par\bigskip
-
-    \newpage
     \item \textbf{LDAP configuration}-\textit{opzionale}
 
     \begin{figure}[H]
@@ -250,26 +208,21 @@ I 4 passaggi per la creazione sono i seguenti:
       \caption{Configurazione LDAP non attiva}%
       \label{fig:web_app_configurazione_ldap_non_attiva}
     \end{figure}
-
-    Inizialmente, la vista della pagina web presenta un \glossarioLocale{toggle} con la voce \textbf{Use LDAP} che è deselezionato, in quanto la configurazione LDAP è opzionale. \par\bigskip
-
+    Inizialmente, la vista della pagina web presenta un \glossarioLocale{toggle} con la voce \textbf{Use LDAP} che è deselezionato, in quanto la configurazione LDAP è opzionale.
     Di default l'organizzazione è di dominio pubblico, ma se l'organizzazione che l'utente vuole creare è di dominio privato, allora deve cliccare sul toggle per attivare la visualizzazione dei campi che permettono la configurazione LDAP\@.
-
     \begin{figure}[H]
       \centering
       \includegraphics[width=120mm]{create-organization-3b.png}
       \caption{Inserimento dettagli configurazione LDAP}%
       \label{fig:web_app_inserimento_dettagli_configurazione_ldap}
-    \end{figure} \newpage
-
+    \end{figure}
     I campi che devono essere compilati sono:
     \begin{description}
-        \item[Host] che corrisponde all'indirizzo IP del server LDAP per l'autenticazione.
-        \item[Username] che è lo username per accedere all'organizzazione privata.
-        \item[Password] che è la password per accedere all'organizzazione privata.
-    \end{description} \par\bigskip
-
-    Cliccando \textbf{Back} si torna al passaggio 2, mentre cliccando \textbf{Next} si va al passaggio 4. \par\bigskip
+        \item[Host:] che corrisponde all'indirizzo IP del server LDAP per l'autenticazione.
+        \item[Username:] che è lo username per accedere all'organizzazione privata.
+        \item[Password:] che è la password per accedere all'organizzazione privata.
+    \end{description}
+    Cliccando \textbf{Back} si torna al passaggio 2, mentre cliccando \textbf{Next} si va al passaggio 4.
 
     \item \textbf{Confirm}
 
@@ -278,22 +231,15 @@ I 4 passaggi per la creazione sono i seguenti:
         \includegraphics[width=120mm]{create-organization-4.png}
         \caption{Conferma creazione organizzazione}%
         \label{fig:web_app_conferma_organizzazione}
-    \end{figure} \par\bigskip
-
+    \end{figure}
     Questo è l'ultimo passaggio per la conferma della creazione dell'organizzazione. Per confermarla, cliccare la voce \textbf{Submit}.
-
 \end{enumerate}
-\newpage
 
 \subsubsection{Modifica dettagli organizzazione}%
 \label{subs:modififica_dettagli_organizzazione}
 
-L'utente necessita la modifica dei dettagli di un'organizzazione, che può avvenire in 5 passaggi sequenziali.
-
-Ogni passaggio è identificato da un numero progressivo che va da 1 a 5, inserito all'interno di un cerchio, che è colorato di blu per i passaggi precedenti effettuati e quello corrente, mentre è colorato di grigio per i passaggi successivi che devono ancora essere effettuati.
-
+L'utente vuole modificare i dettagli di un'organizzazione, che avviene in 5 passaggi sequenziali.
 I 5 passaggi per la modifica sono i seguenti:
-
 \begin{enumerate}
     \item \textbf{Organization details}
 
@@ -303,16 +249,13 @@ I 5 passaggi per la modifica sono i seguenti:
         \caption{Modifica dettagli dell'organizzazione}%
         \label{fig:web_app_modifica_dettagli_organizzazione}
     \end{figure}
-
     I campi che possono essere modificati sono:
     \begin{description}
         \item[Organization name] che corrisponde al nome dell'organizzazione.
         \item[Organization description] che corrisponde alla descrizione dell'organizzazione.
-    \end{description} \par\bigskip
+    \end{description}
+    Cliccando \textbf{Next} si va al passaggio 2.
 
-    Cliccando \textbf{Next} si va al passaggio 2. \par\bigskip
-
-    \newpage
     \item \textbf{Organization places}
 
     \begin{figure}[H]
@@ -321,16 +264,13 @@ I 5 passaggi per la modifica sono i seguenti:
         \caption{Modifica luoghi dell'organizzazione}%
         \label{fig:web_app_modifica_luoghi_organizzazione}
     \end{figure}
-
     I luoghi si possono aggiungere, modificare ed eliminare direttamente dalla mappa interattiva, che si può ingrandire (+) oppure rimpicciolire (-) tramite i pulsanti in alto alla sinistra nella mappa.
-
     Per compiere azioni sulla mappa, ci sono tre pulsanti in alto a destra:
     \begin{itemize}
         \item cliccando il pulsante indicato con il poligono nero, si può creare un luogo bidimensionale sulla mappa cliccando con il tasto sinistro sui punti d'interesse. Per chiudere il poligono basta cliccare sul lato più adiacente all'ultimo punto cliccato dall'utente. Una volta creato il luogo, i dati relativi al luogo creato vengono rilevati attraverso \glossarioLocale{reverse geocoding}.
         \item cliccando il pulsante indicato con un foglio e una matita, si può modificare un luogo selezionandolo sulla mappa e modificando i vertici del poligono.
         \item cliccando il pulsante indicato con il cestino, si può eliminare un luogo selezionandolo sulla mappa.
     \end{itemize}
-
     Cliccando \textbf{Back} si torna al passaggio 1, mentre cliccando \textbf{Next} si va al passaggio 3.
 
     \item \textbf{LDAP configuration}-\textit{opzionale}
@@ -341,17 +281,14 @@ I 5 passaggi per la modifica sono i seguenti:
         \caption{Modifica configurazione LDAP}%
         \label{fig:web_app_modifica_configurazione_ldap}
     \end{figure}
-
     I campi che possono essere modificati sono:
     \begin{description}
         \item[Host] che corrisponde all'indirizzo IP del server LDAP per l'autenticazione.
         \item[Username] che è lo username per accedere all'organizzazione privata.
         \item[Password] che è la password per accedere all'organizzazione privata.
-    \end{description} \par\bigskip
+    \end{description}
+    Cliccando \textbf{Back} si torna al passaggio 2, mentre cliccando \textbf{Next} si va al passaggio 4.
 
-    Cliccando \textbf{Back} si torna al passaggio 2, mentre cliccando \textbf{Next} si va al passaggio 4. \par\bigskip
-
-    \newpage
     \item \textbf{Administrator management}-\textit{opzionale}
 
     \begin{figure}[H]
@@ -360,27 +297,19 @@ I 5 passaggi per la modifica sono i seguenti:
         \caption{Modifica privilegi utenti}%
         \label{fig:web_app_modifica_privilegi_utenti}
     \end{figure}
-
     Per aggiungere nuovi utenti con privilegi, si possono usufruire due campi di inserimento dati:
     \begin{itemize}
         \item un menu a tendina per la scelta della tipologia di utente, ovvero:
         \begin{itemize}
-            \item \glossarioLocale{Administrator}.
-            \item \glossarioLocale{Owner}.
             \item \glossarioLocale{Manager}.
             \item \glossarioLocale{Viewer}.
         \end{itemize}
-        \item un campo dove aggiungere nome e cognome dell'utente del nuovo administrator.
-    \end{itemize} \par\bigskip
-
+        \item un campo dove aggiungere l'email dell'utente del nuovo administrator.
+    \end{itemize}
     Una volta che questi dati sono stati inseriti correttamente, l'utente con i nuovi privilegi viene aggiunto cliccando sulla spunta che si trova a destra dei campi d'inserimento.
-    % se l'utente inserito non esiste, che succede?? Aggiungere queste righe e che errori si possono verificare
+    Non ci sono limiti per la ripetizione di questa procedura.
+    Cliccando \textbf{Back} si torna al passaggio 3, mentre cliccando \textbf{Next} si va al passaggio 5.
 
-    Non ci sono limiti per la ripetizione di questa procedura. \par\bigskip
-
-    Cliccando \textbf{Back} si torna al passaggio 3, mentre cliccando \textbf{Next} si va al passaggio 5. \par\bigskip
-
-    \newpage
     \item \textbf{Confirm}
 
     \begin{figure}[H]
@@ -388,12 +317,9 @@ I 5 passaggi per la modifica sono i seguenti:
         \includegraphics[width=120mm]{5-conferma-modifiche.png}
         \caption{Conferma modifiche}%
         \label{fig:web_app_conferma_modifiche}
-    \end{figure} \par\bigskip
-
+    \end{figure}
     Questo è l'ultimo passaggio per la conferma delle modifiche effettuate. Per confermarle, cliccare la voce \textbf{Submit}.
-
 \end{enumerate}
-\newpage
 
 % add other functionalities
 
@@ -403,10 +329,7 @@ I 5 passaggi per la modifica sono i seguenti:
 \subsubsection{Accesso all'applicazione non disponibile}%
 \label{subs:web_app_accesso_non_disponibile}
 
-Nel caso ci siano problemi di collegamento alla web application, consigliamo di consultare il sito \textbf{http://www.isitdownrightnow.com/} per verificare se il problema riguarda il vostro provider oppure il nostro server.
-
-Nel caso in problema sia legato al nostro server, vi preghiamo di riprovare l'accesso in un secondo momento.
-
-Se il problema dovesse persistere, vi preghiamo di segnalarlo nelle modalità discusse nella sezione \textit{Supporto tecnico}.
+Nel caso si verifichino problemi di collegamento alla web application, visitare il sito \href{http://www.isitdownrightnow.com/} per verificare se il problema è legato alla web application di Stalker.
+Nel caso la risposta sia affermativa, segnalarlo nelle modalità discusse nella sezione sezione §~\ref{sec:supporto_tecnico}.
 
 \end{document}
