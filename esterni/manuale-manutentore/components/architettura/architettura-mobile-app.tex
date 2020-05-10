@@ -90,8 +90,17 @@ Per mantenere la separazione delle responsabilità, la \java{MainPageActivity} r
 ~~\label{fig:app/diagramma_classi_recyclerview}
 \end{figure}
 
+\subsubsection{Classe App}%
+\label{subs:classe_app}
+
+In alcune occasioni, ad esempio al momento della creazione della \java{RequestQueue} nel \java{WebSingleton} (§\ref{subs:richieste_http}), è necessario avere accesso al contesto dell'applicazione, rappresentato da un'istanza di \java{android.content.Context}.
+Generalmente questo oggetto, condiviso da tutta l'applicazione, si ottiene invocando il metodo \java{getApplicationContext()} su una qualunque istanza di \java{Context} associata ad un'activity.
+Per evitare di introdurre dipendenze circolari abbiamo scelto di definire la classe \java{utility.App}, derivata da \java{android.app.Application}, responsabile di mantenere lo stato globale dell'applicazione.
+\java{App} ha un metodo aggiuntivo \java{getAppContext()} che espone direttamente il contesto dell'applicazione.
+
 \subsubsection{Richieste HTTP}%
 \label{subs:richieste_http}
+
 Per le richieste HTTP abbiamo scelto la libreria \textit{Volley}, consigliata dalle guide ufficiali di Android, perché permette la loro esecuzione asincrona ed efficiente, senza la difficoltà associata alla gestione di un sistema di worker thread.
 Le richieste vengono inserite in una struttura a coda gestita da un'istanza di \java{com.android.volley.RequestQueue}, la quale mantiene anche una cache.
 Per questo motivo, l'efficienza della libreria migliora se tutte le richieste che l'app effettua sono convogliate nella stessa coda, quindi le guide suggeriscono di astrarre ulteriormente la funzionalità attraverso un singleton.
@@ -99,13 +108,14 @@ La classe \java{utility.WebSingleton} espone metodi per eseguire specifiche rich
 
 \paragraph{Autenticazione}%
 \label{par:autenticazione}
+
 Le richieste che richiedono l'autenticazione devono contenere un header \texttt{Authorization} contenente un JWT valido come valore.
 La classe \java{utility.AuthenticatedRequest} aggiunge automaticamente questo header, utilizzando il decorator pattern.
-% par:autenticazione (end)
-% subs:richieste_http (end)
+
+\subsubsection{Gestione della posizione}%
+\label{subs:gestione_della_posizione}
+
 \subsubsection{Logica di business}%
 \label{subs:logica_di_business}
 
-% subs:logica_di_business (end)
-% sub:mobile_app (end)
 \end{document}
