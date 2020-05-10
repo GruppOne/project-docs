@@ -1,0 +1,90 @@
+\documentclass{article}
+
+\input{../../commons/config}
+
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale interno --- 04/05/2020}
+
+\setResponsabile{Luca Ercole}
+\setRedattori{Alberto Gobbo}
+\setVerificatori{
+  Alberto Cocco
+}
+\setUso{Interno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 04/05/2020}
+\setModifiche{%
+\cellcolor{white!80!lightgray!100} & Luca Ercole & 2020--05--05 & approva documento \\%
+\cellcolor{white!80!lightgray!100} & Alberto Cocco & 2020--05--04 & verifica verbale \\%
+\multirow{-3}{*}{-} & Alberto Gobbo & 2020--05--04 & stendi verbale%
+}
+
+\disabilitaVersione{}
+\disabilitaElencoFigure{}
+\disabilitaElencoTabelle{}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Informazioni logistiche}%
+\label{sec:informazioni_logistiche}
+
+\begin{description}
+  \item [Luogo] videochiamata su Google Hangouts
+  \item [Data] 04/05/2020
+  \item [Ora] 18:00 \symbol{8594} 19:30
+\end{description}
+
+\subsection{Membri del gruppo presenti}%
+\label{sub:membri_del_gruppo_presenti}
+
+\begin{enumerate}
+  \item Riccardo Agatea
+  \item Riccardo Cestaro
+  \item Alberto Cocco
+  \item Luca Ercole
+  \item Alberto Gobbo
+  \item Alessandro Rizzo
+\end{enumerate}
+% sub:membri_del_gruppo_presenti (end)
+
+\section{Introduzione}%
+\label{sec:introduzione}
+L'incontro è avvenuto tramite chiamata Hangouts.
+Lo scopo principale era pianificare il lavoro da svolgere nel nuovo incremento e fare un resoconto del lavoro svolto nell'incremento appena concluso.
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item Pianificazione lavoro settimanale
+  \item Aggiornamento stato requisiti per componente
+\end{itemize}
+
+\section{Pianificazione lavoro settimanale}%
+\label{sec:pianificazione_lavoro_settimanale}
+In vista delle imminenti scadenze della Product Baseline (PB) di venerdì 08/08/2020 e della consegna dei documenti per la Revisione di Qualifica (RA) di lunedì 11 maggio 2020, il gruppo ha discusso riguardo alla suddivisione del lavoro settimanale.
+A causa di queste scadenze, il gruppo è costretto a riprogrammare il lavoro, lasciando da parte almeno fino a lunedì 11 maggio 2020 la parte relativa allo sviluppo delle tre componenti software, e quindi a riorganizzare il lavoro per il quinto incremento la settimana successiva (dal 12/05/2020 al 19/05/2020).
+
+\section{Aggiornamento stato requisiti per componente}%
+\label{sec:aggiornamento_stato_requisiti_per_componente}
+Come stabilito dalla riunione interna di lunedì 13/04/2020, il gruppo ha svolto un aggiornamento dei requisiti non ancora implementati, WIP (Work In Progress) o soddisfatti.
+Una novità apportata nel Google Docs di riferimento, è l'aggiunta di un nuova scheda denominata \textit{Responsabili implementazione endpoint}, che definiscono tutti gli endpoint definiti dalla specifica API, e mostrano informazioni riguardo alla persona che è stata assegnata per implementare un particolare endpoint e al suo stato di completamento.
+Alla data attuale, gli endpoint implementati e quindi funzionanti sono 5, ma è ancora carente l'implementazione della componente server, che non è ancora in linea con la pianificazione.
+Per quanto riguarda la web application, molti requisiti sono stati soddisfatti con successo ed è in linea con la pianificazione, mentre la mobile application mostra un leggero ritardo rispetto a quanto pianificato.
+Per monitorare la situazione attuale, visitare il seguente \href{https://docs.google.com/spreadsheets/d/1J-RbNrb1yN_X1rVlKzpP9rjaiGst8B62k1K6EHY-grU/edit#gid=0}{Google Docs} condiviso con i membri del gruppo su Google Drive.
+
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+
+\begin{description}
+  \item[20200504-int-001] È stato spostato il quinto incremento alla settimana successiva alla consegna dei documenti.
+  \item[20200504-int-002] Dal 05/05/2020 al 06/05/2020, tutto il gruppo si concentra a definire tutti i diagrammi delle classi e di sequenza.
+  \item[20200504-int-003] Il giorno 07/05/2020, la maggior parte del gruppo si concentra sulla presentazione della PB, mentre i restanti membri del gruppo si concentrano sullo svolgimento della documentazione.
+  \item[20200504-int-004] Dal 08/05/2020 al 11/05/2020, tutto il gruppo si concentra sullo svolgimento della documentazione.
+\end{description}
+
+% sec:registro_delle_decisioni (end)
+\end{document}
