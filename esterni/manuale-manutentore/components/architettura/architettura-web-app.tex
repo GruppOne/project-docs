@@ -94,7 +94,7 @@ I path soggetti a questo controllo sono stati identificati nel file \texttt{app.
   \centering
   \scalegraphics{webapp-appmodule-screen-1.png}
   \caption{app.module.ts screen}%
-  \label{fig:web-app-authguard}
+  \label{fig:web-app-appmodule-screen-1}
 \end{figure}
 
 Per alcuni path è stato inoltre dichiarato un campo data, che contiene in questo caso il ruolo necessario ad accedere al path.
@@ -102,7 +102,7 @@ Per alcuni path è stato inoltre dichiarato un campo data, che contiene in quest
   \centering
   \scalegraphics{webapp-appmodule-screen-2.png}
   \caption{app.module.ts screen}%
-  \label{fig:web-app-authguard}
+  \label{fig:web-app-appmodule-screen-2}
 \end{figure}
 Abbiamo scelto di creare una guardia perché si integra automaticamente con Angular e risulta molto facile configurare i permessi necessari e le azioni da eseguire per ogni caso.
 AuthGuard ha una dipendenza verso LoginService per ottenere le informazioni dell'utente.
@@ -114,7 +114,7 @@ AuthGuard ha una dipendenza verso LoginService per ottenere le informazioni dell
 
 La web application di Stalker manipola principalmente due tipi di dati: utenti e organizzazioni.
 \paragraph{User}%
-\label{par:user}
+\label{par:webapp/user}
 \begin{figure}[H]
   \centering
   \scalegraphics{webapp-user.png}
@@ -127,7 +127,7 @@ La seconda invece viene usata quando non sono necessarie le informazioni persona
 % par:user (end)
 
 \paragraph{Organization}%
-\label{par:organization}
+\label{par:webapp/organization}
 \begin{figure}[H]
   \centering
   \scalegraphics{webapp-organization.png}

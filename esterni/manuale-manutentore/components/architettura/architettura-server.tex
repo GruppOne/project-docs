@@ -3,7 +3,7 @@
 \begin{document}
 
 \subsection{Server}%
-\label{sub:server}
+\label{sub:architettura/server}
 
 Il backend di Stalker è costituito da un server scritto in linguaggio Java e realizzato tramite il framework \glossario{Spring Webflux}.
 Il suo compito principale è quello di  soddisfare le richieste dei client che avvengono tramite chiamate di rete Http, gestire la logica di business e manipolare i modelli di dati.
@@ -25,7 +25,7 @@ Più nello specifico, il server di Stalker ha un' architettura monolitica organi
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm, height=8cm]{img/server-package-diagram.png}
+  \includegraphics[width=10cm, height=8cm]{server-package-diagram.png}
   \caption{Diagramma dei package che illustra la struttura del server}%
    \label{fig:diagramma dei package che illustra la struttura del server}
 \end{figure}
@@ -46,7 +46,7 @@ Ciò in spring avviene grazie a delle annotazioni che effettuano il mapping tra 
 
 \begin{figure}[H]
   \centering
-  \includegraphics{img/server-controller-image.png}
+  \includegraphics{server-controller-image.png}
   \caption{Endpoint di esempio}%
    \label{fig:immagine che illustra un endpoint di esempio}
 \end{figure}
@@ -75,7 +75,7 @@ Per realizzare, invece, il mapping delle classi Java in tabelle del database abb
 
 \begin{figure}[H]
   \centering
-  \includegraphics{img/server-hibernate-example.png}
+  \includegraphics{server-hibernate-example.png}
   \caption{classe che fa uso di hibernate}%
    \label{fig:classe che fa uso di hibernate}
 \end{figure}
@@ -93,7 +93,7 @@ Tramite R2DBC è possibile estendere delle interfacce e aggiungere delle annotaz
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm, height=15cm]{img/server-repositories-diagram.png}
+  \includegraphics[width=12cm, height=15cm]{server-repositories-diagram.png}
   \caption{Diagramma delle classi dei repository}%
    \label{fig:diagramma delle classi dei repository}
 \end{figure}
@@ -111,23 +111,23 @@ Lo strato di persistenza contiene i database. Il backend di Stalker è dotato di
   \item Un database influxDB per gestire le timeseries, in particolare per monitorare le posizioni degli utenti.
 \end{itemize}
 
-\subparagraph{Schema relazionale database mySQL}
+\subparagraph{Schema relazionale database mySQL}%
 \label{subp:schema_relazionale_database_mysql}
 Il database mySQL contiene i dati relativi agli utenti, alle organizzazioni, ai luoghi e ai ruoli ricoperti da ciascun utente nelle organizzazioni a cui è iscritto.
 Nell'immagine sottostante è presente lo schema relazionale che mostra la struttura del database.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=14cm,height=10cm]{img/server-mysql-diagram.png}
+  \includegraphics[width=14cm,height=10cm]{server-mysql-diagram.png}
   \caption{schema relazionale del database mySQL}%
    \label{fig: schema relazionale del database mySQL}
 \end{figure}
 
-\subsection{Feature d'esempio}
+\subsection{Feature d'esempio}%
 \label{sub:feature_d'esempio}
 
   \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth,height=\textheight]{img/server-influxDB-write-endpoint.png}
+    \includegraphics[width=\textwidth,height=\textheight]{server-influxDB-write-endpoint.png}
     \caption{diagramma delle classi d'esempio}%
      \label{fig: diagramma delle classi d'esempio}
   \end{figure}

@@ -144,7 +144,7 @@ Queste classi fanno uso delle annotazioni del progetto \textit{Lombok} per gener
 Descriviamo queste classi in dettaglio.
 
 \paragraph[Organization]{\java{Organization}}%
-\label{par:organization}
+\label{par:app/organization}
 
 La classe \java{Organization} espone un costruttore ad un parametro di tipo \java{org.json.JSONObject} utilizzato per costruire un'istanza a partire dalle risposte HTTP inviate dal server.
 Inoltre, espone un metodo \java{getInsidePlaces(Point)} che ritorna la lista degli \java{id} dei luoghi che contengono il punto passato come parametro fra i luoghi legati all'organizzazione.
@@ -167,7 +167,7 @@ Espone un metodo statico \linebreak\java{buildFromDegrees(double longitude, doub
 Per la conversione, abbiamo definito dei metodi privati che implementano la proiezione ellittica di Mercatore.
 
 \paragraph[User]{User}%
-\label{par:user}
+\label{par:app/user}
 
 La classe \java{User} semplicemente raccoglie i dati dell'utente, ed espone solo i metodi generati automaticamente da \textit{Lombok}.
 In UML è categorizzato come \texttt{<<data type>>}.
