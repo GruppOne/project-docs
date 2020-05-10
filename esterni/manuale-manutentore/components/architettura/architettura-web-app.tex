@@ -10,10 +10,10 @@
 
 \begin{figure}[H]
   \centering
-  \scalegraphics{webapp-package-diagram.png}
+  \includegraphics[width=6cm, height=22cm]{webapp-package-diagram.png}
   \caption{Diagramma dei package web application}%
   \label{fig:web-app-package-diagram}
-\end{figure} qui
+\end{figure}
 
 La web application di Stalker ha adottato il design pattern architetturale Model-View-ViewModel, come è possibile osservare in questo diagramma dei package il ViewModel è rappresentato dai \glossarioLocale{component} di angular si collegano ai propri template html che rappresentano invece la View, i \glossarioLocale{service} che gestiscono la business login e i modelli invece rappresentano il Model.
 Questa architettura consente di lavorare in maniera asincrona nelle chiamate effettuate al server grazie agli \glossarioLocale{Observables}.
@@ -139,7 +139,7 @@ La seconda invece viene usata quando non sono necessarie le informazioni persona
   \label{fig:web-app-organization}
 \end{figure}
 L'interfaccia Organization possiede opzionalmente due interfacce: LdapConfiguration e un array di Place.
-LdapConfiguration è presente solo se l'organizzazione è stat configurata come privata.
+LdapConfiguration è presente solo se l'organizzazione è stata configurata come privata.
 L'array di Place può essere vuoto se non vi sono luoghi in quell'organizzazione e può opzionalmente contenere un'interfaccia PlaceData che rappresenta i dati geografici del Place.
 % par:organization (end)
 
