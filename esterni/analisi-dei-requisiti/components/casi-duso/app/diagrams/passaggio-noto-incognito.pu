@@ -1,28 +1,40 @@
 
-@startuml scelta-noto-o-incognito
+@startuml passaggio-noto
 !include ../../../../../../commons/style/use-cases.pu
 
-actor :utente collegato: as A3
-
-actor :utente noto: as A3.1
-actor :utente incognito: as A3.2
-
-:A3.1: -up-|> :A3:
-:A3.2: -up-|> :A3:
+actor :utente incognito: as A3
 
 rectangle {
   together {
-    usecase (UUC12.1) as "UUC12.1\nPassaggio a incognito\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
-    usecase (UUC17) as "UUC17\nVisualizzazione errore\nrete mancante"
-    usecase (UUC12.2) as "UUC12.2\nPassaggio a noto\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
+    usecase (UUC18) as "UUC18\nVisualizzazione errore\nrete mancante"
+    usecase (UUC12) as "UUC12\nPassaggio a noto\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
 
   }
 }
 
-:A3.1: -- (UUC12.1)
+:A3: -- (UUC12)
 
-:A3.2: -- (UUC12.2)
-(UUC12.1) <.left. (UUC17) : <<extends>>
-
-(UUC12.2) <- (UUC17) : <<extends>>
+(UUC18) .up.> (UUC12) : <<extends>>
 @enduml
+
+
+
+@startuml passaggio-incognito
+!include ../../../../../../commons/style/use-cases.pu
+
+actor :utente noto: as A3
+
+rectangle {
+  together {
+    usecase (UUC18) as "UUC18\nVisualizzazione errore\nrete mancante"
+    usecase (UUC13) as "UUC13\nPassaggio a incognito\n--\nExtension points:\nVisualizzazione errore in\ncaso di disconnessione\nin mancanza di rete"
+
+  }
+}
+
+:A3: -- (UUC13)
+
+(UUC18) .up.> (UUC13) : <<extends>>
+@enduml
+
+

@@ -40,7 +40,7 @@ actor :utente non autenticato: as A
 
 rectangle {
   together {
-    usecase (UUC3.2.1) as "UUC3.2.1\nInserimento nuova password\n--\nExtension points:\nVisualizzazione errore se la\npassword non rispetta i criteri"
+    usecase (UUC3.2.1) as "UUC3.2.1\nInserimento nuova password\n--\nExtension points:\nVisualizzazione errore se la\npassword non rispetta i vincoli"
     usecase (UUC3.2.2) as "UUC3.2.2\nInserimento conferma password\n--\nExtension points:\nVisualizzazione errore se le\ndue password non coincidono"
     usecase (UUC3.2.3) as "UUC3.2.3\nPassword recupero credenziali\nnon valida"
     usecase (UUC3.2.4) as "UUC3.2.4\nConferma password recupero credenziali\nnon valida"
