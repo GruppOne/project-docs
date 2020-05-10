@@ -1,0 +1,24 @@
+@startuml app-mvvm
+
+!include ../../style/class.pu
+
+class utility.StalkerActivity {
+    --
+}
+
+class view.XActivity {
+    --
+}
+
+class view.XViewModel {
+    --
+}
+
+class view.XModel {
+    --
+}
+
+view.XActivity -u-|> utility.StalkerActivity
+view.XActivity *-r- view.XViewModel
+view.XViewModel *-r- view.XModel
+@enduml
