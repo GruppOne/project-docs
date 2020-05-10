@@ -60,7 +60,7 @@ In stalker l'autenticazione degli utenti viene gestita con i token JWT che ident
   \caption{classi impegnate in autenticazione e autorizzazione}%
   \label{fig:web-app-auth}
 \end{figure}
-Il token viene creato dal server e poi arriva nell'header della risposta http alla web application, a questo punto la classe LoginService che aveva effettuato la richiesta di login conserva il token jwt in un cookie e il suo payload, ossia l'id dell'utente attuale, viene immagazzinato in \glossario{localstorage}.
+Il token viene creato dal server e poi arriva nell'header della risposta http alla web application, a questo punto la classe LoginService che aveva effettuato la richiesta di login conserva il token jwt in un cookie e il suo payload, ossia l'id dell'utente attuale, viene immagazzinato in \glossarioLocale{localstorage}.
 Login service si occupa di ogni operazione che coinvolga l'accesso ad informazioni riguardanti l'autenticazione o l'autorizzazione come il logout o la verifica dei permessi dell'utente su una determinata organizzazione.
 \begin{figure}[H]
   \centering

@@ -5,9 +5,9 @@
 \subsection{Server}%
 \label{sub:architettura/server}
 
-Il backend di Stalker è costituito da un server scritto in linguaggio Java e realizzato tramite il framework \glossario{Spring Webflux}.
+Il backend di Stalker è costituito da un server scritto in linguaggio Java e realizzato tramite il framework \glossarioLocale{Spring Webflux}.
 Il suo compito principale è quello di  soddisfare le richieste dei client che avvengono tramite chiamate di rete Http, gestire la logica di business e manipolare i modelli di dati.
-Il server, inoltre, implementa gli endpoints definiti all'interno dell'\glossario{API}.
+Il server, inoltre, implementa gli endpoints definiti all'interno dell'\glossarioLocale{API}.
 
 \subsubsection{Architettura backend}%
 \label{architettura_backend}
@@ -70,8 +70,8 @@ Opera in due maniere opposte:
 \label{par:model}
 
 Il model contiene le informazioni corrispondenti ai dati presenti nel database e ai dati che i client possono inviare in formato JSON sotto forma di classi Java.
-Per effettuare il mapping tra file JSON e classi Java, Spring usa di default la libreria \glossario{Jackson}.
-Per realizzare, invece, il mapping delle classi Java in tabelle del database abbiamo utilizzato le \glossario{hibernate JPA annotation} che forniscono servizi di \glossario{Object-Relational-Mapping}.
+Per effettuare il mapping tra file JSON e classi Java, Spring usa di default la libreria \glossarioLocale{Jackson}.
+Per realizzare, invece, il mapping delle classi Java in tabelle del database abbiamo utilizzato le \glossarioLocale{hibernate JPA annotation} che forniscono servizi di \glossarioLocale{Object-Relational-Mapping}.
 
 \begin{figure}[H]
   \centering
@@ -88,7 +88,7 @@ Quest'ultimo, infatti, tramite l'utilizzo dell'annotazione \textit{@Column} mapp
 \label{par:repository}
 
 Lo strato repository si occupa di interagire con lo strato di persistenza e quindi di effettuare query al database.
-Per interagire con il database abbiamo utilizzato il driver \glossario{R2DBC} che permette di connettere database relazionali MySQL ad API reactive.
+Per interagire con il database abbiamo utilizzato il driver \glossarioLocale{R2DBC} che permette di connettere database relazionali MySQL ad API reactive.
 Tramite R2DBC è possibile estendere delle interfacce e aggiungere delle annotazioni \textit{@Query} che permettono di creare query personalizzate.
 
 \begin{figure}[H]
