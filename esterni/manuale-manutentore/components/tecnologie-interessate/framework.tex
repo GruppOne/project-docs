@@ -9,62 +9,51 @@ In questa sezione sono descritti tutti i framework utilizzati per l'implementazi
 \subsubsection{Spring}%
 \label{subs:spring}
 
-Il framework utilizzato per lo sviluppo backend è \glossarioLocale{Spring}, in particolare \textit{Spring Boot}, che è un framework concepito per la realizzazione di software enterprise su piattaforma Java.
-
-Spring Boot mira a ridurre la lunghezza del codice e ad accorciare i tempi di sviluppo di un'applicazione, infatti la caratteristica principale è la \textit{configurazione automatica} delle annotazioni e i codici predefiniti.
-
+Il framework utilizzato per lo sviluppo backend è \glossarioLocale{Spring}, in particolare \textit{Spring Boot}, un framework concepito per la realizzazione di software enterprise su piattaforma Java.
+Spring Boot mira a ridurre la lunghezza del codice e ad accorciare i tempi di sviluppo di un'applicazione; la caratteristica principale è la \textit{configurazione automatica} data delle annotazioni e dai codici predefiniti.
 Vengono utilizzati in particolare i seguenti framework Spring:
-\begin{description}
-  \item[Spring WebFlux] disponibile dalla versione 5.0, è un framework costruito intorno al pattern Publisher/Subscriber (detto anche pattern Observer), che oltre a semplificare lo sviluppo delle applicazioni e fornire opzioni per fare build e deploy delle applicazioni in esecuzione, consente di supportare flussi reattivi completamente non bloccanti. L'elaborazione delle richieste asincrone avviene tramite un gestore eventi che non blocca alcuna richiesta entrante.
-  \item[Spring Security] disponibile dalla versione 2.0, è un framework che fornisce strumenti per l'autenticazione, l'autorizzazione e altre funzionalità di sicurezza per le applicazioni sviluppate in Spring.
-\end{description}
 
-La build del progetto sviluppato in Spring è ottenuta mediante l'utilizzo di dipendenze Gradle presenti nel file \textit{build.gradle} che, nel momento in cui la build avviene correttamente, consente l'avvio di un embedded server che fungerà da intermediario per le richieste che arrivano dalla web application/mobile application e arrivano allo strato di persistenza (MySQL/InfluxDB), e viceversa.
+\begin{description}
+  \item[Spring WebFlux] disponibile dalla versione 5.0, è un framework costruito intorno al pattern Publisher/Subscriber, che oltre a semplificare lo sviluppo delle applicazioni e fornire opzioni per fare build e deploy delle applicazioni in esecuzione, consente di supportare flussi reattivi completamente non bloccanti.
+  \item[Spring Security] disponibile dalla versione 2.0, è un framework che fornisce strumenti per l'autenticazione, l'autorizzazione e altre funzionalità di sicurezza.
+\end{description}
 
 \subsubsection{Angular}%
 \label{subs:angular}
 
-Il framework utilizzato per lo sviluppo frontend, lato web application, è Angular, che utilizza il linguaggio TypeScript.
-
+Il framework utilizzato per lo sviluppo della web application è Angular.
 L'applicazione sviluppata in Angular viene eseguita interamente dal web browser dopo essere stata caricata dal web server (elaborazione lato client).
-
-Il codice generato da Angular funziona su tutti i principali web browser moderni, come ad esempio Chrome, Firefox ed Edge.
-
+Il codice generato da Angular funziona su tutti i principali web browser moderni, ad esempio Chrome, Firefox ed Edge.
 Il pattern architetturale di riferimento è il Model-View-ViewModel, che consente di creare una struttura basata sui seguenti elementi:
+
 \begin{description}
-    \item[View] insieme di elementi di visualizzazione.
-    \item[Component] classe che definisce una view.
-    \item[Service] classe che incapsula la business logic interagendo con un modello.
+    \item[View:] insieme di elementi di visualizzazione.
+    \item[Component:] classe che definisce una view.
+    \item[Service:] classe che incapsula la business logic interagendo con un modello.
 \end{description}
 
 \subsubsection{Jasmine}%
 \label{subs:jasmine}
 
 \glossarioLocale{Jasmine} è un framework BDD open source, utilizzato per la web application, per eseguire test su codice scritto in JavaScript.
-
 Mira a funzionare su qualsiasi piattaforma abilitata per JavaScript, facendo in modo di non intromettersi né nell'applicazione né nell'\glossarioLocale{IDE}.
-
-Con Jasmine si possono scrivere test espressivi e semplici da scrivere, in modo da garantire anche una facile lettura.
+Con Jasmine si possono scrivere semplicemente test espressivi, in modo da garantire anche una facile lettura.
 
 \subsubsection{Protractor}%
 \label{subs:protractor}
 
-\glossarioLocale{Protractor} è un framework per eseguire \glossarioLocale{test E2E} che consente di testare applicazioni frontend, nel caso di questo progetto la web application, su un browser reale simulando le interazioni nel modo in cui un utente reale si comporterebbe con esso.
-
-Protractor gira su Selenium WebDriver, un'\glossarioLocale{API} per l'automazione e testing su browser, al quale aggiunge funzionalità per interagire con i componenti UI di un'applicazione Angular.
+\glossarioLocale{Protractor} è un framework per eseguire \glossarioLocale{test E2E} che consente di testare un'applicazione web su un browser reale simulando le interazioni che un utente reale avrebbe con essa.
+Protractor è basato su Selenium WebDriver, un'\glossarioLocale{API} per l'automazione e testing su browser, al quale aggiunge funzionalità per interagire con i componenti UI di un'applicazione Angular.
 
 \subsubsection{JUnit 4}%
 \label{subs:junit4}
 
-\glossarioLocale{JUnit} 4 è un framework di unit testing per il linguaggio di programmazione Java, che viene utilizzato lato frontend per la mobile application.
-
-A JUnit è stato affiancato \glossarioLocale{Mockito}, per consentire la creazione dei \glossarioLocale{mock object} in modo da simulare le dipendenze esterne, ed \glossarioLocale{Espresso} per simulare l'interazione utente con le interfacce grafiche.
+\glossarioLocale{JUnit} 4 è un framework di unit testing per il linguaggio di programmazione Java.
 
 \subsubsection{Mockito}%
 \label{subs:mockito}
 
 Mockito è un framework di test per il linguaggio di programmazione Java, che viene utilizzato lato frontend per la mobile application, e può essere utilizzato insieme a JUnit.
-
 Il framework consente la creazione e la configurazione di mock object per lo sviluppo di test automatici per le classi con dipendenze esterne.
 
 \subsubsection{Espresso}%

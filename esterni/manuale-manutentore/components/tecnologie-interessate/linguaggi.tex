@@ -9,30 +9,20 @@ In questa sezione sono descritti tutti i linguaggi utilizzati per l'implementazi
 \subsubsection{Java}%
 \label{subs:java}
 
-Il linguaggio di programmazione utilizzato per lo sviluppo del server backend è \glossarioLocale{Java}, in quanto si interfaccia facilmente con il framework \glossarioLocale{Spring}.
-
-Inoltre, Java è utilizzato come linguaggio per lo sviluppo della mobile application, in quanto è il linguaggio di programmazione più diffuso per lo sviluppo di piattaforme Android, nonostante da qualche anno il linguaggio ufficiale sia \glossarioLocale{Kotlin}.
-
-Questi fattori e le conoscenze pregresse dei membri del gruppo hanno indirizzato all'unanimità la scelta di questo linguaggio, che permette anche di scrivere ed eseguire test tramite la libreria \glossarioLocale{JUnit}.
-
+Il linguaggio di programmazione utilizzato per lo sviluppo del backend e della mobile-app è Java, in quanto nel primo caso ci permette di utilizzare \glossarioLocale{Spring}, la nostra prima scelta tra i framework per lo sviluppo del server, e nel secondo è il linguaggio meglio documentato e di più facile apprendimento per lo sviluppo di app Android.
 Si specifica che nella parte backend la versione utilizzata è la 11, mentre nella mobile application la versione utilizzata è la 8.
 
 \subsubsection{TypeScript}%
 \label{subs:typescript}
 
-Il linguaggio di programmazione utilizzato per lo sviluppo backend della web application è \glossarioLocale{TypeScript}, un linguaggio moderno che estende la sintassi di \glossarioLocale{JavaScript} in modo che il codice scritto in JavaScript sia in grado di funzionare con TypeScript senza nessuna modifica.
-
-La particolarità di questo linguaggio è che deve essere convertito in linguaggio JavaScript prima di poter essere eseguito, grazie all'utilizzo di un tool chiamato \textit{transpiler} che converte il codice sorgente da un certo linguaggio ad un altro.
-
-Inoltre, TypeScript è il linguaggio consigliato per lo sviluppo di applicazioni \textit{Angular}, che è stato utilizzato come framework per la web application nell'ambito del progetto Stalker.
+Il linguaggio di programmazione utilizzato per lo sviluppo della web application è \glossarioLocale{TypeScript}, un linguaggio moderno che estende la sintassi di \glossarioLocale{JavaScript} introducendo un sistema di tipi.
+Il codice Typescript viene tradotto a JavaScript attraverso un transpiler.
+Inoltre, TypeScript è il linguaggio consigliato per lo sviluppo di applicazioni \textit{Angular}, che abbiamo scelto come framework per lo sviluppo della web application.
 
 \subsubsection{OpenAPI}%
 \label{subs:openapi}
 
-Il linguaggio utilizzato per descrivere i servizi che sono forniti dal server backend di Stalker è la specifica \glossarioLocale{OpenAPI}, che definisce quali sono le interfacce per la comunicazione tra le componenti del sistema, ovvero tra server-web application e server-mobile application.
-
-La specifica OpenAPI semplifica la sincronizzazione che ci deve essere tra documentazione e codice sorgente, e definisce in particolare quali sono gli endpoint per la comunicazione tra le varie componenti e le sue operazioni tramite l'utilizzo del protocollo di rete HTTP\@.
-
-Open API è in grado inoltre di generare codice e test case, ma in questo progetto viene utilizzato solo per la documentazione.
+Per descrivere i servizi che sono forniti dal server backend di Stalker abbiamo utilizzato la specifica \glossarioLocale{OpenAPI}, che definisce quali sono le interfacce per la comunicazione tra le componenti del sistema.
+La specifica OpenAPI definisce quali sono gli endpoint per la comunicazione tra le varie componenti e, per ciascun endpoint, quali metodi HTTP sono utilizzabili e come\@.
 
 \end{document}

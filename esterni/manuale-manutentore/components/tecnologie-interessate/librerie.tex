@@ -10,58 +10,43 @@ In questa sezione sono descritte tutte le librerie utilizzate per l'implementazi
 \subsubsection{Angular Material}%
 \label{subs:angular_material}
 
-La libreria utilizzata per definire gli stili lato frontend, in particolare nella web application, è \glossarioLocale{Angular Material}, che è una implementazione della specifica \glossarioLocale{Material Design} di Google.
-
+La libreria utilizzata per definire gli stili per la web application è \glossarioLocale{Angular Material}, una implementazione della specifica \glossarioLocale{Material Design} di Google.
 Questo progetto fornisce una serie di componenti grafici testati e riusabili per \glossarioLocale{AngularJS}\@.
-
-Gli stili forniti da Angular Material sono completamente personalizzabili attraverso il linguaggio di stili a cascata \glossarioLocale{CSS}.
+Gli stili forniti da Angular Material sono completamente personalizzabili attraverso il linguaggio \glossarioLocale{CSS}.
 
 \subsubsection{Leaflet}%
 \label{subs:leaflet}
 
-La libreria utilizzata per gestire mappe interattive lato frontend, in particolare nella web application, è \glossarioLocale{Leaflet}, una libreria che si può integrare con Angular che consente di implementare mappe user-friendly basate su \glossarioLocale{OpenStreetMap}.
-
+La libreria utilizzata per gestire mappe interattive nella web application è \glossarioLocale{Leaflet}, una libreria integrabile con Angular che consente di implementare mappe user-friendly basate su \glossarioLocale{OpenStreetMap}.
 Leaflet permette di creare, modificare ed eliminare luoghi direttamente sulla mappa grazie al componente \textit{Leaflet Draw}, ed ottenere le informazioni necessarie grazie alla funzionalità di \glossarioLocale{reverse geocoding}, svincolando l'utente dall'onere di inserire manualmente l'insieme di coordinate, l'indirizzo e il nome associato al luogo selezionato.
 
 \subsubsection{Chai}%
 \label{subs:chai}
 
-\glossarioLocale{Chai} è una libreria di asserzioni BDD/TDD utilizzata per il lato frontend, in particolare nella web application, che offre diverse interfacce utilizzabili dallo sviluppatore e può essere abbinata a qualsiasi framework di test JavaScript.
-
-Chai utilizza \glossarioLocale{Node.js}, infatti è disponibile l'installazione della libreria tramite \glossarioLocale{npm}. Si può utilizzare anche all'interno del browser web, includendo il file JavaScript Chai all'interno di una pagina.
+\glossarioLocale{Chai} è una libreria di asserzioni BDD/TDD utilizzata per i test della web application.
+Offre diverse interfacce utilizzabili dallo sviluppatore e può essere abbinata a qualsiasi framework di test JavaScript.
+Chai utilizza \glossarioLocale{Node.js}, quindi è disponibile la sua installazione tramite \glossarioLocale{npm}.
+Si può utilizzare anche all'interno del browser web, includendo il file JavaScript Chai all'interno di una pagina.
 
 \subsubsection{Volley}%
 \label{subs:volley}
 
-\glossarioLocale{Volley} è una libreria consigliata da Google, utilizzata per il lato frontend in particolare la mobile application, che forniscono strumenti wrapper per le funzionalità di connessione a Internet di basso livello.
-
-Volley si integra facilmente con qualsiasi protocollo e supporta stringhe, immagini e JSON non elaborati.
-
-Inoltre, svincola il programmatore dal scrivere codice boilerplate per concentrarsi unicamente sulla logica della mobile application.
-
-Volley non è adatto per operazioni di download o streaming di grandi dimensioni, poiché conserva tutte le risposte in memoria durante l'analisi.
+\glossarioLocale{Volley} è una libreria consigliata da Google, utilizzata nella mobile application, che fornisce astrazioni per le funzionalità di connessione a Internet di basso livello.
+Volley si integra facilmente con qualsiasi protocollo ed offre un supporto approfondito per lo scambio di stringhe, immagini e oggetti JSON non elaborati.
+Inoltre, svincola il programmatore dallo scrivere codice boilerplate per concentrarsi unicamente sulla logica della mobile application.
 
 \subsubsection{Lombok}%
 \label{subs:lombok}
 
-\glossarioLocale{Lombok} è una libreria Java utilizza sia lato backend che lato frontend, in particolare per la mobile application, che genera automaticamente attraverso delle annotazioni Java buona parte del codice boilerplate.
-
-Lombok si occupa di utilizzare una serie di annotazioni da inserire precedentemente alla dichiarazione di una classe o di un metodo, in modo da generare automaticamente i costruttori, i metodi \textit{getter}, \textit{setter}, \textit{toString ()}, \textit{hashCode ()} o i builder.
-
-Per maggiori informazioni sulle possibili annotazioni da implementare, visitare \href{https://projectlombok.org/features/all}.
+\glossarioLocale{Lombok} è una libreria Java utilizzata sia lato backend che lato frontend, in particolare per la mobile application, che genera automaticamente attraverso delle annotazioni Java buona parte del codice boilerplate.
+Lombok sfrutta una serie di annotazioni da inserire alla dichiarazione di una classe o di un metodo, in modo da generare automaticamente, ad esempio, costruttori, metodi \textit{getter}, \textit{setter}, \java{toString ()}, \java{hashCode ()}, o i builder.
+Per maggiori informazioni sulle annotazioni, visitare \href{https://projectlombok.org/features/all}{https://projectlombok.org/features/all}.
 
 \subsubsection{JJWT}%
 \label{subs:jjwt}
-Mobile Application
 
-La libreria che consente la creazione di \glossarioLocale{token di accesso} basati su \glossarioLocale{JSON} è \glossarioLocale{JJWT}.
-
+Per la creazione di \glossarioLocale{token di accesso} basati su \glossarioLocale{JSON} abbiamo utilizzato \glossarioLocale{JJWT}.
 JJWT coinvolge tutte le componenti di Stalker, e nello specifico serve a creare, codificare e ottenere informazioni dai token.
-
-Inoltre, i token di accesso sono firmati utilizzando una chiave privata o una coppia chiave pubblica/privata, e quindi utilizzati nei casi di autenticazione ed autorizzazione.
-
-Un file JSON viene inviato ad ogni richiesta di login da web application e mobile application.
-
-Per maggiori informazioni, visitare \href{https://github.com/jwtk/jjwt}.
+Per maggiori informazioni, visitare \href{https://github.com/jwtk/jjwt}{https://github.com/jwtk/jjwt}.
 
 \end{document}
