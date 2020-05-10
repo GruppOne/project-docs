@@ -98,6 +98,9 @@ Tramite R2DBC è possibile estendere delle interfacce e aggiungere delle annotaz
    \label{fig:diagramma delle classi dei repository}
 \end{figure}
 
+Il diagramma soprastante mostra la struttura delle interfacce del livello repositories.
+Ogni metodo corrisponde ad una query sul database e restituisce Mono o Flux di oggetti del modello.
+Tutte le interfacce estendono l'interfaccia ReactiveCrudRepository offerta da Spring che mediante il paradigma reactive esegue operazioni non bloccanti sul database.
 
 \paragraph{Database}%
 \label{par:database}
