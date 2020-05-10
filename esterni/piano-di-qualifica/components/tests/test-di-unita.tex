@@ -424,9 +424,60 @@ Dove \textit{codice} rappresenta un numero identificativo per l'unità a cui il 
 
   % SERVER - INFLUXDB
 
+  TUS122 & Verifica che l'aggiornamento della posizione di un utente sia serializzato e deserializzato correttamente nella misura access\_log del database a serie temporali & S \\
+  TUS123 & Verifica che l'aggiornamento della posizione di un utente sia serializzato e deserializzato correttamente nella misura anonymous\_access\_log del database a serie temporali & S \\
+
   % SERVER - R2DBC
 
+  TUS124 & Verifica che l'oggetto del modello ottenuto dalla tabella Connections sia serializzato e deserializzato correttamente & S \\
+  TUS125 & Verifica che l'oggetto del modello ottenuto dalla tabella Organizations sia serializzato e deserializzato correttamente & S \\
+  TUS126 & Verifica che l'oggetto del modello ottenuto dalla tabella OrganizationRole sia serializzato e deserializzato correttamente & NS \\
+  TUS127 & Verifica che l'oggetto del modello ottenuto dalla tabella Places sia serializzato e deserializzato correttamente & S \\
+  TUS128 & Verifica che l'oggetto del modello ottenuto dalla tabella PlaceData sia serializzato e deserializzato correttamente & S \\
+  TUS129 & Verifica che l'oggetto del modello ottenuto dalla tabella Users sia serializzato e deserializzato correttamente & S \\
+  TUS130 & Verifica che l'oggetto del modello ottenuto dalla tabella UserData sia serializzato e deserializzato correttamente & S \\
+
   % SERVER - CONTROLLERS
+
+  TUS131 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /location/update| & S \\
+  TUS132 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /location/update| & S \\
+  TUS133 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|DELETE /organization/{organizationId}| & S \\
+  TUS134 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /organization/{organizationId}| & S \\
+  TUS135 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|PUT /organization/{organizationId}| & S \\
+  TUS136 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|DELETE /organization/{organizationId}/place/{placeId}| & S \\
+  TUS137 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /organization/{organizationId}/place/{placeId}| & NS \\
+  TUS138 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|PUT /organization/{organizationId}/place/{placeId}| & NS \\
+  TUS139 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /organization/{organizationId}/places| & S \\
+  TUS140 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /organization/{organizationId}/places| & S \\
+  TUS141 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /organization/{organizationId}/places| & S \\
+  TUS142 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /organization/{organizationId}/report| & NS \\
+  TUS143 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|DELETE /organization/{organizationId}/user/{userId}/role| & NS \\
+  TUS144 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /organization/{organizationId}/user/{userId}/role| & NS \\
+  TUS145 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /organization/{organizationId}/user/{userId}/role| & NS \\
+  TUS146 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|PUT /organization/{organizationId}/user/{userId}/role| & NS \\
+  TUS147 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /organization/{organizationId}/users/connections| & S \\
+  TUS148 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /organization/{organizationId}/users/inside| & S \\
+  TUS149 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /organizations| & NS \\
+  TUS150 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /organizations| & S \\
+  TUS151 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /organizations| & S \\
+  TUS152 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|DELETE /user/{userId}| & S \\
+  TUS153 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /user/{userId}| & S \\
+  TUS154 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|PUT /user/{userId}| & S \\
+  TUS155 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /user/{userId}/logout| & NS \\
+  TUS156 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /user/{userId}/logout| & NS \\
+  TUS157 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|DELETE /user/{userId}/organization/{organizationId}/connection| & S \\
+  TUS158 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /user/{userId}/organization/{organizationId}/connection| & S \\
+  TUS159 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /user/{userId}/organization/{organizationId}/connection| & S \\
+  TUS160 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /user/{userId}/organizations/connections| & S \\
+  TUS161 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /user/{userId}/organizations/roles| & NS \\
+  TUS162 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /user/{userId}/places/history| & NS \\
+  TUS163 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /user/{userId}/time/inside| & NS \\
+  TUS164 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /user/login| & NS \\
+  TUS165 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /user/login| & NS \\
+  TUS166 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /user/password/recovery| & NS \\
+  TUS167 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /user/password/recovery| & NS \\
+  TUS168 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /users| & S \\
+  TUS169 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /users| & S \\
 
   \rowcolor{white}
   \caption{Tabella dei test di unità}%
@@ -857,9 +908,60 @@ Dove \textit{codice} rappresenta un numero identificativo per l'unità a cui il 
 
   % SERVER - INFLUXDB
 
+  TUS122 & tech.gruppone.stalker.server.repositories.InfluxDbRepository \\
+  TUS123 & tech.gruppone.stalker.server.repositories.InfluxDbRepository \\
+
   % SERVER - R2DBC
 
+  TUS124 & tech.gruppone.stalker.server.repositories.Connections \\
+  TUS125 & tech.gruppone.stalker.server.repositories.Organizations \\
+  TUS126 & tech.gruppone.stalker.server.repositories.OrganizationRole \\
+  TUS127 & tech.gruppone.stalker.server.repositories.Places \\
+  TUS128 & tech.gruppone.stalker.server.repositories.PlaceData \\
+  TUS129 & tech.gruppone.stalker.server.repositories.Users \\
+  TUS130 & tech.gruppone.stalker.server.repositories.UserData \\
+
   % SERVER - CONTROLLERS
+
+  TUS131 & tech.gruppone.stalker.server.controllers.LocationUpdateController \\
+  TUS132 & tech.gruppone.stalker.server.controllers.LocationUpdateController \\
+  TUS133 & tech.gruppone.stalker.server.controllers.OrganizationController \\
+  TUS134 & tech.gruppone.stalker.server.controllers.OrganizationController \\
+  TUS135 & tech.gruppone.stalker.server.controllers.OrganizationController \\
+  TUS136 & tech.gruppone.stalker.server.controllers.PlaceController \\
+  TUS137 & tech.gruppone.stalker.server.controllers.PlaceController \\
+  TUS138 & tech.gruppone.stalker.server.controllers.PlaceController \\
+  TUS139 & tech.gruppone.stalker.server.controllers.PlacesController \\
+  TUS140 & tech.gruppone.stalker.server.controllers.PlacesController \\
+  TUS141 & tech.gruppone.stalker.server.controllers.PlacesController \\
+  TUS142 & tech.gruppone.stalker.server.controllers.OrganizationReportController \\
+  TUS143 & tech.gruppone.stalker.server.controllers.OrganizationController \\
+  TUS144 & tech.gruppone.stalker.server.controllers.OrganizationController \\
+  TUS145 & tech.gruppone.stalker.server.controllers.OrganizationController \\
+  TUS146 & tech.gruppone.stalker.server.controllers.OrganizationController \\
+  TUS147 & tech.gruppone.stalker.server.controllers.ConnectionController \\
+  TUS148 & tech.gruppone.stalker.server.controllers.LocationController \\
+  TUS149 & tech.gruppone.stalker.server.controllers.OrganizationsController \\
+  TUS150 & tech.gruppone.stalker.server.controllers.OrganizationsController \\
+  TUS151 & tech.gruppone.stalker.server.controllers.OrganizationsController \\
+  TUS152 & tech.gruppone.stalker.server.controllers.UserController \\
+  TUS153 & tech.gruppone.stalker.server.controllers.UserController \\
+  TUS154 & tech.gruppone.stalker.server.controllers.UserController \\
+  TUS155 & tech.gruppone.stalker.server.controllers.AuthenticationController \\
+  TUS156 & tech.gruppone.stalker.server.controllers.AuthenticationController \\
+  TUS157 & tech.gruppone.stalker.server.controllers.ConnectionController \\
+  TUS158 & tech.gruppone.stalker.server.controllers.ConnectionController \\
+  TUS159 & tech.gruppone.stalker.server.controllers.ConnectionController \\
+  TUS160 & tech.gruppone.stalker.server.controllers.ConnectionController \\
+  TUS161 & tech.gruppone.stalker.server.controllers.ConnectionController \\
+  TUS162 & tech.gruppone.stalker.server.controllers.LocationController \\
+  TUS163 & tech.gruppone.stalker.server.controllers.LocationController \\
+  TUS164 & tech.gruppone.stalker.server.controllers.AuthenticationController \\
+  TUS165 & tech.gruppone.stalker.server.controllers.AuthenticationController \\
+  TUS166 & tech.gruppone.stalker.server.controllers.PasswordRecoveryController \\
+  TUS167 & tech.gruppone.stalker.server.controllers.PasswordRecoveryController \\
+  TUS168 & tech.gruppone.stalker.server.controllers.UsersController \\
+  TUS169 & tech.gruppone.stalker.server.controllers.UsersController \\
 
   \rowcolor{white}
   \caption{Tabella del tracciamento dei test di unità}%
