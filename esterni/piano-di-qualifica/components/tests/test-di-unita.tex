@@ -439,46 +439,45 @@ Dove \textit{codice} rappresenta un numero identificativo per l'unità a cui il 
 
   % SERVER - CONTROLLERS
 
-  TUS131 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /location/update| & S \\
-  TUS132 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /location/update| & S \\
-  TUS133 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|DELETE /organization/{organizationId}| & S \\
-  TUS134 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /organization/{organizationId}| & S \\
-  TUS135 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|PUT /organization/{organizationId}| & S \\
-  TUS136 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|DELETE /organization/{organizationId}/place/{placeId}| & S \\
-  TUS137 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /organization/{organizationId}/place/{placeId}| & NS \\
-  TUS138 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|PUT /organization/{organizationId}/place/{placeId}| & NS \\
-  TUS139 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /organization/{organizationId}/places| & S \\
-  TUS140 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /organization/{organizationId}/places| & S \\
-  TUS141 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /organization/{organizationId}/places| & S \\
-  TUS142 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /organization/{organizationId}/report| & NS \\
-  TUS143 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|DELETE /organization/{organizationId}/user/{userId}/role| & NS \\
-  TUS144 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /organization/{organizationId}/user/{userId}/role| & NS \\
-  TUS145 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /organization/{organizationId}/user/{userId}/role| & NS \\
-  TUS146 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|PUT /organization/{organizationId}/user/{userId}/role| & NS \\
-  TUS147 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /organization/{organizationId}/users/connections| & S \\
-  TUS148 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /organization/{organizationId}/users/inside| & S \\
-  TUS149 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /organizations| & NS \\
-  TUS150 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /organizations| & S \\
-  TUS151 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /organizations| & S \\
-  TUS152 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|DELETE /user/{userId}| & S \\
-  TUS153 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /user/{userId}| & S \\
-  TUS154 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|PUT /user/{userId}| & S \\
-  TUS155 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /user/{userId}/logout| & NS \\
-  TUS156 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /user/{userId}/logout| & NS \\
-  TUS157 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|DELETE /user/{userId}/organization/{organizationId}/connection| & S \\
-  TUS158 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /user/{userId}/organization/{organizationId}/connection| & S \\
-  TUS159 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /user/{userId}/organization/{organizationId}/connection| & S \\
-  TUS160 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /user/{userId}/organizations/connections| & S \\
-  TUS161 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /user/{userId}/organizations/roles| & NS \\
-  TUS162 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /user/{userId}/places/history| & NS \\
-  TUS163 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /user/{userId}/time/inside| & NS \\
-  TUS164 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /user/login| & NS \\
-  TUS165 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /user/login| & NS \\
-  TUS166 & Verifica che il request body sia deserializzato correttamente nell'operazione \verb|POST /user/password/recovery| & NS \\
-  TUS167 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /user/password/recovery| & NS \\
-  TUS168 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|GET /users| & S \\
-  TUS169 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione \verb|POST /users| & S \\
-
+  TUS131 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /location/update'' & S \\
+  TUS132 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /location/update'' & S \\
+  TUS133 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``DELETE /organization/{organizationId}'' & S \\
+  TUS134 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /organization/{organizationId}'' & S \\
+  TUS135 & Verifica che il request body sia deserializzato correttamente nell'operazione ``PUT /organization/{organizationId}'' & S \\
+  TUS136 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``DELETE /organization/{organizationId}/place/{placeId}'' & S \\
+  TUS137 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /organization/{organizationId}/place/{placeId}'' & NS \\
+  TUS138 & Verifica che il request body sia deserializzato correttamente nell'operazione ``PUT /organization/{organizationId}/place/{placeId}'' & NS \\
+  TUS139 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /organization/{organizationId}/places'' & S \\
+  TUS140 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /organization/{organizationId}/places'' & S \\
+  TUS141 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /organization/{organizationId}/places'' & S \\
+  TUS142 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /organization/{organizationId}/report'' & NS \\
+  TUS143 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``DELETE /organization/{organizationId}/user/{userId}/role'' & NS \\
+  TUS144 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /organization/{organizationId}/user/{userId}/role'' & NS \\
+  TUS145 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /organization/{organizationId}/user/{userId}/role'' & NS \\
+  TUS146 & Verifica che il request body sia deserializzato correttamente nell'operazione ``PUT /organization/{organizationId}/user/{userId}/role'' & NS \\
+  TUS147 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /organization/{organizationId}/users/connections'' & S \\
+  TUS148 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /organization/{organizationId}/users/inside'' & S \\
+  TUS149 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /organizations'' & NS \\
+  TUS150 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /organizations'' & S \\
+  TUS151 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /organizations'' & S \\
+  TUS152 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``DELETE /user/{userId}'' & S \\
+  TUS153 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /user/{userId}'' & S \\
+  TUS154 & Verifica che il request body sia deserializzato correttamente nell'operazione ``PUT /user/{userId}'' & S \\
+  TUS155 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /user/{userId}/logout'' & NS \\
+  TUS156 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /user/{userId}/logout'' & NS \\
+  TUS157 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``DELETE /user/{userId}/organization/{organizationId}/connection'' & S \\
+  TUS158 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /user/{userId}/organization/{organizationId}/connection'' & S \\
+  TUS159 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /user/{userId}/organization/{organizationId}/connection'' & S \\
+  TUS160 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /user/{userId}/organizations/connections'' & S \\
+  TUS161 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /user/{userId}/organizations/roles'' & NS \\
+  TUS162 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /user/{userId}/places/history'' & NS \\
+  TUS163 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /user/{userId}/time/inside'' & NS \\
+  TUS164 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /user/login'' & NS \\
+  TUS165 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /user/login'' & NS \\
+  TUS166 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /user/password/recovery'' & NS \\
+  TUS167 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /user/password/recovery'' & NS \\
+  TUS168 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /users'' & S \\
+  TUS169 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /users'' & S \\
   \rowcolor{white}
   \caption{Tabella dei test di unità}%
   \label{tab:test_di_unita}
