@@ -121,6 +121,14 @@ $documents = @(
     Destination = [IO.Path]::Combine($OutputBaseDirectory, "esterni", "glossario_v$productVersion.pdf")
   },
   [PSCustomObject]@{
+    SourceFile  = Get-Item "esterni/manuale-manutentore/manuale-manutentore.tex"
+    Destination = [IO.Path]::Combine($OutputBaseDirectory, "esterni", "manuale-manutentore$productVersion.pdf")
+  },
+  [PSCustomObject]@{
+    SourceFile  = Get-Item "esterni/manuale-utente/manuale-utente.tex"
+    Destination = [IO.Path]::Combine($OutputBaseDirectory, "esterni", "manuale-utente_v$productVersion.pdf")
+  },
+  [PSCustomObject]@{
     SourceFile  = Get-Item "esterni/piano-di-progetto/piano-di-progetto.tex"
     Destination = [IO.Path]::Combine($OutputBaseDirectory, "esterni", "piano-di-progetto_v$productVersion.pdf")
   },
