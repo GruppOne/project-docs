@@ -54,35 +54,42 @@ Per questo abbiamo scelto di utilizzare un decorator pattern, quindi forniamo la
 \end{figure}
 
 Per quanto riguarda l'autenticazione, e quindi le schermate di \textit{Login} e \textit{Signup}, il viewmodel ha la responsabilità di produrre un hash della password, mentre il model ha la responsabilità di definire il metodo callback che viene invocato quando il server risponde alla richiesta.
-% subs:mvvm (end)
 
 \subsubsection{RecyclerView}%
 \label{subs:recyclerview}
+
 La schermata principale presenta la lista di organizzazioni a cui l'utente può connettersi, e per questo deve aggiornarsi dinamicamente quando l'applicazione riceve dal server una nuova lista.
-A questo scopo abbiamo scelto di utilizzare \java{androidx.recyclerview.widget.RecyclerView}, componente grafica che astrae il confronto fra la lista nuova e quella attuale, richiedendo un minimo quantitativo di boilerplate per specificare come confrontare gli elementi uno ad uno.
-Questo boilerplate deve essere fornito nella forma di un'istanza di una classe derivata da \java{androidx.recyclerview.widget.ListAdapter}, una classe generica con due parametri di tipo.
+A questo scopo abbiamo scelto di utilizzare \java{androidx.recyclerview.widget.RecyclerView}, componente grafica che astrae il confronto fra la lista nuova e quella attuale, richiedendo un minimo quantitativo di codice per specificare come confrontare gli elementi uno ad uno.
+Questo deve essere fornito nella forma di un'istanza di una classe derivata da \java{androidx.recyclerview.widget.ListAdapter}, una classe generica con due parametri di tipo.
 A questo scopo, GruppOne ha definito la classe \java{utility.OrganizationListAdapter}.
 Per l'estensione di \java{ListAdapter} il primo parametro di tipo deve essere sostituito con il tipo degli oggetti nella lista, nel nostro caso \java{business.Organization} (§\ref{subs:logica_di_business}), il secondo con una classe derivata da \java{RecyclerView.ViewHolder}.
 Quest'ultima rappresenta un elemento della lista e racchiude metadati sulla sua posizione; ciascun \java{ListAdapter} istanzia e modifica i \java{ViewHolder} a propria necessità per aggiornare la \java{Recyclerview}, quindi essi sono da considerarsi come semplici frammenti della funzionalità del \java{ListAdapter} stesso.
-Di conseguenza, la nostra estensione di \java{ViewHolder} è innestata nella classe \java{OrganizationListAdapter}. Ogni estensione di \java{ViewHolder} deve essere associata ad un layout XML che descriva la grafica del rispettivo elemento nella lista.\par
+Di conseguenza, la nostra estensione di \java{ViewHolder}, \java{OrgViewHolder}, è innestata nella classe \java{OrganizationListAdapter}. Ogni estensione di \java{ViewHolder} deve essere associata ad un layout XML che descriva la grafica del rispettivo elemento nella lista.\par
 
-Ogni estensione di \java{ListAdapter} deve fornire al costruttore della superclasse un'istanza di \java{androidx.recyclerview.widget.DiffUtil.ItemCallback} che definisca metodi per confrontare un elemento della lista nuova con il corrispondente nella lista già presente e verificare se coincidono oppure se non coincidono ma sono comunque equivalenti. Inoltre deve fornire override per i metodi:
+Ogni estensione di \java{ListAdapter} deve fornire al costruttore della superclasse un'istanza di \linebreak\java{androidx.recyclerview.widget.DiffUtil.ItemCallback} che definisca metodi per confrontare un elemento della lista nuova con il corrispondente nella lista già presente e verificare se coincidono oppure se non coincidono ma sono comunque equivalenti. Inoltre deve fornire override per i metodi:
 \begin{itemize}
-  \item[\java{public OrgViewHolder onCreateViewHolder(ViewGroup parent, int viewType)}:] deve costruire un \java{ViewHolder} appropriato al contesto grafico, dato da \java{parent}, e della tipologia indicata da \java{viewType}.
-  \item[\java{public void onBindViewHolder(OrgViewHolder holder, int position)}:] deve eseguire tutte le operazioni necessarie affinché \java{holder} rappresenti correttamente l'elemento in lista alla posizione \java{position}.
-  \item[\java{public int getItemViewType(int position)}:] deve ritornare la tipologia di \java{ViewHolder} associata alla posizione  \java{position}. In particolare, questo metodo è utile per differenziare ad esempio gli elementi pari dai dispari, e generalmente ritorna una delle costanti definite in \java{R.layout} corrispondenti ai layout associati alle estensioni di \java{ViewHolder}.
+  \item\java{public OrgViewHolder onCreateViewHolder(ViewGroup parent, int viewType)}, che deve costruire un \java{ViewHolder} appropriato al contesto grafico, dato da \java{parent}, e della tipologia indicata da \java{viewType}.
+  \item\java{public void onBindViewHolder(OrgViewHolder holder, int position)}, che deve eseguire tutte le operazioni necessarie affinché \java{holder} rappresenti correttamente l'elemento in lista alla posizione \java{position}.
+  \item\java{public int getItemViewType(int position)}, che deve ritornare la tipologia di \java{ViewHolder} associata alla posizione  \java{position}. In particolare, questo metodo è utile per differenziare ad esempio gli elementi pari dai dispari, e generalmente ritorna una delle costanti definite in \java{R.layout} corrispondenti ai layout associati alle estensioni di \java{ViewHolder}.
 \end{itemize}
 
 Le estensioni di \java{ViewHolder} non hanno requisiti rigidi, ma preferibilmente dovrebbero prevedere una cache di riferimenti ad elementi grafici di cui fanno uso, per limitare il numero di chiamate a \java{findViewById(int)}, le quali potrebbero rallentare l'applicazione.
 
 \paragraph{Integrazione con MVVM}%
 \label{par:integrazione_con_mvvm}
+
 Il \java{ListAdapter} riceve la nuova lista, con la quale aggiornare la \java{RecyclerView}, attraverso il metodo \java{submitList(List<T>)}.
 La lista di organizzazioni viene aggiornata attraverso una richiesta HTTP al server (§\ref{subs:richieste_http}), la quale viene gestita in modo asincrono.
 Di conseguenza, come esposto più nei dettagli in §\ref{subs:logica_di_business}, la lista viene mantenuta in un oggetto \java{androidx.lifecycle.MutableLiveData<List<Organization>>}, il quale permette l'implementazione di un observer pattern.
 Per mantenere la separazione delle responsabilità, la \java{MainPageActivity} riceve una reference al \java{MutableLiveData} dalla propria istanza di \java{MainPageViewModel}, che a sua volta la riceve dalla propria istanza di \java{MainPageModel}, il quale la ottiene dal \java{CurrentSessionSingleton} che ne ha la ownership.
-% par:integrazione_con_mvvm (end)
-% subs:recyclerview (end)
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=6cm]{app-recyclerview.png}
+  \caption{Diagramma delle classi per \java{RecyclerView}}
+~~\label{fig:app/diagramma_classi_recyclerview}
+\end{figure}
+
 \subsubsection{Richieste HTTP}%
 \label{subs:richieste_http}
 Per le richieste HTTP abbiamo scelto la libreria \textit{Volley}, consigliata dalle guide ufficiali di Android, perché permette la loro esecuzione asincrona ed efficiente, senza la difficoltà associata alla gestione di un sistema di worker thread.
