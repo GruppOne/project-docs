@@ -122,6 +122,22 @@ Nell'immagine sottostante è presente lo schema relazionale che mostra la strutt
    \label{fig: schema relazionale del database mySQL}
 \end{figure}
 
+<<<<<<< HEAD
+=======
+\subparagraph{Measurement di InfluxDB}%
+\label{subp:measurement_di_influxDB}
+
+Il ruolo di influxDB all'interno del backend di Stalker è quello di monitorare l'entrata e l'uscita dai luoghi delle organizzazioni a cui l'utente è collegato tramite l'app mobile di Stalker.
+Per memorizzare i dati abbiamo utilizzato un tipo di \glossario{measurement} denominato \textit{access log}. \textit{Access log}  contiene informazioni relative a:
+\begin{itemize}
+  \item Il timestamp della richiesta che viene memorizzato secondo il formato RFC 3339.
+  \item Lo userId dell'utente che è un campo di tipo unsigned int.
+  \item Un campo anonymous di tipo boolean che indica se l'utente è noto o incognito all'interno del luogo.
+  \item Un campo placeId di tipo unsigned int che rappresenta l'id del luogo.
+  \item Un campo inside di tipo boolean che stabilisce se l'utente si trovi all'interno o all'esterno del luogo.
+\end{itemize}
+
+>>>>>>> 29b4696... docs: aggiungi descrizione measurements di influxdb
 \subsection{Feature d'esempio}%
 \label{sub:feature_d'esempio}
 
