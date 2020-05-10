@@ -80,7 +80,7 @@ Le estensioni di \java{ViewHolder} non hanno requisiti rigidi, ma preferibilment
 
 Il \java{ListAdapter} riceve la nuova lista, con la quale aggiornare la \java{RecyclerView}, attraverso il metodo \java{submitList(List<T>)}.
 La lista di organizzazioni viene aggiornata attraverso una richiesta HTTP al server (§\ref{subs:richieste_http}), la quale viene gestita in modo asincrono.
-Di conseguenza, come esposto più nei dettagli in §\ref{subs:logica_di_business}, la lista viene mantenuta in un oggetto \java{androidx.lifecycle.MutableLiveData<List<Organization>>}, il quale permette l'implementazione di un observer pattern.
+Di conseguenza, come esposto più nei dettagli in §\ref{subs:sessione_corrente}, la lista viene mantenuta in un oggetto \java{androidx.lifecycle.MutableLiveData<List<Organization>>}, il quale permette l'implementazione di un observer pattern.
 Per mantenere la separazione delle responsabilità, la \java{MainPageActivity} riceve una reference al \java{MutableLiveData} dalla propria istanza di \java{MainPageViewModel}, che a sua volta la riceve dalla propria istanza di \java{MainPageModel}, il quale la ottiene dal \java{CurrentSessionSingleton} che ne ha la ownership.
 
 \begin{figure}[h]
@@ -114,6 +114,27 @@ La classe \java{utility.AuthenticatedRequest} aggiunge automaticamente questo he
 
 \subsubsection{Gestione della posizione}%
 \label{subs:gestione_della_posizione}
+
+Per la raccolta delle informazioni sulla posizione, Stalker sfrutta le API esposte dalle librerie native di Android.
+Abbiamo astratto le chiamate alle API grazie alla classe astratta \java{GooglePositionInterface}.
+A causa del suo unico campo dati non può essere un'interfaccia con metodi di default, e per questo stiamo considerando la possibilità di spostarlo.
+I suoi due metodi \java{checkPermissions(Activity activity)} e \java{startLocationUpdates(Activity activity)} permettono rispettivamente di verificare se l'utente ha concesso i permessi di geolocalizzazione all'app, o eventualmente di chiederli, e di iniziare effettivamente il tracciamento.
+
+\paragraph{Elaborazione della posizione}%
+\label{par:elaborazione_della_posizione}
+
+Le API di Android permettono di associare dei metodi callback all'arrivo di nuove informazioni sulla posizione.
+Per l'elaborazione in background di queste informazioni, Stalker ha a disposizione la classe \java{utility.location.LocationNotifier}, derivata da \java{androidx.core.app.JobIntentService}.
+Essa raccoglie dei compiti da eseguire, rappresentati ciascuno da un contesto e da un'istanza di \java{android.content.Intent}, in una struttura a coda.
+Ogni compito, quando raggiunge la cima della coda, viene eseguito invocando il metodo \java{onHandleWork(Intent)}.
+
+\subsubsection{Sessione corrente}%
+\label{subs:sessione_corrente}
+
+Per mantenere le informazioni legate alla sessione corrente abbiamo scelto di utilizzare un singleton pattern, con la classe \java{utility.CurrentSessionSingleton}.
+Per inserirsi nell'architettura MVVM, esso mantiene i propri campi dati in oggetti \java{androidx.lifecycle.MutableLiveData<T>}, al fine di implementare l'observer pattern.
+Per prevenire le modifiche non controllate, espone getter che ritornano reference a \java{androidx.lifecycle.LiveData<T>}, che non permette l'aggiornamento dell'oggetto contenuto.
+Inoltre, espone un metodo \java{getInsidePlaces(Point)} che ritorna la lista degli \java{id} dei luoghi che contengono il punto passato come parametro.
 
 \subsubsection{Logica di business}%
 \label{subs:logica_di_business}
