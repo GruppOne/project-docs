@@ -71,7 +71,7 @@ Opera in due maniere opposte:
 
 Il model contiene le informazioni corrispondenti ai dati presenti nel database e ai dati che i client possono inviare in formato JSON sotto forma di classi Java.
 Per effettuare il mapping tra file JSON e classi Java, Spring usa di default la libreria \glossarioLocale{Jackson}.
-Per realizzare, invece, il mapping delle classi Java in tabelle del database abbiamo utilizzato le \glossarioLocale{hibernate JPA annotation} che forniscono servizi di \glossarioLocale{Object-Relational-Mapping}.
+Per realizzare, invece, il mapping delle classi Java in tabelle del database abbiamo utilizzato le \glossarioLocale{JPA annotations} che forniscono servizi di \glossarioLocale{Object-Relational-Mapping}.
 
 \begin{figure}[H]
   \centering
@@ -127,7 +127,7 @@ Nell'immagine sottostante è presente lo schema relazionale che mostra la strutt
 \label{subp:measurement_di_influxDB}
 
 Il ruolo di influxDB all'interno del backend di Stalker è quello di monitorare l'entrata e l'uscita dai luoghi delle organizzazioni a cui l'utente è collegato tramite l'app mobile di Stalker.
-Per memorizzare i dati abbiamo utilizzato un tipo di \glossario{measurement} denominato \textit{access log}. \textit{Access log}  contiene informazioni relative a:
+Per memorizzare i dati abbiamo utilizzato un tipo di \glossarioLocale{measurement} denominato \textit{access log}. \textit{Access log}  contiene informazioni relative a:
 \begin{itemize}
   \item Il timestamp della richiesta che viene memorizzato secondo il formato RFC 3339.
   \item Lo userId dell'utente che è un campo di tipo unsigned int.
@@ -149,9 +149,9 @@ Per memorizzare i dati abbiamo utilizzato un tipo di \glossario{measurement} den
   La figura soprastante è un diagramma delle classi che rappresenta l'endpoint che si occupa di gestire la posizione di un utente in un luogo.
   Quando l'app di Stalker, installata nel cellulare dell'utente, rileverà un accesso o un uscita da un luogo verrà inviata al server una richiesta di update della posizione dell'utente.
   Tale richiesta dovrà essere inviata all'endpoint denominato /location/update che incaricherà la funzione handler (postLocationUpdate) di soddisfare la richiesta.
-  la funzione postLocationUpdate riceve in input dall'applicazione un file in formato JSON che verrà mappato, tramite la libreria Jackson nella classe Multilocationinfo del modello che contiene informazioni relative all'id dell'utente, la sua posizione e una lista dei luoghi.
+  la funzione postLocationUpdate riceve in input dall'applicazione un file in formato JSON che verrà mappato, tramite la libreria Jackson, nella classe Multilocationinfo del modello che contiene informazioni relative all'id dell'utente, la sua posizione e una lista dei luoghi.
   Successivamente il controller inoltrerà la richiesta al service adibito( nella figura LocationInfoService) che da un oggetto di tipo Multilocationinfo estrae un Flux di LocationInfo che passerà come parametro alla funzione saveLocationInfo dello strato repository.
-  LocationInfoRepository contiene un campo dati denominato InfluxDBmapper che effettua il mapping diretto tra il repository e il database influxDB. Infine saveLocationInfo effettua la query di update sul database e restutuisce un codice di stato http pari a 201 nel caso in cui la richiesta vada a buon fine.
+  LocationInfoRepository contiene un campo dati denominato InfluxDBmapper che effettua il mapping diretto tra il repository e il database influxDB. Infine saveLocationInfo effettua la query di update sul database e restituisce un codice di stato http pari a 201 nel caso in cui la richiesta andasse a buon fine.
 
 
 \end{document}
