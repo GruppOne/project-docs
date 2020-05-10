@@ -137,6 +137,7 @@ Per memorizzare i dati abbiamo utilizzato un tipo di \glossario{measurement} den
   \item Un campo inside di tipo boolean che stabilisce se l'utente si trovi all'interno o all'esterno del luogo.
 \end{itemize}
 
+<<<<<<< HEAD
 >>>>>>> 29b4696... docs: aggiungi descrizione measurements di influxdb
 \subsection{Feature d'esempio}%
 \label{sub:feature_d'esempio}
@@ -146,6 +147,24 @@ Per memorizzare i dati abbiamo utilizzato un tipo di \glossario{measurement} den
     \includegraphics[width=\textwidth,height=\textheight]{server-influxDB-write-endpoint.png}
     \caption{diagramma delle classi d'esempio}%
      \label{fig: diagramma delle classi d'esempio}
+=======
+\subsubsection{Update della posizione di un utente}%
+\label{subs:update_della_posizione_di_un_utente}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth,height=\textheight]{img/server-influxDB-write-endpoint.png}
+    \caption{diagramma delle classi che illustra come avviene l'update della posizione di un utente}%
+     \label{fig:diagramma delle classi che illustra come avviene l'update della posizione di un}
+>>>>>>> cf1c45e... docs: aggiungi descrizione diagramma
   \end{figure}
+
+  La figura soprastante è un diagramma delle classi che rappresenta l'endpoint che si occupa di gestire la posizione di un utente in un luogo.
+  Quando l'app di Stalker, installata nel cellulare dell'utente, rileverà un accesso o un uscita da un luogo verrà inviata al server una richiesta di update della posizione dell'utente.
+  Tale richiesta dovrà essere inviata all'endpoint denominato /location/update che incaricherà la funzione handler (postLocationUpdate) di soddisfare la richiesta.
+  la funzione postLocationUpdate riceve in input dall'applicazione un file in formato JSON che verrà mappato, tramite la libreria Jackson nella classe Multilocationinfo del modello che contiene informazioni relative all'id dell'utente, la sua posizione e una lista dei luoghi.
+  Successivamente il controller inoltrerà la richiesta al service adibito( nella figura LocationInfoService) che da un oggetto di tipo Multilocationinfo estrae un Flux di LocationInfo che passerà come parametro alla funzione saveLocationInfo dello strato repository.
+  LocationInfoRepository contiene un campo dati denominato InfluxDBmapper che effettua il mapping diretto tra il repository e il database influxDB. Infine saveLocationInfo effettua la query di update sul database e restutuisce un codice di stato http pari a 201 nel caso in cui la richiesta vada a buon fine.
+
 
 \end{document}
