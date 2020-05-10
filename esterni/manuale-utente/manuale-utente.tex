@@ -1,0 +1,90 @@
+\documentclass{article}
+
+\input{../../commons/config}
+\appendToGraphicspath{../../commons/img/}
+\appendToGraphicspath{components/img/}
+\appendToGraphicspath{components/img/mobile-app/}
+\appendToGraphicspath{components/img/web-app/}
+\appendToGraphicspath{components/img/web-app/create-organization/}
+\appendToGraphicspath{components/img/web-app/edit-organization/}
+
+\title{Manuale utente}
+
+\setResponsabile{Luca Ercole}
+\setRedattori{
+  Alberto Gobbo  \\ &
+  Riccardo Cestaro
+}
+\setVerificatori{
+  Fabio Scettro \\ &
+  Riccardo Agatea
+}
+\setUso{Esterno}
+\setDescrizione{Manuale utente del gruppo \emph{GruppOne} per la realizzazione del progetto \emph{Stalker}}
+\setModifiche{%
+\rowcolor{lightgray} 0.3.1 & Luca Ercole  & 2020--05--07 & approva documento \textit{Manuale Utente} \\\hline  % chktex 44
+\rowcolor{lightgray}  & Fabio Scettro, Riccardo Agatea  & 2020--05--07 & verifica documento completo \textit{Manuale Utente} \\\hline  % chktex 44
+\rowcolor{lightgray}  & Alberto Gobbo  & 2020--05--06 & correggi alcuni errori generali \textit{Manuale Utente} \\\hline  % chktex 44
+\rowcolor{lightgray}  & Riccardo Cestaro  & 2020--05--05 & integra descrizioni \textit{Manuale Utente} \\\hline  % chktex 44
+\rowcolor{lightgray}  & Alberto Gobbo  & 2020--05--05 & completa sezione web app \textit{Manuale Utente} \\\hline  % chktex 44
+\rowcolor{lightgray}  & Alberto Gobbo  & 2020--04--28 & aggiungi alcune sezioni \textit{Manuale Utente} \\\hline  % chktex 44
+\rowcolor{lightgray}  & Riccardo Cestaro  & 2020--04--27 & scrivi sezione mobile app \textit{Manuale Utente} \\\hline % chktex 44
+\rowcolor{lightgray}  & Riccardo Cestaro  & 2020--04--20 & crea template del documento \textit{Manuale Utente} \\ \hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.3.0 & Alberto Cocco & 2020--04--13 & consegna documenti \textit{Revisione di progettazione} \\\hline % chktex 44
+\rowcolor{lightgray} 0.2.4 & Alberto Cocco & 2020--04--12 & modifica \textit{Piano di qualifica} \\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.2.3 & Alberto Cocco & 2020--04--12 & modifica \textit{Glossario} \\\hline % chktex 44
+\rowcolor{lightgray} 0.2.2 & Alberto Cocco & 2020--04--11 & modifica \textit{Piano di progetto} \\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.2.1 & Alberto Cocco & 2020--04--11 & modifica \textit{Norme di progetto} \\\hline % chktex 44
+\rowcolor{lightgray} 0.2.0 & Alberto Cocco & 2020--04--07 & consegna \textit{Technology baseline} \\\hline % chktex 44
+\rowcolor{lightgray} 0.1.7 & Alberto Cocco & 2020--04--06 & modifica \textit{Analisi dei requisiti} \\%
+\hline % chktex 44
+\rowcolor{lightgray} 0.1.6 & Riccardo Agatea & 2020--03--06 & modifica \textit{Norme di progetto} \\\hline % chktex 44
+\rowcolor{white!80!lightgray!100}  0.1.5 & Riccardo Agatea & 2020--03--04 & modifica \textit{Norme di progetto} \\\hline % chktex 44
+\rowcolor{white!80!lightgray!100}0.1.4 & Riccardo Agatea & 2020--03--01 & modifica \textit{Analisi dei requisiti} \\%
+\hline % chktex 44
+\rowcolor{white!80!lightgray!100}  0.1.3 & Riccardo Agatea & 2020--03--01 & modifica \textit{Glossario} \\\hline % chktex 44
+\rowcolor{lightgray} 0.1.2 & Riccardo Agatea & 2020--02--27 & modifica \textit{Piano di progetto} \\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.1.1 & Alessandro Rizzo & 2020--02--26 & modifica \textit{Piano di progetto} \\\hline % chktex 44
+\rowcolor{lightgray} 0.1.0 & Alessandro Rizzo & 2020--01--13 & consegna documenti \textit{Revisione dei requisit} \\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.0.8 & Alessandro Rizzo & 2020--01--13 & creazione \textit{Glossario} \\\hline % chktex 44
+\rowcolor{lightgray} 0.0.7 & Alessandro Rizzo & 2020--01--13 & creazione \textit{Piano di qualifica} \\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.0.6 & Alessandro Rizzo & 2020--01--13 & modifica \textit{Piano di progetto} \\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.0.5 & Alessandro Rizzo & 2020--01--03 & \textit{Analisi dei requisiti} \\%
+\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.0.4 & Alessandro Rizzo & 2019--12--30 & modifica \textit{Norme di progetto} \\\hline % chktex 44
+\rowcolor{lightgray} 0.0.3 & Alessandro Rizzo & 2019--12--07 & creazione \textit{Studio di fattibilità} \\\hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.0.2 & Riccardo Agatea & 2019--11--25 & creazione \textit{Piano di progetto} \\\hline % chktex 44
+\rowcolor{lightgray} 0.0.1 & Riccardo Agatea & 2019--11--19 & creazione \textit{Norme di progetto}%
+}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Introduzione}%
+\label{sec:introduzione}
+\subfile{components/introduzione}
+
+\newpage
+\section{Mobile application}%
+\label{sec:mobile_application}
+\subfile{components/mobile-application}
+
+\newpage
+\section{Web application}%
+\label{sec:web_application}
+\subfile{components/web-application}
+
+\newpage
+\section{Supporto tecnico}%
+\label{sec:supporto_tecnico}
+\subfile{components/supporto-tecnico}
+
+\newpage
+\appendix
+\setcounter{secnumdepth}{1} % No section number
+\section{Glossario}%
+\label{sec:glossario}
+\subfile{components/glossario}
+
+\end{document}
