@@ -82,7 +82,7 @@
           \item se la conferma della password inserita non è valida, l'utente visualizzerà un errore~\ref{subs:UUC1.3.9};
           \item se il nome dell'utente non è inserito, l'utente visualizzerà un errore~\ref{subs:UUC1.3.10};
           \item se il cognome dell'utente non è inserito, l'utente visualizzerà un errore~\ref{subs:UUC1.3.11};
-          \item se la data di nascita dell'utente non è inserita correttamente, l'utente visualizzerà un errore~\ref{subs:UUC1.3.12}.
+          \item se la data di nascita dell'utente non è valida nel suo formato o l'utente non è maggiorenne, l'utente visualizzerà un errore~\ref{subs:UUC1.3.12}.
         \end{enumerate}
 \end{description}
 
@@ -122,7 +122,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se la password non è alfanumerica e con almeno un simbolo, verrà visualizzato un errore di password non valida~\ref{subs:UUC1.3.8}.
+          \item se la password non è lunga almeno 8 caratteri e non contiene almeno un simbolo, un numero, una lettera maiuscola e una minuscola, allora verrà visualizzato un errore di password non valida~\ref{subs:UUC1.3.8}.
         \end{enumerate}
 \end{description}
 
@@ -198,7 +198,7 @@
         \end{enumerate}
   \item[Estensioni:]
         \begin{enumerate}
-          \item se la data di nascita non viene inserita, oppure l'utente inserisce una data non conforme al formato \textit{yyyy-mm-dd}, verrà visualizzato un errore~\ref{subs:UUC1.3.12}.
+          \item se la data di nascita non viene inserita, oppure l'utente inserisce una data non conforme al formato, o l'utente non è maggiorenne, verrà visualizzato un errore~\ref{subs:UUC1.3.12}.
         \end{enumerate}
 \end{description}
 
@@ -226,7 +226,7 @@
   \item[Postcondizione:] l'applicazione mobile comunica all'utente l'errore;
   \item[Scenario Principale:]
         \begin{enumerate}
-          \item l'utente visualizza il messaggio d'errore, in quanto la password inserita non è alfanumerica e non contiene almeno un simbolo.
+          \item l'utente visualizza il messaggio d'errore, in quanto la password inserita non è lunga almeno 8 caratteri e non contiene almeno un simbolo, un numero, una lettera maiuscola e una minuscola.
         \end{enumerate}
 \end{description}
 
@@ -282,7 +282,7 @@
   \item[Postcondizione:] l'applicazione mobile comunica all'utente l'errore;
   \item[Scenario Principale:]
         \begin{enumerate}
-          \item l'utente visualizza il messaggio d'errore, in quanto la data di nascita inserita deve rispettare il formato \textit{yyyy-mm-dd}.
+          \item l'utente visualizza il messaggio d'errore, in quanto l'utente non ha più di 18 anni o la data è una data non valida nel suo formato.
         \end{enumerate}
 \end{description}
 
