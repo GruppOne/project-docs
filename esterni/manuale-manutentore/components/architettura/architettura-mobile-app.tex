@@ -5,7 +5,7 @@
 \label{sub:mobile_app}
 
 Tutte le classi definite per l'applicazione mobile sono raccolte nel package \java{tech.gruppone.stalker.app}, i cui subpackage sono organizzati come indicato in figura §\ref{fig:app/diagramma_package}
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=6cm]{app-package-diagram.png}
   \caption{Diagramma dei package per l'applicazione mobile}
@@ -15,9 +15,9 @@ Tutte le classi definite per l'applicazione mobile sono raccolte nel package \ja
 \subsubsection{MVVM}%
 \label{subs:mvvm}
 
-Per la mobile app abbiamo scelto il pattern Model-View-ViewModel, in quanto è supportato nativamente dalle librerie di Android e si integra perfettamente con il sistema di lifetime del framework. Per ogni schermata \textit{X} visualizzata dall'utente, ad esempio la schermata di \textit{Login}, sono individuate:
+Per la mobile app abbiamo scelto il pattern Model-View-ViewModel, in quanto è supportato nativamente dalle librerie di Android e si integra perfettamente con il sistema di \glossarioLocale{lifetime} del framework. Per ogni schermata \textit{X} visualizzata dall'utente, ad esempio la schermata di \textit{Login}, sono individuate:
 \begin{itemize}
-  \item Una classe \java{XActivity} derivata da \java{androidx.appcompat.app.AppCompActivity}, corrispondente alla View, a cui è associato un layout \linebreak[1]\texttt{activity\_x.xml} scritto in XML\@.
+  \item Una classe \java{XActivity} derivata da \java{androidx.appcompat.app.AppCompActivity}, corrispondente alla View, a cui è associato un \glossarioLocale{layout} \linebreak[1]\texttt{activity\_x.xml} scritto in XML\@.
   \item Se necessario, una classe \java{XViewModel} derivata da \java{androidx.lifecycle.ViewModel} corrispondente al ViewModel.
   \item Se necessario, una classe \java{XModel} derivata da \java{java.lang.Object} corrispondente al Model.
 \end{itemize}
@@ -26,7 +26,7 @@ GruppOne raccoglie le classi \java{XActivity}, \java{XViewModel} e \java{XModel}
 Le tre classi formano la gerarchia mostrata in figura §\ref{fig:app/diagramma_classi_mvvm}.
 Mentre \java{XViewModel} può semplicemente istanziare \java{Model}, \java{XActivity} deve ricevere un'istanza di \java{XViewModel} da un \java{androidx.lifecycle.ViewModelProvider} attraverso il metodo \java{get(Class<T>)}, a causa del lifetime system.
 Ogni volta che un oggetto associato alla stessa schermata, e quindi istanza della stessa classe \java{XActivity}, viene costruito, ad esempio dopo che lo schermo è stato ruotato, il \java{ViewModelProvider} gli restituisce la stessa istanza della classe \java{XViewModel}.
-Il modo più comune di ottenere l'istanza di \java{XViewModel}, a meno degli opportuni import, è:
+Il modo più comune di ottenere l'istanza di \java{XViewModel}, a meno degli opportuni \java{import}, è:
 
 \begin{minted}{java}
 class XActivity extends AppCompActivity {
@@ -46,14 +46,14 @@ class XActivity extends AppCompActivity {
 Siccome i permessi di geolocalizzazione sono necessari al corretto funzionamento dell'applicazione, essa verifica ogni volta che viene aperta o riportata in primo piano che non siano stati revocati.
 Per questo abbiamo scelto di utilizzare un decorator pattern, quindi forniamo la classe \java{utility.StalkerActivity} come classe derivata da \java{androidx.appcompat.app.AppCompatActivity} per eseguire automaticamente questa verifica.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics{app-mvvm.png}
   \caption{Diagramma delle classi per MVVM}
 ~~\label{fig:app/diagramma_classi_mvvm}
 \end{figure}
 
-Per quanto riguarda l'autenticazione, e quindi le schermate di \textit{Login} e \textit{Signup}, il viewmodel ha la responsabilità di produrre un hash della password, mentre il model ha la responsabilità di definire il metodo callback che viene invocato quando il server risponde alla richiesta.
+Per quanto riguarda l'autenticazione, e quindi le schermate di \textit{Login} e \textit{Signup}, il viewmodel ha la responsabilità di produrre un hash della password, mentre il model ha la responsabilità di definire il metodo \glossarioLocale{callback} che viene invocato quando il server risponde alla richiesta.
 
 \subsubsection{RecyclerView}%
 \label{subs:recyclerview}
@@ -83,7 +83,7 @@ La lista di organizzazioni viene aggiornata attraverso una richiesta HTTP al ser
 Di conseguenza, come esposto più nei dettagli in §\ref{subs:sessione_corrente}, la lista viene mantenuta in un oggetto \java{androidx.lifecycle.MutableLiveData<List<Organization>>}, il quale permette l'implementazione di un observer pattern.
 Per mantenere la separazione delle responsabilità, la \java{MainPageActivity} riceve una reference al \java{MutableLiveData} dalla propria istanza di \java{MainPageViewModel}, che a sua volta la riceve dalla propria istanza di \java{MainPageModel}, il quale la ottiene dal \java{CurrentSessionSingleton} che ne ha la ownership.
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=6cm]{app-recyclerview.png}
   \caption{Diagramma delle classi per \java{RecyclerView}}
@@ -141,7 +141,6 @@ Inoltre, espone un metodo \java{getInsidePlaces(Point)} che ritorna la lista deg
 
 Il subpackage \java{business} contiene le classi utilizzate per rappresentare i concetti prettamente legati a Stalker, come organizzazioni, luoghi, posizioni e utenti.
 Queste classi fanno uso delle annotazioni del progetto \textit{Lombok} per generare automaticamente metodi come getter, setter, \java{toString()}, \java{equals()}.
-Descriviamo queste classi in dettaglio.
 
 \paragraph[Organization]{\java{Organization}}%
 \label{par:app/organization}
@@ -154,7 +153,7 @@ Inoltre, espone un metodo \java{getInsidePlaces(Point)} che ritorna la lista deg
 
 La classe \java{Place}, in modo simile a \java{Organization}, espone un costruttore di tipo \java{org.json.JSONObject} utilizzato per costruire un'istanza a partire dalle risposte HTTP inviate dal server.
 Inoltre, espone un metodo \java{isInside(Point)} che verifica se un dato punto è all'interno del luogo.
-La verifica è eseguita utilizzando la matematica vettoriale.
+La verifica è eseguita utilizzando il calcolo vettoriale.
 Per ogni vertice del poligono, sono definiti il vettore da esso al vertice successivo ed il vettore da esso al punto passato come parametro.
 Sono poi calcolati i prodotti vettoriali: se tutti i prodotti vettoriali hanno lo stesso verso, il punto è all'interno, altrimenti è all'esterno.
 Eventuali prodotti nulli indicano che i tre punti sono allineati.
@@ -170,6 +169,6 @@ Per la conversione, abbiamo definito dei metodi privati che implementano la proi
 \label{par:app/user}
 
 La classe \java{User} semplicemente raccoglie i dati dell'utente, ed espone solo i metodi generati automaticamente da \textit{Lombok}.
-In UML è categorizzato come \texttt{<<data type>>}.
+In UML è categorizzata come \texttt{<<data type>>}.
 
 \end{document}
