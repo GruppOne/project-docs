@@ -2,6 +2,9 @@
 
 \begin{document}
 
+\subsection{Web Application}%
+\label{sub:architettura/web-app}
+
 \subsubsection{Architettura generale}%
 \label{subs:architettura_generale}
 
@@ -12,8 +15,9 @@
   \label{fig:web-app-package-diagram}
 \end{figure} qui
 
-La web application di stalker si basa sul design pattern architetturale Model-View-ViewModel, come è possibile osservare in questo diagramma dei package il ViewModel è rappresentato dai component di angular si collegano ai propri template html che rappresenta la View, i servizi che gestiscono la business login e i modelli invece rappresentano il Model.
-Questa architettura consente di lavorare in maniera asincrona nelle chiamate effettuate al server grazie agli \textit{Observables}, la vista inoltre rimane sempre aggiornata con il ViewModel tramite il \textit{two way data binding}.
+La web application di Stalker ha adottato il design pattern architetturale Model-View-ViewModel, come è possibile osservare in questo diagramma dei package il ViewModel è rappresentato dai \glossarioLocale{component} di angular si collegano ai propri template html che rappresentano invece la View, i \glossarioLocale{service} che gestiscono la business login e i modelli invece rappresentano il Model.
+Questa architettura consente di lavorare in maniera asincrona nelle chiamate effettuate al server grazie agli \glossarioLocale{Observables}.
+La vista inoltre rimane sempre aggiornata con il ViewModel tramite il \textit{two way data binding}.
 \begin{figure}[H]
   \centering
   \scalegraphics{webapp-databinding.png}
@@ -29,10 +33,10 @@ In questo modo è presente una sola istanza per ogni servizio o componente in un
 \subsubsection{Comunicazione con il server}%
 \label{subs:comunicazione_server}
 
-La comunicazione con il server lasciata completamente in mano ai servizi.
-In Stalker è stato modellato un servizio per ogni dato che saremmo andati ad utilizzare, tutti questi servizi si interfacciano poi con il servizio HttpClientService che si occupa di mandare le richieste http rivolte agli endpoint definiti dalla nostra API che vengono esposti dal server.
+La comunicazione con il server è lasciata completamente in mano ai servizi.
+In Stalker è stato modellato un servizio per ogni dato che saremmo andati ad utilizzare, tutti questi servizi si interfacciano poi con il servizio HttpClientService che si occupa di mandare le richieste http rivolte agli endpoint definiti dalla nostra API e che vengono esposti dal server.
 Tutte le richieste http in uscita vengono intercettate dalla class AuthHttpInterceptor che aggiunge un header per l'autenticazione in caso di chiamate agli endpoint di Stalker; il funzionamento di questa classe è definito nel dettaglio in §\ref{subs:autenticazione}.
-Le risposte alle chiamate del server tornano poi ad HttpClientService che gestisce eventuali errori nella risposta lanciando un errore che provocherà un aggiornamento della vista da parte del component. In caso di una risposta positiva invece essa verrà restituita al servizio chiamante che dopo le opportune operazioni restituirà un observable dell'oggetto richiesto dal component, che dopo aver effettuato una subscription all'oggetto possono aggiornare i propri campi dati.
+Le risposte alle chiamate del server tornano poi ad HttpClientService che gestisce eventuali errori nella risposta lanciando un errore che provocherà un aggiornamento della vista da parte del component. In caso di una risposta positiva invece essa verrà restituita al servizio chiamante che dopo le opportune operazioni restituirà un Observable dell'oggetto richiesto dal component, che dopo aver effettuato una subscription all'oggetto possono aggiornare i propri campi dati.
 A questo punto la vista si aggiornerà di conseguenza.
 
 \begin{figure}[H]
@@ -53,14 +57,14 @@ Il seguente diagramma di sequenza illustra la serie di chiamate che intercorrono
 \subsubsection{Autenticazione e autorizzazione}%
 \label{subs:autenticazione}
 
-In stalker l'autenticazione degli utenti viene gestita con i token JWT che identificano univocamente il permesso di un determinato utente di accedere all'applicazione web.
+In Stalker l'autenticazione degli utenti viene gestita con i token JWT che identificano univocamente il permesso di un determinato utente di accedere all'applicazione web.
 \begin{figure}[H]
   \centering
   \scalegraphics{webapp-auth.png}
   \caption{classi impegnate in autenticazione e autorizzazione}%
   \label{fig:web-app-auth}
 \end{figure}
-Il token viene creato dal server e poi arriva nell'header della risposta http alla web application, a questo punto la classe LoginService che aveva effettuato la richiesta di login conserva il token jwt in un cookie e il suo payload, ossia l'id dell'utente attuale, viene immagazzinato in \glossarioLocale{localstorage}.
+Il token di accesso viene creato dal server e poi arriva nell'header della risposta http alla web application, a questo punto la classe LoginService che aveva effettuato la richiesta di login conserva il token di accesso jwt in un cookie e il suo payload, ossia l'id dell'utente attuale, viene immagazzinato in \glossarioLocale{localstorage}.
 Login service si occupa di ogni operazione che coinvolga l'accesso ad informazioni riguardanti l'autenticazione o l'autorizzazione come il logout o la verifica dei permessi dell'utente su una determinata organizzazione.
 \begin{figure}[H]
   \centering
@@ -82,7 +86,7 @@ Dopo aver effettuato con successo il login ogni chiamata rivolta ad un endpoint 
 \label{subs:navigazione}
 
 La navigazione nella web application di stalker è strettamente correlata all'autorizzazione poiché, essendo il target di questa applicazione amministratori di organizzazioni con diversi permessi, è indispensabile limitare l'accesso alle pagine per cui non si hanno i permessi.
-Abbiamo deciso di sfruttare un meccanismo intrinseco di angular, le \glossarioLocale{Guard}, abbiamo dichiarato infatti una classe \textit{AuthGuard} che ha come scopo il controllo dei permessi dell'utente e, qualora fossero sufficienti, permettere l'accesso alla pagina.
+Abbiamo deciso di sfruttare un meccanismo intrinseco di angular, le \glossarioLocale{Route Guard}, abbiamo dichiarato infatti la classe AuthGuard che ha come scopo il controllo dei permessi dell'utente e, qualora fossero sufficienti, permettere l'accesso alla pagina.
 \begin{figure}[H]
   \centering
   \scalegraphics{webapp-authguard.png}
@@ -179,5 +183,5 @@ Per estendere la web application con una nuova funzionalità è necessario:
   \item dichiarare componenti e servizi aggiunti in \texttt{app.module.ts} al fine di renderli disponibili tramite dependency injection.
 \end{itemize}
 % subs:estensione-webapp (end)
-
+% sub:architettura/web-app (end)
 \end{document}
