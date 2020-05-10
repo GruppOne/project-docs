@@ -78,7 +78,7 @@ Le estensioni di \java{ViewHolder} non hanno requisiti rigidi, ma preferibilment
 \paragraph{Integrazione con MVVM}%
 \label{par:integrazione_con_mvvm}
 
-Il \java{ListAdapter} riceve la nuova lista, con la quale aggiornare la \java{RecyclerView}, attraverso il metodo \java{submitList(List<T>)}.
+Il \java{ListAdapter} riceve la nuova lista, con la quale aggiornare la \java{RecyclerView}, attraverso il metodo \linebreak\java{submitList(List<T>)}.
 La lista di organizzazioni viene aggiornata attraverso una richiesta HTTP al server (§\ref{subs:richieste_http}), la quale viene gestita in modo asincrono.
 Di conseguenza, come esposto più nei dettagli in §\ref{subs:sessione_corrente}, la lista viene mantenuta in un oggetto \java{androidx.lifecycle.MutableLiveData<List<Organization>>}, il quale permette l'implementazione di un observer pattern.
 Per mantenere la separazione delle responsabilità, la \java{MainPageActivity} riceve una reference al \java{MutableLiveData} dalla propria istanza di \java{MainPageViewModel}, che a sua volta la riceve dalla propria istanza di \java{MainPageModel}, il quale la ottiene dal \java{CurrentSessionSingleton} che ne ha la ownership.
@@ -124,9 +124,9 @@ I suoi due metodi \java{checkPermissions(Activity activity)} e \java{startLocati
 \label{par:elaborazione_della_posizione}
 
 Le API di Android permettono di associare dei metodi callback all'arrivo di nuove informazioni sulla posizione.
-Per l'elaborazione in background di queste informazioni, Stalker ha a disposizione la classe \java{utility.location.LocationNotifier}, derivata da \java{androidx.core.app.JobIntentService}.
+Per l'elaborazione in background di queste informazioni, Stalker ha a disposizione la classe \linebreak\java{utility.location.LocationNotifier}, derivata da \java{androidx.core.app.JobIntentService}.
 Essa raccoglie dei compiti da eseguire, rappresentati ciascuno da un contesto e da un'istanza di \java{android.content.Intent}, in una struttura a coda.
-Ogni compito, quando raggiunge la cima della coda, viene eseguito invocando il metodo \java{onHandleWork(Intent)}.
+Ogni compito, quando raggiunge la cima della coda, viene eseguito invocando il metodo \linebreak\java{onHandleWork(Intent)}.
 
 \subsubsection{Sessione corrente}%
 \label{subs:sessione_corrente}
@@ -134,9 +134,42 @@ Ogni compito, quando raggiunge la cima della coda, viene eseguito invocando il m
 Per mantenere le informazioni legate alla sessione corrente abbiamo scelto di utilizzare un singleton pattern, con la classe \java{utility.CurrentSessionSingleton}.
 Per inserirsi nell'architettura MVVM, esso mantiene i propri campi dati in oggetti \java{androidx.lifecycle.MutableLiveData<T>}, al fine di implementare l'observer pattern.
 Per prevenire le modifiche non controllate, espone getter che ritornano reference a \java{androidx.lifecycle.LiveData<T>}, che non permette l'aggiornamento dell'oggetto contenuto.
-Inoltre, espone un metodo \java{getInsidePlaces(Point)} che ritorna la lista degli \java{id} dei luoghi che contengono il punto passato come parametro.
+Inoltre, espone un metodo \java{getInsidePlaces(Point)} che ritorna la lista degli \java{id} dei luoghi che contengono il punto passato come parametro fra tutti i luoghi monitorati.
 
 \subsubsection{Logica di business}%
 \label{subs:logica_di_business}
+
+Il subpackage \java{business} contiene le classi utilizzate per rappresentare i concetti prettamente legati a Stalker, come organizzazioni, luoghi, posizioni e utenti.
+Queste classi fanno uso delle annotazioni del progetto \textit{Lombok} per generare automaticamente metodi come getter, setter, \java{toString()}, \java{equals()}.
+Descriviamo queste classi in dettaglio.
+
+\paragraph[Organization]{\java{Organization}}%
+\label{par:organization}
+
+La classe \java{Organization} espone un costruttore ad un parametro di tipo \java{org.json.JSONObject} utilizzato per costruire un'istanza a partire dalle risposte HTTP inviate dal server.
+Inoltre, espone un metodo \java{getInsidePlaces(Point)} che ritorna la lista degli \java{id} dei luoghi che contengono il punto passato come parametro fra i luoghi legati all'organizzazione.
+
+\paragraph[Place]{Place}%
+\label{par:place}
+
+La classe \java{Place}, in modo simile a \java{Organization}, espone un costruttore di tipo \java{org.json.JSONObject} utilizzato per costruire un'istanza a partire dalle risposte HTTP inviate dal server.
+Inoltre, espone un metodo \java{isInside(Point)} che verifica se un dato punto è all'interno del luogo.
+La verifica è eseguita utilizzando la matematica vettoriale.
+Per ogni vertice del poligono, sono definiti il vettore da esso al vertice successivo ed il vettore da esso al punto passato come parametro.
+Sono poi calcolati i prodotti vettoriali: se tutti i prodotti vettoriali hanno lo stesso verso, il punto è all'interno, altrimenti è all'esterno.
+Eventuali prodotti nulli indicano che i tre punti sono allineati.
+
+\paragraph[Point]{Point}%
+\label{par:point}
+
+La classe \java{Point} rappresenta un punto in coordinate cartesiane.
+Espone un metodo statico \linebreak\java{buildFromDegrees(double longitude, double latitude)} per costruire un punto a partire dalle coordinate polari utilizzate in geolocalizzazione.
+Per la conversione, abbiamo definito dei metodi privati che implementano la proiezione ellittica di Mercatore.
+
+\paragraph[User]{User}%
+\label{par:user}
+
+La classe \java{User} semplicemente raccoglie i dati dell'utente, ed espone solo i metodi generati automaticamente da \textit{Lombok}.
+In UML è categorizzato come \texttt{<<data type>>}.
 
 \end{document}
