@@ -1,4 +1,4 @@
-@startuml SignUpActivity diagram
+@startuml app-signupactivity-diagram
 !include ../../../style/class.pu
 
 class SignUpActivity {

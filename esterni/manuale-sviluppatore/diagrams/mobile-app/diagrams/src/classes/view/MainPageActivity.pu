@@ -1,4 +1,4 @@
-@startuml LoginActivity diagram
+@startuml app-mainpageactivity-diagram
 !include ../../../style/class.pu
 
 class MainPageActivity {

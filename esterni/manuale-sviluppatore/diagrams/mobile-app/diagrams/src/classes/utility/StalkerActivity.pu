@@ -1,4 +1,4 @@
-@startuml StalkerActivity Diagram
+@startuml app-stalkeractivity-diagram
 !include ../../../style/class.pu
 
 class StalkerActivity{
