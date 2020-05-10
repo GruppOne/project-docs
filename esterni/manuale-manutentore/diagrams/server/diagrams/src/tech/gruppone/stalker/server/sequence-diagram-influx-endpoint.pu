@@ -1,0 +1,22 @@
+@startuml post-location-update-sequence-diagram
+!include ../../../../../style/class.pu
+
+title Stalker server InfluxDB update sequence diagram
+
+[-> MultiLocationInfoController: post http call with \n a position update arrives
+activate MultiLocationInfoController
+MultiLocationInfoController -> LocationInfoservice: saveLocationInfo(multiLocationInfo)
+activate LocationInfoservice
+LocationInfoservice -> LocationInfoRepository: saveLocationInfoPublicUser(allLocationInfo)
+activate LocationInfoRepository
+LocationInfoRepository -> InfluxDB : saves all locations info
+activate InfluxDB
+InfluxDB --> LocationInfoRepository
+deactivate InfluxDB
+LocationInfoRepository --> LocationInfoservice
+deactivate LocationInfoRepository
+LocationInfoservice --> MultiLocationInfoController
+deactivate LocationInfoservice
+[<-- MultiLocationInfoController: returns http response \n with body: Mono<void>
+deactivate MultiLocationInfoController
+@enduml

@@ -1,0 +1,20 @@
+@startuml LocationInfoRepository
+!include ../../../../../../style/class.pu
+
+class repositories.LocationInfoRepository {
+  - influxDBMapper {frozen}
+
+  --
+
+  + LocationInfoRepository(
+    influxDBMapper
+    )
+  + saveLocationInfo(
+      allLocationInfo : Flux<LocationInfo>
+    ) : Mono<Void>
+}
+
+repositories.LocationInfoRepository ..> configuration.InfluxDBConfiguration
+repositories.LocationInfoRepository ..> model.db.LocationInfo
+
+@enduml

@@ -1,0 +1,41 @@
+\documentclass[../manuale-utente.tex]{subfiles}
+
+\begin{document}
+\subsection{Obiettivo del prodotto}%
+\label{sub:obiettivo_del_prodotto}
+Il prodotto richiesto da capitolato si pone l'obiettivo di tracciare il numero di persone presenti all'interno di una data organizzazione. Per soddisfare la richiesta, sarà implementata una web application per la gestione delle organizzazioni e il monitoraggio degli utenti, e un'applicazione mobile per l'utente finale che gli permetta di essere monitorato dalla specifica organizzazione scelta.
+
+
+\subsection{Funzionalità del prodotto}%
+\label{sub:funzionalita_del_prodotto}
+Il sistema di Stalker deve tracciare tutti gli utenti che sono all'interno di specifici luoghi definiti dalle organizzazioni registrate in Stalker.
+Affinché questo venga garantito, deve essere presente una web application che offra la possibilità di:
+\begin{itemize}
+  \item creare e gestire più organizzazioni, privilegio concesso ad un sottoinsieme degli utenti utilizzatori della web application: l'utente che richiederà di creare una nuova organizzazione diventerà un utente con privilegi di owner, capace di aggiungere gestori o visualizzatori. L'utente gestore avrà dei privilegi sulla gestione dell'organizzazione, mentre l'utente visualizzatore potrà monitorare alcune informazioni sugli utenti monitorati. Da evidenziare che owner, gestore e visualizzatore sono tipologie di utenti in gerarchia, a partire dall'owner che ha più privilegi tra gli utenti elencati, fino ad arrivare al viewer che ne ha meno.
+  \item definire se prevedere una tracciatura nota oppure incognita. Al momento della creazione dell'organizzazione è richiesto al futuro owner di selezionare la tipologia di tracciatura: \textit{nota}, se si vuole rendere pubblica la propria identità all'interno dell'organizzazione, \textit{incognita}, se invece si vuole rendere privata la propria identità (ma non la propria presenza in termini numerici) all'interno dell'organizzazione. Un'organizzazione privata prevede di default una tracciatura nota, mentre un'organizzazione pubblica prevede di default una tracciatura incognita.
+  \item monitoraggio dell'organizzazione (solo in presenza di autorizzazione specifica): i visualizzatori potranno effettuare query di monitoraggio per singolo utente all'interno delle organizzazioni, oppure visualizzare dei report riguardanti l'intera organizzazione.
+\end{itemize}
+
+Gli utenti che vogliono usufruire del servizio messo a disposizione dal sistema di Stalker, devono installare l'applicazione mobile e, una volta effettuata la registrazione, hanno la possibilità di:
+\begin{itemize}
+  \item recuperare la lista delle organizzazioni registrate in Stalker: l'utente potrà visualizzare una lista contenente tutte le organizzazioni a cui è collegato, o una lista contenente tutte le organizzazioni pubbliche a cui non è collegato.
+  \item collegarsi ad un'organizzazione: tramite la lista delle organizzazioni sarà possibile selezionarne una per collegarvisi.
+  \item garantire la possibilità di risultare anonimi: l'utente potrà utilizzare un pulsante “anonimo” che permetta, all'interno di una organizzazione privata, di risultare presente in maniera anonima.
+  \item visualizzare in tempo reale la propria presenza o meno all'interno di un luogo monitorato e il cronometro del tempo trascorso al suo interno.
+  \item visualizzare il proprio storico degli accessi: l'utente potrà visualizzare un report di tutti gli accessi effettuati all'organizzazione.
+
+\end{itemize}
+Al momento della registrazione, l'utente deve accettare le condizioni del sistema di Stalker, che prevedono il consenso di tracciare ogni singolo utente registrato al momento del collegamento ad un'organizzazione.
+Le comunicazioni tra applicazione mobile e server avvengono solo al momento d'ingresso ed uscita dai luoghi designati dalle organizzazioni, al fine di garantire la privacy dell'utente.
+
+
+\subsection{Caratteristiche degli utenti}%
+\label{sub:caratteristiche_degli_utenti}
+Nell'ambito di questo progetto, sono presenti due tipologie generiche di utenti, con caratteristiche diverse dovute all'utilizzo del prodotto:
+\begin{description}
+  \item[Super utente:] è l'utente che detiene dei privilegi avanzati per l'uso della web application, diversi per ogni sottocategoria di super utente. In ordine decrescente di privilegi, i super utenti sono: administrator, owner, manager e viewer. 
+  \item[Utente generico:] è l'utente utilizzatore dell'applicazione mobile, ad esempio il dipendente di un'azienda che monitora la sua presenza, oppure un visitatore di un evento pubblico.
+\end{description}
+
+
+\end{document}

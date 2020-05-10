@@ -1,0 +1,23 @@
+@startuml LoginService
+!include ../../style/class.pu
+class LoginService {
+  - httpClientService : HttpClientService {readonly}
+  - router : Router {readonly}
+
+  --
+
+  + LoginService(
+    private httpClientService : HttpClientService {readonly},
+    private router : Router {readonly}
+    )
+  + login(user : User) : Observable<User>
+  + checkPermissionOnOrg(
+    role : AdminType,
+    organizationId : Integer
+    ) : Boolean
+  + logout() : void
+  + isLoggedIn() : Boolean
+  + getUserId() : String
+  + getAdminOrganizations() : {organizationId : Integer, role : AdminType}
+}
+@enduml

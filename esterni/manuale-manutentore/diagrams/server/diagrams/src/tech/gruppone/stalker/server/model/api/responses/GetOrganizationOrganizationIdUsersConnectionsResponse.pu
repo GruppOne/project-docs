@@ -1,0 +1,14 @@
+@startuml GetOrganizationOrganizationIdUsersConnectionsResponse
+!include ../../../../../../../../style/class.pu
+
+class model.api.responses.GetOrganizationOrganizationIdUsersConnectionsResponse{
+  - connectedUsers : User[]
+
+  --
+
+  + GetOrganizationOrganizationIdUsersConnectionsResponse()
+}
+
+model.api.responses.GetOrganizationOrganizationIdUsersConnectionsResponse --> model.api.User
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml GetOrganizationsResponse
+!include ../../../../../../../../style/class.pu
+
+class model.api.responses.GetOrganizationsResponse{
+  - organizations : Organization[]
+
+  --
+
+  + GetOrganizationsResponse()
+}
+
+model.api.responses.GetOrganizationsResponse --> model.api.Organization
+
+@enduml

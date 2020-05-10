@@ -1,0 +1,16 @@
+@startuml OrganizationComponent diagram
+!include ../../../style/class.pu
+class OrganizationComponent {
+  - organizationService : OrganizationService {readonly}
+  - organization : Organization
+  - organizationBuilder : AbsOrganizationBuilder
+
+  --
+
+  + constructor(
+    private organizationService : OrganizationService {readonly}
+    )
+  + ngOnInit() : void
+  + getOrganizationById(id : Integer) : void
+}
+@enduml

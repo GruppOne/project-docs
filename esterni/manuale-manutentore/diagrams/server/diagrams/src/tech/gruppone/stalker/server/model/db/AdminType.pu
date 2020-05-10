@@ -1,0 +1,13 @@
+@startuml AdminType
+!include ../../../../../../../style/class.pu
+
+class model.db.AdminType {
+  - id : Integer
+  - name : String
+
+  --
+
+  + AdminType()
+}
+
+@enduml

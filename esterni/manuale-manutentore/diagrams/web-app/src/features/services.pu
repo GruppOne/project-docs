@@ -1,0 +1,47 @@
+@startuml http calls to API through services diagram
+!include ../../style/class.pu
+' START include services
+
+!include ../services/administratorservice.pu
+!include ../services/auth-http-interceptorservice.pu
+!include ../services/connected-userservice.pu
+!include ../services/http-clientservice.pu
+!include ../services/loginservice.pu
+!include ../services/organizationservice.pu
+!include ../services/userservice.pu
+' END include services
+
+!include ../classes/Environment/Environment.pu
+
+title Stalker web application services and http calls class diagram
+
+package Angular{
+  class HttpRequest
+  class Interceptor
+}
+AdministratorService --> HttpClientService
+
+
+ConnectedUserService --> HttpClientService
+
+
+HttpClientService ..> Environment
+' -------------------------------------------------- Angular
+HttpClientService --> HttpClient
+HttpClientService --> HttpHeaders
+
+
+LoginService --> HttpClientService
+
+
+OrganizationService --> HttpClientService
+OrganizationService --> LoginService
+
+
+UserService --> HttpClientService
+
+AuthHttpInterceptor -[hidden]> HttpClientService
+AuthHttpInterceptor -> LoginService
+AuthHttpInterceptor --|> Interceptor
+
+@enduml

@@ -1,0 +1,22 @@
+@startuml UsersController
+!include ../../../../../../style/class.pu
+
+class controllers.UsersController{
+  - userRepository : UserRepository {frozen}
+
+  --
+
+  + getUsers()
+  : Mono<GetUsersResponse>
+  + createUser(
+      signUp : UserDataWithLoginData
+      ) : Mono<PostIdResponse>
+}
+
+controllers.UsersController ..> repositories.UserRepository
+
+controllers.UsersController ..> model.api.UserDataWithLoginData
+controllers.UsersController --> model.api.responses.GetUsersResponse
+controllers.UsersController --> model.api.responses.PostIdResponse
+
+@enduml

@@ -1,0 +1,8 @@
+@startuml NotFoundComponent diagram
+!include ../../../style/class.pu
+class NotFoundComponent {
+  --
+
+  + ngOnInit() : void
+}
+@enduml

@@ -1,0 +1,20 @@
+@startuml  JwtConfiguration
+!include ../../../../../../style/class.pu
+
+class security.JwtConfiguration{
+  - secret : String
+  - expirationTime : String
+
+  --
+
+  - getEncodedKey(token : String) : Key
+  + getJwtString(token : String) : Claims
+  + isTokenSigned(token : String) : Boolean
+  + getUsername(token : String) : String
+  + getId(token : String) : String
+  + getExpirationDate(token : String) : Date
+  + isTokenExpired(token : String): Boolean
+  + createToken(id : Integer, username : String): String
+}
+
+@enduml

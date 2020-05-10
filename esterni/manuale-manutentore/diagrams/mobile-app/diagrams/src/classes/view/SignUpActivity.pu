@@ -1,0 +1,15 @@
+@startuml app-signupactivity-diagram
+!include ../../../style/class.pu
+
+class SignUpActivity {
+  + viewModel : SignUpViewModel
+
+  --
+
+  + checkPermission() : void
+  # onPause() : void
+  # onCreate(
+    savedInstanceState : Bundle
+  ) : void
+}
+@enduml

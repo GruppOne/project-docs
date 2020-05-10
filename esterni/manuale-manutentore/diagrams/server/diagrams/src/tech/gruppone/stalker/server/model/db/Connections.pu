@@ -1,0 +1,14 @@
+@startuml Connections
+!include ../../../../../../../style/class.pu
+
+class model.db.Connections {
+  - organizationId : Integer
+  - userId : Integer
+  - createdDate : DateTime
+
+  --
+
+  + Connections()
+}
+
+@enduml

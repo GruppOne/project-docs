@@ -1,0 +1,12 @@
+@startuml MainPageModel diagram
+!include ../../../style/class.pu
+
+class MainPageModel {
+  --
+
+  + loadOrganizations() : void
+  + getOrgsLiveData()
+   : LiveData<List<Organization>>
+}
+
+@enduml

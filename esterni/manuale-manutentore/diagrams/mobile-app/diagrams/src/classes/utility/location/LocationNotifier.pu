@@ -1,0 +1,14 @@
+@startuml LocationNotifier diagram
+!include ../../../../style/class.pu
+
+class LocationNotifier {
+  - {static} JOB_ID : Integer
+  - currentSession : CurrentSessionSingleton
+  - web : WebSingleton
+
+  --
+
+  + {static} enqueue(Context ctx, Intent work) : void
+  # onHandleWork(Intent intent) : void
+}
+@enduml

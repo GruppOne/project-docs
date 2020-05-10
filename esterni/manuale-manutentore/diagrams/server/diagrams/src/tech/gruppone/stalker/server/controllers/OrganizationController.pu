@@ -1,0 +1,38 @@
+@startuml OrganizationController
+!include ../../../../../../style/class.pu
+
+class controllers.OrganizationController {
+  - organizationRepository {frozen}
+
+  --
+
+  + getOrganizationById(
+    organizationId : Integer
+    ): Mono<Organization>
+  + deleteOrganizationById(
+    organizationId : Integer
+    ): Mono<Organization>
+  + getUsersConnectionsToOrganizationById(
+    organizationId : Integer
+    ): Mono<GetOrganizationOrganizationIdUsersConnectionsResponse>
+  + createRoleForAnUserById(
+    organizationId, : Integer
+    userId : Integer
+    ): Mono<Void>
+  + deleteRoleForAnUserById(
+    organizationId, : Integer
+    userId : Integer
+    ): Mono<Void>
+  + getReportByOrganizationId(
+    organizationId : Integer
+    ): Mono<Void>
+  + getPeopleNumberByOrganizationId(
+    organizationId : Integer
+    ): Mono<UsersInsideOrganization>
+}
+
+controllers.OrganizationController --> repositories.OrganizationRepository
+controllers.OrganizationController --> model.api.Organization
+controllers.OrganizationController --> model.api.OrganizationRole
+controllers.OrganizationController --> model.api.responses.GetOrganizationOrganizationIdUsersConnectionsResponse
+@enduml

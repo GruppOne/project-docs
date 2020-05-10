@@ -1,0 +1,12 @@
+@startuml Class diagram
+!include ../../../style/class.pu
+
+class App {
+  - {static} context : Context {readonly}
+
+  --
+
+  + onCreate() : void
+}
+
+@enduml

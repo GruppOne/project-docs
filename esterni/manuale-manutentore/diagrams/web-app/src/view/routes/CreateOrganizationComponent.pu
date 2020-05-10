@@ -1,0 +1,25 @@
+@startuml CreateOrganizationComponent diagram
+!include ../../../style/class.pu
+class CreateOrganizationComponent {
+  - formBuilder : FormBuilder {readonly}
+  - organizationService : OrganizationService {readonly}
+  - router : Router {readonly}
+  - toggle : Boolean
+  - mapDataChild
+  - organizationBuilder : OrganizationBuilder
+  - placeBuilder : AbsPlaceBuilder
+  - formGroup : FormGroup
+
+  --
+
+  + CreateOrganizationComponent(
+    private formBuilder : FormBuilder {readonly},
+    private organizationService : OrganizationService {readonly},
+    private router : Router {readonly},
+  )
+  + ngOnInit() : void
+  + get formArray() : AbstractControl | null
+  + submitOrganizationForm() : void
+  + showLdapConfiguration() : void
+}
+@enduml

@@ -17,8 +17,8 @@
         "**/commons/style/*.pu",
         "-o",
         "img",
-        // compila solo file contenuti in cartelle "diagrams"
-        "**/diagrams/*.pu"
+        // compila solo file contenuti in cartelle "diagrams" e sottocartelle
+        "**/diagrams/**.pu"
       ],
       "presentation": {
         "echo": true,
@@ -52,7 +52,7 @@
       "label": "clean latex files",
       "detail": "Remove all latex-generated files",
       "type": "shell",
-      "command": ".pwsh/scripts/Remove-LatexGeneratedFiles.ps1 -RemovePdfs",
+      "command": ".pwsh/Remove-LatexGeneratedFiles.ps1 -RemovePdfs",
       "presentation": {
         "clear": true,
         "echo": false,

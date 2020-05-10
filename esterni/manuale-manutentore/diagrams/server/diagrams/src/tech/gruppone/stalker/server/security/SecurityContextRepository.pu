@@ -1,0 +1,14 @@
+@startuml SecurityContextRepository_diagram
+!include ../../../../../../style/class.pu
+
+class security.SecurityContextRepository{
+  - authenticationManager
+
+  --
+
+  + load( exchange : ServerWebExchange) : Mono <SecurityContext>
+}
+
+org.springframework.security.web.server.context.ServerSecurityContextRepository ^..  security.SecurityContextRepository
+security.SecurityContextRepository ..> security.AuthenticationManager
+@endumls

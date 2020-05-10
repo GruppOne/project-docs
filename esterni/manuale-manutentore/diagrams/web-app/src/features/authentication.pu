@@ -1,0 +1,33 @@
+@startuml authentication and authorization classes
+!include ../../style/class.pu
+!include ../services/auth-http-interceptorservice.pu
+!include ../services/loginservice.pu
+!include ../page-manager/AuthGuard.pu
+
+title Stalker web application authentication class diagram
+
+Package Angular{
+  class Router
+  class Location
+  class ActivatedRouteSnapshot
+  class CanActivate
+  class Interceptor
+}
+AuthGuard --> LoginService
+AuthGuard --> Router
+AuthGuard --> Location
+AuthGuard ..> ActivatedRouteSnapshot
+AuthGuard --|> CanActivate
+AuthHttpInterceptor --|> Interceptor
+
+note left of LoginService
+manages the login and logout operations and the recovery of
+sensitive credentials required for authentication
+end note
+
+note right of AuthGuard
+manages the user's access authorization
+to a specific page and the consequent actions
+to do
+end note
+@enduml

@@ -1,0 +1,22 @@
+@startuml AppComponent diagram
+!include ../../style/class.pu
+class AppComponent {
+  - componentsTooltip : String
+  - components : String[]
+  - loginService : LoginService {readonly}
+  + router : Router
+
+  --
+
+  + AppComponent(
+    public router : Router,
+    private loginService : LoginService {readonly}
+    )
+  + getRoute() : String
+  + backHome() : void
+  + generateComponents() : void
+  + userLoggedIn() : Boolean
+  + getUserId() : String
+  + logout() : void
+}
+@enduml

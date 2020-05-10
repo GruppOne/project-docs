@@ -1,0 +1,6 @@
+@startuml Environment Diagram
+!include ../../../style/class.pu
+class Environment {
+  + apiUrl : String
+}
+@enduml

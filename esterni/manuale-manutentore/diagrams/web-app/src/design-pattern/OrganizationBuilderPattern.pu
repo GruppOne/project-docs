@@ -1,0 +1,30 @@
+@startuml Organization builder design pattern diagram
+!include ../../style/class.pu
+
+' -------------------------------------------------- interfaces
+!include ../interfaces/LdapConfiguration/LdapConfiguration.pu
+!include ../interfaces/Organization/Organization.pu
+!include ../interfaces/Place/Place.pu
+!include ../interfaces/Place/PlaceData.pu
+
+' -------------------------------------------------- classes
+!include ../classes/LdapConfiguration/LdapConfigurationBuilder.pu
+!include ../classes/Organization/OrganizationBuilder.pu
+!include ../classes/Place/MyLatLng.pu
+!include ../classes/Place/PlaceBuilder.pu
+!include ../classes/Place/PlaceDataBuilder.pu
+
+title Stalker web application organization builder class diagram
+
+
+CreateOrganizationComponent o-- AbsOrganizationBuilder
+CreateOrganizationComponent ..> AbsPlaceBuilder
+CreateOrganizationComponent ..> AbsPlaceDataBuilder
+CreateOrganizationComponent ..> AbsLdapConfigurationBuilder
+OrganizationComponent o-- AbsOrganizationBuilder
+OrganizationsComponent o-- AbsOrganizationBuilder
+EditOrganizationComponent o-- AbsOrganizationBuilder
+EditOrganizationComponent ..> AbsPlaceBuilder
+EditOrganizationComponent ..> AbsPlaceDataBuilder
+EditOrganizationComponent ..> AbsLdapConfigurationBuilder
+@enduml

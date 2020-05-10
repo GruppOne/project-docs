@@ -1,0 +1,86 @@
+@startuml Package Diagram
+!include ../style/class.pu
+' START packages
+
+title Stalker web application package diagram
+
+package PageManager{
+  class AuthGuard
+  class AppComponent
+}
+package Interceptor{
+  class AuthHttpInterceptor
+}
+package View{
+  package Routes{
+
+    class CreateOrganizationComponent
+    class EditOrganizationComponent
+    class OrganizationComponent
+    class OrganizationsComponent
+    class HomeComponent
+    class ProfileComponent
+  }
+  package Components{
+        class AdministratorComponent
+        class FormEmailComponent
+        class FormPasswordComponent
+        class MapComponent
+        class NotFoundComponent
+  }
+}
+
+package Model{
+  package Services{
+    class AdministratorService
+    class OrganizationService
+    class UserService
+    class ConnectedUserService
+    class HttpClientService
+    class LoginService
+    class PlaceService
+  }
+  package Classes{
+    interface Organization
+    interface Place
+    interface PlaceData
+    interface LdapConfiguration
+    interface User
+    interface UserData
+    interface LoginData
+    interface Administrator
+    class OrganizationBuilder
+    class PlaceBuilder
+    class PlaceDataBuilder
+    class LdapConfigurationBuilder
+    class UserDataBuilder
+    class UserBuilder
+    class LoginDataBuilder
+    class AbsOrganizationBuilder
+    class AbsPlaceBuilder
+    class AbsPlaceDataBuilder
+    class AbsLdapConfigurationBuilder
+    class AbsUserDataBuilder
+    class AbsUserBuilder
+    class AbsLoginDataBuilder
+    AbsOrganizationBuilder <|-- OrganizationBuilder
+    AbsPlaceBuilder <|-- PlaceBuilder
+    AbsLdapConfigurationBuilder <|-- LdapConfigurationBuilder
+    AbsUserDataBuilder <|-- UserDataBuilder
+    AbsUserBuilder <|-- UserBuilder
+    AbsLoginDataBuilder <|-- LoginDataBuilder
+    AbsPlaceDataBuilder <|-- PlaceDataBuilder
+
+  }
+}
+
+Components ..> Services
+Routes .> Components
+Routes ..> Services
+Routes ..> Classes
+Services ..> Classes
+PageManager ..> Services
+PageManager ..> Classes
+' END packages
+
+@enduml

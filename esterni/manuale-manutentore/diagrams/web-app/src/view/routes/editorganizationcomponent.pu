@@ -1,0 +1,32 @@
+@startuml EditOrganizationComponent diagram
+!include ../../../style/class.pu
+class EditOrganizationComponent {
+  - formBuilder : FormBuilder {readonly}
+  - organizationService : OrganizationService {readonly}
+  - administratorService : AdministratorService {readonly}
+  - connectedUserService : ConnectedUserService {readonly}
+  - mapDataChild
+  - organization : Organization
+  - organizationBuilder : AbsOrganizationBuilder
+  - organizationUsers : User[]
+  - formGroup : FormGroup
+
+  --
+
+  + EditOrganizationComponent(
+    private formBuilder : FormBuilder,
+    private organizationService : OrganizationService,
+    private administratorService : AdministratorService,
+    private connectedUserService : ConnectedUserService
+    )
+  + ngOnInit() : void
+  + get formArray() : AbstractControll | null
+  + getOrganizationById(id : Integer) : void
+  + submitOrganizationForm() : void
+  + addAdmin() : void
+  + deleteAdmin(administratorId : Integer) : void
+  + getOrgAdministrators(organizationId : Integer) : void
+  + getOrgUsers(organizationId : Integer) : void
+  + checkifEmailIsUser(email : String, userList : User[]) : Integer
+}
+@enduml

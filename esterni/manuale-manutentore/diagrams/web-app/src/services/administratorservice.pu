@@ -1,0 +1,23 @@
+@startuml AdministratorService
+!include ../../style/class.pu
+class AdministratorService {
+  - httpClientService : HttpClientService {readonly}
+
+  --
+
+  + AdministratorService(
+    private httpClientService : HttpClientService {readonly}
+    )
+  + addAdministrator(
+    organizationId : Integer,
+    userId : Integer
+    ) : Observable<Administrator>
+  + removeAdministrator(
+    organizationId : Integer,
+    administratorId : Integer
+    ) : Observable<Administrator>
+  + getAdministrators(
+    organizationId : Integer
+    ) : Observable<Administrator[]>
+}
+@enduml

@@ -1,0 +1,64 @@
+\documentclass[../../manuale-manutentore.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Framework}%
+\label{sub:framework}
+In questa sezione sono descritti tutti i framework utilizzati per l'implementazione di Stalker.
+
+\subsubsection{Spring}%
+\label{subs:spring}
+
+Il framework utilizzato per lo sviluppo backend è \glossarioLocale{Spring}, in particolare \textit{Spring Boot}, un framework concepito per la realizzazione di software enterprise su piattaforma Java.
+Spring Boot mira a ridurre la lunghezza del codice e ad accorciare i tempi di sviluppo di un'applicazione; la caratteristica principale è la \textit{configurazione automatica} data delle annotazioni e dai codici predefiniti.
+Vengono utilizzati in particolare i seguenti framework Spring:
+
+\begin{description}
+  \item[Spring WebFlux] disponibile dalla versione 5.0, è un framework costruito intorno al pattern Publisher/Subscriber, che oltre a semplificare lo sviluppo delle applicazioni e fornire opzioni per fare build e deploy delle applicazioni in esecuzione, consente di supportare flussi reattivi completamente non bloccanti.
+  \item[Spring Security] disponibile dalla versione 2.0, è un framework che fornisce strumenti per l'autenticazione, l'autorizzazione e altre funzionalità di sicurezza.
+\end{description}
+
+\subsubsection{Angular}%
+\label{subs:angular}
+
+Il framework utilizzato per lo sviluppo della web application è Angular.
+L'applicazione sviluppata in Angular viene eseguita interamente dal web browser dopo essere stata caricata dal web server (elaborazione lato client).
+Il codice generato da Angular funziona su tutti i principali web browser moderni, ad esempio Chrome, Firefox ed Edge.
+Il pattern architetturale di riferimento è il Model-View-ViewModel, che consente di creare una struttura basata sui seguenti elementi:
+
+\begin{description}
+    \item[View:] insieme di elementi di visualizzazione.
+    \item[Component:] classe che definisce una view.
+    \item[Service:] classe che incapsula la business logic interagendo con un modello.
+\end{description}
+
+\subsubsection{Jasmine}%
+\label{subs:jasmine}
+
+\glossarioLocale{Jasmine} è un framework BDD open source, utilizzato per la web application, per eseguire test su codice scritto in JavaScript.
+Mira a funzionare su qualsiasi piattaforma abilitata per JavaScript, facendo in modo di non intromettersi né nell'applicazione né nell'\glossarioLocale{IDE}.
+Con Jasmine si possono scrivere semplicemente test espressivi, in modo da garantire anche una facile lettura.
+
+\subsubsection{Protractor}%
+\label{subs:protractor}
+
+\glossarioLocale{Protractor} è un framework per eseguire \glossarioLocale{test E2E} che consente di testare un'applicazione web su un browser reale simulando le interazioni che un utente reale avrebbe con essa.
+Protractor è basato su Selenium WebDriver, un'\glossarioLocale{API} per l'automazione e testing su browser, al quale aggiunge funzionalità per interagire con i componenti UI di un'applicazione Angular.
+
+\subsubsection{JUnit 4}%
+\label{subs:junit4}
+
+\glossarioLocale{JUnit} 4 è un framework di unit testing per il linguaggio di programmazione Java.
+
+\subsubsection{Mockito}%
+\label{subs:mockito}
+
+Mockito è un framework di test per il linguaggio di programmazione Java, che viene utilizzato lato frontend per la mobile application, e può essere utilizzato insieme a JUnit.
+Il framework consente la creazione e la configurazione di mock object per lo sviluppo di test automatici per le classi con dipendenze esterne.
+
+\subsubsection{Espresso}%
+\label{subs:espresso}
+
+\glossarioLocale{Espresso} è un framework di test in black box open source, che viene utilizzato lato frontend per la mobile application, pensato per l'interazione che può avere l'utente con l'interfaccia utente dell'applicazione Android.
+
+\end{document}

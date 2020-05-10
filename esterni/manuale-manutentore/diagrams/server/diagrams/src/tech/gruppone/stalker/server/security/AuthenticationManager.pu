@@ -1,0 +1,14 @@
+@startuml AuthenticationManager_diagram
+!include ../../../../../../style/class.pu
+
+class security.AuthenticationManager{
+  - jwtToken
+
+  --
+
+  + Authenticate(Authentication authentication) : Mono <Authentication>
+}
+
+security.AuthenticationManager ..> security.JwtConfiguration
+org.springframework.security.authentication.ReactiveAuthenticationManager ^.. security.AuthenticationManager
+@enduml

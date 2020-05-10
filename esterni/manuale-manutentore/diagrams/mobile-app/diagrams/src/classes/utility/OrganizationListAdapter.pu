@@ -1,0 +1,21 @@
+@startuml Class diagram
+!include ../../../style/class.pu
+
+class OrganizationListAdapter{
+  --
+
+  + OrganizationListAdapter()
+  + onCreateViewHolder(
+      parent : ViewGroup,
+      viewType : Integer
+      ) : OrgViewHolder
+  + onBindViewHolder(
+      holder : OrgViewHolder,
+      position : Integer
+      ) : void
+  + getItemViewType(
+      position : Integer
+      ) : Integer
+}
+
+@enduml

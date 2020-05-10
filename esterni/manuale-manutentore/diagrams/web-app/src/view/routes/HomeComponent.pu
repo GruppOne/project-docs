@@ -1,0 +1,26 @@
+@startuml HomeComponent diagram
+!include ../../../style/class.pu
+class HomeComponent {
+  - loginService : LoginService {readonly}
+  - router : Router {readonly}
+  - titleService : Title {readonly}
+  + toggle : Boolean
+  + nestedForm : FormGroup
+  + loginDataBuilder : AbsLoginDataBuilder
+
+  --
+
+  + HomeComponent(
+    private loginService : LoginService {readonly},
+    private router : Router {readonly},
+    private titleService : Title {readonly},
+  )
+  + ngOnInit() : void
+  + login(email : String, password : String) : void
+  + validateInput(
+    email : String,
+    password : String
+    ) : Boolean
+  + translate(i : Integer) : void
+}
+@enduml

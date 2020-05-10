@@ -1,0 +1,16 @@
+@startuml AuthenticatedRequest diagram
+!include ../../../style/class.pu
+
+class AuthenticatedRequest {
+  --
+
+  + AuthenticatedRequest(
+    method : Integer,
+    url : String,
+    jsonRequest : JSONObject,
+    listener : Response.Listener<JSONObject>,
+    errorListener : Response.ErrorListener
+  )
+  + getHeaders() : Map<String, String>
+}
+@enduml

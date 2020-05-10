@@ -1,0 +1,10 @@
+@startuml Class diagram
+!include ../../../style/class.pu
+
+class Place::Position <<enum>>{
+  + LEFT
+  + ALIGNED
+  + RIGHT
+}
+
+@enduml

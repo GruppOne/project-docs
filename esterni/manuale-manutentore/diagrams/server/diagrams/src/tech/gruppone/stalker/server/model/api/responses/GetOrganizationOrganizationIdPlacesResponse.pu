@@ -1,0 +1,14 @@
+@startuml GetOrganizationOrganizationIdPlacesResponse
+!include ../../../../../../../../style/class.pu
+
+class model.api.responses.GetOrganizationOrganizationIdPlacesResponse{
+  - places : Place[]
+
+  --
+
+  + GetOrganizationOrganizationIdPlacesResponse()
+}
+
+model.api.responses.GetOrganizationOrganizationIdPlacesResponse --> model.api.Place
+
+@enduml

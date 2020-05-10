@@ -1,0 +1,21 @@
+@startuml Home classes
+!include ../../style/class.pu
+
+!include ../view/routes/HomeComponent.pu
+!include ../services/loginservice.pu
+!include ../view/components/FormEmailComponent.pu
+!include ../view/components/FormPasswordComponent.pu
+' -------------------------------------------------- UserBuilder
+!include ../classes/User/UserBuilder.pu
+!include ../classes/User/LoginDataBuilder.pu
+
+title Stalker web application home page and login class diagram
+
+HomeComponent --> LoginService
+LoginService --> HttpClientService
+HomeComponent ..> FormEmailComponent
+HomeComponent ..> FormPasswordComponent
+HomeComponent o-- AbsUserBuilder
+HomeComponent o-- AbsLoginDataBuilder
+
+@enduml

@@ -1,0 +1,28 @@
+@startuml profile classes
+!include ../../style/class.pu
+' -------------------------------------------------- User
+!include ../interfaces/User/User.pu
+!include ../interfaces/User/UserData.pu
+!include ../interfaces/User/LoginData.pu
+' -------------------------------------------------- UserBuilder
+!include ../classes/User/UserBuilder.pu
+!include ../classes/User/UserDataBuilder.pu
+
+!include ../services/userservice.pu
+!include ../services/userservice.pu
+
+!include ../view/routes/ProfileComponent.pu
+
+title Stalker web application show profile class diagram
+
+ProfileComponent o-- AbsUserBuilder
+ProfileComponent o-- AbsUserDataBuilder
+ProfileComponent --> User
+ProfileComponent --> UserService
+
+UserService --> HttpClientService
+UserService ..> User
+
+
+
+@enduml

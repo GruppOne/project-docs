@@ -1,0 +1,39 @@
+@startuml organization classes
+!include ../../style/class.pu
+!include ../view/routes/OrganizationComponent.pu
+!include ../view/components/MapComponent.pu
+
+!include ../services/organizationservice.pu
+' -------------------------------------------------- OrganizationBuilder
+!include ../classes/Organization/OrganizationBuilder.pu
+' -------------------------------------------------- Organization
+!include ../interfaces/Organization/Organization.pu
+' -------------------------------------------------- LdapConfiguration
+!include ../classes/LdapConfiguration/LdapConfigurationBuilder.pu
+' -------------------------------------------------- PlaceBuilder
+!include ../classes/Place/PlaceBuilder.pu
+!include ../classes/Place/PlaceDataBuilder.pu
+!include ../classes/Place/MyLatLng.pu
+' -------------------------------------------------- LdapConfiguration
+!include ../interfaces/LdapConfiguration/LdapConfiguration.pu
+' -------------------------------------------------- Place
+!include ../interfaces/Place/Place.pu
+!include ../interfaces/Place/PlaceData.pu
+
+title Stalker web application show organization class diagram
+
+OrganizationComponent --> Organization
+OrganizationComponent o-- AbsOrganizationBuilder
+OrganizationComponent ..> AbsPlaceBuilder
+OrganizationComponent ..> AbsPlaceDataBuilder
+OrganizationComponent ..> AbsLdapConfigurationBuilder
+OrganizationComponent --> OrganizationService
+MapComponent --> Organization
+MapComponent o-- OrganizationBuilder
+MapComponent --> PlaceService
+MapComponent --> OrganizationService
+OrganizationService --> HttpClientService
+OrganizationService ..> Organization
+
+
+@enduml

@@ -1,0 +1,43 @@
+@startuml WebSingleton diagram
+!include ../../../style/class.pu
+
+class WebSingleton {
+  - {static} WebSingleton instance {readonly}
+  - requestQueue : RequestQueue {readonly}
+  - serverUrl : String
+
+  --
+
+  - WebSingleton()
+  + addToRequestQueue(request : Request<T>) : void
+  + login(
+      email : String,
+      passwordHash : String,
+      successListener : Listener<JSONObject>,
+      errorListener : ErrorListener
+    ) : void
+  + signup(
+      user : User,
+      passwordHash : String,
+      successListener : Listener<JSONObject>,
+      errorListener : ErrorListener
+    ) : void
+  + getUserInfo(
+      id : Integer,
+      successListener : Listener<JSONObject>,
+      errorListener : ErrorListener
+    ) : void
+  + locationUpdateInside(
+      userId : Integer,
+      places : List<Integer>
+    ) : void
+  + locationUpdateOutside(
+      organization : Organization,
+      place : Place
+    ) : void
+  + getOrganizationList(
+      successListener : Listener<JSONObject>,
+      errorListener : ErrorListener
+    ) : void
+}
+@enduml

@@ -1,0 +1,25 @@
+@startuml ConnectionRepository_diagram
+!include ../../../../../../style/class.pu
+
+
+class repositories.ConnectionRepository <<interface>> {
+  --
+
+  + findConnectedOrganizationsByUserId(
+    id : Integer
+    ) : Flux<Integer>
+  + postUserToOrganizationConnection(
+    organizationId : Integer,
+    UserId : Integer
+    ) : Mono<Void>
+  + deleteUserToOrganizationConnection(
+    organizationId : Integer,
+    userId : Integer
+    ): Mono<Void>
+}
+
+repositories.ConnectionRepository --> model.db.Connections
+
+repositories.ConnectionRepository -up-|> org.springframework.data.repository.reactive.ReactiveCrudRepository
+
+@enduml

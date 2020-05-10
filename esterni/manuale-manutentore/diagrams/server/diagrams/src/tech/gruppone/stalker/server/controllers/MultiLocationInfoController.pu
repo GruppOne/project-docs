@@ -1,0 +1,19 @@
+@startuml MultiLocationInfoController
+!include ../../../../../../style/class.pu
+
+class controllers.MultiLocationInfoController {
+  - locationInfoService : LocationInfoService {frozen}
+
+  --
+
+  + MultiLocationInfoController(
+    locationInfoService : LocationInfoService
+    )
+  + postLocationUpdate(
+    multiLocationInfo : MultiLocationInfo
+    ) : Mono<Void>
+}
+
+controllers.MultiLocationInfoController ..> services.LocationInfoService
+controllers.MultiLocationInfoController ..> model.api.MultiLocationInfo
+@enduml

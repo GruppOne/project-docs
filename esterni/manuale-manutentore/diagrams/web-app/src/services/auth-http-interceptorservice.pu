@@ -1,0 +1,19 @@
+@startuml AuthHttpInterceptor
+!include ../../style/class.pu
+class Interceptor
+
+class AuthHttpInterceptor {
+  --
+
+  + intercept(
+    req : HttpRequest<BodyType>,
+    next : HttpHandler
+    ) : Observable<HttpEvent<BodyType>>
+}
+
+note left of AuthHttpInterceptor
+Intercept all outgoing http calls
+to our API and add the header
+required for authentication
+end note
+@enduml

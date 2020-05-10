@@ -1,0 +1,17 @@
+@startuml PlaceData
+!include ../../../../../../../style/class.pu
+
+class model.api.PlaceData {
+  - name : String
+  - polygon : Polygon[]
+  - placeInfo : PlaceInfo
+
+  --
+
+  + PlaceData()
+}
+
+model.api.PlaceData *- model.api.Polygon
+model.api.PlaceData *- model.api.PlaceInfo
+
+@enduml

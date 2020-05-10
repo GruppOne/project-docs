@@ -1,0 +1,24 @@
+@startuml OrganizationService
+!include ../../style/class.pu
+class OrganizationService {
+  - httpClientService : HttpClientService {readonly}
+  - loginService : LoginService {readonly}
+
+  --
+
+ + OrganizationService(
+   private httpClientService : HttpClientService {readonly},
+   private loginService : LoginService {readonly}
+   )
+ + addOrganization(
+   organization : Organization
+   ) : Observable<Organization>
+ + getOrganization(
+   organizationId : Integer
+   ) : Observable<Organization>
+    + getAdminOrganizations() : Observable<Organization>
+ + editOrganization(
+   organization : Organization
+   ) : Observable<Organization>
+}
+@enduml

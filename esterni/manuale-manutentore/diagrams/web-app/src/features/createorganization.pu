@@ -1,0 +1,56 @@
+@startuml create organization classes
+!include ../../style/class.pu
+' -------------------------------------------------- Place
+!include ../interfaces/Place/Place.pu
+!include ../interfaces/Place/PlaceData.pu
+' -------------------------------------------------- Organization
+!include ../interfaces/Organization/Organization.pu
+
+' -------------------------------------------------- LdapConfiguration
+!include ../interfaces/LdapConfiguration/LdapConfiguration.pu
+
+' -------------------------------------------------- PlaceBuilder
+!include ../classes/Place/PlaceBuilder.pu
+!include ../classes/Place/PlaceDataBuilder.pu
+!include ../classes/Place/MyLatLng.pu
+
+' -------------------------------------------------- OrganizationBuilder
+!include ../classes/Organization/OrganizationBuilder.pu
+
+' -------------------------------------------------- LdapConfiguration
+!include ../classes/LdapConfiguration/LdapConfigurationBuilder.pu
+
+!include ../services/organizationservice.pu
+!include ../services/loginservice.pu
+!include ../services/placeservice.pu
+!include ../view/components/MapComponent.pu
+!include ../view/routes/CreateOrganizationComponent.pu
+
+title Stalker web application create organization class diagram
+
+package Leaflet{
+  class Polygon
+  class LatLngBounds
+}
+CreateOrganizationComponent --> MapComponent
+CreateOrganizationComponent o-- AbsOrganizationBuilder
+CreateOrganizationComponent --> OrganizationService
+CreateOrganizationComponent ..> AbsLdapConfigurationBuilder
+CreateOrganizationComponent ..> AbsPlaceBuilder
+CreateOrganizationComponent ..> AbsPlaceDataBuilder
+CreateOrganizationComponent ..> Organization
+
+OrganizationService --> HttpClientService
+OrganizationService ..> Organization
+OrganizationService ..> AdminType
+OrganizationService --> LoginService
+LoginService --> HttpClientService
+
+MapComponent --> Organization
+MapComponent --> Polygon
+MapComponent --> LatLngBounds
+MapComponent --> PlaceService
+MapComponent --> OrganizationService
+
+PlaceService ..> Geocoding
+@enduml

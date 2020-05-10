@@ -517,6 +517,9 @@ WipeArg
     \citetext:{} \citeyear:*{} \citeyearpar:{}
     # tipa which uses "
     \textipa:{}
+
+    #minted and related shortcuts
+    \java:{} \groovy:{} \html:{} \scss:{} \cucumber:{} \typescript:{} \javascript:{}
 }
 
 #####################################################################

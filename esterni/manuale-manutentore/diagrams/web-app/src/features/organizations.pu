@@ -1,0 +1,25 @@
+@startuml organizations classes
+!include ../../style/class.pu
+!include ../services/loginservice.pu
+!include ../services/organizationservice.pu
+!include ../view/routes/OrganizationsComponent.pu
+!include ../services/loginservice.pu
+
+' -------------------------------------------------- Organization
+!include ../interfaces/Organization/Organization.pu
+' -------------------------------------------------- Organization
+!include ../interfaces/Organization/Organization.pu
+
+title Stalker web application show organizations list class diagram
+
+OrganizationsComponent --> OrganizationService
+OrganizationsComponent ..> AdminType
+OrganizationService --> HttpClientService
+OrganizationService ..> Organization
+OrganizationService --> LoginService
+LoginService --> HttpClientService
+LoginService ..> User
+LoginService ..> AdminType
+
+
+@enduml

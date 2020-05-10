@@ -1,0 +1,39 @@
+@startuml LocationInfo
+!include ../../../../../../../style/class.pu
+
+class java.time.Instant
+
+class model.db.LocationInfo {
+  - time : Instant
+  - userId : String
+  - anonymous : Boolean
+  - placeId : String
+  - inside : Boolean
+
+  --
+
+  + LocationInfo()
+  {static} + builder() : LocationInfo.Builder
+}
+note bottom
+  userId is null if anonymous == true
+end note
+
+model.db.LocationInfo o--- java.time.Instant
+
+class model.db.LocationInfo.Builder {
+  --
+
+  + time(time : java.time.Instant) : LocationInfo.Builder
+  + userId(userId : Integer) : LocationInfo.Builder
+  + anonymous(anonymous : Boolean) : LocationInfo.Builder
+  + placeId(placeId : Integer) : LocationInfo.Builder
+  + inside(inside : Boolean) : LocationInfo.Builder
+  + build() : LocationInfo
+}
+
+
+model.db.LocationInfo.Builder o--- java.time.Instant
+model.db.LocationInfo.Builder ..> model.db.LocationInfo
+
+@enduml

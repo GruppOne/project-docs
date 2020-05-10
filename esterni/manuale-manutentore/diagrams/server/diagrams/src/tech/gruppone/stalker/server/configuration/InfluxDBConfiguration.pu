@@ -1,0 +1,35 @@
+@startuml InfluxDB configuration
+!include ../../../../../../style/class.pu
+
+class configuration.InfluxDBConfiguration {
+  - url : String
+  - database : String
+  - retentionPolicy : String
+  - username : String
+  - password : String
+
+  --
+
+  + InfluxDBConfiguration(
+      url : String,
+      database : String,
+      retentionPolicy : String,
+      userName : String,
+      password : String
+    )
+  + getInfluxDBConnection() : InfluxDB
+  + getInfluxDBMapper(influxDB) : InfluxDBMapper
+}
+
+namespace org.influxdb {
+  class org.influxdb.InfluxDB
+
+  namespace org.influxdb.impl {
+    class org.influxdb.impl.InfluxDBMapper
+  }
+}
+
+configuration.InfluxDBConfiguration *-- org.influxdb.InfluxDB
+configuration.InfluxDBConfiguration *-- org.influxdb.impl.InfluxDBMapper
+
+@enduml

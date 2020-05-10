@@ -1,0 +1,51 @@
+@startuml login sequence diagram
+
+title Stalker mobile app login sequence diagram
+
+!include ../style/class.pu
+[-> LoginActivity : the user presses\nthe login button
+activate LoginActivity
+LoginActivity -> LoginViewModel : login(email, password)
+activate LoginViewModel
+LoginViewModel -> LoginModel : login(email, hashedPassword)
+activate LoginModel
+LoginModel -> WebSingleton : login(email, hashedPassword, listener, errorListener)
+activate WebSingleton
+WebSingleton -> WebSingleton : addToRequestQueue(request)
+activate WebSingleton
+WebSingleton -> WebSingleton : getRequestQueue()
+activate WebSingleton
+WebSingleton --> WebSingleton : requestQueue
+deactivate WebSingleton
+WebSingleton ->] : add request to the queue
+deactivate WebSingleton
+deactivate WebSingleton
+deactivate LoginModel
+deactivate LoginViewModel
+deactivate LoginActivity
+LoginModel <-] : receive http response
+activate LoginModel
+LoginModel -> CurrentSessionSingleton : setJwt(token)
+activate CurrentSessionSingleton
+CurrentSessionSingleton -> WebSingleton : getUserInfo(userId, listener, errorListener)
+activate WebSingleton
+WebSingleton -> WebSingleton : addToRequestQueue(request)
+activate WebSingleton
+WebSingleton -> WebSingleton : getRequestQueue()
+activate WebSingleton
+WebSingleton --> WebSingleton : requestQueue
+deactivate WebSingleton
+WebSingleton ->] : add request to the queue
+deactivate WebSingleton
+deactivate WebSingleton
+deactivate CurrentSessionSingleton
+deactivate LoginModel
+CurrentSessionSingleton <-] : receive http response
+activate CurrentSessionSingleton
+CurrentSessionSingleton -> CurrentSessionSingleton : setUser(user)
+deactivate CurrentSessionSingleton
+CurrentSessionSingleton -> LoginActivity : detects an update on user
+activate LoginActivity
+[<-- LoginActivity : sends intent to open\nMainPageActivity
+deactivate LoginActivity
+@enduml

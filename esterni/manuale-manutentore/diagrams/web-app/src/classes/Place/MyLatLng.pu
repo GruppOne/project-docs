@@ -1,0 +1,26 @@
+@startuml MyLatLng Diagram
+!include ../../../style/class.pu
+class MyLatLng {
+  - longitude : Real
+  - latitude : Real
+  - leafletLatLng : LatLng
+
+  --
+
+  + MyLatLng(
+    latitude : Real,
+    longitude : Real,
+    leafletLatLng : LatLng
+    )
+  + getLeafletLatLng() : LatLng
+  + getLongitude() : Real
+  + getLatitude() : Real
+}
+
+/'
+' if you decomment this part it will no longer appear within the package
+' leaflet, this part has already been moved to the main file, it's here
+' just to remember it
+'/
+' MyLatLng --> LatLng
+@enduml

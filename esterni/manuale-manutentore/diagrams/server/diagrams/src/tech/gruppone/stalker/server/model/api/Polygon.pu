@@ -1,0 +1,21 @@
+@startuml Polygon
+!include ../../../../../../../style/class.pu
+
+class model.api.Polygon {
+
+  - polygon: GeographicalPoint[]
+  --
+
+  + Polygon()
+}
+
+class model.api.Polygon.GeographicalPoint {
+  - latitude : Real
+  - longitude : Real
+
+  + GeographicalPoint()
+}
+
+model.api.Polygon *-- model.api.Polygon.GeographicalPoint
+
+@enduml

@@ -1,0 +1,28 @@
+\documentclass[../../manuale-manutentore.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Linguaggi}%
+\label{sub:linguaggi}
+In questa sezione sono descritti tutti i linguaggi utilizzati per l'implementazione di Stalker.
+
+\subsubsection{Java}%
+\label{subs:java}
+
+Il linguaggio di programmazione utilizzato per lo sviluppo del backend e della mobile-app è Java, in quanto nel primo caso ci permette di utilizzare \glossarioLocale{Spring}, la nostra prima scelta tra i framework per lo sviluppo del server, e nel secondo è il linguaggio meglio documentato e di più facile apprendimento per lo sviluppo di app Android.
+Si specifica che nella parte backend la versione utilizzata è la 11, mentre nella mobile application la versione utilizzata è la 8.
+
+\subsubsection{TypeScript}%
+\label{subs:typescript}
+
+Il linguaggio di programmazione utilizzato per lo sviluppo della web application è \glossarioLocale{TypeScript}, un linguaggio moderno che estende la sintassi di \glossarioLocale{JavaScript} introducendo un sistema di tipi.
+Il codice Typescript viene tradotto a JavaScript attraverso un transpiler.
+Inoltre, TypeScript è il linguaggio consigliato per lo sviluppo di applicazioni \textit{Angular}, che abbiamo scelto come framework per lo sviluppo della web application.
+
+\subsubsection{OpenAPI}%
+\label{subs:openapi}
+
+Per descrivere i servizi che sono forniti dal server backend di Stalker abbiamo utilizzato la specifica \glossarioLocale{OpenAPI}, che definisce quali sono le interfacce per la comunicazione tra le componenti del sistema.
+La specifica OpenAPI definisce quali sono gli endpoint per la comunicazione tra le varie componenti e, per ciascun endpoint, quali metodi HTTP sono utilizzabili e come\@.
+
+\end{document}

@@ -1,0 +1,25 @@
+@startuml app-recyclerview
+
+!include ../../style/class.pu
+
+class androidx.recyclerview.widget.RecyclerView {
+  --
+}
+
+class view.MainPageActivity {
+    --
+}
+
+class utility.OrganizationListAdapter {
+    --
+}
+
+class utility.OrganizationListAdapter::OrgViewHolder {
+    --
+}
+
+view.MainPageActivity .l.> androidx.recyclerview.widget.RecyclerView
+view.MainPageActivity ..> utility.OrganizationListAdapter
+utility.OrganizationListAdapter *-r- utility.OrganizationListAdapter::OrgViewHolder
+
+@enduml

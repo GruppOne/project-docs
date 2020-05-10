@@ -1,0 +1,34 @@
+@startuml OrganizationRepository_diagram
+!include ../../../../../../style/class.pu
+
+class repositories.OrganizationRepository <<interface>> {
+  --
+
+  + findAllOrganizations()
+  : Flux<Organization>
+  + findById(
+      id : Integer
+    ) : Mono<Organization>
+  + findAllUsers(
+      id : Integer
+    ) : Flux<User>
+  + updateOrganizationById(
+      id : Integer,
+      name : String,
+      description : String
+    ) : Mono<Organization>
+  + create(
+      name : String,
+      description : String
+    ) : Mono<Organization>
+  + delete(
+      id : Integer
+    ) : Mono<Organization>
+}
+
+repositories.OrganizationRepository --> model.db.Organizations
+' class org.springframework.data.repository.reactive.ReactiveCrudRepository<Organization,Long> <<interface>>
+
+repositories.OrganizationRepository -up-|> org.springframework.data.repository.reactive.ReactiveCrudRepository
+
+@enduml

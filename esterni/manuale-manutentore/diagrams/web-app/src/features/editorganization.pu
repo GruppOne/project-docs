@@ -1,0 +1,55 @@
+@startuml Edit Organization classes
+!include ../../style/class.pu
+!include ../view/routes/EditOrganizationComponent.pu
+!include ../services/organizationservice.pu
+!include ../services/placeservice.pu
+!include ../view/components/MapComponent.pu
+
+' -------------------------------------------------- Organization
+!include ../interfaces/Organization/Organization.pu
+
+' -------------------------------------------------- LdapConfiguration
+!include ../interfaces/LdapConfiguration/LdapConfiguration.pu
+
+' -------------------------------------------------- Place
+!include ../interfaces/Place/Place.pu
+!include ../interfaces/Place/PlaceData.pu
+
+' -------------------------------------------------- Organization
+!include ../interfaces/Organization/Organization.pu
+
+' -------------------------------------------------- PlaceBuilder
+!include ../classes/Place/PlaceBuilder.pu
+!include ../classes/Place/PlaceDataBuilder.pu
+!include ../classes/Place/MyLatLng.pu
+
+' -------------------------------------------------- OrganizationBuilder
+!include ../classes/Organization/OrganizationBuilder.pu
+
+' -------------------------------------------------- LdapConfiguration
+!include ../classes/LdapConfiguration/LdapConfigurationBuilder.pu
+
+title Stalker web application edit organization class diagram
+
+package LeafLet{
+  class Polygon
+  class LatLngBounds
+}
+
+EditOrganizationComponent --> MapComponent
+EditOrganizationComponent --> Organization
+EditOrganizationComponent o-- AbsOrganizationBuilder
+EditOrganizationComponent --> OrganizationService
+EditOrganizationComponent ..> MyLatLng
+EditOrganizationComponent ..> AbsLdapConfigurationBuilder
+EditOrganizationComponent ..> AbsPlaceBuilder
+EditOrganizationComponent ..> AbsPlaceDataBuilder
+MapComponent --> Organization
+MapComponent --> Polygon
+MapComponent --> LatLngBounds
+MapComponent --> PlaceService
+MapComponent --> OrganizationService
+OrganizationService --> HttpClientService
+OrganizationService ..> Organization
+OrganizationService ..> AdminType
+@enduml

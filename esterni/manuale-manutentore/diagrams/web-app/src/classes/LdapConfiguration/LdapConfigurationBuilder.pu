@@ -1,0 +1,24 @@
+@startuml LdapConfigurationBuilder diagram
+!include ../../../style/class.pu
+class AbsLdapConfigurationBuilder {
+  --
+
+  + build()
+}
+class LdapConfigurationBuilder {
+  - username : String
+  - password : String
+  - host : String
+
+  --
+
+  + LdapConfigurationBuilder(private host : String)
+  + addHost(host : String) : LdapConfigurationBuilder
+  + addUsername(username : String) : LdapConfigurationBuilder
+  + addPassword(password : String) : LdapConfigurationBuilder
+  + build() : LdapConfiguration
+}
+
+LdapConfigurationBuilder ..> "<<create>>" LdapConfiguration
+LdapConfigurationBuilder --|> AbsLdapConfigurationBuilder
+@enduml

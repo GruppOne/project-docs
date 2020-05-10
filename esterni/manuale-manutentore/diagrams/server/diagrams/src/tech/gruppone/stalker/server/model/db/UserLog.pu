@@ -1,0 +1,14 @@
+@startuml UserLog
+!include ../../../../../../../style/class.pu
+
+class model.db.Userlog {
+  - userId : Integer
+  - ip : String
+  - createdDate : DateTime
+
+  --
+
+  + UserLog()
+}
+
+@enduml

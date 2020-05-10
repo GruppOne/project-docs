@@ -1,0 +1,20 @@
+@startuml OrganizationsComponent diagram
+!include ../../../style/class.pu
+class OrganizationsComponent {
+  - organizationService : OrganizationService {readonly}
+  - displayedColumns : String[]
+  - dataSource : MatTableDataSource
+  - paginator : MatPaginator
+  - sort : MatSort
+  - organizationsRoles : object
+
+  --
+
+  + OrganizationsComponent(
+    private organizationService : OrganizationService {readonly}
+    )
+  + ngOnInit() : void
+  + applyFilter(event : Event) : void
+  + getAdminOrganizations() : void
+}
+@enduml

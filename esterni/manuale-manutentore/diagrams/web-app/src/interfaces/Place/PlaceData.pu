@@ -1,0 +1,9 @@
+@startuml PlaceData Diagram
+!include ../../../style/class.pu
+class PlaceData <<interface>> {
+  + address : String {readonly}
+  + city : String {readonly}
+  + zipcode : String {readonly}
+  + state : String {readonly}
+}
+@enduml

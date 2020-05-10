@@ -1,0 +1,25 @@
+@startuml ServerApplication
+!include ../../../../../style/class.pu
+
+class ServerApplication {
+  {static} main(String[] args)
+}
+note bottom
+  Contains the Spring ApplicationContext
+  that acts as IoC container
+end note
+
+namespace reactor.core.publisher {
+class reactor.core.publisher.Mono<T>
+class reactor.core.publisher.Flux<T>
+}
+
+note bottom of reactor.core.publisher
+  every controller, service and repository
+  wraps our types in a Mono (0..1 element)
+  or a Flux (sequence of 0..N elements)
+  to pass them around in a non-blocking way
+  while adding relevant behaviour.
+end note
+
+@enduml

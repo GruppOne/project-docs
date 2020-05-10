@@ -1,0 +1,24 @@
+@startuml Class diagram
+!include ../../../style/class.pu
+
+class Point <<data type>> {
+  - {static} EARTH_EQUAT_RADIUS : Real
+  - {static} EARTH_POLAR_RADIUS : Real
+  - x : Real {readonly}
+  - y : Real {readonly}
+
+  --
+
+  + Point(x : Real, y : Real)
+  + toString() : String
+  + equals(Object other) : Boolean
+  + hashCode() : Integer
+  + {static} buildFromDegrees(
+    {static} longitude : Real,
+    {static} latitude : Real
+    {static} ) : Point
+  - {static} xMercator(longitude : Real) : Real
+  - {static} yMercator(latitude : Real) : Real
+}
+
+@enduml

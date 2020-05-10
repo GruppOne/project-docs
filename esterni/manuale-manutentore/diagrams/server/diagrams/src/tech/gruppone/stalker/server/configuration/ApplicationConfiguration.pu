@@ -1,0 +1,13 @@
+@startuml ApplicationConfiguration
+!include ../../../../../../style/class.pu
+
+class configuration.ApplicationConfiguration {
+  - version : String {frozen}
+
+  --
+
+  + ApplicationConfiguration(version : String)
+  + currentServerVersion(): Mono<String>
+}
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml OrganizationData
+!include ../../../../../../../style/class.pu
+!include ./LdapConfiguration.pu
+!include ./Place.pu
+
+class model.api.OrganizationData{
+  - name : String
+  - description : String
+  - ldapConfiguration : LdapConfiguration
+  - places : Place[]
+  - isPrivate: Boolean
+  - createdDate : DateTime
+  - lastModifiedDate : DateTime
+
+  --
+
+  + OrganizationData()
+}
+
+model.api.OrganizationData *- model.api.LdapConfiguration
+model.api.OrganizationData *- model.api.Place
+
+@enduml

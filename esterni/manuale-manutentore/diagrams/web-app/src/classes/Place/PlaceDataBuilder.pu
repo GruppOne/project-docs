@@ -1,0 +1,31 @@
+@startuml PlaceDataBuilder Diagram
+!include ../../../style/class.pu
+class AbsPlaceDataBuilder {
+  --
+
+  + build()
+}
+class PlaceDataBuilder {
+  - address : String
+  - city : String
+  - zipcode : String
+  - state : String
+
+  --
+
+  + PlaceDataBuilder(
+    private address : String,
+    private city : String,
+    private zipcode : String,
+    private state : String,
+  )
+  + addAddress(address : String) : PlaceDataBuilder
+  + addCity(city : String) : PlaceDataBuilder
+  + addZipcode(zipcode : String) : PlaceDataBuilder
+  + addState(state : String) : PlaceDataBuilder
+  + build() : PlaceData
+}
+
+PlaceDataBuilder ..> "<<create>>" PlaceData
+PlaceDataBuilder --|> AbsPlaceDataBuilder
+@enduml

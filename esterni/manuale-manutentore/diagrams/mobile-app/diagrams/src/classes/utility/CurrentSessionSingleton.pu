@@ -1,0 +1,22 @@
+@startuml Class diagram
+!include ../../../style/class.pu
+
+class CurrentSessionSingleton {
+  - {static} instance : CurrentSessionSigleton {readonly}
+  - loggedUser : MutableLiveData<User> {readonly}
+  - organizations : MutableLiveData<List<Organization>> {readonly}
+  - jwt : String
+
+  --
+
+  - CurrentSessionSigleton()
+  + setUser(user : User) : void
+  + setJwt(token : String) : void
+  + setOrganizationList(
+    orgList : List<Organization>
+    ) : void
+  + zeroOrganizations() : Boolean
+  + getInsidePlaces(point : Point) : List<Integer>
+}
+
+@enduml

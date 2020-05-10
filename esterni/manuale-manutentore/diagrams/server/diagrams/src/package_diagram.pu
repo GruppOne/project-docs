@@ -1,0 +1,46 @@
+@startuml  Class server_package_diagram
+!include ../style/class.pu
+
+package security {
+}
+
+package configuration {
+}
+
+package controllers {
+}
+
+controllers ..> security
+controllers ..> configuration
+
+package model {
+
+  package api {
+    package responses {
+    }
+  }
+
+  package db {
+
+  }
+}
+
+package repositories {
+}
+
+package services {
+}
+
+services ..> configuration
+repositories ..> configuration
+
+controllers ..> services
+services ..> repositories
+
+controllers --> api
+controllers --> responses
+services --> api
+services --> db
+repositories --> db
+
+@enduml

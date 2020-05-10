@@ -1,0 +1,91 @@
+\documentclass[../../manuale-manutentore.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Web application}%
+\label{sub:web_application}
+
+\subsubsection{Installazione delle dipendenze}%
+\label{subs:installazione_delle_dipendenze}
+
+Prima di effettuare qualsiasi operazione, l'utente deve posizionarsi nella root della cartella che contiene il codice della web application ed eseguire:
+
+\begin{minted}{bash}
+  npm install
+\end{minted}
+
+In questo modo saranno installate tutte le dipendenze necessarie per l'esecuzione della web application.
+La procedura potrebbe richiedere qualche minuto.
+
+\subsubsection{Avvio del server}%
+\label{subs:avvio_del_server}
+
+Per ottenere un server di sviluppo, utilizzare il seguente comando:
+
+\begin{minted}{bash}
+  ng serve
+\end{minted}
+
+Se la procedura è andata a buon fine, sarà possibile interagire con la web application all'indirizzo \texttt{http://localhost:4200/} e verificare che si visualizzi la pagina home del sito.
+Altrimenti, la compilazione del progetto mostrerà un report contenente eventuali errori rilevati.
+La procedura impiegherà qualche minuto.
+Non serve che questo comando sia digitato più di una volta, in quanto le pagine web si aggiornano automaticamente al cambiamento dei file sorgente.
+
+\subsubsection{Creazione di nuovi componenti}%
+\label{subs:creazione_dei_nuovi_componenti}
+
+Per generare un nuovo componente, eseguire il seguente comando:
+
+\begin{minted}{bash}
+  ng generate component component-name
+\end{minted}
+
+La sintassi completa di questo comando è:
+
+\begin{minted}{bash}
+  ng generate directive|pipe|service|class|guard|interface|enum|module
+\end{minted}
+
+\subsubsection{Build}%
+\label{subs:build}
+
+Per effettuare la build di questo progetto, eseguire il seguente comando:
+
+\begin{minted}{bash}
+  ng build
+\end{minted}
+
+Per effettuare una build di produzione, eseguire il seguente comando:
+
+\begin{minted}{bash}
+  ng build --prod
+\end{minted}
+
+\subsubsection{Configurazione}%
+\label{subs:configurazione}
+
+Per eseguire comandi con una configurazione specifica, eseguire il seguente comando:
+
+\begin{minted}{bash}
+  ng build|serve|test --configuration=your-configuration
+\end{minted}
+
+\bash{your-configuration} corrisponde alla configurazione desiderata.
+
+Le configurazioni possibili sono:
+\begin{itemize}
+  \item \bash{localhost}
+  \item \bash{imola}
+  \item \bash{production}.
+\end{itemize}
+
+\subsubsection{Aiuto}%
+\label{subs:aiuto}
+
+Per ricevere informazioni sui comandi di Angular CLI, eseguire:
+\begin{itemize}
+  \item \textit{ng help}.
+  \item oppure visionare il README di Angular CLI al seguente indirizzo \href{https://github.com/angular/angular-cli/blob/master/README.md}{https://github.com/angular/angular-cli/blob/master/README.md}.
+\end{itemize}
+
+\end{document}

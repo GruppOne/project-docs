@@ -1,0 +1,18 @@
+@startuml LocationInfoService
+!include ../../../../../../style/class.pu
+
+class services.LocationInfoService {
+  - locationInfoRepository {frozen}
+
+  --
+
+  + LocationInfoService(locationInfoRepository)
+  + saveLocationInfo(multiLocationInfo) : Mono<Void>
+}
+
+services.LocationInfoService ..> repositories.LocationInfoRepository
+services.LocationInfoService ..> model.api.MultiLocationInfo
+
+services.LocationInfoService o-- model.db.LocationInfo.Builder
+
+@enduml

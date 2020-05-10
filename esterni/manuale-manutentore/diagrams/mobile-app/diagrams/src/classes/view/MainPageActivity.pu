@@ -1,0 +1,13 @@
+@startuml app-mainpageactivity-diagram
+!include ../../../style/class.pu
+
+class MainPageActivity {
+  + viewModel : MainPageViewModel
+
+  --
+
+  + checkPermission() : void
+  # onCreate(savedInstanceState : Bundle) : void
+  + loadOrganization() : void
+}
+@enduml
