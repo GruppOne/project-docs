@@ -24,6 +24,7 @@ Il processo comprende due attività principali:
 
 \paragraph{Implementazione del processo}%
 \label{subs:validazione/implementazione}
+
 Un piano di implementazione dovrebbe includere almeno:
 \begin{itemize}
   \item Scelta dell'oggetto di validazione.
@@ -32,14 +33,33 @@ Un piano di implementazione dovrebbe includere almeno:
   \item Procedure per fornire al cliente i report di validazione.
 \end{itemize}
 
-\paragraph{Validazione}
+\paragraph{Validazione}%
+\label{par:validazione}
+
 L'attività di validazione consiste nel preparare test sui requisiti e analizzare i loro risultati.
 
-\paragraph{Test di accettazione}
-I test di accettazione vengono effettuati in presenza del proponente in modo da verificare congiuntamente che siano stati soddisfatti tutti i requisiti espliciti o impliciti del prodotto.
-Vengono effettuati nel collaudo, utilizzando anche i test di sistema.
+\paragraph{Test di accettazione}%
+\label{par:test_di_accettazione}
 
-\paragraph{Test di sistema}
+I test di accettazione sono effettuati in presenza del proponente in modo da verificare congiuntamente che siano stati soddisfatti tutti i requisiti espliciti o impliciti del prodotto.
+Vengono effettuati nel collaudo, utilizzando anche i test di sistema.
+I test di accettazione sono codificati nella seguente maniera:
+\begin{center}
+    [TA][numero][componente]
+\end{center}
+Dove:
+\begin{itemize}
+  \item \textit{numero} è un numero positivo incrementale a tre cifre.
+  \item \textit{componente} è un codice che rappresenta la componente di Stalker coinvolta nei test:
+    \begin{description}
+      \item [MA] indica la mobile app.
+      \item [WA] indica la web application.
+    \end{description}
+\end{itemize}
+
+\paragraph{Test di sistema}%
+\label{par:test_di_sistema}
+
 Verificano, dopo aver passato con successo i test di integrazione, i requisiti del capitolato. I test sono trasversali su più componenti del sistema.
 Tali test garantiscono, oltre ai casi d'uso del software, test di performance, stress test o test similari.
 Essendo tutti i test derivanti da un gruppo di requisiti che hanno una determinata importanza nel prodotto software il team enumera i Test di Sistema nel modo seguente:

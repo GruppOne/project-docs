@@ -141,22 +141,6 @@ Lo sviluppatore deve valutare la progettazione dettagliata del software e i requ
 \paragraph{Codifica e test di unità del software}%
 \label{par:codifica_e_test_di_unita_del_software}
 
-Si devono sviluppare e documentare ogni unità software, oltre a procedure di test e dati per testarle. Deve essere testata ogni unità software assicurando che soddisfi i suoi requisiti. I risultati delle prove devono essere documentati. Se necessario devono essere aggiornati la documentazione dell'utente, i requisiti di prova e la programmazione dell'integrazione del software.
-
-Lo sviluppatore deve valutare il codice del software e i risultati dei test considerando i criteri elencati di seguito:
-
-\begin{itemize}
-  \item tracciabilità dei requisiti e progettazione del software
-  \item coerenza esterna con i requisiti e la progettazione del software
-  \item coerenza interna tra i singoli requisiti
-  \item copertura dei test di unità
-  \item adeguatezza dei metodi di codifica e degli standard utilizzati
-  \item fattibilità dell'integrazione software e dei test
-  \item fattibilità del funzionamento e della manutenzione.
-\end{itemize}
-
-\paragraph{Codifica e test di unità del software}%
-\label{par:codifica_test_software}
 L'attività di codifica consiste nell'implementazione delle specifiche del prodotto definite nelle attività precedenti.
 Questa attività prevede di sviluppare e documentare adeguatamente ogni componente software e le procedure di test necessari per quest'ultimi.
 Questa attività viene svolta dal ruolo del programmatore.
@@ -234,13 +218,79 @@ Lo sviluppare deve inoltre valutare il sistema secondo i seguenti criteri:
 L'attività di installazione consiste nello sviluppo di un piano di installazione per il prodotto software in un determinato ambiente.
 Questa attività verrà definitiva concordemente con quanto scritto nella sezione: §~\ref{par:rilascio_esterno_di_versioni_del_prodotto}
 
-\paragraph{supporto all'accettazione del prodotto}%
+\paragraph{Supporto all'accettazione del software}%
 \label{par:supporto_accettazione_prodotto}
 Questa attività si pone come obiettivo il supporto da parte del gruppo al feedback di accettazione del committente.
 I membri del gruppo devono completare e consegnare il software prodotto come specificato nel contrato con il committente.
 
 \subsubsection{Metriche}%
 \label{subs:sviluppo/metriche}
+
+
+\paragraph{MPR-CCE: Complessità ciclomatica eccessiva}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPR-CCE_complessita_ciclomatica_eccessiva}
+
+Il grado di difficoltà nel testare un metodo è proporzionale al numero di cammini linearmente indipendenti: più è alto il numero di cammini, più è alto il grado di complessità.
+Ne deriva inoltre un'esecuzione più lenta del metodo, è quindi buona norma limitare il numero massimo di cammini. La formula che calcola la complessità ciclomatica è la seguente:
+\[
+ v(G) = e - n + p
+\]
+dove:
+\begin{description}
+ \item[v(G):] complessità ciclomatica del grafo G. % chktex 36
+ \item[e:] numero di archi del grafo.
+ \item[n:] numero di nodi del grafo.
+ \item[p:] numero di componenti connesse.
+\end{description}
+\textbf{Metrica:} numero di metodi che hanno \[v(G) > 3.\]
+
+
+
+
+\paragraph{MPR-CDU: Percentuale di duplicazione del codice}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPR-CDU_percentuale_duplicazione_codice}
+
+La percentuale di duplicazione del codice è misurata attraverso l'analisi statica del codice con SonarCloud.
+Il risultato rilevato ha i seguenti significati:
+\begin{description}
+  \item[=0:] il codice scritto non è duplicato su più parti del programma.
+  \item[>0:] una parte del codice scritto è stato duplicato su più parti del programma.
+\end{description}
+
+
+\paragraph{MPR-SML: Numero di code smell}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPR-SML_numero_di_code_smell}
+
+Il numero di code smell rilevati indica il numero di una mancata best practice che i programmatori dovrebbero seguire per rendere il codice leggibile.
+Il risultato rilevato ha i seguenti significati:
+\begin{description}
+  \item[=0:] il codice scritto ha rispettato tutte le best practice segnalate.
+  \item[>0:] il codice non ha rispettato tutte le best practice segnalate.
+\end{description}
+
+
+\paragraph{MPR-BUG: Numero di bug rilevati}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPR-BUG_percentuale_duplicazione_codice}
+
+Il numero di bug rilevati per un componente software è misurato con SonarCloud.
+Il risultato rilevato ha i seguenti significati:
+\begin{description}
+  \item[=0:] non sono stati rilevati bug al componente software.
+  \item[>0:] sono stati rilevati bug al componente software.
+\end{description}
+
+
+\paragraph{MPR-BGS: Tempo stimato di risoluzione bug}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPR-BGS_tempo_stimato_risoluzione_bug}
+
+Il tempo stimato di risoluzione bug per un componente software è misurato con SonarCloud.
+Il risultato rilevato ha i seguenti significati:
+\begin{description}
+  \item[=0:] non sono stati rilevati bug al componente software.
+  \item[>0:] sono stati rilevati dei bug con un tempo di risoluzione stimato pari a quello riportato.
+\end{description}
+
+
 
 %\paragraph{MPS-ROS: Requisiti obbligatori soddisfatti}% in questo caso NON ci va il "\@". chktex 13
 %\label{par:MPS-ROS_requisiti_obbligatori_soddisfatti}
@@ -291,7 +341,7 @@ I membri del gruppo devono completare e consegnare il software prodotto come spe
 \subsubsection{Procedure}%
 \label{subs:procedure}
 
-\paragraph{Aggiunta di un Requisito}%
+\paragraph{Aggiunta di un requisito}%
 \label{par:aggiunta_requisito}
 L'analista, per aggiungere un nuovo requisito all'insieme dei requisiti di sistema e software del progetto deve assegnargli un codice che lo identifichi univocamente secondo la seguente specifica.
 

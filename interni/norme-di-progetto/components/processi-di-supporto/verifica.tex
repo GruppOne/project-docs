@@ -50,7 +50,7 @@ GruppOne effettua verifica dell'accuratezza e fattibilità di quanto delineato n
 
 % subp:verifica_del_contratto (end)
 
-\subparagraph{verifica del processo}%
+\subparagraph{Verifica del processo}%
 \label{subp:verifica_del_processo}
 
 Per verificare l'adeguatezza dei processi istanziati, vista la mancanza di esperienza dei membri del team, GruppOne fa affidamento principalmente al feedback espresso dal committente nei colloqui e nelle revisioni ufficiali per assicurarsi un corretto way of working durante ogni fase del progetto intrapreso.
@@ -136,12 +136,115 @@ Consiste in una serie di regole a cui tutti i prodotti intermedi del ciclo di vi
 Viene effettuata in maniera automatizzata utilizzando gli strumenti descritti in §~\ref{par:analisi_statica_e_dinamica}. L'adeguata impostazione di tali strumenti è richiesta ai verificatori ed è soggetta a controllo di configurazione.
 
 \subparagraph{Test di regressione}%
-\label{test_di_regressione}
+\label{subp:test_di_regressione}
 
 I test di regressione servono per accertare che le modifiche apportate non reintroducano errori nel software che erano stati risolti in precedenza.
 Consistono nella ripetizione selettiva di test di unità, integrazione, test di sistema.
 
+\subparagraph{Test di unità}%
+\label{subp:test_di_unita}
+I test di unità hanno lo scopo di verificare il corretto funzionamento di una singola unità software in modo automatico.
+Per classificare questa tipologia di test andrà utilizzato un codice univoco come il seguente:
+\begin{center}
+  \textbf{TU-[identificativo componente]-[numero identificativo]}
+\end{center}
+dove:
+\begin{description}
+  \item[identificativo componente] può assumere tre valori distinti: \textbf{W} se il test è riferito alla componente web app, \textbf{M} se il test è riferito alla componente mobile, \textbf{S} se il test è riferito alla componente server.
+  \item[numero identificativo] è un numero positivo incrementale che ha lo scopo di identificare univocamente il test di unità.
+\end{description}
+
+% subp:test_unita (end)
+
+\subparagraph{Test di integrazione}%
+\label{subp:test_di_integrazione}
+I test di integrazione hanno lo scopo di verificare se un gruppo di unità software si interfaccia in modo corretto.
+Per classificare questa tipologia di test andrà utilizzato un codice univoco come il seguente:
+\begin{center}
+  \textbf{TI-[numero identificativo]}
+\end{center}
+dove:
+\begin{description}
+  \item [numero identificativo] è un numero positivo incrementale che ha lo scopo di identificare univocamente il test di integrazione.
+\end{description}
+
+% subp:test_integrazione (end)
+
 % subs:procedure (end)
+
+
+\subsubsection{Metriche}%
+\label{subs:verifica/metriche}
+
+\paragraph{MPS-COC: Copertura del codice}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPS-COC_copertura_codice}
+
+La percentuale di copertura del codice indica la quantità di codice che è possibile esaminare attraverso i test di unità.
+Lo strumento che permette di misurare tale percentuale è SonarCloud.
+
+Il risultato rilevato ha i seguenti significati:
+\begin{itemize}
+  \item se il risultato è pari a 0\% significa che il codice scritto non è stato testato.
+  \item se il risultato è compreso tra 0\% e 100\% significa che la il codice non è completamente testato e quindi la copertura è parziale.
+  \item se il risultato è 100\% allora la copertura dei test è ottima e tutto il codice scritto è stato testato.
+\end{itemize}
+
+
+
+\paragraph{MPS-TPA: Percentuale di test superati}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPS-TPA_test_passati}
+
+La metrica indica la percentuale di test superati con successo in una specifica fase del progetto fino all data corrente.
+
+La formula che calcola la percentuale dei test superati è la seguente:
+\[
+ v(t) = (tp / tnp) * 100
+\]
+dove:
+\begin{description}
+ \item[v(t):] percentuale di test superati. % chktex 36
+ \item[tp:] numero di test superati.
+ \item[tnp:] numero di test non superati.
+
+\end{description}
+
+Il risultato rilevato ha i seguenti significati:
+\begin{itemize}
+  \item se il risultato è pari a 0\% significa che nessun test viene eseguito con successo.
+  \item se il risultato è compreso tra 0\% e 100\% significa che non tutti i test vengono superati con successo.
+  \item se il risultato è 100\% allora tutti i test realizzati per il software sono andati a buon fine.
+\end{itemize}
+
+
+
+
+\paragraph{MPS-TNP: Percentuale di test non superati}% in questo caso NON ci va il "\@". chktex 13
+\label{par:MPS-TNP_test_non_passati}
+
+La metrica indica la percentuale di test non superati con successo in una specifica fase del progetto fino all data corrente.
+
+La formula che calcola la percentuale dei test non superati è la seguente:
+\[
+ v(t) = (tnp / tp) * 100
+\]
+dove:
+\begin{description}
+ \item[v(t):] percentuale di test superati. % chktex 36
+ \item[tp:] numero di test superati.
+ \item[tnp:] numero di test non superati.
+
+\end{description}
+
+Il risultato rilevato ha i seguenti significati:
+\begin{itemize}
+  \item se il risultato è pari a 0\% allora tutti i test realizzati per il software sono andati a buon fine.
+  \item se il risultato è compreso tra 0\% e 100\% significa che non tutti i test vengono superati con successo.
+  \item se il risultato è 100\% allora nessun test realizzato per il software è andato a buon fine.
+\end{itemize}
+
+
+
+% subs:metriche (end)
 
 \subsubsection{Strumenti di supporto}%
 \label{subs:verifica/strumenti}
