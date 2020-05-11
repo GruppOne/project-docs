@@ -122,7 +122,7 @@ $documents = @(
   },
   [PSCustomObject]@{
     SourceFile  = Get-Item "esterni/manuale-manutentore/manuale-manutentore.tex"
-    Destination = [IO.Path]::Combine($OutputBaseDirectory, "esterni", "manuale-manutentore$productVersion.pdf")
+    Destination = [IO.Path]::Combine($OutputBaseDirectory, "esterni", "manuale-manutentore_v$productVersion.pdf")
   },
   [PSCustomObject]@{
     SourceFile  = Get-Item "esterni/manuale-utente/manuale-utente.tex"
