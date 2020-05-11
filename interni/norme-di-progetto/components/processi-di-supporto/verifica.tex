@@ -136,10 +136,39 @@ Consiste in una serie di regole a cui tutti i prodotti intermedi del ciclo di vi
 Viene effettuata in maniera automatizzata utilizzando gli strumenti descritti in §~\ref{par:analisi_statica_e_dinamica}. L'adeguata impostazione di tali strumenti è richiesta ai verificatori ed è soggetta a controllo di configurazione.
 
 \subparagraph{Test di regressione}%
-\label{test_di_regressione}
+\label{subp:test_di_regressione}
 
 I test di regressione servono per accertare che le modifiche apportate non reintroducano errori nel software che erano stati risolti in precedenza.
 Consistono nella ripetizione selettiva di test di unità, integrazione, test di sistema.
+
+\subparagraph{Test di unità}%
+\label{subp:test_di_unita}
+I test di unità hanno lo scopo di verificare il corretto funzionamento di una singola unità software in modo automatico.
+Per classificare questa tipologia di test andrà utilizzato un codice univoco come il seguente:
+\begin{center}
+  \textbf{TU-[identificativo componente]-[numero identificativo]}
+\end{center}
+dove:
+\begin{description}
+  \item[identificativo componente] può assumere tre valori distinti: \textbf{W} se il test è riferito alla componente web app, \textbf{M} se il test è riferito alla componente mobile, \textbf{S} se il test è riferito alla componente server.
+  \item[numero identificativo] è un numero positivo incrementale che ha lo scopo di identificare univocamente il test di unità.
+\end{description}
+
+% subp:test_unita (end)
+
+\subparagraph{Test di integrazione}%
+\label{subp:test_di_integrazione}
+I test di integrazione hanno lo scopo di verificare se un gruppo di unità software si interfaccia in modo corretto.
+Per classificare questa tipologia di test andrà utilizzato un codice univoco come il seguente:
+\begin{center}
+  \textbf{TI-[numero identificativo]}
+\end{center}
+dove:
+\begin{description}
+  \item [numero identificativo] è un numero positivo incrementale che ha lo scopo di identificare univocamente il test di integrazione.
+\end{description}
+
+% subp:test_integrazione (end)
 
 % subs:procedure (end)
 
