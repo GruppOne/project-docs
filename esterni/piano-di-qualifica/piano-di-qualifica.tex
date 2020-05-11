@@ -21,6 +21,23 @@
 \setUso{Esterno}
 \setDescrizione{Questo documento illustra la strategia complessiva di verifica e validazione implementata da GruppOne al fine di garantire qualità nel progetto}
 \setModifiche{%
+\rowcolor{white!80!lightgray!100} 0.4.0 & Luca Ercole & 2020--05--11 & consegna documenti \textit{Revisione di qualifica} \\ \hline % chktex 44
+\rowcolor{lightgray} 0.3.6 & Luca Ercole & 2020--05--10 & modifica \textit{Piano di progetto} \\ \hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.3.5 & Luca Ercole & 2020--05--10 & approva documento \\
+\rowcolor{white!80!lightgray!100}  & Alessandro Rizzo, Luca Ercole & 2020--05--10 & verifica documento completo \\
+\rowcolor{white!80!lightgray!100}  & Luca Ercole  & 2020--05--09 & aggiorna sezione §~\ref{sub:specifica_test} \\
+\rowcolor{white!80!lightgray!100}  & Riccardo Cestaro  & 2020--05--05 & aggiorna sezione  in §~\ref{sec:report_verifica}\\
+\rowcolor{white!80!lightgray!100}  & Alberto Gobbo  & 2020--05--05 & correggi alcuni errori in §~\ref{sec:report_verifica} \\
+\rowcolor{white!80!lightgray!100}  & Alberto Gobbo  & 2020--05--04 & aggiungi tracciamento test di unità in §~\ref{sub:specifica_test} \\
+\rowcolor{white!80!lightgray!100}  & Riccardo Cestaro  & 2020--05--04 & aggiungi test di unità  in §~\ref{sub:specifica_test}\\
+\rowcolor{white!80!lightgray!100}  & Riccardo Cestaro  & 2020--05--03 & aggiungi test di integrazione  in §~\ref{sub:specifica_test}\\
+\rowcolor{white!80!lightgray!100}  & Riccardo Cestaro  & 2020--05--02 & aggiungi tracciamento test di sistema  in §~\ref{sub:specifica_test}\\
+\rowcolor{white!80!lightgray!100}  & Alberto Gobbo  & 2020--05--02 & correggi test di accettazione in §~\ref{sub:specifica_test} \\
+\rowcolor{white!80!lightgray!100}  & Riccardo Cestaro  & 2020--05--01 & aggiungi test di sistema in §~\ref{sub:specifica_test} \\ \hline % chktex 44
+\rowcolor{lightgray} 0.3.4 & Luca Ercole & 2020--05--10 & modifica \textit{Norme di progetto} \\  \hline  % chktex 44
+\rowcolor{white!80!lightgray!100} 0.3.3 & Luca Ercole & 2020--05--08 & modifica \textit{Analisi dei requisiti} \\  \hline % chktex 44
+\rowcolor{lightgray} 0.3.2 & Luca Ercole  & 2020--05--08 & creazione \textit{Manuale Sviluppatore} \\  \hline % chktex 44
+\rowcolor{white!80!lightgray!100} 0.3.1 & Luca Ercole  & 2020--05--07 & creazione \textit{Manuale Utente} \\  \hline % chktex 44
 \rowcolorTwo{}0.3.0 & Alberto Cocco & 2020--04--13 & consegna documenti \textit{Revisione di progettazione} \\%
 \hline %chktex 44
 \rowcolorOne{} 0.2.4 & Alberto Cocco & 2020--04--12 & approva documento \\%
@@ -41,7 +58,7 @@
 \hline %chktex 44
 \rowcolorOne{} 0.2.0 & Alberto Cocco & 2020--04--07 & consegna \textit{Technology baseline}\\%
 \hline %chktex 44
-\rowcolorTwo{} 0.1.7 & Alberto Cocco & 2020--04--06 & modifica \textit{Analisi dei Requisiti}\\%
+\rowcolorTwo{} 0.1.7 & Alberto Cocco & 2020--04--06 & modifica \textit{Analisi dei requisiti}\\%
 \hline %chktex 44
 \rowcolorOne{} 0.1.6 & Riccardo Agatea & 2019--03--06 & modifica \textit{Norme di progetto}\\%
 \hline %chktex 44
@@ -55,7 +72,7 @@
 \hline %chktex 44
 \rowcolorTwo{} 0.1.1 & Alessandro Rizzo & 2020--02--26 & modifica \textit{Piano di progetto}\\%
 \hline %chktex 44
-\rowcolorOne{}0.1.0 & Alessandro Rizzo & 2020--01--13 & consegna documenti \textit{Revisione dei Requisiti}\\%
+\rowcolorOne{}0.1.0 & Alessandro Rizzo & 2020--01--13 & consegna documenti \textit{Revisione dei requisiti}\\%
 \hline %chktex 44
 \rowcolorTwo{} 0.0.8 & Alessandro Rizzo & 2020--01--13 & creazione \textit{Glossario}\\%
 \hline %chktex 44
@@ -74,7 +91,7 @@
 \rowcolorOne{} & Luca Ercole & 2020--01--04 & aggiungi redattori e verificatori sui  documenti \\%
 \rowcolorOne{} & Luca Ercole & 2020--01--04 & crea template del documento \\%
 \hline %chktex 44
-\rowcolorTwo{} 0.0.6 & Alessandro Rizzo & 2020--01--13 & modifica \textit{Piano di Progetto}\\%
+\rowcolorTwo{} 0.0.6 & Alessandro Rizzo & 2020--01--13 & modifica \textit{Piano di progetto}\\%
 \hline %chktex 44
 \rowcolorOne{} 0.0.5 & Alessandro Rizzo & 2020--01--03 & creazione \textit{Analisi dei requisiti}\\%
 \hline %chktex 44
@@ -110,14 +127,19 @@
 \subfile{components/qualita-di-processo}
 
 \newpage
-\section{Valutazioni per il miglioramento}%
-\label{sec:valutazioni_miglioramento}
+\appendix
+\section{Specifica dei test}%
+\label{sub:specifica_test}
 
-\subfile{components/valutazioni-miglioramento}
-
+\subfile{components/specifica-test}
 
 \newpage
-\section{Report sull'attività di Verifica}%
+\section{Valutazioni per il miglioramento}%
+\label{sec:valutazioni_miglioramento}
+\subfile{components/valutazioni-miglioramento}
+
+\newpage
+\section{Report sull'attività di verifica}%
 \label{sec:report_verifica}
 
 \subfile{components/report-verifica}
@@ -127,7 +149,5 @@
 \label{sec:tabella_metriche}
 
 \subfile{components/tabella-metriche}
-
-% TODO aggiungere sezione su report?
 
 \end{document}

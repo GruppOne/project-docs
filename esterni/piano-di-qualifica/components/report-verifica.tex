@@ -7,38 +7,55 @@
 Per l'analisi statica dei documenti GruppOne ha utilizzato il package \glossario{chktex} che ha consentito di trovare errori nella sintassi latex.
 Il test, eseguito automaticamente, impedisce l'approvazione definitiva se vengono segnalati errori.
 
+\subsubsection{Indice di correttezza ortografica}%
+\label{subs:indice_corr_ortografica}
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=160mm]{correttezzaortografica-RR.png}%
+  \caption{Indice di correttezza ortografica \- RR}%
+  \label{fig:indice_correttezza_ortografica_RR}%
 \end{figure}
 
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=160mm]{correttezzaortografica-RP.png}%
+  \caption{Indice di correttezza ortografica \- RP}%
+  \label{fig:indice_correttezza_ortografica_RP}%
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=160mm]{correttezzaortografica-RQ.png}%
+  \caption{Indice di correttezza ortografica \- RQ}%
+  \label{fig:indice_correttezza_ortografica_RQ}%
 \end{figure}
 
 
 
 % sub:analisi_statica_doc (end)
-\subsection{Esito verifica leggibilità}%
-\label{sub:verifica_leggibilita}
+\subsubsection{Indice di Gulpease}%
+\label{subs:indice_gulpease}
+
 Allo scopo di assicurarci una leggibilità accettabile dei documenti abbiamo monitorato l'indice \glossario{Gulpease} di ogni documento. Qui sotto riportiamo i risultati associati alle versioni consegnate in occasione delle revisioni di avanzamento relativamente agli obiettivi di qualità che erano stati definiti.
 \rowcolors{2}{lightgray}{white!80!lightgray!100}
 \begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering\arraybackslash}m{2cm} >{\centering\arraybackslash}m{2cm}>{\centering\arraybackslash}m{2cm} >{\centering\arraybackslash}m{4cm}}
   \rowcolor{darkgray!90!}
-  \color{white}{\textbf{Documento}} & \color{white}{\textbf{RR}} & \color{white}{\textbf{RP}} & \color{white}{\textbf{Esito dell'ultima verifica}} \\
-  Piano di Progetto                 & 96                         & 95                         & Sufficiente                                        \\
-  Norme di Progetto                 & 68                         & 74                         & Sufficiente                                        \\
-  Piano di Qualifica                & 81                         & 83                         & Sufficiente                                        \\
-  Studio di Fattibilità             & 65                         & ---                        & Sufficiente                                        \\
-  Analisi dei requisiti             & 100                        & 100                        & Sufficiente                                        \\
-  Glossario                         & 74                         & 83                         & Sufficiente                                        \\
-  Verbali esterni (media)           & 77                         & 74                         & Sufficiente                                        \\
-  Verbali interni (media)           & 80                         & 77                         & Sufficiente                                        \\
+  \color{white}{\textbf{Documento}} & \color{white}{\textbf{RR}} & \color{white}{\textbf{RP}} & \color{white}{\textbf{RQ}} & \color{white}{\textbf{Esito dell'ultima verifica}} \\
+  Piano di Progetto                 & 96                         & 95                         & 96                         & Sufficiente                                        \\
+  Norme di Progetto                 & 68                         & 74                         & 74                         & Sufficiente                                        \\
+  Piano di Qualifica                & 81                         & 83                         & 81                         & Sufficiente                                        \\
+  Studio di Fattibilità             & 65                         & ---                        & ---                        & Sufficiente                                        \\
+  Analisi dei requisiti             & 100                        & 100                        & 100                        & Sufficiente                                        \\
+  Glossario                         & 74                         & 83                         & 83                         & Sufficiente                                        \\
+  Manuale utente                    & ---                        & ---                        & 75                         & Sufficiente                                        \\
+  Manuale sviluppatore              & ---                        & ---                        & 82                         & Sufficiente                                        \\
+  Verbali esterni (media)           & 77                         & 74                         & 79                         & Sufficiente                                        \\
+  Verbali interni (media)           & 80                         & 77                         & 81                         & Sufficiente                                        \\
   \rowcolor{white}
-  \caption{Attualizzazione dei rischi per la fase di incremento 1}%
-  \label{tab:attualizzazione_per_la_fase_di_incremento_1}
+  \caption{Indici di Gulpease}%
+  \label{tab:indici_gulpease}
 \end{longtable}
 % \begin{figure}[H]
 %   \centering
@@ -50,11 +67,72 @@ Allo scopo di assicurarci una leggibilità accettabile dei documenti abbiamo mon
 %   \includegraphics[width=160mm]{gulpease-RP.png}%
 % \end{figure}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=160mm]{indice_gulpease.png}%
+  \caption{Indice di Gulpease}%
+  \label{fig:gulpease}%
+\end{figure}
+
+\newpage
+
+\subsection{Qualità di sviluppo}%
+\label{sub:qualita_sviluppo_report}
+Le metriche riguardanti la qualità di sviluppo sono state misurate tramite SonarCloud.
+
+\subsubsection{Complessità ciclomatica}%
+\label{subs:complessita_ciclomatica}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=160mm]{gulpease-conf.png}%
+  \includegraphics[width=160mm]{compl_ciclomatica.png}%
+  \caption{Complessità ciclomatica}%
+  \label{fig:compl_ciclomatica}%
 \end{figure}
+
+\subsubsection{Duplicazione del codice}%
+\label{subs:duplicazione_codice}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=160mm]{duplicazione_codice.png}%
+  \caption{Duplicazione codice}%
+  \label{fig:duplicazione_codice}%
+\end{figure}
+
+
+\subsubsection{Code Smell}%
+\label{subs:code_smell}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=160mm]{code_smell.png}%
+  \caption{Code smell}%
+  \label{fig:code_smell}%
+\end{figure}
+
+
+\subsubsection{Bug rilevati}%
+\label{subs:bug_rilevati}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=160mm]{bug_rilevati.png}%
+  \caption{Bug rilevati}%
+  \label{fig:bug_rilevati}%
+\end{figure}
+
+\subsubsection{Tempo stimato bug}%
+\label{subs:tempo_stimato}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=160mm]{tempo_stimato_bug.png}%
+  \caption{Tempo stimato bug}%
+  \label{fig:tempo_stimato_bug}%
+\end{figure}
+
 
 \newpage
 
@@ -65,6 +143,8 @@ Per assicurarci di rispettare il preventivo, abbiamo monitorato i discostamenti,
 \begin{figure}[H]
   \centering
   \includegraphics[width=160mm]{discostamenti-orari-economici.png}%
+  \caption{Discostamenti orari ed economici}%
+  \label{fig:discostamenti_orari_economici}%
 \end{figure}
 % sub:discostamenti_orari_ed_economici (end)
 
@@ -74,7 +154,59 @@ Infine, alla fine di ogni fase misuriamo quante metriche raggiungono valori defi
 \begin{figure}[H]
   \centering
   \includegraphics[width=160mm]{percentualemetricheottimali.png}%
+  \caption{Percentuale di metriche ottimali}%
+  \label{fig:metriche_ottimali}%
 \end{figure}
 % sub:metriche_ottimali (end)
+
+\newpage
+
+
+\subsection{Qualità di verifica}%
+\label{sub:qualita_verifica_report}
+Le metriche riguardanti la qualità di verifica sono state misurate tramite SonarCloud.
+
+\subsubsection{Percentuale di copertura del codice}%
+\label{subs:percentuale_cop_codice}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=160mm]{code_coverage.png}%
+  \caption{Percentuale di copertura del codice}%
+  \label{fig:percentuale_cop_codice}%
+\end{figure}
+
+\subsubsection{Numero di test superati}%
+\label{subs:test_non_superati}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=160mm]{test_passati.png}%
+  \caption{Numero di test superati}%
+  \label{fig:test_non_superati}%
+\end{figure}
+
+\subsubsection{Numero di test non superati}%
+\label{subs:test_superati}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=160mm]{test_non_passati.png}%
+  \caption{Numero di test non superati}%
+  \label{fig:test_superati}%
+\end{figure}
+
+
+
+
+
+\subsection{Rischi incontrati non preventivati}%
+\label{sub:rischi_non_preventivati_report}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=160mm]{rischi_non_preventivati.png}%
+  \caption{Numero rischi non preventivati}%
+  \label{fig:rischi_non_preventivati}%
+\end{figure}
+
+
 
 \end{document}

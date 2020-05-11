@@ -37,16 +37,16 @@
   ],
   "latex-workshop.latex.recipes": [
     {
-      "name": "lualatex once",
-      "tools": [
-        "lualatex vscode tool",
-      ]
-    },
-    {
       "name": "lualatex recipe",
       "tools": [
         "lualatex vscode tool",
         "lualatex vscode tool"
+      ]
+    },
+    {
+      "name": "lualatex once",
+      "tools": [
+        "lualatex vscode tool",
       ]
     }
   ],

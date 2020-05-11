@@ -1,0 +1,970 @@
+\documentclass[../../piano-di-qualifica.tex]{subfiles}
+\appendToGraphicspath{../../../../commons/img/}
+
+\begin{document}
+
+
+I test di unità verificano la correttezza e il funzionamento di una singola unità del software. I test verranno identificati nel seguente modo:
+\begin{center}
+  TU[tipo][codice]
+\end{center}
+Dove \textit{codice} rappresenta un numero identificativo per l'unità a cui il test appartiene e \textit{tipo} rappresenta il modulo di appartenenza con:
+\begin{description}
+  \item [M]: Mobile app;
+  \item [W]: Web app;
+  \item [S]: Server;
+\end{description}
+
+\subsubsection{Tabella dei test di unità}%
+\label{subsub:tabella_test_di_unita}
+
+
+\rowcolors{2}{lightgray}{white!80!lightgray!100}
+\renewcommand{\arraystretch}{2}
+\begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{}m{10cm} >{\centering\arraybackslash}m{3cm}}
+  \rowcolor{darkgray!90!}
+  \color{white}
+  {\textbf{ID test}} & \color{white}{\textbf{Metodo}}                                                                                      & \color{white}{\textbf{Esito}} \\
+  \endhead\rowcolor{white}%
+  \multicolumn{3}{r}{\textit{Continua alla pagina seguente}}
+  \endfoot%
+  \endlastfoot%
+
+  % Android App
+
+  % Test di unità
+
+  TUM001             & Verifica il ritorno di una lista vuota di organizzazioni.                                                           & S                             \\
+
+  TUM002             & Verifica il ritorno di una lista non vuota di organizzazioni.                                                       & S                             \\
+
+  TUM003             & Verifica il ritorno di una lista nulla di organizzazioni.                                                           & S                             \\
+
+  TUM004             & Verifica il ritorno non nullo e non vuoto dato un punto all'interno del luogo.                                      & S                             \\
+
+  TUM005             & Verifica il ritorno non nullo e vuoto dato un punto all'interno del luogo, in assenza di organizzazioni.            & S                             \\
+
+  TUM006             & Verifica il ritorno non nullo e vuoto dato un punto all'esterno del luogo.                                          & S                             \\
+
+  TUM007             & Verifica il ritorno di un'istanza non nulla di CurrentSessionSingleton.                                             & S                             \\
+
+  TUM008             & Verifica l'uguaglianza dell'istanza ritornata di CurrentSessionSingleton.                                           & S                             \\
+
+  TUM009             & Verifica il ritorno a true dato un punto all'interno di un luogo di un'organizzazione.                              & S                             \\
+
+  TUM010             & Verifica il ritorno a false dato un punto al margine di un luogo di un'organizzazione.                              & S                             \\
+
+  TUM011             & Verifica il ritorno a false dato un punto esterno di un luogo di un'organizzazione.                                 & S                             \\
+
+  TUM012             & Verifica il ritorno a true dato un punto all'interno di un luogo.                                                   & S                             \\
+
+  TUM013             & Verifica il ritorno a false dato un punto al margine di un luogo.                                                   & S                             \\
+
+  TUM014             & Verifica il ritorno a false dato un punto esterno di un luogo.                                                      & S                             \\
+
+  TUM015             & Verifica il ritorno di un'istanza non nulla di WebSingleton.                                                        & S                             \\
+
+  TUM016             & Verifica l'uguaglianza dell'istanza ritornata di WebSingleton.                                                      & S                             \\
+
+  TUM017             & Verifica l'aggiunta di una richiesta alla coda.                                                                     & S                             \\ % TODO test ancora da completare
+
+  TUM018             & Verifica l'entrata di un utente in un luogo.                                                                        & S                             \\ % TODO test ancora da completare
+
+  TUM019             & Verifica l'uscita di un utente da un luogo.                                                                         & S                             \\ % TODO test ancora da completare
+
+  TUM020             & Verifica il ritorno di una lista di organizzazioni.                                                                 & S                             \\ % TODO test ancora da completare
+
+
+  TUM021             & Verifica il ritorno di un valore true data email e password.                                                        & S                             \\ % TODO test ancora da completare
+
+  TUM022             & Verifica il ritorno di un valore data email e password.                                                             & S                             \\ % TODO test ancora da completare
+
+  TUM023             & Verifica il ritorno di una lista di organizzazioni per l'aggiornamento.                                             & S                             \\ % TODO test ancora da completare
+
+  TUM024             & Verifica il ritorno delle informazioni di un'organizzazione.                                                        & S                             \\ % TODO test ancora da completare
+
+  TUM025             & Verifica la creazione di un componente organizzazione della lista.                                                  & S                             \\ % TODO test ancora da completare
+
+  TUM026             & Verifica la corretta selezione di un componente organizzazione della lista.                                         & S                             \\ % TODO test ancora da completare
+
+  TUM027             & Verifica il ritorno del numero dei componenti organizzazione della lista.                                           & S                             \\ % TODO test ancora da completare
+
+  TUM028             & Verifica i permessi richiesti dall'applicazione.                                                                    & S                             \\ % TODO test ancora da completare
+
+
+  % Test di instrumentation
+
+  TUM029             & Verifica la corretta creazione dell'activity App.                                                                   & S                             \\ % TODO test ancora da completare
+
+  TUM030             & Verifica il ritorno del context.                                                                                    & S                             \\ % TODO test ancora da completare
+
+  TUM031             & Verifica la corretta assegnazione di una lista di organizzazioni.                                                   & S                             \\ % TODO test ancora da completare
+
+  TUM032             & Verifica la corretta creazione dell'activity Login.                                                                 & S                             \\ % TODO test ancora da completare
+  TUM033             & Verifica la corretta creazione dell'activity Main.                                                                  & S                             \\ % TODO test ancora da completare
+
+  TUM034             & Verifica la corretta creazione dell'activity MainPage.                                                              & S                             \\ % TODO test ancora da completare
+
+  TUM035             & Verifica la corretta creazione dell'activity Stalker.                                                               & S                             \\ % TODO test ancora da completare
+
+  TUM036             & Verifica il ritorno non nullo di una coda.                                                                          & S                             \\ % TODO test ancora da completare
+
+  TUM037             & Verifica l'uguaglianza della coda del WebSingleton.                                                                 & S                             \\ % TODO test ancora da completare
+
+  TUM038             & Verifica l'aggiunta di una richiesta alla coda.                                                                     & S                             \\ % TODO test ancora da completare
+
+  % Web App
+
+  % app.component
+
+  TUW039             & Verifica la corretta creazione dell'app.                                                                            & S                             \\
+
+  TUW040             & Verifica il ritorno corretto del route.                                                                             & S                             \\
+
+  TUW041             & Verifica il ritorno corretto alla home.                                                                             & S                             \\
+
+  TUW042             & Verifica il non ritorno alla home.                                                                                  & S                             \\
+
+  TUW043             & Verifica la creazione del componente tooltip.                                                                       & S                             \\
+
+  TUW044             & Verifica la visualizzazione dei bottoni dentro al menu, se un utente ha effettuato il login.                        & S                             \\
+
+  TUW045             & Verifica la mancata visualizzazione dei bottoni dentro al menu, se un utente ha effettuato il login.                & S                             \\
+
+  TUW046             & Verifica il ritorno dello user id.                                                                                  & S                             \\
+
+  TUW047             & Verifica il corretto logout.                                                                                        & S                             \\
+
+  %view.components.administrator
+
+  TUW048             & Verifica la corretta creazione di AdministratorComponent.                                                           & S                             \\
+
+  TUW049             & Verifica il ritorno corretto degli amministratori da una chiamata get.                                              & S                             \\
+
+  TUW050             & Verifica il ritorno non corretto degli amministratori da una chiamata get.                                          & S                             \\
+
+  TUW051             & Verifica il ritorno corretto degli utenti connessi ad una organizzazione da una chiamata get.                       & S                             \\
+
+  TUW052             & Verifica il ritorno non corretto degli utenti connessi ad una organizzazione da una chiamata get.                   & S                             \\
+
+  TUW053             & Verifica la corretta rimozione di un admin.                                                                         & S                             \\
+
+  TUW054             & Verifica la non corretta rimozione di un admin in caso di errori http.                                              & S                             \\
+
+  TUW055             & Verifica la corretta aggiunta di un admin.                                                                          & S                             \\
+
+  TUW056             & Verifica la non corretta aggiunta di un admin in caso di errori http.                                               & S                             \\
+
+  TUW057             & Verifica il ritorno di un utente corretto data la sua mail.                                                         & S                             \\
+
+  %view.components.button-confirm
+
+  TUW058             & Verifica la corretta creazione di button-confirm.                                                                   & S                             \\
+
+  %view.components.form-email
+
+  TUW059             & Verifica la corretta creazione di form-email.                                                                       & S                             \\
+
+  TUW060             & Verifica il corretto funzionamento del campo input.                                                                 & S                             \\
+
+  TUW061             & Verifica il corretto aggiornamento del campo email.                                                                 & S                             \\
+
+  %view.components.form-password
+
+  TUW062             & Verifica la corretta creazione di form-password.                                                                    & S                             \\
+
+  TUW063             & Verifica il corretto funzionamento del campo input.                                                                 & S                             \\
+
+  TUW064             & Verifica il corretto aggiornamento del campo password.                                                              & S                             \\
+
+  %view.components.map
+
+  TUW065             & Verifica la corretta creazione di map e la richiesta dei luoghi.                                                    & S                             \\
+
+  TUW066             & Verifica la corretta creazione di map senza richiedere i luoghi.                                                    & S                             \\
+
+  TUW067             & Verifica il ritorno di una risposta vuota delle organizzazioni da una chiamata get.                                 & S                             \\
+
+  TUW068             & Verifica il ritorno di una risposta non vuota delle organizzazioni da una chiamata get.                             & S                             \\
+
+  TUW069             & Verifica il ritorno di una risposta non vuota dei luoghi da una chiamata get e la loro visualizzazione.             & S                             \\
+
+  TUW070             & Verifica il ritorno di una risposta non vuota dei luoghi da una chiamata get senza visualizzarli in caso di errore. & S                             \\
+
+  %view.components._routes.create-organization
+
+  TUW071             & Verifica la corretta creazione di CreateOrganizationComponent.                                                      & S                             \\
+
+  TUW072             & Verifica il corretto invio del form di creazione organizzazione.                                                    & S                             \\
+
+  TUW073             & Verifica il mancato invio del form di creazione organizzazione nel caso di errori http.                             & S                             \\
+
+  TUW074             & Verifica il cambiamento del toggle.                                                                                 & S                             \\
+
+  %view.components._routes.edit-organization
+
+  TUW075             & Verifica la corretta creazione di EditOrganizationComponent.                                                        & S                             \\
+
+  TUW076             & Verifica la corretta creazione di EditOrganizationComponent con un'organizzazione già inserita.                     & S                             \\
+
+  TUW077             & Verifica la corretta creazione di EditOrganizationComponent senza organizzazione inserita                           & S                             \\
+
+  TUW078             & Verifica il ritorno di una risposta vuota delle organizzazioni da una chiamata get.                                 & S                             \\
+
+  TUW079             & Verifica il ritorno di una risposta non vuota delle organizzazioni da una chiamata get.                             & S                             \\
+
+  TUW080             & Verifica il corretto invio del form di modifica organizzazione.                                                     & S                             \\
+
+  TUW081             & Verifica il mancato invio del form di creazione organizzazione nel caso di errori http.                             & S                             \\
+
+
+
+  %view.components._routes.home
+
+  TUW082             & Verifica la corretta creazione di HomeComponent.                                                                    & S                             \\
+
+  TUW083             & Verifica la non validazione di dati di login errati.                                                                & S                             \\
+
+  TUW084             & Verifica la validazione di dati di login errati.                                                                    & S                             \\
+
+  TUW085             & Verifica che il redirect della pagina funzioni al momento del login.                                                & S                             \\
+
+  TUW086             & Verifica che il redirect della pagina non funzioni al momento del login se l'input non è corretto.                  & S                             \\
+
+  TUW087             & Verifica che il redirect della pagina non funzioni al momento del login se ci sono errori http.                     & S                             \\
+
+  TUW088             & Verifica il ritorno a false del toggle.                                                                             & S                             \\
+
+  TUW089             & Verifica il ritorno a true del toggle.                                                                              & S                             \\
+
+  TUW090             & Verifica che non venga visualizzato il form di login nel caso in cui un utente sia autenticato.                     & S                             \\
+
+  TUW091             & Verifica che  venga visualizzato il form di login nel caso in cui un utente non sia autenticato.                    & S                             \\
+
+
+  %view.components._routes.not-found
+
+  TUW092             & Verifica la corretta creazione di NotFoundComponent.                                                                & S                             \\
+
+
+  %view.components._routes.organization
+
+  TUW093             & Verifica la corretta creazione di OrganizationComponent con un'organizzazione ottenuta tramite get.                 & S                             \\
+  TUW094             & Verifica la corretta creazione di OrganizationComponent senza un'organizzazione ottenuta tramite get.               & S                             \\
+  TUW095             & Verifica il ritorno di una risposta vuota delle organizzazioni da una chiamata get.                                 & S                             \\
+  TUW096             & Verifica il ritorno di una risposta non vuota delle organizzazioni da una chiamata get.                             & S                             \\
+
+  %view.components._routes.organizations
+
+  TUW097             & Verifica la corretta creazione di OrganizationsComponent senza una lista di organizzazioni.                         & S                             \\
+
+  TUW098             & Verifica la corretta creazione di OrganizationComponent con una lista valida di organizzazioni.                     & S                             \\
+
+  TUW099             & Verifica il ritorno di un errore da una chiamata get per il ritorno della lista delle organizzazioni.               & S                             \\
+
+
+  %view.components._routes.profile
+
+  TUW100             & Verifica la corretta creazione di ProfileComponent.                                                                 & S                             \\
+
+  TUW101             & Verifica il corretto aggiornamento di user dopo una chiamata get.                                                   & S                             \\
+
+  TUW102             & Verifica il mancato aggiornamento di user dopo una chiamata get tramite un errore.                                  & S                             \\
+
+  %auth
+
+  TUW103             & Verifica la corretta creazione di AuthGuard.                                                                        & S                             \\
+
+  TUW104             & Verifica il ritorno a false quando un utente non è autenticato.                                                     & S                             \\
+
+  TUW105             & Verifica il ritorno a false quando un utente è autenticato, non ha l'autorizzazione e l'url contiene organization.  & S                             \\
+
+  TUW106             & Verifica il ritorno a true quando un utente è autenticato e l'url contiene organization.                            & S                             \\
+
+  TUW107             & Verifica il ritorno a true quando un utente è autenticato e l'url non contiene un organizzazione o un utente.       & S                             \\
+
+  TUW108             & Verifica il ritorno a true quando un utente è autenticato, ha l'autorizzazione e l'url contiene un organizzazione.  & S                             \\
+
+  TUW109             & Verifica il ritorno a true quando un utente è autenticato e l'url contiene un utente con i permessi.                & S                             \\
+
+  TUW110             & Verifica il ritorno a false quando un utente è autenticato e l'url contiene un utente senza abbastanza permessi.    & S                             \\
+
+
+  %app.model.classes.organization
+
+  TUW111             & Verifica la corretta creazione di Organization.                                                                     & S                             \\
+
+  TUW112             & Verifica il corretto funzionamento dei getter e setter.                                                             & S                             \\
+
+  %app.model.classes.ldapconfiguration
+
+  TUW113             & Verifica la corretta creazione di LdapConfiguration.                                                                & S                             \\
+
+  TUW114             & Verifica il corretto funzionamento dei getter e setter.                                                             & S                             \\
+
+
+  %app.model.classes.users.user
+
+  TUW115             & Verifica la corretta creazione di User.                                                                             & S                             \\
+
+  TUW116             & Verifica il corretto funzionamento dei getter e setter.                                                             & S                             \\
+
+  %app.model.classes.users.user-data
+
+  TUW117             & Verifica la corretta creazione di UserData.                                                                         & S                             \\
+
+  TUW118             & Verifica il corretto funzionamento dei getter e setter.                                                             & S                             \\
+
+  %app.model.classes.place.place
+
+  TUW119             & Verifica la corretta creazione di Place.                                                                            & S                             \\
+
+  TUW120             & Verifica il corretto funzionamento dei getter e setter.                                                             & S                             \\
+
+  %app.model.classes.place.place-data
+
+  TUW121             & Verifica la corretta creazione di PlaceData.                                                                        & S                             \\
+
+  TUW122             & Verifica il corretto funzionamento dei getter e setter.                                                             & S                             \\
+
+  %app.model.classes.place.my-lat-lng
+
+  TUW123             & Verifica la corretta creazione di MyLatLng usando Leaflet data.                                                     & S                             \\
+
+  TUW124             & Verifica la corretta creazione di MyLatLng.                                                                         & S                             \\
+
+  TUW125             & Verifica il ritorno corretto della latitudine.                                                                      & S                             \\
+
+  TUW126             & Verifica il ritorno corretto della longitudine.                                                                     & S                             \\
+
+  %app.model.services.administratorservice
+
+  TUW127             & Verifica la corretta creazione di AdministratorService.                                                             & S                             \\
+
+  TUW128             & Verifica la corretta chiamata post per la creazione.                                                                & S                             \\
+
+  TUW129             & Verifica la corretta chiamata delete per la rimozione.                                                              & S                             \\
+
+  TUW130             & Verifica la corretta chiamata get per il recupero.                                                                  & S                             \\
+
+  %app.model.services.auth-http-interceptor
+
+  TUW131             & Verifica la corretta creazione di AuthHttpInterceptorService.                                                       & S                             \\
+
+  TUW132             & Verifica di non utilizzare il token JWT alle richieste di login.                                                    & S                             \\
+
+  TUW133             & Verifica di non utilizzare il token JWT se l'utente non è autenticato.                                              & S                             \\
+
+  TUW134             & Verifica di utilizzare il token JWT se l'utente è autenticato.                                                      & S                             \\
+
+  %app.model.services.connected-users
+
+  TUW135             & Verifica la corretta creazione di ConnectedUserService.                                                             & S                             \\
+
+  TUW136             & Verifica il ritorno corretto della lista degli utenti connessi.                                                     & S                             \\
+
+  %app.model.services.http-client
+
+  TUW137             & Verifica la corretta creazione di HttpClientService.                                                                & S                             \\
+
+  TUW138             & Verifica la corretta chiamata get.                                                                                  & S                             \\
+
+  TUW139             & Verifica la corretta chiamata post.                                                                                 & S                             \\
+
+  TUW140             & Verifica la corretta chiamata put.                                                                                  & S                             \\
+
+  TUW141             & Verifica la corretta chiamata delete.                                                                               & S                             \\
+
+  TUW142             & Verifica la corretta chiamata post con headers addizionali.                                                         & S                             \\
+
+  %app.model.services.login
+
+  TUW143             & Verifica la corretta creazione di LoginService.                                                                     & S                             \\
+
+  TUW144             & Verifica il ritorno corretto dell'id utente.                                                                        & S                             \\
+
+  TUW145             & Verifica il logout e il ritorno alla pagina home.                                                                   & S                             \\
+
+  TUW146             & Verifica la chiamata post per il login.                                                                             & S                             \\
+
+  TUW147             & Verifica il ritorno a false se l'utente non è autenticato.                                                          & S                             \\
+
+  TUW148             & Verifica il ritorno a true se l'utente è autenticato.                                                               & S                             \\
+
+  TUW149             & Verifica il ritorno di un token per determinare i permessi sufficienti di un utente.                                & S                             \\
+
+  TUW150             & Verifica il ritorno di un token per determinare i permessi insufficienti di un utente.                              & S                             \\
+
+
+  %app.model.services.organization
+
+  TUW151             & Verifica la corretta creazione di OrganizationService.                                                              & S                             \\
+
+  TUW152             & Verifica la corretta aggiunta di un'organizzazione.                                                                 & S                             \\
+
+  TUW153             & Verifica il ritorno di un'organizzazione dato un id.                                                                & S                             \\
+
+  TUW154             & Verifica il ritorno delle informazioni di una lista di organizzazioni.                                              & S                             \\
+
+  TUW155             & Verifica la corretta modifica di un'organizzazione.                                                                 & S                             \\
+  %app.model.services.place
+
+  TUW156             & Verifica la corretta creazione di PlaceService.                                                                     & S                             \\
+
+  TUW157             & Verifica il ritorno di un oggetto Geocoding da una chiamata get a OpenStreetMaps.                                   & S                             \\
+
+  %app.model.services.user
+
+  TUW158             & Verifica la corretta creazione di UserService.                                                                      & S                             \\
+
+  TUW159             & Verifica il ritorno corretto di un utente.                                                                          & S                             \\
+
+  % SERVER - INFLUXDB
+
+  TUS160 & Verifica che l'aggiornamento della posizione di un utente sia serializzato e deserializzato correttamente nella misura access\_log del database a serie temporali & S \\
+  TUS161 & Verifica che l'aggiornamento della posizione di un utente sia serializzato e deserializzato correttamente nella misura anonymous\_access\_log del database a serie temporali & S \\
+
+  % SERVER - R2DBC
+
+  TUS162 & Verifica che l'oggetto del modello ottenuto dalla tabella Connections sia serializzato e deserializzato correttamente & S \\
+  TUS163 & Verifica che l'oggetto del modello ottenuto dalla tabella Organizations sia serializzato e deserializzato correttamente & S \\
+  TUS164 & Verifica che l'oggetto del modello ottenuto dalla tabella OrganizationRole sia serializzato e deserializzato correttamente & NS \\
+  TUS165 & Verifica che l'oggetto del modello ottenuto dalla tabella Places sia serializzato e deserializzato correttamente & S \\
+  TUS166 & Verifica che l'oggetto del modello ottenuto dalla tabella PlaceData sia serializzato e deserializzato correttamente & S \\
+  TUS167 & Verifica che l'oggetto del modello ottenuto dalla tabella Users sia serializzato e deserializzato correttamente & S \\
+  TUS168 & Verifica che l'oggetto del modello ottenuto dalla tabella UserData sia serializzato e deserializzato correttamente & S \\
+
+  % SERVER - CONTROLLERS
+
+  TUS169 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /location/update'' & S \\
+  TUS170 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /location/update'' & S \\
+  TUS171 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``DELETE /organization/{organizationId}'' & S \\
+  TUS172 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /organization/{organizationId}'' & S \\
+  TUS173 & Verifica che il request body sia deserializzato correttamente nell'operazione ``PUT /organization/{organizationId}'' & S \\
+  TUS174 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``DELETE /organization/{organizationId}/place/{placeId}'' & S \\
+  TUS175 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /organization/{organizationId}/place/{placeId}'' & NS \\
+  TUS176 & Verifica che il request body sia deserializzato correttamente nell'operazione ``PUT /organization/{organizationId}/place/{placeId}'' & NS \\
+  TUS177 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /organization/{organizationId}/places'' & S \\
+  TUS178 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /organization/{organizationId}/places'' & S \\
+  TUS179 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /organization/{organizationId}/places'' & S \\
+  TUS180 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /organization/{organizationId}/report'' & NS \\
+  TUS181 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``DELETE /organization/{organizationId}/user/{userId}/role'' & NS \\
+  TUS182 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /organization/{organizationId}/user/{userId}/role'' & NS \\
+  TUS183 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /organization/{organizationId}/user/{userId}/role'' & NS \\
+  TUS184 & Verifica che il request body sia deserializzato correttamente nell'operazione ``PUT /organization/{organizationId}/user/{userId}/role'' & NS \\
+  TUS185 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /organization/{organizationId}/users/connections'' & S \\
+  TUS186 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /organization/{organizationId}/users/inside'' & S \\
+  TUS187 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /organizations'' & NS \\
+  TUS188 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /organizations'' & S \\
+  TUS189 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /organizations'' & S \\
+  TUS190 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``DELETE /user/{userId}'' & S \\
+  TUS191 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /user/{userId}'' & S \\
+  TUS192 & Verifica che il request body sia deserializzato correttamente nell'operazione ``PUT /user/{userId}'' & S \\
+  TUS193 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /user/{userId}/logout'' & NS \\
+  TUS194 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /user/{userId}/logout'' & NS \\
+  TUS195 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``DELETE /user/{userId}/organization/{organizationId}/connection'' & S \\
+  TUS196 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /user/{userId}/organization/{organizationId}/connection'' & S \\
+  TUS197 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /user/{userId}/organization/{organizationId}/connection'' & S \\
+  TUS198 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /user/{userId}/organizations/connections'' & S \\
+  TUS199 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /user/{userId}/organizations/roles'' & NS \\
+  TUS200 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /user/{userId}/places/history'' & NS \\
+  TUS201 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /user/{userId}/time/inside'' & NS \\
+  TUS202 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /user/login'' & NS \\
+  TUS203 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /user/login'' & NS \\
+  TUS204 & Verifica che il request body sia deserializzato correttamente nell'operazione ``POST /user/password/recovery'' & NS \\
+  TUS205 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /user/password/recovery'' & NS \\
+  TUS206 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``GET /users'' & S \\
+  TUS207 & Verifica che il response body sia serializzato correttamente in caso di successo dell'operazione ``POST /users'' & S \\
+  \rowcolor{white}
+  \caption{Tabella dei test di unità}%
+  \label{tab:test_di_unita}
+\end{longtable}
+
+
+\subsubsection{Tabella del tracciamento dei test di unità}%
+\label{subsub:tabella_tracciamento_test_di_unita}
+
+
+\rowcolors{2}{lightgray}{white!80!lightgray!100}
+\renewcommand{\arraystretch}{2}
+\begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{}m{13cm}}
+
+  \rowcolor{darkgray!90!}
+  \color{white}
+  {\textbf{ID test}} & \color{white}{\textbf{Componente}}                                                                      \\
+  \endhead\rowcolor{white}%
+  \multicolumn{2}{r}{\textit{Continua alla pagina seguente}}
+  \endfoot%
+  \endlastfoot%
+
+  % Android App
+
+  % test di unità
+
+  TUM001             & tech.gruppone.stalker.app.CurrentSessionSingleton.zeroOrganizations\@()                                 \\
+
+  TUM002             & tech.gruppone.stalker.app.CurrentSessionSingleton.zeroOrganizations\@()                                 \\
+
+  TUM003             & tech.gruppone.stalker.app.CurrentSessionSingleton.zeroOrganizations\@()                                 \\
+
+  TUM004             & tech.gruppone.stalker.app.CurrentSessionSingleton.getInsideId\@()                                       \\
+
+  TUM005             & tech.gruppone.stalker.app.CurrentSessionSingleton.getInsideId\@()                                       \\
+
+  TUM006             & tech.gruppone.stalker.app.CurrentSessionSingleton.getInsideId\@()                                       \\
+
+  TUM007             & tech.gruppone.stalker.app.CurrentSessionSingleton.getInstance\@()                                       \\
+
+  TUM008             & tech.gruppone.stalker.app.CurrentSessionSingleton.getInstance\@()                                       \\
+
+  TUM009             & tech.gruppone.stalker.app.Organization.isInside\@()                                                     \\
+
+  TUM010             & tech.gruppone.stalker.app.Organization.isInside\@()                                                     \\
+
+  TUM011             & tech.gruppone.stalker.app.Organization.isInside\@()                                                     \\
+
+  TUM012             & tech.gruppone.stalker.app.Place.isInside\@()                                                            \\
+
+  TUM013             & tech.gruppone.stalker.app.Place.isInside\@()                                                            \\
+
+  TUM014             & tech.gruppone.stalker.app.Place.isInside\@()                                                            \\
+
+  TUM015             & tech.gruppone.stalker.app.WebSingleton.getInstance\@()                                                  \\
+
+  TUM016             & tech.gruppone.stalker.app.WebSingleton.getInstance\@()                                                  \\
+
+  TUM017             & tech.gruppone.stalker.app.WebSingleton.addToRequestQueue\@()                                            \\
+
+  TUM018             & tech.gruppone.stalker.app.WebSingleton.locationUpdateInside\@()                                         \\
+
+  TUM019             & tech.gruppone.stalker.app.WebSingleton.locationUpdateOutside\@()                                        \\
+
+  TUM020             & tech.gruppone.stalker.app.WebSingleton.getOrganizationList\@()                                          \\
+
+
+  TUM021             & tech.gruppone.stalker.app.LoginModel.login\@()                                                          \\
+
+  TUM022             & tech.gruppone.stalker.app.LoginViewModel.login\@()                                                      \\
+
+  TUM023             & tech.gruppone.stalker.app.MainPageModel.loadOrganizations\@()                                           \\
+
+  TUM024             & tech.gruppone.stalker.app.MainPageViewModel.getOrgsLiveData\@()                                         \\
+
+  TUM025             & tech.gruppone.stalker.app.OrganizationListAdapter.onCreateViewHolder\@()                                \\
+
+  TUM026             & tech.gruppone.stalker.app.OrganizationListAdapter.onBindViewHolder\@()                                  \\
+
+  TUM027             & tech.gruppone.stalker.app.OrganizationListAdapter.getItemCount\@()                                      \\
+
+  TUM028             & tech.gruppone.stalker.app.StalkerActivity.checkPermissions\@()                                          \\
+
+
+  % test di instrumentation
+
+  TUM029             & tech.gruppone.stalker.app.App.onCreate\@()                                                              \\
+
+  TUM030             & tech.gruppone.stalker.app.App.getAppContext\@()                                                         \\
+
+  TUM031             & tech.gruppone.stalker.app.CurrentSessionSingleton.setOrganizations\@()                                  \\
+
+  % TODO LOCATION NOTIFIER - mancano dei metodi da TUM032 a TUM035
+
+  TUM032             & tech.gruppone.stalker.app.LoginActivity.onCreate\@()                                                    \\
+
+  TUM033             & tech.gruppone.stalker.app.MainActivity.onCreate\@()                                                     \\
+
+  TUM034             & tech.gruppone.stalker.app.MainPageActivity.onCreate\@()                                                 \\
+
+  TUM035             & tech.gruppone.stalker.app.StalkerActivity.onResume\@()                                                  \\
+
+  TUM036             & tech.gruppone.stalker.app.WebSingleton.getRequestQueue\@()                                              \\
+
+  TUM037             & tech.gruppone.stalker.app.WebSingleton.getRequestQueue\@()                                              \\
+
+  TUM038             & tech.gruppone.stalker.app.WebSingleton.addToRequestQueue\@()                                            \\
+
+
+
+  % Web App
+
+  % app.component
+
+  TUW039             & app.model.AppComponent.constructor\@()                                                                  \\
+
+  TUW040             & app.model.AppComponent.getRoute\@()                                                                     \\
+
+  TUW041             & app.model.AppComponent.backHome\@()                                                                     \\
+
+  TUW042             & app.model.AppComponent.backHome\@()                                                                     \\
+
+  TUW043             & app.model.AppComponent.generateComponents\@()                                                           \\
+
+  TUW044             & app.model.AppComponent.userLoggedIn\@()                                                                 \\
+
+  TUW045             & app.model.AppComponent.userLoggedIn\@()                                                                 \\
+
+  TUW046             & app.model.AppComponent.getUserId\@()                                                                    \\
+
+  TUW047             & app.model.AppComponent.Logout\@()                                                                       \\
+
+  %view.components.administrator
+
+  TUW048             & app.model.view.components.administrator.AdministratorComponent.constructor\@()                          \\
+
+  TUW049             & app.model.view.components.administrator.AdministratorComponent.getOrgAdministrators\@()                 \\
+
+  TUW050             & app.model.view.components.administrator.AdministratorComponent.getOrgAdministrators\@()                 \\
+
+  TUW051             & app.model.view.components.administrator.AdministratorComponent.getOrgUsers\@()                          \\
+
+  TUW052             & app.model.view.components.administrator.AdministratorComponent.getOrgUsers\@()                          \\
+
+  TUW053             & app.model.view.components.administrator.AdministratorComponent.deleteAdmin\@()                          \\
+
+  TUW054             & app.model.view.components.administrator.AdministratorComponent.deleteAdmin\@()                          \\
+
+  TUW055             & app.model.view.components.administrator.AdministratorComponent.addAdmin\@()                             \\
+
+  TUW056             & app.model.view.components.administrator.AdministratorComponent.addAdmin\@()                             \\
+
+  TUW057             & app.model.view.components.administrator.AdministratorComponent.checkIfEmailIsUser\@()                   \\
+
+  %view.components.button-confirm
+
+  TUW058             & app.model.view.components.button-confirm.constructor\@()                                                \\
+
+  %view.components.form-email
+
+  TUW059             & app.model.view.components.form-email.constructor\@()                                                    \\
+
+  TUW060             & app.model.view.components.form-email.writeValue\@()                                                     \\
+
+  TUW061             & app.model.view.components.form-email.registerOnTouched\@()                                              \\
+
+  %view.components.form-password
+
+  TUW062             & app.model.view.components.form-password.constructor\@()                                                 \\
+
+  TUW063             & app.model.view.components.form-password.writeValue\@()                                                  \\
+
+  TUW064             & app.model.view.components.form-password.registerOnTouched\@()                                           \\
+
+  %view.components.map
+
+  TUW065             & app.model.view.components.map.constructor\@()                                                           \\
+
+  TUW066             & app.model.view.components.map.constructor\@()                                                           \\
+
+  TUW067             & app.model.view.components.map.getOrganizationById\@()                                                   \\
+
+  TUW068             & app.model.view.components.map.getOrganizationById\@()                                                   \\
+
+  TUW069             & app.model.view.components.map.onDrawCreated\@()                                                         \\
+
+  TUW070             & app.model.view.components.map.onDrawCreated\@()                                                         \\
+
+
+  %view.components._routes.create-organization
+
+  TUW071             & app.model.view.\char`_routes.create-organization.CreateOrganizationComponent.constructor\@()            \\
+
+  TUW072             & app.model.view.\char`_routes.create-organization.CreateOrganizationComponent.submitOrganizationForm\@() \\
+
+  TUW073             & app.model.view.\char`_routes.create-organization.CreateOrganizationComponent.submitOrganizationForm\@() \\
+
+  TUW074             & app.model.view.\char`_routes.create-organization.CreateOrganizationComponent.showLdapConfiguration\@()  \\
+
+
+  %view.components._routes.edit-organization
+
+  TUW075             & app.model.view.\char`_routes.edit-organization.EditOrganizationComponent.constructor\@()                \\
+
+  TUW076             & app.model.view.\char`_routes.edit-organization.EditOrganizationComponent.constructor\@()                \\
+
+  TUW077             & app.model.view.\char`_routes.edit-organization.EditOrganizationComponent.constructor\@()                \\
+
+  TUW078             & app.model.view.\char`_routes.edit-organization.EditOrganizationComponent.getOrganizationById\@()        \\
+
+  TUW079             & app.model.view.\char`_routes.edit-organization.EditOrganizationComponent.getOrganizationById\@()        \\
+
+  TUW080             & app.model.view.\char`_routes.edit-organization.EditOrganizationComponent.submitOrganizationForm\@()     \\
+
+  TUW081             & app.model.view.\char`_routes.edit-organization.EditOrganizationComponent.submitOrganizationForm\@()     \\
+
+  %view.components._routes.home
+
+  TUW082             & app.model.view.\char`_routes.home.HomeComponent.constructor\@()                                         \\
+
+  TUW083             & app.model.view.\char`_routes.home.HomeComponent.validateInput\@()                                       \\
+
+  TUW084             & app.model.view.\char`_routes.home.HomeComponent.validateInput\@()                                       \\
+
+  TUW085             & app.model.view.\char`_routes.home.HomeComponent.login\@()                                               \\
+
+  TUW086             & app.model.view.\char`_routes.home.HomeComponent.login\@()                                               \\
+
+  TUW087             & app.model.view.\char`_routes.home.HomeComponent.login\@()                                               \\
+
+  TUW088             & app.model.view.\char`_routes.home.HomeComponent.translate\@()                                           \\
+
+  TUW089             & app.model.view.\char`_routes.home.HomeComponent.translate\@()                                           \\
+
+  TUW090             & app.model.view.\char`_routes.home.HomeComponent.userLoggedIn\@()                                        \\
+
+  TUW091             & app.model.view.\char`_routes.home.HomeComponent.userLoggedIn\@()                                        \\
+
+
+  %view.components._routes.not-found
+
+  TUW092             & app.model.view.\char`_routes.not-found.NotFoundComponent.constructor\@()                                \\
+
+  %view.components._routes.organization
+
+  TUW093             & app.model.view.\char`_routes.organization.OrganizationComponent.constructor\@()                         \\
+
+  TUW094             & app.model.view.\char`_routes.organization.OrganizationComponent.constructor\@()                         \\
+
+  TUW095             & app.model.view.\char`_routes.organization.OrganizationComponent.getOrganizationById\@()                 \\
+
+  TUW096             & app.model.view.\char`_routes.organization.OrganizationComponent.getOrganizationById\@()                 \\
+
+  %view.components._routes.organizations
+
+  TUW097             & app.model.view.\char`_routes.organizations.OrganizationsComponent.constructor\@()                       \\
+
+  TUW098             & app.model.view.\char`_routes.organizations.OrganizationsComponent.constructor\@()                       \\
+
+  TUW099             & app.model.view.\char`_routes.organizations.OrganizationsComponent.getAdminOrganizations\@()             \\
+
+
+  %view.components._routes.profile
+
+  TUW100             & app.model.view.\char`_routes.profile.ProfileComponent.constructor\@()                                   \\
+
+  TUW101             & app.model.view.\char`_routes.profile.ProfileComponent.getUser\@()                                       \\
+
+  TUW102             & app.model.view.\char`_routes.profile.ProfileComponent.getUser\@()                                       \\
+
+
+
+  %auth
+
+  TUW103             & app.AuthGuard.canActivate\@()                                                                           \\
+
+  TUW104             & app.AuthGuard.canActivate\@()                                                                           \\
+
+  TUW105             & app.AuthGuard.canActivate\@()                                                                           \\
+
+  TUW106             & app.AuthGuard.canActivate\@()                                                                           \\
+
+  TUW107             & app.AuthGuard.canActivate\@()                                                                           \\
+
+  TUW108             & app.AuthGuard.canActivate\@()                                                                           \\
+
+  TUW109             & app.AuthGuard.canActivate\@()                                                                           \\
+
+  TUW110             & app.AuthGuard.canActivate\@()                                                                           \\
+
+  %app.model.classes.organization
+
+  TUW111             & app.model.classes.Organization.constructor\@()                                                          \\
+
+  TUW112             & app.model.classes.Organization.build\@()                                                                \\
+
+
+  %app.model.classes.ldapconfiguration
+
+  TUW113             & app.model.classes.LdapConfiguration.constructor\@()                                                     \\
+
+  TUW114             & app.model.classes.LdapConfiguration.build\@()                                                           \\
+
+  %app.model.classes.users.user
+
+  TUW115             & app.model.classes.users.User.constructor\@()                                                            \\
+
+  TUW116             & app.model.classes.users.User.build\@()                                                                  \\
+
+  %app.model.classes.users.user-data
+
+  TUW117             & app.model.classes.users.UserData.constructor\@()                                                        \\
+
+  TUW118             & app.model.classes.users.UserData.build\@()                                                              \\
+
+  %app.model.classes.place.place
+
+  TUW119             & app.model.classes.place.Place.constructor\@()                                                           \\
+
+  TUW120             & app.model.classes.place.Place.build\@()                                                                 \\
+
+  %app.model.classes.place.place-data
+
+  TUW121             & app.model.classes.place.PlaceData.constructor\@()                                                       \\
+
+  TUW122             & app.model.classes.place.PlaceData.build\@()                                                             \\
+
+  %app.model.classes.place.my-lat-lng
+
+  TUW123             & app.model.classes.place.MyLatLng.constructor\@()                                                        \\
+
+  TUW124             & app.model.classes.place.MyLatLng.constructor\@()                                                        \\
+
+  TUW125             & app.model.classes.place.MyLatLng.Latitude\@()                                                           \\
+
+  TUW126             & app.model.classes.place.MyLatLng.Longitude\@()                                                          \\
+
+  %app.model.classes.services.administratorservice
+
+  TUW127             & app.model.services.AdministratorService.constructor\@()                                                 \\
+
+  TUW128             & app.model.services.AdministratorService.addAdministrator\@()                                            \\
+
+  TUW129             & app.model.services.AdministratorService.removeAdministrator\@()                                         \\
+
+  TUW130             & app.model.services.AdministratorService.getAdministrators\@()                                           \\
+
+
+  %app.model.services.auth-http-interceptor
+
+  TUW131             & app.model.services.AuthHttpInterceptorService.constructor\@()                                           \\
+
+  TUW132             & app.model.services.AuthHttpInterceptorService.intercept\@()                                             \\
+
+  TUW133             & app.model.services.AuthHttpInterceptorService.intercept\@()                                             \\
+
+  TUW134             & app.model.services.AuthHttpInterceptorService.intercept\@()                                             \\
+
+
+
+  %app.model.services.connected-users
+
+  TUW135             & app.model.services.ConnectedUserService.constructor\@()                                                 \\
+
+  TUW136             & app.model.services.ConnectedUserService.getUserConnectedToOrg\@()                                       \\
+
+
+  %app.model.services.http-client
+
+  TUW137             & app.model.services.HttpClientService.constructor\@()                                                    \\
+
+  TUW138             & app.model.services.HttpClientService.get\@()                                                            \\
+
+  TUW139             & app.model.services.HttpClientService.post\@()                                                           \\
+
+  TUW140             & app.model.services.HttpClientService.put\@()                                                            \\
+
+  TUW141             & app.model.services.HttpClientService.delete\@()                                                         \\
+
+  TUW142             & app.model.services.HttpClientService.post\@()                                                           \\
+
+
+
+  %app.model.services.login
+
+  TUW143             & app.model.services.LoginService.constructor\@()                                                         \\
+
+  TUW144             & app.model.services.LoginService.getUserId\@()                                                           \\
+
+  TUW145             & app.model.services.LoginService.login\@()                                                               \\
+
+  TUW146             & app.model.services.LoginService.isLoggedIn\@()                                                          \\
+
+  TUW147             & app.model.services.LoginService.isLoggedIn\@()                                                          \\
+
+  TUW148             & app.model.services.LoginService.getAdminOrganizations\@()                                               \\
+
+  TUW149             & app.model.services.LoginService.checkAuthorization\@()                                                  \\
+
+  TUW150             & app.model.services.LoginService.checkAuthorization\@()                                                  \\
+
+  %app.model.services.organization
+
+  TUW151             & app.model.services.OrganizationService.constructor\@()                                                  \\
+
+  TUW152             & app.model.services.OrganizationService.addOrganization\@()                                              \\
+
+
+  TUW153             & app.model.services.OrganizationService.getOrganizationById\@()                                          \\
+
+  TUW154             & app.model.services.OrganizationService.getAdminOrganizations\@()                                        \\
+
+  TUW155             & app.model.services.OrganizationService.editOrganization\@()                                             \\
+
+
+  %app.model.services.place
+
+  TUW156             & app.model.services.PlaceService.constructor\@()                                                         \\
+
+  TUW157             & app.model.services.PlaceService.reverseGeocoding\@()                                                    \\
+
+  %app.model.services.user
+
+  TUW158             & app.model.services.UserService.constructor\@()                                                          \\
+
+  TUW159             & app.model.services.UserService.getUserById\@()                                                          \\
+
+  % SERVER - INFLUXDB
+
+  TUS160 & tech.gruppone.stalker.server.repositories.InfluxDbRepository \\
+  TUS161 & tech.gruppone.stalker.server.repositories.InfluxDbRepository \\
+
+  % SERVER - R2DBC
+
+  TUS162 & tech.gruppone.stalker.server.repositories.Connections \\
+  TUS163 & tech.gruppone.stalker.server.repositories.Organizations \\
+  TUS164 & tech.gruppone.stalker.server.repositories.OrganizationRole \\
+  TUS165 & tech.gruppone.stalker.server.repositories.Places \\
+  TUS166 & tech.gruppone.stalker.server.repositories.PlaceData \\
+  TUS167 & tech.gruppone.stalker.server.repositories.Users \\
+  TUS168 & tech.gruppone.stalker.server.repositories.UserData \\
+
+  % SERVER - CONTROLLERS
+
+  TUS169 & tech.gruppone.stalker.server.controllers.LocationUpdateController \\
+  TUS170 & tech.gruppone.stalker.server.controllers.LocationUpdateController \\
+  TUS171 & tech.gruppone.stalker.server.controllers.OrganizationController \\
+  TUS172 & tech.gruppone.stalker.server.controllers.OrganizationController \\
+  TUS173 & tech.gruppone.stalker.server.controllers.OrganizationController \\
+  TUS174 & tech.gruppone.stalker.server.controllers.PlaceController \\
+  TUS175 & tech.gruppone.stalker.server.controllers.PlaceController \\
+  TUS176 & tech.gruppone.stalker.server.controllers.PlaceController \\
+  TUS177 & tech.gruppone.stalker.server.controllers.PlacesController \\
+  TUS178 & tech.gruppone.stalker.server.controllers.PlacesController \\
+  TUS179 & tech.gruppone.stalker.server.controllers.PlacesController \\
+  TUS180 & tech.gruppone.stalker.server.controllers.OrganizationReportController \\
+  TUS181 & tech.gruppone.stalker.server.controllers.OrganizationController \\
+  TUS182 & tech.gruppone.stalker.server.controllers.OrganizationController \\
+  TUS183 & tech.gruppone.stalker.server.controllers.OrganizationController \\
+  TUS184 & tech.gruppone.stalker.server.controllers.OrganizationController \\
+  TUS185 & tech.gruppone.stalker.server.controllers.ConnectionController \\
+  TUS186 & tech.gruppone.stalker.server.controllers.LocationController \\
+  TUS187 & tech.gruppone.stalker.server.controllers.OrganizationsController \\
+  TUS188 & tech.gruppone.stalker.server.controllers.OrganizationsController \\
+  TUS189 & tech.gruppone.stalker.server.controllers.OrganizationsController \\
+  TUS190 & tech.gruppone.stalker.server.controllers.UserController \\
+  TUS191 & tech.gruppone.stalker.server.controllers.UserController \\
+  TUS192 & tech.gruppone.stalker.server.controllers.UserController \\
+  TUS193 & tech.gruppone.stalker.server.controllers.AuthenticationController \\
+  TUS194 & tech.gruppone.stalker.server.controllers.AuthenticationController \\
+  TUS195 & tech.gruppone.stalker.server.controllers.ConnectionController \\
+  TUS196 & tech.gruppone.stalker.server.controllers.ConnectionController \\
+  TUS197 & tech.gruppone.stalker.server.controllers.ConnectionController \\
+  TUS198 & tech.gruppone.stalker.server.controllers.ConnectionController \\
+  TUS199 & tech.gruppone.stalker.server.controllers.ConnectionController \\
+  TUS200 & tech.gruppone.stalker.server.controllers.LocationController \\
+  TUS201 & tech.gruppone.stalker.server.controllers.LocationController \\
+  TUS202 & tech.gruppone.stalker.server.controllers.AuthenticationController \\
+  TUS203 & tech.gruppone.stalker.server.controllers.AuthenticationController \\
+  TUS204 & tech.gruppone.stalker.server.controllers.PasswordRecoveryController \\
+  TUS205 & tech.gruppone.stalker.server.controllers.PasswordRecoveryController \\
+  TUS206 & tech.gruppone.stalker.server.controllers.UsersController \\
+  TUS207 & tech.gruppone.stalker.server.controllers.UsersController \\
+
+  \rowcolor{white}
+  \caption{Tabella del tracciamento dei test di unità}%
+  \label{tab:tabella_tracciamento_test_di_unita}
+\end{longtable}
+
+
+%sub:test_di_unita (end)
+
+\end{document}
