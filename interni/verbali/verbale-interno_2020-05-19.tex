@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\input{../../commons/config}
+
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale interno --- 19/05/2020}
+
+\setResponsabile{Fabio Scettro}
+\setRedattori{Alberto Gobbo}
+\setVerificatori{
+  Alberto Cocco
+}
+\setUso{Interno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 19/05/2020}
+\setModifiche{%
+\cellcolor{white!80!lightgray!100} & Fabio Scettro & 2020--05--20 & approva documento \\% cambiare responsabile se errato
+\cellcolor{white!80!lightgray!100} & Alberto Cocco & 2020--05--19 & verifica verbale \\%
+\multirow{-3}{*}{-} & Alberto Gobbo & 2020--05--19 & stendi verbale%
+}
+
+\disabilitaVersione{}
+\disabilitaElencoFigure{}
+\disabilitaElencoTabelle{}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Informazioni logistiche}%
+\label{sec:informazioni_logistiche}
+
+\begin{description}
+  \item [Luogo] videochiamata su Google Hangouts
+  \item [Data] 19/05/2020
+  \item [Ora] 18:30 \symbol{8594} 19:30
+\end{description}
+
+\subsection{Membri del gruppo presenti}%
+\label{sub:membri_del_gruppo_presenti}
+
+\begin{enumerate}
+  \item Riccardo Agatea
+  \item Tobia Apolloni
+  \item Riccardo Cestaro
+  \item Alberto Cocco
+  \item Luca Ercole
+  \item Alberto Gobbo
+  \item Alessandro Rizzo
+  \item Fabio Scettro
+\end{enumerate}
+% sub:membri_del_gruppo_presenti (end)
+
+\section{Introduzione}%
+\label{sec:introduzione}
+L'incontro è avvenuto tramite chiamata Hangouts che, a differenza delle ultime settimane, si è tenuto nell'inconsueta giornata di martedì, in quanto la maggior parte dei componenti era indisponibile il giorno prima, in preparazione per il secondo appello di Ingegneria del Software.
+Lo scopo principale era pianificare in breve il lavoro di questo incremento.
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item Punto della situazione
+  \item Pianificazione lavoro settimanale
+\end{itemize}
+
+\section{Punto della situazione}%
+\label{sec:punto_della_situazione}
+
+Il gruppo ha discusso sullo stato di completamento di tutte le componenti che sono in fase di sviluppo, soprattutto per confermare le attese della settimana precedente.
+È emerso che
+\begin{itemize}
+  \item per la web application mancano solo alcuni dettagli tecnici che possono essere completati nel giro di un incremento.
+  \item per il server vanno completati gli endpoint rimanenti e, in specifici casi, migliorati qualitativamente.
+  \item per la mobile application manca l'impianto grafico di alcune pagine non ancora implementate.
+\end{itemize}
+
+\section{Pianificazione lavoro settimanale}%
+\label{sec:pianificazione_lavoro_settimanale}
+
+A valle del punto della situazione, il gruppo ha deciso di concentrare le proprie energie su due delle tre componenti, e di redistribuire il lavoro come segue:
+\begin{itemize}
+  \item lo sviluppo della web application rimarrà bloccato fino al prossimo incremento, oppure fino a quando uno o più membri del gruppo non conclude il lavoro assegnatoli prima della fine di questo incremento.
+  \item la maggior parte delle risorse umane sarà impiegata nella componente server, per concludere definitivamente l'implementazione degli endpoint mancanti. In questa componente verranno impiegate 6 componenti su 8 componenti, a loro volta suddivise in gruppi da 2 persone.
+  \item i restanti 2 membri si focalizzeranno sullo sviluppo della mobile application, in particolare per completare la parte dei test mancanti ed implementare l'impianto grafico per alcune funzionalità.
+\end{itemize}
+
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+
+\begin{description}
+  \item[20200519-int-001] Lo sviluppo della web application rimane momentaneamente sospeso.
+  \item[20200519-int-002] 6 componenti lavoreranno nel lato server per l'implementazione definitiva di tutti gli endpoint.
+  \item[20200519-int-003] 2 tra le 6 componenti lato server si occuperanno di implementare l'autenticazione LDAP per l'accesso di utenti ad organizzazioni private.
+  \item[20200519-int-004] 2 tra le 6 componenti lato server si occuperanno di raffinare ed ultimare l'implementazione dell'autenticazione e dell'autorizzazione per l'accesso a Stalker.
+  \item[20200519-int-005] 2 componenti lavoreranno nella mobile application, sia per i test rimanenti che per la parte grafica mancante.
+\end{description}
+
+% sec:registro_delle_decisioni (end)
+\end{document}
