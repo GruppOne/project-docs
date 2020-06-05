@@ -47,7 +47,7 @@ Per accedere al servizio, l'utente dovrà seguire i seguenti passaggi:
     \item inserire la password. La password può essere visualizzata normalmente durante la sua digitazione, cliccando sull'occhio barrato alla fine del campo d'inserimento.
     \item selezionare il pulsante \textbf{LOGIN} per inviare le credenziali al server.
 \end{itemize}
-Se i dati inseriti sono corretti, allora l'utente è autorizzato ad entrare in Stalker e cominciare ad essere monitorato, altrimenti l'accesso a Stalker sarà negato.
+Se i dati inseriti sono corretti, allora l'utente è autorizzato ad entrare in Stalker e cominciare ad essere monitorato (sezione §~\ref{subs:pagina_organizzazioni}), altrimenti l'accesso a Stalker sarà negato.
 Le cause possono essere le seguenti:
 \begin{itemize}
     \item l'email inserita non rispetta i vincoli imposti dal sistema di Stalker.
@@ -87,14 +87,78 @@ Le cause possono essere le seguenti:
 \end{itemize}
 Se l'utente è già in possesso delle credenziali e vuole accedere a Stalker, può raggiungere l'apposito form di autenticazione disponibile cliccando \textbf{Already have an account? Login} (§~\ref{fig:mobile_app_pagina_di_accesso}).
 
-% \subsubsection{Pagina iniziale}%
-% \label{subs:pagina_iniziale}
+\subsubsection{Pagina organizzazioni}%
+\label{subs:pagina_organizzazioni}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=70mm]{pagina-organizzazioni.jpg}
+    \caption{Pagina organizzazioni}%
+    \label{fig:mobile_app_pagina_organizzazioni}
+\end{figure}
+Una volta che si è autenticato in Stalker, l'utente visualizza di default una pagina contenente la lista di tutte le organizzazioni registrate in Stalker alla quale si può connettere.
+Le informazioni che visualizza per ogni organizzazione sono:
+\begin{itemize}
+  \item il nome.
+  \item la descrizione.
+  \item lo stato, ovvero se è pubblica o privata, indicato dal lucchetto che è posto nel bordo destro di ogni singola voce. Il lucchetto aperto indica che l'organizzazione è pubblica, mentre il lucchetto chiuso indica che l'organizzazione è privata e necessita delle credenziali d'accesso specifiche.
+\end{itemize}
+La pagina offre inoltre due possibili azioni:
+\begin{itemize}
+  \item aggiornare la lista delle organizzazioni registrate in Stalker, mediante l'apposito pulsante con una freccia ricorsiva che si trova in basso a destra.
+  \item cambiare schermata tramite la \glossarioLocale{action bar} posta orizzontalmente in basso nella schermata. La action bar è composta da tre voci:
+  \begin{description}
+    \item[Organizations:] è la schermata corrente.
+    \item[Connected:] l'utente visualizza la lista di organizzazioni alla quale è collegato attualmente (sezione §~\ref{subs:pagina_organizzazioni_connesse}).
+    \item[Report:] l'utente visualizza una serie di dati personali per ogni organizzazione alla quale si è collegato precedentemente (sezione §~\ref{subs:pagina_report_utente}).
+  \end{description}
+\end{itemize}
+Se l'utente vuole connettersi ad un'organizzazione, può fare \glossarioLocale{tap} su una singola voce dell'elenco.
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=70mm]{selezionamento-organizzazione-pubblica.jpg}
+%   \caption{Selezionamento organizzazione pubblica}%
+%   \label{fig:mobile_app_selezionamento_organizzazione_pubblica}
+% \end{figure}
+Se l'organizzazione selezionata è pubblica, l'utente accede in modo libero senza alcun tipo di restrizione.
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=70mm]{selezionamento-organizzazione-pubblica.jpg}
+%   \caption{Selezionamento organizzazione pubblica}%
+%   \label{fig:mobile_app_selezionamento_organizzazione_pubblica}
+% \end{figure}
+Se l'organizzazione selezionata è privata, l'utente deve inserire le credenziali univoche per l'autenticazione \glossarioLocale{LDAP} che corrispondono a:
+\begin{description}
+  \item[Host] %TODO aggiungere descrizione
+  \item[Password] %TODO aggiungere descrizione
+\end{description}
+Se l'utente inserisce le credenziali in modo errato, l'accesso all'organizzazione non è consentita.
+Nel caso in cui la connessione all'organizzazione, pubblica o privata che sia, va a buon fine, l'utente viene indirizzato ad una schermata con tutte le informazioni relative ad essa.
+% Le informazioni dell'organizzazione che vengono visualizzate sono: %TODO
+% \begin{itemize}
+%   \item
+% \end{itemize}
+
+%TODO
+\subsubsection{Pagina organizzazioni connesse}%
+\label{subs:pagina_organizzazioni_connesse}
 
 % \begin{figure}[H]
-%     \centering
-%     \includegraphics{pagina-iniziale.png}
-%     \caption{Pagina iniziale}%
-%     \label{fig:mobile_app_pagina_iniziale}
+%   \centering
+%   \includegraphics[width=70mm]{pagina-organizzazioni-connesse.jpg}
+%   \caption{Pagina organizzazioni connesse}%
+%   \label{fig:mobile_app_pagina_organizzazioni_connesse}
+% \end{figure}
+
+%TODO
+\subsubsection{Pagina report utente}%
+\label{subs:pagina_report_utente}
+
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=70mm]{pagina-report-utente.jpg}
+%   \caption{Pagina report utente}%
+%   \label{fig:mobile_app_pagina_report_utente}
 % \end{figure}
 
 \subsection{Risoluzione dei problemi}%
