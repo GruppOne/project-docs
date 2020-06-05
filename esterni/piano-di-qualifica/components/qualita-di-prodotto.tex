@@ -17,14 +17,28 @@ Qualità di documentazione come:
 \subsubsection{Metriche}%
 \label{subsec:metriche_doc}
 
-\begin{description}
-  \item [[MPR-IDG \textasciitilde] Indice di Gulpease]: definito nelle \textit{Norme di progetto} alla sezione 3.2.7.1.
-        \begin{itemize} \item Risultato: indice compreso tra 0 e 100 che stabilisce la leggibilità del testo in base ala lunghezza delle parole. \item Valore ammissibile: \geq{} 50 \item Valore ottimale: \geq{} 80 \end{itemize}
-  \item [[MPR-CO \textasciitilde] Indice di correttezza ortografica]: definito nelle \textit{Norme di progetto} alla sezione 3.2.7.3.
-        \begin{itemize} \item Risultato: numero intero che rappresenta il numero di errori ortografici presenti nel testo. \item Valore ammissibile: 0 \item Valore ottimale: 0 \end{itemize}
-\end{description}
+Di seguito sono riportate le metriche utilizzate per misurare la qualità di documentazione, che possono essere visionate all'interno del documento \textit{Norme di progetto} alla sezione 3.2.7.
 
+\rowcolors{2}{lightgray}{white!80!lightgray!100}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{}m{4cm} >{}m{5cm} >{\centering\arraybackslash}m{2cm} > {\centering\arraybackslash}m{2cm}}
+  \rowcolor{darkgray!90!}
+  \color{white}
+  {\textbf{Codice}} & \color{white}{\textbf{Nome}} & \color{white}{\textbf{Descrizione} } & \color{white}{\textbf{Valore ammissibile}}  & \color{white}{\textbf{Valore ottimale}}   \\
+  \endhead\rowcolor{white}%
+  \multicolumn{3}{r}{\textit{Continua alla pagina seguente}}
+  \endfoot%
+  \endlastfoot%
 
+  % - Applicazione mobile
+      MPR-IDG & Indice di Gulpease & indice compreso tra 0 e 100 che stabilisce la leggibilità del testo in base ala lunghezza delle parole. & \geq{}50 & \geq{}80 \\
+
+      MPR-CO & Indice di correttezza ortografica & numero intero che rappresenta il numero di errori ortografici presenti nel testo. & 0 & 0 \\
+ 
+    \rowcolor{white}
+    \caption{Tabella delle metriche di qualità della documentazione}%
+    \label{tab:metriche_doc}
+  \end{longtable}
 
 
 
@@ -34,92 +48,35 @@ Qualità di documentazione come:
 \subsubsection{Metriche}%
 \label{subsec:metriche_svil_sw}
 
-\begin{description}
-  \item [[MPR-CCE \textasciitilde] Complessità ciclomatica eccessiva]: definito nelle \textit{Norme di progetto} alla sezione 2.3.4.1.
-        \begin{itemize} \item Risultato: numero intero indicante la analizzabilità, modificabilità e testabilità del prodotto \item Valore ammissibile: \leq{}  7  \item Valore ottimale: \leq{}  3 \end{itemize}
-  \item [[MPR-CDU \textasciitilde] Percentuale di duplicazione del codice]: definito nelle \textit{Norme di progetto} alla sezione 2.3.4.2.
-        \begin{itemize} \item Risultato: percentuale che indica il numero di parti di codice duplicate \item Valore ammissibile: 20\% \item Valore ottimale: 0\% \end{itemize}
-  \item [[MPR-SML \textasciitilde] Numero di code smell]: definito nelle \textit{Norme di progetto} alla sezione 2.3.4.3.
-        \begin{itemize} \item Risultato: numero di code smell rilevati \item Valore ammissibile: 40 \item Valore ottimale: 0 \end{itemize}
-  \item [[MPR-BUG \textasciitilde] Numero di bug rilevati]: definito nelle \textit{Norme di progetto} alla sezione 2.3.4.4.
-        \begin{itemize} \item Risultato: numero di bug rilevati per un componente software \item Valore ammissibile: 0 \item Valore ottimale: 0 \end{itemize}
-  \item [[MPR-RSL \textasciitilde] Tempo stimato di risoluzione bug]: definito nelle \textit{Norme di progetto} alla sezione 2.3.4.5.
-        \begin{itemize} \item Risultato: tempo stimato di risoluzione di un bug per un componente software \item Valore ammissibile: <30min \item Valore ottimale: <10min \end{itemize}
-\end{description}
+Di seguito sono riportate le metriche utilizzate per misurare la qualità di sviluppo software, che possono essere visionate all'interno del documento \textit{Norme di progetto} alla sezione 2.3.4.
 
 
-% \subsection{Qualità di prodotto software}
 
-% \subsubsection{Metriche}%
-% \label{subs:metriche_funzionale}
-% \begin{description}
-% \item [[MPR-ROS \textasciitilde] Percentuale di requisiti soddisfatti]: definito nelle \textit{Norme di progetto} alla sezione 2.3.4.1.
-% \begin{itemize} \item Valore ammissibile: 100\% \item Valore ottimale: 100\% \end{itemize}
-% \item [[MPR-CCE \textasciitilde] Complessità ciclomatica]: definito nelle \textit{Norme di progetto} alla sezione 2.3.4.4.
-%   \begin{itemize} \item Valore ammissibile: \leq{}  7 \item Valore ottimale: \leq{}  3 \end{itemize}
-% \end{description}
+\rowcolors{2}{lightgray}{white!80!lightgray!100}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{}m{4cm} >{}m{5cm} >{\centering\arraybackslash}m{2cm} > {\centering\arraybackslash}m{2cm}}
+  \rowcolor{darkgray!90!}
+  \color{white}
+  {\textbf{Codice}} & \color{white}{\textbf{Nome}} & \color{white}{\textbf{Descrizione} } & \color{white}{\textbf{Valore ammissibile}}  & \color{white}{\textbf{Valore ottimale}}   \\
+  \endhead\rowcolor{white}%
+  \multicolumn{3}{r}{\textit{Continua alla pagina seguente}}
+  \endfoot%
+  \endlastfoot%
 
-% TODO - copiare descrizioni sotto nelle NDP
+  % - Applicazione mobile
+      MPR-CCE & Complessità ciclomatica eccessiva & numero intero indicante la analizzabilità, modificabilità e testabilità del prodotto. &  \leq{} 7 & \leq{} 3 \\
 
-% \subsection{Appropriatezza funzionale}%
-% \label{sub:appropriatezza_funzionale}
-%   Rappresenta il grado a cui un prodotto software fornisce funzionalità che rispettano requisiti espliciti o impliciti se usato in specifiche condizioni.
-%   \subsubsection{Obiettivi}%
-%   \label{subs:obiettivi_funzionale}
-%       \begin{description}
-%         \item [Correttezza]: Grado con cui il prodotto fornisce risultati corretti con il livello di precisione richiesto.
-%         \item [Completezza]: Grado con cui le funzionalità offerte dal prodotto coprono tutti i compiti specificati e gli obiettivi dell'utente
-%         \item [Appropriatezza]: Grado con cui le funzionalità del prodotto agevolano il raggiungimento di determinati obiettivi.
-%       \end{description}
-%   % subs:obiettivi_funzionale (end)
+      MPR-CDU & Percentuale di duplicazione del codice & percentuale che indica il numero di parti di codice duplicate. & 20\% & 0\% \\
+ 
+      MPR-SML & Numero di code smell & numero di code smell rilevati. & 40 & 0 \\
 
-%   \subsubsection{Metriche}%
-%   \label{subs:metriche_funzionale}
-%       \begin{description}
-%         \item [[MPR-RS \textasciitilde] Percentuale di requisiti soddisfatti]: La completezza C del prodotto in relazione al numeri di requisiti soddisfatti verrà calcolata come \begin{equation} C = \frac{N_s}{N_{tot}}\\*100 \end{equation} con \(N_s\) numero di requisiti implementati e \(N_{tot}\) il numero di requisiti totali.
-%         \begin{itemize} \item Valore ammissibile: 100\% \item Valore ottimale: 100\% \end{itemize}
-%         \item [[MPR-SOF \textasciitilde] Semplicità delle funzioni]: Possiamo monitorare la modularità, analizzabilità e testabilità del prodotto valutando il numero di parametri per ogni funzione, meno saranno più il suo compito sarà specifico.
-%           \begin{itemize}   \item Valore ammissibile: \leq{}  6 \item Valore ottimale: \leq{}  3 \end{itemize}
-%         \item [[MPR-SOC \textasciitilde] Semplicità delle classi]: Possiamo monitorare la modularità, analizzabilità e testabilità del prodotto valutando il numero di metodi per ogni classe, meno saranno più lo scopo di quella classe sarà specifico.
-%           \begin{itemize} \item Valore ammissibile: \leq{}  10 \item Valore ottimale: \leq{}  5 \end{itemize}
-%         \item [[MPR-CC \textasciitilde] Complessità ciclomatica]: Monitoriamo la analizzabilità, modificabilità e testabilità del prodotto calcolando la complessità ciclomatica (\(CC\)) secondo la seguente formula: \begin{equation} CC = e - n + p \end{equation}. Dove \(e\) è il numero di archi del grafo formato da tutti i possibili esiti del programma, \(n\) è il numero di nodi del grafo e \(p\) è il numero di \glossario{componenti connesse} del grafo.
-%           \begin{itemize} \item Valore ammissibile: \leq{}  7 \item Valore ottimale: \leq{}  3 \end{itemize}
-%       \end{description}
+      MPR-BUG & Numero di bug rilevati &  numero di bug rilevati per un componente software. & 0 & 0 \\
 
-%   % subs:metriche_funzionale (end)
-
-% % sub:appropriatezza_funzionale (end)
-
-% % sub:sicurezza (end)
-
-% \subsection{Manutenibilità}%
-% \label{sub:manutenibilita}
-% Questa caratteristica rappresenta il grado di efficacia e efficienza con cui il prodotto può essere migliorato, corretto o adattato a nuovi requisiti.
-
-% \subsubsection{Obiettivi}%
-% \label{subs:obiettivi_manutenibilita}
-%       \begin{description}
-%         \item [Modularità]: Grado con cui il prodotto è composto da parti indipendenti in modo che una modifica a una componente abbia un impatto minimo su tutte le altre.
-%         \item [Riusabilità]: Grado con cui una risorsa può essere utilizzata in più di un sistema.
-%         \item [Analizzabilità]: Grado di efficacia e di efficienza con cui è possibile identificare le cause di errori nel prodotto e le parti da modificare.
-%         \item [Modificabilità]: Grado con cui il prodotto può essere efficacemente ed efficientemente modificato senza introdurre regressioni.
-%         \item [Testabilità]: Grado di efficacia e di efficienza con cui possono essere stabiliti i criteri di test e con cui quei test possono essere eseguiti per verificare quei criteri.
-%       \end{description}
-% % subs:obiettivi_manutenibilita (end)
-
-% \subsubsection{Metriche}%
-% \label{subs:metriche_manutenibilita}
-%   \begin{description}
-%     \item [[MPR-SOF \textasciitilde] Semplicità delle funzioni]: Possiamo monitorare la modularità, analizzabilità e testabilità del prodotto valutando il numero di parametri per ogni funzione, meno saranno più il suo compito sarà specifico.
-%       \begin{itemize}   \item Valore ammissibile: \leq{}  6 \item Valore ottimale: \leq{}  3 \end{itemize}
-%     \item [[MPR-SOC \textasciitilde] Semplicità delle classi]: Possiamo monitorare la modularità, analizzabilità e testabilità del prodotto valutando il numero di metodi per ogni classe, meno saranno più lo scopo di quella classe sarà specifico.
-%       \begin{itemize} \item Valore ammissibile: \leq{}  10 \item Valore ottimale: \leq{}  5 \end{itemize}
-%     \item [[MPR-CC \textasciitilde] Complessità ciclomatica]: Monitoriamo la analizzabilità, modificabilità e testabilità del prodotto calcolando la complessità ciclomatica (\(CC\)) secondo la seguente formula: \begin{equation} CC = e - n + p \end{equation}. Dove \(e\) è il numero di archi del grafo formato da tutti i possibili esiti del programma, \(n\) è il numero di nodi del grafo e \(p\) è il numero di \glossario{componenti connesse} del grafo.
-%       \begin{itemize} \item Valore ammissibile: \leq{}  7 \item Valore ottimale: \leq{}  3 \end{itemize}
-%   \end{description}
-% % subs:metriche_manutenibilita (end)
-
-% % sub:manutenibilita (end)
+      MPR-RSL & Tempo stimato di risoluzione bug & tempo stimato di risoluzione di un bug per un componente software. & <30min & <10min \\
+    \rowcolor{white}
+    \caption{Tabella delle metriche di qualità di sviluppo del software}%
+    \label{tab:metriche_sv_sw}
+  \end{longtable}
 
 
 
