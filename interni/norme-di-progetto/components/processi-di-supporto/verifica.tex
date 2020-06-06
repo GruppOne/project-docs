@@ -24,7 +24,7 @@ Il processo di verifica controlla e garantisce che i prodotti di una determinata
 \paragraph{Implementazione del processo}%
 \label{par:implementazione_di_processo}
 
-GruppOne si impegna, nel contesto del progetto intrapreso, ad effettuare attività di verifica e a formulare un piano delle attività di verifica quantificando nel \textit{Piano di progetto (versione \versione)} l'impegno orario necessario in ogni fase rilevante del ciclo di vita del prodotto. Tale pianificazione verrà messa in atto utilizzando le procedure definite in §~\ref{subs:verifica/procedure}.
+GruppOne si impegna, nel contesto del progetto intrapreso, ad effettuare attività di verifica e a formulare un piano delle attività di verifica quantificando nel \textit{Piano di progetto (versione \versione)} l'impegno orario necessario in ogni fase rilevante del ciclo di vita del prodotto. Tale pianificazione verrà messa in atto utilizzando le procedure definite nel sotto-paragrafo §~\ref{subs:verifica/procedure}.
 
 % par:implementazione_di_processo (end)
 
@@ -76,23 +76,23 @@ Questo compito serve ad assicurarsi che la progettazione sia ``consistente con''
 \label{subp:verifica_del_codice}
 
 La verifica del codice si divide in automatica e manuale.
-La verifica manuale avviene attraverso lo strumento descritto in §~\ref{par:code_review}, mentre quella automatica è subordinata al corretto svolgimento dell'attività di scrittura dei test di unità, sistema e integrazione.
-L'esecuzione effettiva dei test scritti è garantita attraverso lo strumento descritto in §~\ref{par:github_actions} e implementato come check obbligatorio per effettuare il \textit{merge} nel trunk, come descritto in §~\ref{subp:protezione_della_branch_di_default}.
+La verifica manuale avviene attraverso lo strumento descritto nel paragrafo §~\ref{par:code_review}, mentre quella automatica è subordinata al corretto svolgimento dell'attività di scrittura dei test di unità, sistema e integrazione.
+L'esecuzione effettiva dei test scritti è garantita attraverso lo strumento descritto nel paragrafo §~\ref{par:github_actions} e implementato come check obbligatorio per effettuare il \textit{merge} nel trunk, come descritto nel paragrafo §~\ref{subp:protezione_della_branch_di_default}.
 
 % subp:verifica_del_codice (end)
 
 \subparagraph{Verifica dell'integrazione}%
 \label{subp:verifica_dell_integrazione}
 
-Nel modello incrementale la verifica dell'integrazione avviene gradualmente attraverso la scrittura di test appositi come documentato nelle sezioni §~\ref{par:test_integrazione} e §~\ref{par:test_sistema}, che va effettuata in concomitanza con l'integrazione di modifiche descritta in §~\ref{subp:integrazione_di_modifiche_nel_trunk}.
+Nel modello incrementale la verifica dell'integrazione avviene gradualmente attraverso la scrittura di test appositi come documentato nei paragrafi §~\ref{par:test_integrazione} e §~\ref{par:test_sistema}, che va effettuata in concomitanza con l'integrazione di modifiche descritta nel sotto-paragrafo §~\ref{subp:integrazione_di_modifiche_nel_trunk}.
 
 % subp:verifica_dell'integrazione (end)
 
 \subparagraph{Verifica della documentazione}%
 \label{subp:verifica_della_documentazione}
 
-GruppOne garantisce consistenza, adeguatezza e completezza della documentazione attraverso le procedure descritte in §~\ref{par:verifica_grammaticale_dei_prodotti_documentali} e §~\ref{par:verifica_semantica_dei_prodotti_documentali}.
-Tutti i prodotti documentali sono adeguatamente versionati, come specificato in §~\ref{par:gestione_della_configurazione/implementazione_del_processo}.
+GruppOne garantisce consistenza, adeguatezza e completezza della documentazione attraverso le procedure descritte nei paragrafi §~\ref{par:verifica_grammaticale_dei_prodotti_documentali} e §~\ref{par:verifica_semantica_dei_prodotti_documentali}.
+Tutti i prodotti documentali sono adeguatamente versionati, come specificato nel paragrafo §~\ref{par:gestione_della_configurazione/implementazione_del_processo}.
 
 % subp:verifica_della_documentazione (end)
 
@@ -110,7 +110,7 @@ Di seguito si riporta una checklist da seguire per effettuare l'analisi statica 
   \item [Errori di ortografia] si devono individuare errori di punteggiatura e ortografia.
   \item [Errori nei verbi] si deve controllare che tutti i verbi siano in forma attiva.
   \item [Errori di sintassi] si deve verificare che non ci siano paragrafi di lunghezza eccessiva e che le frasi siano il più brevi possibile.
-  \item [Errori negli elenchi puntati] si deve controllare che ogni elemento degli elenchi puntati inizi con la lettera maiuscola e che vengano rispettate le regole definite in~\ref{subp:elenchi}.
+  \item [Errori negli elenchi puntati] si deve controllare che ogni elemento degli elenchi puntati inizi con la lettera maiuscola e che vengano rispettate le regole definite nel sotto-paragrafo ~\ref{subp:elenchi}.
   \item [Errori nella strutturazione del documento] si deve verificare che tutti i paragrafi si trovino nella sezione corretta, che le sezioni siano ben strutturate e che i titoli siano significativi.
 \end{description}
 
@@ -133,7 +133,7 @@ Il verificatore deve prestare particolare attenzione ad appurare la correttezza 
 
 L'analisi statica consiste nell'insieme delle buone pratiche che valutano un componente del sistema sulla base della sua forma, struttura e contenuto.
 Consiste in una serie di regole a cui tutti i prodotti intermedi del ciclo di vita del software devono attenersi.
-Viene effettuata in maniera automatizzata utilizzando gli strumenti descritti in §~\ref{par:analisi_statica_e_dinamica}. L'adeguata impostazione di tali strumenti è richiesta ai verificatori ed è soggetta a controllo di configurazione.
+Viene effettuata in maniera automatizzata utilizzando gli strumenti descritti nel paragrafo §~\ref{par:analisi_statica_e_dinamica}. L'adeguata impostazione di tali strumenti è richiesta ai verificatori ed è soggetta a controllo di configurazione.
 
 \subparagraph{Test di regressione}%
 \label{subp:test_di_regressione}
@@ -254,7 +254,7 @@ Il risultato rilevato ha i seguenti significati:
 Il processo di verifica avviene principalmente attraverso il meccanismo delle \href{https://github.com/features/code-review/}{Code Review} offerto da GitHub.
 Lo stretto legame con lo strumento di versionamento permette di svolgere la verifica in maniera incrementale, procedendo di pari passo con l'aggiunta di contenuto sia ai documenti che al codice sorgente.
 
-La procedura descritta in §~\ref{subp:integrazione_di_modifiche_nel_trunk} ha come conseguenza diretta il fatto che il set di modifiche disponibile nella scheda \textit{changes} della Pull request corrisponda esattamente con ciò che non è ancora stato verificato.
+La procedura descritta nel sotto-paragrafo §~\ref{subp:integrazione_di_modifiche_nel_trunk} ha come conseguenza diretta il fatto che il set di modifiche disponibile nella scheda \textit{changes} della Pull request corrisponda esattamente con ciò che non è ancora stato verificato.
 
 % par:code_review (end)
 

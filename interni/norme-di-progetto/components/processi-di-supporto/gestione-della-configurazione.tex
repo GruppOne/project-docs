@@ -34,7 +34,7 @@ Le attività coinvolte sono:
 \paragraph{Implementazione del processo}%
 \label{par:gestione_della_configurazione/implementazione_del_processo}
 
-Verrà sviluppato nella fase iniziale del progetto un piano di gestione della configurazione, espresso attraverso procedure documentate nel presente documento (§~\ref{subs:gestione_della_configurazione/procedure}).
+Verrà sviluppato nella fase iniziale del progetto un piano di gestione della configurazione, espresso attraverso procedure documentate nel presente documento (sotto-sezione §~\ref{subs:gestione_della_configurazione/procedure}).
 I vari membri del gruppo saranno di volta in volta incaricati della gestione puntuale di aspetti specifici della configurazione del prodotto nel rispetto delle procedure definite.
 
 % par:implementazione_del_processo (end)
@@ -42,7 +42,7 @@ I vari membri del gruppo saranno di volta in volta incaricati della gestione pun
 \paragraph{Identificazione della configurazione}%
 \label{par:identificazione_della_configurazione}
 
-GruppOne stabilisce uno schema delle componenti software e delle loro versioni soggette a controllo (§~\ref{par:controllo_della_configurazione}), identificando per ogni componente la versione attuale associata al codice sorgente che la costituisce e la versione di riferimento della documentazione di progetto come documentato nella procedura §~\ref{par:rilascio_interno_di_versioni_dei_componenti}.
+GruppOne stabilisce uno schema delle componenti software e delle loro versioni soggette a controllo (paragrafo §~\ref{par:controllo_della_configurazione}), identificando per ogni componente la versione attuale associata al codice sorgente che la costituisce e la versione di riferimento della documentazione di progetto come documentato nella procedura descritta nel paragrafo §~\ref{par:rilascio_interno_di_versioni_dei_componenti}.
 
 GruppOne identifica in maniera univoca le versioni delle componenti software del prodotto in conformità con la specifica \href{https://semver.org/spec/v2.0.0.html}{Semantic Versioning 2.0.0}.
 Ciascuna versione delle componenti software fa inoltre riferimento ad una versione della documentazione di progetto come definita nel sotto-paragrafo §~\ref{subp:schema_di_versionamento_della_documentazione_di_progetto}.
@@ -81,7 +81,7 @@ GruppOne ha inoltre stabilito che il numero di versione così definito è rappre
 \label{par:controllo_della_configurazione}
 
 Verranno identificate e tracciate tutte le richieste di modifiche pervenute da fonti esterne (quali ad es.\ il committente) e interne, insieme all'evoluzione, implementazione e rilascio di tali modifiche.
-La procedura è documentata nella sezione §~\ref{par:tracciamento_delle_richieste_di_modifiche}.
+La procedura è documentata nel paragrafo §~\ref{par:tracciamento_delle_richieste_di_modifiche}.
 
 % par:controllo_della_configurazione (end)
 
@@ -97,7 +97,7 @@ Considerati tutti i repository di progetto creati da GruppOne, la \glossario{bas
   \item \href{https://github.com/GruppOne/stalker-web-app/tree/master}{GruppOne/stalker-web-app/tree/master}
 \end{description}
 
-Dove il numero di versione è reperibile alle pagine indicate nella descrizione della procedura §~\ref{par:rilascio_interno_di_versioni_dei_componenti}.
+Dove il numero di versione è reperibile alle pagine indicate nella descrizione della procedura nel paragrafo §~\ref{par:rilascio_interno_di_versioni_dei_componenti}.
 
 % par:resoconto_dello_stato_della_configurazione (end)
 
@@ -111,11 +111,11 @@ Nel corso del progetto verrà documentata all'interno del documento \textit{Pian
 \paragraph{Gestione dei rilasci e delle consegne}%
 \label{par:gestione_dei_rilasci_e_delle_consegne}
 
-Per mantenere una visione d'insieme del prodotto, GruppOne effettuerà in corrispondenza degli incrementi definiti nel \textit{Piano di progetto (versione \versione)} dei rilasci interni dei componenti del prodotto software in via di sviluppo, che andranno a costituire baseline incrementali. La procedura per effettuare i rilasci interni è documentata in §~\ref{par:rilascio_interno_di_versioni_dei_componenti}.
+Per mantenere una visione d'insieme del prodotto, GruppOne effettuerà in corrispondenza degli incrementi definiti nel \textit{Piano di progetto (versione \versione)} dei rilasci interni dei componenti del prodotto software in via di sviluppo, che andranno a costituire baseline incrementali. La procedura per effettuare i rilasci interni è documentata nel paragrafo §~\ref{par:rilascio_interno_di_versioni_dei_componenti}.
 
-In occasione delle consegne di materiale richieste dal committente, la baseline più recente di ciascun componente software verrà resa disponibile al committente utilizzando la procedura definita in §~\ref{par:rilascio_esterno_di_versioni_del_prodotto}.
+In occasione delle consegne di materiale richieste dal committente, la baseline più recente di ciascun componente software verrà resa disponibile al committente utilizzando la procedura definita nel paragrafo §~\ref{par:rilascio_esterno_di_versioni_del_prodotto}.
 
-Il rilascio e consegna finale del prodotto compiuto avverrà attraverso un repository unico come documentato nella procedura §~\ref{par:consegna_del_prodotto}.
+Il rilascio e consegna finale del prodotto compiuto avverrà attraverso un repository unico come documentato nella procedura del paragrafo §~\ref{par:consegna_del_prodotto}.
 
 % par:gestione_dei_rilasci_e_della_consegna (end)
 
@@ -129,7 +129,7 @@ Il rilascio e consegna finale del prodotto compiuto avverrà attraverso un repos
 \label{par:tracciamento_delle_richieste_di_modifiche}
 
 Ogni richiesta di modifiche pervenuta al team viene documentata sulla piattaforma GitHub, creando una issue sul repository di ogni componente coinvolto dalla richiesta e applicandovi il label \textit{change request}.
-Questa procedura è funzionalmente identica, a meno del label effettivamente selezionato, a quanto documentato in §~\ref{par:flusso_di_lavoro_per_la_risoluzione_dei_problemi}.
+Questa procedura è funzionalmente identica, a meno del label effettivamente selezionato, a quanto documentato nel paragrafo §~\ref{par:flusso_di_lavoro_per_la_risoluzione_dei_problemi}.
 
 % par:tracciamento_delle_richieste_di_modifiche (end)
 
@@ -211,14 +211,14 @@ I repository vengono condivisi tra i membri del gruppo attraverso la piattaforma
 \subparagraph{Pull request}%
 \label{subp:pull_request}
 
-Le pull request sono uno spazio dove è possibile discutere aspetti e conseguenze delle modifiche introdotte da una branch. Utilizziamo in particolare la distinzione tra pull request e draft pull request (distinguibili dal colore dell'icona, rispettivamente verde e grigio) per esprimere il fatto che una branch ha completato l'implementazione del set di modifiche richieste, ed è dunque pronta per sottostare all'attività di verifica utilizzando lo strumento delle code review descritto in §~\ref{par:code_review}.
+Le pull request sono uno spazio dove è possibile discutere aspetti e conseguenze delle modifiche introdotte da una branch. Utilizziamo in particolare la distinzione tra pull request e draft pull request (distinguibili dal colore dell'icona, rispettivamente verde e grigio) per esprimere il fatto che una branch ha completato l'implementazione del set di modifiche richieste, ed è dunque pronta per sottostare all'attività di verifica utilizzando lo strumento delle code review descritto nel paragrafo §~\ref{par:code_review}.
 
 % subp:pull_request (end)
 
 \subparagraph{Protezione della branch di default}%
 \label{subp:protezione_della_branch_di_default}
 
-GruppOne ha implementato una protezione condizionale sulla branch \textit{master}, che vieta ai membri del team di effettuare dei push diretti. Ogni aggiunta presente su master deve avvenire attraverso il meccanismo delle \glossario{Pull request}, che sono imprescindibilmente soggette sia a verifica effettuata seguendo la procedura documentata in §~\ref{par:code_review} che al superamento di check appropriati alle modifiche effettuate, implementati con il meccanismo descritto in §~\ref{par:github_actions}.
+GruppOne ha implementato una protezione condizionale sulla branch \textit{master}, che vieta ai membri del team di effettuare dei push diretti. Ogni aggiunta presente su master deve avvenire attraverso il meccanismo delle \glossario{Pull request}, che sono imprescindibilmente soggette sia a verifica effettuata seguendo la procedura documentata nel paragrafo §~\ref{par:code_review} che al superamento di check appropriati alle modifiche effettuate, implementati con il meccanismo descritto nel paragrafo §~\ref{par:github_actions}.
 
 % subp:protezione_della_branch_di_default (end)
 
@@ -230,7 +230,7 @@ GruppOne ha implementato una protezione condizionale sulla branch \textit{master
 Questo strumento, la cui documentazione di utilizzo è reperibile all'indirizzo \href{https://github.com/conventional-changelog/standard-version/blob/master/README.md}{Conventional Changelog - Standard Version}, permette la generazione automatica di un registro delle modifiche per ogni componente software sfruttando la categorizzazione dei commit imposta dalla specifica \href{https://www.conventionalcommits.org/en/v1.0.0/}{Conventional Commits 1.0.0}.
 
 Tale registro è contenuto in un file \verb|CHANGELOG.md| presente nella radice del repository della componente considerata.
-Viene aggiornato con una procedura semiautomatica documentata in~\ref{par:gestione_dei_rilasci_e_delle_consegne} dal responsabile che approva ciascuna Pull Request.
+Viene aggiornato con una procedura semiautomatica documentata nel paragrafo §~\ref{par:gestione_dei_rilasci_e_delle_consegne} dal responsabile che approva ciascuna Pull Request.
 
 % par:conventional_changelog_standard_version (end)
 
