@@ -44,8 +44,8 @@
   \item Tobia Apolloni
   \item Riccardo Cestaro
   \item Alberto Cocco
-  \item Luca Ercole
-  % \item Alberto Gobbo
+  % \item Luca Ercole
+  \item Alberto Gobbo
   \item Alessandro Rizzo
   \item Fabio Scettro
 \end{enumerate}
@@ -53,26 +53,48 @@
 
 \section{Introduzione}%
 \label{sec:introduzione}
-L'incontro � avvenuto tramite chiamata Hangouts.
-Lo scopo principale era %TODO.
+L'incontro è avvenuto tramite chiamata Hangouts.
+Lo scopo principale era pianificare il lavoro dell'ultima settimana, in modo da concludere definitivamente il prodotto di Stalker in questa ultima settimana.
 
 \section{Ordine del giorno}%
 \label{sec:ordine_del_giorno}
 
 \begin{itemize}
-  \item %TODO
+  \item Mail al committente in merito ad alcune segnalazioni documentali non chiare
+  \item Punto della situazione
+  \item Pianificazione lavoro settimanale
 \end{itemize}
 
-\section{}%
-\label{sec:}
-%TODO
+\section{Mail al committente in merito ad alcune segnalazioni documentali non chiare}%
+\label{sec:mail_al_committente_in_merito_ad_alcune_segnalazioni_documentali_non_chiare}
+Il gruppo ha deciso di scrivere una mail al committente prof. Tullio Vardanega per risolvere alcuni dubbi riguardo ad alcune segnalazioni che non hanno ancora trovato una soluzione.
+I dubbi principali riguardano alle seguenti specifiche segnalazioni:
+\begin{itemize}
+  \item \textit{Registro delle modifiche: sorprendente regressione al vecchio e deprecato modo di interpretare lo scatto di versione, che traspare in alcuni ma non tutti i documenti (tra essi le Norme, e il PdQ).}
+  \item \textit{§A:~manca di un riassunto (tabellare) del corrente stato di avanzamento, oppure un riferimento esplicito al punto di §C dove tale informazione sia fornita.}
+\end{itemize}
+
+\section{Punto della situazione}%
+\label{sec:punto_della_situazione}
+Il gruppo ha discusso sul lavoro che ha effettuato nella settimana appena trascorsa e in particolar modo dello stato di avanzamento delle varie componenti, inclusa la documentazione:
+\begin{itemize}
+  \item nella web application le pagine dei report sono state completate. Mancano solo alcuni aspetti grafici da sistemare, ma per il resto lo sviluppo di questa componente è molto vicina alla fine.
+  \item nella mobile application si stima che prima della fine della settimana corrente lo sviluppo delle principali funzionalità sarà ultimato definitivamente.
+  \item nel server va completata l'autenticazione LDAP e i rimanenti endpoint che si relazionano con il database di serie temporali InfluxDB\@. Anche per questa componente, la stima di fine sviluppo si aggira per la fine della settimana corrente.
+  \item nella documentazione sono stati corretti tutti i problemi segnalati nella correzione dell'RQ, eccetto quelli citati nella sezione §~\ref{sec:mail_al_committente_in_merito_ad_alcune_segnalazioni_documentali_non_chiare}. Inoltre il manuale utente viene aggiornato di pari passo alle nuove funzionalità che sono presenti nel branch \textit{master} delle repository delle componenti web application e mobile application. Le correzioni e le eventuali aggiunte nel manuale manutentore inizieranno a metà settimana.
+\end{itemize}
+
+\section{Pianificazione lavoro settimanale}%
+\label{sec:pianificazione_lavoro_settimanale}
+Il gruppo ha pianificato il lavoro settimanale in modo da concludere definitivamente il lavoro in tutte le componenti entro la fine di questa settimana, in modo da avere un margine di tempo sufficiente per la preparazione alla Revisione di Accettazione (RA).
 
 \newpage
 \section{Registro delle decisioni}%
 \label{sec:registro_delle_decisioni}
 
 \begin{description}
-  \item[20200608-int-001] %TODO
+  \item[20200608-int-001] Il gruppo invierà una mail al committente prof. Tullio Vardanega.
+  \item[20200608-int-002] Il gruppo si impegna a concludere lo sviluppo di tutte le componenti entro la fine della settimana.
 \end{description}
 
 % sec:registro_delle_decisioni (end)
