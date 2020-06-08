@@ -72,7 +72,7 @@ L'utente ha smarrito la password o non se la ricorda più, quindi deve eseguire 
     \item selezionare il pulsante \textbf{Recover} per inviare la richiesta al server.
 \end{itemize}
 
-Nel caso l'operazione venga svolta correttamente, l'utente riceverà una mail sulla propria casella postale contenente il link per il recupero della password.
+Nel caso l'operazione venga svolta correttamente, la vecchia password verrà resettata e l'utente riceverà una mail sulla propria casella postale contenente la nuova password provvisoria che dovrà utilizzare al prossimo accesso in Stalker.
 In caso contrario, l'utente non può recuperare la password, in quanto la procedura è fallita.
 Le cause possono essere le seguenti:
 \begin{itemize}
@@ -86,7 +86,7 @@ In ogni caso, il messaggio di errore non sarà specifico ma generico, per motivi
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=120mm]{visualizza-profilo-personale.png}
+    \includegraphics[width=170mm]{visualizza-profilo-personale.jpg}
     \caption{Visualizzazione profilo personale}%
     \label{fig:web_app_visualizzazione_profilo_personale}
 \end{figure}
@@ -96,7 +96,7 @@ I dati che la pagina mette a disposizione dell'utente sono:
     \item nome e cognome.
     \item la data di nascita.
     \item l'email con la quale è registrato in Stalker.
-    \item il giorno in cui l'utente è stato aggiunto in Stalker.
+    \item data e ora in cui l'utente è stato aggiunto in Stalker.
     \item un'insieme di dati relativi ai ruoli che l'utente possiede in alcune delle organizzazioni di Stalker.
     \begin{itemize}
         \item il numero totale di organizzazioni in cui è owner.
@@ -104,10 +104,40 @@ I dati che la pagina mette a disposizione dell'utente sono:
         \item il numero totale di organizzazioni in cui è viewer.
     \end{itemize}
 \end{itemize}
-Inoltre, la seguente pagina fornisce alcune operazioni:
+Inoltre, la seguente pagina fornisce le seguenti operazioni:
 \begin{itemize}
+    \item la visualizzazione della lista di tutti gli utenti di Stalker, cliccando il pulsante \textbf{Users list} (figura §~\ref{fig:web_app_visualizzazione_utenti}).
     \item la visualizzazione della lista di tutte le organizzazioni, cliccando il pulsante \textbf{Organizations list} (figura §~\ref{fig:web_app_visualizzazione_organizzazioni}).
-    \item la creazione di una nuova organizzazione, cliccando il pulsante \textbf{Create}.
+    \item la creazione di una nuova organizzazione, cliccando il pulsante \textbf{Create} (sottosezione §~\ref{subs:creazione_organizzazione}).
+\end{itemize}
+Infine, l'utente ha la possibilità di effettuare le seguenti operazioni sull'account personale di Stalker nel form \textit{User settings}:
+\begin{itemize}
+  \item cambiare la propria password per l'accesso a Stalker, inserendo quella nuova nella casella di input indicata con il \glossarioLocale{placeholder} \textit{New password} (con la possibilità di visualizzarla in chiaro cliccando l'occhio barrato) e cliccando il pulsante \textbf{Confirm}.
+  \item eliminare il proprio account di Stalker, cliccando il pulsante \textbf{Delete}.
+\end{itemize}
+In entrambi i casi uscirà un \glossarioLocale{pop-up} per confermare o annullare l'operazione.
+
+\subsubsection{Visualizzazione utenti}%
+\label{subs:visualizzazione_utenti}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=160mm]{visualizza-utenti.jpg}
+    \caption{Visualizzazione utenti}%
+    \label{fig:web_app_visualizzazione_utenti}
+\end{figure}
+L'utente ha cliccato il pulsante \textbf{Users list}, e quindi ha la possibilità di visualizzare la lista di tutti gli utenti registrati in Stalker.
+La lista degli utenti contiene le seguenti informazioni:
+\begin{description}
+  \item[Name:] nome e cognome dell'utente.
+  \item[Email:] email dell'utente.
+\end{description}
+L'utente ha la possibilità di interagire con la pagina e può eseguire queste operazioni:
+\begin{itemize}
+  \item eliminare un'utente da Stalker, cliccando il pulsante a forma di bidone posto sotto la colonna \textbf{Disconnect}. Una volta cliccato, uscirà un pop-up nella quale verrà richiesto di confermare l'operazione inserendo la mail dell'utente da eliminare: in caso affermativo l'utente verrà eliminato, altrimenti non è consentita l'operazione di eliminazione. %TODO Inserire img dialog
+  \item filtrare gli utenti in lista per nome e cognome tramite un'apposita area di ricerca indicata con il placeholder \textit{Filter}, sopra la lista degli utenti.
+  \item filtrare il numero di utenti visualizzabili in una pagina, tramite la tendina \textit{Items per page} sotto la lista degli utenti.
+  \item cambiare la pagina della lista degli utenti, tramite le apposite frecce direzionali sotto la lista degli utenti.
 \end{itemize}
 
 \subsubsection{Visualizzazione organizzazioni}%
@@ -130,8 +160,8 @@ La lista delle organizzazioni che l'utente visualizza contiene le seguenti infor
 L'utente ha la possibilità di interagire con la pagina e può eseguire queste operazioni:
 \begin{itemize}
 \item visualizzare la pagina della relativa organizzazione, contenente informazioni più dettagliate, cliccando sopra l'apposita organizzazione in lista.
-\item filtrare le organizzazioni in lista per nome tramite un'apposita area di ricerca, sopra la lista delle organizzazioni.
-\item filtrare il numero di organizzazioni visualizzabili in una pagina, tramite la tendina sotto la lista delle organizzazioni.
+\item filtrare le organizzazioni in lista per nome tramite un'apposita area di ricerca indicata con il placeholder \textit{Filter}, sopra la lista delle organizzazioni.
+\item filtrare il numero di organizzazioni visualizzabili in una pagina, tramite la tendina \textit{Items per page} sotto la lista delle organizzazioni.
 \item cambiare la pagina della lista delle organizzazioni, tramite le apposite frecce direzionali sotto la lista delle organizzazioni.
 \end{itemize}
 
