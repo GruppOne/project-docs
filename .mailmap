@@ -1,12 +1,14 @@
-# comando per ottenere tutti gli autori:
+# use the following command to get all authors for current repo
 # git shortlog -e -s -n --all
 
 Riccardo Agatea <riccardo.agatea@gmail.com>
 Tobia Apolloni <tobia.apolloni@gmail.com>
+Riccardo Cestaro <riccardo.cestaro@outlook.it> RiccardoCestaro <riccardocestaro@outlook.it>
 Riccardo Cestaro <riccardo.cestaro@outlook.it>
 Alberto Cocco <34599576+Alberto1598@users.noreply.github.com> <albertococco98@gmail.com>
 Alberto Cocco <34599576+Alberto1598@users.noreply.github.com>
 Luca Ercole <30255227+erclu@users.noreply.github.com>
+Alberto Gobbo <47864124+AlbertoGobbo@users.noreply.github.com> AlbertoGobbo <gobboalberto98@gmail.com>
 Alberto Gobbo <47864124+AlbertoGobbo@users.noreply.github.com>
 Alessandro Rizzo <46090465+AlexRizzus@users.noreply.github.com> <alex.rizzo1998@gmail.com>
 Alessandro Rizzo <46090465+AlexRizzus@users.noreply.github.com>
