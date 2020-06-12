@@ -114,12 +114,12 @@ La pagina offre inoltre due possibili azioni:
   \end{description}
 \end{itemize}
 Se l'utente vuole connettersi ad un'organizzazione, può fare \glossarioLocale{tap} su una singola voce dell'elenco.
-% \begin{figure}[H]
-%   \centering
-%   \includegraphics[width=70mm]{selezionamento-organizzazione-pubblica.jpg}
-%   \caption{Selezionamento organizzazione pubblica}%
-%   \label{fig:mobile_app_selezionamento_organizzazione_pubblica}
-% \end{figure}
+ \begin{figure}[H]
+   \centering
+   \includegraphics[width=70mm]{selezionamentoorganizzazionepubblica.jpg}
+   \caption{Selezionamento organizzazione pubblica}%
+   \label{fig:mobile_app_selezionamento_organizzazione_pubblica}
+ \end{figure}
 Se l'organizzazione selezionata è pubblica, l'utente accede in modo libero senza alcun tipo di restrizione.
 % \begin{figure}[H]
 %   \centering
@@ -143,23 +143,61 @@ Nel caso in cui la connessione all'organizzazione, pubblica o privata che sia, v
 \subsubsection{Pagina organizzazioni connesse}%
 \label{subs:pagina_organizzazioni_connesse}
 
-% \begin{figure}[H]
-%   \centering
-%   \includegraphics[width=70mm]{pagina-organizzazioni-connesse.jpg}
-%   \caption{Pagina organizzazioni connesse}%
-%   \label{fig:mobile_app_pagina_organizzazioni_connesse}
-% \end{figure}
+ \begin{figure}[H]
+   \centering
+   \includegraphics[width=70mm]{paginaconnesse.jpg}
+   \caption{Pagina organizzazioni connesse}%
+   \label{fig:mobile_app_pagina_organizzazioni_connesse}
+ \end{figure}
 
-%TODO
+ Una volta che l'utente si collega ad una o più organizzazione visualizza di default una pagina contenente la lista di tutte le organizzazioni a cui è collegato in Stalker e alla quale si può disconnettere.
+ Le informazioni che visualizza per ogni organizzazione sono:
+ \begin{itemize}
+   \item il nome.
+   \item la descrizione.
+   \item lo stato, ovvero se è pubblica o privata, indicato dal lucchetto che è posto nel bordo destro di ogni singola voce. Il lucchetto aperto indica che l'organizzazione è pubblica, mentre il lucchetto chiuso indica che l'organizzazione è privata e necessita delle credenziali d'accesso specifiche.
+ \end{itemize}
+ La pagina offre inoltre una possibile azione:
+ \begin{itemize}
+   \item cambiare schermata tramite la action bar posta orizzontalmente in basso nella schermata. La action bar è composta da tre voci:
+   \begin{description}
+     \item[Organizations:] l'utente visualizza la lista di organizzazione alla quale non è collegato e si può collegare (sotto-sezione §~\ref{subs:pagina_organizzazioni}).
+     \item[Connected:] è la schermata corrente.
+     \item[Report:] l'utente visualizza una serie di dati personali per ogni organizzazione alla quale si è collegato precedentemente (sotto-sezione §~\ref{subs:pagina_report_utente}).
+   \end{description}
+ \end{itemize}
+ Se l'utente vuole disconnettersi da un'organizzazione, può fare tap su una singola voce dell'elenco.
+
 \subsubsection{Pagina report utente}%
 \label{subs:pagina_report_utente}
 
-% \begin{figure}[H]
-%   \centering
-%   \includegraphics[width=70mm]{pagina-report-utente.jpg}
-%   \caption{Pagina report utente}%
-%   \label{fig:mobile_app_pagina_report_utente}
-% \end{figure}
+ \begin{figure}[H]
+   \centering
+   \includegraphics[width=70mm]{paginareportutente.jpg}
+   \caption{Pagina report utente}%
+   \label{fig:mobile_app_pagina_report_utente}
+ \end{figure}
+
+Una volta che l'utente si è autenticato può visualizzare una pagina contenente un report di tutti gli accessi effettuati in una o più organizzazioni.
+Le informazioni visualizzate nella pagina per ogni organizzazione sono:
+\begin{itemize}
+    \item il nome.
+    \item il luogo.
+    \item l'indirizzo del luogo.
+    \item la data e l'ora di accesso all'organizzazione.
+\end{itemize}
+La pagina offre inoltre due possibili azioni:
+\begin{itemize}
+  \item aggiornare la lista delle organizzazioni del report, mediante l'apposito pulsante con una freccia ricorsiva che si trova in basso a destra.
+  \item cambiare schermata tramite la action bar posta orizzontalmente in basso nella schermata. La action bar è composta da tre voci:
+  \begin{description}
+    \item[Organizations:] l'utente visualizza la lista di organizzazione alla quale non è collegato e si può collegare (sotto-sezione §~\ref{subs:pagina_organizzazioni}).
+    \item[Connected:] l'utente visualizza la lista di organizzazioni alla quale è collegato attualmente (sotto-sezione §~\ref{subs:pagina_organizzazioni_connesse}).
+    \item[Report:] è la schermata corrente.
+  \end{description}
+\end{itemize}
+
+
 
 \subsection{Risoluzione dei problemi}%
 \label{subs:mobile_app_risoluzione_problemi}
