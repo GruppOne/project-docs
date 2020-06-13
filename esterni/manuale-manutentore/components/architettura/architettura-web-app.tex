@@ -138,8 +138,22 @@ La seconda invece viene usata quando non sono necessarie le informazioni persona
   \caption{interfaccia Organization}%
   \label{fig:web-app-organization}
 \end{figure}
-L'interfaccia Organization possiede opzionalmente due interfacce: LdapConfiguration e un array di Place.
+L'interfaccia Organization possiede opzionalmente una interfaccia: LdapConfiguration.
+L'Organizzazione può essere privata o pubblica tramite l'attributo organizationType.
 LdapConfiguration è presente solo se l'organizzazione è stata configurata come privata.
+% par:organization (end)
+
+\paragraph{Place}%
+\label{par:webapp/place}
+\begin{figure}[H]
+  \centering
+  \scalegraphics{webapp-place.png}
+  \caption{interfaccia Place}%
+  \label{fig:web-app-place}
+\end{figure}
+L'interfaccia Place possiede opzionalmente un'interfaccia: PlaceData.
+PlaceData contiene tutte le informazioni dell'organizzazione e in particolare il campo Polygon, che rappresenta l'area del Place ed è costituito da un array di MyLatLng.
+La classe MyLatLng è stata progettata per essere facilmente convertibile alla classe LatLng offerta da Leaflet
 L'array di Place può essere vuoto se non vi sono luoghi in quell'organizzazione e può opzionalmente contenere un'interfaccia PlaceData che rappresenta i dati geografici del Place.
 % par:organization (end)
 
@@ -158,6 +172,12 @@ Abbiamo pensato quindi di deresponsabilizzare i component dall'onere di creare a
   \scalegraphics{webapp-organization-builder.png}
   \caption{Organization Builder}%
   \label{fig:web-app-organization-builder}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \scalegraphics{webapp-place-builder.png}
+  \caption{Place Builder}%
+  \label{fig:web-app-place-builder}
 \end{figure}
 % par:builder (end)
 
