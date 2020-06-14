@@ -10,7 +10,7 @@
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=6cm, height=22cm]{webapp-package-diagram.png}
+  \scalegraphics{webapp-package-diagram.png}
   \caption{Diagramma dei package web application}%
   \label{fig:web-app-package-diagram}
 \end{figure}
@@ -53,6 +53,7 @@ Il seguente diagramma di sequenza illustra la serie di chiamate che intercorrono
   \caption{diagramma di sequenza per visualizzare il profilo}%
   \label{fig:web-app-http-call-sequence}
 \end{figure}
+La richiesta parte dal component il quale interroga il service che si occupa di gestire il dato di cui ha bisogno, quest'ultimo effettua una chiamata parametrizzata a HttpClientService che si occupa di gestire la richiesta HTTP da inviare alla API.
 
 \subsubsection{Autenticazione e autorizzazione}%
 \label{subs:autenticazione}
@@ -167,18 +168,21 @@ Abbiamo pensato quindi di deresponsabilizzare i component dall'onere di creare a
   \caption{User Builder}%
   \label{fig:web-app-user-builder}
 \end{figure}
+L'interfaccia User può essere costruita insieme ad un'interfaccia UserData o LoginData a seconda delle esigenze, a loro volte i builder di queste interfacce hanno diverse configurazioni possibili dei parametri a seconda delle informazioni che sono disponibili.
 \begin{figure}[H]
   \centering
   \scalegraphics{webapp-organization-builder.png}
   \caption{Organization Builder}%
   \label{fig:web-app-organization-builder}
 \end{figure}
+L'interfaccia Organization può essere costruita con diverse configurazioni dei parametri a seconda delle informazioni presente e, se l'organizzazione è privata, può contenere l'interfaccia LdapConfiguration.
 \begin{figure}[H]
   \centering
   \scalegraphics{webapp-place-builder.png}
   \caption{Place Builder}%
   \label{fig:web-app-place-builder}
 \end{figure}
+L'interfaccia Place viene obbligatoriamente costruita assieme all'interfaccia PlaceData il cui builder può non inizializzare tutti i parametri a seconda dei dati disponibili.
 % par:builder (end)
 
 \paragraph{Estensione dei modelli}%
