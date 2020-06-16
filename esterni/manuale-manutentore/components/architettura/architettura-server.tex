@@ -157,5 +157,57 @@ Per memorizzare i dati abbiamo utilizzato un tipo di \glossarioLocale{measuremen
   Successivamente il controller inoltrerà la richiesta al service adibito (nella figura LocationInfoService) che da un oggetto di tipo Multilocationinfo estrae un Flux di LocationInfo che passerà come parametro alla funzione saveLocationInfo del componente repository.
   LocationInfoRepository contiene un campo dati denominato InfluxDBmapper che effettua il mapping diretto tra il repository e il database influxDB\@. Infine saveLocationInfo effettua la query di update sul database e restituisce un codice di stato http pari a 201 nel caso in cui la richiesta andasse a buon fine.
 
+\subsubsection{Estendibilità del codice}%
+\label{subs:estendibilita_del_codice}
+
+Il server presenta una struttura piuttosto modulare e orientata al riuso.
+Per tale motivo si presta bene all'estendibilità del codice.
+Nel momento in cui si aggiunge una nuova funzionalità è quindi necessario porre attenzione, in quanto molte funzioni potrebbero già essere disponibili.
+
+\paragraph{Controller}%
+\label{par:controller}
+
+L'aggiornamento o l'eventuale aggiunta di un nuovo controller dipende esclusivamente dal tipo di endpoint che si sta definendo.
+Per esempio, se si realizza un nuovo endpoint per la gestione dei place e delle organizzazioni molto probabilmente basterà aggiungere dei metodi
+alle classi del controller che si occupano di gestirli.
+Nel caso in cui andassimo, invece, a definire una funzionalità del tutto nuova
+sarà necessario aggiungere un nuovo controller.
+
+\paragraph{Service}%
+\label{par:service}
+
+Ogni service dipende strettamente dal rispettivo controller. Infatti:
+\begin{itemize}
+  \item Nel caso in cui si aggiunga un nuovo controller sarà necessario aggiungere anche il corrispettivo service.
+  \item Nel caso in cui si modifichi un controller preesistente sarà sufficiente modificare il service corrispondente.
+\end{itemize}
+
+\paragraph{Configuration}%
+\label{par:configuration}
+
+Il package configuration contiene tutte le classi che gestiscono la configurazione di servizi di cui il server usufruisce.
+L'aggiunta di un nuovo database o la configurazione di un servizio richiedono l'aggiunta di una nuova classe nel package configuration.
+
+\paragraph{Model}%
+\label{par:model}
+
+\subparagraph{Db model}%
+\label{subp:model}
+
+Il package db contiene le classi che rispecchiano le entità presenti nei database.
+Per tale ragione solo l'aggiunta di una nuova entità al database comporterà la necessità di aggiungere una nuova classe a questo package.
+
+\subparagraph{Db api}%
+\label{subp:api}
+
+Il package api contiene le classi che rappresentano i JSON che il server può ricevere o mandare.
+L'aggiunta di una nuova funzionalità provocherà con elevata probabilità la necessità di introdurre nuove classi in tale package.
+
+\paragraph{Repository}%
+\label{par:repository}
+
+I repository si interfacciano direttamente col database.
+Per tale ragione sono in stretta relazione con le classi contenute nel package model db.
+L'aggiunta di una nuova classe a quest'ultimo comporterà anche la definizione di una nuova classe nel package repository.
 
 \end{document}

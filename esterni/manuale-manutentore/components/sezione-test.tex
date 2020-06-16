@@ -54,6 +54,35 @@ Infine i test vanno eseguiti tramite Protractor, che simula l'interazione dell'u
 % \subsection{Mobile application}%
 % \label{sub:}
 %TODO
+\subsection{Server}%
+\label{sub:Server}
+
+\subsubsection{Test di unità e test end to end}%
+
+I test sono eseguiti mediante il framework Junit 5. Per eseguire i test è necessario compilare il progetto con il seguente comando:
+ \begin{minted} {bash}
+    ./gradlew build
+ \end{minted}
+
+Il wrapper di gradle si occuperà di eseguire la build e successivamente tutti i test presenti nella cartella \textit{test} del progetto.
+Nel caso in cui al più un test fallisse, la build dell'intero progetto non andrà a buon fine.
+Se si volesse compilare il progetto senza eseguire i test si utilizzi il comando:
+\begin{minted} {bash}
+   ./gradlew build -x test
+\end{minted}
+Per misurare la coverage del codice abbiamo utilizzato il tool di Java denominato Jacoco.
+Esso permette di misurare quattro tipi di coperture:
+\begin{itemize}
+  \item La copertura totale per ogni blocco di codice.
+  \item La copertura totale del codice di tutto il progetto.
+  \item La copertura totale all'interno di un branch (ad esempio nelle istruzioni condizionali).
+  \item La copertura totale all'interno di un metodo.
+\end{itemize}
+Ad ogni compilazione del codice, a partire dalla root del progetto e seguendo il path \textit{build/reports/tests/test}
+è possibile trovare un file index.html che se aperto sul browser permette di visualizzare un report che mostra quante e quali
+linee di codice sono in totale coperte dai test.
+
+% sub:Server (end)
 
 
 \end{document}
