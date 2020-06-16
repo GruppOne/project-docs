@@ -4,12 +4,8 @@
 
 Di seguito vengono descritti i comandi da eseguire nella CLI per il test di ogni componente del sistema di Stalker.
 
-% \subsection{Server}%
-% \label{sub:}
-%TODO
-
 \subsection{Web application}%
-\label{sub:}
+\label{sub:web_app_test}
 
 \subsubsection{Esecuzione test di unità}%
 \label{subs:esecuzione_test_di_unita}
@@ -51,9 +47,6 @@ In seguito vanno definiti gli step in codice a cui gli step testuali corrispondo
 Infine i test vanno eseguiti tramite Protractor, che simula l'interazione dell'utente con il browser.
 % subs:estensione_test_end_to_end (end)
 
-% \subsection{Mobile application}%
-% \label{sub:}
-%TODO
 \subsection{Server}%
 \label{sub:Server}
 
@@ -84,5 +77,13 @@ linee di codice sono in totale coperte dai test.
 
 % sub:Server (end)
 
+\subsection{Mobile application}%
+\label{sub:mobile_app_test}
+
+Per eseguire i test è sufficiente eseguire il comando
+
+\begin{minted}{bash}
+  ./gradlew jacocoTestReport
+\end{minted}
 
 \end{document}
