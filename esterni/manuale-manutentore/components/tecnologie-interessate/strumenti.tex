@@ -36,10 +36,11 @@ Nell'ambito di questo progetto, le risorse che sono containerizzate da Docker so
 Lo strumento utilizzato per la definizione e l'esecuzione di applicazioni Docker multi-contenitore è \glossarioLocale{Docker Compose}.
 Viene utilizzato un unico file, chiamato Compose, per la configurazione di tutti i servizi dell'applicazione, e un singolo comando per creare e avviare i servizi contenuti nel Compose.
 
-% \subsubsection{Kubernetes}%
-% \label{subs:kubernetes}
-
-% % già pronta la sottosezione, nel caso dovesse essere implementato
+\subsubsection{OpenLDAP}%
+\label{subs:openldap}
+L'implementazione del protocollo \glossarioLocale{LDAP} avviene con \glossarioLocale{OpenLDAP}.
+Questo strumento è utile per l'autenticazione in ambienti di calcolo distribuiti: nel nostro caso servirà a soddisfare l'esigenza di garantire che gli utenti si autentichino con delle credenziali LDAP per connettersi in organizzazioni private.
+Inoltre OpenLDAP fornisce brevi tempi di risposta e permette la replica delle informazioni.
 
 \subsubsection{Karma}%
 \label{subs:karma}
@@ -51,7 +52,7 @@ Abbiamo scelto questo strumento perché è ben integrato con Angular e con Jasmi
 \label{subs:cucumber}
 
 Abbiamo utilizzato \glossarioLocale{Cucumber} per testare i comportamenti software previsti in un linguaggio logico che gli sviluppatori possano comprendere facilmente, e che quindi supporta il Behavior-Driven Development (\glossarioLocale{BDD}).
-La stesura dei test viene fatta seguendo la sintassi \glossarioLocale{Gherkin}, consentendo di avere dei test autoesplicativi suddivisi in step che vengono implementati con l'aiuto della libreria di asserzioni \glossarioLocale{Chai} ed eseguiti tramite \glossarioLocale{Protractor}.
+La stesura dei test viene fatta seguendo la sintassi \glossarioLocale{Gherkin}, consentendo di avere dei test auto esplicativi suddivisi in step che vengono implementati con l'aiuto della libreria di asserzioni \glossarioLocale{Chai} ed eseguiti tramite \glossarioLocale{Protractor}.
 
 \subsubsection{Gradle}%
 \label{subs:gradle}
