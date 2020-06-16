@@ -127,10 +127,10 @@ Se l'organizzazione selezionata è pubblica, l'utente accede in modo libero senz
 %   \caption{Selezionamento organizzazione pubblica}%
 %   \label{fig:mobile_app_selezionamento_organizzazione_pubblica}
 % \end{figure}
-Se l'organizzazione selezionata è privata, l'utente deve inserire le credenziali univoche per l'autenticazione \glossarioLocale{LDAP} che corrispondono a:
+Se l'organizzazione selezionata è privata, l'utente deve inserire le credenziali per l'autenticazione \glossarioLocale{LDAP} che corrispondono a:
 \begin{description}
-  \item[Host] %TODO aggiungere descrizione
-  \item[Password] %TODO aggiungere descrizione
+  \item[CommonName (CN)]: parte del DomainName (DN) che si riferisce ad uno specifico utente. 
+  \item[Password]: la password LDAP dell'utente per accedere all'organizzazione privata.
 \end{description}
 Se l'utente inserisce le credenziali in modo errato, l'accesso all'organizzazione non è consentita.
 Nel caso in cui la connessione all'organizzazione, pubblica o privata che sia, va a buon fine, l'utente viene indirizzato ad una schermata con tutte le informazioni relative ad essa.
@@ -150,7 +150,7 @@ Nel caso in cui la connessione all'organizzazione, pubblica o privata che sia, v
    \label{fig:mobile_app_pagina_organizzazioni_connesse}
  \end{figure}
 
- Una volta che l'utente si collega ad una o più organizzazione visualizza di default una pagina contenente la lista di tutte le organizzazioni a cui è collegato in Stalker e alla quale si può disconnettere.
+ Una volta che l'utente si collega ad una o più organizzazioni visualizza di default una pagina contenente la lista di tutte le organizzazioni a cui è collegato in Stalker e alla quale si può disconnettere.
  Le informazioni che visualizza per ogni organizzazione sono:
  \begin{itemize}
    \item il nome.
