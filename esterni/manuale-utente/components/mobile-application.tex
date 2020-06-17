@@ -22,17 +22,17 @@ Per installare \textit{Stalker} è necessario:
     \item Accedere ad un \glossarioLocale{file manager}.
     \item Accedere alla cartella download dello smartphone.
     \item Selezionare l'applicazione di \textit{Stalker} appena scaricata.
-    \item Se richiesto, attivare l'impostazione per la privacy \textit{Origini sconosciute} (consultare la sezione §~\ref{subs:mobile_app_attivare_sorgenti_sconosciute}).
+    \item Se richiesto, attivare l'impostazione per la privacy \textit{Origini sconosciute} (consultare la sotto-sezione §~\ref{subs:mobile_app_attivare_sorgenti_sconosciute}).
     \item Avviare la procedura di installazione.
     \item Fornire i permessi richiesti dalla mobile application.
 \end{itemize}
-Nel caso ci fossero problemi durante l'installazione di \textit{Stalker}, vi preghiamo di consultare la sezione §~\ref{subs:mobile_app_risoluzione_problemi}.
+Nel caso ci fossero problemi durante l'installazione di \textit{Stalker}, vi preghiamo di consultare la sotto-sezione §~\ref{subs:mobile_app_risoluzione_problemi}.
 
 \subsection{Manuale d'uso}%
 \label{sub:manuale_uso_mobile}
 
 \subsubsection{Pagina di accesso}%
-\label{sub:pagina_di_accesso}
+\label{subs:pagina_di_accesso}
 
 \begin{figure}[H]
     \centering
@@ -47,7 +47,7 @@ Per accedere al servizio, l'utente dovrà seguire i seguenti passaggi:
     \item inserire la password. La password può essere visualizzata normalmente durante la sua digitazione, cliccando sull'occhio barrato alla fine del campo d'inserimento.
     \item selezionare il pulsante \textbf{LOGIN} per inviare le credenziali al server.
 \end{itemize}
-Se i dati inseriti sono corretti, allora l'utente è autorizzato ad entrare in Stalker e cominciare ad essere monitorato, altrimenti l'accesso a Stalker sarà negato.
+Se i dati inseriti sono corretti, allora l'utente è autorizzato ad entrare in Stalker e cominciare ad essere monitorato (sotto-sezione §~\ref{subs:pagina_organizzazioni}), altrimenti l'accesso a Stalker sarà negato.
 Le cause possono essere le seguenti:
 \begin{itemize}
     \item l'email inserita non rispetta i vincoli imposti dal sistema di Stalker.
@@ -85,17 +85,129 @@ Le cause possono essere le seguenti:
     \item la data non rispetta il formato \textit{yyyy-mm-dd}.
     \item almeno uno dei campi del form di registrazione non è stato compilato. Sono tutti richiesti.
 \end{itemize}
-Se l'utente è già in possesso delle credenziali e vuole accedere a Stalker, può raggiungere l'apposito form di autenticazione disponibile cliccando \textbf{Already have an account? Login} (§~\ref{fig:mobile_app_pagina_di_accesso}).
+Se l'utente è già in possesso delle credenziali e vuole accedere a Stalker, può raggiungere l'apposito form di autenticazione disponibile cliccando \textbf{Already have an account? Login} (figura §~\ref{fig:mobile_app_pagina_di_accesso}).
 
-% \subsubsection{Pagina iniziale}%
-% \label{subs:pagina_iniziale}
+\subsubsection{Pagina organizzazioni}%
+\label{subs:pagina_organizzazioni}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=70mm]{pagina-organizzazioni.jpg}
+    \caption{Pagina organizzazioni}%
+    \label{fig:mobile_app_pagina_organizzazioni}
+\end{figure}
+Una volta che si è autenticato in Stalker, l'utente visualizza di default una pagina contenente la lista di tutte le organizzazioni registrate in Stalker alle quali si può connettere.
+Le informazioni che visualizza per ogni organizzazione sono:
+\begin{itemize}
+  \item il nome.
+  \item la descrizione.
+  \item lo stato, ovvero se è pubblica o privata, indicato dal lucchetto che è posto nel bordo destro di ogni singola voce. Il lucchetto aperto indica che l'organizzazione è pubblica, mentre il lucchetto chiuso indica che l'organizzazione è privata e necessita delle credenziali d'accesso specifiche.
+\end{itemize}
+La pagina offre inoltre due possibili azioni:
+\begin{itemize}
+  \item aggiornare la lista delle organizzazioni registrate in Stalker, mediante l'apposito pulsante con una freccia ricorsiva che si trova in basso a destra.
+  \item cambiare schermata tramite la \glossarioLocale{action bar} posta orizzontalmente in basso nella schermata. La action bar è composta da tre voci:
+  \begin{description}
+    \item[Organizations:] è la schermata corrente.
+    \item[Connected:] l'utente visualizza la lista di organizzazioni alla quale è collegato attualmente (sotto-sezione §~\ref{subs:pagina_organizzazioni_connesse}).
+    \item[Report:] l'utente visualizza una serie di dati personali per ogni organizzazione alla quale si è collegato precedentemente (sotto-sezione §~\ref{subs:pagina_report_utente}).
+  \end{description}
+\end{itemize}
+Se l'utente vuole connettersi ad un'organizzazione, può fare \glossarioLocale{tap} su una singola voce dell'elenco.
+ \begin{figure}[H]
+   \centering
+   \includegraphics[width=70mm]{selezionamentoorganizzazionepubblica.jpg}
+   \caption{Selezionamento organizzazione pubblica}%
+   \label{fig:mobile_app_selezionamento_organizzazione_pubblica}
+ \end{figure}
+Se l'organizzazione selezionata è pubblica, l'utente accede in modo libero senza alcun tipo di restrizione.
 % \begin{figure}[H]
-%     \centering
-%     \includegraphics{pagina-iniziale.png}
-%     \caption{Pagina iniziale}%
-%     \label{fig:mobile_app_pagina_iniziale}
+%   \centering
+%   \includegraphics[width=70mm]{selezionamento-organizzazione-pubblica.jpg}
+%   \caption{Selezionamento organizzazione pubblica}%
+%   \label{fig:mobile_app_selezionamento_organizzazione_pubblica}
 % \end{figure}
+Se l'organizzazione selezionata è privata, l'utente deve inserire le credenziali per l'autenticazione \glossarioLocale{LDAP} che corrispondono a:
+\begin{description}
+  \item[CommonName (CN)]: parte del DomainName (DN) che si riferisce ad uno specifico utente.
+  \item[Password]: la password LDAP dell'utente per accedere all'organizzazione privata.
+\end{description}
+Se l'utente inserisce le credenziali in modo errato, l'accesso all'organizzazione non è consentita.
+Nel caso in cui la connessione all'organizzazione, pubblica o privata che sia, va a buon fine, l'utente viene indirizzato ad una schermata con tutte le informazioni relative ad essa.
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=70mm]{collegamentoldap.jpg}
+  \caption{Pagina di collegamento}%
+  \label{fig:mobile_app_pagina_collegamento_ldap}
+\end{figure}
+
+% Le informazioni dell'organizzazione che vengono visualizzate sono: %TODO
+% \begin{itemize}
+%   \item
+% \end{itemize}
+
+%TODO
+\subsubsection{Pagina organizzazioni connesse}%
+\label{subs:pagina_organizzazioni_connesse}
+
+ \begin{figure}[H]
+   \centering
+   \includegraphics[width=70mm]{paginaconnesse.jpg}
+   \caption{Pagina organizzazioni connesse}%
+   \label{fig:mobile_app_pagina_organizzazioni_connesse}
+ \end{figure}
+
+ Una volta che l'utente si collega ad una o più organizzazioni visualizza di default una pagina contenente la lista di tutte le organizzazioni a cui è collegato in Stalker e alla quale si può disconnettere.
+ Le informazioni che visualizza per ogni organizzazione sono:
+ \begin{itemize}
+   \item il nome.
+   \item la descrizione.
+   \item lo stato, ovvero se è pubblica o privata, indicato dal lucchetto che è posto nel bordo destro di ogni singola voce. Il lucchetto aperto indica che l'organizzazione è pubblica, mentre il lucchetto chiuso indica che l'organizzazione è privata e necessita delle credenziali d'accesso specifiche.
+ \end{itemize}
+ La pagina offre due possibili azioni:
+ \begin{itemize}
+   \item cambiare il proprio stato da noto ad incognito o da incognito a noto tramite l'icona apposita in alto a destra.
+   \item cambiare schermata tramite la action bar posta orizzontalmente in basso nella schermata. La action bar è composta da tre voci:
+   \begin{description}
+     \item[Organizations:] l'utente visualizza la lista di organizzazione alla quale non è collegato e si può collegare (sotto-sezione §~\ref{subs:pagina_organizzazioni}).
+     \item[Connected:] è la schermata corrente.
+     \item[Report:] l'utente visualizza una serie di dati personali per ogni organizzazione alla quale si è collegato precedentemente (sotto-sezione §~\ref{subs:pagina_report_utente}).
+   \end{description}
+ \end{itemize}
+ Se l'utente vuole disconnettersi da un'organizzazione, può fare tap su una singola voce dell'elenco.
+
+\subsubsection{Pagina report utente}%
+\label{subs:pagina_report_utente}
+
+ \begin{figure}[H]
+   \centering
+   \includegraphics[width=70mm]{paginareportutente.jpg}
+   \caption{Pagina report utente}%
+   \label{fig:mobile_app_pagina_report_utente}
+ \end{figure}
+
+Una volta che l'utente si è autenticato può visualizzare una pagina contenente un report di tutti gli accessi effettuati in una o più organizzazioni.
+Le informazioni visualizzate nella pagina per ogni organizzazione sono:
+\begin{itemize}
+    \item il nome.
+    \item il luogo.
+    \item l'indirizzo del luogo.
+    \item la data e l'ora di accesso all'organizzazione.
+\end{itemize}
+La pagina offre inoltre due possibili azioni:
+\begin{itemize}
+  \item aggiornare la lista delle organizzazioni del report, mediante l'apposito pulsante con una freccia ricorsiva che si trova in basso a destra.
+  \item cambiare schermata tramite la action bar posta orizzontalmente in basso nella schermata. La action bar è composta da tre voci:
+  \begin{description}
+    \item[Organizations:] l'utente visualizza la lista di organizzazione alla quale non è collegato e si può collegare (sotto-sezione §~\ref{subs:pagina_organizzazioni}).
+    \item[Connected:] l'utente visualizza la lista di organizzazioni alla quale è collegato attualmente (sotto-sezione §~\ref{subs:pagina_organizzazioni_connesse}).
+    \item[Report:] è la schermata corrente.
+  \end{description}
+\end{itemize}
+
+
 
 \subsection{Risoluzione dei problemi}%
 \label{subs:mobile_app_risoluzione_problemi}
@@ -119,7 +231,7 @@ Ora che è stata attivata questa impostazione, è possibile tornare alla finestr
 \subsubsection{Errore durante l'installazione}%
 \label{subs:mobile_app_errore_installazione}
 
-Nel caso \textit{Stalker} non si installi nel dispositivo in modo corretto, preghiamo l'utente di verificare i requisiti descritti nella sezione (§~\ref{sub:mobile_app_requisiti}).
+Nel caso \textit{Stalker} non si installi nel dispositivo in modo corretto, preghiamo l'utente di verificare i requisiti descritti nella sezione §~\ref{sub:mobile_app_requisiti}.
 Se il problema dovesse persistere anche in caso di requisiti soddisfatti, vi preghiamo di segnalarcelo nelle modalità discusse nella sezione §~\ref{sec:supporto_tecnico}.
 
 \subsubsection{Accesso all'applicazione non disponibile}%
