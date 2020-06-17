@@ -70,21 +70,21 @@ Il comando da utilizzare per eseguire il server e renderlo raggiungibile all'ind
 
 Spring utilizza una funzionalità chiamata \glossarioLocale{LiveReload}, che consente la ricompilazione automatica ad ogni modifica del codice sorgente; in questo modo da non è necessario riavviare manualmente il server Spring.\par
 Lo strato di persistenza, rappresentato dai database MySQL e InfluxDB, non si attiva automaticamente.
-Il comando per avviarlo deve essere eseguito dalla root del server, ed è:
+Il comando per avviarlo deve essere eseguito a partire dalla root del server, e un esempio può essere:
 
 \begin{minted}{bash}
   docker-compose up -d rdb
 \end{minted}
 
-\bash{rdb} (\glossarioLocale{Relational Database}) è il nome del servizio definito all'interno di quei file.
+dove \bash{rdb} (\glossarioLocale{Relational Database}) è il nome del servizio definito all'interno di quei file che rappresenta l'istanza di MySQL\@.
 Per conoscere tutti i dettagli dei container che possono essere istanziati, consultare i file \texttt{docker-compose.yml} e \texttt{docker-compose.override.yml}.
-È anche possibile far partire più di un servizio alla volta con:
+È anche possibile far partire più di un servizio alla volta, aggiungendo i nomi dei relativi container nel seguente modo:
 
 \begin{minted}{bash}
   docker-compose up -d rdb rdb-gui
 \end{minted}
 
-Questo comando fa partire un'istanza di MySQL e allo stesso tempo un'istanza di PhpMyAdmin, attraverso la quale è possibile interagire con il database attraverso un'interfaccia grafica web all'indirizzo \texttt{localhost:8080}.
+Questo comando fa partire un'istanza di MySQL e allo stesso tempo un'istanza di \glossarioLocale{PhpMyAdmin}, che è legata al servizio denominato \bash{rdb-gui}.
 Esiste un comando generale che fa partire tutti i servizi disponibili:
 
 \begin{minted}{bash}
@@ -92,6 +92,18 @@ Esiste un comando generale che fa partire tutti i servizi disponibili:
 \end{minted}
 
 \bash{-d} sta per \bash{--detached} e serve a ritornare il prompt dopo che Docker ha avviato il \glossarioLocale{container}.
+Questo comando fa partire allo stesso tempo un'istanza di MySQL, un'istanza di InfluxDB, un'istanza di PhpMyAdmin e un'istanza di \glossarioLocale{Chronograf}, grazie al quale è possibile interagire con i due database attraverso un'interfaccia grafica web, rispettivamente all'indirizzo \texttt{localhost:8080} per PhpMyAdmin, e all'indirizzo \texttt{localhost:8888} per Chronograf. In entrambi i casi, per accedere correttamente vanno utilizzare le credenziali di admin.
+
+Per eseguire il server LDAP, è necessario eseguire il comando:
+
+\begin{minted}{bash}
+  cd db/ldap; docker-compose up -d
+\end{minted}
+
+La prima parte del comando è necessario per poter avviare correttamente i servizi LDAP, in quanto il caricamento di questi servizi sono separati dal caricamento dello strato di persistenza.
+Una volta che l'utente si è posizionato correttamente nella directory, l'utente può avviare tutti i servizi mediante la seconda parte del comando.
+In questo caso, il comando fa partire allo stesso tempo un'istanza del server LDAP e un'istanza di \glossarioLocale{PhpLdapAdmin}, grazie al quale è possibile interagire con il server LDAP attraverso un'interfaccia grafica web che visualizza tutti i dati del file \bash{.ldif}, che contiene tutte le utenze autorizzate ad accedere ad esso.
+L'indirizzo per connettersi a PhpMyAdmin è \texttt{localhost:8090}, inserendo le credenziali di admin.
 Il teardown completo dei servizi che compongono lo strato di persistenza (ovvero lo spegnimento di tutti i container, e quindi di tutti i servizi) si esegue con il comando:
 
 \begin{minted}{bash}
