@@ -55,13 +55,29 @@ Per questo abbiamo scelto di utilizzare un decorator pattern, quindi forniamo la
 
 Per quanto riguarda l'autenticazione, e quindi le schermate di \textit{Login} e \textit{Signup}, il viewmodel ha la responsabilità di produrre un hash della password, mentre il model ha la responsabilità di definire il metodo \glossarioLocale{callback} che viene invocato quando il server risponde alla richiesta.
 
+\subsubsection{Pagina principale}%
+\label{subs:pagina_principale}
+
+La pagina principale utilizza tre fragment per mostrare all'utente le liste di organizzazioni a cui può connettersi e a cui è connesso, e il report della propria cronologia.
+Ciascun fragment rispetta il pattern MVVM, e le rispettive classi fragment stesso, viewmodel e model sono raccolte nei subpackage \java{view.fragment}, \java{viewmodel.fragment} e \java{model.fragment}.
+
+% subs:pagina_principale (end)
+
+\subsubsection{Pagina organizzazione}%
+\label{subs:pagina_organizzazione}
+Da una delle liste di organizzazioni, è possibile accedere alla pagina specifica di un'organizzazione toccando il rispettivo elemento nell'elenco.
+La pagina sfrutta le \textit{Maps API} di Google per mostrare una mappa con una rappresentazione dei luoghi monitorati dall'organizzazione attraverso dei poligoni colorati.
+Il rispettivo viewmodel ha la responsabilità di raccogliere le informazioni di dettaglio dell'organizzazione da mostrare, ed elaborarle perché siano direttamente utilizzabili dall'activity.
+
+% subs:pagina_organizzazione (end)
+
 \subsubsection{RecyclerView}%
 \label{subs:recyclerview}
 
-La schermata principale presenta la lista di organizzazioni a cui l'utente può connettersi, e per questo deve aggiornarsi dinamicamente quando l'applicazione riceve dal server una nuova lista.
+I fragment della schermata principale mostrano liste che si devono aggiornare dinamicamente per mostrare all'utente dei dati sempre aggiornati.
 A questo scopo abbiamo scelto di utilizzare \java{androidx.recyclerview.widget.RecyclerView}, componente grafica che astrae il confronto fra la lista nuova e quella attuale, richiedendo un minimo quantitativo di codice per specificare come confrontare gli elementi uno ad uno.
 Questo deve essere fornito nella forma di un'istanza di una classe derivata da \java{androidx.recyclerview.widget.ListAdapter}, una classe generica con due parametri di tipo.
-A questo scopo, GruppOne ha definito la classe \java{utility.OrganizationListAdapter}.
+A questo scopo, GruppOne ha definito la classe \java{OrganizationListAdapter} nel subpackage \java{view.recyclerview}.
 Per l'estensione di \java{ListAdapter} il primo parametro di tipo deve essere sostituito con il tipo degli oggetti nella lista, nel nostro caso \java{business.Organization} (§\ref{subs:logica_di_business}), il secondo con una classe derivata da \java{RecyclerView.ViewHolder}.
 Quest'ultima rappresenta un elemento della lista e racchiude metadati sulla sua posizione; ciascun \java{ListAdapter} istanzia e modifica i \java{ViewHolder} a propria necessità per aggiornare la \java{Recyclerview}, quindi essi sono da considerarsi come semplici frammenti della funzionalità del \java{ListAdapter} stesso.
 Di conseguenza, la nostra estensione di \java{ViewHolder}, \java{OrgViewHolder}, è innestata nella classe \java{OrganizationListAdapter}. Ogni estensione di \java{ViewHolder} deve essere associata ad un layout XML che descriva la grafica del rispettivo elemento nella lista.\par
@@ -74,6 +90,27 @@ Ogni estensione di \java{ListAdapter} deve fornire al costruttore della supercla
 \end{itemize}
 
 Le estensioni di \java{ViewHolder} non hanno requisiti rigidi, ma preferibilmente dovrebbero prevedere una cache di riferimenti ad elementi grafici di cui fanno uso, per limitare il numero di chiamate a \java{findViewById(int)}, le quali potrebbero rallentare l'applicazione.
+
+\paragraph{Selezione di elementi}%
+\label{par:selezione_di_elementi}
+Attraverso \java{recyclerview-select}, un'estensione della libreria \java{recyclerview}, è possibile selezionare gli elementi delle liste per effettuare operazioni batch, come collegarsi e scollegarsi contemporaneamente da più organizzazioni.
+Tutte le classi necessarie ad implementare questa funzionalità sono raccolte nel subpackage \java{view.recyclerview}.
+La classe fondamentale per gestire la selezione è \linebreak\java{androidx.recyclerview.selection.SelectionTracker}, che sfrutta un'associazione fra un insieme di chiavi e gli elementi della lista per monitorare quali elementi sono selezionati.
+Il suo builder richiede come parametri:
+\begin{itemize}
+  \item la recyclerview da monitorare
+  \item un'istanza di \java{androidx.recyclerview.selection.ItemKeyProvider} che permette di ottenere la chiave di un elemento data la sua posizione nell'elenco e viceversa
+  \item un'istanza di \linebreak\java{androidx.recyclerview.selection.ItemDetailsLookup} che permette di ricavare i dettagli dell'elemento selezionato a partire dall'evento scatenato dall'interazione con l'utente
+  \item un'istanza di \java{androidx.recyclerview.selection.StorageStrategy} che permette di serializzare le chiavi
+\end{itemize}
+
+Inoltre è necessario fornire un'istanza di \java{SelectionTracker.SelectionPredicate}, che permette di disabilitare la selezione per elementi date le rispettive chiavi.
+Abbiamo utilizzato la classe derivata \java{OnlyPublicSelectionPredicate} per impedire la selezione di organizzazioni private nel caso della connessione, per evitare la confusione di dover inserire più credenziali LDAP alla volta.
+Per reagire alla selezione è necessario aggiungere al \java{SelectionTracker} un \java{SelectionTracker.SelectionObserver}.
+Il suo metodo \java{onSelectionChanged()} distingue i vari casi (primo elemento selezionato, ultimo elemento deselezionato, caso generico) attraverso dei controlli sul numero di elementi selezionati e sullo stato di attivazione della action bar dell'activity.
+In particolare, quando ci sono elementi selezionati, la action bar viene sostituita da una context bar, che permette di eliminare la selezione oppure di eseguire l'operazione batch (connessione o disconnessione) su tutti gli elementi selezionati.
+
+% par:selezione_di_elementi (end)
 
 \paragraph{Integrazione con MVVM}%
 \label{par:integrazione_con_mvvm}
@@ -104,21 +141,26 @@ Per evitare di introdurre dipendenze circolari abbiamo scelto di definire la cla
 Per le richieste HTTP abbiamo scelto la libreria \textit{Volley}, consigliata dalle guide ufficiali di Android, perché permette la loro esecuzione asincrona ed efficiente, senza la difficoltà associata alla gestione di un sistema di worker thread.
 Le richieste vengono inserite in una struttura a coda gestita da un'istanza di \java{com.android.volley.RequestQueue}, la quale mantiene anche una cache.
 Per questo motivo, l'efficienza della libreria migliora se tutte le richieste che l'app effettua sono convogliate nella stessa coda, quindi le guide suggeriscono di astrarre ulteriormente la funzionalità attraverso un singleton.
-La classe \java{utility.WebSingleton} espone metodi per eseguire specifiche richieste HTTP al server di Stalker, come \java{login()} o \java{signup()}, ed il metodo \java{addToRequestQueue()} per effettuare una richiesta generica.
+La classe \java{utility.web.WebSingleton} espone metodi per eseguire specifiche richieste HTTP al server di Stalker, come \java{login()} o \java{signup()}, ed il metodo \java{addToRequestQueue()} per effettuare una richiesta generica.
 
 \paragraph{Autenticazione}%
 \label{par:autenticazione}
 
 Le richieste che richiedono l'autenticazione devono contenere un header \texttt{Authorization} contenente un JWT valido come valore.
-La classe \java{utility.AuthenticatedRequest} aggiunge automaticamente questo header, utilizzando il decorator pattern.
+La classe \java{utility.web.AuthenticatedRequest} aggiunge automaticamente questo header, utilizzando il decorator pattern.
 
 \subsubsection{Gestione della posizione}%
 \label{subs:gestione_della_posizione}
 
 Per la raccolta delle informazioni sulla posizione, Stalker sfrutta le API esposte dalle librerie native di Android.
-Abbiamo astratto le chiamate alle API grazie alla classe astratta \java{GooglePositionInterface}.
-A causa del suo unico campo dati non può essere un'interfaccia con metodi di default, e per questo stiamo considerando la possibilità di spostarlo.
-I suoi due metodi \java{checkPermissions(Activity activity)} e \java{startLocationUpdates(Activity activity)} permettono rispettivamente di verificare se l'utente ha concesso i permessi di geolocalizzazione all'app, o eventualmente di chiederli, e di iniziare effettivamente il tracciamento.
+Abbiamo astratto le chiamate alle API grazie alla classe \java{GooglePositionInterface}.
+Sono forniti i metodi:
+
+\begin{itemize}
+  \item \java{checkPermissions(Activity activity)} per verificare che l'utente abbia concesso i permessi di geolocalizzazione necessari all'app, ed eventualmente richiederli.
+  \item \java{startLocationUpdates()} per iniziare a ricevere update sulla posizione
+  \item \java{stopLocationUpdates()} per fermare gli update sulla posizione
+\end{itemize}
 
 \paragraph{Elaborazione della posizione}%
 \label{par:elaborazione_della_posizione}
@@ -128,13 +170,23 @@ Per l'elaborazione in background di queste informazioni, Stalker ha a disposizio
 Essa raccoglie dei compiti da eseguire, rappresentati ciascuno da un contesto e da un'istanza di \java{android.content.Intent}, in una struttura a coda.
 Ogni compito, quando raggiunge la cima della coda, viene eseguito invocando il metodo \linebreak\java{onHandleWork(Intent)}.
 
+\paragraph{Geofences}%
+\label{par:geofences}
+
+Per ridurre il consumo di batteria, l'applicazione fa uso delle \textit{Geofences API} per attivare gli update sulla posizione solo se l'utente è nelle vicinanze di un luogo monitorato.
+La classe \java{GeofencesHandler} mantiene l'elenco delle geofences attive, e sfrutta i \java{LiveData} per aggiornare le geofences ogni volta che l'utente si connette o disconnette da un'organizzazione.
+La classe \java{GeofencesReceiver} è un \java{BroadcastReceiver} che riceve le notifiche relative all'entrata e all'uscita dalle geofences.
+Mantiene l'elenco degli id dei luoghi nelle vicinanze dell'utente, e garantisce che gli update sulla posizione siano attivi se e solo se l'utente è nelle vicinanze di almeno un luogo.
+% par:geofences (end)
+
 \subsubsection{Sessione corrente}%
 \label{subs:sessione_corrente}
 
 Per mantenere le informazioni legate alla sessione corrente abbiamo scelto di utilizzare un singleton pattern, con la classe \java{utility.CurrentSessionSingleton}.
 Per inserirsi nell'architettura MVVM, esso mantiene i propri campi dati in oggetti \java{androidx.lifecycle.MutableLiveData<T>}, al fine di implementare l'observer pattern.
-Per prevenire le modifiche non controllate, espone getter che ritornano reference a \java{androidx.lifecycle.LiveData<T>}, che non permette l'aggiornamento dell'oggetto contenuto.
-Inoltre, espone un metodo \java{getInsidePlaces(Point)} che ritorna la lista degli \java{id} dei luoghi che contengono il punto passato come parametro fra tutti i luoghi monitorati.
+Per prevenire le modifiche non controllate, espone getter che ritornano reference a \java{androidx.lifecycle.LiveData<T>}, che non permette l'aggiornamento dell'oggetto contenuto, ed espone metodi che permettono la modifica controllata dello stato dell'applicazione, come \java{setConnectedOrganization(int organizationId, boolean connected)} e \linebreak\java{updatePlaces(int organizationId,List<Place> places)}.
+Inoltre, espone un metodo \java{getInsidePlaces(Point)} che ritorna la lista di \java{id} dei luoghi che contengono il punto passato come parametro fra tutti i luoghi monitorati, ciascuno associato al \java{id} della rispettiva organizzazione.
+Infine, espone i metodi \linebreak\java{setUserOrganizationHistory(List<UserOrganizationHistory>)} e \java{getUserOrganizationHistory()} per accedere alla rappresentazione della cronologia sugli spostamenti dell'utente.
 
 \subsubsection{Logica di business}%
 \label{subs:logica_di_business}
@@ -142,13 +194,21 @@ Inoltre, espone un metodo \java{getInsidePlaces(Point)} che ritorna la lista deg
 Il subpackage \java{business} contiene le classi utilizzate per rappresentare i concetti prettamente legati a Stalker, come organizzazioni, luoghi, posizioni e utenti.
 Queste classi fanno uso delle annotazioni del progetto \textit{Lombok} per generare automaticamente metodi come getter, setter, \java{toString()}, \java{equals()}.
 
+\paragraph{LdapCredentials}%
+\label{par:ldapcredentials}
+
+La classe \java{LdapCredentials} rappresenta una coppia di credenziali LDPA da inviare al server.
+Espone un metodo per la serializzazione a JSON\@.
+
+% par:ldapcredentials (end)
+
 \paragraph[Organization]{\java{Organization}}%
 \label{par:app/organization}
 
 La classe \java{Organization} espone un costruttore ad un parametro di tipo \java{org.json.JSONObject} utilizzato per costruire un'istanza a partire dalle risposte HTTP inviate dal server.
 Inoltre, espone un metodo \java{getInsidePlaces(Point)} che ritorna la lista degli \java{id} dei luoghi che contengono il punto passato come parametro fra i luoghi legati all'organizzazione.
 
-\paragraph[Place]{Place}%
+\paragraph[Place]{\java{Place}}%
 \label{par:place}
 
 La classe \java{Place}, in modo simile a \java{Organization}, espone un costruttore di tipo \java{org.json.JSONObject} utilizzato per costruire un'istanza a partire dalle risposte HTTP inviate dal server.
@@ -157,18 +217,26 @@ La verifica è eseguita utilizzando il calcolo vettoriale.
 Per ogni vertice del poligono, sono definiti il vettore da esso al vertice successivo ed il vettore da esso al punto passato come parametro.
 Sono poi calcolati i prodotti vettoriali: se tutti i prodotti vettoriali hanno lo stesso verso, il punto è all'interno, altrimenti è all'esterno.
 Eventuali prodotti nulli indicano che i tre punti sono allineati.
+È inoltre fornito un metodo \java{getCenter()} che ritorna il baricentro del poligono associato al place.
 
-\paragraph[Point]{Point}%
+\paragraph[Point]{\java{Point}}%
 \label{par:point}
 
 La classe \java{Point} rappresenta un punto in coordinate cartesiane.
 Espone un metodo statico \linebreak\java{buildFromDegrees(double longitude, double latitude)} per costruire un punto a partire dalle coordinate polari utilizzate in geolocalizzazione.
-Per la conversione, abbiamo definito dei metodi privati che implementano la proiezione ellittica di Mercatore.
+Per la conversione, abbiamo definito dei metodi privati che implementano la proiezione sferica di Mercatore e la rispettiva proiezione inversa.
+Inoltre, \java{Point} implementa l'interfaccia \java{android.os.Parcelable} per la serializzazione e deserializzazione automatica da parte del sistema operativo.
 
-\paragraph[User]{User}%
+\paragraph[User]{\java{User}}%
 \label{par:app/user}
 
-La classe \java{User} semplicemente raccoglie i dati dell'utente, ed espone solo i metodi generati automaticamente da \textit{Lombok}.
-In UML è categorizzata come \texttt{<<data type>>}.
+La classe \java{User} semplicemente raccoglie i dati dell'utente, ed espone un metodo per verificare che tutte le informazioni dell'utente siano presenti.
+
+\paragraph[UserOrganizationHistory]{\java{UserOrganizationHistory}}%
+\label{par:userorganizationhistory}
+
+La classe \java{UserOrganizationHistory} rappresenta una entry nella cronologia dell'utente; espone un costruttore per deserializzare i corrispettivi oggetti JSON ottenuti dal server.
+
+% par:userorganizationhistory (end)
 
 \end{document}
