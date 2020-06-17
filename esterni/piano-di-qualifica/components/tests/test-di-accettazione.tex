@@ -45,14 +45,14 @@ I test di accettazione sono indicati nel modo seguente:
     \item inserire la data di nascita.
     \item confermare la registrazione.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA002MA           & Il sistema deve rifiutare la richiesta di registrazione se i dati inseriti non rispettano i vincoli imposti. \newline
   L'utente deve:
   \begin{itemize}
     \item inserire dati per la registrazione non validi.
     \item verificare l'impossibilità di proseguire con la registrazione.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA003MA           & L'applicazione mobile deve permettere all'utente registrato di autenticarsi. \newline
   L'utente deve:
   \begin{itemize}
@@ -60,14 +60,14 @@ I test di accettazione sono indicati nel modo seguente:
     \item inserire la propria password.
     \item confermare l'autenticazione.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA004MA           & Il sistema deve rifiutare la richiesta di autenticazione se la combinazione di email e password non è presente nel database. \newline
   L'utente deve:
   \begin{itemize}
     \item inserire dati di accesso non validi.
     \item verificare l'impossibilità di proseguire con l'autenticazione.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA005MA           & L'applicazione mobile deve permettere all'utente di recuperare la sua password. \newline
   L'utente deve:
   \begin{itemize}
@@ -79,7 +79,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la procedura.
     \item verificare che la password sia stata cambiata correttamente.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA006MA           & Il sistema deve rifiutare la richiesta di reimpostazione password se la mail inserita all'inizio della procedura non è presente all'interno del database del sistema. \newline
   L'utente deve:
   \begin{itemize}
@@ -87,7 +87,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item inserire una mail non presente nel database del sistema.
     \item visualizzare un messaggio di errore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA007MA           & Il sistema deve rifiutare la richiesta di reimpostazione password se la nuova password inserita non rispetta i vincoli imposti. \newline
   L'utente deve:
   \begin{itemize}
@@ -99,7 +99,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la procedura.
     \item visualizzare un messaggio di errore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA008MA           & Il sistema deve rifiutare la richiesta di reimpostazione password se la nuova password e la conferma della password non sono valide. \newline
   L'utente deve:
   \begin{itemize}
@@ -111,25 +111,25 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la procedura.
     \item visualizzare un messaggio di errore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA009MA           & L'applicazione mobile deve permettere all'utente autenticato di recuperare dal server una lista di organizzazioni a cui può collegarsi. \newline
   L'utente deve:
   \begin{itemize}
     \item visualizzare la lista di organizzazioni a cui può collegarsi.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA010MA           & L'applicazione mobile deve permettere all'utente autenticato di visualizzare dal server una lista di organizzazioni a cui è collegato. \newline
   L'utente deve:
   \begin{itemize}
     \item visualizzare la lista di organizzazioni a cui è collegato.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA011MA           & L'applicazione mobile deve permettere all'utente autenticato di visualizzare dal server una lista di organizzazioni a cui non è collegato. \newline
   L'utente deve:
   \begin{itemize}
     \item visualizzare la lista di organizzazioni a cui non è collegato.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA012MA           & L'applicazione mobile deve permettere all'utente autenticato di visualizzare le informazioni di un'organizzazione in lista, che sia collegato a questa o non collegato. \newline
   L'utente deve:
   \begin{itemize}
@@ -137,26 +137,26 @@ I test di accettazione sono indicati nel modo seguente:
     \item visualizzare la descrizione dell'organizzazione.
     \item visualizzare lo stato, pubblico o privato, dell'organizzazione.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA013MA           & L'applicazione mobile non recupera la lista di organizzazioni a cui può collegarsi l'utente autenticato, in quanto non c'è collegamento alla rete. \newline
   L'utente deve:
   \begin{itemize}
     \item visualizzare un messaggio d'errore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA014MA           & L'applicazione mobile deve permettere all'utente autenticato di aggiornare la lista delle organizzazioni a cui può collegarsi. \newline
   L'utente deve:
   \begin{itemize}
     \item inviare la richiesta di aggiornamento della lista di organizzazioni.
     \item visualizzare la lista aggiornata delle organizzazioni.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA015MA           & L'applicazione mobile non riceve alcuna richiesta di aggiornare la lista di organizzazioni a cui può collegarsi l'utente autenticato, in quanto non c'è collegamento alla rete. \newline
   L'utente deve:
   \begin{itemize}
     \item visualizzare un messaggio d'errore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA016MA           & L'applicazione mobile deve permettere all'utente autenticato di collegarsi ad un'organizzazione pubblica. \newline
   L'utente deve:
   \begin{itemize}
@@ -165,7 +165,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item avviare la procedura di collegamento.
     \item visualizzare la pagina dell'organizzazione pubblica alla quale è ora collegato.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA017MA           & L'applicazione mobile deve permettere all'utente autenticato di collegarsi ad un'organizzazione privata. \newline
   L'utente deve:
   \begin{itemize}
@@ -177,7 +177,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item avviare la procedura di collegamento.
     \item visualizzare la pagina dell'organizzazione privata alla quale è ora collegato.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA018MA           & L'applicazione mobile non permette all'utente autenticato di collegarsi ad un'organizzazione privata, in quanto vengono inseriti erroneamente i dati d'accesso al server LDAP\@. \newline
   L'utente deve:
   \begin{itemize}
@@ -189,7 +189,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item avviare la procedura di collegamento.
     \item visualizzare un messaggio d'errore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA019MA           & L'applicazione mobile non è collegata alla rete, quindi il server non riceve alcuna richiesta di collegamento ad un'organizzazione a cui può collegarsi l'utente autenticato. \newline
   L'utente deve:
   \begin{itemize}
@@ -198,7 +198,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item avviare la procedura di scollegamento.
     \item visualizzare un messaggio d'errore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA020MA           & L'applicazione mobile deve permettere all'utente autenticato di scollegarsi da un'organizzazione pubblica. \newline
   L'utente deve:
   \begin{itemize}
@@ -206,7 +206,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item avviare la procedura per lo scollegamento dall'organizzazione pubblica.
     \item visualizzare la lista delle organizzazioni alla quale può collegarsi.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA021MA           & L'applicazione mobile deve permettere all'utente autenticato di scollegarsi ad un'organizzazione privata. \newline
   L'utente deve:
   \begin{itemize}
@@ -214,14 +214,14 @@ I test di accettazione sono indicati nel modo seguente:
     \item avviare la procedura per lo scollegamento dall'organizzazione privata.
     \item visualizzare la lista delle organizzazioni alla quale può collegarsi.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA022MA           & L'applicazione mobile non riceve alcuna richiesta di scollegamento da un'organizzazione a cui è collegato l'utente autenticato, in quanto non c'è collegamento alla rete. \newline
   L'utente deve:
   \begin{itemize}
     \item avviare la procedura di scollegamento.
     \item visualizzare un messaggio d'errore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA023MA           & L'applicazione mobile deve permettere all'utente autenticato, che è collegato ad un'organizzazione privata, di passare da noto ad incognito e viceversa. \newline
   L'utente deve:
   \begin{itemize}
@@ -232,7 +232,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item avviare la procedura per il passaggio da incognito a noto.
     \item accertarsi che sia noto al sistema.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA024MA           & L'applicazione mobile non permette all'utente autenticato, che è collegato ad un'organizzazione privata, di passare da noto ad incognito e viceversa, in quanto non c'è collegamento alla rete. \newline
   L'utente deve:
   \begin{itemize}
@@ -241,38 +241,38 @@ I test di accettazione sono indicati nel modo seguente:
     \item avviare la procedura per il passaggio da noto ad incognito, o al contrario nel caso l'utente sia incognito al sistema.
     \item visualizzare un messaggio d'errore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA025MA           & L'applicazione mobile deve permettere all'utente autenticato di visualizzare il proprio storico degli accessi. \newline
   L'utente deve:
   \begin{itemize}
     \item visualizzare il proprio storico degli accessi.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA026MA           & L'applicazione mobile non permette all'utente autenticato di visualizzare il proprio storico degli accessi, in quanto non c'è collegamento alla rete. \newline
   L'utente deve:
   \begin{itemize}
     \item visualizzare un messaggio d'errore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA027MA           & L'applicazione mobile deve permettere all'utente autenticato di visualizzare il tempo trascorso all'interno di un'organizzazione. \newline
   L'utente deve:
   \begin{itemize}
     \item visualizzare il proprio tempo trascorso all'interno di un'organizzazione.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA028MA           & L'applicazione mobile non permette all'utente autenticato di visualizzare il tempo trascorso all'interno di un'organizzazione, in quanto non c'è collegamento alla rete. \newline
   L'utente deve:
   \begin{itemize}
     \item visualizzare un messaggio d'errore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA029MA           & L'applicazione mobile deve permettere all'utente autenticato di disconnettersi dall'applicazione. \newline
   L'utente deve:
   \begin{itemize}
     \item avviare la procedura di disconnessione.
     \item confermare la procedura.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA030MA           & L'applicazione mobile non permette all'utente autenticato di disconnettersi dall'applicazione, in quanto non c'è collegamento alla rete. \newline
   L'utente deve:
   \begin{itemize}
@@ -280,14 +280,14 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la procedura.
     \item visualizzare un messaggio d'errore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA031MA           & L'applicazione mobile deve permettere all'utente autenticato di eliminare il suo account. \newline
   L'utente deve:
   \begin{itemize}
     \item avviare la procedura di eliminazione.
     \item confermare la procedura.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA032MA           & L'applicazione mobile non permette all'utente autenticato di eliminare il suo account, in quanto non c'è collegamento alla rete. \newline
   L'utente deve:
   \begin{itemize}
@@ -295,7 +295,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la procedura.
     \item visualizzare un messaggio d'errore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
 
   % - Web application
 
@@ -307,21 +307,21 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare l'autenticazione.
     \item visualizzare la pagina principale della web application.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA034WA           & La web application deve rifiutare la richiesta di autenticazione se i dati inseriti dall'utente non autenticato non rispettano i vincoli imposti, o se la combinazione di email e password non è presente nel database. \newline
   L'utente deve:
   \begin{itemize}
     \item inserire una combinazione email-password non valida.
     \item visualizzare un messaggio d'errore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA035WA           & La web application deve permettere all'utente autenticato di effettuare la disconnessione. \newline
   L'utente deve:
   \begin{itemize}
     \item avviare la procedura di disconnessione.
     \item confermare la procedura.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA036WA           & La web application deve permettere all'owner di creare un'organizzazione. \newline
   L'owner deve:
   \begin{itemize}
@@ -332,7 +332,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la procedura di creazione di un'organizzazione.
     \item verificare l'avvenuta creazione dell'organizzazione.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA037WA           & La web application deve permettere all'owner di eliminare un'organizzazione in suo possesso. \newline
   L'owner deve:
   \begin{itemize}
@@ -340,7 +340,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la procedura di eliminazione.
     \item verificare che sia stata eliminata l'organizzazione.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA038WA           & La web application deve permettere all'owner di modificare un'organizzazione in suo possesso. \newline
   L'owner deve:
   \begin{itemize}
@@ -351,7 +351,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la procedura di modifica dell'organizzazione.
     \item verificare che le modifiche siano avvenute con successo.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA039WA           & La web application deve permettere all'owner ed al gestore di aggiungere un luogo ad un'organizzazione. \newline
   L'owner ed il gestore devono:
   \begin{itemize}
@@ -361,7 +361,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la procedura di creazione del luogo.
     \item verificare che sia stato aggiunto un nuovo luogo nell'organizzazione di riferimento con successo.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA040WA           & La web application può permettere opzionalmente all'owner ed al gestore di aggiungere un luogo ad un'organizzazione, evidenziando l'area sulla mappa. \newline
   L'owner ed il gestore devono:
   \begin{itemize}
@@ -370,7 +370,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la procedura di creazione del luogo.
     \item verificare che sia stato aggiunto un nuovo luogo nell'organizzazione di riferimento con successo.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA041WA           & La web application deve permettere all'owner ed al gestore di modificare un luogo di un'organizzazione. \newline
   L'owner ed il gestore devono:
   \begin{itemize}
@@ -380,7 +380,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la procedura di modifica del luogo.
     \item verificare che le modifiche siano avvenute con successo.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA042WA           & La web application deve permettere all'owner ed al gestore di eliminare un luogo di un'organizzazione. \newline
   L'owner ed il gestore devono:
   \begin{itemize}
@@ -389,28 +389,28 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la procedura di eliminazione del luogo.
     \item verificare che l'eliminazione del luogo sia avvenuta con successo.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA043WA           & La web application deve permettere all'owner, al gestore ed al visualizzatore di monitorare il numero di utenti in una specifica organizzazione. \newline
   L'owner, il gestore e il visualizzatore devono:
   \begin{itemize}
     \item avviare la procedura di monitoraggio.
     \item visualizzare il numero di utenti presenti all'interno di una specifica organizzazione.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA044WA           & La web application deve permettere all'owner, al gestore ed al visualizzatore di monitorare il numero di utenti in un specifico luogo di una specifica organizzazione. \newline
   L'owner, il gestore e il visualizzatore devono:
   \begin{itemize}
     \item avviare la procedura di monitoraggio.
     \item visualizzare il numero di utenti presenti all'interno di uno specifico luogo di una specifica organizzazione.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA045WA           & La web application deve permettere all'owner, al gestore ed al visualizzatore di visualizzare un report sotto forma tabellare di una specifica organizzazione. \newline
   L'owner, il gestore e il visualizzatore devono:
   \begin{itemize}
     \item avviare la procedura di visualizzazione del report.
     \item visualizzare gli accessi, le ore trascorse all'interno dei luoghi e quali luoghi sono più frequentati all'interno di un'organizzazione.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA046WA           & La web application deve permettere all'owner, al gestore ed al visualizzatore di visualizzare le informazioni riguardo uno specifico utente. \newline
   L'owner, il gestore e il visualizzatore devono:
   \begin{itemize}
@@ -418,14 +418,14 @@ I test di accettazione sono indicati nel modo seguente:
     \item visualizzare l'organizzazione in cui si trova l'utente.
     \item visualizzare il luogo in cui si trova l'utente.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA047WA           & La web application deve permettere all'utente autenticato di diventare owner e ottenere la possibilità di creare una sua organizzazione. \newline
   L'utente deve:
   \begin{itemize}
     \item avviare la procedura per diventare owner.
     \item confermare la richiesta di diventare owner.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA048WA           & La web application deve permettere all'owner di aggiungere un nuovo gestore dell'organizzazione. \newline
   L'owner deve:
   \begin{itemize}
@@ -435,7 +435,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare l'aggiunta del gestore.
     \item verificare che l'utente indicato sia diventato gestore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA049WA           & La web application deve permettere all'owner di aggiungere un nuovo visualizzatore dell'organizzazione. \newline
   L'owner deve:
   \begin{itemize}
@@ -445,7 +445,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare l'aggiunta del visualizzatore.
     \item verificare che l'utente indicato sia diventato visualizzatore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA050WA           & La web application deve permettere all'amministratore di rimuovere i privilegi di owner ad un utente che ne sia in possesso. \newline
   L'amministratore deve:
   \begin{itemize}
@@ -455,7 +455,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la rimozione dell'owner.
     \item verificare che l'utente indicato non sia più un owner.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA051WA           & La web application deve permettere all'owner di rimuovere i privilegi di gestore ad un utente che ne sia in possesso. \newline
   L'owner deve:
   \begin{itemize}
@@ -465,7 +465,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la rimozione del gestore.
     \item verificare che l'utente indicato non sia più un gestore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA052WA           & La web application deve permettere all'owner di rimuovere i privilegi di visualizzatore ad un utente che ne sia in possesso. \newline
   L'owner deve:
   \begin{itemize}
@@ -475,7 +475,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la rimozione del visualizzatore.
     \item verificare che l'utente indicato non sia più un visualizzatore.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
   TA053WA           & La web application deve permettere all'amministratore di eliminare un account dal sistema. \newline
   L'amministratore deve:
   \begin{itemize}
@@ -484,7 +484,7 @@ I test di accettazione sono indicati nel modo seguente:
     \item confermare la rimozione dell'account.
     \item verificare che l'utente eliminato non riesca più ad accedere al sistema.
   \end{itemize}
-                    & NS                                                                                                                                                                                                                                                               \\
+                    & S                                                                                                                                                                                                                                                               \\
 
     \rowcolor{white}
     \caption{Tabella dei test di accettazione}%
