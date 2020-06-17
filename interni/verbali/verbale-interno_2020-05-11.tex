@@ -1,0 +1,100 @@
+\documentclass{article}
+
+\input{../../commons/config}
+
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale interno --- 11/05/2020}
+
+\setResponsabile{Fabio Scettro}
+\setRedattori{Alberto Gobbo}
+\setVerificatori{
+  Alberto Cocco
+}
+\setUso{Interno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 04/05/2020}
+\setModifiche{%
+\cellcolor{white!80!lightgray!100} & Fabio Scettro & 2020--05--12 & approva documento \\% cambiare responsabile se errato
+\cellcolor{white!80!lightgray!100} & Alberto Cocco & 2020--05--11 & verifica verbale \\%
+\multirow{-3}{*}{-} & Alberto Gobbo & 2020--05--11 & stendi verbale%
+}
+
+\disabilitaVersione{}
+\disabilitaElencoFigure{}
+\disabilitaElencoTabelle{}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Informazioni logistiche}%
+\label{sec:informazioni_logistiche}
+
+\begin{description}
+  \item [Luogo] videochiamata su Google Hangouts
+  \item [Data] 11/05/2020
+  \item [Ora] 18:30 \symbol{8594} 20:00
+\end{description}
+
+\subsection{Membri del gruppo presenti}%
+\label{sub:membri_del_gruppo_presenti}
+
+\begin{enumerate}
+  \item Riccardo Agatea
+  \item Tobia Apolloni
+  \item Riccardo Cestaro
+  \item Alberto Cocco
+  \item Luca Ercole
+  \item Alberto Gobbo
+  \item Alessandro Rizzo
+  \item Fabio Scettro
+\end{enumerate}
+% sub:membri_del_gruppo_presenti (end)
+
+\section{Introduzione}%
+\label{sec:introduzione}
+L'incontro è avvenuto tramite chiamata Hangouts.
+Lo scopo principale era chiarire alcune divergenze tra alcuni membri del gruppo e pianificare il lavoro da svolgere nella settimana in preparazione alla Revisione di Qualifica (RQ).
+In base alle decisioni prese il giorno 04/05/2020 riguardo alla pianificazione del lavoro dell'incremento appena concluso, non è stato fatto il consueto aggiornamento del foglio dei requisiti.
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item Chiarimento sulle divergenze emerse tra membri del team
+  \item Pianificazione lavoro settimanale
+\end{itemize}
+
+\section{Chiarimento sulle divergenze emerse tra membri del team}%
+\label{sec:chiarimento_sulle_divergenze_emerse_tra_membri_del_team}
+
+Durante il periodo dell'incremento appena concluso, alcuni membri del team hanno avuto delle divergenze riguardo alle modalità di lavoro e su alcuni comportamenti errati derivati da alcune incomprensioni.
+In un clima disteso, i membri coinvolti hanno avviato una discussione sui problemi riscontrati, coinvolgendo tutti i membri del gruppo in modo da raccogliere opinioni e soluzioni in merito alle problematiche discusse.
+Il principale problema è derivato dalle best practice non assodate alla perfezione dai redattori di alcuni documenti che mostravano diverse lacune tipografiche e ripetute all'interno dei documenti. É risultato che l'addetto alla verifica ha utilizzato toni accesi, mal interpretati dai redattori che non hanno digerito il modo in cui sono stati fatti gli accorgimenti.
+Alla fine della discussione si è arrivati ad un accordo comune, dichiarando che i redattori coinvolti si impegnano a non commettere più gli errori che sono stati segnalati, e che il verificatore deve utilizzare un tono professionale e mai al di fuori delle righe, esprimendo un punto di vista oggettivo e mai personale.
+
+\section{Pianificazione lavoro settimanale}%
+\label{sec:pianificazione_lavoro_settimanale}
+
+La settimana attuale porta in seno tutte le attività prospettate nel quinto incremento, e principalmente serve a soddisfare alcuni requisiti arretrati per poter disporre di una demo il più possibile soddisfacente per il giorno 18/05/2020 della Revisione di Qualifica.
+Grazie al fatto che la web application è in linea con le aspettative ed è la componente più vicina alla sua conclusione, il gruppo ha deciso di spostare tutte le risorse umane sulle componenti server e mobile application, in particolare:
+\begin{itemize}
+  \item 5 componenti lato server per l'implementazione definitiva degli endpoint ed annessi test.
+  \item 3 componenti lato mobile application per l'implementazione dell'impianto grafico delle pagine ed i test.
+\end{itemize}
+Inoltre, va aggiunto che il gruppo si deve impegnare per la presentazione della Revisione di Qualifica, quindi lavorerà su questa parte nelle serate che precederanno questa data.
+Va segnalata che la disponibilità oraria di quattro degli otto componenti del gruppo sarà dimezzata fino all'18/05/2020, in quanto parteciperanno al secondo appello di SWE e quindi impegnati con lo studio personale.
+
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+
+\begin{description}
+  \item[20200511-int-001] 5 componenti lavoreranno lato server per completare l'implementazione degli endpoint ed annessi test.
+  \item[20200511-int-002] 3 componenti lavoreranno lato mobile application per l'implementazione dell'impianto grafico delle pagine ed i test.
+  \item[20200511-int-003] La sera del giorno 12/05/2020, tutto il gruppo si riunirà per decidere come impostare la presentazione dell'RQ\@.
+  \item[20200511-int-004] Nei giorni 15/05/2020 e 16/05/2020, tutto il gruppo si riunirà per le prove generali per la presentazione dell'RQ\@. Come prerequisito, la presentazione deve essere pronta prima del 15/05/2020.
+\end{description}
+
+% sec:registro_delle_decisioni (end)
+\end{document}

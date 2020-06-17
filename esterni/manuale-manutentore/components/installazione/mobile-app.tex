@@ -8,17 +8,28 @@
 \subsubsection{Installazione IDE}%
 \label{subs:installazione_ide}
 
-Per configurare l'ambiente di lavoro dell'applicazione mobile di Stalker, è necessario installare un \glossarioLocale{IDE} come \glossarioLocale{IntelliJ IDEA} o \glossarioLocale{Android Studio}.
+Per configurare l'ambiente di lavoro dell'applicazione mobile di Stalker, è necessario installare l'\glossarioLocale{IDE} \glossarioLocale{IntelliJ IDEA}.
 Il team ha deciso di utilizzare IntelliJ IDEA Community versione 2019.3.x come IDE di riferimento.
-L'utente deve installare JetBrains Toolbox (\href{https://www.jetbrains.com/toolbox-app/}{https://www.jetbrains.com/toolbox-app/}), e poi selezionare per l'installazione IntelliJ IDEA e, facoltativamente, Android Studio.
+L'utente deve installare JetBrains Toolbox (\href{https://www.jetbrains.com/toolbox-app/}{https://www.jetbrains.com/toolbox-app/}), e poi selezionare per l'installazione IntelliJ IDEA\@.
 
 \subsubsection{Debug ed esecuzione applicazione}%
 \label{subs:debug_ed_esecuzione_applicazione}
 
-Per il \glossarioLocale{debug} dell'applicazione mobile, l'utente deve aprire il codice sorgente e avviare l'esecuzione tramite \glossarioLocale{ADB}.
+Per il \glossarioLocale{debug} dell'applicazione mobile consigliamo di utilizzare gli strumenti integrati nell'IDE\@. In particolare, eseguendo l'applicazione con il comando \textit{Run} è possibile monitorare il suo stato attraverso la scheda omonima in basso a sinistra. Lo stesso si può fare da linea di comando, eseguendo però due comandi separati:
 
-%TODO aggiungere come eseguire l'applicazione utilizzando l'emulatore oppure lo smartphone collegandolo con cavo USB (e come attivare il Debug USB da Android!! --> attivare Opzioni Sviluppatore)
+\begin{minted}{bash}
+    ./gradlew installDebug
+\end{minted}
 
-Per avere un quadro generale delle specifiche operazioni da eseguire su IntelliJ IDEA, visitare l'indirizzo \href{https://www.jetbrains.com/help/idea/running-and-debugging-android-applications.html}{https://www.jetbrains.com/help/idea/running-and-debugging-android-applications.html}.
+per l'installazione, seguito da
+
+\begin{minted}{bash}
+    adb shell am start
+    >> -n "tech.gruppone.stalker.app/tech.gruppone.stalker.app.view.SplashScreenActivity"
+    >> -a android.intent.action.MAIN
+    >> -c android.intent.category.LAUNCHER
+\end{minted}
+
+per l'esecuzione. Il monitoraggio del log eve essere eseguito attraverso il tool \bash{logcat}.
 
 \end{document}
