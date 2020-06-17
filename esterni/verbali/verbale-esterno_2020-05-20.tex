@@ -1,0 +1,106 @@
+\documentclass{article}
+
+\input{../../commons/config}
+\appendToGraphicspath{../../commons/img/}
+
+\title{Verbale esterno --- 20/05/2020}
+
+\setResponsabile{Fabio Scettro}
+\setRedattori{Alberto Gobbo}
+\setVerificatori{
+  Alberto Cocco
+}
+\setUso{Esterno}
+\setDescrizione{Verbale dell'incontro di GruppOne del 20/05/2020}
+\setModifiche{%
+\cellcolor{white!80!lightgray!100} & Fabio Scettro & 2020--05--21 & approva documento \\%
+\cellcolor{white!80!lightgray!100} & Alberto Cocco & 2020--05--20 & verifica verbale \\%
+\multirow{-3}{*}{0.1.2} \cellcolor{white!80!lightgray!100} & Alberto Gobbo & 2020--05--20 & stendi verbale %
+}
+
+\disabilitaVersione{}
+\disabilitaElencoFigure{}
+\disabilitaElencoTabelle{}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Informazioni logistiche}%
+\label{sec:informazioni_logistiche}
+
+\begin{description}
+  \item [Luogo] chiamata Hangouts
+  \item [Data] 20/05/2020
+  \item [Ora] 17:00 \symbol{8594} 18:00
+\end{description}
+
+\subsection{Membri del gruppo presenti}%
+\label{sub:membri_del_gruppo_presenti}
+
+\begin{enumerate}
+  \item Riccardo Agatea
+  % \item Tobia Apolloni
+  \item Riccardo Cestaro
+  \item Alberto Cocco
+  \item Luca Ercole
+  \item Alberto Gobbo
+  \item Alessandro Rizzo
+  \item Fabio Scettro
+\end{enumerate}
+
+% sub:membri_del_gruppo_presenti (end)
+
+\subsection{Altri partecipanti}%
+\label{sub:altri_partecipanti}
+
+\begin{enumerate}
+  \item Davide Zanetti (Imola Informatica, proponente del capitolato)
+\end{enumerate}
+
+% sub:altri_partecipanti (end)
+% sec:informazioni_logistiche (end)
+
+\section{Introduzione}%
+\label{sec:introduzione}
+
+L'incontro è avvenuto tramite chiamata Hangouts.
+Lo scopo principale era di mostrare al proponente il lavoro fatto fino a questo punto, in modo simile ma più dettagliato rispetto alla demo mostrata in Revisione di Qualifica, in modo da capire se il prodotto sia allineato con gli obiettivi del proponente.
+
+\section{Ordine del giorno}%
+\label{sec:ordine_del_giorno}
+
+\begin{itemize}
+  \item Dubbi sollevati dal gruppo e dal proponente in merito alla situazione attuale del prodotto
+  \item Visione del prodotto e giudizio personale del proponente
+\end{itemize}
+
+\section{Dubbi sollevati dal gruppo e dal proponente e in merito alla situazione attuale del prodotto}%
+\label{sec:dubbi_sollevati_dal_gruppo_e_dal_proponente_in_merito_alla_situazione_attuale_del_prodotto}
+
+Alcuni membri del gruppo hanno esposto verbalmente il lavoro fatto fino ad ora, descrivendo nel dettaglio ogni singolo componente.
+Durante il colloquio sono emersi alcuni dubbi da ambo le parti, alcuni dei quali (quelli più significativi) vengono riportati di seguito:
+\begin{itemize}
+  \item In merito alla web application, il gruppo ha chiesto al proponente se fosse ragionevole pensare di gestire nella mappa interattiva luoghi che non coincidano solo con il perimetro degli edifici, ma anche di spazi aperti. Il dubbio è emerso soprattutto per una domanda simile che era stata posta dal committente in sede di Revisione di Qualifica. Il proponente ha risposto in modo affermativo, in quanto basta pensare ad un semplice evento musicale, come un concerto all'aperto, che per situazioni di emergenza oppure per la messa in sicurezza oppure semplicemente per contare il numero di persone può avere la necessità di tracciare le persone all'interno dell'area definita.
+  \item Il proponente ha chiesto come il gruppo stia pensando di gestire i test di carico. Tra la moltitudine di cose da fare, questo aspetto è stato marginale ed è passato in secondo piano, per questo il gruppo si è fatto consigliare uno strumento molto utile per questa evenienza, ovvero \href{https://www.soapui.org/}{SoapUI}, un framework di test automation per API RESTful e non solo.
+  \item Per quanto concerne l'efficienza della batteria, il proponente ha chiesto come il gruppo stia pensando di gestire il consumo della batteria dello smartphone, in modo da utilizzarla in modo ottimizzato. Il gruppo ha risposto che il consumo della batteria avviene nella norma, traendo vantaggio dall'utilizzo delle API di Google per la geolocalizzazione che sono già ottimizzate al massimo per questo obiettivo.
+\end{itemize}
+
+\section{Visione del prodotto e giudizio personale del proponente}%
+\label{sec:visione_del_prodotto_e_giudizio_personale_del_proponente}
+
+Dopo aver chiarito alcuni dubbi, il gruppo ha mostrato il prodotto al proponente sulla falsa riga della demo presentata al committente in sede di Revisione di Qualifica.
+In particolare, sono stati esposti tutti i passaggi della web application, dall'autenticazione dell'utente fino alla visualizzazione e modifica dei dettagli delle organizzazioni, e quelli della mobile application, dall'autenticazione dell'utente fino alla connessione ad un'organizzazione (pubblica in quanto LDAP non è ancora stato implementato).
+Il giudizio del proponente è stato positivo, soprattutto si è complimentato per l'impianto grafico delle due componenti mostrate e, in particolare, per la mappa interattiva.
+Inoltre, il proponente ci ha assicurato che al momento le componenti si trovano in un buono stato di completamento e che possiamo concludere in tempo come previsto dalla pianificazione.
+Infine, per quanto riguarda la simulazione della posizione nella mobile application ha consigliato di valutare la possibilità dell'utilizzo dell'emulatore Android in sostituzione di un qualsiasi smartphone fisico. Il gruppo valuterà attentamente questa possibilità, nonostante sia a conoscenza dell'esistenza di applicazioni in grado di simulare posizioni fittizie con l'utilizzo del GPS\@.
+
+\newpage
+\section{Registro delle decisioni}%
+\label{sec:registro_delle_decisioni}
+
+\begin{description}
+  \item[20200521-ext-001] In accordo con il proponente, il gruppo ha fissato un'ulteriore incontro tra due settimane circa per mostrare l'evoluzione del prodotto.
+\end{description}
+
+\end{document}

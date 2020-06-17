@@ -79,7 +79,7 @@ L'incontro, avvenuto tramite chiamata sulla piattaforma Zoom, ci è servito per 
 \section{Struttura e contenuto dell'allegato tecnico}%
 \label{sec:struttura_e_contenuto_allegato_tecnico}
 
-\textbf{Domanda:} Noi pensavamo di fornirle un documento contenente una serie di diagrammi (tra i più corposi cha abbiamo sviluppato) con annessa descrizione, suddivisi per componente e per feature (per una visione generale del funzionamento dei componenti). In particolare, vorremmo fornirle i diagrammi delle classi dettagliati per ogni componente che abbiamo usato, e i diagrammi di sequenza solo dove lo riteniamo necessario. C'è qualcos'altro che va aggiunto all'allegato tecnico? E' una struttura accettabile?
+\textbf{Domanda:} Noi pensavamo di fornirle un documento contenente una serie di diagrammi (tra i più corposi che abbiamo sviluppato) con annessa descrizione, suddivisi per componente e per feature (per una visione generale del funzionamento dei componenti). In particolare, vorremmo fornirle i diagrammi delle classi dettagliati per ogni componente che abbiamo usato, e i diagrammi di sequenza solo dove lo riteniamo necessario. C'è qualcos'altro che va aggiunto all'allegato tecnico? È una struttura accettabile?
 
 \textbf{Risposta:} Mi sembra una struttura accettabile. Le informazioni che avete specificato voi sono quelle sufficienti per avere un quadro generale della vostra architettura.
 
@@ -93,7 +93,7 @@ L'incontro, avvenuto tramite chiamata sulla piattaforma Zoom, ci è servito per 
 \section{Utilizzo specifica TypeScript nella specifica UML}%
 \label{sec:utilizzo_specifica_typescript_in_specifica_uml}
 
-\textbf{Domanda:} Abbiamo delle domande specifiche sui diagrammi per la web application che stiamo sviluppando in \textit{Angular}, che sono diagrammi che si convertono in TypeScript. Per rispettare la specifica API definita, in alcuni diagrammi abbiamo dei campi facoltativi che su TypeScript vengono definiti con \textbf{?}, che equivalgono alla voce \textit{undefined}. E' una definizione corretta, oppure ci dobbiamo attenere alla specifica UML, che impone di definire il valore che assumono le variabili?
+\textbf{Domanda:} Abbiamo delle domande specifiche sui diagrammi per la web application che stiamo sviluppando in \textit{Angular}, che sono diagrammi che si convertono in TypeScript. Per rispettare la specifica API definita, in alcuni diagrammi abbiamo dei campi facoltativi che su TypeScript vengono definiti con \textbf{?}, che equivalgono alla voce \textit{undefined}. È una definizione corretta, oppure ci dobbiamo attenere alla specifica UML, che impone di definire il valore che assumono le variabili?
 
 \textbf{Risposta:} Se non utilizzi una specifica UML, il diagramma che stai sviluppando non è più un diagramma UML, oppure se la stai utilizzando vuol dire che stai sviluppando un diagramma non conforme alla specifica. La specifica è come un linguaggio, in quanto ha le sue regole che devono essere rispettate. Il vincolo \textbf{?} non può essere inserito nella specifica UML, quindi va eliminato. Ci potrebbe essere un modo alternativo utilizzando le proprietà aggiuntive dei singoli campi, ma bisogna vedere se questo porta valore aggiunto al diagramma. In ogni caso, quello che state cercando di implementare è molto dettagliato (\textit{overkill}), quindi potete tranquillamente eliminarlo.
 
@@ -107,7 +107,7 @@ L'incontro, avvenuto tramite chiamata sulla piattaforma Zoom, ci è servito per 
 \section{Constructor Injection di Angular in UML}%
 \label{sec:constructor_injection_angular_uml}
 
-\textbf{Domanda:} In Angular viene utilizzata la Constructor Injection, principalmente nei \textit{services} e nei \textit{components}, per passare altri servizi o altri componenti come se fossero parametri effettivi della classe. Nel diagramma UML, noi li abbiamo dichiarati come parametri effettivi della classe che sono dichiarati solamente nel costruttore del \textit{component} o del \textit{service}. E' corretto?
+\textbf{Domanda:} In Angular viene utilizzata la Constructor Injection, principalmente nei \textit{services} e nei \textit{components}, per passare altri servizi o altri componenti come se fossero parametri effettivi della classe. Nel diagramma UML, noi li abbiamo dichiarati come parametri effettivi della classe che sono dichiarati solamente nel costruttore del \textit{component} o del \textit{service}. È corretto?
 
 \textbf{Risposta:} Sì, è corretto. Fate comunque attenzione che la sintassi dei linguaggi Object-Oriented e la sua rappresentazione in UML concettualmente sono distanti. Quando dichiari il costruttore, automaticamente dici quali sono gli attributi della classe.
 
@@ -129,7 +129,11 @@ L'incontro, avvenuto tramite chiamata sulla piattaforma Zoom, ci è servito per 
 \section{Registro delle decisioni}%
 \label{sec:registro_delle_decisioni}
 
-Non sono state prese decisioni.
+\begin{description}
+  \item[20200505-ext-001] Il gruppo ha deciso di mantenere la struttura e il contenuto attuale dell'allegato tecnico, in quanto ritenuta soddisfacente dal committente.
+  \item[20200505-ext-002] Il gruppo ha deciso di allegare la specifica API all'allegato tecnico.
+  \item[20200505-ext-003] Il gruppo ha deciso di uniformare tutti i diagrammi alla specifica UML\@.
+\end{description}
 
 % sec:registro_delle_decisioni (end)
 \end{document}
