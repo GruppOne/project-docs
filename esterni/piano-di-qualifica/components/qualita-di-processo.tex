@@ -19,60 +19,35 @@ Nel complesso la qualità di processo si occupa di:
   \item Definire dei valori soglia delle metriche per avere una quantificazione oggettiva della qualità del processo in esame.
 \end{itemize}
 
-% \subsection{Qualità di sviluppo}%
-% \label{subsec:qualita_sviluppo}
-
-% \subsubsection{Metriche}%
-% \label{par:metriche_sv}
-
-
-% \begin{description}
-% \item [[MPS-NFV \textasciitilde] Nomi di variabili o di titoli di metodi o classi che non rispettano le norme stabilite]: definito nelle \textit{Norme di progetto} alla sezione 2.3.4.2.
-% \begin{itemize} \item Risultato: numero di nomi di variabili o di titoli di metodi o classi che non rispettano le norme stabilite. \item Valore ammissibile: 0\% \item Valore ottimale: 0\% \end{itemize}
-
-% \item [[MPS-CNN \textasciitilde] Commenti non normati]: definito nelle \textit{Norme di progetto} alla sezione 2.3.4.3.
-%   \begin{itemize} \item Risultato: numero di commenti che non rispettano le norme stabilite. \item Valore ammissibile: \leq{}  0 \item Valore ottimale: \leq{}  0 \end{itemize}
-
-% \item [[MPS-ICC \textasciitilde] Classi che ereditano da una classe concreta]: definita nelle \textit{Norme di progetto} alla sezione 2.3.4.5.
-%   \begin{itemize}  \item Risultato: numero di classi che ereditano da classi concrete. \item Valore ammissibile: \leq{}  0 \item Valore ottimale: \leq{}  0 \end{itemize}
-% \end{description}
-
-
-% \subsection{Qualità di risoluzione dei problemi}%
-% \label{subsec:qualita_sviluppo}
-
-% \subsubsection{Metriche}%
-% \label{par:metriche_rp}
-
-
-
-% \begin{description}
-%   \item [[MPS-RDP \textasciitilde] Indice di velocità di risoluzione dei problemi]: definito nelle \textit{Norme di progetto} alla sezione 3.7.3.1.
-%   \begin{itemize} \item Risultato: numero intero che rappresenta la quantità di giorni trascorsi tra l'apertura della issue e la sua chiusura. \item Valore ammissibile: 1\% \item Valore ottimale: 7\% \end{itemize}
-% \end{description}
-
-
-% \subsection{Qualità di gestione dei rischi}%
-% \label{subsec:qualita_sviluppo}
-
-% \subsubsection{Metriche}%
-% \label{par:metriche_rp}
-
-% \begin{description}
-%   \item [[MPS-RDP \textasciitilde] Indice dei rischi incontrati ma non preventivati]: definito nelle \textit{Norme di progetto} alla sezione 4.2.2.1.
-%   \begin{itemize} \item Risultato: numero intero che rappresenta il numero di rischi incontrati durante il progetto che non erano stati previsti. \item Valore ammissibile: 0\% \item Valore ottimale: 0\% \end{itemize}
-% \end{description}
 
 \subsection{Qualità di accertamento della qualità}%
 \label{subsec:qualita_accertamento_qualita}
 
 \subsubsection{Metriche}%
 \label{subsec:metriche_aq}
+Di seguito sono riportate le metriche utilizzate per misurare la qualità di accertamento della qualità, che possono essere visionate all'interno del documento \textit{Norme di progetto} alla sezione 3.4.5.
 
-\begin{description}
-  \item [[MPS-PME \textasciitilde] Percentuale di metriche eccellenti]: definito nelle \textit{Norme di progetto} alla sezione 3.4.5.1.
-        \begin{itemize} \item Risultato: misura la percentuale di metriche che raggiungono risultati ottimali. \item Valore ammissibile: 10\% \item Valore ottimale: 100\%  \end{itemize}
-\end{description}
+
+
+\rowcolors{2}{lightgray}{white!80!lightgray!100}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{}m{4cm} >{}m{5cm} >{\centering\arraybackslash}m{2cm} > {\centering\arraybackslash}m{2cm}}
+  \rowcolor{darkgray!90!}
+  \color{white}
+  {\textbf{Codice}} & \color{white}{\textbf{Nome}} & \color{white}{\textbf{Descrizione} } & \color{white}{\textbf{Valore ammissibile}}  & \color{white}{\textbf{Valore ottimale}}   \\
+  \endhead\rowcolor{white}%
+  \multicolumn{3}{r}{\textit{Continua alla pagina seguente}}
+  \endfoot%
+  \endlastfoot%
+
+  % - Applicazione mobile
+  MPS-PME & Percentuale di metriche  & misura la percentuale di metriche che raggiungono risultati ottimali. &  10\% & 100\% \\
+
+    \rowcolor{white}
+    \caption{Tabella delle metriche di qualità di accertamento della qualità}%
+    \label{tab:metriche_acc}
+  \end{longtable}
+
 
 \subsection{Qualità di gestione di processo}%
 \label{subsec:qualita_processo}
@@ -80,15 +55,32 @@ Nel complesso la qualità di processo si occupa di:
 \subsubsection{Metriche}%
 \label{subsec:metriche_pr}
 
-\begin{description}
-  \item [[MPS-DE \textasciitilde] Discostamento economico]: definito nelle \textit{Norme di progetto} alla sezione 4.3.4.1.
-        \begin{itemize} \item Risultato: misura quanto i costi effettivamente sostenuti nell'esecuzione del
-                processo si discostano dai costi previsti. \item Valore ammissibile: -5\% o 5\% \item Valore ottimale: 0\% \end{itemize}
+Di seguito sono riportate le metriche utilizzate per misurare la qualità di gestione di processo, che possono essere visionate all'interno del documento \textit{Norme di progetto} alla sezione 4.3.4.
 
-  \item [[MPS-DO \textasciitilde] Discostamento orario]: definito nelle \textit{Norme di progetto} alla sezione 4.3.4.2.
-        \begin{itemize} \item Risultato: misura quanto il totale orario effettivamente lavorato durante l'esecuzione
-                del processo si discosta dal totale orario previsto. \item Valore ammissibile: 5\% \item Valore ottimale: 0\% \end{itemize}
-\end{description}
+\rowcolors{2}{lightgray}{white!80!lightgray!100}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{}m{4cm} >{}m{5cm} >{\centering\arraybackslash}m{2cm} > {\centering\arraybackslash}m{2cm}}
+  \rowcolor{darkgray!90!}
+  \color{white}
+  {\textbf{Codice}} & \color{white}{\textbf{Nome}} & \color{white}{\textbf{Descrizione} } & \color{white}{\textbf{Valore ammissibile}}  & \color{white}{\textbf{Valore ottimale}}   \\
+  \endhead\rowcolor{white}%
+  \multicolumn{3}{r}{\textit{Continua alla pagina seguente}}
+  \endfoot%
+  \endlastfoot%
+
+  % - Applicazione mobile
+  MPS-DE & Discostamento economico  & misura quanto i costi effettivamente sostenuti nell'esecuzione del
+  processo si discostano dai costi previsti. &   -5\%\(\leq\cdot\leq\)5\% &  0\% \\ % chktex 21
+
+  MPS-DO &  Discostamento orario  & misura quanto il totale orario effettivamente lavorato durante l'esecuzione
+  del processo si discosta dal totale orario previsto. & -5\%\(\leq\cdot\leq\)5\% &  0\% \\ % chktex 21
+
+    \rowcolor{white}
+    \caption{Tabella delle metriche di qualità di gestione di processo}%
+    \label{tab:metriche_proc}
+  \end{longtable}
+
+
 
 
 \subsection{Qualità di verifica}%
@@ -97,15 +89,30 @@ Nel complesso la qualità di processo si occupa di:
 \subsubsection{Metriche}%
 \label{subsec:metriche_ver}
 
-\begin{description}
-  \item [[MPS-COC \textasciitilde] Percentuale di copertura del codice]: definito nelle \textit{Norme di progetto} alla sezione 3.5.5.1.
-        \begin{itemize} \item Risultato: misura la quantità di codice che viene esaminata attraverso i test di unità. \item Valore ammissibile: >80\% \item Valore ottimale: 100\% \end{itemize}
-  \item [[MPS-TPA \textasciitilde] Percentuale di test passati]: definito nelle \textit{Norme di progetto} alla sezione 3.5.5.2.
-        \begin{itemize} \item Risultato: misura la percentuale di test superati con successo in una specifica fase del progetto fino alla data corrente. \item Valore ammissibile: 100\% \item Valore ottimale: 100\% \end{itemize}
-  \item [[MPS-TNP \textasciitilde] Percentuale di test non passati]: definito nelle \textit{Norme di progetto} alla sezione 3.5.5.3.
-        \begin{itemize} \item Risultato: misura la percentuale di test non passati in una specifica fase del progetto fino alla data corrente. \item Valore ammissibile: 0\% \item Valore ottimale: 0\% \end{itemize}
+Di seguito sono riportate le metriche utilizzate per misurare la qualità di verifica, che possono essere visionate all'interno del documento \textit{Norme di progetto} alla sezione 3.5.5.
 
-\end{description}
+\rowcolors{2}{lightgray}{white!80!lightgray!100}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{}m{4cm} >{}m{5cm} >{\centering\arraybackslash}m{2cm} > {\centering\arraybackslash}m{2cm}}
+  \rowcolor{darkgray!90!}
+  \color{white}
+  {\textbf{Codice}} & \color{white}{\textbf{Nome}} & \color{white}{\textbf{Descrizione} } & \color{white}{\textbf{Valore ammissibile}}  & \color{white}{\textbf{Valore ottimale}}   \\
+  \endhead\rowcolor{white}%
+  \multicolumn{3}{r}{\textit{Continua alla pagina seguente}}
+  \endfoot%
+  \endlastfoot%
+
+  % - Applicazione mobile
+  MPS-COC & Percentuale di copertura del codice  & misura la quantità di codice che viene esaminata attraverso i test di unità. &   >80\% &  100\%  \\
+
+  MPS-TPA &  Percentuale di test passati  &  misura la percentuale di test superati con successo in una specifica fase del progetto fino alla data corrente. &   100\% &  100\% \\
+
+  MPS-TNP &  Percentuale di test non passati  &  misura la percentuale di test non passati in una specifica fase del progetto fino alla data corrente. &  0\% &  0\% \\
+
+    \rowcolor{white}
+    \caption{Tabella delle metriche di qualità di verifica}%
+    \label{tab:metriche_veri}
+  \end{longtable}
 
 
 
@@ -115,172 +122,28 @@ Nel complesso la qualità di processo si occupa di:
 \subsubsection{Metriche}%
 \label{subsec:metriche_gest_proc}
 
-\begin{description}
-  \item [[MPS-RNP \textasciitilde] Rischi non preventivati]: definito nelle \textit{Norme di progetto} alla sezione 4.2.6.1.
-        \begin{itemize} \item Risultato: misura il numero dei rischi non preventivati incontrati. \item Valore ammissibile: <5 \item Valore ottimale: 0 \end{itemize}
-\end{description}
+
+Di seguito sono riportate le metriche utilizzate per misurare la qualità di gestione dei processi, che possono essere visionate all'interno del documento \textit{Norme di progetto} alla sezione 4.2.6.
+
+\rowcolors{2}{lightgray}{white!80!lightgray!100}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{}m{4cm} >{}m{5cm} >{\centering\arraybackslash}m{2cm} > {\centering\arraybackslash}m{2cm}}
+  \rowcolor{darkgray!90!}
+  \color{white}
+  {\textbf{Codice}} & \color{white}{\textbf{Nome}} & \color{white}{\textbf{Descrizione} } & \color{white}{\textbf{Valore ammissibile}}  & \color{white}{\textbf{Valore ottimale}}   \\
+  \endhead\rowcolor{white}%
+  \multicolumn{3}{r}{\textit{Continua alla pagina seguente}}
+  \endfoot%
+  \endlastfoot%
+
+  % - Applicazione mobile
+  MPS-RNP & Rischi non preventivati  & misura il numero dei rischi non preventivati incontrati. &    <5 &  0 \\
+
+    \rowcolor{white}
+    \caption{Tabella delle metriche di qualità di gestione dei processi}%
+    \label{tab:metriche_gest_proc}
+  \end{longtable}
 
 
-% TODO - copiare descrizioni metriche MISURABILI nelle norme
-
-
-% \subsection{Processi primari}%
-% \label{sub:processi_primari}
-
-% \subsubsection{Processo di sviluppo}%
-% \label{subs:processo_di_sviluppo}
-% Il processo di sviluppo è sicuramente uno dei più articolati. Per tale ragione ogni attività del processo di sviluppo (e.g.\ analisi dei requisiti, progettazione architetturale) ha un paragrafo dedicato.
-
-% \paragraph{Analisi dei requisiti}%
-% \label{par:analisi_dei_requisiti}
-
-% \subparagraph{Obiettivi}%
-% \label{par:obiettivi}
-% L'obiettivo dell'attività di analisi dei requisiti è di trasformare i requisiti dello stakeholder in requisiti tecnici che possano guidare il team alla progettazione del software.
-
-% \subparagraph{Esiti}%
-% \label{par:esiti}
-% I risultati di un'analisi dei requisiti di qualità sono:
-% \begin{itemize}
-%   \item La definizione di una serie di requisiti che possano descrivere il problema.
-%   \item Una classificazione dei requisiti in modo da poterne tracciare i cambiamenti.
-%   \item La realizzazione dei diagrammi dei casi d'uso per iniziare la progettazione.
-%   \item La valutazione delle richieste degli stakeholders per negoziare modifiche, se necessarie.
-% \end{itemize}
-
-% \subparagraph{Metriche}%
-% \label{par:metriche}
-
-
-
-% \subsection{Processi di supporto}%
-% \label{sub:processi_di_supporto}
-
-
-% \subsubsection{Processo di risoluzione dei problemi}%
-% \label{subs:processo_di_risoluzione_dei_problemi}
-
-% \paragraph{Obiettivi}%
-% \label{par:obiettivi_prob}
-
-% Lo scopo del processo di risoluzione dei problemi è di mantenere traccia delle problematiche riscontrate durante lo svolgimento del progetto e di offrire soluzioni.
-
-% % \paragraph{Esiti}%
-% % \label{par:esiti}
-
-% \paragraph{Metriche}%
-% \label{par:metriche_prob}
-
-% I risultati di un processo di risoluzione dei problemi di qualità sono:
-% \begin{itemize}
-
-%   \item L'identificazione e l'analisi di problemi riscontrati durante lo svolgimento del progetto.
-%   \item La definizione di strategie e procedure per risolverli.
-% \end{itemize}
-
-% \textbf{MPS-RDP}: l'indice di velocità di risoluzione dei problemi è definito nelle \textit{Norme di progetto} alla sezione 3.7.3.1.
-% \begin{itemize}
-%   \item Risultato: numero intero che rappresenta la quantità di giorni trascorsi tra l'apertura della issue e la sua chiusura.
-%   \item Valore ottimale: 1.
-%   \item Valore minimale: 7.
-% \end{itemize}
-
-% \paragraph{Processo di accertamento della qualità}%
-% \label{par:processo_di_accertamento_della_qualita}
-
-% \paragraph{Obiettivi}%
-% \label{par:obiettivi_accertamento_della_qualita}
-
-% Lo scopo del processo di accertamento della qualità è di garantire che i prodotti e i processi del ciclo di vita del software rispettino i requisiti prestabiliti e aderire ai piani esecutivi prefissati.
-
-% \paragraph{Esiti}%
-% \label{par:esiti}
-
-% Il processo di accertamento della qualità implica che:
-% \begin{itemize}
-%   \item la qualità dei processi di fornitura sia assicurata attraverso il miglioramento continuo.
-%   \item vengano soddisfatte tutte le richieste avanzate del proponente.
-%   \item che non si consumino più risorse di quel che il fornitore ha a disposizione.
-% \end{itemize}
-
-% \paragraph{Metriche}%
-% \label{par:metriche_prob}
-
-% \textbf{MPS-PMS}: la metrica che definisce la percentuale di metriche soddisfatte è definita nelle \textit{Norme di progetto} alla sezione 3.4.4.1.
-% \begin{itemize}
-%   \item Risultato: percentuale compresa tra 0 e 100, che indica quante metriche sono state soddisfatte rispetto alle metriche totali.
-%   \item Valore ottimale: compreso tra 75 e 100.
-%   \item Valore minimale: non inferiore a 50.
-% \end{itemize}
-
-% \subsection{Processi organizzativi}%
-% \label{sub:processi_organizzativi}
-
-% \subsubsection{Processo di gestione dei rischi}%
-% \label{sub:processo_di_gestione_dei_rischi}
-
-% \paragraph{Obiettivi}%
-% \label{par:obiettivi_rischi}
-
-% L'obiettivo del processo di gestione dei rischi è di identificare, analizzare, monitorare e prevenire i rischi che possono verificarsi nel corso del ciclo di vita del software.
-
-% \paragraph{Esiti}%
-% \label{par:esiti_rischi}
-
-% I risultati di un processo di gestione dei rischi di qualità sono:
-% \begin{itemize}
-%   \item La definizione dei rischi che si incontrano nello svolgimento del progetto.
-%   \item La classificazione dei rischi in modo da determinarne la probabilità di verificarsi e la pericolosità.
-%   \item La determinazione di strategie, soluzioni e metodi per prevenirli.
-%   \item L'applicazione di procedure per frenare l'impatto negativo che potrebbero avere nel caso in cui si verificassero.
-% \end{itemize}
-
-% \paragraph{Metriche}%
-% \label{par:metriche_rischi}
-
-% \textbf{MPS-RNP}: l'indice dei rischi incontrati ma non preventivati è definito nelle \textit{Norme di progetto} alla sezione 4.2.2.1.
-% \begin{itemize}
-%   \item Risultato: numero intero che rappresenta il numero di rischi incontrati durante il progetto che non erano stati previsti.
-%   \item Valore ottimale: 0.
-%   \item Valore minimale: 0.
-% \end{itemize}
-
-% \subsubsection{Processo di gestione del personale}%
-% \label{subs:processo_di_gestione_del_personale}
-
-% \paragraph{Pianificazione}%
-% \label{par:pianificazione}
-
-% \subparagraph{Obiettivi}%
-% \label{subp:obiettivi_pers}
-% L'obiettivo dell'attività di pianificazione è di stabilire e organizzare le principali attività e compiti di progetto.
-
-% \subparagraph{Esiti}%
-% \label{subp:esiti_pers}
-% I risultati di un'attività di pianificazione di qualità sono:
-% \begin{itemize}
-%   \item L'individuazione dello scopo del progetto.
-%   \item L'identificazione delle risorse umani e temporali a disposizione e delle attività da svolgere.
-%   \item La pianificazione di quanto stimato al punto precedente.
-%   \item La definizione di un preventivo e di un consuntivo.
-%   \item La stesura di un \textit{Piano di progetto}.
-% \end{itemize}
-
-% \paragraph{Metriche}%
-% \label{par:metriche_pers}
-
-% \textbf{MPS-VDC}: l'indice di varianza dei costi è definito nelle \textit{Norme di progetto} alla sezione 4.3.5.1.
-% \begin{itemize}
-%   \item Risultato: numero che rappresenta l'efficienza e la produttività.
-%   \item Valore ottimale: maggiore di 0.
-%   \item Valore minimale: maggiore o uguale a 0.
-% \end{itemize}
-
-% \textbf{MPS-VDS}: l'indice di varianza rispetto allo schedule è definito nelle \textit{Norme di progetto} alla sezione 4.3.5.2.
-% \begin{itemize}
-%   \item Risultato: numero che indica se si è in anticipo o in ritardo nella schedulazione rispetto a quanto pianificato.
-%   \item Valore ottimale: maggiore di 0.
-%   \item Valore minimale: maggiore o uguale a 0.
-% \end{itemize}
 
 \end{document}
